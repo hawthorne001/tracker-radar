@@ -4,14 +4,35 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
+        "direct-collect",
         "direct"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "meubles.fr",
+                "www.home24.fr"
+            ]
+        },
         {
             "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
             "cookies": 0,
@@ -44,7 +65,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "817b39c91333322abac7fb0fd451ea4b3caba7eadb50db171254029b24b8f5b5"
+                "de5918b77d461a57c73934bb73f8e833cdb4f5fde0c9260679c21faa7fd255f7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -61,11 +82,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Preflight": 2,
+        "Preflight": 4,
         "XHR": 2
     },
     "nameservers": [

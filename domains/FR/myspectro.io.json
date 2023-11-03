@@ -12,7 +12,8 @@
     "subdomains": [
         "tracking",
         "router",
-        "apigateway"
+        "apigateway",
+        "mt1-app"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -49,15 +50,15 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_pk_id.304.6927": {
-                    "ttl": 33955205,
+                    "ttl": 33955204,
                     "length": 28,
-                    "prevalence": 0.00020216314565854644,
+                    "prevalence": 0.00020195900232252852,
                     "uniqueness": 0.5
                 },
                 "_pk_ses.304.6927": {
-                    "ttl": 1810,
+                    "ttl": 1809,
                     "length": 1,
-                    "prevalence": 0.00020216314565854644,
+                    "prevalence": 0.00020195900232252852,
                     "uniqueness": 0.5
                 }
             },
@@ -75,15 +76,38 @@
                 "router"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "a11aba1547ddb349def6e185ed6b7161beb436574f4c71de20cdf696009b5c94"
+                "e06655a239170ebd614a8e35eab8351b643a37875336719c858ed14d073df3de"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.h2r-equipements.com"
+            ]
+        },
+        {
+            "rule": "myspectro\\.io\\/api\\/configurator\\/getProjectOptions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apigateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a3f7fdf487174c957b007b1fbd669c86c8d5e3c5bf249de7bc1a6294055da507"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -114,6 +138,28 @@
             ]
         },
         {
+            "rule": "myspectro\\.io\\/js\\/container_SUDkmwvg\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.h2r-equipements.com"
+            ]
+        },
+        {
             "rule": "myspectro\\.io\\/api\\/configurator\\/__test_conn",
             "cookies": 0,
             "fingerprinting": 0,
@@ -134,6 +180,31 @@
                 "h2r-equipements.com",
                 "www.h2r-equipements.com"
             ]
+        },
+        {
+            "rule": "myspectro\\.io\\/op",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "mt1-app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "61c5713858d05039b969da42773e3d17977aa646d4971249ad547d6eab1b0778"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.h2r-equipements.com"
+            ]
         }
     ],
     "categories": [],
@@ -142,13 +213,17 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "listener-0.js",
+            "prevalence": 0.42857142857142855
         }
     ],
     "types": {
-        "Script": 4,
-        "Ping": 2,
-        "Fetch": 2
+        "Script": 8,
+        "Fetch": 4,
+        "Ping": 2
     },
     "nameservers": [
         "ns-59-b.gandi.net",

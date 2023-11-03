@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00171,
-    "sites": 17,
+    "prevalence": 0.00201,
+    "sites": 20,
     "subdomains": [
+        "wcpstatic",
         "browser.pipe.aria",
+        "eu.pipe.aria",
+        "noam.events.data",
         "browser.events.data",
-        "9252261c8aa20e2e1b23e72ab96d1592.measure",
         "atlas",
         "c1"
     ],
@@ -22,15 +24,49 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "daf7759fedd9af6c4d7e374b0d056547ae7cb245ec24a1c4acf02932f30dc536"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "MSCC": {
+                    "ttl": 86404,
+                    "length": 2,
+                    "prevalence": 0.00010052271813429835,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
+        {
             "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "browser.pipe.aria"
+                "browser.pipe.aria",
+                "eu.pipe.aria"
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.000703,
+            "prevalence": 0.000704,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -43,57 +79,62 @@
                 "my.clevelandclinic.org",
                 "www.bettermusic.com.au",
                 "www.hearing.com.au",
-                "www.manningham.vic.gov.au",
                 "www.northmetrotafe.wa.edu.au",
+                "www.prada.com",
                 "www.southmetrotafe.wa.edu.au"
             ]
         },
         {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0.000201,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
+                "noam.events.data",
+                "browser.events.data"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58",
+                "22a791e6ba0754c853dc4e27cd2f923a7e37fe66ab16ca9c35189e56a0ce61cf",
+                "d13ffc594798c6f821a0d0b5a0acd8095835b3013fc9dd731dadaac281f00afa",
+                "eb9c726336314f311104d43f575d721cde6c515d88627f6147136e5f26e2d534"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pacfa.org.au",
+                "www.13cabs.com.au",
+                "www.lms.uwa.edu.au",
+                "www.minecraft.net",
+                "www.sumo.com.au",
+                "www.trekbikes.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noam.events.data",
                 "browser.events.data"
             ],
             "apis": {},
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
-            "responseHashes": [
-                "b03f4bc8a31935ba67c00bfdda368a75288a52e2655d2e57969248afa0740faf",
-                "ca93d6d273c39b6caa803ac66e2ff05ccc207f11154ebb92d2b0816224afa7a3",
-                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "13cabs.com.au",
+                "pacfa.org.au",
                 "www.lms.uwa.edu.au",
                 "www.minecraft.net",
-                "www.trekbikes.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/apc\\/trans\\.gif",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "9252261c8aa20e2e1b23e72ab96d1592.measure"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "comptia.org",
-                "www.comptia.org"
+                "www.sumo.com.au"
             ]
         },
         {
@@ -108,7 +149,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "335745f27ba1f03ed3413e19794c57d7881b7c9190eb789da2d507e44e4fef66"
+                "c3296ebe327af9ad406ea74456da6374b77ca1544ad36f5a45d563a39da2cd7a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -139,23 +180,27 @@
             ]
         },
         {
-            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "browser.events.data"
+                "browser.pipe.aria"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "uwa.edu.au",
-                "www.minecraft.net"
+                "hearing.com.au",
+                "www.hearing.com.au",
+                "www.northmetrotafe.wa.edu.au",
+                "www.southmetrotafe.wa.edu.au"
             ]
         },
         {
@@ -188,55 +233,57 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000503,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.42857142857142855
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.30158730158730157
         },
         {
-            "domain": "atmrum.net",
-            "prevalence": 0.10909090909090909
-        },
-        {
-            "domain": "azure.com",
-            "prevalence": 0.03636363636363636
+            "domain": "powerapps.com",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.01818181818181818
+            "prevalence": 0.031746031746031744
         },
         {
-            "domain": "fullstory.com",
-            "prevalence": 0.01818181818181818
-        },
-        {
-            "domain": "office.net",
-            "prevalence": 0.01818181818181818
-        },
-        {
-            "domain": "msauth.net",
-            "prevalence": 0.01818181818181818
+            "domain": "microsoft.com",
+            "prevalence": 0.031746031746031744
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.01818181818181818
+            "prevalence": 0.031746031746031744
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.031746031746031744
+        },
+        {
+            "domain": "office.net",
+            "prevalence": 0.015873015873015872
+        },
+        {
+            "domain": "msauth.net",
+            "prevalence": 0.015873015873015872
         }
     ],
     "types": {
+        "Script": 2,
         "XHR": 13,
+        "Preflight": 6,
         "Fetch": 2,
-        "Preflight": 4,
+        "Ping": 4,
         "Image": 2
     },
     "nameservers": [
         "ns4-39.azure-dns.info",
         "ns1-39.azure-dns.com",
-        "ns2-39.azure-dns.net",
-        "ns3-39.azure-dns.org"
+        "ns3-39.azure-dns.org",
+        "ns2-39.azure-dns.net"
     ]
 }

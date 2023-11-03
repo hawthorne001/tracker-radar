@@ -9,16 +9,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
+        "cdn",
+        "tagger",
+        "lefigaro.tagger",
+        "lefigaro.profiles.tagger",
         "adalliance.profiles.tagger",
         "pdmp.profiles.tagger",
         "foxus.tagger",
-        "cdn",
-        "fox.tagger",
         "tagger-scmp",
-        "tagger"
+        "fox.tagger"
     ],
     "cnames": [
         {
@@ -26,37 +28,157 @@
             "resolved": "tagger-scmp.opecloud.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "opecloud\\.com\\/ope-lefigaro\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Date.prototype.getTimezoneOffset": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.colorDepth": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "565479da568ecbd73955071e68c128b4d15b9470304f316b859fd5107ec0874d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.journaldesfemmes.fr",
+                "www.lachainemeteo.com",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/lefigaro\\/v2\\/uid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.journaldesfemmes.fr"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/lefigaro\\/v2\\/pixel\\.gif",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lefigaro.tagger"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010073536818777072
+            },
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "cuisine.journaldesfemmes.fr",
+                "www.journaldesfemmes.fr"
+            ]
+        },
         {
             "rule": "opecloud\\.com\\/v1\\/targeting",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "lefigaro.profiles.tagger",
                 "adalliance.profiles.tagger",
                 "pdmp.profiles.tagger"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 6,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
-                "00f17752d5e73819c34a57bcb82d04123c89cf7349cce9bc36bdd9c719e8a1e4",
-                "ce723572830cae8897f241c95c3e11f42d7af79dc5c3466b93c788b225681b9a",
-                "c155996a3c5ce8d3525ebc298db716f0c572b9757cc06082c1b216a0f68bf39e",
-                "16ddea8184f2e07a4fbf8ef4bf15d8e66f7833ce5a66ce1d331322606de3f625"
+                "309c9470fa1a2c6fd7d42ebf3f3bd120b67a434c800c2317de6aff84f0d2df81",
+                "24027cab64ad23541dc96bec5860c2101288ab7f0e3a0ea7a3b6602e6ddfc19c",
+                "ffbac72fe696f005737eff602d866efa3013b1baa5151a3c2a81b72abb1943d4",
+                "fb6410677e9036178c0b49d051c9f1a5bb3850e5708c11d6977d65be783fe481",
+                "1e4eab5957b2f51a776a1aafcefce1cd251ddb006a16065da51554688a247284"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.0001008471157724889
+                "lotame_domain_check": 0.00010073536818777072,
+                "_li_dcdm_c": 0.00010073536818777072
             },
             "exampleSites": [
-                "chefkoch.de",
-                "www.n-tv.de",
-                "www.rtl.de",
+                "journaldesfemmes.fr",
+                "www.brigitte.de",
+                "www.chefkoch.de",
+                "www.journaldesfemmes.fr",
                 "www.salon.com",
                 "www.stern.de"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/appnexus\\/pbfs\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lefigaro.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.journaldesfemmes.fr"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/dbm\\/opecs\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tagger"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.journaldesfemmes.fr",
+                "www.scmp.com"
             ]
         },
         {
@@ -68,7 +190,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -82,64 +204,15 @@
             ]
         },
         {
-            "rule": "opecloud\\.com\\/ope-fox\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.colorDepth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "6ed0c27a78efa6ef8848ba049727dba95a5d80d7e594551e4495d5caf840e43d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
-            "rule": "opecloud\\.com\\/fox\\/v2\\/pixel\\.gif",
-            "cookies": 0.000303,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fox.tagger"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
             "rule": "opecloud\\.com\\/scmp\\/v2\\/pixel\\.gif",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "tagger-scmp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "tagger.ope.scmp.com",
@@ -150,7 +223,7 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ga": 0.0004033884630899556
+                "_ga": 0.0004029414727510829
             },
             "exampleSites": [
                 "scmp.com",
@@ -159,14 +232,14 @@
         },
         {
             "rule": "opecloud\\.com\\/scmp\\/pcs\\.gif",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "tagger"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Image",
@@ -176,46 +249,79 @@
                 "scmp.com",
                 "www.scmp.com"
             ]
+        },
+        {
+            "rule": "opecloud\\.com\\/fox\\/v2\\/pixel\\.gif",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fox.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tmz.com",
+                "www.tmz.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000303,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.3076923076923077
         },
         {
             "domain": "opecloud.com",
-            "prevalence": 0.19047619047619047
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "i-scmp.com",
-            "prevalence": 0.19047619047619047
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.11538461538461539
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "fox.com",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.07692307692307693
         },
         {
-            "domain": "iolam.it",
-            "prevalence": 0.047619047619047616
+            "domain": "ccmbg.com",
+            "prevalence": 0.038461538461538464
         },
         {
-            "domain": "bildstatic.de",
-            "prevalence": 0.047619047619047616
+            "domain": "onet.pl",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "kataweb.it",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "Fetch": 7,
-        "Script": 2,
-        "Image": 7
+        "Script": 4,
+        "XHR": 2,
+        "Image": 14,
+        "Fetch": 8
     },
     "nameservers": [
-        "ns-353.awsdns-44.com",
-        "ns-899.awsdns-48.net",
         "ns-1454.awsdns-53.org",
-        "ns-1611.awsdns-09.co.uk"
+        "ns-1611.awsdns-09.co.uk",
+        "ns-353.awsdns-44.com",
+        "ns-899.awsdns-48.net"
     ]
 }

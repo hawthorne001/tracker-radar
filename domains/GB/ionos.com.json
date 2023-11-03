@@ -11,9 +11,15 @@
     "sites": 2,
     "subdomains": [
         "frontend-services",
-        "ahab"
+        "ahab",
+        "sherlock"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "sherlock.ionos.co.uk",
+            "resolved": "sherlock.ionos.com"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -154,32 +160,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c42d6c38b6adfa99bf7a1860d6e9779913de3832e602edcfe6225031214e7313"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ionos.co.uk",
-                "mail.ionos.co.uk"
-            ]
-        },
-        {
-            "rule": "ionos\\.com\\/t\\/surveys\\/js\\/surveys\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "frontend-services"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d839d744295e68739579b25f33b46e71769139b9f28edf0856a4f3c9b5d8778a"
+                "a892a722d520f7ba2d702f926b05c979430a2c4da11509b8a8eb3d5beb4b8f17"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -234,6 +215,58 @@
             ]
         },
         {
+            "rule": "ionos\\.com\\/1\\.0\\/session\\/init",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sherlock"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sherlock.ionos.co.uk",
+                    "resolved": "sherlock.ionos.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.co.uk",
+                "mail.ionos.co.uk"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/1\\.0\\/session\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sherlock"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sherlock.ionos.co.uk",
+                    "resolved": "sherlock.ionos.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.co.uk",
+                "mail.ionos.co.uk"
+            ]
+        },
+        {
             "rule": "ionos\\.com\\/t\\/navi\\/css\\/navigation\\.css",
             "cookies": 0,
             "fingerprinting": 0,
@@ -280,7 +313,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -288,13 +321,14 @@
         }
     ],
     "types": {
-        "Script": 14,
-        "XHR": 2,
-        "Stylesheet": 6
+        "Script": 12,
+        "XHR": 4,
+        "Stylesheet": 6,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1and1.ui-dns.de",
         "ns-1and1.ui-dns.com",
+        "ns-1and1.ui-dns.de",
         "ns-1and1.ui-dns.org",
         "ns-1and1.ui-dns.biz"
     ]

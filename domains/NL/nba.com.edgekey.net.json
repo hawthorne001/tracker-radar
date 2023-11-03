@@ -12,16 +12,78 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "stats",
+        "core-api"
     ],
     "cnames": [
         {
             "original": "cdn.nba.com",
             "resolved": "cdn.nba.com.edgekey.net"
+        },
+        {
+            "original": "core-api.nba.com",
+            "resolved": "core-api.nba.com.edgekey.net"
+        },
+        {
+            "original": "stats.nba.com",
+            "resolved": "stats.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2023\\/11\\/202324-city-edition-all-30-teams-updated-scaled\\.jpg",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "09186758c18187ec3de9f9e2877eab987614505e55f04e6b3c58696f78d2263c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
             "cookies": 0.000201,
@@ -39,7 +101,7 @@
                 }
             ],
             "responseHashes": [
-                "49b3267c9adb19e0462d1a62c1423c0e3590f6a4d89705e500729f0f3ec2276c"
+                "c8db3455cfc70b45a073bf4b17d9d348ea1c0baa66d097bd83743ce861422ead"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -66,7 +128,7 @@
                 }
             ],
             "responseHashes": [
-                "2d066e868735060fc5cc8262f7091ae4e259d990d62d189df52bc2fe05f26c9c"
+                "9914fe454bc9f9c9bc433ceb5602c4c756bfc16ddf2911646eb29d44b2dfee96"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -93,9 +155,36 @@
                 }
             ],
             "responseHashes": [
-                "ca2e17335257d829048fafd112739cca0b908f7c443fc9da975487962ec86a61"
+                "c11c38f50b829849db9dea89b66f638f89109024a2bffb92aecbb5555bbad8f0"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.1\\/feeds\\/gamecardfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3ede628a20ff11d4c45ba0455702dc6ecbfb37bce4a525675da60d28aa7d006b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -108,7 +197,9 @@
     "performance": {},
     "cookies": 0.000101,
     "types": {
-        "Fetch": 6
+        "Image": 2,
+        "Fetch": 8,
+        "XHR": 2
     },
     "nameservers": []
 }

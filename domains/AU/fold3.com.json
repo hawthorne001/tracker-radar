@@ -7,7 +7,7 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
         "go",
@@ -50,7 +50,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f2e84ea0881b992bef400185dc73e3ca1f6c7663fc98c94b4b4d764641020736"
+                "a33b3f5f9e515c2a873821375db4c14dd760b58a2d515b29cdc4efc03ce77f4e"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -94,7 +94,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e9197f618f6c2e2e92d8ee21531c9643196ef5e112b2072ff43fa183efe48348"
+                "9533eeb3dcd01538119ab51df7f0ea43757dacbe28d4f1ad7e5a910e5fff0997"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -159,7 +159,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "36f3fc45fae71dd607ecdee8f3965105b96a840a8a30b7f0e180d58592e1d1ed"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -179,7 +181,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e91a4d56a2d549a02828757de7673243b90d1d2d764b18f63fd68c48ca9216df"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -191,15 +195,20 @@
         {
             "rule": "fold3\\.com\\/script\\/MissingPage\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "eb2c3f707bed80775fc04d77ff69700e551dabd23c96a4d910be636d166475c5"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -219,7 +228,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4925514a94629fc289b49c7e0dbebfad4573c1fed47d5e2b477d86a5bf005f62"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -239,7 +250,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "789aedbae465ab383126b0b6c08feb22caf3bcf730f74b864ba03afe9dc5a801"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -259,7 +272,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "a0f152b2fefea7baff6419f3a1db9eac1ef41854b77c2305f35c1afbf5abec76"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -289,15 +304,59 @@
                 "rootsweb.com",
                 "freepages.rootsweb.com"
             ]
+        },
+        {
+            "rule": "fold3\\.com\\/locales\\/en-US\\/navbar\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "freepages.rootsweb.com"
+            ]
+        },
+        {
+            "rule": "fold3\\.com\\/locales\\/en\\/navbar\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "freepages.rootsweb.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "doubleclick.net",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
@@ -305,10 +364,11 @@
         "Script": 12,
         "Stylesheet": 2,
         "Image": 6,
-        "Font": 2
+        "Font": 2,
+        "Fetch": 4
     },
     "nameservers": [
-        "uma.ns.cloudflare.com",
-        "rick.ns.cloudflare.com"
+        "rick.ns.cloudflare.com",
+        "uma.ns.cloudflare.com"
     ]
 }

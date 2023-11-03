@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "delivery"
+        "delivery",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pbgrd\\.com\\/network\\/adjs\\.php",
@@ -24,14 +25,40 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e657e305579be65d0da31f022436f6cb1a4756f3fe83afebeaf0b70d9c0b0daf"
+                "e395ba44eebde26e438822a6b8c15bf85901901985912a806e05e873be59646d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sagepub.com",
-                "link.springer.com"
+                "www.bmj.com"
+            ]
+        },
+        {
+            "rule": "pbgrd\\.com\\/core-bmj\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "669dac3f46355b0adca806849f0b45498fd9bcb5a038396af45b08a72f3def80"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bmj.com",
+                "www.bmj.com"
             ]
         }
     ],
@@ -41,19 +68,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "domain": "doubleclick.net",
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns.udag.org",
+        "ns.udag.de",
         "ns.udag.net",
-        "ns.udag.de"
+        "ns.udag.org"
     ]
 }

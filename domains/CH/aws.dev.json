@@ -4,14 +4,43 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "prod.log.shortbread"
+        "loader.us-east-1.prod.mrc-sunrise.marketing",
+        "prod.log.shortbread",
+        "chatbot-api.us-east-1.prod.mrc-sunrise.marketing",
+        "chat.us-east-1.prod.mrc-sunrise.marketing",
+        "infra-api.us-east-1.prod.mrc-sunrise.marketing"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "aws\\.dev\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "loader.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bbf88f7f6662bb5bb59812fcacb16d02782b3adec3edeeee98623502eedab700"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
         {
             "rule": "aws\\.dev\\/1x1\\.png",
             "cookies": 0,
@@ -20,8 +49,8 @@
                 "prod.log.shortbread"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -32,7 +61,127 @@
             "exampleSites": [
                 "amazon.com",
                 "aws.amazon.com",
+                "docs.amplify.aws",
                 "docs.aws.amazon.com",
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/health-check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chatbot-api.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "67900ef7cdba08643b398040296bc476b743d70b9134c6b48af1d427561104b4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/1\\.0\\.2699\\.0\\/chatbot\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cbe2a7bd32c4c776ac1c00688d978cae9cc4ac1168afd12fa7c45a9a4e52838c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/custom-metric",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "infra-api.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ca7efc27dae60b553dc0d38e0db90a02a206f827669e0f4c102726347ab67cf7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/assets\\/locales\\/en\\/chatui\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "07a08bf98ae57169661efe9e8c6a8da3d3a7198f343e7f935d126813618508e6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/assets\\/sounds\\/notification-sound\\.mp3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "88264652408f1c09370cdd8a163e9fa4d5d7a83dc1641bd27014d6ae73ca7f6e"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
                 "s3.amazonaws.com"
             ]
         }
@@ -43,20 +192,27 @@
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.48484848484848486
         },
         {
             "domain": "first party",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.45454545454545453
+        },
+        {
+            "domain": "amazon.com",
+            "prevalence": 0.06060606060606061
         }
     ],
     "types": {
-        "XHR": 4
+        "Script": 4,
+        "XHR": 6,
+        "Fetch": 6,
+        "Media": 2
     },
     "nameservers": [
-        "ns-1918.awsdns-47.co.uk",
-        "ns-1108.awsdns-10.org",
         "ns-399.awsdns-49.com",
-        "ns-964.awsdns-56.net"
+        "ns-1108.awsdns-10.org",
+        "ns-964.awsdns-56.net",
+        "ns-1918.awsdns-47.co.uk"
     ]
 }

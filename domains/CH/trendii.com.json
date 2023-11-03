@@ -8,6 +8,8 @@
     "sites": 2,
     "subdomains": [
         "cdn",
+        "assets",
+        "beeswax",
         "ingress"
     ],
     "cnames": [],
@@ -16,42 +18,20 @@
         {
             "rule": "trendii\\.com\\/native-ads-sdk\\/trendii-ads\\.awin\\.sdk\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "84f07e9e972a2001a36dc268a0d05820316bfb30e588c0fb87c562b668eacf8b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cath.ch",
-                "www.kath.ch"
-            ]
-        },
-        {
-            "rule": "trendii\\.com\\/web-sdk\\/main\\.js",
-            "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
+                "Date.prototype.getTime": 2,
                 "window.sessionStorage": 2,
-                "window.localStorage": 2,
                 "URL.createObjectURL": 2,
-                "Navigator.prototype.vendor": 2,
                 "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
                 "Navigator.prototype.webkitTemporaryStorage": 2,
+                "window.localStorage": 2,
                 "Performance.prototype.memory": 2,
+                "Navigator.prototype.connection": 2,
                 "Navigator.prototype.language": 2,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
                 "Screen.prototype.availHeight": 2,
@@ -62,10 +42,52 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cath.ch",
+                "www.kath.ch"
+            ]
+        },
+        {
+            "rule": "trendii\\.com\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
             "responseHashes": [
-                "ad18a08fd686e989b4fe194f4b8d78aafb28271987f8319362a0a1ac27f0658a"
+                "9f7316bbd09e777f8ee7511d317d8bb80a7400f62d7be3a236486b9ff3b96a9b"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cath.ch",
+                "www.kath.ch"
+            ]
+        },
+        {
+            "rule": "trendii\\.com\\/publisher-config\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beeswax"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d2aa4349ad7842f5a81243e3d3e225cb68d92bb46b412744e338e101163d0646"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -127,7 +149,7 @@
     ],
     "types": {
         "Script": 4,
-        "Fetch": 2,
+        "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": [

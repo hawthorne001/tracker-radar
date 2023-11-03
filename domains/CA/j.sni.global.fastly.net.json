@@ -9,24 +9,22 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00181,
-    "sites": 18,
-    "subdomains": [],
+    "prevalence": 0.00201,
+    "sites": 20,
+    "subdomains": [
+        "dualstack"
+    ],
     "cnames": [
         {
             "original": "api.audacy.com",
             "resolved": "j.sni.global.fastly.net"
         },
         {
-            "original": "api3.fox.com",
-            "resolved": "j.sni.global.fastly.net"
-        },
-        {
-            "original": "images.audacy2-prod.ext.audacy.com",
-            "resolved": "j.sni.global.fastly.net"
+            "original": "api.hackster.io",
+            "resolved": "dualstack.j.sni.global.fastly.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "j\\.sni\\.global\\.fastly\\.net\\/experience\\/v1\\/config\\/settings",
@@ -54,76 +52,30 @@
             ]
         },
         {
-            "rule": "j\\.sni\\.global\\.fastly\\.net\\/54dcdfda-dcfa-4d1e-aa30-334848dd7b64\\.jpg",
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/graphql\\/query",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "dualstack"
+            ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "images.audacy2-prod.ext.audacy.com",
-                    "resolved": "j.sni.global.fastly.net"
+                    "original": "api.hackster.io",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
                 }
             ],
             "responseHashes": [
-                "c8497c57259af5dc5f22e5aa5b943103ade2649adbd72b52c62eaa1db149d833"
+                "e543dfc79da0b43eee64babb8784b6e4bea53c134e2b170f8dc3a13f51e640ac"
             ],
-            "type": "Image",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "audacy.com",
-                "www.audacy.com"
-            ]
-        },
-        {
-            "rule": "j\\.sni\\.global\\.fastly\\.net\\/v2\\.0\\/screens\\/foxsports-live",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api3.fox.com",
-                    "resolved": "j.sni.global.fastly.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxsports.com",
-                "www.foxsports.com"
-            ]
-        },
-        {
-            "rule": "j\\.sni\\.global\\.fastly\\.net\\/v2\\.0\\/screens\\/foxsports-live",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api3.fox.com",
-                    "resolved": "j.sni.global.fastly.net"
-                }
-            ],
-            "responseHashes": [
-                "d721ec973e99737a1e7163d52ae1a4ea1978d7d8f6fd7d80a058ef7329561e8f"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxsports.com",
-                "www.foxsports.com"
+                "hackster.io",
+                "www.hackster.io"
             ]
         }
     ],
@@ -142,29 +94,36 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9263157894736842
-        },
-        {
-            "domain": "ajax.googleapis.com",
-            "prevalence": 0.02631578947368421
-        },
-        {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.021052631578947368
+            "prevalence": 0.9421052631578948
         },
         {
             "domain": "googletagmanager.com",
             "prevalence": 0.015789473684210527
         },
         {
+            "domain": "hackster-cdn.online",
+            "prevalence": 0.015789473684210527
+        },
+        {
             "domain": "webcontentassessor.global.ssl.fastly.net",
             "prevalence": 0.010526315789473684
+        },
+        {
+            "domain": "mediatradecraft.com",
+            "prevalence": 0.005263157894736842
+        },
+        {
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.005263157894736842
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.005263157894736842
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Image": 2,
-        "Preflight": 2
+        "Fetch": 2,
+        "XHR": 2
     },
     "nameservers": []
 }
