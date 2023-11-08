@@ -7,24 +7,51 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "route"
+        "route",
+        "logging"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "carambo\\.la\\/inimage\\/getlayer",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "route"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "askmefast.com",
+                "www.thewordfinder.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/AddLogs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logging"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,12 +70,13 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-1973.awsdns-54.co.uk",
         "ns-1315.awsdns-36.org",
-        "ns-774.awsdns-32.net",
-        "ns-437.awsdns-54.com"
+        "ns-1973.awsdns-54.co.uk",
+        "ns-437.awsdns-54.com",
+        "ns-774.awsdns-32.net"
     ]
 }

@@ -7,14 +7,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
         "retcode-us-west-1.arms",
-        "arms-retcode"
+        "arms-retcode",
+        "alb-dqyvai2klqlh3bvacf.us-east-1.alb"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "sentry.smallrig.com",
+            "resolved": "alb-dqyvai2klqlh3bvacf.us-east-1.alb.aliyuncs.com"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "aliyuncs\\.com\\/r\\.png",
@@ -25,20 +31,19 @@
                 "arms-retcode"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.0004033884630899556,
-                "_uetsid": 0.0001008471157724889,
-                "_uetvid": 0.0001008471157724889
+                "_bl_uid": 0.0003022061045633122
             },
             "exampleSites": [
-                "dji.com",
-                "store.dji.com",
+                "picwish.com",
                 "www.dji.com",
                 "www.seeedstudio.com"
             ]
@@ -52,22 +57,48 @@
                 "arms-retcode"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [
-                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.0004033884630899556
+                "_bl_uid": 0.0003022061045633122,
+                "_uetsid": 0.00010073536818777072,
+                "_uetvid": 0.00010073536818777072
             },
             "exampleSites": [
-                "dji.com",
-                "store.dji.com",
+                "picwish.com",
                 "www.dji.com",
                 "www.seeedstudio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/api\\/6\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "alb-dqyvai2klqlh3bvacf.us-east-1.alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sentry.smallrig.com",
+                    "resolved": "alb-dqyvai2klqlh3bvacf.us-east-1.alb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "79cc27b9fb8925629603da138664792ff99c5b4fd15e89b0f792f659cdfd411b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smallrig.com",
+                "www.smallrig.com"
             ]
         }
     ],
@@ -77,20 +108,32 @@
     "topInitiators": [
         {
             "domain": "alicdn.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.7560975609756098
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.12195121951219512
         },
         {
             "domain": "djicdn.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.07317073170731707
+        },
+        {
+            "domain": "aoscdn.com",
+            "prevalence": 0.024390243902439025
+        },
+        {
+            "domain": "google-analytics.com",
+            "prevalence": 0.024390243902439025
         }
     ],
     "types": {
-        "Fetch": 4,
-        "XHR": 4
+        "XHR": 3,
+        "Fetch": 5
     },
     "nameservers": [
+        "ns3.aliyun.com",
         "ns4.aliyun.com",
-        "ns5.aliyun.com",
-        "ns3.aliyun.com"
+        "ns5.aliyun.com"
     ]
 }

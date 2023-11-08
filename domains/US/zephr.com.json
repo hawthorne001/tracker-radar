@@ -8,20 +8,22 @@
     "sites": 49,
     "subdomains": [
         "assets",
+        "associated-press-apnews.cdn",
         "ny-post-decider.cdn",
         "ny-post-ny-post.cdn",
         "ny-post-page-six.cdn",
         "national-review-national-review-production.cdn",
-        "mcclatchy-charlotteobserver.cdn",
-        "mcclatchy-kansas.cdn",
-        "mcclatchy-kansascity.cdn",
-        "mcclatchy-newsobserver.cdn",
-        "mcclatchy-star-telegram.cdn",
-        "tribune-baltimore-sun-prod.cdn",
+        "mhnl-de-telegraaf.cdn",
+        "nhst.auth",
+        "sportspromedia.auth",
         "dumont-wwwkstade.cdn",
         "dumont-wwwrundschau-onlinede.cdn"
     ],
     "cnames": [
+        {
+            "original": "ap-prod.apnews.com",
+            "resolved": "associated-press-apnews.cdn.zephr.com"
+        },
         {
             "original": "z2r.nationalreview.com",
             "resolved": "national-review-national-review-production.cdn.zephr.com"
@@ -37,14 +39,60 @@
         {
             "original": "zephr-v4.pagesix.com",
             "resolved": "ny-post-page-six.cdn.zephr.com"
-        },
-        {
-            "original": "zephr.baltimoresun.com",
-            "resolved": "tribune-baltimore-sun-prod.cdn.zephr.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "zephr\\.com\\/zephr-browser\\/1\\.6\\.0\\/zephr-browser\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "39ce661869eba5404c9cca43c9e5400851b842bf107631a14610e2e7f609d041"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apnews.com",
+                "www.apnews.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "associated-press-apnews.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "ap-prod.apnews.com",
+                    "resolved": "associated-press-apnews.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apnews.com",
+                "www.apnews.com"
+            ]
+        },
         {
             "rule": "zephr\\.com\\/zephr-browser\\/1\\.3\\.9\\/zephr-browser\\.umd\\.js",
             "cookies": 0,
@@ -174,21 +222,17 @@
         },
         {
             "rule": "zephr\\.com\\/zephr\\/decision-engine",
-            "cookies": 0.0000545,
+            "cookies": 0.0000272,
             "fingerprinting": 0,
             "subdomains": [
                 "ny-post-decider.cdn",
                 "ny-post-ny-post.cdn",
                 "ny-post-page-six.cdn",
-                "mcclatchy-charlotteobserver.cdn",
-                "mcclatchy-kansas.cdn",
-                "mcclatchy-kansascity.cdn",
-                "mcclatchy-newsobserver.cdn",
-                "mcclatchy-star-telegram.cdn"
+                "mhnl-de-telegraaf.cdn"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.0000545,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [
                 {
                     "original": "zephr-v4.decider.com",
@@ -211,30 +255,22 @@
                 "decider.com",
                 "nypost.com",
                 "pagesix.com",
-                "www.charlotteobserver.com",
-                "www.kansas.com",
-                "www.kansascity.com",
-                "www.newsobserver.com",
-                "www.star-telegram.com"
+                "www.telegraaf.nl"
             ]
         },
         {
             "rule": "zephr\\.com\\/zephr\\/decision-engine",
-            "cookies": 0.0000545,
+            "cookies": 0.0000272,
             "fingerprinting": 0,
             "subdomains": [
                 "ny-post-decider.cdn",
                 "ny-post-ny-post.cdn",
                 "ny-post-page-six.cdn",
-                "mcclatchy-charlotteobserver.cdn",
-                "mcclatchy-kansas.cdn",
-                "mcclatchy-kansascity.cdn",
-                "mcclatchy-newsobserver.cdn",
-                "mcclatchy-star-telegram.cdn"
+                "mhnl-de-telegraaf.cdn"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.0000545,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [
                 {
                     "original": "zephr-v4.decider.com",
@@ -252,11 +288,7 @@
             "responseHashes": [
                 "9fa030bd8c5330c2e8e981e3449f052b5bdf950bf9bd955d93e0c02518805ca8",
                 "db62561bebdc379630df4433752f6f66452aff5988581ee75c2745b938bd680f",
-                "e2da2429c0154e628935731e502e14ecdea277405591ba75f21b5c168dadcb92",
-                "34c344cd0c0b3e2e0cf4692b09f978c7efb0523295d311efc6c3219a468df959",
-                "3e485e93e4dd20df08400a8073603500cddf8d67b7f9c2a93577ff6b102e23d1",
-                "7aa2bc231bb56de12f695797ddc66774ea8d481dc785c53c5fe5436fbc449bda",
-                "03b90f0514867c9baa44c9fa22ebd61a1304853817e91b7159cb4bd9c1db7d71"
+                "4a5bd6affab949b68ce4d71044ae19f86edb132f5f5070e8e1aafbe9a3967645"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -265,11 +297,7 @@
                 "decider.com",
                 "nypost.com",
                 "pagesix.com",
-                "www.charlotteobserver.com",
-                "www.kansas.com",
-                "www.kansascity.com",
-                "www.newsobserver.com",
-                "www.star-telegram.com"
+                "www.telegraaf.nl"
             ]
         },
         {
@@ -280,11 +308,12 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 7,
-                "window.localStorage": 7
+                "Navigator.prototype.userAgent": 8,
+                "window.localStorage": 8,
+                "Document.cookie getter": 2
             },
-            "sites": 7,
-            "prevalence": 0.0000477,
+            "sites": 8,
+            "prevalence": 0.0000545,
             "cnames": [],
             "responseHashes": [
                 "877aa4bf01c52907108645fb2bd3f9a0eab9eb1d599e5ea41764023440ced4fd"
@@ -294,6 +323,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
+                "www.220triathlon.com",
                 "www.bbc.co.uk",
                 "www.bbc.com",
                 "www.discoverwildlife.com",
@@ -329,8 +359,8 @@
                 }
             ],
             "responseHashes": [
-                "8d4ad5f27c9b54550f7dc7706b3efb623f1891ff7f2ca34f761f0962db3a8539",
-                "35ca47a4db6b532b230fdcfa4458e98a88363a47b06f3682192e3b688dbe590c"
+                "a263d1f5205784767bb92a6cd5e23f8436ec3ecb2b2433df31a9bd7db40bc2d4",
+                "bd13d2fe563de29def4b790a5990c2b5a9411b6ccff76248457c42932a190c09"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -378,79 +408,26 @@
             ]
         },
         {
-            "rule": "zephr\\.com\\/plugins\\/public\\/blueconic\\/segmentsV2",
+            "rule": "zephr\\.com\\/zephr\\/sso",
             "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
-                "tribune-baltimore-sun-prod.cdn"
+                "nhst.auth",
+                "sportspromedia.auth"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "zephr.baltimoresun.com",
-                    "resolved": "tribune-baltimore-sun-prod.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [
-                "cca86fd6f80ca82c5485c53fdebf38819eee3e219c3440b14897937bc3ae5315"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "baltimoresun.com",
-                "www.baltimoresun.com"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/plugins\\/public\\/blueconic\\/segmentsV2",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tribune-baltimore-sun-prod.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "zephr.baltimoresun.com",
-                    "resolved": "tribune-baltimore-sun-prod.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "baltimoresun.com",
-                "www.baltimoresun.com"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr-browser\\/1\\.4\\.1\\/zephr-browser\\.umd\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "c7b98a60c2b121ab17c0b1d342b829a1c5405684f21f3676886b52a7036f6774"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006812035504329049
+            },
             "exampleSites": [
-                "countryfile.com",
-                "www.countryfile.com"
+                "dn.no",
+                "www.sportspromedia.com"
             ]
         },
         {
@@ -465,8 +442,10 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "ea555cc6889a01400dd2a9f46cba0e714631913eb4e09253b0444dcedfcf2909"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -486,10 +465,8 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "33780745ee6e7f678ab1f45584cb8544a7e50e96a949b540dc515e3dd95537f6"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -514,7 +491,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -539,7 +516,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -555,7 +532,7 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4
+                "Navigator.prototype.userAgent": 5
             },
             "sites": 5,
             "prevalence": 0.0000341,
@@ -577,40 +554,40 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000129,
+    "cookies": 0.000116,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6727272727272727
+            "prevalence": 0.7037037037037037
         },
         {
-            "domain": "d14pdm1b7fi5kh.cloudfront.net",
-            "prevalence": 0.12727272727272726
+            "domain": "script.ac",
+            "prevalence": 0.12962962962962962
         },
         {
-            "domain": "osano.com",
-            "prevalence": 0.10909090909090909
+            "domain": "zephr.com",
+            "prevalence": 0.07407407407407407
         },
         {
             "domain": "bbci.co.uk",
-            "prevalence": 0.07272727272727272
+            "prevalence": 0.07407407407407407
         },
         {
             "domain": "bbc.com",
-            "prevalence": 0.01818181818181818
+            "prevalence": 0.018518518518518517
         }
     ],
     "types": {
-        "Script": 18,
+        "Script": 19,
+        "Fetch": 16,
         "Other": 4,
-        "Fetch": 18,
-        "Preflight": 17,
-        "XHR": 2
+        "Preflight": 11,
+        "Document": 2
     },
     "nameservers": [
-        "ns-1991.awsdns-56.co.uk",
-        "ns-1113.awsdns-11.org",
+        "ns-46.awsdns-05.com",
         "ns-877.awsdns-45.net",
-        "ns-46.awsdns-05.com"
+        "ns-1113.awsdns-11.org",
+        "ns-1991.awsdns-56.co.uk"
     ]
 }

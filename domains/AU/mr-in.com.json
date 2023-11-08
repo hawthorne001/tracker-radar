@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "dell-prod.actioniq",
         "hp-prod.actioniq",
@@ -28,6 +28,28 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "mr-in\\.com\\/v1\\/sync\\/function",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dell-prod.actioniq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "311521a585f461f85413083172c27a241b2189ea14f8eaf05f2ac692700d0f39"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dell.com",
+                "www.dell.com"
+            ]
+        },
+        {
             "rule": "mr-in\\.com\\/v1\\/p",
             "cookies": 0,
             "fingerprinting": 0,
@@ -37,8 +59,8 @@
                 "outside"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "aiq-in.ext.hp.com",
@@ -61,9 +83,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dell.com",
+                "www.dell.com",
                 "www.hp.com",
                 "www.pinkbike.com",
                 "www.trailforks.com"
+            ]
+        },
+        {
+            "rule": "mr-in\\.com\\/v1\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dell-prod.actioniq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dell.com",
+                "www.dell.com"
             ]
         }
     ],
@@ -73,15 +118,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.75
         },
         {
             "domain": "metarouter.io",
-            "prevalence": 0.5
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 4
+        "Script": 2,
+        "Fetch": 7
     },
     "nameservers": [
         "porter.ns.cloudflare.com",

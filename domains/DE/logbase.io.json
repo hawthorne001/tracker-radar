@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "upsell-app"
+        "upsell-app",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,14 +22,14 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arktis.de",
+                "zwift.com",
                 "www.wunschgutschein.de"
             ]
         },
@@ -41,7 +42,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "b726f865fd089a0abb66fb10fd8d08174bcc6d772aa3f6d6302ad1a34a6a53f9"
@@ -50,8 +51,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arktis.de",
+                "zwift.com",
                 "www.wunschgutschein.de"
+            ]
+        },
+        {
+            "rule": "logbase\\.io\\/lb-upsell-wrapper\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a8bb8330a2b3f858b82db8e25053db7386e288546fcad6544ff9b9d9fdba3eff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zwift.com",
+                "www.arktis.de"
             ]
         }
     ],
@@ -61,17 +84,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns-610.awsdns-12.net",
         "ns-374.awsdns-46.com",
-        "ns-1748.awsdns-26.co.uk",
-        "ns-1423.awsdns-49.org"
+        "ns-610.awsdns-12.net",
+        "ns-1423.awsdns-49.org",
+        "ns-1748.awsdns-26.co.uk"
     ]
 }

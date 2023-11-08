@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "data"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,13 +24,14 @@
                 "Screen.prototype.width": 2,
                 "window.devicePixelRatio": 2,
                 "window.innerWidth": 2,
-                "window.innerHeight": 2
+                "window.innerHeight": 2,
+                "Navigator.prototype.connection": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6ff04d050d5933f81fe199d4f0fc3829ba80d31d2d93efbc3c99b3f49afaa98e"
+                "876c9a1a9d1eaf8b155faf7e216b48160651050d0e0c8a352fcf92d22d43055e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -37,6 +39,28 @@
             "exampleSites": [
                 "runningroom.com",
                 "www.runningroom.com"
+            ]
+        },
+        {
+            "rule": "debugbear\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drivingelectric.com",
+                "www.thewrap.com"
             ]
         }
     ],
@@ -46,11 +70,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Ping": 2
     },
     "nameservers": [
         "dns1.registrar-servers.com",
