@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - muodov/release-automation
 
 jobs:
   release:
@@ -28,5 +27,5 @@ jobs:
           npm ci
           if npx auto label --exists release;
           then
-            npx auto release --no-version-prefix --use-version `date +%Y.%m.%d` -d
+            npx auto release --no-version-prefix --use-version `date +%Y.%m.%d`
           fi
