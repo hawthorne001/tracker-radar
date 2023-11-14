@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - muodov/release-automation
 
 jobs:
   release:
@@ -25,4 +26,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm ci
-          npx auto release --no-version-prefix --use-version `date +%Y.%m.%d`
+          if npx auto label --exists release;
+          then
+            npx auto release --no-version-prefix --use-version `date +%Y.%m.%d`
+          fi
