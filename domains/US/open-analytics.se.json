@@ -4,17 +4,22 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000476,
+    "sites": 7,
     "subdomains": [
-        "tracker.hsb",
+        "tracker.vattenfall",
         "tracker.msb",
+        "tracker.hsb",
         "tracker.oph"
     ],
     "cnames": [
         {
             "original": "open-analytics.hrw.org",
             "resolved": "open-analytics.se"
+        },
+        {
+            "original": "statistics.vattenfall.com",
+            "resolved": "tracker.vattenfall.open-analytics.se"
         },
         {
             "original": "tracking.oph.fi",
@@ -27,6 +32,44 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "open-analytics\\.se\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker.vattenfall",
+                "tracker.msb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "statistics.vattenfall.com",
+                    "resolved": "tracker.vattenfall.open-analytics.se"
+                },
+                {
+                    "original": "open-analytics.hrw.org",
+                    "resolved": "open-analytics.se"
+                },
+                {
+                    "original": "tracking.webbanalys.msb.se",
+                    "resolved": "tracker.msb.open-analytics.se"
+                }
+            ],
+            "responseHashes": [
+                "002c9a531dc75ed691ecc6d0ad68e24290cd949b62febe1e7aa5008e04d06b8b",
+                "7682637150e981f302afda7475bc79063b74feea571efe1a2c99676bcc74889d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vattenfall.com",
+                "www.hrw.org",
+                "www.msb.se"
+            ]
+        },
         {
             "rule": "open-analytics\\.se\\/js\\/container_MOFt5fSb\\.js",
             "cookies": 0,
@@ -42,7 +85,7 @@
                 }
             ],
             "responseHashes": [
-                "d1fc20bfa8dadc046b12e1a84fc51e982ad17ddc53222926b5d661e7e3a8746d"
+                "6da2e19a07a19e0cdbc6aebd5951bd191d66154d5d7ee48703bdfd6c55fc8cfe"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -63,7 +106,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000341,
+            "prevalence": 0.000034,
             "cnames": [
                 {
                     "original": "open-analytics.hrw.org",
@@ -91,39 +134,6 @@
                 "www.msb.se",
                 "www.oph.fi"
             ]
-        },
-        {
-            "rule": "open-analytics\\.se\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tracker.msb"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [
-                {
-                    "original": "open-analytics.hrw.org",
-                    "resolved": "open-analytics.se"
-                },
-                {
-                    "original": "tracking.webbanalys.msb.se",
-                    "resolved": "tracker.msb.open-analytics.se"
-                }
-            ],
-            "responseHashes": [
-                "3f2d1d78ad4a8cded61a9e4df52ddda19e07042ba1b92b1ff2cbc21fa0179476",
-                "a2db203572e166c0ea93bd52e0febc74045bd04242b83ccd669f50fb9593039a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hrw.org",
-                "www.hrw.org",
-                "www.msb.se"
-            ]
         }
     ],
     "categories": [],
@@ -140,7 +150,7 @@
         "Ping": 5
     },
     "nameservers": [
-        "ns2.dnshost.net",
-        "ns1.dnshost.net"
+        "ns1.dnshost.net",
+        "ns2.dnshost.net"
     ]
 }

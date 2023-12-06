@@ -7,13 +7,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000806,
-    "sites": 8,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "sas.customdomains",
+        "schibsted",
+        "astminternational.customdomains",
         "servicenowsignon.customdomains",
-        "logon.customdomains",
-        "churchofjesuschrist.customdomains"
+        "sas.customdomains"
     ],
     "cnames": [
         {
@@ -21,12 +21,8 @@
             "resolved": "sas.customdomains.okta.com"
         },
         {
-            "original": "id.churchofjesuschrist.org",
-            "resolved": "churchofjesuschrist.customdomains.okta.com"
-        },
-        {
-            "original": "logon.bcg.com",
-            "resolved": "logon.customdomains.okta.com"
+            "original": "iam.astm.org",
+            "resolved": "astminternational.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -36,53 +32,25 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
-            "cookies": 0.000302,
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "sas.customdomains"
+                "schibsted",
+                "astminternational.customdomains",
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [
                 {
-                    "original": "auth.sas.com",
-                    "resolved": "sas.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "0a3051a868f6a1d4ab23c720b93948aefbbd2a42d87c4f34a92c17407cdd96a4",
-                "82762c18419288ecf1074a4d2736e8050eb6903fe313c5016dd33dbdb0e0ada0"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sas.com",
-                "support.sas.com",
-                "www.sas.com"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
-            "subdomains": [
-                "servicenowsignon.customdomains",
-                "logon.customdomains"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
+                },
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
-                },
-                {
-                    "original": "logon.bcg.com",
-                    "resolved": "logon.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -90,77 +58,92 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
-                "www.bcg.com",
+                "schibsted.com",
+                "www.astm.org",
                 "www.servicenow.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000403,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "churchofjesuschrist.customdomains",
-                "logon.customdomains",
-                "servicenowsignon.customdomains"
+                "schibsted",
+                "astminternational.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "id.churchofjesuschrist.org",
-                    "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
-                {
-                    "original": "logon.bcg.com",
-                    "resolved": "logon.customdomains.okta.com"
-                },
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
                 }
             ],
             "responseHashes": [
-                "dcb857e9cb6bff29a81155fe5944b78072ad56d93419bd9b8065834d1140927c"
+                "1dc6a215134af9a843bd79636b766a864ebeecc1c018fcc2040e7b8a05031cd4"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "churchofjesuschrist.org",
-                "www.bcg.com",
-                "www.churchofjesuschrist.org",
-                "www.servicenow.com"
+                "schibsted.com",
+                "www.astm.org"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "216aab84af7c4afe7180ee106d119996241043f97b67dd4905be0cc7a7febd5b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000806,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5
         },
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.3333333333333333
+            "domain": "adobedtm.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 3,
         "Preflight": 3,
-        "Fetch": 4
+        "XHR": 4
     },
     "nameservers": [
-        "edns5.ultradns.biz",
         "edns5.ultradns.com",
-        "edns5.ultradns.net",
         "edns5.ultradns.org",
-        "ns-1459.awsdns-54.org",
         "ns-1563.awsdns-03.co.uk",
+        "edns5.ultradns.biz",
         "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net"
+        "ns-1459.awsdns-54.org",
+        "ns-684.awsdns-21.net",
+        "edns5.ultradns.net"
     ]
 }
