@@ -10,7 +10,9 @@
     "prevalence": 0.00111,
     "sites": 11,
     "subdomains": [
-        "rum"
+        "rum",
+        "logs",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,34 +25,74 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 8,
+            "prevalence": 0.000806,
             "cnames": [],
             "responseHashes": [
-                "11d7c6c3f2ff5f8ea85c7d8ac75a366fcc7f91fddce90b43f596e6786f73297a",
-                "a4316bb2b1d250d0f492582112068f5ec941e18f0948e14e5ee2505777956d5e",
-                "0ed7f300d5997bac69a97259b603f81cf1afd29c54255b2736570e45fc06cefc",
-                "4e5853147da9f09628600de9937eaefdf97c71007add17ba80e21c2fd070f19c",
-                "da171c89d2b096b80ed947ca94d04f1e92e4fd0fb34608f393181f0e637511eb",
-                "5f5d6206ada46ab80f7ff7007cdd621ba42a3cdbcc4497a8adba02058bcd4823",
-                "4df5f3cb9601b17d11dc1f969541d94c363e442c182be4135e4cf20c7e18f385",
-                "75463c07b680e8efe22d2282a834517d239b7e980bc8e664d7525a52df24946a",
-                "7599211c1e71151dfaecc0e8413182cee61a56ef5e232fe6846347a500ba77cb"
+                "ba43551dfad71957ff9e406b4840d82ac66b675357d47e1f78cbc20c15c06bc4",
+                "5dd83e0dac50c8adf28cb7fc4de4c9d14cd82108d0b189627f1daf23b69efe28",
+                "08218431105a7c7a65906fd1054d132976d1a4aee1f1a9f144b593e985b09319",
+                "0b51b3c2a9922b4379f1f81f092571be6bb994f8c9bf0f5b49ef328e26cc0389",
+                "4393455a8d825599f82d27feb821ed236e5fbf20343ec3c4d9861fb431248831",
+                "1de72abd0105c63aa0e339f6e34898656a68709bc83c1003ed832c0e8a9f2b8a",
+                "77c1e51dd8cfae614a968fe06ce8413f73beea7dc760420503a9eb2c5ac46419"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "scribd.com",
-                "de.scribd.com",
+                "1password.com",
+                "de.readly.com",
                 "developer.hashicorp.com",
-                "eu.zwift.com",
-                "gopro.com",
-                "stockx.com",
                 "www.codecademy.com",
-                "www.gartentraum.de",
-                "www.ghacks.net",
-                "www.gorewear.com"
+                "www.digikey.com",
+                "www.gorewear.com",
+                "www.specialized.com",
+                "www.viki.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b86a4c38f809bf41253aa31e60c6528cf28c4530f808ab934dc283af4b63229f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "backmarket.de",
+                "www.backmarket.de"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5d27d88250a7f0d02c835f77c1b325ba4fa4b8f0d803838eab4c290f7823732a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readly.com",
+                "www.digikey.com"
             ]
         },
         {
@@ -65,16 +107,16 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "f8eaae641ffe5d4cac407e06906dfb888789f9973258f7e7af39ea7480143686",
-                "fab64061053c7d9763ecdf6f99ef7de75b0b862abfaace14fbde85e59b0c4ee4"
+                "f398b72e8cb3e5b9b3f2f67b3d592fc7a66372f9183156b95377ef3b01f92a41",
+                "4dd83b6864375c22861ba2cfe70f051d998d562a0d6c220a22e3d0c08c8b4806"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "opensea.io",
+                "codecademy.com",
                 "www.codecademy.com",
-                "www.ghacks.net"
+                "www.digikey.com"
             ]
         }
     ],
@@ -84,24 +126,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5784313725490197
+            "prevalence": 0.7441860465116279
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.39215686274509803
+            "prevalence": 0.16279069767441862
         },
         {
-            "domain": "scribdassets.com",
-            "prevalence": 0.0196078431372549
+            "domain": "viki.io",
+            "prevalence": 0.06976744186046512
         },
         {
             "domain": "d1eh9yux7w8iql.cloudfront.net",
-            "prevalence": 0.00980392156862745
+            "prevalence": 0.023255813953488372
         }
     ],
     "types": {
         "Fetch": 10,
-        "XHR": 3
+        "XHR": 5
     },
     "nameservers": [
         "ns-1264.awsdns-30.org",

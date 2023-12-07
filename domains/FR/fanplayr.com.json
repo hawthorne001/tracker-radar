@@ -7,37 +7,80 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000404,
+    "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "static",
+        "cdn",
         "my",
-        "e1"
+        "e1",
+        "static"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "fanplayr\\.com\\/client\\/sw-load\\.js",
+            "rule": "fanplayr\\.com\\/client\\/production\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "static"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e408d1e2e148ac7c906223c3f93c4b58aea55b81a3be0bc004e180776b11ba87"
+                "ab25854e42fc2334857ab1f169f780217dc17d6382c790580065af7632e3eef8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "costacroisieres.fr",
-                "www.kikocosmetics.com",
-                "www.msccroisieres.fr"
+                "crucial.fr",
+                "www.thalasseo.com"
+            ]
+        },
+        {
+            "rule": "fanplayr\\.com\\/client\\/production\\/platform\\/releases\\/1\\.155\\.0\\/platform\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.language": 2,
+                "Notification.permission": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d1ceae199ef8a0c3a97a468ac9dda7b2cb2197d2a924d52c795fed5f5ef0f71d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fanplayr": {
+                    "ttl": 31622418,
+                    "length": 243,
+                    "prevalence": 0.0002013693113169553,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crucial.fr",
+                "www.thalasseo.com"
             ]
         },
         {
@@ -49,36 +92,64 @@
                 "e1"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "de18b02ffbfb06f8d9fe5b9bd72e3ac56b236e40b8c1a1daaf4c099adb2c62dd"
+                "3fabd1fc5f42fa65ccf1b126324c5f1400e5fde4f1b9f16d13937080caee30b3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "crucial.fr",
-                "www.crucial.fr"
+                "www.crucial.fr",
+                "www.thalasseo.com"
+            ]
+        },
+        {
+            "rule": "fanplayr\\.com\\/client\\/sw-load\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e408d1e2e148ac7c906223c3f93c4b58aea55b81a3be0bc004e180776b11ba87"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kikocosmetics.com",
+                "www.msccroisieres.fr",
+                "www.thalasseo.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5555555555555556
         },
         {
             "domain": "first party",
             "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 10
     },
     "nameservers": [
         "ns-6.awsdns-00.com",
