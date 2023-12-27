@@ -11,7 +11,6 @@ CREATE UNIQUE INDEX domain_idx ON trackers(domain);
 -- END modification - now export
 .output categorized_trackers.csv
 .headers on
--- .dump
 SELECT * FROM trackers ORDER BY domain ASC;
 .output stdout
 END_SQL
