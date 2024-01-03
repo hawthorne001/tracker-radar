@@ -13,8 +13,12 @@
     "sites": 19,
     "subdomains": [
         "o9tt6h08li.execute-api",
+        "production-klarna-il-shopify-osm.s3",
         "cognito-identity",
-        "s3"
+        "firehose",
+        "s3",
+        "dataplane.rum",
+        "i98xu2nhdj.execute-api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -31,7 +35,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a15e60455bd71214801eeffa1a871017acf9bac59e445cfc1d4c8115999c3050"
+                "c97df064e10101886dd751068086af4ff1381e6138afdd6380ca0394b4735a43"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -42,6 +46,52 @@
             ]
         },
         {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/0cf42b376feeb11d247d11c5c05f6df0995db72f\\/258\\.index\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-klarna-il-shopify-osm.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "329173b311eb02ebad5191d3b7314d7ffaeb93d00504f46009f4392bbad28e8d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eufy.com",
+                "www.urbanara.ch"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/0cf42b376feeb11d247d11c5c05f6df0995db72f\\/906\\.index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "production-klarna-il-shopify-osm.s3"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e8aae41e1a2b8d60ec5c73a13665fe0946db2aef3d557c8704629711bd277320"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eufy.com",
+                "www.urbanara.ch"
+            ]
+        },
+        {
             "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -49,62 +99,44 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "73f1bcb492e93bb922e8fed49c1b76fc3c6fa1392c88a20ac2acd21e2a0d0ae9",
+                "2c5fedc998f1d7475555284a63ceedff6f3ea2952db07ac5296f658d1d3057c6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eufy.com",
+                "de.eufy.com",
+                "www.datacamp.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "miro.com",
-                "privatedelights.ch",
+                "eufy.com",
+                "de.eufy.com",
                 "www.datacamp.com",
+                "www.opticsplanet.com",
                 "www.siemens.com"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cognito-identity"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "66e95f9a8bd6a0fb3f33e47ac161a6c15cdf442d34fefa16a4ee42f5fa3ad79b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miro.com",
-                "www.siemens.com"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cognito-identity"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "726bab6d691aa485b9dd845bcc7fbda3f9ad1b7dfad2a3305748489e047957d1"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "privatedelights.ch",
-                "www.datacamp.com"
             ]
         },
         {
@@ -128,57 +160,131 @@
                 "confiserie.ch",
                 "www.confiserie.ch"
             ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "9ba0854a8f404898dd13ebf685f6db18f821434dcb1024e5c03c9e2a40756d33",
+                "37a54b6096579bb104e496b09d1b4a61e9a66d63b5a52dd77c409505355bfcf6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "opticsplanet.com",
+                "www.opticsplanet.com",
+                "www.siemens.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/appmonitors\\/6247ffd7-d333-47b4-9fa3-e35ee7237f65\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siemens.com",
+                "www.siemens.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i98xu2nhdj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thinkspain.com",
+                "www.thinkspain.com"
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7884615384615384
+            "prevalence": 0.6515151515151515
+        },
+        {
+            "domain": "webeyez.com",
+            "prevalence": 0.09090909090909091
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.07575757575757576
+        },
+        {
+            "domain": "thinkwebcontent.com",
+            "prevalence": 0.07575757575757576
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "d3odp2r1osuwn0.cloudfront.net",
-            "prevalence": 0.038461538461538464
-        },
-        {
-            "domain": "dmacnjnna4ptc.cloudfront.net",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.030303030303030304
         },
         {
             "domain": "scoutsss.com",
-            "prevalence": 0.019230769230769232
+            "prevalence": 0.015151515151515152
         },
         {
-            "domain": "jquery.com",
-            "prevalence": 0.019230769230769232
-        },
-        {
-            "domain": "yoursurprise.com",
-            "prevalence": 0.019230769230769232
+            "domain": "nmo.at",
+            "prevalence": 0.015151515151515152
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 4,
-        "Fetch": 2,
-        "Media": 2
+        "XHR": 5,
+        "Script": 4,
+        "Preflight": 5,
+        "Media": 2,
+        "Fetch": 5,
+        "Ping": 2
     },
     "nameservers": [
+        "ns1.amzndns.org",
+        "ns2.amzndns.org",
+        "ns2.amzndns.com",
+        "ns2.amzndns.co.uk",
         "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
         "ns1.amzndns.net",
-        "ns1.amzndns.org",
-        "ns2.amzndns.co.uk",
-        "ns2.amzndns.com",
-        "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns2.amzndns.net"
     ]
 }

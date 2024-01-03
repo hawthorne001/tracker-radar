@@ -12,8 +12,7 @@
     "subdomains": [
         "static",
         "sdk",
-        "events",
-        "interaction"
+        "events"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -47,6 +46,36 @@
             ]
         },
         {
+            "rule": "apester\\.com\\/web-sdk\\.core\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "28d8ab7cb8c46db094bdf5a9c76f4ea4f71778dcd29c1c88ddc0105800c0e960"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "www.dartn.de"
+            ]
+        },
+        {
             "rule": "apester\\.com\\/web-sdk\\.core\\.legacy\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -54,12 +83,11 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "0a3c62f63adcbc43c588ba90f597d32983fd3016be1253063e603b2ab015eb01",
-                "df777282dc5132609344be64189b9451282a16417ca5f7f29f783aa5f5e6bcb1"
+                "0a3c62f63adcbc43c588ba90f597d32983fd3016be1253063e603b2ab015eb01"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -67,8 +95,29 @@
             "exampleSites": [
                 "itsfoss.com",
                 "linuxhandbook.com",
-                "www.serienjunkies.de",
-                "www.weltfussball.de"
+                "www.serienjunkies.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "linuxhandbook.com",
+                "www.dartn.de",
+                "www.serienjunkies.de"
             ]
         },
         {
@@ -91,52 +140,8 @@
             "exampleSites": [
                 "itsfoss.com",
                 "linuxhandbook.com",
-                "www.serienjunkies.de",
-                "www.weltfussball.de"
-            ]
-        },
-        {
-            "rule": "apester\\.com\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "events"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "itsfoss.com",
-                "linuxhandbook.com",
-                "www.serienjunkies.de",
-                "www.weltfussball.de"
-            ]
-        },
-        {
-            "rule": "apester\\.com\\/interaction-stats\\/630c731ce0edf1002a0eb67e",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "interaction"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8cabc53795981fa0f0c4959ba589329bd118c2750371620d3e0d8a6f628e50cc"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "weltfussball.de",
-                "www.weltfussball.de"
+                "www.dartn.de",
+                "www.serienjunkies.de"
             ]
         }
     ],
@@ -150,15 +155,14 @@
         }
     ],
     "types": {
-        "Script": 7,
-        "XHR": 4,
+        "Script": 8,
         "Preflight": 4,
-        "Fetch": 2
+        "XHR": 4
     },
     "nameservers": [
-        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c4.googledomains.com",
         "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c3.googledomains.com"
     ]
 }

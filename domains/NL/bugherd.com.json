@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000301,
+    "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "www"
+        "www",
+        "sidebar"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,13 +16,15 @@
         {
             "rule": "bugherd\\.com\\/sidebarv2\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 3
+            },
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
@@ -29,14 +32,111 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "literatuurmuseum.nl",
-                "tilburg.com",
-                "www.payscale.com"
+                "mijn.voedingscentrum.nl",
+                "tilburg.com"
+            ]
+        },
+        {
+            "rule": "bugherd\\.com\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sidebar"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "977169ff3b7e5177457c7e152eebb71e067c6d6bd6813200ffdd635e586107b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "literatuurmuseum.nl",
+                "mijn.voedingscentrum.nl",
+                "tilburg.com"
+            ]
+        },
+        {
+            "rule": "bugherd\\.com\\/sidebar\\/embed_html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sidebar"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2c5624c95a1af0f7d6189f07ce170a55d6fe175b1b11754f42524d38f0fd723d",
+                "80c2fd887a5b67d280353425d6aa95160edd0d5b9d4b942a1c509851f52967b4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "literatuurmuseum.nl",
+                "mijn.voedingscentrum.nl",
+                "tilburg.com"
+            ]
+        },
+        {
+            "rule": "bugherd\\.com\\/assets\\/bh_logo_short-1d6af89eca7e694074a6e0bd9201111a89f1683346b813c99cd5b395cf7d7e23\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sidebar"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "62331560f77f292c38799938c59de794205f87655c9ef702bfb9e64cfdb2af88"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "literatuurmuseum.nl",
+                "mijn.voedingscentrum.nl",
+                "tilburg.com"
+            ]
+        },
+        {
+            "rule": "bugherd\\.com\\/sidebar\\/resources",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sidebar"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "f98bbcd36255614ef2f4cebea59819f3f14f8b62f05a5f51a7d8359fd6a03948",
+                "7190c5bc4900b9c91d3bb81fdee7d640d6df4419da9e3eb0e81a4e15f9aeee2e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "literatuurmuseum.nl",
+                "mijn.voedingscentrum.nl",
+                "tilburg.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
@@ -44,10 +144,13 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 6,
+        "Document": 3,
+        "Image": 3,
+        "Fetch": 3
     },
     "nameservers": [
-        "leah.ns.cloudflare.com",
-        "clark.ns.cloudflare.com"
+        "clark.ns.cloudflare.com",
+        "leah.ns.cloudflare.com"
     ]
 }

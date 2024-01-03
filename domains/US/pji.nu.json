@@ -7,7 +7,9 @@
     "prevalence": 0.0000748,
     "sites": 11,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "session-api.cloud",
+        "session-api-au.cloud"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,7 +26,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "b2385758ad03b1a7049857091ce7ad62d05d8c832529a9fc601f5463dc47ac0a"
+                "5f3e4178323c20b424172a7a24390e9c9deb2b17ca728e61476f91fde7426c0c"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -32,6 +34,84 @@
             "exampleSites": [
                 "kvinneguiden.no",
                 "forum.kvinneguiden.no"
+            ]
+        },
+        {
+            "rule": "pji\\.nu\\/libs\\/pjsession\\/pjsession\\.min\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "12710b0b1ba161e62a7df81bda37277b08811e4f315fe473a639f6b95533c235"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pj_sid": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000013605534731528785,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hintaopas.fi",
+                "pricespy.co.uk"
+            ]
+        },
+        {
+            "rule": "pji\\.nu\\/sessions",
+            "cookies": 0.0000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-api.cloud",
+                "session-api-au.cloud"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hintaopas.fi",
+                "pricespy.co.nz",
+                "pricespy.co.uk"
+            ]
+        },
+        {
+            "rule": "pji\\.nu\\/sessions",
+            "cookies": 0.0000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-api.cloud",
+                "session-api-au.cloud"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "d70b9e24bca26b409b9458ceca6c9e5c2b5c3171c37ff050c6f6a0d7a4420d2a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hintaopas.fi",
+                "pricespy.co.nz",
+                "pricespy.co.uk"
             ]
         },
         {
@@ -103,16 +183,18 @@
         {
             "rule": "pji\\.nu\\/b2b\\/widgets\\/best-offers\\/index\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.language": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "11fbe556991c67115466ed85e0209021fb37c7f3d206b90f7828c7afb1de9aa8"
+                "dc601376c3e749211d67d4b00a11f57c179c936af0eeff8449a99676cb0ff11f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -134,7 +216,7 @@
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "b0aa56524091147304aeac8fe96c9aeed5c5a32dcc0bd7d63e092eea5ddd0a63"
+                "3fa80d03fab908cd1d62a7a20ad321a3302c5927b29124d0fc8aa35ae31b3622"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -153,8 +235,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "02f6f0803c1eeefad20a512fc86738aacbbca1ee71a808636d25351b7c52e21b"
@@ -164,13 +246,14 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lbtechreviews.com",
+                "www.lbtechreviews.com",
                 "www.ljudochbild.se"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000204,
     "topInitiators": [
         {
             "domain": "first party",
@@ -179,11 +262,13 @@
     ],
     "types": {
         "Stylesheet": 5,
-        "Image": 6,
-        "Script": 4
+        "Script": 7,
+        "Preflight": 3,
+        "Fetch": 3,
+        "Image": 6
     },
     "nameservers": [
-        "nelly.ns.cloudflare.com",
-        "hans.ns.cloudflare.com"
+        "hans.ns.cloudflare.com",
+        "nelly.ns.cloudflare.com"
     ]
 }

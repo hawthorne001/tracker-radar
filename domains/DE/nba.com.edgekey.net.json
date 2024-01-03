@@ -12,19 +12,24 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "core-api"
     ],
     "cnames": [
         {
             "original": "cdn.nba.com",
             "resolved": "cdn.nba.com.edgekey.net"
+        },
+        {
+            "original": "core-api.nba.com",
+            "resolved": "core-api.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/scoreboard\\/todaysScoreboard_00\\.json",
-            "cookies": 0.000101,
+            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -38,7 +43,90 @@
                     "resolved": "cdn.nba.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "4ebc2b91300f1b757213d114b033e0df185e4afe0ceaffa13d1cc5442a709273"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/scoreboard\\/todaysScoreboard_00\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40fdf75c1f6666d43667c4761e8671ba4a230740cf4fbdffd01f131391ac9778"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ea781cdc0c940c426bf2a311d705658163566d724391cab0b49d8039c335a497"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/channels\\/v2\\/channels_00\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "22cf189656cde6772b995fc75bab1d57df7fe4e3071d88137fc962d6a74c4863"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -51,8 +139,15 @@
     "categories": [],
     "performance": {},
     "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "usestoryteller.com",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Fetch": 2
+        "Fetch": 6,
+        "XHR": 2
     },
     "nameservers": []
 }
