@@ -7,47 +7,34 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "psa",
+        "route",
+        "cdata",
+        "logging",
         "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "carambo\\.la\\/getPsa",
+            "rule": "carambo\\.la\\/inimage\\/getlayer",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "psa"
+                "route"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "86289780bb39c8efe2e174d5523e99cea4965c1fa0c56acb2564dc2d218cda43"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "thefreedictionary.com",
-                "www.thefreedictionary.com"
-            ]
-        },
-        {
-            "rule": "carambo\\.la\\/getPsa",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "psa"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "3bf893cd06c71666791c7193b1893c6f6b2e8140976555cab6b0e467bad4630d"
+                "2a5a285a39a5316c79384c5d3f957de4ddb2e7037af3b5491e4c277f83e29c08"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -58,8 +45,52 @@
             ]
         },
         {
-            "rule": "carambo\\.la\\/SetLastMile",
+            "rule": "carambo\\.la\\/Layer\\/InImage\\/Prod\\/cbola_platform\\/version_2\\.34\\.0\\/js\\/Carambola_layer_160\\.min\\.js",
             "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdata"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2a5a285a39a5316c79384c5d3f957de4ddb2e7037af3b5491e4c277f83e29c08"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/AddLogs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logging"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/SetPageRequestGeo",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "analytics"
@@ -69,9 +100,9 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "2c2bab085831fd78c0f297f8c598ac7dae3e3aab3eb6d7cc48b44d5da547cd43"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -90,13 +121,14 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Script": 4
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-437.awsdns-54.com",
+        "ns-1973.awsdns-54.co.uk",
         "ns-1315.awsdns-36.org",
         "ns-774.awsdns-32.net",
-        "ns-1973.awsdns-54.co.uk"
+        "ns-437.awsdns-54.com"
     ]
 }

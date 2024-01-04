@@ -7,12 +7,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "bose",
-        "reebok-raf",
-        "skillshare",
+        "revzilla",
         "wine"
     ],
     "cnames": [
@@ -21,16 +20,8 @@
             "resolved": "bose.extole.io"
         },
         {
-            "original": "refer.reebok.com",
-            "resolved": "reebok-raf.extole.io"
-        },
-        {
             "original": "refer.wine.com",
             "resolved": "wine.extole.io"
-        },
-        {
-            "original": "share.skillshare.com",
-            "resolved": "skillshare.extole.io"
         }
     ],
     "fingerprinting": 1,
@@ -41,75 +32,45 @@
             "fingerprinting": 1,
             "subdomains": [
                 "bose",
-                "reebok-raf",
-                "skillshare",
+                "revzilla",
                 "wine"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "document.fonts.check": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "refer.bose.com",
                     "resolved": "bose.extole.io"
                 },
                 {
-                    "original": "refer.reebok.com",
-                    "resolved": "reebok-raf.extole.io"
-                },
-                {
-                    "original": "share.skillshare.com",
-                    "resolved": "skillshare.extole.io"
-                },
-                {
                     "original": "refer.wine.com",
                     "resolved": "wine.extole.io"
                 }
             ],
             "responseHashes": [
-                "cc072a3690d15144a411d227451802652e901f9f8e0038e2fca208da65473dd0",
-                "f1e1362d898ee69aca178604214fd74002c1d500dbe6a0a7a1c2c2c550c96ebb",
-                "7bf9ea02706d0df3c2408df68a801c2dfe35767a922dd19a6fadf7234a690613"
+                "d70c0dbc726e166dc56725758815a2eaae3592e42ae9e14458ec1a21407efc23",
+                "a5cd77d65520305a1f3011ff0e778b172f749ce16731abd9f9ac599d1a9c4b12"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536006,
+                    "length": 26,
+                    "prevalence": 0.00010067451927917044,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bose.com",
-                "www.reebok.com",
-                "www.skillshare.com",
-                "www.wine.com"
-            ]
-        },
-        {
-            "rule": "extole\\.io\\/zones\\/global_header",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "reebok-raf",
-                "wine"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "refer.reebok.com",
-                    "resolved": "reebok-raf.extole.io"
-                },
-                {
-                    "original": "refer.wine.com",
-                    "resolved": "wine.extole.io"
-                }
-            ],
-            "responseHashes": [
-                "10f11e1d44f9dc4d529d0e99a4af257cbc9fcfe15499e3956bbe92cfd1bcb626"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "reebok.com",
+                "www.revzilla.com",
                 "www.wine.com"
             ]
         },
@@ -118,7 +79,7 @@
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "reebok-raf",
+                "revzilla",
                 "wine"
             ],
             "apis": {},
@@ -126,22 +87,18 @@
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "refer.reebok.com",
-                    "resolved": "reebok-raf.extole.io"
-                },
-                {
                     "original": "refer.wine.com",
                     "resolved": "wine.extole.io"
                 }
             ],
             "responseHashes": [
-                "fc154ea2bd4aab65630cf57ffd320f65de11099622935965ffb9a73e81134f7b"
+                "678692ce45bd6d529dfa71ca6536f7abc15250fad2dcb61b1579fc4ebb3c5468"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reebok.com",
+                "revzilla.com",
                 "www.wine.com"
             ]
         }
@@ -152,7 +109,11 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.75
+            "prevalence": 0.5
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.25
         },
         {
             "domain": "tiqcdn.com",
@@ -160,12 +121,13 @@
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 4
+        "Script": 3,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-603.awsdns-11.net",
         "ns-231.awsdns-28.com",
-        "ns-1510.awsdns-60.org"
+        "ns-1510.awsdns-60.org",
+        "ns-603.awsdns-11.net",
+        "ns-1867.awsdns-41.co.uk"
     ]
 }

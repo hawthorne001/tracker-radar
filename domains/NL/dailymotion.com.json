@@ -12,7 +12,8 @@
     "subdomains": [
         "geo",
         "speedtest",
-        "graphql.api"
+        "graphql.api",
+        "st.nyc"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -35,20 +36,23 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
+                "dakar.com",
                 "www.leparisien.fr",
                 "www.netatmo.com",
-                "www.paroles.net"
+                "www.touretappe.nl"
             ]
         },
         {
             "rule": "dailymotion\\.com\\/latencies\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "speedtest"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3
+            },
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
@@ -59,10 +63,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
+                "dakar.com",
                 "www.leparisien.fr",
                 "www.netatmo.com",
-                "www.paroles.net"
+                "www.touretappe.nl"
             ]
         },
         {
@@ -73,18 +77,20 @@
                 "graphql.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "a3d6d332d4d6df405060e5852f515d2d3324df845d5c36dd25e54659f8f65e56"
+                "908b90f0e77dbeca9c01df324a6a880452c59431621e93f3eb6776e7ed1909b7",
+                "3ba31dbb538d65b035851903b30ea38b2545e3eb192e343c57af0faf01ece77f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
-                "www.netatmo.com"
+                "dakar.com",
+                "www.netatmo.com",
+                "www.touretappe.nl"
             ]
         },
         {
@@ -95,16 +101,17 @@
                 "graphql.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
-                "www.netatmo.com"
+                "dakar.com",
+                "www.netatmo.com",
+                "www.touretappe.nl"
             ]
         },
         {
@@ -115,18 +122,20 @@
                 "graphql.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "4bf5fa7b1365020e5a39e2f462780a7b6e8a4e41f5fd02f54045c63f95fb4444"
+                "57d9bd4f81e2ef8b919639f8769c5908370811070a9fe6b727ffbbe78cb71dcc",
+                "0b4595b686b272024eba70681b5a5dca9484e12c5ae9c6be0be5d41c8a370a19"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
-                "www.netatmo.com"
+                "dakar.com",
+                "www.netatmo.com",
+                "www.touretappe.nl"
             ]
         },
         {
@@ -137,16 +146,40 @@
                 "graphql.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nouvelobs.com",
-                "www.netatmo.com"
+                "dakar.com",
+                "www.netatmo.com",
+                "www.touretappe.nl"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/speedtest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "speedtest",
+                "st.nyc"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dakar.com",
+                "www.dakar.com",
+                "www.leparisien.fr",
+                "www.touretappe.nl"
             ]
         }
     ],
@@ -159,21 +192,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5909090909090909
+            "prevalence": 0.5
         },
         {
             "domain": "dmcdn.net",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.45454545454545453
         },
         {
-            "domain": "pepsia.com",
+            "domain": "biddercore.io",
             "prevalence": 0.045454545454545456
         }
     ],
     "types": {
         "Script": 8,
-        "XHR": 4,
-        "Preflight": 4
+        "XHR": 6,
+        "Preflight": 6,
+        "WebSocket": 4
     },
     "nameservers": [
         "a.dailymotion.com",

@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
         "a",
         "ads",
@@ -20,6 +20,77 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "exosrv\\.com\\/nativeads\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a",
+                "ads"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "window.innerWidth": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "04eee29b01b4aa1c99231375c33a1633e4caf985f47f95fd9ff521a032e1f117"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "8muses.xxx",
+                "hcbdsm.com"
+            ]
+        },
+        {
+            "rule": "exosrv\\.com\\/splash\\.php",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syndication"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "28c4717e4f03efba142387ef9c1012d1d897c6be58a1c54536b3bf95549da6f3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "8muses.xxx",
+                "hcbdsm.com"
+            ]
+        },
+        {
+            "rule": "exosrv\\.com\\/splash\\.php",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syndication"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "8muses.xxx",
+                "hcbdsm.com"
+            ]
+        },
+        {
             "rule": "exosrv\\.com\\/ads\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -28,12 +99,12 @@
                 "ads"
             ],
             "apis": {
-                "Date.prototype.getTime": 4,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3
+                "Date.prototype.getTime": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5
             },
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000705,
             "cnames": [],
             "responseHashes": [
                 "273c95ab65884bfb12154bf674975fa538719d095fcf78c27504e52cb391c68f"
@@ -47,24 +118,26 @@
                 "vjav.com",
                 "www.peekvids.com",
                 "www.pornflip.com",
+                "www.porntry.com",
                 "www.simply-hentai.com"
             ]
         },
         {
             "rule": "exosrv\\.com\\/ads-iframe-display\\.php",
-            "cookies": 0.000302,
+            "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
                 "syndication"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "ad10f110bb3190665326de996cf91178a3fc936ca3fbbaa6ed25482f3899f104",
-                "31cc400574996ded3ec111f922ec8315596ec5e623f3eebd2ec4099b7b61c03a",
-                "f9dce5083f13a91fd5c6a9b3e554fe1613024da65dd8d786af6248394a61b3e6"
+                "395c20e002a99e92507c1369d35eb006357c4a2235b53b6fac0bab87d68dc9cf",
+                "cb949c44383882c8a00d838f619590e6337d150d31205febaeb04a5a66f14681",
+                "c2dffa8e7d1ef6b8addb3926525b2ca461de38e439b68be2f61fcb86eeee1339",
+                "101d99d2d77d1822eb4ba5adc241d1f002c7841252b0fbbb175a1243d0452bf2"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -73,7 +146,8 @@
                 "thehun.net",
                 "www.homepornking.com",
                 "www.peekvids.com",
-                "www.pornflip.com"
+                "www.pornflip.com",
+                "www.porntry.com"
             ]
         }
     ],
@@ -82,25 +156,27 @@
         "Advertising"
     ],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000604,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9285714285714286
+            "prevalence": 0.9473684210526315
         },
         {
             "domain": "realsrv.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 6,
-        "Document": 4
+        "Script": 9,
+        "XHR": 2,
+        "Preflight": 2,
+        "Document": 5
     },
     "nameservers": [
-        "sec2.rcode0.net",
         "sec1.rcode0.net",
-        "dns1.cloudns.net",
-        "dns2.cloudns.net"
+        "dns2.cloudns.net",
+        "sec2.rcode0.net",
+        "dns1.cloudns.net"
     ]
 }

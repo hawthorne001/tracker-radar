@@ -4,17 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000748,
-    "sites": 11,
+    "prevalence": 0.0000884,
+    "sites": 13,
     "subdomains": [
         "idstatic",
         "webpush",
+        "images",
         "search",
         "shareapi",
-        "images",
-        "dossier",
         "api",
-        "apiwishlist"
+        "dossier",
+        "apiwishlist",
+        "apisearch",
+        "node-ai"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -27,8 +29,8 @@
                 "idstatic"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000476,
+            "sites": 8,
+            "prevalence": 0.0000544,
             "cnames": [],
             "responseHashes": [
                 "125b2681f40b008c3c1ea7a44b79cd3483977fc5dfff3bbb4e94ad357c819854"
@@ -38,6 +40,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cosmo.ph",
+                "www.cosmo.ph",
                 "www.esquiremag.ph",
                 "www.pep.ph",
                 "www.preview.ph",
@@ -54,14 +57,14 @@
                 "webpush"
             ],
             "apis": {
-                "Notification.permission": 4,
-                "window.localStorage": 4,
-                "window.sessionStorage": 4,
-                "window.innerWidth": 4,
-                "window.innerHeight": 4
+                "Notification.permission": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "window.innerWidth": 5,
+                "window.innerHeight": 5
             },
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
                 "98cac503369d7237e9a85ba5964fe7a7dd71e740e814170bc798acd96fc88900"
@@ -71,6 +74,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cosmo.ph",
+                "www.cosmo.ph",
                 "www.esquiremag.ph",
                 "www.pep.ph",
                 "www.spot.ph"
@@ -102,6 +106,28 @@
                 "www.spot.ph",
                 "www.topgear.com.ph",
                 "www.yummy.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/cosmo\\/images\\/fallback-pattern\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "976b7afaa99ea7c663d54600194ee7c35c9297d1ba106a9173090aeee9b7dd3e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cosmo.ph",
+                "www.cosmo.ph"
             ]
         },
         {
@@ -142,10 +168,11 @@
                 "webpush"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
+                "9d784fd84cb365b62ea16ab0411b02cfb3037906cfd34c40515678724641d682",
                 "869baa8edbdd15f7e29729235270a414e27a7d3d42b44a621c5e959dd5a2407e",
                 "56aedbb6d4ef1e0d8134915250fd29f62d4d20ec51b110a0bfa507cb41ac7dd5",
                 "3430018d26087b7746c30576f62b634fbfe0d54638f1a4172d633e226d025b86"
@@ -155,6 +182,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cosmo.ph",
+                "www.cosmo.ph",
                 "www.esquiremag.ph",
                 "www.pep.ph",
                 "www.spot.ph"
@@ -162,38 +190,80 @@
         },
         {
             "rule": "summitmedia-digital\\.com\\/shareAPI",
-            "cookies": 0.0000136,
+            "cookies": 0.0000068,
             "fingerprinting": 0,
             "subdomains": [
                 "search",
                 "shareapi"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000408,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "f6a3c216b432e9ae59c8ceeddae45a7f12e7bdd1b5a0a21033c48ff4fe94d83a",
-                "3571dcc70ac4e8c5bdcb353d6ec7a47b9f7d2dd13caaa7cb6b66d9ed7195b127",
-                "da38a7a347ab78ae13550a5fd954bc6e64c2e7789964b91977954dc8fef39433",
-                "8a7e7774df037397aa2599943273b57baa4ea42bfb2a248fd43c50054cf4723d"
+                "744393779de5341a9c6c85f701273d0b188304fde69d8c4d0d9f95c9b9e3f398",
+                "08b1283aca933b36330f9a1afae5c9143c82ced2551bc4727050be1d4b4c8252",
+                "da38a7a347ab78ae13550a5fd954bc6e64c2e7789964b91977954dc8fef39433"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00006123865383830274
+                "_li_dcdm_c": 0.000013605534731528785,
+                "lotame_domain_check": 0.000013605534731528785
             },
             "exampleSites": [
                 "cosmo.ph",
                 "www.esquiremag.ph",
                 "www.pep.ph",
-                "www.preview.ph",
-                "www.spot.ph",
-                "www.topgear.com.ph"
+                "www.spot.ph"
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/sap\\/images\\/2023\\/11\\/15\\/esquire-smimax-mainimage-1-1700027119\\.jpg",
+            "rule": "summitmedia-digital\\.com\\/cosmo\\/v1\\/hero\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6afa4104c45ea8d8aff4d0e3cc9ef3f69c68e490dd52f1f9cbe9cd3423614dea"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cosmo.ph",
+                "www.cosmo.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/cosmo\\/v1\\/featured\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "4d8719b3069c8bb152407ca4a6b3fa1e4bf3fd70ae2d6c4e822b51c6521f0afb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cosmo.ph",
+                "www.cosmo.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/cosmo\\/resize\\/medium\\/images\\/2023\\/08\\/23\\/outfit-captions-for-instagram-1692783251\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -204,7 +274,51 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "440fa87becf7eb071fde2bb6ec78f400cefcff03135aee106d86cc9a95f4e3c7"
+                "59eb0e9e1b64332f17f566584c4862897776374f07643bc73bf926b9ec2a256b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cosmo.ph",
+                "www.cosmo.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/assets\\/cosmo\\/web-message-logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webpush"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "5c51e255e933f5ca9f827a9d316a81aa41d20bde47b6a0554b10f004d2de8cbb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cosmo.ph",
+                "www.cosmo.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/sap\\/images\\/2023\\/12\\/06\\/238404-2744-esquire-meadows-mainimage-1-1-1701830925\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3f710daa81a272eea9cd881d7c1e7188060700b526d793bef8458cd810cbccc4"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -226,7 +340,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c46f53cfe3f8f8381543774a6a936458bf95e150d32cf48e357a3e34f48f2986"
+                "ff44934e741f73551b406198eb5f6494e07b804207c57879cff85960c7429b91"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -248,7 +362,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "b48817f5fdcca60b6f010d6cfba5bdabcffb0b6d254fd4bbdf701008fce14aee"
+                "e254eac23eb036929ee074602a265764f26a5594a92ab8649628a8cad5541c73"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -270,7 +384,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c352e976f6b4837544cdf52efda6bcabca5175a99043b4296dfc921a56ec5573"
+                "713545918f7c40260548a97082ca93e7bc4304887896de8a69ea597d770fa8b3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -292,7 +406,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "27bb9469cda8d9b19239954408006b2b8230e5142a3c2b30a66fdeba41701c5b"
+                "43b4012b542492630d74606d9999ebbdbee34c54206156a2996281584550a404"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -314,7 +428,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "30b7ca6ec9430a43a0bf79b5510838d18e321f1b3a37d4a5e9d039fa47399f6d"
+                "4bfeb95c93aedb20c3c1d2dcef708a42331b7aec5a4c031963d66fbe54b3735c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -325,7 +439,7 @@
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/01\\/MicrosoftTeams-image\\.png",
+            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/19\\/esquire-ipo5\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -336,7 +450,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "39ecf776c486b1bbeddea64cb292ae5c1d5324b2efbc5921bf37f0b59482f679"
+                "6ddc7800e0b83d5e10e97d7d378f6a4d796dbd962eed89378bd92f46af3ea507"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -347,27 +461,7 @@
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/01\\/forbes-asia-companies\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "images"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "esquiremag.ph",
-                "www.esquiremag.ph"
-            ]
-        },
-        {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/11\\/29\\/screen-shot-2023-11-28-at-9-31-44-am-6565f9e76000c\\.jpg",
+            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/27\\/Kabang-main\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -378,7 +472,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "eaff6e49510bd3326deab0e3dc2ccb652264bc33393dc93c20cd127765dd5711"
+                "5fcd43a4b3e4417802fafddde3362621edc7d737283e22d29b45b00ec837f559"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -389,7 +483,7 @@
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/11\\/29\\/squid-game-the-challenge-n-s1-e5-00-06-56-01r-6565f93af04c3\\.jpg",
+            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/29\\/islander\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -400,7 +494,51 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "3c89f5fa53666a950ca6a882f41213dfd37cdd170e1bf8faab30f56782751b7b"
+                "8e8a1d07c2d90b340a188233eac82241f0e3b01958a06a14122d2e54fcca6d63"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "esquiremag.ph",
+                "www.esquiremag.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/29\\/AdobeStock_363115430%20\\(1\\)\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8a394c613936118301c80693d55d7c2735b54e0afd10192ff753ec2af307a978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "esquiremag.ph",
+                "www.esquiremag.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/12\\/29\\/adam-driver-ferrari-trailer-652fdbfeb3075\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2cf2052bc30acacf0d193f5fa49e8363c7a43a1874cfe6cdc8c417c9753c72ce"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -433,72 +571,6 @@
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2023\\/11\\/14\\/esquire-htcg-4\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "images"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "60fd9adaa42ba6362c7e48dc812f9b5c1490d8d49e53c8008046af2b1362dc49"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "esquiremag.ph",
-                "www.esquiremag.ph"
-            ]
-        },
-        {
-            "rule": "summitmedia-digital\\.com\\/esquiremagph\\/images\\/2018\\/12\\/10\\/SCHENGEN-VISA_COVER_DEC2018\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "images"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "a41cd94fe64e5007ec51818fdfc11d959acd70bb429289f7c3d3a7e54d385cd7"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "esquiremag.ph",
-                "www.esquiremag.ph"
-            ]
-        },
-        {
-            "rule": "summitmedia-digital\\.com\\/sap\\/images\\/2023\\/09\\/18\\/pep-tuseran-mainimage3-1695040279\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "images"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "0049b0394bc42883978a05ba2a2239d7a12bd9999d35a593e538d66af7847b42"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pep.ph",
-                "www.pep.ph"
-            ]
-        },
-        {
             "rule": "summitmedia-digital\\.com\\/pep\\/v1\\/quicklink",
             "cookies": 0,
             "fingerprinting": 0,
@@ -510,7 +582,51 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "08bf8fac37dffa1aa1216ac264312be57fb2bb8d035f2ba3ca0d76601a7cdb6e"
+                "b803eb6f264bc9cca7e54093c3b87049c387fd619dad86c1d5cbf395c8519776"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pep.ph",
+                "www.pep.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/pep\\/v1\\/hero\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "ec9623d06f3e909e1c5973d315762002571467da5af51716b1a0ae89e6857a3b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pep.ph",
+                "www.pep.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/pep\\/v1\\/featured\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "760253e1adfc1f72139e30bb4b7c357956a8d2bc3949ee9d2705ba200a7b9b66"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -543,7 +659,7 @@
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/pep\\/v1\\/featured\\/get",
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/channel\\/get\\/fashion\\/0\\/3",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -554,18 +670,18 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "12e5b3b393a82f5a514f314bff33c5ecc9748ec05134d7f7f4c5450524b94661"
+                "ad90054bc71a36ddcef99a29198b8560c8eb60e7632c3b2c78950e565ab42907"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pep.ph",
-                "www.pep.ph"
+                "preview.ph",
+                "www.preview.ph"
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/pep\\/v1\\/hero\\/get",
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/channel\\/get\\/beauty\\/0\\/3",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -576,31 +692,163 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "494a967148fd18ae82530cce45ad6f24296d1cad6d750d7f299c7e4dd5c76f6b"
+                "a27c039d10c434d1576da2196f7b3cf9ad41a1de6db60d5ce7e0dcb01b425e80"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pep.ph",
-                "www.pep.ph"
+                "preview.ph",
+                "www.preview.ph"
             ]
         },
         {
-            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/native\\/discoverability\\/flashbox",
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/channel\\/get\\/culture\\/0\\/3",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dossier"
+                "api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+                "a2dd93e0ad84f15320473c89b75c4c08aa5744c6330af33283402b3fc07f69d0"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/native\\/pr\\/0\\/5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1087822c8193b4cdf7b8621d9bceac4b9c27bdbce9d34a366e13cf8e60e51c1f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/most-popular\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "86aec2b7e290a78c04809ef08531dae509a3c7a32ed78873ea47738881988843"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/hero\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "bec64c3ffd483e5bdca78c744ed575b9363c71dfef722d06f2f7db3b372d9da1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/feeds\\/1\\/12",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f233d6379eb6f412f5cfc5a0139a89c50afaacfd3b80d639a5496699cbe33382"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/preview\\/v1\\/featured\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "56d0384f7f7ddedbfa4db59f7afa3d2a73f31e23aabd9694d5a271d8fd5ca660"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preview.ph",
+                "www.preview.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/sap\\/images\\/2023\\/12\\/11\\/microsoftteams-image-25-1702283991\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8ed5663f2271e2e0568ae2b7e8cab734c18a6a7621316b66bf875fd723c60c74"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -649,6 +897,127 @@
                 "spot.ph",
                 "www.spot.ph"
             ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/topgear\\/v1\\/buyers-guide\\/makes",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apisearch"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1a339bbaedea49ee65a580919b7a5737d943cd9c68c5174f8d69f0dfd06a0815"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "topgear.com.ph",
+                "www.topgear.com.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/node-ai\\.js",
+            "cookies": 0.0000068,
+            "fingerprinting": 1,
+            "subdomains": [
+                "node-ai"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a26b75eb2fc75bc88a9c51db5a8965ccdbcf22a77325ded816a9304e465a024e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "nodeaiusername": {
+                    "ttl": 31536007,
+                    "length": 19,
+                    "prevalence": 0.000006802767365764393,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "topgear.com.ph",
+                "www.topgear.com.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/topgear\\/v1\\/most-popular\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "0dd29623450aa685664ff1a935fbbfef3d92ea174d7548939630a6f6677438f0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "topgear.com.ph",
+                "www.topgear.com.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/topgear\\/v1\\/native\\/pr\\/0\\/5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "topgear.com.ph",
+                "www.topgear.com.ph"
+            ]
+        },
+        {
+            "rule": "summitmedia-digital\\.com\\/topgear\\/images\\/2023\\/12\\/31\\/1-1703996663\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f96097fa2b1ffc87f2dfc15d85683818c126421b018f9ba112df188d6bb13d36"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "topgear.com.ph",
+                "www.topgear.com.ph"
+            ]
         }
     ],
     "categories": [],
@@ -657,27 +1026,31 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6506024096385542
+            "prevalence": 0.538961038961039
         },
         {
             "domain": "cloudflare.com",
-            "prevalence": 0.3373493975903614
+            "prevalence": 0.38961038961038963
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.05844155844155844
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.008032128514056224
+            "prevalence": 0.006493506493506494
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.004016064257028112
+            "prevalence": 0.006493506493506494
         }
     ],
     "types": {
-        "Script": 19,
+        "Script": 23,
         "Document": 8,
-        "Fetch": 4,
-        "XHR": 26,
-        "Image": 20,
+        "Image": 26,
+        "Fetch": 5,
+        "XHR": 48,
         "Preflight": 2
     },
     "nameservers": [

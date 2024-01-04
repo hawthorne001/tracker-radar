@@ -9,12 +9,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
+    "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "apim-dp-prod"
+        "apim-dp-prod",
+        "nosted-api"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "api.nosted.com",
+            "resolved": "nosted-api.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -29,7 +35,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "513fa9efcd57db663d3a04059d0e6758f2c0b42d54082c3353a8340cdb41effa"
+                "76dc829025cdfa2c12dfaf8863662fc69c15a5a16535f2835bc9c5e0d14942b6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -38,11 +44,63 @@
                 "dominos.no",
                 "www.dominos.no"
             ]
+        },
+        {
+            "rule": "azure-api\\.net\\/internal\\/v1\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nosted-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.nosted.com",
+                    "resolved": "nosted-api.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nosted.com",
+                "www.nosted.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/internal\\/v1\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nosted-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.nosted.com",
+                    "resolved": "nosted-api.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "a94ed08d20e04c9454a980286663f6e07968f60c0fb942030a74d20766ef4f72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nosted.com",
+                "www.nosted.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
@@ -50,12 +108,14 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns2-05.azure-dns.net",
         "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info",
-        "ns1-05.azure-dns.com"
+        "ns1-05.azure-dns.com",
+        "ns4-05.azure-dns.info"
     ]
 }

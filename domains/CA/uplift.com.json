@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "tag"
+        "tag",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,22 +24,49 @@
                 "tag"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "15d41b5c460dd8c537f5328c1ec8d5a30d1796d36872c5ed110ceb2ae6049b38",
-                "f8ba11c4f625e14efff123191a01c0bd0818b4356f69e97d59da3f49edc0cb28",
-                "44c835584d15dd72962af840f504257941f247c2e512b2295c83ee8a6c90142b"
+                "4fa7e69ad6ee97949aa0bca93b8423bb1387ade103382984b6059ba5244b8e28",
+                "d719213fce21febc15a06b7412ca6bdf9a0c2ba5e46400e6753037f212043be0",
+                "655f3e09161e3533aadd96defa0a42dbd65eab599dfbb6d2ec6338682f1b1be7",
+                "20667865a340f158ca45bf09dd388176b9830f560b65405e2bbfc74bf0686d58"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "budget.com",
+                "www.carnival.com",
                 "www.flyfrontier.com",
                 "www.redtag.ca",
                 "www.selloffvacations.com"
+            ]
+        },
+        {
+            "rule": "uplift\\.com\\/client\\/modal\\/v2\\/2\\.0\\.18\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7428204bdf7a665932aef533fe143dfc9abc0d29e76048cac1f7c0b57dca5072"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carnival.com",
+                "www.redtag.ca"
             ]
         }
     ],
@@ -48,15 +76,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.42857142857142855
         },
         {
             "domain": "uplift-platform.com",
-            "prevalence": 0.2
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "optimizely.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 5,
+        "Document": 2
     },
     "nameservers": [
         "ns-282.awsdns-35.com",

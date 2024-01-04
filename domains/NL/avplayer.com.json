@@ -7,14 +7,38 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000301,
+    "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "player"
+        "feed",
+        "player",
+        "content"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "avplayer\\.com\\/backend\\/api\\/playlist\\/64d4d2de2cb9713b90019bf2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9e47c85c76dbd943fc2c9b782edd499ec7f3975a78677d96c2b693f1fde4369a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home-assistant-guide.com",
+                "howchoo.com"
+            ]
+        },
         {
             "rule": "avplayer\\.com\\/script\\/8\\.3\\/v\\/avcplayer\\.js",
             "cookies": 0,
@@ -33,17 +57,17 @@
                 "window.innerWidth": 2
             },
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "fcf4731569352da207ee136b98f0b0d4f9b8969a23b2d87172bb8db4dcf0062f"
+                "2a6919309bf3f0fdd42eef262b7259b5a53fb46b20e40a2f00d46c31d9be4868"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "home-assistant-guide.com",
                 "howchoo.com",
-                "www.lyricsondemand.com",
                 "www.trueachievements.com"
             ]
         },
@@ -61,14 +85,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "559e9e1ffda1790f8fdbf6c0eea22e2764cc19a829e642acf0ab9429e186abdd"
+                "191894a6441a9ce21f202d9b4d5bc82e3c2a94bc81d211d9e73571730539dfa4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "howchoo.com",
-                "www.lyricsondemand.com"
+                "home-assistant-guide.com",
+                "howchoo.com"
             ]
         },
         {
@@ -89,8 +113,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "howchoo.com",
-                "www.lyricsondemand.com"
+                "home-assistant-guide.com",
+                "howchoo.com"
+            ]
+        },
+        {
+            "rule": "avplayer\\.com\\/59c9148628a0612da3689288\\/videos\\/6405c8dfbb6aa27e970df01e\\/large-poster\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "55fc5e188e42aa94f8e5453e6d929281c465db1afe33aa977abf4ec042436d3a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home-assistant-guide.com",
+                "howchoo.com"
             ]
         }
     ],
@@ -100,11 +146,7 @@
     "topInitiators": [
         {
             "domain": "aniview.com",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "vidcrunch.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "first party",
@@ -112,8 +154,10 @@
         }
     ],
     "types": {
+        "XHR": 2,
         "Script": 5,
-        "Fetch": 2
+        "Fetch": 2,
+        "Image": 2
     },
     "nameservers": [
         "ns1.dnsmadeeasy.com",

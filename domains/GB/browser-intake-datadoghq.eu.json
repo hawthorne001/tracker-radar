@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "csp-report",
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -46,17 +47,18 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000805,
+            "sites": 9,
+            "prevalence": 0.000905,
             "cnames": [],
             "responseHashes": [
-                "bbe4381951751cd844411e2d8dac17fff8b592be2b9f79e3810affb1f7b1d345",
-                "fda022ac4a1cfb4504fedf42d369c158daf774d494ce9574eef79781fdd6a131",
-                "51d4ccc1c6002905b79dab01d861e00117b4c8be1c4d87c38a0f9d6ca2d74313",
-                "1533eea823dbae4d3f262683eff38f89e4fb581f170b0a1c26879e36b4006fa3",
-                "212491d4793edfef2bc27a8cc3e06198b01948316cf46ee4f134bffe3a309e0a",
-                "2fc7e31d71cd6b06a0545f42c3032c39e5e93e129b511cd69b39fa31c63d23d4",
-                "0deefad4aa664465984d098d52b824dc4a7e5d6b35429b1346e4c2b3948ba390"
+                "54e92dd43e73fd50815917fa1303c79e42642445f751fefdd214bb7f505a1e63",
+                "efae2365c5979d7a4c9585be349cc8b73beb1327c17ec4b574ce5f14861942d4",
+                "85af52e910cd27177403e6763295dcbbccd2e7fd8685f4e9cad88d048a920a1f",
+                "3d1a518c1f8a1d4c6c62b74627274c54eded2fc6b676298705073bcd3e762166",
+                "3f2c08e56cba5b68dadef074e3707b53a6d181fb903c1dba0c578b0661c1184c",
+                "bb3c2e7f8e85fab0af5e07b2ccd57106ed6662bc5f1a81a483c266b310825b8b",
+                "9566ce555d134f4b4b1c4f450acbb2c6cc8041290eb7ba001f4b38a3e6c704ad",
+                "eafebe90dc8a46ccc818fe105927b735066398af6942fe5a9b4529b034edda73"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -64,12 +66,59 @@
             "exampleSites": [
                 "smarty.co.uk",
                 "uk.gymshark.com",
+                "wrenkitchens.com",
                 "www.betmgm.co.uk",
                 "www.booker.co.uk",
                 "www.cinch.co.uk",
                 "www.cupraofficial.co.uk",
-                "www.gousto.co.uk",
-                "www.shopping.ba.com"
+                "www.toolstation.com",
+                "www.wrenkitchens.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "37e27b6efa59faf748707b2994a70d0c610e6a1bab44c9d10e07f78950245262",
+                "83597a98cfd047aefe2a9d6f655aae459a5a62ad4b7b4437e5e598d7d33a71ee"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wrenkitchens.com",
+                "www.toolstation.com",
+                "www.wrenkitchens.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "71b22fbe1210ebcb7fc9bd2487ebb07cea4c4b58acbc4352e40df04c21d7da52"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wrenkitchens.com",
+                "www.wrenkitchens.com"
             ]
         }
     ],
@@ -79,25 +128,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.48333333333333334
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.41025641025641024
+            "prevalence": 0.48333333333333334
         },
         {
             "domain": "licdn.com",
-            "prevalence": 0.05128205128205128
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
         "Other": 2,
-        "Fetch": 8
+        "Fetch": 9,
+        "XHR": 5
     },
     "nameservers": [
-        "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
     ]
 }

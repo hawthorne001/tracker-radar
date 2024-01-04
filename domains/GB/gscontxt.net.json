@@ -4,9 +4,14 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
+        "sevenwest",
+        "mediacorp",
+        "fairfaxmedia",
+        "stuffnz-sydney",
+        "torstar",
         "onexl",
         "hoopla-uk",
         "vmg-ash"
@@ -14,6 +19,57 @@
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "gscontxt\\.net\\/main\\/channels-json\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sevenwest",
+                "mediacorp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3be711dba97d96303d177368458c766aa78d5595397bad6698f5ce9806da9478"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "7news.com.au",
+                "www.changiairport.com"
+            ]
+        },
+        {
+            "rule": "gscontxt\\.net\\/main\\/channels\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fairfaxmedia",
+                "stuffnz-sydney",
+                "torstar"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "82364275db831674dcd81de29f637a07a5e5c0e3cff08173842d6d9d4d6fad58",
+                "947bc45c4e45aea90244e24f34be30b59cb8025929c111899790a6f544bbdf81",
+                "7aa06ed98360ff7448c84ec7c84896cdbe0e241ec056ad269288c9eaa73a41b7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afr.com",
+                "www.smh.com.au",
+                "www.stuff.co.nz",
+                "www.thestar.com"
+            ]
+        },
         {
             "rule": "gscontxt\\.net\\/multizone\\/channels\\.cgi",
             "cookies": 0,
@@ -24,23 +80,21 @@
                 "vmg-ash"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "28aeb1e43c40913c4d48b9f9b7e9851c33d756129e283e62ec0de4a54bc29630",
-                "f5d914e54acac69989fa8d4648168f690b222eac94201ecaf4b7eff4a726100e",
+                "acc09600b6163445c03cffd7169757a9a8ecdfb544fc13aceb3c35cc9764c661",
                 "870becb312c96478163c2bbe9bcf79e4c044295a259b6ce48d5445527bf9c944"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00010058338362502515
+                "lotame_domain_check": 0.0002011465352509303
             },
             "exampleSites": [
                 "cityam.com",
                 "www.deliaonline.com",
-                "www.irishnews.com",
                 "www.refinery29.com"
             ]
         }
@@ -51,16 +105,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7
+        },
+        {
+            "domain": "9pub.io",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Fetch": 2,
+        "Script": 7
     },
     "nameservers": [
         "ns2.p201.dns.oraclecloud.net",
-        "ns4.p201.dns.oraclecloud.net",
+        "ns1.p201.dns.oraclecloud.net",
         "ns3.p201.dns.oraclecloud.net",
-        "ns1.p201.dns.oraclecloud.net"
+        "ns4.p201.dns.oraclecloud.net"
     ]
 }

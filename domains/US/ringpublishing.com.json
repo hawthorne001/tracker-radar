@@ -8,24 +8,26 @@
     "sites": 23,
     "subdomains": [
         "cmp",
-        "recommendations-onet.aureus"
+        "embed.videos",
+        "recommendations-onet.aureus",
+        "d01wxcy3x8.cdn.videos"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "ringpublishing\\.com\\/1746213\\/get-config",
-            "cookies": 0.000129,
+            "cookies": 0.000136,
             "fingerprinting": 0,
             "subdomains": [
                 "cmp"
             ],
             "apis": {},
-            "sites": 19,
-            "prevalence": 0.000129,
+            "sites": 20,
+            "prevalence": 0.000136,
             "cnames": [],
             "responseHashes": [
-                "5ccc9030c3d8ae3fc713fe2c1031e7d5c2441c8ee804c34d1bb5b3c730df99c1",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "8dcc3232966ee16320d59d998e00cba377101c1397f4cdeae465fabc396abc56",
                 "05cc60030cee650745331aad8fdf679cfd9ff58bd741f53c362426fa242d6afd",
                 "59145b8e96c52eb235bee6fd283690838a820ce2fd8d5bec0f27211ee7dfc819",
@@ -50,7 +52,7 @@
                 "plejada.pl",
                 "poczta.onet.pl",
                 "pogoda.onet.pl",
-                "sympatia.onet.pl",
+                "programtv.onet.pl",
                 "wiadomosci.onet.pl",
                 "www.auto-swiat.pl",
                 "www.fakt.pl",
@@ -60,7 +62,8 @@
                 "www.ofeminin.pl",
                 "www.onet.pl",
                 "www.skapiec.pl",
-                "zapytaj.onet.pl"
+                "zapytaj.onet.pl",
+                "zywienie.medonet.pl"
             ]
         },
         {
@@ -86,6 +89,54 @@
             ]
         },
         {
+            "rule": "ringpublishing\\.com\\/scripts\\/embedCreator\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed.videos"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "78e64ffccc7ef641c316b27d90c6081986c1701e62fc31162a6d1ca1de15a776"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auto-swiat.pl",
+                "zywienie.medonet.pl"
+            ]
+        },
+        {
+            "rule": "ringpublishing\\.com\\/v1\\/recommend",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recommendations-onet.aureus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "96b461aad4177e4b8c78ca6b1c2dc0beb1a8346756448865ac9b113f1d22cffb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onet.pl",
+                "www.onet.pl"
+            ]
+        },
+        {
             "rule": "ringpublishing\\.com\\/v1\\/recommend",
             "cookies": 0.0000136,
             "fingerprinting": 0,
@@ -106,25 +157,23 @@
             ]
         },
         {
-            "rule": "ringpublishing\\.com\\/v1\\/recommend",
-            "cookies": 0.0000136,
+            "rule": "ringpublishing\\.com\\/video-d01wxcy3x8\\/d0ee2f02-60d7-4893-911e-b2f2a222529a\\.1613727741\\.1048453\\.mp4",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "recommendations-onet.aureus"
+                "d01wxcy3x8.cdn.videos"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "1b0270738ac6b14a5df64b306a88af3532eddbbce59af8ec26a5a9bb6b91a435"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "onet.pl",
-                "www.onet.pl"
+                "medonet.pl",
+                "zywienie.medonet.pl"
             ]
         }
     ],
@@ -134,7 +183,7 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5952380952380952
+            "prevalence": 0.5714285714285714
         },
         {
             "domain": "onet.pl",
@@ -142,17 +191,19 @@
         },
         {
             "domain": "pulsembed.eu",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.09523809523809523
         }
     ],
     "types": {
-        "Fetch": 23,
-        "Preflight": 2
+        "Fetch": 24,
+        "Script": 2,
+        "Preflight": 2,
+        "Media": 2
     },
     "nameservers": [
         "ns52.ringpublishing.net",
-        "ns51.ringpublishing.net",
         "ns50.ringpublishing.net",
-        "ns49.ringpublishing.net"
+        "ns49.ringpublishing.net",
+        "ns51.ringpublishing.net"
     ]
 }
