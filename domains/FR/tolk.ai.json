@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "script",
         "analytics-api"
@@ -14,6 +14,33 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "tolk\\.ai\\/iframe-latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "83c98343de77198f5848d4c93094e79721c2464dc227c025ee59310a8925b043"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "defense.gouv.fr",
+                "www.montpellier.aeroport.fr",
+                "www.tediber.com"
+            ]
+        },
+        {
             "rule": "tolk\\.ai\\/webchat-latest",
             "cookies": 0,
             "fingerprinting": 0,
@@ -21,8 +48,8 @@
                 "script"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "f1712f81da3515e699713e5cbc3f7a9f0d6f5c8f5009650f8fcf47a0a0b1118f"
@@ -31,7 +58,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "agorastore.fr",
+                "defense.gouv.fr",
+                "www.agorastore.fr",
                 "www.montpellier.aeroport.fr",
                 "www.tediber.com"
             ]
@@ -52,12 +80,12 @@
                 "window.localStorage": 2,
                 "Screen.prototype.width": 3,
                 "Screen.prototype.height": 3,
-                "window.innerWidth": 3,
+                "window.innerWidth": 2,
                 "Navigator.prototype.language": 3,
                 "Event.prototype.timeStamp": 3
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "06aa8574ad851b9f89011f3563449d123a703b1b545aaa557f765e184418bd89"
@@ -66,7 +94,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "agorastore.fr",
+                "defense.gouv.fr",
+                "www.agorastore.fr",
                 "www.montpellier.aeroport.fr",
                 "www.tediber.com"
             ]
@@ -87,9 +116,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "agorastore.fr",
-                "www.montpellier.aeroport.fr",
-                "www.tediber.com"
+                "defense.gouv.fr",
+                "www.agorastore.fr",
+                "www.montpellier.aeroport.fr"
             ]
         },
         {
@@ -104,42 +133,16 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "3fb5c7e3aca4bad5ac12c12a69f8ffd13f947e77a3ef3b74ab01db1bc63ada9d",
-                "e25609d2472c41f5d2cfaa9ad92bcb74a2220398b0794982d1c11be4cf6b7588"
+                "7e78137a617aceb4b0eaf0c17166a3247fb559304fea5d08eded3d29f921a2aa",
+                "ee8d7ce3656e50078bd6370d9fe13e3b461c05f38dc77645232d82219933790e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "agorastore.fr",
-                "www.montpellier.aeroport.fr",
-                "www.tediber.com"
-            ]
-        },
-        {
-            "rule": "tolk\\.ai\\/iframe-latest\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "script"
-            ],
-            "apis": {
-                "Navigator.prototype.language": 2,
-                "window.innerHeight": 2,
-                "window.innerWidth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "83c98343de77198f5848d4c93094e79721c2464dc227c025ee59310a8925b043"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "montpellier.aeroport.fr",
-                "www.tediber.com"
+                "defense.gouv.fr",
+                "www.agorastore.fr",
+                "www.montpellier.aeroport.fr"
             ]
         }
     ],
@@ -149,12 +152,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "thechatbotfactory.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Document": 3,
-        "Script": 5,
+        "Script": 7,
+        "Document": 4,
         "Preflight": 3,
         "Fetch": 3
     },

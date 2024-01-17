@@ -8,10 +8,15 @@
     "sites": 4,
     "subdomains": [
         "p-pc-weboff.byteimg.com",
+        "helpdesk.bytedance.com",
         "mssdk.bytedance.com",
         "sso.douyin.com"
     ],
     "cnames": [
+        {
+            "original": "helpdesk.bytedance.com",
+            "resolved": "helpdesk.bytedance.com.bytedns1.com"
+        },
         {
             "original": "mssdk.bytedance.com",
             "resolved": "mssdk.bytedance.com.bytedns1.com"
@@ -25,35 +30,8 @@
             "resolved": "sso.douyin.com.bytedns1.com"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "bytedns1\\.com\\/tos-cn-i-9r5gewecjs\\/recommend-prefetch-rsc-v1\\.2\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "p-pc-weboff.byteimg.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "p-pc-weboff.byteimg.com",
-                    "resolved": "p-pc-weboff.byteimg.com.bytedns1.com"
-                }
-            ],
-            "responseHashes": [
-                "52fa9aa7ee93c62aa5fbaee68d013763c11a9ebec032ea91b107c40f50d91f07"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "douyin.com",
-                "www.douyin.com"
-            ]
-        },
         {
             "rule": "bytedns1\\.com\\/tos-cn-i-9r5gewecjs\\/uuu_265\\.mp4",
             "cookies": 0,
@@ -70,10 +48,33 @@
                     "resolved": "p-pc-weboff.byteimg.com.bytedns1.com"
                 }
             ],
-            "responseHashes": [
-                "cfec92e9a943a2af29a6daec5adc73782d62ff90d0d7ce1035236b5e887654c1"
-            ],
+            "responseHashes": [],
             "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "douyin.com",
+                "www.douyin.com"
+            ]
+        },
+        {
+            "rule": "bytedns1\\.com\\/sites\\/standalone\\/helpcenter_pc\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "helpdesk.bytedance.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "helpdesk.bytedance.com",
+                    "resolved": "helpdesk.bytedance.com.bytedns1.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -109,6 +110,33 @@
             ]
         },
         {
+            "rule": "bytedns1\\.com\\/websdk\\/v1\\/getInfo",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mssdk.bytedance.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "mssdk.bytedance.com",
+                    "resolved": "mssdk.bytedance.com.bytedns1.com"
+                }
+            ],
+            "responseHashes": [
+                "9b2796b38279e8a8050ed727c66e5ca4c6955e2d9183858e690e929441a6a3fa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "douyin.com",
+                "www.douyin.com"
+            ]
+        },
+        {
             "rule": "bytedns1\\.com\\/check_qrconnect\\/",
             "cookies": 0.0000136,
             "fingerprinting": 0,
@@ -129,10 +157,7 @@
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "msToken": 0.000006802767365764393,
-                "s_v_web_id": 0.000013605534731528785
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "douyin.com",
                 "www.douyin.com"
@@ -157,10 +182,7 @@
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "msToken": 0.000006802767365764393,
-                "s_v_web_id": 0.000013605534731528785
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "douyin.com",
                 "www.douyin.com"
@@ -169,33 +191,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000272,
     "topInitiators": [
         {
             "domain": "bytescm.com",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "bytegoofy.com",
-            "prevalence": 0.05555555555555555
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.037037037037037035
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "bytetos.com",
-            "prevalence": 0.018518518518518517
+            "prevalence": 0.05357142857142857
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.017857142857142856
         }
     ],
     "types": {
-        "Script": 2,
         "Media": 2,
+        "Document": 2,
         "XHR": 4,
+        "Script": 2,
         "Preflight": 2
     },
     "nameservers": [
-        "vip4.alidns.com",
-        "vip3.alidns.com"
+        "vip3.alidns.com",
+        "vip4.alidns.com"
     ]
 }
