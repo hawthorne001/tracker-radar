@@ -9,16 +9,18 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000806,
-    "sites": 8,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
-        "payments-eu",
+        "unagi-eu",
         "d2c.aws",
         "aws",
         "fls-na",
         "unagi",
-        "unagi-eu",
-        "fls-eu"
+        "fls-eu",
+        "payments",
+        "payments-de-sandbox",
+        "apay-us"
     ],
     "cnames": [
         {
@@ -33,70 +35,26 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "amazon\\.com\\/abTestV2",
-            "cookies": 0.000201,
+            "rule": "amazon\\.com\\/1\\/events\\/com\\.amazon\\.csm\\.nexusclient\\.prod",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "payments-eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "2f2646425a65c22a26e61ac336d85875cadd67b38f3fcaa077eb275a41ac71d0"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "peugeot-saveurs.com",
-                "www.easypara.fr"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "payments-eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "dfed1bdd79809cb362bd3fca5c64f0da29268c9b8c7e3f1658fc7df5c31bbb18"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "peugeot-saveurs.com",
-                "www.easypara.fr"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/cs\\/uedata",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
-            "subdomains": [
-                "payments-eu"
+                "unagi-eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "peugeot-saveurs.com",
-                "fr.peugeot-saveurs.com",
-                "www.easypara.fr"
+                "wordpress.com",
+                "www.amazon.com.be",
+                "www.audible.fr"
             ]
         },
         {
@@ -255,6 +213,27 @@
             ]
         },
         {
+            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_AWSRequesterXHRStart@v=1:u=c",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fls-na"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_v2_:comp_typeahead_AjaxSuccess@v=1:u=c",
             "cookies": 0,
             "fingerprinting": 0,
@@ -306,28 +285,6 @@
             ]
         },
         {
-            "rule": "amazon\\.com\\/1\\/events\\/com\\.amazon\\.csm\\.nexusclient\\.prod",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "unagi-eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "com.be",
-                "www.audible.fr"
-            ]
-        },
-        {
             "rule": "amazon\\.com\\/1\\/batch\\/1\\/OE\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -353,50 +310,101 @@
                 "com.be",
                 "www.audible.fr"
             ]
+        },
+        {
+            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payments",
+                "payments-de-sandbox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6a96bfc594da40148d1310329bc2920f69ef916158e9afd939dab185d90f0625"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathway.com",
+                "www.ruedeshommes.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/cs\\/uedata",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apay-us",
+                "payments-de-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathway.com",
+                "www.mathway.com",
+                "www.ruedeshommes.com"
+            ]
         }
     ],
     "categories": [
-        "Ad Motivated Tracking",
+        "\"Ad Motivated Tracking\"",
         "Analytics",
         "SSO",
-        "Third-Party Analytics Marketing",
-        "Online Payment",
-        "Embedded Content"
+        "\"Third-Party Analytics Marketing\"",
+        "\"Online Payment\"",
+        "\"Embedded Content\""
     ],
     "performance": {},
     "cookies": 0.000302,
     "topInitiators": [
         {
-            "domain": "awsstatic.com",
-            "prevalence": 0.5614035087719298
+            "domain": "first party",
+            "prevalence": 0.4409937888198758
         },
         {
-            "domain": "first party",
-            "prevalence": 0.19298245614035087
+            "domain": "awsstatic.com",
+            "prevalence": 0.40372670807453415
         },
         {
             "domain": "media-amazon.com",
-            "prevalence": 0.11403508771929824
+            "prevalence": 0.08074534161490683
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.08771929824561403
+            "prevalence": 0.037267080745341616
         },
         {
             "domain": "ssl-images-amazon.com",
-            "prevalence": 0.02631578947368421
+            "prevalence": 0.018633540372670808
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.017543859649122806
+            "prevalence": 0.012422360248447204
+        },
+        {
+            "domain": "amazon.fr",
+            "prevalence": 0.006211180124223602
         }
     ],
     "types": {
-        "XHR": 6,
-        "Ping": 11,
+        "Ping": 9,
         "Script": 4,
         "Fetch": 2,
-        "Image": 8
+        "Image": 10,
+        "XHR": 7
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

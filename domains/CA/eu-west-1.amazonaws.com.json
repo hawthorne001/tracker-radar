@@ -12,10 +12,11 @@
     "prevalence": 0.00232,
     "sites": 23,
     "subdomains": [
-        "cognito-identity",
         "production-klarna-il-shopify-osm.s3",
+        "cognito-identity",
+        "web-chat-tag-cdn.s3",
         "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb",
-        "dataplane.rum"
+        "firehose"
     ],
     "cnames": [
         {
@@ -25,6 +26,52 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/b71c38154d77f2f2ccd85e5e194961304ea41b9c\\/258\\.index\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-klarna-il-shopify-osm.s3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "329173b311eb02ebad5191d3b7314d7ffaeb93d00504f46009f4392bbad28e8d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankandoak.com",
+                "suzyshier.com",
+                "timex.ca"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/b71c38154d77f2f2ccd85e5e194961304ea41b9c\\/906\\.index\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-klarna-il-shopify-osm.s3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1ab5eb640a2a8317dc9e7028413f7cb05b0f595e0e85b9eb0d923703dab946b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankandoak.com",
+                "suzyshier.com",
+                "timex.ca"
+            ]
+        },
         {
             "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
@@ -37,7 +84,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4b6218d86b523aed98d32b468a6fcb1f734ee2168ca42c8b85f6039beaf38721"
+                "3b7ecdcbe879d0effa70378c281cfc6a18594f47d9525efcc47ef2867c73fbb5"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -65,10 +112,10 @@
             "exampleSites": [
                 "classiccars.com",
                 "www.datacamp.com",
-                "www.hockeymonkey.com",
                 "www.opticsplanet.com",
                 "www.rdsc.ca",
-                "www.selfridges.com"
+                "www.siemens.com",
+                "www.viewsonic.com"
             ]
         },
         {
@@ -79,8 +126,8 @@
                 "production-klarna-il-shopify-osm.s3"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "329173b311eb02ebad5191d3b7314d7ffaeb93d00504f46009f4392bbad28e8d"
@@ -89,25 +136,20 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "frankandoak.com",
-                "suzyshier.com",
-                "timex.ca",
                 "urban-planet.com",
-                "www.tiptop.ca"
+                "www.lionbrand.com"
             ]
         },
         {
             "rule": "eu-west-1\\.amazonaws\\.com\\/ff11466d552028207a205623962e6ad15c5e1ea0\\/906\\.index\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "production-klarna-il-shopify-osm.s3"
             ],
-            "apis": {
-                "window.localStorage": 1
-            },
-            "sites": 5,
-            "prevalence": 0.000504,
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "b34a9b56783d22d11372df9c6cb1401828f95ed2b039c07f4ebbc955c9fa6a40"
@@ -116,60 +158,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "frankandoak.com",
-                "suzyshier.com",
-                "timex.ca",
                 "urban-planet.com",
-                "www.tiptop.ca"
+                "www.lionbrand.com"
             ]
         },
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/0cf42b376feeb11d247d11c5c05f6df0995db72f\\/258\\.index\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "production-klarna-il-shopify-osm.s3"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
-            "responseHashes": [
-                "329173b311eb02ebad5191d3b7314d7ffaeb93d00504f46009f4392bbad28e8d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tilley.com",
-                "reebok.ca",
-                "www.rockport.ca"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/0cf42b376feeb11d247d11c5c05f6df0995db72f\\/906\\.index\\.js",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/live\\/chat-live\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "production-klarna-il-shopify-osm.s3"
+                "web-chat-tag-cdn.s3"
             ],
             "apis": {
-                "window.localStorage": 3,
-                "Navigator.prototype.language": 1
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e8aae41e1a2b8d60ec5c73a13665fe0946db2aef3d557c8704629711bd277320"
+                "0baf6cd58201aa38350c5d1415951289930a2666bede8d535e70db168c1a6513"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tilley.com",
-                "reebok.ca",
-                "www.rockport.ca"
+                "chefsplate.com",
+                "www.hellofresh.ca"
             ]
         },
         {
@@ -189,7 +207,7 @@
                 }
             ],
             "responseHashes": [
-                "1c4c7374ed4e2cb4423678d26934fa38bc8fc199bf002e5c2e9e92afd8d9fda7"
+                "48e9861e3d65556966a4b04266306880ff13c6cbab8a679026b8e636d135f376"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -207,47 +225,44 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "67f588d48c1e74bfeecb75f09dd3f8519b1fe0055290b462c4aaba4ea26b18b8",
-                "7d9b1ca7035736ae4090a73b5ea3d146f77b929b5d6e34f185b0c37f64ea5798",
-                "82067321831e7dd3c6190c21065914bb9eb35e962964b9b05f852ace6d193a5b",
-                "65692fe4563819f6635d4fc7f23a671975bba89d8141f018e24af6eea39a8056"
+                "dbd3d06ad4836e98036b3cc7edeee123da47c4b0a0d4dda8df9acdd76512dba8",
+                "c68b7879bf0ff8cb3af7805378e8f7fd149c7d07f7aef8649c57557d25349178",
+                "e51851d49031049c6f85c27183b24b85d46d5c39435c363316810004213786f9",
+                "1822dab4109aec1eb28aab2f1f927eebf66fadd685110c0b6d145a2975371663"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hockeymonkey.com",
-                "www.hockeymonkey.com",
+                "opticsplanet.com",
                 "www.opticsplanet.com",
                 "www.rdsc.ca",
-                "www.selfridges.com",
+                "www.siemens.com",
                 "www.viewsonic.com"
             ]
         },
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/appmonitors\\/a1ab5746-8840-484d-8093-2ef57e74facb",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dataplane.rum"
+                "firehose"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "selfridges.com",
-                "www.selfridges.com"
+                "rdsc.ca",
+                "www.rdsc.ca"
             ]
         }
     ],
@@ -259,48 +274,57 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5423728813559322
+            "prevalence": 0.3770491803278688
         },
         {
             "domain": "webeyez.com",
-            "prevalence": 0.2711864406779661
-        },
-        {
-            "domain": "smct.io",
-            "prevalence": 0.05084745762711865
+            "prevalence": 0.3114754098360656
         },
         {
             "domain": "yottaa.com",
-            "prevalence": 0.05084745762711865
+            "prevalence": 0.08196721311475409
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.06557377049180328
+        },
+        {
+            "domain": "smct.io",
+            "prevalence": 0.04918032786885246
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.05084745762711865
-        },
-        {
-            "domain": "d5zu2f4xvqanl.cloudfront.net",
-            "prevalence": 0.01694915254237288
+            "prevalence": 0.04918032786885246
         },
         {
             "domain": "d3odp2r1osuwn0.cloudfront.net",
-            "prevalence": 0.01694915254237288
+            "prevalence": 0.03278688524590164
+        },
+        {
+            "domain": "d5zu2f4xvqanl.cloudfront.net",
+            "prevalence": 0.01639344262295082
+        },
+        {
+            "domain": "botsify.com",
+            "prevalence": 0.01639344262295082
         }
     ],
     "types": {
+        "Script": 12,
         "XHR": 2,
         "Preflight": 6,
-        "Script": 16,
         "Image": 2,
-        "Fetch": 8
+        "Fetch": 5,
+        "Other": 2
     },
     "nameservers": [
-        "ns1.amzndns.org",
-        "ns2.amzndns.org",
-        "ns2.amzndns.com",
-        "ns2.amzndns.co.uk",
         "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
         "ns1.amzndns.net",
-        "ns2.amzndns.net"
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }

@@ -8,11 +8,12 @@
     "sites": 2,
     "subdomains": [
         "customer-website.center-public-production",
+        "sentry.devops",
         "open-gateway.center-public-production",
         "im-gateway.center-im-production"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "allstarunion\\.com\\/suhelp\\.min\\.js",
@@ -29,7 +30,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "726332e27fa9d7d0852c0d79e1886fc74355f0dc68a12b15485361f442584a84"
+                "e90bc5a7fc83ab65c9ad0dca2a60e748652a7523d4ac2005a8aeae7c1ca41f32"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -40,18 +41,18 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/customer\\/webpage\\/code",
+            "rule": "allstarunion\\.com\\/api\\/35\\/envelope\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "open-gateway.center-public-production"
+                "sentry.devops"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "7aad00a1fc04c748d89d4a26317abf4ce5cf5cf6148ea59876202f2e4718180b"
+                "7a964b51ba6d68a36ead3f89237399593c842bf069d6809eb8b4dfcc3b91b5b1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -62,7 +63,29 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/customer\\/webpage\\/code",
+            "rule": "allstarunion\\.com\\/customer\\/sdk\\/code",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open-gateway.center-public-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e6a929c10636fe47dafd4ecb0d1cb189491ec598f0c3cbea7cd33b1589f4f278"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seaart.ai",
+                "www.seaart.ai"
+            ]
+        },
+        {
+            "rule": "allstarunion\\.com\\/customer\\/sdk\\/code",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -93,7 +116,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "2895b2622a97bc7cd569b562af1836c4fe9560d67734bc89c5794c6ade70b3dd"
+                "fc241bcb5bc0a0d6dd9e1eae09394d424fc9441507b579ebe91c558ab1a15099"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -194,11 +217,13 @@
         {
             "rule": "allstarunion\\.com\\/chunk-elementUI\\.96874\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -216,11 +241,14 @@
         {
             "rule": "allstarunion\\.com\\/chunk-libs\\.f0adb\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Event.prototype.timeStamp": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -243,7 +271,10 @@
                 "customer-website.center-public-production"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -271,7 +302,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "1a43a4934597ee6d17e9287840b4907280411d1291a1fda4574669f18519a5a2"
+                "97257a378f50e9964f438b8e075a599502bba96dbeb2fde7412d3df7ae422c89"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -304,18 +335,23 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/chunk-1b0aec30\\.98985\\.js",
+            "rule": "allstarunion\\.com\\/chunk-1b0aec30\\.67083\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.product": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "0bacd3c4dc74897ee24f60fcbdd3cda00d32df2312842fa65ac2be1988427af1"
+                "a0cbfc6ef4c164ddf531a9f31c45d18d6d0b6bec6377f92890f844635a38c353"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -337,7 +373,7 @@
     ],
     "types": {
         "Script": 10,
-        "Fetch": 2,
+        "Fetch": 4,
         "Preflight": 2,
         "Document": 2,
         "Image": 2,
@@ -345,9 +381,9 @@
         "XHR": 2
     },
     "nameservers": [
-        "ns-1911.awsdns-46.co.uk",
+        "ns-729.awsdns-27.net",
         "ns-345.awsdns-43.com",
         "ns-1390.awsdns-45.org",
-        "ns-729.awsdns-27.net"
+        "ns-1911.awsdns-46.co.uk"
     ]
 }

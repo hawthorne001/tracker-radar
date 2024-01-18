@@ -9,14 +9,15 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00171,
-    "sites": 17,
+    "prevalence": 0.00201,
+    "sites": 20,
     "subdomains": [
+        "statuscast-web-1",
         "dansb2cprod-dcf0gbhdhqe0hvbr.z01",
         "openaicom-api-bdcpf8c6d2e9atf6.z01",
-        "jbh-au-b2c-fd-prod",
-        "plush-bkd8bsethahbcwds.z01",
-        "sd-tagging"
+        "p2pcontent-fd-prod",
+        "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01",
+        "plush-bkd8bsethahbcwds.z01"
     ],
     "cnames": [
         {
@@ -28,12 +29,43 @@
             "resolved": "dansb2cprod-dcf0gbhdhqe0hvbr.z01.azurefd.net"
         },
         {
-            "original": "auth.jbhifi.com.au",
-            "resolved": "jbh-au-b2c-fd-prod.azurefd.net"
+            "original": "prod-kontentadapter.beinsports.com",
+            "resolved": "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01.azurefd.net"
+        },
+        {
+            "original": "status.sophos.com",
+            "resolved": "statuscast-web-1.azurefd.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "azurefd\\.net\\/components\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statuscast-web-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "status.sophos.com",
+                    "resolved": "statuscast-web-1.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "fc4b0ee44d1a41b54af88f5bae1e9567fa9ce8b00c136486905ae2500102ac8c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sophos.com",
+                "docs.sophos.com"
+            ]
+        },
         {
             "rule": "azurefd\\.net\\/33bf8038-5ecb-400c-8262-2d0725361522\\/b2c_1a_dans_signup_signin\\/v2\\.0\\/\\.well-known\\/openid-configuration",
             "cookies": 0.000201,
@@ -98,7 +130,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9110ef8220f0406145b9c02f3f4948e04d0646232dd8688a807d3ea8b2498c7c"
+                "ecc3cba4d9fd1e922198258068403553b6701dec17c5620b01cd3179253b1623"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -109,28 +141,101 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/Tokens\\/Refresh",
+            "rule": "azurefd\\.net\\/components\\/shared\\/component-base\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p2pcontent-fd-prod"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b480a2a9aaa23318c8fba9ad4c8cc2819801ebdb47d480c3fadd44f0b7a61348"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alaskaair.com",
+                "www.alaskaair.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/components\\/shared\\/component-base\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "jbh-au-b2c-fd-prod"
+                "p2pcontent-fd-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "637229743a4c95d1c27b8fdeb2ea9f65b729c87da2cb48150332e11ba3c8341e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alaskaair.com",
+                "www.alaskaair.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/kp\\/domain\\/items\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "auth.jbhifi.com.au",
-                    "resolved": "jbh-au-b2c-fd-prod.azurefd.net"
+                    "original": "prod-kontentadapter.beinsports.com",
+                    "resolved": "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01.azurefd.net"
                 }
             ],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/kp\\/domain\\/items\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "prod-kontentadapter.beinsports.com",
+                    "resolved": "beingold-prod-kontent-adapter-ep-h5awgcf9hsfgejh2.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "b44295330f02385052e2a1413f953cd41165f55aad9bfa7bbaa9c0ab51c71d7d"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jbhifi.com.au",
-                "www.jbhifi.com.au"
+                "beinsports.com",
+                "www.beinsports.com"
             ]
         },
         {
@@ -215,7 +320,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9008\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9002\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -242,7 +347,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9009\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9003\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -269,7 +374,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90010\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9004\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -285,7 +390,7 @@
                 }
             ],
             "responseHashes": [
-                "659336f6bedcba9c6ccb6e3a3b70005f9c65e0609b696f8dc545b55b7b4071d5"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -323,34 +428,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90011\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "plush-bkd8bsethahbcwds.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "assets.plush.com.au",
-                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "0718583328058983b22e7924db7fbd39263197197df5787362b88eb6623e4958"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plush.com.au",
-                "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90017\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9005\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -377,7 +455,34 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9004_1\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9006\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "plush-bkd8bsethahbcwds.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "assets.plush.com.au",
+                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plush.com.au",
+                "www.plush.com.au"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9007\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1133,7 +1238,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8338\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8332\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1149,7 +1254,7 @@
                 }
             ],
             "responseHashes": [
-                "cd9af1bb54c934490de778c133d277aa77ef520b2107f6dccfdd70adafa7d082"
+                "9654e7fa5845240b0d9bd1fc485d7c5db205e3c27cfcff0f6c919e24ec8d53f3"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1160,7 +1265,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8339\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8333\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1176,7 +1281,7 @@
                 }
             ],
             "responseHashes": [
-                "0372d5493f978aa974ddc736503e66936b757bcea35a24da82e59539514748aa"
+                "af4f6d5eb95f058593828ed6af8263abbd4d55e4bbe587c7c18f80c35defd301"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1187,7 +1292,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83310\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8334\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1203,7 +1308,7 @@
                 }
             ],
             "responseHashes": [
-                "9d659ef1b5419729422a1aecef83e344943a042eb823cb495a2402de8c65d740"
+                "73eb37aa5978f69bc1251e8a9b542df1d9d8bee5f67de6b2c7c0e810b1a3539f"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1241,7 +1346,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83311\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8335\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1257,7 +1362,7 @@
                 }
             ],
             "responseHashes": [
-                "c20fbb82dcb2a5b0978ae9a0d4efb4e370000008dc04c225daba578e0fbc7d93"
+                "ee68059fa252fecf6dd95e0985da238cd7191130145371b4c2fa094c5ec1e564"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1268,7 +1373,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83317\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8336\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1284,7 +1389,7 @@
                 }
             ],
             "responseHashes": [
-                "d7855bdd913299e11bcebc1569744c90cb9a9c57d6df6da192bb93ac156cfde1"
+                "7a977a1bec1372cc7cff84065713f0f5d32eaa2dbf0820ad8e5cecee2d27bbe6"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1295,7 +1400,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8334_1\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8337\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1311,7 +1416,7 @@
                 }
             ],
             "responseHashes": [
-                "28256cbe1c5cda5e3188ceb724abb04a0b5c200067a46f730997f1d608afdc6e"
+                "6425c9ee899010ee71c80f80608452c3808369cc7585eecd2ec91ee24dd9b9ba"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1319,53 +1424,41 @@
             "exampleSites": [
                 "plush.com.au",
                 "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/id\\/3pc",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd-tagging"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e69993e379b447f09a671a2ed563b66629992b72b86f3ce12af7af3a35b26a6d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "toyota.com",
-                "www.toyota.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000703,
+    "cookies": 0.000904,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9714285714285714
+            "prevalence": 0.8641975308641975
+        },
+        {
+            "domain": "opta.net",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.037037037037037035
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.014285714285714285
+            "prevalence": 0.012345679012345678
         },
         {
-            "domain": "azure.com",
-            "prevalence": 0.014285714285714285
+            "domain": "quantummetric.com",
+            "prevalence": 0.012345679012345678
         }
     ],
     "types": {
-        "Fetch": 6,
+        "Fetch": 8,
         "Document": 2,
-        "Image": 88,
-        "Script": 2
+        "Script": 2,
+        "Stylesheet": 2,
+        "Preflight": 2,
+        "Image": 88
     },
     "nameservers": [
         "ns1-37.azure-dns.com",

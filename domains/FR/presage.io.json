@@ -10,22 +10,51 @@
     "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "mweb-hb",
-        "ms-cookie-sync"
+        "mwtw",
+        "ms-ads-monitoring-events",
+        "mweb-hb"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "presage\\.io\\/api\\/header-bidding-request",
+            "rule": "presage\\.io\\/v1\\/tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "mwtw"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "be9ad09e4a95b5f328e6c85593d2e8f774f9754dbca113f99c32f444932e44bc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.fr",
+                "www.slate.fr"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/tag",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "mweb-hb"
+                "ms-ads-monitoring-events"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -34,18 +63,17 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "air-cosmos.com",
-                "www.dpreview.com",
-                "www.skiresort.fr",
-                "www.yubigeek.com"
+                "slate.fr",
+                "korii.slate.fr",
+                "www.slate.fr"
             ]
         },
         {
-            "rule": "presage\\.io\\/api\\/header-bidding-request",
+            "rule": "presage\\.io\\/tag",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "mweb-hb"
+                "ms-ads-monitoring-events"
             ],
             "apis": {},
             "sites": 3,
@@ -56,28 +84,50 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "slate.fr",
+                "korii.slate.fr",
+                "www.slate.fr"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/api\\/header-bidding-request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mweb-hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "dpreview.com",
-                "www.skiresort.fr",
                 "www.yubigeek.com"
             ]
         },
         {
-            "rule": "presage\\.io\\/user-sync\\.html",
+            "rule": "presage\\.io\\/api\\/header-bidding-request",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ms-cookie-sync"
+                "mweb-hb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Document",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "skiresort.fr",
+                "dpreview.com",
                 "www.yubigeek.com"
             ]
         }
@@ -87,22 +137,26 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "themoneytizer.com",
-            "prevalence": 0.7142857142857143
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "htlbid.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "themoneytizer.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 3,
-        "Document": 2
+        "Script": 2,
+        "Fetch": 5,
+        "Preflight": 5
     },
     "nameservers": [
-        "ns-20-c.gandi.net",
         "ns-223-b.gandi.net",
-        "ns-214-a.gandi.net"
+        "ns-214-a.gandi.net",
+        "ns-20-c.gandi.net"
     ]
 }

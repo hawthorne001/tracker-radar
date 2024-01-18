@@ -7,14 +7,16 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00121,
-    "sites": 12,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
         "hss-search",
         "lgasa-search",
         "dfed-search",
         "dxp-au-search.funnelback",
-        "au-a14fc409.datastore"
+        "sdk.datastore",
+        "au-a14fc409.datastore",
+        "qhscb"
     ],
     "cnames": [
         {
@@ -86,6 +88,30 @@
             ]
         },
         {
+            "rule": "squiz\\.cloud\\/js\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk.datastore"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3cd4a78f4ca01db81a84bae4fca0b3d0eab114a3173fca642530a33026bf0b1d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "health.qld.gov.au",
+                "www.sunshinecoast.health.qld.gov.au"
+            ]
+        },
+        {
             "rule": "squiz\\.cloud\\/service-categories",
             "cookies": 0,
             "fingerprinting": 0,
@@ -93,8 +119,8 @@
                 "au-a14fc409.datastore"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "8020188c3cb48119fa9570ac34580e07c17d824fe0167903a9443f215be4e6b7"
@@ -104,7 +130,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "health.qld.gov.au",
-                "www.health.qld.gov.au"
+                "www.health.qld.gov.au",
+                "www.sunshinecoast.health.qld.gov.au"
             ]
         },
         {
@@ -132,6 +159,28 @@
                 "education.sa.gov.au",
                 "www.portstephens.nsw.gov.au"
             ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/__data\\/assets\\/file\\/0020\\/71516\\/header-logo-qgov-light\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qhscb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "811c661011dad2d90d3f1f10bcb6c3ac04fbfeb7b14c402b2fd73e796d9bd57a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epw.qld.gov.au",
+                "www.sunshinecoast.health.qld.gov.au"
+            ]
         }
     ],
     "categories": [],
@@ -144,12 +193,13 @@
         }
     ],
     "types": {
-        "Script": 11,
-        "XHR": 2
+        "Script": 13,
+        "XHR": 3,
+        "Image": 2
     },
     "nameservers": [
+        "ns3.squiz.net",
         "ns1.squiz.net",
-        "ns2.squiz.net",
-        "ns3.squiz.net"
+        "ns2.squiz.net"
     ]
 }

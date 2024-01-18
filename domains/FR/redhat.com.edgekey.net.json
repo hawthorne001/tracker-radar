@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
-        "static"
+        "static",
+        "sso-new"
     ],
     "cnames": [
+        {
+            "original": "sso.redhat.com",
+            "resolved": "sso-new.redhat.com.edgekey.net"
+        },
         {
             "original": "static.redhat.com",
             "resolved": "static.redhat.com.edgekey.net"
@@ -30,8 +35,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -46,8 +51,64 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "redhat.com",
+                "developers.redhat.com",
+                "docs.openshift.com",
                 "opensource.com",
                 "www.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/auth\\/realms\\/redhat-external\\/protocol\\/openid-connect\\/3p-cookies\\/step1\\.html",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sso-new"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sso.redhat.com",
+                    "resolved": "sso-new.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "4080ffc9ca89666f1492cd9742da52ad6e56bd36191233f9d17f64f1610c22f8"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "developers.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/auth\\/realms\\/redhat-external\\/protocol\\/openid-connect\\/3p-cookies\\/step2\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sso-new"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sso.redhat.com",
+                    "resolved": "sso-new.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "27abff3edf4192d73c66f42fe9a773358b54c46a38afaa5f1cfe1753f68415eb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "developers.redhat.com"
             ]
         },
         {
@@ -67,14 +128,14 @@
                 }
             ],
             "responseHashes": [
-                "52ca504a8830bc1443155532a7bff1065b5cf4e96879552ae2f447e8cd99ecd1"
+                "6963124e1b859fe83cfe2d8f5c18b7aa606277b7be5103dc4ef674310c7b14f1"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "rh_omni_tc": {
-                    "ttl": 2592002,
+                    "ttl": 2592001,
                     "length": 18,
-                    "prevalence": 0.00010071507704703394,
+                    "prevalence": 0.00010073536818777072,
                     "uniqueness": 1
                 }
             },
@@ -87,15 +148,20 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000504,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "openshift.net",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 7,
+        "Document": 4
     },
     "nameservers": []
 }

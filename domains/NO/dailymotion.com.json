@@ -11,33 +11,78 @@
     "sites": 5,
     "subdomains": [
         "geo",
+        "www",
         "speedtest",
-        "graphql.api"
+        "graphql.api",
+        "st.nyc"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "dailymotion\\.com\\/cookie\\.js",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
+            "rule": "dailymotion\\.com\\/player\\/xiiib\\.html",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
             "subdomains": [
                 "geo"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Event.prototype.timeStamp": 2,
+                "window.name": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "407c0ea74212ba3a966ae1d7cf3c8ecf68e6071c8b6194fa830e4560ec13635b"
+                "4d817fc57e35ad99f2e4e64eacf7bea9686ec3ed63cf1174cbf9d28298de99de"
             ],
-            "type": "Script",
+            "type": "Document",
+            "firstPartyCookies": {
+                "_TEST_": {
+                    "ttl": 0,
+                    "length": 1,
+                    "prevalence": 0.00020120724346076458,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cycleworld.com",
+                "www.cycleworld.com"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/player\\/metadata\\/playlist\\/x7wdsj",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bb0d9312acea725708205e2aa4c2267dc29fab93763ef26025ebab0ea26aa60b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cycleworld.com",
-                "www.leparisien.fr",
-                "www.netatmo.com"
+                "www.cycleworld.com"
             ]
         },
         {
@@ -48,10 +93,11 @@
                 "speedtest"
             ],
             "apis": {
-                "window.localStorage": 1
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 1
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "72b2181e58d5c45800d66d36702794ca5ae5bf1fbc20f106442b7eac3191a623"
@@ -61,7 +107,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cycleworld.com",
-                "www.leparisien.fr",
                 "www.netatmo.com"
             ]
         },
@@ -77,7 +122,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0fa5ac591fb48cc768b6f38a2b69d1bf5c80c4732ddd3303be3322d93f1cdcf1"
+                "1637f4f48c24925db4c8858edfb63aaf03054f413a077c591ada6574555fafd5"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -118,10 +163,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "ae6d8fd50b3c173558904ff7e8568fb8143e48382684b72ae8c7e47addac2e03"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -140,24 +183,56 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "41751c62137d7f34f5197d66e8715a9e68a83ef830e3a168f550c3fda9ec438d"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cycleworld.com",
+                "www.netatmo.com"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/speedtest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "speedtest",
+                "st.nyc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cycleworld.com",
+                "www.cycleworld.com",
                 "www.netatmo.com"
             ]
         },
         {
             "rule": "dailymotion\\.com\\/player\\/x9w4l\\.html",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "geo"
             ],
             "apis": {
+                "window.name": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.connection": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.userAgent": 1,
                 "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
                 "window.innerHeight": 2,
                 "window.innerWidth": 2
             },
@@ -165,7 +240,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "695998121d69bc7a35a057eb46a5f82969b4089f22a67facc369b73d9fa90026"
+                "589c75dcdcbb9ac3f117f5817d4d137241fe6e4bbbf17c4b340a9f065d086edb"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -178,25 +253,26 @@
     ],
     "categories": [
         "CDN",
-        "Embedded Content"
+        "\"Embedded Content\""
     ],
     "performance": {},
     "cookies": 0.000503,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.5263157894736842
         },
         {
             "domain": "dmcdn.net",
-            "prevalence": 0.5
+            "prevalence": 0.47368421052631576
         }
     ],
     "types": {
-        "Script": 6,
-        "XHR": 4,
+        "Document": 4,
+        "XHR": 6,
+        "Script": 2,
         "Preflight": 4,
-        "Document": 2
+        "WebSocket": 3
     },
     "nameservers": [
         "a.dailymotion.com",

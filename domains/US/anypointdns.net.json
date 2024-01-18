@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000612,
+    "prevalence": 0.0000613,
     "sites": 9,
     "subdomains": [
         "arm-prod-public.lb",
         "splunk-elb.lb",
-        "freedom-exp.lb"
+        "freedom-exp.lb",
+        "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
@@ -19,6 +20,10 @@
         {
             "original": "api.freedommortgage.com",
             "resolved": "freedom-exp.lb.anypointdns.net"
+        },
+        {
+            "original": "apib2c.services.honda.ca",
+            "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
         },
         {
             "original": "apps-api.splunk.com",
@@ -44,7 +49,7 @@
                 }
             ],
             "responseHashes": [
-                "bd473eb444a4142df95c29bbd39838afd4fa7dd54903ff1db45e32667f17ea2a"
+                "ede46799322e76e709924d5807bb1b67e6813e8b337d0a882b1cb4d74c754b1b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -97,8 +102,8 @@
                 }
             ],
             "responseHashes": [
-                "a79740bece817b4f0b00fbf39bbb7835ca3db068e86c22ecd91f43f6b2ffe74c",
-                "dc8b9a7b0b75e6254c406c7dfbe188fb73747a08482716f0963d2fab42e87bf3"
+                "2132136afa567cabd3cc4cbc38575fa8a8da853f57ccc732c5b4430fb5744e48",
+                "93d51f26bdef2d86e4c4af68f6b18229128009bbfdbec28d56c365d4d6c51631"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -126,7 +131,7 @@
                 }
             ],
             "responseHashes": [
-                "0ec92d053a360f4867969b3cf569e32df8901a7b4079ac0f8698386546a06ef6"
+                "f294e88a5786043b7fde33fb027d2988ff4e937c6790ac4311b7c7ad5bb5e55e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -162,46 +167,19 @@
             ]
         },
         {
-            "rule": "anypointdns\\.net\\/wplt\\/search\\/v2\\/anonymous\\/search",
+            "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "splunk-elb.lb"
+                "honda-production-b2c-lb.lb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "apps-api.splunk.com",
-                    "resolved": "splunk-elb.lb.anypointdns.net"
-                }
-            ],
-            "responseHashes": [
-                "f1dab2fe6bcad4d207760ec59b9be9ed48efb9833b20e7e183f051f86637a891"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "splunk.com",
-                "www.splunk.com"
-            ]
-        },
-        {
-            "rule": "anypointdns\\.net\\/wplt\\/search\\/v2\\/anonymous\\/search",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "splunk-elb.lb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "apps-api.splunk.com",
-                    "resolved": "splunk-elb.lb.anypointdns.net"
+                    "original": "apib2c.services.honda.ca",
+                    "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
                 }
             ],
             "responseHashes": [],
@@ -209,44 +187,71 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "splunk.com",
-                "www.splunk.com"
+                "honda.ca",
+                "www.honda.ca"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "honda-production-b2c-lb.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "apib2c.services.honda.ca",
+                    "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "7daefc31e69b98f35aa153b5b47488a351cd9f3c177052b3cc04c021cb85e9b0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honda.ca",
+                "www.honda.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000272,
+    "cookies": 0.0000204,
     "topInitiators": [
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.39285714285714285
-        },
-        {
-            "domain": "signalfx.com",
-            "prevalence": 0.39285714285714285
+            "prevalence": 0.55
         },
         {
             "domain": "d221cp5lqk6y64.cloudfront.net",
-            "prevalence": 0.10714285714285714
+            "prevalence": 0.15
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.15
         },
         {
             "domain": "d7koym0rxduxm.cloudfront.net",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.1
         },
         {
             "domain": "contentsquare.net",
-            "prevalence": 0.03571428571428571
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "XHR": 2,
+        "XHR": 4,
         "Preflight": 7,
-        "Fetch": 7
+        "Fetch": 5
     },
     "nameservers": [
-        "ns-975.awsdns-57.net",
         "ns-180.awsdns-22.com",
+        "ns-975.awsdns-57.net",
         "ns-1546.awsdns-01.co.uk",
         "ns-1343.awsdns-39.org"
     ]
