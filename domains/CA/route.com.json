@@ -4,12 +4,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000705,
-    "sites": 7,
+    "prevalence": 0.000806,
+    "sites": 8,
     "subdomains": [
         "shopify-widget",
-        "bigcommerce",
         "protection-widget",
+        "bigcommerce",
         "shopify"
     ],
     "cnames": [],
@@ -18,25 +18,81 @@
         {
             "rule": "route\\.com\\/shopify\\.widget\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "shopify-widget"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "12a59c39da54e4716860e589c7c672e78c4e5387f100a792a93d4da87e0b03cf",
-                "3bdf8a3838c2b0805275afe8869c6d27549f7fff720ddaf42472d6dd201ecebe"
+                "65625719379a4d6fd8f5bab9ad22e2e6200e159c459dc5b623dce8a5ec1ba588"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "canadianprotein.com",
                 "casadesante.com",
                 "labyrinthos.co",
                 "musicredone.com"
+            ]
+        },
+        {
+            "rule": "route\\.com\\/protect\\.core\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "protection-widget"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.platform": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.language": 1,
+                "window.sessionStorage": 2,
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "34ccdcd59763b8521b2872050d53aedae188f4c787ca01f8ba2764e731e6ce82"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_route_pa_sid": {
+                    "ttl": 604818,
+                    "length": 36,
+                    "prevalence": 0.0001006947940791461,
+                    "uniqueness": 1
+                },
+                "_route_pa_session_start": {
+                    "ttl": 604818,
+                    "length": 13,
+                    "prevalence": 0.0001006947940791461,
+                    "uniqueness": 1
+                },
+                "_route_grafana_faro_session_id": {
+                    "ttl": 86422,
+                    "length": 10,
+                    "prevalence": 0.0001006947940791461,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.prohockeylife.com"
             ]
         },
         {
@@ -114,14 +170,14 @@
                 "protection-widget"
             ],
             "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.product": 1,
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "481eb0266ac8b29c671c4bd19d48df5f088c39f8cf423e56265a8e317924c477"
+                "34ccdcd59763b8521b2872050d53aedae188f4c787ca01f8ba2764e731e6ce82"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -156,23 +212,23 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "domain": "minmaxify.com",
+            "prevalence": 0.8205128205128205
         },
         {
-            "domain": "minmaxify.com",
-            "prevalence": 0.3333333333333333
+            "domain": "first party",
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "routeapp.io",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.02564102564102564
         }
     ],
     "types": {
-        "Script": 10,
+        "Script": 13,
         "Stylesheet": 2,
         "XHR": 2
     },

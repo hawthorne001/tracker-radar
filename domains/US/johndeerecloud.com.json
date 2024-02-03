@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000613,
-    "sites": 9,
+    "prevalence": 0.0000545,
+    "sites": 8,
     "subdomains": [
         "customermanageapi.customermanage-prod-floating.us.e10.c01",
         "customermanagews.customermanage-prod-floating.us.e10.c01",
+        "personalize.isg-ecda-prod-vpn.us.e01.c01",
         "realtime-clickstream.isg-ecda-prod-vpn.us.e01.c01",
         "ux-cdn.apps-prod-vpn.us.e29.c01",
         "edge.om-machinefinder-prod-vpn.us.e26.c01"
@@ -29,6 +30,10 @@
         {
             "original": "edge.machinefinder.com",
             "resolved": "edge.om-machinefinder-prod-vpn.us.e26.c01.johndeerecloud.com"
+        },
+        {
+            "original": "personalize.deere.com",
+            "resolved": "personalize.isg-ecda-prod-vpn.us.e01.c01.johndeerecloud.com"
         },
         {
             "original": "realtime-clickstream.deere.com",
@@ -53,7 +58,9 @@
                     "resolved": "customermanageapi.customermanage-prod-floating.us.e10.c01.johndeerecloud.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "9a3055fefe28ab1e912c21355375e66c606d4380f4fb333dab7061b2acb574b1"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -85,6 +92,35 @@
             "exampleSites": [
                 "deere.com",
                 "myfinancialaccounts.deere.com"
+            ]
+        },
+        {
+            "rule": "johndeerecloud\\.com\\/segments",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalize.isg-ecda-prod-vpn.us.e01.c01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "personalize.deere.com",
+                    "resolved": "personalize.isg-ecda-prod-vpn.us.e01.c01.johndeerecloud.com"
+                }
+            ],
+            "responseHashes": [
+                "977e537b5c7f4117f0813a68b73fe8b5d774be7c7cbb3075e0a8135f0fa558f4",
+                "2684e39ad2c3202c32e6c5135768503432ab1115c7c08ac81b1c11deaa38b5ec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deere.com",
+                "myjohndeere.deere.com",
+                "www.deere.com"
             ]
         },
         {
@@ -278,7 +314,7 @@
             ]
         },
         {
-            "rule": "johndeerecloud\\.com\\/assets\\/guide\\/manifest-d52170187036006129e6b0de15aad3d9e011c0be42b0e9ace5ca725f0416b4bc\\.css",
+            "rule": "johndeerecloud\\.com\\/assets\\/guide\\/manifest-56750fbc485746ec86581690a34d6843919389fa9e2f413157c9dc4634bfb0a9\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -294,7 +330,7 @@
                 }
             ],
             "responseHashes": [
-                "596b9d454664e473e2f544e676709d752bd3b0bb0d55dfccf2576bfb9f05331e"
+                "c106a0b89a9ba1411317d4f5d674f17896e7de82f99c2bf944bc8d7daa2608f6"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -494,7 +530,7 @@
             ]
         },
         {
-            "rule": "johndeerecloud\\.com\\/assets\\/Apps\\/MachineFinder\\/MachineFinderApp-b105df8251119906facd113203122e0869f1701578c81c3337677e80528d09a4\\.js",
+            "rule": "johndeerecloud\\.com\\/assets\\/Apps\\/MachineFinder\\/MachineFinderApp-33b76e641f752122c0f26721ed8bd43ace46a10a054233e8018b7849e000ef22\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -510,7 +546,7 @@
                 }
             ],
             "responseHashes": [
-                "706b11392b9c130b87cafe16c9b02afb60e6684557e4b7e8f059297eaa97701b"
+                "713ad0ca2943684d62241917beeb0e29a1713640ed2912c8c781df593e0772fe"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1211,25 +1247,25 @@
     "topInitiators": [
         {
             "domain": "jquery.com",
-            "prevalence": 0.7222222222222222
+            "prevalence": 0.6046511627906976
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.3023255813953488
         },
         {
             "domain": "johndeere.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.046511627906976744
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.046511627906976744
         }
     ],
     "types": {
         "XHR": 20,
         "WebSocket": 2,
-        "Fetch": 5,
+        "Fetch": 8,
         "Font": 12,
         "Script": 6,
         "Stylesheet": 6,
@@ -1237,10 +1273,10 @@
         "Preflight": 18
     },
     "nameservers": [
-        "ns3.deere.com",
-        "ns4.deere.com",
         "ns2.deere.com",
+        "ns1.deere.com",
         "ns2a.deere.com",
-        "ns1.deere.com"
+        "ns3.deere.com",
+        "ns4.deere.com"
     ]
 }

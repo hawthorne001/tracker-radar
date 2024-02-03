@@ -12,7 +12,8 @@
     "subdomains": [
         "rum",
         "session-replay",
-        "csp-report"
+        "csp-report",
+        "logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -25,66 +26,63 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 32,
-            "prevalence": 0.000218,
+            "sites": 29,
+            "prevalence": 0.000197,
             "cnames": [],
             "responseHashes": [
-                "0fab07be100ed70abd677fd6b4b161cc2fe0afb76ea0a4cb7b9721f12dc4defd",
-                "564ab716106e99392a39d9b008d9d2b8624fd17d95d701161373a57e67d38de5",
-                "9581566e1b8e949e4954e210ed233204b8204209ab90b9b656685ef7ca9b84d7",
-                "0653070289d7279410bda55e529b28df09765c44da8ab24efc5de1786b2653dd",
-                "aa72cd8bf3f40a663e0aec0c96d1a7aff27cfd0ae1eaca3769093cf964959580",
-                "7f429402659518ce4258b962c88d6d2844105b3555c515a97f6d247c771cb166",
-                "4b0c7024a25fa44a6821cb37fb41d392db18203bb1bc58ba6b11d9aac07a7a10",
-                "10d96249b61ad9019a2e38332c4c4d7956b99da7f99c166b065022b70c60b59f",
-                "155d48abbb265153dfd07ba60c3576f6d040b13f5d024db05dffdb61c519599e",
-                "b05e28cfce615e69285ee9466079c9d1fd59f6ad9f664c8305e54f663b3a8022",
-                "44942335cecf602ae9c81848e27b30fc98987b2022609b235c7d36567aaee73d",
-                "1367be3a3417fc449bf9e84383dfaa411c7a94144b1b7160fcee4aa5ab44098d",
-                "fc1a4c17ac5e6800f7b03e19516197d58bcf0b9563c462cf1a1aefb753a3d69f",
-                "4e3a48b18814ec009be9e08b5919a7a8fd623691c1deb58cb3ee8f392bdb9598",
-                "69711c151c4037e2bf0bbd0476aefba6afefe737be2f876edb7c2970fa1fd889",
-                "8d5e3122f02d149f84774563e216de08ce72f7bab9c4777428b78ea98c990da6",
-                "53d42cf01bfe13cfc2b124247af59bb416481ac71840e14bee19abf809573989",
-                "aa90974a763e1627076336002b1df05445aa30ee4e2aaa78e4d6e2e80ecfd0a9",
-                "741fd0b5f74dd5051ae2cc9f52dee6ebef2d5886b9d32bceb3f3b63bf9af11a5",
-                "bd74fba41b0088a41189e602f00c8a582eded11f6b8208740e2d6753945a583e",
-                "03c2856f183acf207698e4c35aa501fc4bd19ba4758bd5dca2389885bc1cabc2",
-                "4021d6aad45e2bc36572034a6646dd7a4df635b967d3b02bc4856618482feb27",
-                "0799d4ba2b0c9f67bf69e4448087d79581ad3bb9f79c2314860c87686f5ad882",
-                "6fe5818c5007630d03a61941194e82160e25ca21c289114022406c9ebd49936a",
-                "a0bba7f5b9f377dab0cf1f2b3898146bbb3a8d6d7b5a3ab3eab3446cb0775293",
-                "92bda6b7fbfddad27954ef1973dbd650d732055e81e7d0fe9f86d4f331ede7c8",
-                "6131dc0cf7bac303edc375fac9ce7a7d95575d170ed7157714c56c5096a8433f",
-                "b55b05947ad3bd522f008e734aa41d2dfe1fc62307409e47fa3bf8837cdcf0dc",
-                "a93305c106178d1bfe748788d5f671d93ebabd846bc977b42a7743cdca454f7b",
-                "340e2d93fbe96e2811107993b531760d413c977771ea7c7482e327fc200612ac",
-                "a3a5637a8998e5c7fc2e2b373d1d287eb0ecc8823641fe4168e372e478d5b7a0"
+                "4ebc7b529155ca50e572b2c415f5008128cd8aa1dbd0e42d94037e0b5f492f91",
+                "5beac03566924a5ed4ee287df92783744ba34ed76c5fe26be4330b896b857692",
+                "dfda5dbefffdec1b84b16a2799486325a7e8e3f2df355f522323cf9ae3b4bed5",
+                "425309f7aa90aa9d2b7f85975a42cfc3bfbe2f5bfcf8c6b0a2c362f017b43c42",
+                "47400599d4a4ded6dee862de4bd9c2e86ed7817d27742c7d08ede16f03e3b28d",
+                "d44d6c85f82bc3b93bc9879ba99566006e113b2042a4cbdc26aeb2c7f4ccdc80",
+                "c03179d00f72574e3cf5b2b36976a6a39ed8e82b77a90cce8111de6b08abc6c2",
+                "cb8d52a4cbe06b1b8018791d79f4286dba90ba1718125288632b5515a67d5846",
+                "13597923557eb38d45c41ba3725bc6beecd4a6eb699d57153b5ce1714649960b",
+                "2afdb7a6686400a7d6bd54f3265629e884ed6e35e1d58726a51669e1a728b219",
+                "53b9373b98f2a249f95ac82f948293e81649ad9604b8ebda4fa506f75d515b83",
+                "420ac4acb71111d0469f9c2a69691249f91b5dd74535b0d89db13452633c6ad9",
+                "be03f20e9a9723d519d43206dd94523964487c6e66e169ada033d4d522fd4c7e",
+                "40874b6dcb6aea0ac746c5d837dfbfea673ddeced4b2cae9e01eba3ec00154d1",
+                "32fadb7a0f0ad49b995dde45aeb563c15f4b02074609a8bd09db0029081225d3",
+                "1b483f38cc685fafd7ff49ff6fda273b47b324c73a77268b9ad20173d85ca6b1",
+                "91872748fd47eb672122178bdca354e75b21447df41167548868b8adb8275659",
+                "7f4a6b88635e6be19c097e29df01eb12eb63fc73a0b241179364de099022641b",
+                "9e5ecf46033a2b7a8f2aa814c033d3e0376666803be8b17153b1b2ad7db91405",
+                "6f716fdd9e52d5e8aef8da1e4a37b8a76f1b94afee0add7e2c82afbba06af67a",
+                "41b701f41ac9eefde3fdc3c533775bee9c015f0f5b00cf22646aa91db52e6eae",
+                "eb14a676d3bd97de878c664fb5ce236c8789b1b4b43a89a685b117e77ba09283",
+                "3c09ce7e013c12ea9837a1c4f0f095bb946a5abf93bec9aa82f5217c0801012b",
+                "851fa9c2cb8c85d2cfdb3c7a92beb6bb89c528ed91b7500bbab19f1050aeeb0b",
+                "e0c7e10af47b0adf53e5bb88fddc44d388d630f33bb4583822eef65eab4a469c",
+                "6329f496bebfa5edb305531e7f0ce1c2427737584ea56afbaa04f1941b9a7c69",
+                "13cbcae1bbcd3e3f8937853865253a1bd77a8caf5362fa50e698fc63e263cdde",
+                "3e94065409c42de3e9eb84712c3c2da71166161f195127686043430c79544f1c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.wrenkitchens.com",
-                "www.cupraofficial.co.uk",
-                "offerup.com",
-                "www.cupraofficial.de",
-                "www.decathlon.ca",
+                "www.pizzahut.ca",
+                "www.polestar.com",
+                "www.vodafone.hu",
                 "www.toyota.nl",
-                "www.toyota.co.uk",
-                "decathlon.fr",
-                "www.toolstation.com",
-                "rouvy.com",
-                "www.leaseplan.com",
-                "www.recharge.com",
-                "www.toyota.de",
-                "www.toyota.es",
-                "www.flixbus.fr",
-                "www.toolstation.nl",
-                "www.toyota.fr",
-                "coupons.businessinsider.com",
+                "www.sensodyne.com",
+                "support.traderepublic.com",
+                "www.wrenkitchens.com",
+                "www.toyota.se",
+                "www.flixbus.de",
                 "www.cinch.co.uk",
-                "yarnpkg.com"
+                "www.santevet.com",
+                "www.toyota.co.uk",
+                "www.leaseplan.com",
+                "wolt.com",
+                "www.advil.com",
+                "www.sligro.nl",
+                "www.flixbus.fr",
+                "www.directferries.nl",
+                "yarnpkg.com",
+                "www.greenmatch.co.uk"
             ]
         },
         {
@@ -99,23 +97,24 @@
             "prevalence": 0.0000476,
             "cnames": [],
             "responseHashes": [
-                "549cb1bcb7e5c2ec5fb7be9cbf4d920268612368252e91f1236b7e8591272825",
-                "b91fa0c46b07569cd928ac7642b034bf2fa6382044227f9b0cbc1619d1463767",
-                "8485b64de8e81ba522271dbd258b67194182169fc19897c43dbf1849c1f89807",
-                "5373b1305ac5a8f36836eed6084e0a30890021d8b9da43b8e891e91e07d29d96",
-                "cd57c71b6f23adb4e978a3197a5ae9c225e675869b750096e6d9e933d1b6cbac"
+                "eb5b724dbf1f88b9b59b2267a5918e853f9433c55a9dd884caed0749ca865e0e",
+                "6b3c51e95333313b60d879b2a8bdb208790d6dc353cb6ad956579feea85e79f6",
+                "6af4676eaec1ab981b5c7f026638986612380d639661c7a5b99829c8c0f78abb",
+                "2bde80ddabef6ab56f65a3040509e3b94a49468e9e740315387e330636132e5e",
+                "1e784f2545fd870d5884f4461d01ffb30da7c32a20be9e05822f6a1f45d15b8f",
+                "2f6cb233c3dd640d41b3b4dc4b057d15ceac6c974847d942ea493707cdb75254"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rouvy.com",
+                "suitsupply.com",
                 "www.cinch.co.uk",
-                "www.leaseplan.com",
-                "www.toyota.co.uk",
-                "www.toyota.nl",
-                "www.toyota.se",
-                "www.wrenkitchens.com"
+                "www.cupraofficial.de",
+                "www.lexus.co.uk",
+                "www.santevet.com",
+                "www.wrenkitchens.com",
+                "yarnpkg.com"
             ]
         },
         {
@@ -130,22 +129,22 @@
             "prevalence": 0.0000408,
             "cnames": [],
             "responseHashes": [
-                "3539839efb38eb9cf6923ed3d3a820d91be959d1e7735559c1cdf2e4b00d56d4",
-                "9e9f557563e8f1227efcb5d493819c77f2e0b8a2c5fd5c72ad00373de764ae9e",
-                "7bc529f05b6cc9eb7b1770bcd8886818307a6d9594f6c595d4bc41b28ee96c76",
-                "5aa52ebdf9e7a68c2678f8b189683c8af2907a886479ee7c8408cf242660b3e9",
-                "314f89460a4ae9b078fd533a238de99484a660b22ae77df9ee61a5cbc03c6eb5"
+                "ecdd2ce4d595f6ab804716dfe96f8078a4124046f06396a3161308545fe68a10",
+                "441d417e937f2dfaca7277982b54144fb9bcb23ea38c4da8af3831ca60e7d1e1",
+                "b2a224843240fd5c8163fd23e03f2f549601e9771204a38871c17ecbe7f993c9",
+                "83c44b0d9fb9cbe6d0f7434fc7a46e6347e1072213c5e0ca36c8dbb3aaa1795e",
+                "7a5bdb6eb9cde69f6eeb8823b6c492dedad7930af4518ed4fcc31dcd4b8d0f65"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "smarty.co.uk",
+                "toolstation.com",
                 "www.cupraofficial.de",
-                "www.kamera-express.nl",
+                "www.directferries.nl",
                 "www.leaseplan.com",
                 "www.toolstation.com",
-                "www.toyota.co.uk"
+                "www.wrenkitchens.com"
             ]
         },
         {
@@ -194,6 +193,26 @@
                 "www.cromwell.co.uk",
                 "www.motonet.fi"
             ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tui.com",
+                "zdrowietvn.pl"
+            ]
         }
     ],
     "categories": [],
@@ -202,35 +221,43 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7123745819397993
+            "prevalence": 0.7170418006430869
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.27424749163879597
+            "prevalence": 0.26366559485530544
         },
         {
             "domain": "oikotiecdn.fi",
-            "prevalence": 0.006688963210702341
+            "prevalence": 0.006430868167202572
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.003215434083601286
         },
         {
             "domain": "licdn.com",
-            "prevalence": 0.0033444816053511705
+            "prevalence": 0.003215434083601286
         },
         {
             "domain": "klarna.com",
-            "prevalence": 0.0033444816053511705
+            "prevalence": 0.003215434083601286
+        },
+        {
+            "domain": "cdntvn.pl",
+            "prevalence": 0.003215434083601286
         }
     ],
     "types": {
-        "Fetch": 32,
+        "Fetch": 31,
         "XHR": 13,
         "Ping": 4,
         "Other": 3
     },
     "nameservers": [
         "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
     ]
 }

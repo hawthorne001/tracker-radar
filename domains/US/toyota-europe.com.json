@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000272,
+    "sites": 4,
     "subdomains": [
-        "cp-common"
+        "cp-common",
+        "dxp-webcarconfig",
+        "kong-proxy-intranet"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -25,25 +27,92 @@
             "apis": {
                 "window.localStorage": 3
             },
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "2c55eaed90d1bcdadd38c676b812c2ba6575d303a44ff23d835517a9f9f1f32c"
+                "4153f74bbd9584a731e4c4981aff6a3d97bf3d2ad74201b4749de12b190d8690"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.co.uk",
+                "www.toyota.es",
                 "www.toyota.it",
                 "www.toyota.se"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/js\\/vendor-d8dab41\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dxp-webcarconfig"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "885101843a45e5bbee6eb6018c81b0d080508bcf3c5ddffa0d80af25def9f35d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.es",
+                "www.toyota.it"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/t1-finance\\/tfs\\/cars\\/es",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kong-proxy-intranet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.es",
+                "www.toyota.es"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/t1-finance\\/tfs\\/cars\\/es",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kong-proxy-intranet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "02377e54d6dc4cdea153ae6208ded8ed4ef4bbd200b3aa726596182d370befa9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.es",
+                "www.toyota.es"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000681,
     "topInitiators": [
         {
             "domain": "first party",
@@ -51,11 +120,13 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
+        "pdns2.cscdns.net",
         "pdns1.cscdns.net",
-        "ns1.toyota-europe.com",
-        "pdns2.cscdns.net"
+        "ns1.toyota-europe.com"
     ]
 }

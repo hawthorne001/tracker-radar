@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "static"
+        "static",
+        "faznet",
+        "testberichte"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,12 +25,12 @@
                 "static"
             ],
             "apis": {
-                "window.localStorage": 5,
+                "window.localStorage": 6,
                 "window.sessionStorage": 5,
                 "Notification.permission": 1
             },
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [
                 "e675226d218c63702642d3f203ae7d16f4cd056f3a04529713f32e3d8af94265"
@@ -41,7 +43,8 @@
                 "www.faz.net",
                 "www.focus.de",
                 "www.kurir.rs",
-                "www.stern.de"
+                "www.stern.de",
+                "www.testberichte.de"
             ]
         },
         {
@@ -52,8 +55,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [
                 "df124351501a3a62b99269da55fa305a5584a9e80e84f4ecf72cdd54d4978204"
@@ -66,25 +69,26 @@
                 "www.faz.net",
                 "www.focus.de",
                 "www.kurir.rs",
-                "www.stern.de"
+                "www.stern.de",
+                "www.testberichte.de"
             ]
         },
         {
-            "rule": "cleverpush\\.com\\/sdk\\/chunk\\/115\\.cbdf1433255d84cfcc2a\\.js",
+            "rule": "cleverpush\\.com\\/sdk\\/chunk\\/115\\.7f076c17cad757bbf023\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "static"
             ],
             "apis": {
-                "Notification.permission": 4,
-                "Navigator.prototype.permissions": 4
+                "Notification.permission": 5,
+                "Navigator.prototype.permissions": 5
             },
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "78b5bde17c456ceb5dbc000b81a507dd1edb50ee76693e2ba28bb8c34409b831"
+                "e47f1cc4c8709442a2abb74583129dd04fd4cd1a86e10ef089a3f88d33166682"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -93,7 +97,33 @@
                 "faz.net",
                 "www.focus.de",
                 "www.kurir.rs",
-                "www.stern.de"
+                "www.stern.de",
+                "www.testberichte.de"
+            ]
+        },
+        {
+            "rule": "cleverpush\\.com\\/iframe",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "faznet",
+                "testberichte"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faz.net",
+                "www.testberichte.de"
             ]
         },
         {
@@ -171,30 +201,6 @@
                 "www.kurir.rs",
                 "www.stern.de"
             ]
-        },
-        {
-            "rule": "cleverpush\\.com\\/sdk\\/chunk\\/728\\.0e3e5c65a8ff0b84be06\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static"
-            ],
-            "apis": {
-                "window.innerWidth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "24a8b52e2f9ab0ff41c06d675d65151d026599f3dc15399ead792ba66db8a241"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "focus.de",
-                "www.stern.de"
-            ]
         }
     ],
     "categories": [],
@@ -203,15 +209,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6538461538461539
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "mycleverpush.com",
-            "prevalence": 0.34615384615384615
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 28
+        "Script": 29,
+        "Document": 2
     },
     "nameservers": [
         "eric.ns.cloudflare.com",

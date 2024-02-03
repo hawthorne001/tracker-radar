@@ -9,28 +9,52 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000705,
-    "sites": 7,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
+        "wcpstatic",
         "browser.pipe.aria",
-        "browser.events.data",
-        "eu-mobile.events.data",
-        "customervoice",
-        "c1"
+        "eu.pipe.aria",
+        "browser.events.data"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
+        {
             "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "browser.pipe.aria"
+                "browser.pipe.aria",
+                "eu.pipe.aria"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -40,7 +64,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "clevelandclinic.org",
-                "my.clevelandclinic.org"
+                "my.clevelandclinic.org",
+                "www.loxone.com"
             ]
         },
         {
@@ -48,15 +73,14 @@
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "browser.events.data",
-                "eu-mobile.events.data"
+                "browser.events.data"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "b674f14b916a9fc78ca2994351453d6ae94e2ead9d656c89fa7d81b309a37f2b",
+                "63253ed18fe4c0deea470f59531ae1ddf22490bcc4d92885a38b4210028fa5f8",
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
             "type": "XHR",
@@ -65,73 +89,7 @@
             "exampleSites": [
                 "minecraft.net",
                 "www.minecraft.net",
-                "www.odlo.com",
                 "www.trekbikes.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "browser.events.data",
-                "eu-mobile.events.data"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "minecraft.net",
-                "www.odlo.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/formapi\\/api\\/420c37ce-ca55-4745-85dc-c9d1fab7ce60\\/users\\/d8e7a8c6-294b-439f-9620-c3897c93a269\\/light\\/runtimeForms\\('zjcMQlXKRUeF3MnR-rfOYMao59hLKZ9DliDDiXyTomlUQUZFVjlDSTFPS1VWUEpVTlZJN0VXVDg1My4u'\\)",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "customervoice"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ed2a6a2228b9f918544ed149ef03d8d33bd04eb4425704657690ddfe61ccf235"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "odlo.com",
-                "www.odlo.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/c\\.gif",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "c1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8f84c4ced509262009163e45994b45ed7ee9d4dbac88674be5f2db5c9e5be38e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "odlo.com",
-                "www.odlo.com"
             ]
         }
     ],
@@ -142,34 +100,33 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "azureedge.net",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.35294117647058826
+            "prevalence": 0.3888888888888889
         },
         {
             "domain": "office.net",
-            "prevalence": 0.35294117647058826
-        },
-        {
-            "domain": "azureedge.net",
-            "prevalence": 0.23529411764705882
+            "prevalence": 0.05555555555555555
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.058823529411764705
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "XHR": 8,
-        "Preflight": 2,
-        "Image": 2
+        "Script": 2,
+        "XHR": 6
     },
     "nameservers": [
+        "ns2-39.azure-dns.net",
         "ns3-39.azure-dns.org",
         "ns4-39.azure-dns.info",
-        "ns1-39.azure-dns.com",
-        "ns2-39.azure-dns.net"
+        "ns1-39.azure-dns.com"
     ]
 }

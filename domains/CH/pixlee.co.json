@@ -4,15 +4,37 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000403,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
         "photos",
         "distillery"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "pixlee\\.co\\/getDUH",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "photos"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "27b8d4cdf920302087d7beba1a7be9bd4a0e216a05b4ad566b1b455b34798c59"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.com",
+                "www.decathlon.com"
+            ]
+        },
         {
             "rule": "pixlee\\.co\\/lightbox",
             "cookies": 0,
@@ -21,20 +43,18 @@
                 "photos"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "19ad3ebf333c94eaf74ca43c641fd356d79afe71a41ee21faf57b5c0daba895d",
-                "5f0691091f1a4c9ebc2c59acf46190ad230ad642be08a982e10408b8f11d5f4e",
-                "7cec0c770b7731cf9606fab06347b3a192a906016f487700f19d55339fdeebda"
+                "23752be6be7bab88cdd2361bf0e7ca8073618bd933c75476d9dd52b51750cb93",
+                "f5ac26f4020d5d9f1c8db753de263f925cdc7d68342613fa2a3bd42b7eedffd1"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gva.ch",
-                "www.kempinski.com",
                 "www.levi.com",
                 "www.odlo.com"
             ]
@@ -47,22 +67,44 @@
                 "photos"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "ac6b26c907175e764d9929cf75c64b9ee44b7175244707ea7fae83e614d395d4",
-                "ca28954825234237d485a51f53d8b7058cc7f20aa263c7db1056c34de2f088e0",
-                "869fd5216fbf1dc3890bb5e36abdf75864c8ec7769d87e8548dd87c963800f6d"
+                "6e4f71edbaafbb561b187a03af9b0bed6808d67fb749837f20b3daf6e8458a7e",
+                "e141a88bc01b77ca4d36bbda0b3caf147954a7205c79eaa682894a5961af4236"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gva.ch",
-                "www.kempinski.com",
                 "www.levi.com",
                 "www.odlo.com"
+            ]
+        },
+        {
+            "rule": "pixlee\\.co\\/vendor_modified\\/easyxdm\\/work\\/easyXDM\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "photos"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "21bf8888408e5333419e6ddd46dace98f651ceae0f3514acf16c614d3a3d880b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gva.ch",
+                "www.gva.ch"
             ]
         },
         {
@@ -73,21 +115,17 @@
                 "distillery"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bebd96c5e8a01dce07e3307059c876afbf4fbd7235528f5e2e5b25c74f14bc88",
-                "6684c89bf50bc5f5bdae5362f490696cebf4b2186c77162a9279cb110142a96c",
-                "95d62fc41975420427eaa346d72dc35717a3cceef90d1f1ede4afa201f14f9a1"
+                "253ee555fa5b09bf90ab008f5ada6a97e778c2c10362e25348daddf5aa45d08f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gva.ch",
-                "www.kempinski.com",
-                "www.levi.com",
+                "levi.com",
                 "www.odlo.com"
             ]
         }
@@ -98,21 +136,30 @@
     "topInitiators": [
         {
             "domain": "pxlecdn.com",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.5454545454545454
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.38461538461538464
+            "prevalence": 0.2727272727272727
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "pixlee.com",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
         "Document": 8,
-        "XHR": 4
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-1140.awsdns-14.org",
         "ns-1879.awsdns-42.co.uk",
+        "ns-672.awsdns-20.net",
         "ns-444.awsdns-55.com",
-        "ns-672.awsdns-20.net"
+        "ns-1140.awsdns-14.org"
     ]
 }

@@ -7,12 +7,37 @@
     "prevalence": 0.0000272,
     "sites": 4,
     "subdomains": [
+        "crud-cdn",
         "cdn",
+        "predictive",
+        "bellatrix",
         "trk"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "polaris\\.me\\/creatives\\/pau\\/23e7660c-751d-43f2-a677-53a2eb22a890",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crud-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "725b8ceaa7928f893d4d77a76a40b3a1e7704441396e6ded8790d08c058b897b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "www.marthastewart.com"
+            ]
+        },
         {
             "rule": "polaris\\.me\\/cva\\/pau\\/c\\/index\\.js",
             "cookies": 0,
@@ -22,9 +47,9 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "Event.prototype.timeStamp": 2,
+                "Event.prototype.timeStamp": 1,
                 "Navigator.prototype.product": 2,
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -36,8 +61,80 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "myrecipes.com",
-                "www.thespruce.com"
+                "bhg.com",
+                "www.marthastewart.com"
+            ]
+        },
+        {
+            "rule": "polaris\\.me\\/v1\\/pau\\/spla\\/23e7660c-751d-43f2-a677-53a2eb22a890",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "predictive"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7ea7f047685b1b806ebe4610c24aff94a75e95f60dca731c0b296bb606ea7aa7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "www.marthastewart.com"
+            ]
+        },
+        {
+            "rule": "polaris\\.me\\/assets\\/images\\/19d5128b-2105-401c-bf13-f243c50078e5\\/200",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crud-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "04254f57be1e6d53a3ad6411235d2c75b422a42095d013c34a1fdef7f05053ed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "www.marthastewart.com"
+            ]
+        },
+        {
+            "rule": "polaris\\.me\\/player-shell\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bellatrix"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2,
+                "window.devicePixelRatio": 2,
+                "HTMLMediaElement.prototype.canPlayType": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "728f47e00eb80510c965ba59eab7423f3a657ee32d839d2199670b224859ba7a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realsimple.com",
+                "www.tripsavvy.com"
             ]
         },
         {
@@ -48,16 +145,17 @@
                 "trk"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "southernliving.com",
-                "www.verywellhealth.com"
+                "realsimple.com",
+                "www.realsimple.com",
+                "www.tripsavvy.com"
             ]
         },
         {
@@ -78,9 +176,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "southernliving.com",
-                "www.southernliving.com",
-                "www.verywellhealth.com"
+                "realsimple.com",
+                "www.realsimple.com",
+                "www.tripsavvy.com"
             ]
         }
     ],
@@ -90,22 +188,23 @@
     "topInitiators": [
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.9
+            "prevalence": 0.8888888888888888
         },
         {
             "domain": "first party",
-            "prevalence": 0.1
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 3
+        "XHR": 7,
+        "Script": 4,
+        "Image": 2,
+        "Preflight": 3
     },
     "nameservers": [
+        "ns-215.awsdns-26.com",
         "ns-897.awsdns-48.net",
         "ns-1294.awsdns-33.org",
-        "ns-1821.awsdns-35.co.uk",
-        "ns-215.awsdns-26.com"
+        "ns-1821.awsdns-35.co.uk"
     ]
 }

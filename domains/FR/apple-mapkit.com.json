@@ -9,10 +9,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "gsp10",
+        "cdn2",
+        "cdn1",
+        "sat-cdn2",
+        "sat-cdn1"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,14 +30,18 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.languages": 2,
-                "Navigator.prototype.appVersion": 2,
-                "Navigator.prototype.doNotTrack": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.devicePixelRatio": 2
+                "Navigator.prototype.languages": 3,
+                "Navigator.prototype.appVersion": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.devicePixelRatio": 3,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.language": 1,
+                "window.matchMedia(\"prefers-color-scheme\")": 1,
+                "CanvasRenderingContext2D.prototype.measureText": 1
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "7eae6f024b0c0c2a23693f540b6d7440df288437ee9533bb11d0b906865415b2"
@@ -42,7 +51,118 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coordonnees-gps.fr",
-                "www.coordonnees-gps.fr"
+                "www.coordonnees-gps.fr",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/ma\\/bootstrap",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c0e5014bea74c1bef000dc33f78767813688b5a6e397fb86661876d5b18ecad3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coordonnees-gps.fr",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/ma\\/bootstrap",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coordonnees-gps.fr",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/hvr\\/mw\\/v1\\/spile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gsp10"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "13c6a7b85fcb0443c1d31dafe22561aac714fbaa99d3b9a56474d8dda0c9aee0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/ti\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn2",
+                "cdn1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "faa05a577a96d4c626c1734d54a9d41aa90e958c18fd65cf174fd0efdd1f01ec"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sat-cdn2",
+                "sat-cdn1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b2c4cfc42022937145c9ec878d262476eba08f974cc164618a405c5977aefb24"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
             ]
         }
     ],
@@ -52,20 +172,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.9642857142857143
         },
         {
             "domain": "cookiebot.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "XHR": 4,
+        "Preflight": 2,
+        "Image": 4
     },
     "nameservers": [
+        "a.ns.apple.com",
         "b.ns.apple.com",
         "c.ns.apple.com",
-        "d.ns.apple.com",
-        "a.ns.apple.com"
+        "d.ns.apple.com"
     ]
 }

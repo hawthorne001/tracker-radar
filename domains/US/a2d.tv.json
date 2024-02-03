@@ -8,11 +8,14 @@
     "sites": 5,
     "subdomains": [
         "imageproxy",
+        "mtv.api.subscription",
+        "tv4.api.subscription",
         "client-gateway.mtv",
         "client-gateway.tv4",
         "tv4se-graphql",
         "globalconnectlive.streaming",
-        "akamaivod.streaming"
+        "akamaivod.streaming",
+        "vod.streaming"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -29,10 +32,10 @@
             "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
-                "26bf27dbdb95d0a6952054506684466a56d7f44980354d5f3a96588d451e0fc7",
-                "380b4f6abf65a660b021c83bca157af2561f908402da2e55d5bc16e1ae31d10f",
-                "df73c9dfdf90ceddcdaa5181f2d5625d534e6c047d404e986b6b366c0a6b36ab",
-                "5edc22d1962e85807965237990677bd28f9e001c9e6c1fef8f806703dc878c75"
+                "4806f823a8240b7abb1c4a23a0dea0cdc214eb5b2a3561c32a7a51205180cfeb",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "752554d46c28fec15f58008584050e840fc617dcbbfeb999b45c0e5cc5bc8ffa",
+                "775640458963b2fb2d2d534d690cd04f62259362a1f276c130135779119dba7d"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -41,6 +44,55 @@
                 "fotbollskanalen.se",
                 "www.fotbollskanalen.se",
                 "www.mtvuutiset.fi",
+                "www.tv4play.se",
+                "www.tv4.se"
+            ]
+        },
+        {
+            "rule": "a2d\\.tv\\/v1\\/packages\\/checkout\\/cancellation-reasons",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mtv.api.subscription",
+                "tv4.api.subscription"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "863a044093cca527dc7161e44f5de28b05aa1b953e9d588e4ea44be5a4a694d8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.fi",
+                "www.tv4play.se"
+            ]
+        },
+        {
+            "rule": "a2d\\.tv\\/graphql",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client-gateway.mtv",
+                "client-gateway.tv4",
+                "tv4se-graphql"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "44c62249887df84180df6e427a3a1aa3082d2eeddf250ba2113d5a8746e83643",
+                "152342b3c0f1eb6c5c4cc314f23b84a9f1a91e1879452357fe21ff5585ac71b1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.fi",
                 "www.tv4play.se",
                 "www.tv4.se"
             ]
@@ -60,31 +112,6 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mtv.fi",
-                "www.tv4play.se",
-                "www.tv4.se"
-            ]
-        },
-        {
-            "rule": "a2d\\.tv\\/graphql",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "client-gateway.mtv",
-                "client-gateway.tv4",
-                "tv4se-graphql"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "152342b3c0f1eb6c5c4cc314f23b84a9f1a91e1879452357fe21ff5585ac71b1"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -136,6 +163,28 @@
                 "mtv.fi",
                 "www.mtv.fi"
             ]
+        },
+        {
+            "rule": "a2d\\.tv\\/guitrailers\\/comet\\/fecee6d4-b895-4f1c-acbc-2f2de0c23e98\\.webm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vod.streaming"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2db38e2f5b38998b2b2d70a384aac690261e1c2bb7de32f973d029c8bc80e907"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tv4play.se",
+                "www.tv4play.se"
+            ]
         }
     ],
     "categories": [],
@@ -144,22 +193,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.76
+            "prevalence": 0.78125
         },
         {
             "domain": "cedexis.com",
-            "prevalence": 0.24
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "d2wzl9lnvjz3bh.cloudfront.net",
+            "prevalence": 0.03125
         }
     ],
     "types": {
         "Image": 9,
+        "Fetch": 5,
         "Preflight": 3,
-        "Fetch": 3
+        "Media": 2
     },
     "nameservers": [
-        "ns-601.awsdns-11.net",
-        "ns-1092.awsdns-08.org",
         "ns-1730.awsdns-24.co.uk",
+        "ns-1092.awsdns-08.org",
+        "ns-601.awsdns-11.net",
         "ns-84.awsdns-10.com"
     ]
 }

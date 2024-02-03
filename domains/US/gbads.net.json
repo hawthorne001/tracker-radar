@@ -8,12 +8,18 @@
     "sites": 10,
     "subdomains": [
         "weather-api.prod",
-        "grapeshot-goldbach.prod"
+        "logtunnel.prod",
+        "grapeshot-goldbach.prod",
+        "video"
     ],
     "cnames": [
         {
             "original": "gs-goldbach.da-services.ch",
             "resolved": "grapeshot-goldbach.prod.gbads.net"
+        },
+        {
+            "original": "l.da-services.ch",
+            "resolved": "logtunnel.prod.gbads.net"
         },
         {
             "original": "weather.da-services.ch",
@@ -27,7 +33,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "weather-api.prod"
+                "weather-api.prod",
+                "logtunnel.prod"
             ],
             "apis": {},
             "sites": 9,
@@ -36,21 +43,25 @@
                 {
                     "original": "weather.da-services.ch",
                     "resolved": "weather-api.prod.gbads.net"
+                },
+                {
+                    "original": "l.da-services.ch",
+                    "resolved": "logtunnel.prod.gbads.net"
                 }
             ],
             "responseHashes": [
-                "be09f80bb6b892b1c6650023f42912946f8cc17f55d137fcb27af165d73b7a59",
-                "334b40f782bf6995967bbaf0402d3a570fb4ffa7d7a53af657db557ac720c7ae"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "758b736c2545ae2ef9706ad2f68724b2fad6705d8a7718d6972591831fee36cb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "20min.ch",
+                "www.20min.ch",
                 "www.24heures.ch",
                 "www.bernerzeitung.ch",
                 "www.derbund.ch",
-                "www.fuw.ch",
                 "www.heute.at",
                 "www.lematin.ch",
                 "www.tagesanzeiger.ch",
@@ -65,8 +76,8 @@
                 "grapeshot-goldbach.prod"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.0000613,
+            "sites": 8,
+            "prevalence": 0.0000545,
             "cnames": [
                 {
                     "original": "gs-goldbach.da-services.ch",
@@ -75,8 +86,10 @@
             ],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-                "2f052fa5e9b9be859f2d6b874ac3f6b84057171291d1520748516624af2a45e6",
-                "9ff9d08b84ad10ca231eface68f5b762a5c924d9c4d5c66c4543ef22aca8e58e"
+                "027d4acb45f079ae57be1056eb8407e668a1bb16e6fad3da3cdcd61d89fab9ff",
+                "893257e5df5ebef7f3d12751787dbf5cc13159660607487599927e945a98d3d8",
+                "18b19ae20e781083095d2981b6cf1087a2fabfd318e89f3cdd6abfb6b322a162",
+                "217bb71b33616328e86c523b73b769ce4b534df2516ea3c54ed23c450b10f09a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -86,11 +99,52 @@
                 "www.24heures.ch",
                 "www.bernerzeitung.ch",
                 "www.derbund.ch",
-                "www.fuw.ch",
                 "www.heute.at",
                 "www.lematin.ch",
                 "www.tagesanzeiger.ch",
                 "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/storepal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cineman.ch",
+                "www.polizei-schweiz.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/storepal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cineman.ch",
+                "www.polizei-schweiz.ch"
             ]
         }
     ],
@@ -100,19 +154,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "gbucket.ch",
-            "prevalence": 0.2
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "XHR": 18
+        "XHR": 19,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1548.awsdns-01.co.uk",
         "ns-178.awsdns-22.com",
+        "ns-1548.awsdns-01.co.uk",
         "ns-741.awsdns-28.net",
         "ns-1184.awsdns-20.org"
     ]

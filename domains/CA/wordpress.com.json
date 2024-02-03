@@ -9,14 +9,62 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000907,
-    "sites": 9,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
-        "public-api"
+        "r-login",
+        "public-api",
+        "videos.files"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "wordpress\\.com\\/remote-login\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r-login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2f022c26faec665e9d0d0be2dad65ac90bca21333494cb8374793fb9fff710f1"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roserambles.org",
+                "sunnysjournal.com"
+            ]
+        },
+        {
+            "rule": "wordpress\\.com\\/wp-admin\\/rest-proxy\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "de7384edf73b884cd893d1d838babca3be0dfa09f7804b61a0e8c056d4c275d3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roserambles.org",
+                "sunnysjournal.com"
+            ]
+        },
         {
             "rule": "wordpress\\.com\\/geo\\/",
             "cookies": 0,
@@ -38,6 +86,48 @@
                 "globaltv.com",
                 "woo.com"
             ]
+        },
+        {
+            "rule": "wordpress\\.com\\/Yzs9H6I3\\/about-vanessa-van-edwards_mp4\\.thumbgrid_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "videos.files"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3cdb7236c8193429d85969e2f72cecdfddb889185ab09ce0f636b5b7e82bde3b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "scienceofpeople.com",
+                "www.scienceofpeople.com"
+            ]
+        },
+        {
+            "rule": "wordpress\\.com\\/Yzs9H6I3\\/about-vanessa-van-edwards_mp4_dvd\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "videos.files"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "scienceofpeople.com",
+                "www.scienceofpeople.com"
+            ]
         }
     ],
     "categories": [
@@ -45,24 +135,31 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9375
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "wp.com",
-            "prevalence": 0.0625
+            "prevalence": 0.125
+        },
+        {
+            "domain": "videopress.com",
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Fetch": 2
+        "Document": 4,
+        "Fetch": 2,
+        "Image": 2,
+        "Media": 2
     },
     "nameservers": [
-        "ns2.wordpress.com",
-        "ns4.wordpress.com",
         "ns1.wordpress.com",
-        "ns3.wordpress.com"
+        "ns2.wordpress.com",
+        "ns3.wordpress.com",
+        "ns4.wordpress.com"
     ]
 }
