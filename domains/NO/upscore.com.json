@@ -7,15 +7,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "hl",
         "files",
         "hit-pool"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "upscore\\.com\\/config\\/heise\\.de\\.js",
@@ -41,6 +41,37 @@
             ]
         },
         {
+            "rule": "upscore\\.com\\/async\\/upScore\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "window.innerHeight": 4,
+                "PerformanceTiming.prototype.navigationStart": 4,
+                "window.innerWidth": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "01ef51773f38d581700d8e4f6715cb9fdce8427ad47c7e9ab51e363207191f9e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heise.de",
+                "www.jutarnji.hr",
+                "www.poradnikzdrowie.pl",
+                "www.stern.de"
+            ]
+        },
+        {
             "rule": "upscore\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -48,8 +79,8 @@
                 "hit-pool"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "a12b7cb43c9d9134b5bb1b35e9096b66775d9e92e7611d1cc92b02edd6782a87"
@@ -59,7 +90,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "heise.de",
-                "www.heise.de"
+                "www.heise.de",
+                "www.jutarnji.hr",
+                "www.poradnikzdrowie.pl",
+                "www.stern.de"
             ]
         }
     ],
@@ -69,12 +103,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7272727272727273
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.2727272727272727
         }
     ],
     "types": {
-        "Script": 2,
-        "Ping": 2
+        "Script": 6,
+        "Ping": 5
     },
     "nameservers": [
         "duke.ns.cloudflare.com",

@@ -10,7 +10,8 @@
     "prevalence": 0.000704,
     "sites": 7,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,28 +24,26 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000704,
+            "sites": 6,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
-                "0f254577398e4acc75483788df0b9735e48903c78306a26ee2b4365bb45d42f0",
-                "3bc5e6d39d006cce1d8fa2b01bbb3616bc239884b7b53c8773120fcd14b3b333",
-                "189bb0723a2f14551eaf827057a1f2d92d508773b5e83bcb819ceec5e9aa6f94",
-                "d3dbe52f541a64e6d53e27068ac79c85c468000dff41d263cedd1520a30a14ed",
-                "97490238585056cced0cd8dcc3983cf304d7bb55db8de4fe97677e186da82a0b",
-                "462e5572d4ac332ed3366281f791d06e0b3f3a2078fff5bab0e6c2d50f9b63c8"
+                "c5d94bc6d995b5576a947575e8a1f970ab74d43b612549392a452ed716ae361b",
+                "67a7048e985782665b03feb682d85a2fbb78fe4c3a823f047ab2a9cfcd21c85f",
+                "9a02577b8e20c9ea894af2934e2712b39ab31e5bc7eb33bfb553f1456bfab12c",
+                "496c621114c620900e5f0cfb534f322f5137b0f57066ff939170d3ac34113dc0",
+                "4452f9bb8662c97f1a64b3f1033e0fa2cc817f53f003c2cc4ea9fb12efbdf697"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "island.is",
                 "mollerbil.no",
                 "wolt.com",
-                "www.adamsmatkasse.no",
-                "www.godtlevert.no",
-                "www.leaseplan.com",
+                "www.lexus.no",
                 "www.toyota.no",
-                "www.tv4.se"
+                "yarnpkg.com"
             ]
         },
         {
@@ -59,14 +58,38 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c335d4e9829f98236a4d3f90090ee7861f14ee7c14e192d0fe83015517438d51"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bilka.dk",
+                "www.bilka.dk"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "19d19f6d01f78bfbc7de563be5f2be46c6bae220425119f5ffede0ad293ef0aa",
+                "70110e7d316cc18762da0542915f7faa350d6cb98cea8df00051fc37e5d34fcd"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "leaseplan.com",
-                "www.leaseplan.com"
+                "lexus.no",
+                "www.toyota.no",
+                "yarnpkg.com"
             ]
         }
     ],
@@ -76,21 +99,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9833333333333333
+            "prevalence": 0.5555555555555556
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.016666666666666666
+            "prevalence": 0.4444444444444444
         }
     ],
     "types": {
-        "Fetch": 7,
-        "XHR": 2
+        "Fetch": 6,
+        "Ping": 2,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
     ]
 }

@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "laweekly.engine",
         "wolterskluwer.engine",
+        "tomorrowland.engine",
+        "traceparts.engine",
         "laweekly.cdn"
     ],
     "cnames": [
@@ -23,6 +25,10 @@
         {
             "original": "engine.lto.de",
             "resolved": "wolterskluwer.engine.adglare.net"
+        },
+        {
+            "original": "engine.traceparts.com",
+            "resolved": "traceparts.engine.adglare.net"
         }
     ],
     "fingerprinting": 2,
@@ -33,11 +39,22 @@
             "fingerprinting": 2,
             "subdomains": [
                 "laweekly.engine",
-                "wolterskluwer.engine"
+                "wolterskluwer.engine",
+                "tomorrowland.engine",
+                "traceparts.engine"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "window.devicePixelRatio": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "engine.laweekly.com",
@@ -46,11 +63,17 @@
                 {
                     "original": "engine.lto.de",
                     "resolved": "wolterskluwer.engine.adglare.net"
+                },
+                {
+                    "original": "engine.traceparts.com",
+                    "resolved": "traceparts.engine.adglare.net"
                 }
             ],
             "responseHashes": [
-                "3ad5ac383c73d61c0e97f9f5884c55bd2fed449816629f737fd269662541abdb",
-                "b43372df57912da1a58efea1ea71241362ebcc50349b1de7a2c80b0ef57be29b"
+                "02383b461d46feaf7697ede6b69fd2f5d73d7cf72ba6e5355fc943cce70c7741",
+                "4c54ecb48f6a33de911939c36bd5dd31595ef01dfe126981df47e747e6ab1c88",
+                "70d869bc708fdae8872355c3426032d82139da4bde8d951cb78cfb4564aee78e",
+                "6229410f1cb2bfcd45f9b191e862b47d389510ba8df10b7fe18f8483b62ef2cb"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -58,7 +81,9 @@
             "exampleSites": [
                 "laweekly.com",
                 "www.laweekly.com",
-                "www.lto.de"
+                "www.lto.de",
+                "www.tomorrowland.com",
+                "www.traceparts.com"
             ]
         },
         {
@@ -95,7 +120,7 @@
             ]
         },
         {
-            "rule": "adglare\\.net\\/tb7c6a0ae\\/img\\/vue8z_mb5k2y_aa925338\\.jpg",
+            "rule": "adglare\\.net\\/tb7c6a0ae\\/img\\/vue8z_49x5ew_aa003dcd\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -111,7 +136,7 @@
                 }
             ],
             "responseHashes": [
-                "e6b07e8d1bd857df75c905f7f6939b8506eeabd434bc1e8daa7403e945e26c06"
+                "c409ef52b77deb93c3a7ac9a06f8c9c0b6016c87c145bbefddd7e3087aa2408f"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -122,7 +147,7 @@
             ]
         },
         {
-            "rule": "adglare\\.net\\/tb7c6a0ae\\/img\\/vue8z_8pmbzy_8b55ef0f\\.jpg",
+            "rule": "adglare\\.net\\/tb7c6a0ae\\/img\\/vue8z_g5epnr_3e80cfb5\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -138,7 +163,7 @@
                 }
             ],
             "responseHashes": [
-                "30e387c27495fcc77ba3dd0a6d690c374108a289938f065e3f899b965d86042e"
+                "b73fa323718115059c148537b2baabec78c239f331ef0f5d29c76c761f49738b"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -152,8 +177,18 @@
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.5
+        }
+    ],
     "types": {
-        "Script": 3,
+        "Script": 5,
         "Ping": 3,
         "Image": 4
     },

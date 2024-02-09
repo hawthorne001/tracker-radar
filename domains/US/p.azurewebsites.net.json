@@ -9,14 +9,104 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000272,
+    "sites": 4,
     "subdomains": [
+        "prod-sm-corp.prod-servicelayer-ase",
+        "prod-sm-cdn.prod-servicelayer-ase",
         "web-usw1-mycarenotifications-prd.ase-usw1-shared-prd"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "cdn.servicemacusa.com",
+            "resolved": "prod-sm-cdn.prod-servicelayer-ase.p.azurewebsites.net"
+        },
+        {
+            "original": "corp.servicemacusa.com",
+            "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "p\\.azurewebsites\\.net\\/\\/api\\/corpmanagement\\/RenderWidget",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-corp.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "corp.servicemacusa.com",
+                    "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
+        {
+            "rule": "p\\.azurewebsites\\.net\\/\\/api\\/corpmanagement\\/RenderWidget",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-corp.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "corp.servicemacusa.com",
+                    "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [
+                "f52a079183e6b7c20d81f2972af3f0022a8709f3878639d75d40f3770a670063"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
+        {
+            "rule": "p\\.azurewebsites\\.net\\/Content\\/cdn\\/ckeditor_4\\.13\\.1\\/plugins\\/tableselection\\/styles\\/tableselection\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-cdn.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.servicemacusa.com",
+                    "resolved": "prod-sm-cdn.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [
+                "4e9d6995e37ce82b7d76c8a250b91adcb8822bcce06a672d59eedbd4272ca347"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
         {
             "rule": "p\\.azurewebsites\\.net\\/my-care-notifications\\.css",
             "cookies": 0.0000136,
@@ -44,7 +134,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000136,
+    "cookies": 0.0000272,
     "topInitiators": [
         {
             "domain": "first party",
@@ -52,7 +142,9 @@
         }
     ],
     "types": {
-        "Stylesheet": 2
+        "Preflight": 2,
+        "XHR": 2,
+        "Stylesheet": 4
     },
     "nameservers": []
 }

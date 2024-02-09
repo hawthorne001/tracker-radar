@@ -10,22 +10,48 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "collector",
-        "cdn"
+        "player",
+        "collector-1",
+        "cdn",
+        "gpv",
+        "sync",
+        "rtb"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "ex\\.co\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a1524546a583ca3563fce7c230445954c369149d98175ef68383d1d0815d419a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
         {
             "rule": "ex\\.co\\/main\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "collector"
+                "collector-1"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "cebe87559cf861d01e9c6b1cefd38ab1db9e13c8fe316b85a296b6cf220f883e"
@@ -34,13 +60,118 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "consolegameswiki.com",
-                "ffxiv.consolegameswiki.com",
-                "smallbusiness.chron.com"
+                "perezhilton.com",
+                "www.canonrumors.com"
             ]
         },
         {
-            "rule": "ex\\.co\\/player\\/hls\\/1\\.4\\.10\\/hls\\.min\\.js",
+            "rule": "ex\\.co\\/player\\/ap\\/p\\/4\\.19\\.0-2a83985\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "010908273368b864ad0daec7517e84330e51346e50d2265d40d5c138e081a64a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-7abf705\\/cookie_sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2c8c95f475d5dec0bdc14b70bf400311e6daebb6727d90a75963e324de116f05"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gpv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "695a06a9fedcbf299236482fd45a24ae3079feb14b1c07d24618b0b100ebf1f7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "exco-uid": 0.00010060362173038229
+            },
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-7abf705\\/sync-2435d567\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "MediaDevices.prototype.enumerateDevices": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8bf2c5d28ba5403debe4799fb6519d1541ce1f17e900acf33557b56f766f2a8a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/hls\\/1\\.4\\.10-exco\\/hls\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -53,46 +184,162 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e326968c45db7b36ab908ee334082ce785e4643617ba156bd69fea691177cfbe"
+                "97fb107f26dfa81080591d1afd85f1f5a9b681a91b98f22e65ad6b2111766fbe"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "consolegameswiki.com",
-                "ffxiv.consolegameswiki.com"
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/pb\\/2\\.7\\.0\\/expb\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "window.screenLeft": 1,
+                "window.screenTop": 1,
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "560aa41cac74895f19621ce3d7145eb822db90cee7ced4f6e41b21daa99a3093"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_lr_retry_request": {
+                    "ttl": 3619,
+                    "length": 4,
+                    "prevalence": 0.00010060362173038229,
+                    "uniqueness": 1
+                },
+                "_lr_env_src_ats": {
+                    "ttl": 2592019,
+                    "length": 5,
+                    "prevalence": 0.00010060362173038229,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 5184032,
+                    "length": 93,
+                    "prevalence": 0.00020120724346076458,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 5184032,
+                    "length": 16,
+                    "prevalence": 0.00020120724346076458,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/cookie_sync",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ec4b9eafb0647fb378c36a118ee0265ca915d9186968c6221e7d515e6b513515"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/openrtb2\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rtb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perezhilton.com",
+                "www.canonrumors.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "taboola.com",
-            "prevalence": 0.5
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.4230769230769231
+            "prevalence": 0.5909090909090909
         },
         {
-            "domain": "casalemedia.com",
-            "prevalence": 0.038461538461538464
+            "domain": "script.ac",
+            "prevalence": 0.3181818181818182
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "smartadserver.com",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "XHR": 3,
-        "Script": 2
+        "Fetch": 8,
+        "XHR": 2,
+        "Script": 8,
+        "Document": 2
     },
     "nameservers": [
-        "ns-141.awsdns-17.com",
-        "ns-709.awsdns-24.net",
+        "ns-1853.awsdns-39.co.uk",
         "ns-1048.awsdns-03.org",
-        "ns-1853.awsdns-39.co.uk"
+        "ns-141.awsdns-17.com",
+        "ns-709.awsdns-24.net"
     ]
 }
