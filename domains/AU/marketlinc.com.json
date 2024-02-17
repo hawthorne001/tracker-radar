@@ -4,30 +4,69 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
+        "clickup",
+        "okta",
         "visitor-scoring-c",
+        "visitor-scoring",
         "ove1"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "marketlinc\\.com\\/visitor-scoring",
-            "cookies": 0.000402,
-            "fingerprinting": 0,
+            "rule": "marketlinc\\.com\\/code\\/deployment\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
-                "visitor-scoring-c"
+                "clickup",
+                "okta"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b964c7570026a3a6024ba88428fb72e93503c9496a39fe03f2b1e658d88ffffc",
-                "5dada4b6f2dc34f631c5671fb2c8a623b23fbdedd86085071365c4b55a358650",
-                "29877803c3c6371f9e2a75638b8584c87503d852637ecadb4d1ada56a42bdea7"
+                "3182fabe1259e8da8e739c3f2622562431948849fc64439860e8e3b251bab79e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vs_intent": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "www.okta.com"
+            ]
+        },
+        {
+            "rule": "marketlinc\\.com\\/visitor-scoring",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-scoring-c",
+                "visitor-scoring"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "0f4bb8d80e1df6e771c6220577834ab21a60beaa1aa3029516ddc97641cf4229",
+                "6f0e57dc16f9458db958e0d6705358c8df5ed9a49536803f9d10af61e616346f",
+                "238c9e3ed69594015ebe8c6e67056efd9048953746324f42c8605d8ed59eed89",
+                "a18e4a9706ad2a61fe53b08d42486d80721e1e819a75480dcc64c2f8034dc98c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -36,19 +75,21 @@
                 "clickup.com",
                 "employmenthero.com",
                 "www.elastic.co",
+                "www.okta.com",
                 "www.payscale.com"
             ]
         },
         {
             "rule": "marketlinc\\.com\\/visitor-scoring",
-            "cookies": 0.000402,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
-                "visitor-scoring-c"
+                "visitor-scoring-c",
+                "visitor-scoring"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -58,6 +99,27 @@
                 "clickup.com",
                 "employmenthero.com",
                 "www.elastic.co",
+                "www.okta.com",
+                "www.payscale.com"
+            ]
+        },
+        {
+            "rule": "marketlinc\\.com\\/visitor-scoring\\/recalculate",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-scoring-c"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "employmenthero.com",
                 "www.payscale.com"
             ]
         },
@@ -72,35 +134,13 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "a450fed64dbd9c6c53eb3fdbdfab75d9b045104e49d9ef8c2e39679a75e87b50"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clickup.com",
-                "employmenthero.com"
-            ]
-        },
-        {
-            "rule": "marketlinc\\.com\\/visitor-scoring\\/recalculate",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "visitor-scoring-c"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "clickup.com",
-                "employmenthero.com"
+                "employmenthero.com",
+                "www.payscale.com"
             ]
         },
         {
@@ -127,10 +167,92 @@
         },
         {
             "rule": "marketlinc\\.com\\/public\\/js\\/snippet\\.js",
-            "cookies": 0,
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ove1",
+                "visitor-scoring"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "6c85e4b7038bac24a6be358c10d1d23c24981b4c0ca7955e77ddc5f125a233df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vs_vid": {
+                    "ttl": 315360018,
+                    "length": 13,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                },
+                "vs_vfs": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                },
+                "vs_sid": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                },
+                "vs_conv_ai": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                },
+                "vs_lift_ai": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00010054293183189222,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kaspersky.com",
+                "www.kaspersky.com.au",
+                "www.okta.com"
+            ]
+        },
+        {
+            "rule": "marketlinc\\.com\\/tracking-event",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "ove1"
+                "visitor-scoring"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "okta.com",
+                "www.okta.com"
+            ]
+        },
+        {
+            "rule": "marketlinc\\.com\\/tracking-event",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-scoring"
             ],
             "apis": {},
             "sites": 2,
@@ -139,45 +261,49 @@
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kaspersky.com",
-                "www.kaspersky.com.au"
+                "okta.com",
+                "www.okta.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000503,
+    "cookies": 0.000603,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.4
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2777777777777778
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.26666666666666666
+            "domain": "first party",
+            "prevalence": 0.2777777777777778
         },
         {
             "domain": "kaspersky.de",
-            "prevalence": 0.26666666666666666
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "driftt.com",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "bizible.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "XHR": 6,
-        "Preflight": 6,
-        "Script": 4
+        "Script": 7,
+        "XHR": 9,
+        "Preflight": 9
     },
     "nameservers": [
-        "ns-599.awsdns-10.net",
-        "ns-411.awsdns-51.com",
         "ns-1672.awsdns-17.co.uk",
-        "ns-1217.awsdns-24.org"
+        "ns-599.awsdns-10.net",
+        "ns-1217.awsdns-24.org",
+        "ns-411.awsdns-51.com"
     ]
 }

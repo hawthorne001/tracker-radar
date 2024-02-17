@@ -4,21 +4,28 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
-        "ualberta",
-        "api3-ca"
+        "uqam-ca",
+        "api3-ca",
+        "region-ca",
+        "ualberta"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "calendar.library.torontomu.ca",
+            "resolved": "region-ca.libcal.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "libcal\\.com\\/api_events\\.php",
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ualberta",
+                "uqam-ca",
                 "api3-ca"
             ],
             "apis": {},
@@ -26,14 +33,47 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "2748d6948f23b729affec27bb57f46a00747a85451fbe65c9a21f31056df14b1",
-                "beb6e2ee452cc7b065952c9459a501d2aa71583b99cf4c463bcc64846dce4547"
+                "18d8bea1b5b788d7a78b0069281f4d34c09f1df3bfc3a78ba281a1c490a66b71",
+                "351be126df48ef66a761cf56eaee7a492f17f19d69241b003f4802a6fcadd60a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ualberta.ca",
+                "uqam.ca",
+                "bibliotheques.uqam.ca",
+                "www.lib.uwo.ca"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_events\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-ca",
+                "ualberta",
+                "api3-ca"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "calendar.library.torontomu.ca",
+                    "resolved": "region-ca.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "10af8c9f536743ed82378b14cae25d15ee2d307541f23cf7a7901f3228b30c33",
+                "b9b4e544e1bf19fa8ed6c7103e491a435eed3084bbba6d63b0bb6120cffa46a4",
+                "b64976389a5ada0737cede1c1882939fe7406f320eaa440d8d5fa69b525e2ae1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "torontomu.ca",
+                "library.ualberta.ca",
                 "wpl.winnipeg.ca",
                 "www.library.ubc.ca"
             ]
@@ -49,12 +89,12 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 7
     },
     "nameservers": [
-        "ns-1465.awsdns-55.org",
-        "ns-1606.awsdns-08.co.uk",
         "ns-220.awsdns-27.com",
-        "ns-834.awsdns-40.net"
+        "ns-834.awsdns-40.net",
+        "ns-1606.awsdns-08.co.uk",
+        "ns-1465.awsdns-55.org"
     ]
 }

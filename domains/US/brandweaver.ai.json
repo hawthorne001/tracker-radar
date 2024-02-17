@@ -7,25 +7,32 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "app",
-        "cdn"
+        "cdn",
+        "app"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "brandweaver\\.ai\\/api\\/auctions\\/generate",
+            "rule": "brandweaver\\.ai\\/bw\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "app"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "353ac85dba773fd7623674d9e7ced7ec83dfd055e19885084d191e62b2f113f6"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -56,28 +63,22 @@
             ]
         },
         {
-            "rule": "brandweaver\\.ai\\/bw\\.js",
+            "rule": "brandweaver\\.ai\\/api\\/auctions\\/generate",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "app"
             ],
-            "apis": {
-                "window.localStorage": 2,
-                "Screen.prototype.availWidth": 2,
-                "Screen.prototype.availHeight": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "39d2baadff19c6e39e32286b858568c1d63cb45ac11c76aac8652bce5bdeb41e"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "stylecraze.com",
+                "knowtechie.com",
                 "www.stylecraze.com"
             ]
         }
@@ -92,9 +93,9 @@
         }
     ],
     "types": {
-        "Preflight": 2,
+        "Script": 2,
         "Fetch": 2,
-        "Script": 2
+        "Preflight": 2
     },
     "nameservers": [
         "bailey.ns.cloudflare.com",

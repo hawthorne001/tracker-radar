@@ -7,12 +7,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "prod-js.aws",
-        "api.dmp",
-        "prod-wt.aws"
+        "prod-wt.aws",
+        "api.dmp"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,6 +29,7 @@
                 "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
                 "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
                 "Document.cookie setter": 2,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2,
@@ -41,27 +42,19 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "be158df3e4be80e3d544305a7065f2b132d8dea525f1bc5270f83870eccc6d4d"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {
                 "__ywtfpcvuid": {
-                    "ttl": 34128009,
+                    "ttl": 34128008,
                     "length": 23,
-                    "prevalence": 0.0002011465352509303,
+                    "prevalence": 0.0002010252286661976,
                     "uniqueness": 1
                 },
                 "__ywtfpcsuid": {
-                    "ttl": 1809,
+                    "ttl": 1808,
                     "length": 23,
-                    "prevalence": 0.0002011465352509303,
-                    "uniqueness": 1
-                },
-                "__ywtfpcvuid_refresh": {
-                    "ttl": 604809,
-                    "length": 13,
-                    "prevalence": 0.0002011465352509303,
+                    "prevalence": 0.0002010252286661976,
                     "uniqueness": 1
                 }
             },
@@ -72,24 +65,22 @@
             ]
         },
         {
-            "rule": "y-track\\.com\\/YT-000176-1\\/v1\\/visitors",
+            "rule": "y-track\\.com\\/v6\\/tracker\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api.dmp"
+                "prod-js.aws"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6f638460105549771139f269204628739cfa0a4067aafec275ecbb31092eaac3"
+                "9228fdb02b8864e439efb9a2eb776c25cccf0618fa4f4b0de518e71ca14cfec9"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "__ywtfpcvuid": 0.0002011465352509303
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "conforama.ch",
                 "www.conforama.ch"
@@ -112,12 +103,60 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "__ywtfpcvuid": 0.0002011465352509303,
-                "__ywtfpcsuid": 0.0002011465352509303
+                "__ywtfpcvuid": 0.0002010252286661976,
+                "__ywtfpcsuid": 0.0002010252286661976
             },
             "exampleSites": [
                 "conforama.ch",
                 "www.conforama.ch"
+            ]
+        },
+        {
+            "rule": "y-track\\.com\\/v5\\/profile-hub\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "prod-js.aws"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "85a7111a49f73d488c08e154034c62e23b4215d7d8fddb329d407bab406fda76"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ch",
+                "www.decathlon.ch"
+            ]
+        },
+        {
+            "rule": "y-track\\.com\\/YT-000095-1\\/v1\\/visitors",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.dmp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cb52dbfd493360c2ab8419de98f824302920504e070a634c1d03457b783a5dcd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ch",
+                "www.decathlon.ch"
             ]
         }
     ],
@@ -126,21 +165,21 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.75
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "domain": "first party",
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2,
-        "Image": 2
+        "Script": 6,
+        "Image": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns104.ovh.net",
-        "dns104.ovh.net"
+        "dns104.ovh.net",
+        "ns104.ovh.net"
     ]
 }

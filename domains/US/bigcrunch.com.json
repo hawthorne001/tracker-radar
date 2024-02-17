@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000272,
+    "sites": 4,
     "subdomains": [
         "analytics-cf",
+        "test",
         "usync"
     ],
     "cnames": [],
@@ -56,8 +57,45 @@
             ]
         },
         {
-            "rule": "bigcrunch\\.com\\/s2s\\/userSync",
+            "rule": "bigcrunch\\.com\\/main\\.js",
             "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "test"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "de323410704104977672c5b266f5745779ee12fd27bb6a0135b3ab760f88d144"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__bc_lh_session_id": {
+                    "ttl": 1800,
+                    "length": 36,
+                    "prevalence": 0.000013618226634527652,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/s2s\\/userSync",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "usync"
@@ -80,24 +118,33 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000272,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.5
         },
         {
             "domain": "casalemedia.com",
             "prevalence": 0.25
+        },
+        {
+            "domain": "htlbid.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.125
         }
     ],
     "types": {
         "Fetch": 2,
         "Preflight": 2,
+        "Script": 2,
         "Image": 2
     },
     "nameservers": [
-        "beth.ns.cloudflare.com",
-        "evan.ns.cloudflare.com"
+        "rosalyn.ns.cloudflare.com",
+        "sid.ns.cloudflare.com"
     ]
 }

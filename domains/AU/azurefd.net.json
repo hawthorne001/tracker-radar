@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00161,
-    "sites": 16,
+    "prevalence": 0.00191,
+    "sites": 19,
     "subdomains": [
+        "statuscast-web-1",
         "dansb2cprod-dcf0gbhdhqe0hvbr.z01",
-        "openaicom-api-bdcpf8c6d2e9atf6.z01",
+        "ccli-image-proxy-cdn-dee3dpfkbpdtafcd.a02",
+        "p2pcontent-fd-prod",
         "plush-bkd8bsethahbcwds.z01"
     ],
     "cnames": [
@@ -24,10 +26,41 @@
         {
             "original": "auth.danmurphys.com.au",
             "resolved": "dansb2cprod-dcf0gbhdhqe0hvbr.z01.azurefd.net"
+        },
+        {
+            "original": "status.sophos.com",
+            "resolved": "statuscast-web-1.azurefd.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "azurefd\\.net\\/components\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statuscast-web-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "status.sophos.com",
+                    "resolved": "statuscast-web-1.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "b46ae13c6c10729b6d850f076a9012c659b007f424ad79fff6bcaacbf347f018"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sophos.com",
+                "docs.sophos.com"
+            ]
+        },
         {
             "rule": "azurefd\\.net\\/33bf8038-5ecb-400c-8262-2d0725361522\\/b2c_1a_dans_signup_signin\\/v2\\.0\\/\\.well-known\\/openid-configuration",
             "cookies": 0.000302,
@@ -83,25 +116,47 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/api\\/v1\\/blog-details",
+            "rule": "azurefd\\.net\\/api\\/GetOptimizedImage",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "openaicom-api-bdcpf8c6d2e9atf6.z01"
+                "ccli-image-proxy-cdn-dee3dpfkbpdtafcd.a02"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "513b20cb5c2aefde2d3702c7737589b6743898209583195c7f8663f305296cec"
+                "d583acab825eca5a9f2647e0eb2ba72c7bbadddb6e2e45faf77d9d0ec68ac887"
             ],
-            "type": "Fetch",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "openai.com",
-                "www.openai.com"
+                "ccli.com",
+                "songselect.ccli.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/components\\/shared\\/component-base\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p2pcontent-fd-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "637229743a4c95d1c27b8fdeb2ea9f65b729c87da2cb48150332e11ba3c8341e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alaskaair.com",
+                "www.alaskaair.com"
             ]
         },
         {
@@ -159,7 +214,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_ext_v02_2500_x_833\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v02_2500_x_833_06\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -175,7 +230,7 @@
                 }
             ],
             "responseHashes": [
-                "59d7e189150bf6ed600b1dfafd04d2031c7d01ab5bd2f1f0c4576798ddec4733"
+                "52d1ab152622fad5d3a10837b8c793b5a27404765a6cf9ba05bf2ed6b64c3dfe"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -186,7 +241,34 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90012\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_900_x_900_01_v1\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "plush-bkd8bsethahbcwds.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "assets.plush.com.au",
+                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "cb81960507787899c9a0a52217f704276aa1a44220a4130e8f5926ad97da9604"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plush.com.au",
+                "www.plush.com.au"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_900_x_900_03_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -213,7 +295,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90013\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v02_900_x_900_07\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -229,7 +311,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "1d8b87ed0e69df0e2188aa66ce2924b8447f7eee13a69a5298094630fab16972"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -240,7 +322,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90014\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_900_x_900_04_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -256,7 +338,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "ff1e65489eb8ba04c6d979d79a89f523cc8621716458efac2fd6fbb229b74773"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -267,7 +349,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_ext_v02_900_x_900_1\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_900_x_900_02_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -283,7 +365,7 @@
                 }
             ],
             "responseHashes": [
-                "4619421747f206ef0bdb2a34470c2efdea538008bc37069b927e4a0153429ad3"
+                "c03e3fb5dd625736a3808df15fae58ae78ed9e80a5d738ff4f5b201d2840748d"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -294,7 +376,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90016\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/2\\/h\\/2h1405-4eh-austin-palermo-silver-grey-front\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -310,7 +392,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e9e18951b0c8a941a9bacadf2975da4c6fe55bbd1394d794c3cd66304b14e1b1"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -321,7 +403,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_90015\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/5\\/r\\/5r1720-4eh-front-5r-e0388_v2\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -337,7 +419,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "ee6161b98353ac37c188276082f1a07cad09b8f9806f036aedfe69cd955e131b"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -348,7 +430,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_900_x_9004_2\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/2\\/h\\/2h1267-qe-front\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -364,7 +446,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "3a53229e42331214e66905aaf23c4f07638c3ad52871f48af1507bff470ef9a2"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -375,7 +457,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/a\\/d\\/adelphi_navy_vogar_5d0133-qk_1\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/a\\/t\\/atlanta-2h1930-pp-front\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -391,7 +473,7 @@
                 }
             ],
             "responseHashes": [
-                "2b29c85aa386257d2043abba81db3fc4316027b037bf3cb972f8246633c6e23c"
+                "e40765f28fd583d272ee51c97273820f8c15358686110e842d6a97343f357d91"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -402,7 +484,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/5\\/r\\/5r1720-ehr-front-5r-e0388_v3\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/c\\/a\\/cameo-5h1394-ceh-urban-sky-front\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -418,61 +500,7 @@
                 }
             ],
             "responseHashes": [
-                "5e4ed5f9e7244731fdda7230d546583497d4e3e289551d5e93072b4d909a8f4b"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plush.com.au",
-                "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/5\\/a\\/5a0846-3-w2847-front-v3\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "plush-bkd8bsethahbcwds.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "assets.plush.com.au",
-                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "adf7626cf882e49d86a9e822232cd0ab6943d2ed437573b7d5b57fdada4a792c"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plush.com.au",
-                "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/media\\/catalog\\/product\\/cache\\/abf278b2fe3077ae5c04744ed8322a60\\/a\\/l\\/alexander-2p0439-ce-close-front\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "plush-bkd8bsethahbcwds.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "assets.plush.com.au",
-                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "0995b53d4bdcf2f0d0522041dcde9d26c1a6fb7f1e3a072094efac628acefe89"
+                "1acbc627f1ab1330d381676651afb4aac4fafdc3b83348782874c94337a106cc"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -607,7 +635,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e3cd6a75ab965bc8e2bc2261b57d8739fe01d7a81b005f8cbcf5053dbb316885"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1093,7 +1121,7 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "11ee66048b3f8f4518953bd57bfd00395f450fca1ac72894e5d0580e883f8a65"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1104,7 +1132,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83312\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_2500_x_833_01_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1120,7 +1148,7 @@
                 }
             ],
             "responseHashes": [
-                "826805f3cf25633c2ff865fc73ce00155ce9e3edfb7e52d108ada753f51c150c"
+                "e0b5138c7f265cbc0c489ba52c64755f278b83e971e8a428fb4c6f96382a9763"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1131,7 +1159,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83313\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_2500_x_833_03_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1147,7 +1175,7 @@
                 }
             ],
             "responseHashes": [
-                "7b485902fe9b1534c572886f7c0fece4ba6ae7c4246f040ed68363d3a2f31ab3"
+                "7440baf7f02205c58d9ce21e8f5dcde28753ff90f7728fca6c4f8421491c812b"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1158,7 +1186,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83314\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v02_2500_x_833_07\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1174,7 +1202,7 @@
                 }
             ],
             "responseHashes": [
-                "2b408978307ee22dd28ec0839ee2a41b24e10f07d9a7daf037ea005a9783346e"
+                "0a531ea0c3ca501bb0427d95c2314a41e2d9d03b1ef57f6484f9f306ce933f21"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1185,7 +1213,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_ext_v02_2500_x_833_1\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_2500_x_833_04_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1201,7 +1229,7 @@
                 }
             ],
             "responseHashes": [
-                "59d7e189150bf6ed600b1dfafd04d2031c7d01ab5bd2f1f0c4576798ddec4733"
+                "6a8e0f8390d2434e33119fe1db1687c9e814650c6c0149ce9afa02a92a8071c9"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1212,7 +1240,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83316\\.jpg",
+            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_2024_offcampaign_webliders_v03_2500_x_833_02_v1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1228,61 +1256,7 @@
                 }
             ],
             "responseHashes": [
-                "244e6c6c01e4b2ae90455f2828c90e6343f40f6845fa7b638a27562f83ef734a"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plush.com.au",
-                "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_83315\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "plush-bkd8bsethahbcwds.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "assets.plush.com.au",
-                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "5984d335b6b4dda18835f9577232269ba6d7cf319aa2a9508aa0e98c32dd2d6e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plush.com.au",
-                "www.plush.com.au"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/media\\/weltpixel\\/owlcarouselslider\\/images\\/p\\/l\\/pl_jansale_2024_websliders_v02_2500_x_8334_2\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "plush-bkd8bsethahbcwds.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "assets.plush.com.au",
-                    "resolved": "plush-bkd8bsethahbcwds.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "28256cbe1c5cda5e3188ceb724abb04a0b5c200067a46f730997f1d608afdc6e"
+                "7d7dde51cbb9c4b01693969a23ee77f155964a5e733866b7cdaca501659d3dd9"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1295,26 +1269,35 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000905,
+    "cookies": 0.00101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9859154929577465
+            "prevalence": 0.9519230769230769
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.028846153846153848
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.014084507042253521
+            "prevalence": 0.009615384615384616
+        },
+        {
+            "domain": "quantummetric.com",
+            "prevalence": 0.009615384615384616
         }
     ],
     "types": {
         "Fetch": 5,
         "Document": 3,
-        "Image": 88
+        "Image": 84,
+        "Stylesheet": 2
     },
     "nameservers": [
         "ns3-37.azure-dns.org",
-        "ns2-37.azure-dns.net",
         "ns4-37.azure-dns.info",
-        "ns1-37.azure-dns.com"
+        "ns1-37.azure-dns.com",
+        "ns2-37.azure-dns.net"
     ]
 }
