@@ -10,6 +10,7 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
+        "logon.customdomains",
         "fzag-b2c.customdomains",
         "servicenowsignon.customdomains"
     ],
@@ -17,6 +18,10 @@
         {
             "original": "id.flughafen-zuerich.ch",
             "resolved": "fzag-b2c.customdomains.okta.com"
+        },
+        {
+            "original": "logon.bcg.com",
+            "resolved": "logon.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -27,16 +32,21 @@
     "resources": [
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
+                "logon.customdomains",
                 "fzag-b2c.customdomains",
                 "servicenowsignon.customdomains"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                },
                 {
                     "original": "id.flughafen-zuerich.ch",
                     "resolved": "fzag-b2c.customdomains.okta.com"
@@ -51,7 +61,38 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "flughafen-zuerich.ch",
+                "bcg.com",
+                "www.flughafen-zuerich.ch",
+                "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logon.customdomains",
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bcg.com",
                 "www.servicenow.com"
             ]
         }
@@ -59,23 +100,18 @@
     "categories": [],
     "performance": {},
     "cookies": 0.000302,
-    "topInitiators": [
-        {
-            "domain": "adobedtm.com",
-            "prevalence": 1
-        }
-    ],
     "types": {
-        "Preflight": 2
+        "Preflight": 3,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-1563.awsdns-03.co.uk",
+        "edns5.ultradns.biz",
+        "edns5.ultradns.com",
         "edns5.ultradns.net",
         "edns5.ultradns.org",
-        "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net",
-        "edns5.ultradns.com",
         "ns-1459.awsdns-54.org",
-        "edns5.ultradns.biz"
+        "ns-1563.awsdns-03.co.uk",
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net"
     ]
 }

@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "publisher",
-        "ads"
+        "ads",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,21 +24,71 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "69188f3dc0488ef22b7a8028427c8718eb472e361de9dfc9f45702acf571ccd4"
+                "74351329aaeb5be3fab38575beb5fec73a8c56d0b7496a90983d2e5d57c034dd",
+                "855f4aa34f67d0fb1e8e2e10d714d5da95e5efccbdc4867209bd917b50436e62"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "csfd.cz",
+                "boredpanda.com",
+                "www.boredpanda.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/targetingProfile\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8d8628c8630646ef79e98ccbfb077a7dbf110987328c1fd7dc3ba25426b9d9ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boredpanda.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/v\\/3f8735d3e4b8ebb0e6ffd06d904719936361726f64612d323032342d30322d31355431353a34303a34362e3131355a\\/s\\/2\\/static\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.languages": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e96905a2d003642d53be0559962ef4d21a185b8c3f56d5fc6d05fd70fd25595d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boredpanda.com",
                 "www.csfd.cz"
             ]
         }
@@ -48,16 +99,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-534.awsdns-02.net",
         "ns-1130.awsdns-13.org",
-        "ns-433.awsdns-54.com",
-        "ns-1542.awsdns-00.co.uk"
+        "ns-534.awsdns-02.net",
+        "ns-1542.awsdns-00.co.uk",
+        "ns-433.awsdns-54.com"
     ]
 }

@@ -12,9 +12,14 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
+        "static-v1.francetv",
         "static-lefigaro"
     ],
     "cnames": [
+        {
+            "original": "static.francetv.fr",
+            "resolved": "static-v1.francetv.fr.edgekey.net"
+        },
         {
             "original": "static.lefigaro.fr",
             "resolved": "static-lefigaro.fr.edgekey.net"
@@ -22,6 +27,33 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "fr\\.edgekey\\.net\\/magnetoscope\\/main\\.magnetoscope\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-v1.francetv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "static.francetv.fr",
+                    "resolved": "static-v1.francetv.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "cbe8756c39eebe33532f46895cdf6cb44729e9916b8eda404676352554604038"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "francetvinfo.fr",
+                "www.francetvinfo.fr"
+            ]
+        },
         {
             "rule": "fr\\.edgekey\\.net\\/common\\/fonts\\/SourceSansPro\\/sourcesanspro-semibold\\.woff2",
             "cookies": 0,
@@ -79,14 +111,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "francetv.fr",
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
+        "Script": 2,
         "Font": 4
     },
     "nameservers": []

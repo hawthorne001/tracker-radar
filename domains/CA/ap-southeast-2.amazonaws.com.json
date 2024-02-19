@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
+        "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb",
+        "collab-prod.s3"
     ],
     "cnames": [
         {
@@ -20,7 +21,7 @@
             "resolved": "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb.ap-southeast-2.amazonaws.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
@@ -74,6 +75,30 @@
                 "afr.com",
                 "www.smh.com.au"
             ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/production\\/delivery\\/web\\/v2\\.0\\/e06178f7-20a0-420e-a3cf-3c38b12f19bf\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collab-prod.s3"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8fb4d51f193fb449758f3fa4fe5ff128e6287d049cf44d1162d68d2d8ddb82a9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "peaveymart.com",
+                "www.peaveymart.com"
+            ]
         }
     ],
     "categories": [
@@ -84,25 +109,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googlesyndication.com",
-            "prevalence": 0.25
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "XHR": 3,
-        "Preflight": 2
+        "Preflight": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns1.amzndns.org",
-        "ns2.amzndns.net",
-        "ns2.amzndns.co.uk",
-        "ns2.amzndns.org",
-        "ns2.amzndns.com",
         "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
-        "ns1.amzndns.net"
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }

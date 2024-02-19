@@ -7,28 +7,35 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000177,
-    "sites": 26,
+    "prevalence": 0.000184,
+    "sites": 27,
     "subdomains": [
-        "boeing2015",
-        "dowchem2019ipo",
-        "firstamerican2017ir",
-        "broadridge2020ir",
-        "csx2019ir",
-        "cloroxir2016",
         "timkenco2020index-farm",
         "cffinancial2020index--farm",
         "merck2016rd",
         "assurant2017rd",
         "sensata2017ir",
         "rockwell2023tf",
+        "dowchem2019ipo",
+        "firstamerican2017ir",
+        "boeing2015",
+        "broadridge2020ir",
+        "csx2019ir",
+        "nutrien2019tf",
+        "cloroxir2016",
+        "ingersoll2020rd",
         "api",
-        "safg2022ipo"
+        "safg2022ipo",
+        "webfarm-21-ddos"
     ],
     "cnames": [
         {
             "original": "investor.cffc.com",
             "resolved": "cffinancial2020index--farm.q4web.com"
+        },
+        {
+            "original": "investors.devonenergy.com",
+            "resolved": "webfarm-21-ddos.q4web.com"
         },
         {
             "original": "investors.timken.com",
@@ -37,43 +44,6 @@
     ],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "q4web\\.com\\/feed\\/StockQuote\\.svc\\/GetStockQuoteList",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "boeing2015",
-                "dowchem2019ipo",
-                "firstamerican2017ir",
-                "broadridge2020ir",
-                "csx2019ir",
-                "cloroxir2016"
-            ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000476,
-            "cnames": [],
-            "responseHashes": [
-                "6b6a119d336c5466d1a3fc15d407115b82e252a4abe595bcc5f147c2b68eb92f",
-                "235df0a92a7ee0332f5c32928a3c27996034df9fd1dbf9b5d8998559873bfd9a",
-                "beda96ac52e34d509481e870eb1a49ea4b094eb10f1a8ef16222c122f621cddc",
-                "f33dfffc7a77908798be9976222982c9dec676ccf7390972328cfab70ccdebe0",
-                "cca74fc66253f609cf878c533fdba7ccb327cbbbe6576cf9bd6e90ffb5f59879",
-                "e5fca73a89d63c4208c1ea0afc957d36240db6f67067626844ab69acafe7fcd9"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mediaroom.com",
-                "corporate.dow.com",
-                "local.firstam.com",
-                "www.boeing.com",
-                "www.broadridge.com",
-                "www.csx.com",
-                "www.thecloroxcompany.com"
-            ]
-        },
         {
             "rule": "q4web\\.com\\/css\\/evergreen\\/dist\\/default\\/evergreen\\.1\\.0\\.0\\.min\\.css",
             "cookies": 0,
@@ -97,7 +67,7 @@
                 }
             ],
             "responseHashes": [
-                "5b51bd592589f4f5e541449e991dc7a84143b797721f1721fcadf367d2ffad24"
+                "9fa473c0ab1ef6bd096c5b5570d945d81a59a987d59b05dc9607c373ed44c4be"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -131,8 +101,8 @@
                 }
             ],
             "responseHashes": [
-                "dbfebfa05bd32e32ad1e6366cad5f3059c063f36a93bf30d687bfe232dbde87d",
-                "58df4e89fd9f1d46d1bbfffac3844d19083e19fa1655427eb33a934fbe22782f"
+                "162c07ac43d3701bea1c50e7530a6ea4223087f3957e3199141489553cdd1067",
+                "f7f73e89bfbb7a5fc696d91599070d3e42766a776d01b7429a767093aac93813"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -365,18 +335,56 @@
             "type": "Script",
             "firstPartyCookies": {
                 "__uxq412__ses.e502": {
-                    "ttl": 1809,
+                    "ttl": 1806,
                     "length": 1,
-                    "prevalence": 0.000006806749572876464,
+                    "prevalence": 0.000006809113317263826,
                     "uniqueness": 1
                 },
                 "__uxq412__id.e502": {
-                    "ttl": 63072009,
+                    "ttl": 63072006,
                     "length": 108,
-                    "prevalence": 0.000006806749572876464,
+                    "prevalence": 0.000006809113317263826,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timken.com",
+                "www.cffc.com",
+                "www.merck.com"
+            ]
+        },
+        {
+            "rule": "q4web\\.com\\/js\\/typescript\\/dist\\/q4CookieConsent\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "timkenco2020index-farm",
+                "cffinancial2020index--farm",
+                "merck2016rd"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "investors.timken.com",
+                    "resolved": "timkenco2020index-farm.q4web.com"
+                },
+                {
+                    "original": "investor.cffc.com",
+                    "resolved": "cffinancial2020index--farm.q4web.com"
+                }
+            ],
+            "responseHashes": [
+                "2a0e7d302aedad7adc3b609836bc8b288699000bcfba1c0736e26a653f924983"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "timken.com",
@@ -442,9 +450,9 @@
                 }
             ],
             "responseHashes": [
-                "0a7e70e5ee82c08f31444f68e0d8c9f095b9551e5f4907f1c4cf0071fecec7a8",
-                "c423295557b8e137f1bcbaeaf7ef5ab4b9896bee42c96c913c80613bf9280a5f",
-                "c090af147a4bc598ab173b17835eaa15ddc6533faf3a770db19840fc0ccb87e5"
+                "d116a3542ac8d781feb7d3a00e2201f2f3210ea9d8a1c4ec65303eb00e3bf462",
+                "500fbbb073f3bb44e47eebe495270f4d944af9bd38cacc52e4c80072110d25e0",
+                "b00a2ea921994c4c462f53ecb1fcb06f26c65e0a31f4a7f3ea548bf91a8b98c2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -532,24 +540,62 @@
                 "rockwell2023tf"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000034,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "1e39678608a4be7ce5c728a94b2ac787a807db7d7a7db58b44e124ea270ba4e9",
-                "b9ce6d25b2dc865a4111fc6e068ff8c09fdd67eddbea868529e54f49ba325382",
-                "f5420e62b6f9f0198ea410ad2ef1c657d30819bcb4a06a78ac9e8a6c66e78eed",
-                "aeb48fff20100e68ac704c14a00564195f4d672a55f8e55281c166e1722b1cfe"
+                "edeb4949eb35d00e098387b29ca9728316155a95a2e56263a219b6683b36a66d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rockwellautomation.com",
-                "configurator.rockwellautomation.com",
                 "literature.rockwellautomation.com",
                 "rockwellautomation.custhelp.com",
                 "www.rockwellautomation.com"
+            ]
+        },
+        {
+            "rule": "q4web\\.com\\/feed\\/StockQuote\\.svc\\/GetStockQuoteList",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dowchem2019ipo",
+                "firstamerican2017ir",
+                "boeing2015",
+                "broadridge2020ir",
+                "csx2019ir",
+                "nutrien2019tf",
+                "cloroxir2016",
+                "ingersoll2020rd"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000613,
+            "cnames": [],
+            "responseHashes": [
+                "1f0391d244173fa37e849da0db6083d6f5bdc6737e80694cd74a6cb0e760ab49",
+                "4e49ec6daa844f132ef8ff874067f082f07dbca7f7bce1074735e5092050e7ad",
+                "df77335533e2401d836e0cd7a77ef4d80cec65f9c8ea64f3cdfe082bd2a14dd6",
+                "43ce286672c6dbb400314828ad3248fc694e85df06b0d4f1b06301ce32f84214",
+                "e186589c926e65148676e68ea681417853c22bde64022f016fbc90c7a5535c07",
+                "84409d8356a173f2fb13c3aa1195e9b0fbbd9caed3bf86d27a175fedb474eec5",
+                "6c6c4e6decd1235582d88c1b461687a64ed5ccee6ed022c94fbde705392cfe72"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dow.com",
+                "local.firstam.com",
+                "www.boeing.com",
+                "www.broadridge.com",
+                "www.csx.com",
+                "www.firstam.com",
+                "www.nutrien.com",
+                "www.thecloroxcompany.com",
+                "www.tranetechnologies.com"
             ]
         },
         {
@@ -564,7 +610,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "37360712ffb088e48d361c74a9bdbedb962bf6e8400a12c45c4dbd780460c8b5"
+                "d0c22cb803ba9278d02ee89721db628e12450b424c2a71d94244a41825d18d22"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -586,14 +632,41 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "b80a347991c035ef7532ecaa87fa0fb47daa405b942d9a691cd7935068569903"
+                "91d841f3dbb9425e1d6bb8a990ad7809d1566a64c928bf223266e7e6bbf73617"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "valic.com",
+                "corebridgefinancial.com",
                 "www.corebridgefinancial.com"
+            ]
+        },
+        {
+            "rule": "q4web\\.com\\/feed\\/Event\\.svc\\/GetEventList",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webfarm-21-ddos"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "investors.devonenergy.com",
+                    "resolved": "webfarm-21-ddos.q4web.com"
+                }
+            ],
+            "responseHashes": [
+                "a3bdb728f9b684de62a5d620cb3f447f85cf9b9eea0756f0037fa4221bd7c06c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "devonenergy.com",
+                "www.devonenergy.com"
             ]
         },
         {
@@ -627,32 +700,40 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7407407407407407
+            "prevalence": 0.6060606060606061
         },
         {
             "domain": "q4cdn.com",
-            "prevalence": 0.18518518518518517
+            "prevalence": 0.15151515151515152
         },
         {
-            "domain": "corebridgefinancial.com",
-            "prevalence": 0.037037037037037035
+            "domain": "nutrien-prod-asset.s3.us-east-2.amazonaws.com",
+            "prevalence": 0.12121212121212122
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.06060606060606061
         },
         {
             "domain": "rockwellautomation.com",
-            "prevalence": 0.037037037037037035
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.030303030303030304
         }
     ],
     "types": {
-        "XHR": 18,
         "Stylesheet": 6,
-        "Script": 23,
+        "Script": 26,
+        "XHR": 22,
         "Document": 3,
-        "Fetch": 5
+        "Fetch": 4
     },
     "nameservers": [
+        "ns-1686.awsdns-18.co.uk",
         "ns-431.awsdns-53.com",
-        "ns-792.awsdns-35.net",
         "ns-1098.awsdns-09.org",
-        "ns-1686.awsdns-18.co.uk"
+        "ns-792.awsdns-35.net"
     ]
 }

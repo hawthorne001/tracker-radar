@@ -9,8 +9,8 @@
     "subdomains": [
         "assets",
         "afd",
-        "api",
-        "nrd"
+        "nrd",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -68,8 +68,8 @@
             ],
             "apis": {
                 "window.innerWidth": 2,
-                "Navigator.prototype.appName": 2,
-                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.userAgent": 1,
                 "Event.prototype.timeStamp": 2,
                 "window.innerHeight": 2,
                 "window.localStorage": 2,
@@ -77,7 +77,7 @@
                 "window.devicePixelRatio": 2,
                 "Screen.prototype.width": 2,
                 "window.sessionStorage": 1,
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -160,6 +160,26 @@
             ]
         },
         {
+            "rule": "adsttc\\.com\\/architonic\\/fonts\\/Gravur-Condensed\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "archdaily.com",
+                "www.archdaily.com"
+            ]
+        },
+        {
             "rule": "adsttc\\.com\\/javascripts\\/adex\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -220,30 +240,6 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "archdaily.com",
-                "www.archdaily.com"
-            ]
-        },
-        {
-            "rule": "adsttc\\.com\\/geoip\\/country\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "9b202ecbc6d45c6d8901d989a918878397a3eb9d00e8f48022fc051b19d21a1d"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.000006806749572876464
-            },
             "exampleSites": [
                 "archdaily.com",
                 "www.archdaily.com"
@@ -338,22 +334,24 @@
             ]
         },
         {
-            "rule": "adsttc\\.com\\/afd\\/afd_async_basic-7bba43d50cc0155c6cb441482956ab0e0e2d6267fb181837b926ec9f49b3a271\\.css",
+            "rule": "adsttc\\.com\\/geoip\\/country\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "afd"
+                "api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "7bba43d50cc0155c6cb441482956ab0e0e2d6267fb181837b926ec9f49b3a271"
+                "9b202ecbc6d45c6d8901d989a918878397a3eb9d00e8f48022fc051b19d21a1d"
             ],
-            "type": "Stylesheet",
+            "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006809113317263826
+            },
             "exampleSites": [
                 "archdaily.com",
                 "www.archdaily.com"
@@ -382,7 +380,7 @@
             ]
         },
         {
-            "rule": "adsttc\\.com\\/afd_footer\\.css",
+            "rule": "adsttc\\.com\\/afd\\/afd_async_basic-7bba43d50cc0155c6cb441482956ab0e0e2d6267fb181837b926ec9f49b3a271\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -393,8 +391,28 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ccb8be29b3bb35467098d91030523d49a2bc33444a1fc33e17577c17807f45f7"
+                "7bba43d50cc0155c6cb441482956ab0e0e2d6267fb181837b926ec9f49b3a271"
             ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "archdaily.com",
+                "www.archdaily.com"
+            ]
+        },
+        {
+            "rule": "adsttc\\.com\\/afd_footer\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "afd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -438,13 +456,14 @@
     "types": {
         "Image": 8,
         "Script": 8,
+        "Font": 2,
         "XHR": 4,
         "Stylesheet": 16
     },
     "nameservers": [
-        "ns-1114.awsdns-11.org",
         "ns-935.awsdns-52.net",
         "ns-1537.awsdns-00.co.uk",
+        "ns-1114.awsdns-11.org",
         "ns-75.awsdns-09.com"
     ]
 }

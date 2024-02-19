@@ -11,7 +11,7 @@
         "prod.fennec"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
@@ -35,49 +35,53 @@
         },
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "prod.pyxis"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "b725042f914a6f223cbd7268132816c46ebd2199dbd9974cf20f8ab3c28c7230"
+                "04534d08b798cc31f602f357450c2bcebc09c24a26209867ecaaa3e7a6e9d992",
+                "78f1b26dcdbecfbceb6948f5e097f8884924682f3817d62b2431515749c62597"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
+                "www.foxnews.com",
                 "www.tmz.com"
             ]
         },
         {
             "rule": "atp\\.fox\\/js\\/fennec\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "prod.fennec"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2dfb0f251b2ed696f024e25ceb33cd738a50f2c01a81920e8339114dd0e1d622"
+                "a6bb52adfde58d6df48c540050f8f1c9bb186fe4519c12f461efd2988f76c8bb"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
-                "www.foxnews.com",
                 "www.tmz.com"
             ]
         },
@@ -89,16 +93,17 @@
                 "prod.fennec"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "a9a9d156702e03ffa85433b9eae1403620d5ff8e76b91f32af60821c2ef08b29"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
-                "www.foxnews.com",
                 "www.tmz.com"
             ]
         }
@@ -108,16 +113,16 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.3
+            "domain": "fox.com",
+            "prevalence": 0.5
         },
         {
             "domain": "knotch-cdn.com",
             "prevalence": 0.3
         },
         {
-            "domain": "fox.com",
-            "prevalence": 0.3
+            "domain": "first party",
+            "prevalence": 0.1
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
@@ -127,16 +132,16 @@
     "types": {
         "Preflight": 2,
         "Fetch": 5,
-        "Script": 3
+        "Script": 2
     },
     "nameservers": [
-        "ns02.dns.fox",
-        "ns04.dns.fox",
         "ns03.dns.fox",
-        "ns02.foxdoua.com",
         "ns01.foxdoua.com",
         "ns04.foxdoua.com",
-        "ns01.dns.fox",
-        "ns03.foxdoua.com"
+        "ns02.foxdoua.com",
+        "ns03.foxdoua.com",
+        "ns02.dns.fox",
+        "ns04.dns.fox",
+        "ns01.dns.fox"
     ]
 }

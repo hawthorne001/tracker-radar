@@ -7,15 +7,16 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000476,
-    "sites": 7,
+    "prevalence": 0.0000613,
+    "sites": 9,
     "subdomains": [
         "netdreamersad",
         "proto2ad",
-        "passnaviad"
+        "passnaviad",
+        "tracker"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "durasite\\.net\\/A-affiliate2\\/mobile",
@@ -26,11 +27,12 @@
                 "proto2ad"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fadbf76f1ae0b36c96badc3c2c8e7abe17f9c53f266c61de18c95d59a3fd8df1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -38,6 +40,7 @@
             "exampleSites": [
                 "netkeiba.com",
                 "db.netkeiba.com",
+                "race.netkeiba.com",
                 "www.goobike.com"
             ]
         },
@@ -53,7 +56,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "1fc025947df1f3317f78d0598c63b900a4f4a7a2d7fe84ad9ddf7fe1dcfbf3d4"
+                "6b44cbb8195bf11bcd7ab77e5e115c9451efc13f6a1eeec1ddc26627bf73e099"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -62,11 +65,88 @@
                 "obunsha.co.jp",
                 "passnavi.obunsha.co.jp"
             ]
+        },
+        {
+            "rule": "durasite\\.net\\/scripts\\/tracker\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "eaca4d41abc0e53143aba7942a3f0a975fd67ef18a6be6d9141688dd04be835f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "DTCookieChecker": {
+                    "ttl": 7776016,
+                    "length": 4,
+                    "prevalence": 0.000013618226634527652,
+                    "uniqueness": 0.5
+                },
+                "dt_uid": {
+                    "ttl": 7776016,
+                    "length": 36,
+                    "prevalence": 0.000013618226634527652,
+                    "uniqueness": 0.5
+                },
+                "dt_first_date": {
+                    "ttl": 7776016,
+                    "length": 12,
+                    "prevalence": 0.000013618226634527652,
+                    "uniqueness": 0.5
+                },
+                "dt_session_id": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.000013618226634527652,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-nexco.co.jp",
+                "www.e-nexco.co.jp"
+            ]
+        },
+        {
+            "rule": "durasite\\.net\\/track2",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dt_uid": 0.000013618226634527652,
+                "dt_first_date": 0.000013618226634527652,
+                "dt_session_id": 0.000013618226634527652
+            },
+            "exampleSites": [
+                "e-nexco.co.jp",
+                "www.e-nexco.co.jp"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000681,
     "topInitiators": [
         {
             "domain": "first party",
@@ -74,12 +154,12 @@
         }
     ],
     "types": {
-        "Script": 3,
+        "Script": 8,
         "Fetch": 2
     },
     "nameservers": [
         "vns01.accelia.net",
-        "dns-a.iij.ad.jp",
-        "ns-ocn-01.accelia.net"
+        "ns-ocn-01.accelia.net",
+        "dns-a.iij.ad.jp"
     ]
 }

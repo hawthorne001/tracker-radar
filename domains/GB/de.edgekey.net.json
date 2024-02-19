@@ -9,19 +9,76 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
+        "accounts.bahn",
         "img.ui-portal"
     ],
     "cnames": [
+        {
+            "original": "accounts.bahn.de",
+            "resolved": "accounts.bahn.de.edgekey.net"
+        },
         {
             "original": "img.ui-portal.de",
             "resolved": "img.ui-portal.de.edgekey.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f98143740041f1147eaa8e9d57ec99f839d17359d4534b5e03e481dd2e7fc9b6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
         {
             "rule": "de\\.edgekey\\.net\\/pos-cdn\\/tracklib\\/4\\.3\\.0\\/tracklib\\.min\\.js",
             "cookies": 0,
@@ -52,14 +109,20 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
+        "Fetch": 2,
+        "Document": 2,
         "Script": 2
     },
     "nameservers": []
