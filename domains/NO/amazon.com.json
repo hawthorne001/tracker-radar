@@ -9,29 +9,114 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
-        "aws",
+        "d2c.aws",
         "vs.aws",
+        "aws",
         "fls-na",
         "unagi",
-        "unagi-eu",
-        "fls-eu",
+        "payments-de",
+        "payments",
         "apay-us"
     ],
-    "cnames": [
-        {
-            "original": "fls-eu.amazon.se",
-            "resolved": "fls-eu.amazon.com"
-        },
-        {
-            "original": "unagi.amazon.se",
-            "resolved": "unagi-eu.amazon.com"
-        }
-    ],
+    "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "amazon\\.com\\/client\\/loader\\/v1\\/d2c-load\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5e0e1cace8a6d69a67ac1047f375698b628af7e541e0d62f884476064fcf81ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/client\\/lib\\/v1\\/d2c-client-lib\\.85270c29\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ec4d0d195485d59743fd0c1fb1cd2c86c73766ed223aae2c2a3543b505ec5cad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/token",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0aea4da2852ae92a44193a357f0a5a7444e096e6fe0763340dd59047e65a1a73"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
         {
             "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
             "cookies": 0,
@@ -50,27 +135,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/token",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "vs.aws"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "0a3e2a141e1753269e8862aecf99e94e838e8549abf6ff754f116f28117430a9"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
+                "repost.aws",
                 "s3.amazonaws.com"
             ]
         },
@@ -127,7 +192,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -140,18 +207,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "unagi",
-                "unagi-eu"
+                "unagi"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [
-                {
-                    "original": "unagi.amazon.se",
-                    "resolved": "unagi-eu.amazon.com"
-                }
-            ],
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
@@ -160,35 +221,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abebooks.co.uk",
-                "www.abebooks.com",
-                "www.amazon.se"
+                "www.abebooks.com"
             ]
         },
         {
-            "rule": "amazon\\.com\\/1\\/batch\\/1\\/OE\\/",
-            "cookies": 0,
+            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "fls-eu"
+                "payments-de",
+                "payments"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "fls-eu.amazon.se",
-                    "resolved": "fls-eu.amazon.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "92ed7781a2611500c6792acde07d027651da271b19b21bbb0116e1562c9250cf"
             ],
-            "type": "Ping",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "amazon.se",
-                "www.amazon.se"
+                "allerammer.no",
+                "www.mathway.com"
             ]
         },
         {
@@ -223,38 +279,40 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000503,
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.69
-        },
-        {
-            "domain": "media-amazon.com",
-            "prevalence": 0.12
+            "prevalence": 0.7777777777777778
         },
         {
             "domain": "first party",
-            "prevalence": 0.09
-        },
-        {
-            "domain": "ssl-images-amazon.com",
-            "prevalence": 0.04
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.04
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.022222222222222223
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.02
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "ssl-images-amazon.com",
+            "prevalence": 0.011111111111111112
         }
     ],
     "types": {
+        "Script": 4,
+        "Preflight": 2,
         "Fetch": 4,
         "Image": 4,
-        "XHR": 4,
-        "Ping": 5
+        "XHR": 6,
+        "Ping": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

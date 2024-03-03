@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "ssp"
+        "ssp",
+        "ev",
+        "content"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "adriver\\.ru\\/cgi-bin\\/sync\\.cgi",
@@ -25,8 +27,8 @@
                 "ssp"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
@@ -35,8 +37,73 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "abcdef.wiki",
+                "fr.abcdef.wiki",
                 "lostarmour.info",
-                "symbl.cc"
+                "www.rutor.info"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/rle\\.cgi",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ev"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arabnews.fr",
+                "www.arabnews.fr",
+                "www.rutor.info"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/AdRiverFPS\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "223c485d08be67911ac275cb63fbdd4b66ee520726be1d6acceec695351428c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "adrdel": {
+                    "ttl": 43204,
+                    "length": 1,
+                    "prevalence": 0.00020106564793405046,
+                    "uniqueness": 0.5
+                },
+                "adrcid": {
+                    "ttl": 315360004,
+                    "length": 23,
+                    "prevalence": 0.00020106564793405046,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rutor.info",
+                "www.rutor.info"
             ]
         }
     ],
@@ -45,21 +112,34 @@
         "Advertising"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "yastatic.net",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "acint.net",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "afp.ai",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "moviead55.ru",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Image": 2
+        "Image": 7,
+        "Script": 2
     },
     "nameservers": [
-        "ns3.adriver.ru",
+        "ns1.adriver.ru",
         "ns4.adriver.ru",
         "ns2.adriver.ru",
-        "ns1.adriver.ru",
+        "ns3.adriver.ru",
         "ns5.adriver.ru"
     ]
 }

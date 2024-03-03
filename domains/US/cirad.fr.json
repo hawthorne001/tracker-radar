@@ -4,21 +4,80 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000681,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
+        "select",
         "senonches"
     ],
     "cnames": [
         {
             "original": "api.plantnet.org",
             "resolved": "senonches.cirad.fr"
+        },
+        {
+            "original": "plausible.plantnet.org",
+            "resolved": "select.cirad.fr"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "cirad\\.fr\\/v1\\/projects\\/the-plant-list\\/pheno\\/species\\/Sida%20cordifolia%20L\\.",
+            "rule": "cirad\\.fr\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "select"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "plausible.plantnet.org",
+                    "resolved": "select.cirad.fr"
+                }
+            ],
+            "responseHashes": [
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plantnet.org",
+                "identify.plantnet.org"
+            ]
+        },
+        {
+            "rule": "cirad\\.fr\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "select"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "plausible.plantnet.org",
+                    "resolved": "select.cirad.fr"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plantnet.org",
+                "identify.plantnet.org"
+            ]
+        },
+        {
+            "rule": "cirad\\.fr\\/v1\\/projects",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -34,9 +93,36 @@
                 }
             ],
             "responseHashes": [
-                "1d51977b2944d3e6ad1801ae60fd52f6739eb98c07987d680e4e497f553c546a"
+                "de458f4bbf09dbb99164183137abbe6dac20900a0a806f14f0f9989fbf071649"
             ],
-            "type": "XHR",
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plantnet.org",
+                "identify.plantnet.org"
+            ]
+        },
+        {
+            "rule": "cirad\\.fr\\/v1\\/projects\\/the-plant-list\\/pheno\\/species\\/Symphyotrichum%20pilosum%20\\(Willd\\.\\)%20G\\.L\\.Nesom",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "senonches"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.plantnet.org",
+                    "resolved": "senonches.cirad.fr"
+                }
+            ],
+            "responseHashes": [
+                "030e75d4a423912bc9309a4c17ad8c9641e13322890639ab5f2b005908834f02"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -49,7 +135,9 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns2.cirad.fr",

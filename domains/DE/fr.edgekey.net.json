@@ -12,41 +12,46 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "static-v1.francetv",
-        "static-lefigaro"
+        "timeliner.live.francetvinfo",
+        "static-lefigaro",
+        "api-graphql.lefigaro"
     ],
     "cnames": [
         {
-            "original": "static.francetv.fr",
-            "resolved": "static-v1.francetv.fr.edgekey.net"
+            "original": "api-graphql.lefigaro.fr",
+            "resolved": "api-graphql.lefigaro.fr.edgekey.net"
         },
         {
             "original": "static.lefigaro.fr",
             "resolved": "static-lefigaro.fr.edgekey.net"
+        },
+        {
+            "original": "timeliner.live.francetvinfo.fr",
+            "resolved": "timeliner.live.francetvinfo.fr.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "fr\\.edgekey\\.net\\/magnetoscope\\/main\\.magnetoscope\\.js",
+            "rule": "fr\\.edgekey\\.net\\/images\\/random-user\\.jpg",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
-                "static-v1.francetv"
+                "timeliner.live.francetvinfo"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "static.francetv.fr",
-                    "resolved": "static-v1.francetv.fr.edgekey.net"
+                    "original": "timeliner.live.francetvinfo.fr",
+                    "resolved": "timeliner.live.francetvinfo.fr.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "cbe8756c39eebe33532f46895cdf6cb44729e9916b8eda404676352554604038"
+                "b00f61d57bfd8e3379319b2022e5b5a6c53b06a245c6c29b7f88ef87b8ccaeb5"
             ],
-            "type": "Script",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -103,6 +108,33 @@
                 "lefigaro.fr",
                 "www.lefigaro.fr"
             ]
+        },
+        {
+            "rule": "fr\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-graphql.lefigaro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api-graphql.lefigaro.fr",
+                    "resolved": "api-graphql.lefigaro.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "94e675ae0d986ccd121c999df14030fc70d9a46a4b6eec8216643bf97f8df2fa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lefigaro.fr"
+            ]
         }
     ],
     "categories": [],
@@ -111,20 +143,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
-        },
-        {
-            "domain": "francetv.fr",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.9
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2,
-        "Font": 4
+        "Image": 2,
+        "Font": 4,
+        "Fetch": 2
     },
     "nameservers": []
 }

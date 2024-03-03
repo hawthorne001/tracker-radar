@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "kent-esengage.live",
         "staplesca-esengage.live",
-        "tscweb-esengage.live"
+        "rona-esengage.live",
+        "tscweb-esengage.live",
+        "rona-ca-api.live"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "exchangesolutions\\.com\\/v4\\/esRd-min\\.js",
@@ -24,23 +26,25 @@
             "subdomains": [
                 "kent-esengage.live",
                 "staplesca-esengage.live",
+                "rona-esengage.live",
                 "tscweb-esengage.live"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 4,
                 "Date.prototype.getTime": 2,
-                "Document.cookie getter": 1,
-                "Screen.prototype.width": 1,
-                "window.devicePixelRatio": 1,
-                "Screen.prototype.height": 1,
-                "Date.prototype.getTimezoneOffset": 1
+                "Screen.prototype.width": 3,
+                "window.devicePixelRatio": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Document.cookie getter": 1
             },
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "ff089b63cf75b16f3f537e034b216350554ffd98d019536ad3ca4c63635e03b1",
+                "5292e4455c4d0c930afbc3751294037e71412ef42e2b9e8f58870fcdcc8bb4ea",
                 "45202d4e71701f18e7bf1248ab84a22b3472b9c29ff0315f16fc7f3cdb2fe7ab"
             ],
             "type": "Script",
@@ -49,8 +53,51 @@
             "exampleSites": [
                 "kent.ca",
                 "www.bureauengros.com",
-                "www.staples.ca",
+                "www.lowes.ca",
+                "www.rona.ca",
                 "www.tsc.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/ronaprod-engage\\/api\\/client\\/rona\\.web\\.ronaca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rona-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f577a6fbd82f4292e7adf92c7a4b41c5db5a8f864d466a1250ae3af8bd3b1df1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lowes.ca",
+                "www.rona.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/ronaprod-engage\\/api\\/client\\/rona\\.web\\.ronaca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rona-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lowes.ca",
+                "www.rona.ca"
             ]
         }
     ],
@@ -60,11 +107,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 5,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-6.awsdns-00.com",

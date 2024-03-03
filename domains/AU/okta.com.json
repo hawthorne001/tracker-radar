@@ -7,14 +7,20 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "login",
+        "sas.customdomains",
+        "monashuni",
         "churchofjesuschrist.customdomains",
         "servicenowsignon.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
         {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
@@ -34,8 +40,8 @@
                 "login"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "04e5a6a734bb7d87c3edca98ab40003f8972aba152440e7df17bda26d9ce0f8a"
@@ -45,8 +51,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaide.edu.au",
+                "canvas.sydney.edu.au",
                 "my.hesta.com.au",
-                "my.unimelb.edu.au"
+                "my.unimelb.edu.au",
+                "my.monash.edu.au"
             ]
         },
         {
@@ -57,11 +65,11 @@
                 "login"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "window.localStorage": 3
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "058bb9d17b2131122ad576569715e4e35cc79848433645fba5d768d9627acbd0"
@@ -71,8 +79,84 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaide.edu.au",
+                "canvas.sydney.edu.au",
                 "my.hesta.com.au",
-                "my.unimelb.edu.au"
+                "my.unimelb.edu.au",
+                "my.monash.edu.au"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "284264652fefb5b19c7774d3cb72de9e2a0ede9f2224d3646349a237ede7cdff"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/login\\/login\\.htm",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.cookieEnabled": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fe59e86a79d3d2a8317bc477a4a0b849a221cf47ad4176891ba6d716de4a40cd"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "my.monash",
+                "my.monash.edu.au"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/internal\\/brand\\/theme\\/style-sheet",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9af30b5e4695010f9be253f861784e638c81274ca0390214629886029ca9b509"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "my.monash",
+                "my.monash.edu.au"
             ]
         },
         {
@@ -109,30 +193,36 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000704,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.75
+            "prevalence": 0.625
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Document": 3,
-        "Script": 3,
+        "Document": 7,
+        "Script": 5,
+        "XHR": 2,
+        "Stylesheet": 2,
         "Fetch": 3
     },
     "nameservers": [
-        "edns5.ultradns.org",
-        "ns-285.awsdns-35.com",
-        "edns5.ultradns.biz",
-        "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
         "edns5.ultradns.com",
         "edns5.ultradns.net",
-        "ns-684.awsdns-21.net"
+        "edns5.ultradns.org",
+        "ns-1459.awsdns-54.org",
+        "ns-1563.awsdns-03.co.uk",
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net",
+        "edns5.ultradns.biz"
     ]
 }
