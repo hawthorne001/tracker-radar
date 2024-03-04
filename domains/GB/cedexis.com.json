@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "radar"
+        "radar",
+        "rpt"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -26,7 +27,7 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "PerformanceTiming.prototype.navigationStart": 1
+                "PerformanceTiming.prototype.navigationStart": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -48,8 +49,8 @@
                 "radar"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "2c5b3aeacf827e181a8131451f9a2a2f402ce22800d2365feb071f1fb7bf666d"
@@ -60,6 +61,8 @@
             "exampleSites": [
                 "accor.com",
                 "ibis.accor.com",
+                "mubi.com",
+                "www.cliffsnotes.com",
                 "www.coursehero.com",
                 "www.ig.com"
             ]
@@ -67,13 +70,15 @@
         {
             "rule": "cedexis\\.com\\/releases\\/1707728419\\/impact\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "radar"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "70ba610e8b04346fcfaf7131529082ab2f9cec6954ce32552b1cac0a9e567aba"
@@ -84,7 +89,50 @@
             "exampleSites": [
                 "accor.com",
                 "ibis.accor.com",
+                "mubi.com",
                 "www.ig.com"
+            ]
+        },
+        {
+            "rule": "cedexis\\.com\\/r1\\/1\\/10096\\/_CgJqNRAUGHwiBQgBEPBOKLesoo4FMNefjq8GONifjq8GQLPSocoFShMIAxBJGIs_II2AgMAEKMqSgKAEUABaCggAEAAYACAAKABgAWoTYnV0dG9uMi5hbXMuaHYucHJvZIIBEwgDEEkYiz8gjYCAwAQoypKAoASIAZTioOQB",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rpt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
+            "rule": "cedexis\\.com\\/1\\/22246\\/radar\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cliffsnotes.com",
+                "www.coursehero.com"
             ]
         }
     ],
@@ -94,19 +142,28 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5294117647058824
+            "prevalence": 0.4838709677419355
+        },
+        {
+            "domain": "mubicdn.net",
+            "prevalence": 0.1935483870967742
         },
         {
             "domain": "cedexis-test.com",
-            "prevalence": 0.35294117647058826
+            "prevalence": 0.1935483870967742
+        },
+        {
+            "domain": "coursehero.com",
+            "prevalence": 0.06451612903225806
         },
         {
             "domain": "c-dn.net",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.06451612903225806
         }
     ],
     "types": {
-        "Script": 9
+        "Script": 14,
+        "XHR": 2
     },
     "nameservers": [
         "ns2.cedexis.net",

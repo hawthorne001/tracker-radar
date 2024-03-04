@@ -7,13 +7,14 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "geoip"
+        "geoip",
+        "webapps-cdn"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "esri\\.com\\/geoip\\.js",
@@ -36,13 +37,13 @@
             "type": "Script",
             "firstPartyCookies": {
                 "sat_track": {
-                    "ttl": 86404,
+                    "ttl": 86403,
                     "length": 4,
                     "prevalence": 0.00010056315366049879,
                     "uniqueness": 1
                 },
                 "pi_opt_in82202": {
-                    "ttl": 86404,
+                    "ttl": 86403,
                     "length": 4,
                     "prevalence": 0.00010056315366049879,
                     "uniqueness": 1
@@ -75,18 +76,113 @@
             ]
         },
         {
-            "rule": "esri\\.com\\/get-country",
+            "rule": "esri\\.com\\/CDN\\/components\\/global-nav\\/css\\/gn\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "geoip"
+                "webapps-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "19e3f7f3f628ed1024f250e1e04a4f06f5cee7a765d24f2ca04593f859679cbb"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/CDN\\/components\\/global-nav\\/js\\/gn\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webapps-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e331d1cf8054828dff2b80b01fcad33a7b25232f26c1f4ef36dd4693343aa692"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/CDN\\/fonts\\/fonts\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webapps-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "056157c710033e77cffc1177c1a8bc2a4e826a273be8f1ff9fda6b23916821a2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/CDN\\/fonts\\/v1\\.4\\.2\\/fonts\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webapps-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9a8a91600f00e8bd76f682366d4a4547d513b84ae3509e265f738a5b516b85f2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/CDN\\/fonts\\/v1\\.4\\.2\\/77caabd3-1877-4634-85c8-8e398a093b99\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webapps-cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Font",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -121,26 +217,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5714285714285714
-        },
-        {
-            "domain": "adobedtm.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.7777777777777778
         },
         {
             "domain": "pardot.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 2,
+        "Script": 4,
         "XHR": 2,
-        "Preflight": 2,
+        "Stylesheet": 6,
+        "Font": 2,
         "Other": 2
     },
     "nameservers": [
-        "cbru.br.ns.els-gms.att.net",
         "cmtu.mt.ns.els-gms.att.net",
+        "cbru.br.ns.els-gms.att.net",
         "dns.esri.com"
     ]
 }

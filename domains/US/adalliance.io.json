@@ -10,10 +10,12 @@
     "prevalence": 0.0000136,
     "sites": 2,
     "subdomains": [
-        "zipservice"
+        "zipservice",
+        "aqt",
+        "prediction"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "adalliance\\.io\\/get",
@@ -33,8 +35,69 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "stern.de",
+                "geo.de",
                 "www.toggo.de"
+            ]
+        },
+        {
+            "rule": "adalliance\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aqt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geo.de",
+                "www.geo.de",
+                "www.toggo.de"
+            ]
+        },
+        {
+            "rule": "adalliance\\.io\\/measure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prediction"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geo.de",
+                "www.geo.de"
+            ]
+        },
+        {
+            "rule": "adalliance\\.io\\/measure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prediction"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geo.de",
+                "www.geo.de"
             ]
         }
     ],
@@ -44,15 +107,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "smartclip.net",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 7,
+        "Preflight": 2
     },
     "nameservers": [
+        "ns3.second-ns.de",
         "ns.second-ns.com",
-        "ns1.your-server.de",
-        "ns3.second-ns.de"
+        "ns1.your-server.de"
     ]
 }

@@ -10,7 +10,8 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "player"
+        "player",
+        "api-cdn-bz"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -37,8 +38,8 @@
             "cnames": [],
             "responseHashes": [
                 "c16468c3a8a86ec5fe9dd7caca02865b237d9cda4ce24e4c17f32ac3e0c65bef",
-                "124133c561275f45486c34d8be5a8929e185059458a0a029934d6f40c71fec8a",
-                "cb860d3e3cc829a9fc8a78d8f571ba47e6b63543b15a0265386740af85547231"
+                "73f3ef82e9edbe4792030245d725681e405669b859a199da52d65a9fecfef938",
+                "8036c11dc7c5c732f4cbb0fe956a5d49c22757dde41f2b78184bbd271c58b123"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -46,8 +47,8 @@
             "exampleSites": [
                 "foxnews.com",
                 "www.foxnews.com",
-                "www.sportschau.de",
-                "www.tagesschau.de"
+                "www.tagesschau.de",
+                "www.zeit.de"
             ]
         },
         {
@@ -58,18 +59,42 @@
                 "player"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "efa320e88d91773043aca261bdbf45374512a87c02d7db8b2d124173f38e8bcf"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
-                "www.sportschau.de"
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/preview_url",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn-bz"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "37128a9f97ca90aeca51c307a118c8c9c30d0d7b2f77604241a20e407ec5692f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zeit.de",
+                "www.zeit.de"
             ]
         }
     ],
@@ -91,12 +116,13 @@
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 6,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-1405.awsdns-47.org",
-        "ns-1554.awsdns-02.co.uk",
         "ns-43.awsdns-05.com",
-        "ns-661.awsdns-18.net"
+        "ns-661.awsdns-18.net",
+        "ns-1554.awsdns-02.co.uk",
+        "ns-1405.awsdns-47.org"
     ]
 }

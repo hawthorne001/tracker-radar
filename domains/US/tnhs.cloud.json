@@ -4,17 +4,28 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000545,
-    "sites": 8,
+    "prevalence": 0.0000681,
+    "sites": 10,
     "subdomains": [
+        "cmoa-tnew-prod",
         "mfah-tnew-prod",
         "nash-tnew-prod",
-        "natt-tnew-prod"
+        "natt-tnew-prod",
+        "ocen-tnew-prod",
+        "seop-tnew-prod"
     ],
     "cnames": [
         {
             "original": "my.mfah.org",
             "resolved": "mfah-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "secure.seattleopera.org",
+            "resolved": "seop-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "ticketing.clevelandart.org",
+            "resolved": "cmoa-tnew-prod.tnhs.cloud"
         },
         {
             "original": "tickets.nashvillesymphony.org",
@@ -23,10 +34,41 @@
         {
             "original": "tickets.nationaltheatre.org.uk",
             "resolved": "natt-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "tickets.overture.org",
+            "resolved": "ocen-tnew-prod.tnhs.cloud"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "tnhs\\.cloud\\/api\\/Session\\/SessionKey",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmoa-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "ticketing.clevelandart.org",
+                    "resolved": "cmoa-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "a761d8f6ff0ac0362255da072173f3c43e662045bc9692630db6a3e6f4eeb930"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clevelandart.org",
+                "www.clevelandart.org"
+            ]
+        },
         {
             "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
             "cookies": 0.0000272,
@@ -54,9 +96,9 @@
                 }
             ],
             "responseHashes": [
-                "4d84f851fce4131d8597b79a343cb23f747ab17163a5c150ba9f954a38d71d7b",
-                "082f5ba85c37da4d33bda015daf7bd975ce2057a404da6b08e07144e0e5d9cb6",
-                "5591751f85dce5a24dd0e0ef28e1c1961df877db842379e8d4af9a0731f3d23a"
+                "c7d2ebaeaefdb84c6075268d64801590cc02402f32af34efd77382b5f612e49d",
+                "844dbdf1a87d6243c066f88d56b333e39271fcbfe280e8f6acdd00846b8e776f",
+                "d02b4efc9b87517b024d8d417735c64906767f4e19f8db4af6241b5ff9224e5a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -67,24 +109,91 @@
                 "www.nashvillesymphony.org",
                 "www.nationaltheatre.org.uk"
             ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/components\\/sharedsession",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ocen-tnew-prod",
+                "seop-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "tickets.overture.org",
+                    "resolved": "ocen-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "secure.seattleopera.org",
+                    "resolved": "seop-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "overture.org",
+                "www.seattleopera.org"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/_Incapsula_Resource",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ocen-tnew-prod",
+                "seop-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "tickets.overture.org",
+                    "resolved": "ocen-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "secure.seattleopera.org",
+                    "resolved": "seop-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "overture.org",
+                "www.seattleopera.org"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000545,
+    "cookies": 0.0000681,
     "topInitiators": [
         {
+            "domain": "d3hx9w12q7fwqa.cloudfront.net",
+            "prevalence": 0.5
+        },
+        {
             "domain": "jquery.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 4
+        "XHR": 2,
+        "Fetch": 4,
+        "Document": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1438.awsdns-51.org",
         "ns-1737.awsdns-25.co.uk",
+        "ns-477.awsdns-59.com",
         "ns-885.awsdns-46.net",
-        "ns-477.awsdns-59.com"
+        "ns-1438.awsdns-51.org"
     ]
 }

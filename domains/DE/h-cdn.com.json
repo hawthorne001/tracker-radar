@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "player"
+        "player",
+        "api-cdn-bz"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,14 +24,15 @@
                 "player"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "db59eaee04df16d153e2b5241cbec4784a3440520dc26545beb4423404fc3953"
+                "a0414ce66958b10adcc3f369b2228b8434c676ee4b0409122bc5e3a61311af45",
+                "b32f185336ecab5030a51faa38d88a72a751853d6fad6a321e07d221cdcd87f2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -38,7 +40,55 @@
             "exampleSites": [
                 "sportschau.de",
                 "www.sportschau.de",
-                "www.tagesschau.de"
+                "www.tagesschau.de",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/config\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "efa320e88d91773043aca261bdbf45374512a87c02d7db8b2d124173f38e8bcf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/preview_url",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn-bz"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "37128a9f97ca90aeca51c307a118c8c9c30d0d7b2f77604241a20e407ec5692f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zeit.de",
+                "www.zeit.de"
             ]
         }
     ],
@@ -52,12 +102,13 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 7,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-43.awsdns-05.com",
-        "ns-661.awsdns-18.net",
+        "ns-1405.awsdns-47.org",
         "ns-1554.awsdns-02.co.uk",
-        "ns-1405.awsdns-47.org"
+        "ns-43.awsdns-05.com",
+        "ns-661.awsdns-18.net"
     ]
 }

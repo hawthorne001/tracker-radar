@@ -4,13 +4,19 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
+        "v2.sohu.com.dsa",
+        "adv-sv-show.focus.cn.cdn",
         "pic3.zhimg.com.cdn",
         "static.zhihu.com.cdn"
     ],
     "cnames": [
+        {
+            "original": "adv-sv-show.focus.cn",
+            "resolved": "adv-sv-show.focus.cn.cdn.dnsv1.com"
+        },
         {
             "original": "pic3.zhimg.com",
             "resolved": "pic3.zhimg.com.cdn.dnsv1.com"
@@ -18,10 +24,70 @@
         {
             "original": "static.zhihu.com",
             "resolved": "static.zhihu.com.cdn.dnsv1.com"
+        },
+        {
+            "original": "v2.sohu.com",
+            "resolved": "v2.sohu.com.dsa.dnsv1.com"
         }
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "dnsv1\\.com\\/public-api\\/ip2location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2.sohu.com.dsa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "v2.sohu.com",
+                    "resolved": "v2.sohu.com.dsa.dnsv1.com"
+                }
+            ],
+            "responseHashes": [
+                "7a5f72e955024f92c6a116a15ba6b9697085bfd889462bf2d9f624b5d716c306"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cityIpLocation": 0.00020110608345902463
+            },
+            "exampleSites": [
+                "sohu.com",
+                "www.sohu.com"
+            ]
+        },
+        {
+            "rule": "dnsv1\\.com\\/be_fox_say3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adv-sv-show.focus.cn.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "adv-sv-show.focus.cn",
+                    "resolved": "adv-sv-show.focus.cn.cdn.dnsv1.com"
+                }
+            ],
+            "responseHashes": [
+                "ed8a57ae9b5f55ed5104e384796ab19b3bff0eb1f9e52c85bb54435e94c61c57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sohu.com",
+                "www.sohu.com"
+            ]
+        },
         {
             "rule": "dnsv1\\.com\\/80\\/v2-d0289dc0a46fc5b15b3363ffa78cf6c7\\.png",
             "cookies": 0,
@@ -322,16 +388,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6842105263157895
+        },
+        {
+            "domain": "itc.cn",
+            "prevalence": 0.2631578947368421
+        },
+        {
+            "domain": "zhimg.com",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Image": 2,
-        "Script": 20
+        "Script": 24,
+        "Image": 2
     },
     "nameservers": [
         "ns4.dnsv5.com",
