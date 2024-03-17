@@ -7,17 +7,20 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "dn6mqn7xvzz3",
         "5b4dcn321xtp",
+        "jbxzcdv9xc4d",
+        "z8s4n2jmrsl0",
+        "bghgsx0hcy0k",
         "gp2tp03j16xq",
         "l4wxddfpxjw0",
         "2p66nmmycsj3"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "statuspage\\.io\\/api\\/v2\\/summary\\.json",
@@ -32,7 +35,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9a660a313cd3c99eafa9a8435ad4cd683167bda38b0b3f4472232a02775a4f10"
+                "deb7cd34aed7802f3ef4c76999f322297e8b12832f6df386e9c57121955ee6d2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -40,6 +43,59 @@
             "exampleSites": [
                 "redhat.com",
                 "etcher.balena.io"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/embed\\/frame",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "jbxzcdv9xc4d",
+                "z8s4n2jmrsl0",
+                "bghgsx0hcy0k"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "af2f0217155a42ee33ebe0a874380bfbb21ec44631697701dda922e162549bba",
+                "99afad4f9cb44b01453eeaf408b974e362db5ae66b3c60bae9c9d99d2c51d64d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "openai.com",
+                "docs.gradle.org",
+                "support.sonos.com"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/embed\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "z8s4n2jmrsl0",
+                "bghgsx0hcy0k"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7bbcf33be4f2f35eb2ebf210653847a28d8778279df9c62a490069999835f278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gradle.org",
+                "support.sonos.com"
             ]
         },
         {
@@ -56,9 +112,9 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "b6fdc590b6fa305d22eef047a3609c1be682156a5276b8356745539e24c79708",
-                "cafd2965150e823d6dd8db3b996b0d450892159309b891ed68432c2d1b2f7416",
-                "bc5fb9f585b9c22ce2f5cbbf99ee749244faaa60bf3a838c73f8d8c900deb80a"
+                "f28ea39f7ffddbcaf4bef7a0653bde513b8757f43d476ba6fa1d008720435b13",
+                "a5146b141647aacc439abdaaba7e3128b358bc8c0f176781c36c5838009a5de1",
+                "ce34e616af4a73df3ff5200b8a70be93d4c91484aebf23d08d2a24fd21fbf6d4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -83,8 +139,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "73950a7d179e44942df9ee4aec89d14e32e22af65c24fe3ff58d17cbb1b36d09",
-                "07c019471ae948b45e0a76c1d3e48072c1b622f631df6fd62a2e93031959bb4f"
+                "9018e157e2049f6630b2bf824136dd8d94982bdac81806f8d21287ecc1757006",
+                "6357599e675153962f7e01a9dd765677c96f73a3cfc6e6de0c866da71e6767f9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -108,8 +164,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "81e662be6b9ed7e100b16a623045481613965be5a2a67487cd64ace89ddbd220",
-                "60ffd42088cf40ba1fff0521bfba6aba9d90bd224196fd97a8328a9f5a58eb01"
+                "5624acef0d9fa8d4920a166274728c824e85a331e39eeee0dcd7895d38304cb3",
+                "ae9310c669104971b9b80a7c5b14c626517ca41490c97b038697bfe54185165e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -127,19 +183,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9333333333333333
+            "prevalence": 0.9411764705882353
         },
         {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "XHR": 12
+        "XHR": 12,
+        "Document": 3,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1407.awsdns-47.org",
         "ns-1560.awsdns-03.co.uk",
+        "ns-1407.awsdns-47.org",
         "ns-209.awsdns-26.com",
         "ns-951.awsdns-54.net"
     ]

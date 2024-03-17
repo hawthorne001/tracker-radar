@@ -8,11 +8,10 @@
     "sites": 2,
     "subdomains": [
         "customer-website.center-public-production",
-        "open-gateway.center-public-production",
         "im-gateway.center-im-production"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "allstarunion\\.com\\/suhelp\\.min\\.js",
@@ -29,51 +28,9 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "e90bc5a7fc83ab65c9ad0dca2a60e748652a7523d4ac2005a8aeae7c1ca41f32"
+                "629446315ec2e02107722065db27666c3ad9c9d60d9d22c4bf1cad5ec85e35fe"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "seaart.ai",
-                "www.seaart.ai"
-            ]
-        },
-        {
-            "rule": "allstarunion\\.com\\/customer\\/sdk\\/code",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "open-gateway.center-public-production"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "2105b161b5932206be21bc1c2848315595c214a1f129d76f380f364479d638d5"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "seaart.ai",
-                "www.seaart.ai"
-            ]
-        },
-        {
-            "rule": "allstarunion\\.com\\/customer\\/sdk\\/code",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "open-gateway.center-public-production"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -93,7 +50,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ef0faeddc3cc2925cd70dabf727902d767504e7969b3e6a1796d08090aebcf3e"
+                "28bab994cdd51d61ee09f7213c797d4a6eaa63c95d3e2d657ffae112a63133cd"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -194,11 +151,13 @@
         {
             "rule": "allstarunion\\.com\\/chunk-elementUI\\.96874\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -214,18 +173,24 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/chunk-libs\\.f0adb\\.js",
+            "rule": "allstarunion\\.com\\/chunk-libs\\.1ac32\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Event.prototype.timeStamp": 1,
+                "Navigator.prototype.product": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "9fb3a8631e6c283dfd93fcfb7759433cb0d2b1b6ecab08bdcb5023a21fae22ce"
+                "d33378fd447f83f07db832f47df1bba939dcd884f2f12dfd1372c64fc7a0483f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -236,20 +201,23 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/app\\.8f1d5\\.js",
+            "rule": "allstarunion\\.com\\/app\\.a3b2e\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "b897f8df4ea208b5e497743d3717f6336f50ffe36b8efeb1f8f751fc9f904523"
+                "7f40f29d2b8faf2623346e57a9d6c10dd4e10d1390787b73c525e57e35d4db6b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -271,7 +239,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "774c9c1a626576b4486737e643379de791695b0d2c606397ca02194bc3677633"
+                "729049ed26bfd23d8421dc6c7c112113b395fbe776631337a922d48a53730b20"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -282,7 +250,29 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/assets\\/css\\/chunk-1b0aec30\\.4dff4541\\.css",
+            "rule": "allstarunion\\.com\\/api\\/common\\/sdk_init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-website.center-public-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "796cac292a676bfdf9ef64cb1c439b69f4b66268761d9319d32ce6dbe3ef26e1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seaart.ai",
+                "www.seaart.ai"
+            ]
+        },
+        {
+            "rule": "allstarunion\\.com\\/assets\\/css\\/chunk-a10eef16\\.4dff4541\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -304,18 +294,22 @@
             ]
         },
         {
-            "rule": "allstarunion\\.com\\/chunk-1b0aec30\\.870e0\\.js",
+            "rule": "allstarunion\\.com\\/chunk-a10eef16\\.f022d\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "customer-website.center-public-production"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "a872d2b15a8a3e6188ee225d6e41f061841170f0bab36224583ab67570e2de0f"
+                "c0c191543d4d458f209d700d2d704923a651b1247476f85343f5d6836245065b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -337,17 +331,15 @@
     ],
     "types": {
         "Script": 10,
-        "Fetch": 2,
-        "Preflight": 2,
         "Document": 2,
         "Image": 2,
         "Stylesheet": 8,
-        "XHR": 2
+        "XHR": 4
     },
     "nameservers": [
-        "ns-729.awsdns-27.net",
         "ns-345.awsdns-43.com",
         "ns-1911.awsdns-46.co.uk",
+        "ns-729.awsdns-27.net",
         "ns-1390.awsdns-45.org"
     ]
 }

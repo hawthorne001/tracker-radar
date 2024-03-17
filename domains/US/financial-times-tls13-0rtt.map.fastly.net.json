@@ -20,6 +20,10 @@
             "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
         },
         {
+            "original": "consent-notice.ft.com",
+            "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
+        },
+        {
             "original": "consent.ft.com",
             "resolved": "financial-times-tls13-0rtt.map.fastly.net"
         },
@@ -32,16 +36,39 @@
             "resolved": "financial-times-tls13-0rtt.map.fastly.net"
         },
         {
-            "original": "prod-upp-image-read.ft.com",
-            "resolved": "financial-times-tls13-0rtt.map.fastly.net"
-        },
-        {
             "original": "spoor-api.ft.com",
             "resolved": "financial-times-tls13-0rtt.map.fastly.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/cmp\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "consent-notice.ft.com",
+                    "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "77d89a533a6aa4dbe5a47b08e2a79ddcaaad771e5f123c5f1411131a7a20b36b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ft.com",
+                "www.ft.com"
+            ]
+        },
         {
             "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/api\\/v1\\/compliance-region\\.json",
             "cookies": 0,
@@ -240,31 +267,6 @@
             ]
         },
         {
-            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/beb207de-20ca-11e9-a46f-08f9738d6b2b",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "prod-upp-image-read.ft.com",
-                    "resolved": "financial-times-tls13-0rtt.map.fastly.net"
-                }
-            ],
-            "responseHashes": [
-                "c55d521ab9b6d5feac14031a2b3b8cb55ee8ab50d139020933c713e0292c5329"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ft.com",
-                "www.ft.com"
-            ]
-        },
-        {
             "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/research\\/webservices\\/securities\\/v1\\/quotes",
             "cookies": 0,
             "fingerprinting": 0,
@@ -279,7 +281,7 @@
                 }
             ],
             "responseHashes": [
-                "35e5d43f077679c796a5b51adb75c71aa2d3b2afda93d2b650acb44ad2707947"
+                "2ef25adf63cd7f81650cab57728c6ded09efbe677d674e00f43186d9b0e8fb5e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -309,11 +311,11 @@
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 11,
         "Ping": 3,
         "Preflight": 5,
-        "XHR": 2,
-        "Image": 2
+        "XHR": 2
     },
     "nameservers": []
 }

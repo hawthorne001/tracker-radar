@@ -10,12 +10,104 @@
     "prevalence": 0.00141,
     "sites": 14,
     "subdomains": [
-        "webapp",
-        "sdk"
+        "api",
+        "stage-sdk",
+        "sdk",
+        "webapp"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "woosmap\\.com\\/geolocation\\/stores",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "01279fce560bbc391ec1aa9eef37b09b8ca07f9831a3a8c78d1bbf271fc8ea78"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrodepot.fr",
+                "www.electrodepot.fr"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/geolocation\\/stores",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrodepot.fr",
+                "www.electrodepot.fr"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/searchwidget\\/geolocwoosmapsearchwidget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "stage-sdk"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dd9896e5efe99fd1ff2b3556172a637c89c8beee3848072e9b8f3e5f452fc624"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrodepot.fr",
+                "www.electrodepot.fr"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localities\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a3fb8c88c236709a06c4d16bc988b443429761ae93c5371715daf5230bebd8f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrodepot.fr",
+                "location.carrefour.fr",
+                "www.electrodepot.fr"
+            ]
+        },
         {
             "rule": "woosmap\\.com\\/webapp\\.js",
             "cookies": 0,
@@ -39,28 +131,6 @@
             "exampleSites": [
                 "carrefour.fr",
                 "www.go-sport.com"
-            ]
-        },
-        {
-            "rule": "woosmap\\.com\\/localities\\/localities\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sdk"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "a3fb8c88c236709a06c4d16bc988b443429761ae93c5371715daf5230bebd8f8"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "carrefour.fr",
-                "www.electrodepot.fr"
             ]
         },
         {
@@ -94,10 +164,10 @@
                 "sdk"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4
+                "Navigator.prototype.userAgent": 3
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "bb0caf68d16d4a6a5ad5524a52b75b99638bb9b981d9b9c45b3e27b6e51080d9"
@@ -107,7 +177,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "burgerking.fr",
-                "www.calzedonia.com",
                 "www.intimissimi.com",
                 "www.spoticar.fr"
             ]
@@ -155,11 +224,13 @@
         }
     ],
     "types": {
-        "Script": 10,
+        "XHR": 2,
+        "Preflight": 2,
+        "Script": 12,
         "Stylesheet": 3
     },
     "nameservers": [
-        "jasmine.ns.cloudflare.com",
-        "chad.ns.cloudflare.com"
+        "chad.ns.cloudflare.com",
+        "jasmine.ns.cloudflare.com"
     ]
 }

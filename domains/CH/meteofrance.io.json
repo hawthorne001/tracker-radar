@@ -7,10 +7,11 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "widget"
+        "widget",
+        "back.widget"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "meteofrance\\.io\\/remote-viewer\\/",
@@ -59,15 +60,21 @@
         {
             "rule": "meteofrance\\.io\\/_nuxt\\/vendors\\/commons\\.b320963\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "widget"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "910c745dd1af36370bfa487ae3c429c3f885b216ae61b4d86e567193fd0681a3"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -79,6 +86,30 @@
         {
             "rule": "meteofrance\\.io\\/_nuxt\\/app\\.a744a88\\.js",
             "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ce4d3d1cbf70c225031d8145536c8b880c1195a46b33e3dfeac889f5838b8ca0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "francebleu.fr",
+                "www.francebleu.fr"
+            ]
+        },
+        {
+            "rule": "meteofrance\\.io\\/_nuxt\\/pages\\/remote-viewer\\.277251a\\.js",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "widget"
@@ -87,8 +118,30 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "88402263827f4e5688da298bbf0f2b68acf0ae0870fded75be530b7db9332800"
+            ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "francebleu.fr",
+                "www.francebleu.fr"
+            ]
+        },
+        {
+            "rule": "meteofrance\\.io\\/widgetfactory\\/api\\/v1\\/auth\\/me",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "back.widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -108,7 +161,8 @@
     ],
     "types": {
         "Document": 2,
-        "Script": 6
+        "Script": 8,
+        "XHR": 2
     },
     "nameservers": [
         "nscf1.meteo.fr",
