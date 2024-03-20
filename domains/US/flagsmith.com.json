@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000613,
-    "sites": 9,
+    "prevalence": 0.0000681,
+    "sites": 10,
     "subdomains": [
         "edge.api",
-        "api"
+        "api",
+        "realtime"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -35,6 +36,75 @@
             ]
         },
         {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api",
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000034,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrun.com",
+                "www.pellaatlowes.com",
+                "www.pella.com",
+                "www.preflightairportparking.com",
+                "www.shapr3d.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api",
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "5352e88cc8a249ea2a7648125b6b52d9121abebfe58adb1e52a0f55b8bb3a6b0",
+                "db227d82b929a3bb467d8428c4df9cf68ee3b246a73ac0f7395b8759b8330c66"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrun.com",
+                "www.preflightairportparking.com",
+                "www.shapr3d.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/sse\\/environments\\/noF7ZmcLCLxn7D5csG4Xyh\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realtime"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "EventSource",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrun.com",
+                "my.sunrun.com"
+            ]
+        },
+        {
             "rule": "flagsmith\\.com\\/api\\/v1\\/identities\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -46,7 +116,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c1755666a4f03b35b1cae124c49f0eda7b449e5cecb576dacf9cea210afd43b9"
+                "c4fba5d53f88ea0023e650117e778218db70597e09d209063dc9563ea4b43ab3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -68,8 +138,8 @@
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "04ac4beef70de5c5870f13d40ee4ec018006ff1b64dd197e6a2b0f118b91677c",
-                "d924f9164daac4b0463f3324429bc8fbf25372736641c5fc6c22f4936254a16e"
+                "b75dfd57534a6491f974949b7bcb6f5000e84b3040b30091c80b4d440b2bdc99",
+                "4867da3b2f2af374f5922ddebfe9178f969936dd0b0e65d9d4fe78e3fbd92a29"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -78,55 +148,6 @@
                 "pellaatlowes.com",
                 "www.pellaatlowes.com",
                 "www.pella.com"
-            ]
-        },
-        {
-            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "edge.api",
-                "api"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.000034,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pellaatlowes.com",
-                "www.pellaatlowes.com",
-                "www.pella.com",
-                "www.preflightairportparking.com",
-                "www.shapr3d.com"
-            ]
-        },
-        {
-            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api",
-                "edge.api"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "5352e88cc8a249ea2a7648125b6b52d9121abebfe58adb1e52a0f55b8bb3a6b0",
-                "faad08d0658e729ec546ae120ff13ef6cd0db8d9016972e61f1ac4c8338b9f2f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "preflightairportparking.com",
-                "www.preflightairportparking.com",
-                "www.shapr3d.com"
             ]
         }
     ],
@@ -142,12 +163,13 @@
     "types": {
         "Preflight": 8,
         "XHR": 5,
+        "EventSource": 2,
         "Fetch": 3
     },
     "nameservers": [
-        "ns-1757.awsdns-27.co.uk",
         "ns-1401.awsdns-47.org",
-        "ns-47.awsdns-05.com",
-        "ns-864.awsdns-44.net"
+        "ns-1757.awsdns-27.co.uk",
+        "ns-864.awsdns-44.net",
+        "ns-47.awsdns-05.com"
     ]
 }

@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
-    "sites": 4,
+    "prevalence": 0.0000613,
+    "sites": 9,
     "subdomains": [
-        "cloud1-service"
+        "cloud1-service",
+        "analytics"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "newsifier\\.nl\\/api\\/v2\\/embed\\/twitter",
@@ -20,18 +21,69 @@
                 "cloud1-service"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "6113e1fc3d569ad7f6c56f9f76069f26cbafe3ef74e55b187103e182e9889c1f"
+                "0892129d0eb311955c15533707947a151546dcfeb45502f6c455a58331bb22ca",
+                "d74977f4b77aaabfcb513216c07cd91968868435d5964f3506a41757ed0872c8",
+                "b721aa32db3497aa1e17742235fa119867b01b5c89d81df482c3cbe7d4b587b1"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "f1maximaal.nl",
+                "cyclinguptodate.com",
+                "dartsnews.com",
+                "tennis-infinity.com",
                 "www.f1maximaal.nl"
+            ]
+        },
+        {
+            "rule": "newsifier\\.nl\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dagelijksestandaard.nl",
+                "www.fr12.nl"
+            ]
+        },
+        {
+            "rule": "newsifier\\.nl\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dagelijksestandaard.nl",
+                "www.fr12.nl"
             ]
         }
     ],
@@ -45,7 +97,8 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 6,
+        "Script": 2
     },
     "nameservers": [
         "paloma.ns.cloudflare.com",

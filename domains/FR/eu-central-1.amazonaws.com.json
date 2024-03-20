@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.000905,
+    "sites": 9,
     "subdomains": [
         "cognito-identity",
-        "rkkck31tec.execute-api"
+        "rkkck31tec.execute-api",
+        "zecuih4odfh3fabzrmlxtfhl5u.appsync-api",
+        "dataplane.rum"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -26,8 +28,8 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -37,6 +39,7 @@
                 "sensiseeds.com",
                 "www.darjeeling.fr",
                 "www.glady.com",
+                "www.seton.fr",
                 "www.vetostore.com"
             ]
         },
@@ -52,7 +55,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "709d70271c3357aa83fb919d9cc642afaa6b531ebb30a4f5705c72c78b18187c"
+                "700a707730731ca1062f8cb64fb4844add0785ed0c24f3acd6cbdc936f456749"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -78,8 +81,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dexerto.com",
-                "www.dexerto.fr",
+                "dexerto.fr",
+                "www.dexerto.com",
                 "www.woopets.fr"
             ]
         },
@@ -91,11 +94,12 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "0b76cc482bc5ac532a875a4370985d28e414976643b57f8793931cc159f50c61"
+                "3dbd5a078ae6ab89fb598cc863f024d4b049b83f893e6b3e6213419833ce7e5b",
+                "730894bf0e3a655b12e7ac21952956cb0d15ecbcbcee000912ca7574a528df2b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -103,7 +107,72 @@
             "exampleSites": [
                 "darjeeling.fr",
                 "www.darjeeling.fr",
-                "www.glady.com"
+                "www.glady.com",
+                "www.seton.fr"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zecuih4odfh3fabzrmlxtfhl5u.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "darjeeling.fr",
+                "www.darjeeling.fr"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zecuih4odfh3fabzrmlxtfhl5u.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "86a6a8f03bab0920151d5da48cecabd81b93892b961defc63fa31de96c13b2dc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "darjeeling.fr",
+                "www.darjeeling.fr"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/30a230af-be49-4589-a9a1-980c572ed246",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seton.fr",
+                "www.seton.fr"
             ]
         }
     ],
@@ -115,21 +184,29 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.38461538461538464
+            "prevalence": 0.3684210526315789
         },
         {
-            "domain": "sooqr.com",
-            "prevalence": 0.3076923076923077
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.2631578947368421
         },
         {
             "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.21052631578947367
+        },
+        {
+            "domain": "sooqr.com",
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "api-domain-compado.com",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Preflight": 4,
-        "XHR": 2,
-        "Fetch": 6
+        "Preflight": 7,
+        "XHR": 4,
+        "Fetch": 9
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

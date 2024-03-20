@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000592,
-    "sites": 87,
+    "prevalence": 0.000613,
+    "sites": 90,
     "subdomains": [
         "realtimeanalytics",
         "liveapi-cached",
         "liveapi",
+        "pl",
         "streams"
     ],
     "cnames": [],
@@ -20,14 +21,14 @@
     "resources": [
         {
             "rule": "yext\\.com\\/store_pagespixel",
-            "cookies": 0.000102,
+            "cookies": 0.000109,
             "fingerprinting": 0,
             "subdomains": [
                 "realtimeanalytics"
             ],
             "apis": {},
-            "sites": 15,
-            "prevalence": 0.000102,
+            "sites": 16,
+            "prevalence": 0.000109,
             "cnames": [],
             "responseHashes": [
                 "1282fcc1e5e162306fdccbd3fdcf34c82a1a8177b32b561ac4f996df6ccc0206"
@@ -39,6 +40,7 @@
                 "morganstanley.com",
                 "advisor.morganstanley.com",
                 "doctors.nyp.org",
+                "locations.fivebelow.com",
                 "locations.kfc.com",
                 "locations.massageenvy.com",
                 "locations.muschealth.org",
@@ -55,75 +57,123 @@
         },
         {
             "rule": "yext\\.com\\/v2\\/accounts\\/me\\/answers\\/autocomplete",
-            "cookies": 0.00015,
+            "cookies": 0.000163,
             "fingerprinting": 0,
             "subdomains": [
                 "liveapi-cached",
                 "liveapi"
             ],
             "apis": {},
-            "sites": 22,
-            "prevalence": 0.00015,
+            "sites": 24,
+            "prevalence": 0.000163,
             "cnames": [],
             "responseHashes": [
-                "aea8b6c2840590e82746712bf3c7d7bd1df247bfcdc62eeac1fa612330dc817d",
-                "ace89afbd5cb75e8a14fa6f996c57c4b0e6a6c2ac79ce1d94a1255055de62435",
-                "11c796d6d355195600ad28bcdf088e6b34320ae1498007422c4f4d067c68d104",
-                "290c4fdda9732e6dd9519490f570e1475e2aa7582a5d1a27b232b39750ff7267",
-                "5a8a59c87efd66a5ab33132f338712722b8b79751b0fd95306a04038ca707858",
-                "b5f0543d42fd6b52ccc0e3d9f942b555ad824d98ca6b6cbb711862fc6524fdf1",
-                "5b4c1fd830a406defee236e940be7ad185429a31ac294ff59279a8af5e710fd9",
-                "d746d7f22702ed62e47a435c555d813ecd61f5720e9e7bdeef133c3c2349d44d",
-                "4cb4659e0f14b59a073d544e3832525c42e891c660e49515196697152a02870b",
-                "df94d4af441e552fe377e4df518af7cc56590a42372f40d461b829269c7e66ea",
-                "f26b53779e2691f7de64bbbe8c88d2494c1d43032ed65b1e0aa8e7757f6f2c40",
-                "2050d671807dbfc23a46644f65cb822c32ca02ddff095b7c92d0e20713aabb06",
-                "b723baa3ac07637a279b972fe256bb4251f751edef575ca801dd7a5fb2fc72f5",
-                "fe7bdc26960809cfdaa021c00ec6a3cdc332ea3984ec88efb090e307f45af175",
-                "ac14f31a2baca1d2107d5fce9f4c09601a5dcbc20484e7a26b720dfaed365170",
-                "b6fae584df16ee5402bc5b6f79961b083a99a3b317b67d9b4bdfcc9231b3a434",
-                "68d844278a980fb24e4947013f0f3bb8d63c9185b2d731c5c62c9bab7f0142c1",
-                "999ffb6c7ae68be20d959fe777dd6990bbfc721a6f501d1665e2265e4b0385f9",
-                "925fa4758e66500c368960614aab7e61402d57d5c0254ddc2ea56ece04feda9e",
-                "05cd7bb38d57100248800ae386561373eac3945130957cb17c9d4e29608a8db0",
-                "42cba93e654d1f15c6e3efa8fc9d416ca93f71fe7c94e2c251ab247554efc1b4"
+                "3d0829913c8c00ee300da753e2e63ffbbffb28ab62e8eee0937e506c3ac9c70c",
+                "6b7b3525e4f3848a97cb854a4a9b30f6868f8133fc70f01fd62cfc2637372ba2",
+                "2580214be3081643349ca732cff32197b1639ae40f6851afd5ab5c6412d0af12",
+                "414c40778c438fbd2ebe32a72b5d9d71879e4bd2902d301477f74abbb75c9d5f",
+                "774e62c0a5ec924d904d766d3037795fdb0bdc5bc7e0639c61ee852fd63bd66d",
+                "10b9e3c7d02060eb30749895a2ef42bd62966ba8d1223c883dc28a14f65f27ae",
+                "0d43206b74973440329cde96282c80ee7a28c631784d2e3fb9c17be3c2e071a5",
+                "f6bef24aec0dd0cbf7b5f3145a415a06e3ed7ff1a08a61aef6ee9a25c1717880",
+                "da0fd0c1fdea439bd3dbfa51a488691034e14fd27adf5ced5347c348767ef06d",
+                "45f0df5afa68a59a527419f3b4891f77c1a6b0722b3bbd5adeb441295f2b2ef3",
+                "9a51632217b314c75b267a8ed25f7347ab45d87ec3f7ca6843a9ed1498e95a20",
+                "b1c4756208356ab15214442c0efdfb51b75fed613014236fcd9cee86cb1fc904",
+                "d2462dc18a4d5904fc471c4c746d410305af8dec9c6ee671ace5e478ca9a3d14",
+                "ecaa8bf45757a68314f321342e7b0098c26dce2f9a80e0b492bc6d31f8011d14",
+                "645575ce7e40bf6e927b0bf661ecf34afd09bda48d3842a7e133170dfdc010d9",
+                "5ad2664e8543aedb43c54b8dc8077c6281010cd8e7bdce51943f306f29265a8b",
+                "5d8aa1c5432b1d9d57355641c4be6434b4a1feaf9ec688a14e5743e471dc5b0f",
+                "e9335fe102f7697d4d5a68676b16ac2a4dc033f6b4ded0445c6283f5d88760dd",
+                "73fbe799982a2db39e39b62bf745c930a50c8e5df134a426c1ebf97beeb01d2f",
+                "ad3f8141e7d01e1a3b3194b310e4a289bf8325fa2e86d8d6c03e93d2daac4aba",
+                "9e373a9bc8a5ccdedac3cd0686d348bc689850b28cb01d1b5a759e9ff8529bb2",
+                "0d144e9e65484c7284fbc77687e78d37ba5c05b595ca9a8725ea4a1ee97012ff",
+                "4f4631147b24d56fb41fa13ffea60619007b7f9e55821c137c45a03fa698c954"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "ihacares.com",
                 "www.bigrentz.com",
+                "www.schlotzskys.com",
+                "www.scottishwidows.co.uk",
                 "www.skylinechili.com",
-                "www.krispykreme.com",
                 "www.suncoastcreditunion.com",
-                "locations.wendys.com",
-                "www.moes.com",
+                "baptisthealth.net",
+                "www.bojangles.com",
                 "www.akronchildrens.org",
                 "encompasshealth.com",
-                "webmail.optimum.net",
-                "site.krispykreme.com",
-                "fazolis.com",
-                "www.optimum.net",
-                "www.bojangles.com",
-                "www.scottishwidows.co.uk",
                 "pedegoelectricbikes.com",
+                "webmail.optimum.net",
                 "www.lloydsbank.com",
+                "www.optimum.net",
                 "gshock.casio.com",
-                "www.bankofscotland.co.uk",
-                "www.casio.com",
-                "ihacares.com"
+                "fazolis.com",
+                "locations.wendys.com",
+                "site.krispykreme.com",
+                "www.moes.com",
+                "www.casio.com"
+            ]
+        },
+        {
+            "rule": "yext\\.com\\/v2\\/accounts\\/950642\\/locations\\/geosearch",
+            "cookies": 0.0000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "liveapi"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "0140e999282f2375d3b46423949d53833ba47f6a88e3f6f3926d8210d590f1ae",
+                "c7f35a12f1133b4598d829ff2e95678bccfeb5d201b3d98db2a68533b82ff5f4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cabelas.com",
+                "www.basspro.com",
+                "www.cabelas.com"
+            ]
+        },
+        {
+            "rule": "yext\\.com\\/plpixel",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1282fcc1e5e162306fdccbd3fdcf34c82a1a8177b32b561ac4f996df6ccc0206"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finde-offen.at",
+                "www.yellowpagesdirectory.com"
             ]
         },
         {
             "rule": "yext\\.com\\/conversiontracking\\/conversion",
-            "cookies": 0.0000681,
+            "cookies": 0.0000613,
             "fingerprinting": 0,
             "subdomains": [
                 "realtimeanalytics"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.0000681,
+            "sites": 9,
+            "prevalence": 0.0000613,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -131,10 +181,9 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.00000680860335119457
+                "IR_gbd": 0.000006807676335836289
             },
             "exampleSites": [
-                "cremocompany.com",
                 "hvacdirect.com",
                 "www.aarons.com",
                 "www.firefightersfirstcu.org",
@@ -148,21 +197,20 @@
         },
         {
             "rule": "yext\\.com\\/v2\\/accounts\\/me\\/answers\\/autocomplete",
-            "cookies": 0.000034,
+            "cookies": 0.0000272,
             "fingerprinting": 0,
             "subdomains": [
                 "liveapi",
                 "liveapi-cached"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000034,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
-                "91ddb2909ad85e25c4d9a1a71202af8d109cd815f9b67b71ffbefd828def401e",
-                "5d68f3b3bebf5d76f0d9e1b29d5e5a821790279874d2e313ef29ad8c7a1ca5d5",
-                "00c03c82df2728248636821d3dfe8d3b3e0d9fa6e50500537a3bd53ea9f37ebb",
-                "05f49a81513af6b6bacf7f3593584bbb81c5f07331e3501946577beff493f9cc"
+                "bd82346afb4f54aa7a847399b398079b6c19e40243f2f1dec0bc9967e6aa17cb",
+                "c131c1f21b13ec48f5aaec0871f2e3aab67c2794e573eb972c88141ca86bfdf7",
+                "f46b3879c00c0f4958a7cf9fd2da3586ecc4f3d7ad369eb62c36c0c700c6cabd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -171,8 +219,7 @@
                 "usembassy.gov",
                 "locations.theupsstore.com",
                 "www.akronchildrens.org",
-                "www.rate.com",
-                "www.techem.com"
+                "www.rate.com"
             ]
         },
         {
@@ -187,7 +234,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "5cf1591a4e156cc927a45e5c337a3b1f7f839c3fa17ad587da56f32d19543d64"
+                "ad80089fbcafa3542f8101be146074e473e519eb70861be5c48b67b77f623e2b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -199,24 +246,26 @@
         },
         {
             "rule": "yext\\.com\\/v2\\/accounts\\/me\\/entities\\/geosearch",
-            "cookies": 0.0000136,
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "liveapi"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "e2e6b3b475277678739fcb1cdfe6562bad0a50a1f499c2b151ccad176d3567a0"
+                "44da23cc4860b615c1af7e3e04df1d17bb7f22c6337a5296ab6f02979c594ac6",
+                "a241815e80b47f6d520f2a437c5555ddf92750216b81068aaac2cff57726aa35"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "advanceautoparts.com",
-                "www.customink.com"
+                "www.customink.com",
+                "www.pfchangs.com"
             ]
         },
         {
@@ -231,7 +280,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "8434c5db502c5d6eb8f120b1b0c1242ee3857b9db433305d175415394ca1632d"
+                "743cc6dee3f0708c38fd0b29d15449a004ba90a7042059f31991339dc9ee3dc7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -253,8 +302,8 @@
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "fa4089c01a674813d22634268dee0529f271d8db3d4552540af4d9ce85e28d70",
-                "d9854f6dc657db7f515fc931bbd72fa0ffa5a6c5fd4713df873527f61597a720"
+                "acd30fd8f683c58fb81e5c639267a1a0b6eb77fdc49a7ddf1248863b970178ab",
+                "a6c8de3d7e34a817e51024124be10c784133f65b46cd83e7ccb2303651ae5788"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -307,92 +356,68 @@
                 "bankatfirst.com",
                 "www.bankatfirst.com"
             ]
-        },
-        {
-            "rule": "yext\\.com\\/v2\\/accounts\\/950642\\/locations\\/geosearch",
-            "cookies": 0.0000204,
-            "fingerprinting": 0,
-            "subdomains": [
-                "liveapi"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "5bc5d7c61944223acc6eb7c891620cb99be5d53c8ddda562697350c426112736",
-                "5a91f8bf77ddccd9b9ca9063422678f31514050c398229bbe8aed77d327f73c3"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "basspro.com",
-                "www.basspro.com",
-                "www.cabelas.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000592,
+    "cookies": 0.000613,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7305699481865285
+            "prevalence": 0.7275064267352185
         },
         {
             "domain": "basspro.com",
-            "prevalence": 0.16580310880829016
+            "prevalence": 0.16452442159383032
         },
         {
             "domain": "sitescdn.net",
-            "prevalence": 0.04922279792746114
+            "prevalence": 0.04627249357326478
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.02849740932642487
+            "prevalence": 0.030848329048843187
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.010362694300518135
+            "prevalence": 0.010282776349614395
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.005141388174807198
         },
         {
             "domain": "d2zf0x1vlux694.cloudfront.net",
-            "prevalence": 0.0051813471502590676
+            "prevalence": 0.005141388174807198
         },
         {
             "domain": "pagescdn.com",
-            "prevalence": 0.0025906735751295338
+            "prevalence": 0.002570694087403599
         },
         {
             "domain": "ensighten.com",
-            "prevalence": 0.0025906735751295338
+            "prevalence": 0.002570694087403599
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.0025906735751295338
-        },
-        {
-            "domain": "ajax.googleapis.com",
-            "prevalence": 0.0025906735751295338
+            "prevalence": 0.002570694087403599
         }
     ],
     "types": {
-        "Image": 25,
-        "XHR": 27,
+        "Image": 27,
+        "XHR": 29,
         "Fetch": 12,
         "Preflight": 3,
         "Ping": 2
     },
     "nameservers": [
-        "ns-70.awsdns-08.com",
-        "ns-729.awsdns-27.net",
+        "ns-cloud-d4.googledomains.com",
         "ns-1701.awsdns-20.co.uk",
-        "ns-1457.awsdns-54.org",
+        "ns-70.awsdns-08.com",
         "ns-cloud-d1.googledomains.com",
+        "ns-729.awsdns-27.net",
         "ns-cloud-d2.googledomains.com",
-        "ns-cloud-d3.googledomains.com",
-        "ns-cloud-d4.googledomains.com"
+        "ns-1457.awsdns-54.org",
+        "ns-cloud-d3.googledomains.com"
     ]
 }

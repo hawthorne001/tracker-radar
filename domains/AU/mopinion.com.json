@@ -4,10 +4,14 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000602,
+    "sites": 6,
     "subdomains": [
-        "deploy"
+        "deploy",
+        "collect",
+        "cacheorcheck",
+        "fonts",
+        "gstatic"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,12 +24,11 @@
                 "deploy"
             ],
             "apis": {
-                "window.localStorage": 5,
-                "Document.cookie getter": 4,
-                "Date.prototype.getTime": 1
+                "window.localStorage": 6,
+                "Document.cookie getter": 6
             },
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 6,
+            "prevalence": 0.000602,
             "cnames": [],
             "responseHashes": [
                 "213c5015a06dd9b14f4dd721a4bbfa14d86d574905adf011d9de4ce1744f1ce3"
@@ -38,7 +41,104 @@
                 "www.autotrader.com.au",
                 "www.bridgestone.com.au",
                 "www.carexpert.com.au",
-                "www.colgate.com"
+                "www.lubemobile.com.au",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/assets\\/surveys\\/2\\.0\\/js\\/survey\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "collect"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Document.cookie getter": 2,
+                "window.innerWidth": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d3c5fdc93cebbd43a25df0a4d4c494701ae09bfb34940cea5dea01ab3778e380"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carexpert.com.au",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/survey\\/public\\/json-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cacheorcheck"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8eb6336f83e9281d407cf99795b879f0e75f26a64ace223874468e5b79362602"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carexpert.com.au",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fonts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d389e7072ad3d1edef16857153961e54a785e11747416455adaa88f8b79c6554"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carexpert.com.au",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/l\\/font",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4a6524dd21f7356e3916624fee513362dc9f7d3c15a5fbbb36e2879f41f1506b"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carexpert.com.au",
+                "www.tomtom.com"
             ]
         }
     ],
@@ -48,20 +148,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.65
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4
+            "prevalence": 0.3
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 8,
+        "XHR": 2,
+        "Stylesheet": 2,
+        "Font": 2
     },
     "nameservers": [
-        "ns-1425.awsdns-50.org",
         "ns-869.awsdns-44.net",
-        "ns-134.awsdns-16.com",
-        "ns-1628.awsdns-11.co.uk"
+        "ns-1628.awsdns-11.co.uk",
+        "ns-1425.awsdns-50.org",
+        "ns-134.awsdns-16.com"
     ]
 }

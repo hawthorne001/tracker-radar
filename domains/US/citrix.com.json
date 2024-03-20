@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000272,
+    "sites": 4,
     "subdomains": [
         "www",
-        "titan"
+        "titan",
+        "mia-itm-radar-testobject",
+        "ams-itm-radar-testobject"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -40,18 +42,38 @@
             "type": "Script",
             "firstPartyCookies": {
                 "insight_session": {
-                    "ttl": 315360005,
+                    "ttl": 315360004,
                     "length": 36,
-                    "prevalence": 0.00001361720670238914,
+                    "prevalence": 0.000013615352671672577,
                     "uniqueness": 1
                 },
                 "insight_selfsvc_session": {
-                    "ttl": 7205,
+                    "ttl": 7204,
                     "length": 13,
-                    "prevalence": 0.00001361720670238914,
+                    "prevalence": 0.000013615352671672577,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "netscaler.com",
+                "docs.sharefile.com"
+            ]
+        },
+        {
+            "rule": "citrix\\.com\\/api\\/v2\\/sendInsights",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "titan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "netscaler.com",
@@ -79,25 +101,27 @@
             ]
         },
         {
-            "rule": "citrix\\.com\\/api\\/v2\\/sendInsights",
-            "cookies": 0.0000136,
+            "rule": "citrix\\.com\\/r20\\.gif",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "titan"
+                "mia-itm-radar-testobject",
+                "ams-itm-radar-testobject"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "4b99468f12b21b72f6dbe5fc910326e357a55eec772149c703dfd8a93673f6b7"
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
             ],
-            "type": "XHR",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "netscaler.com",
-                "docs.sharefile.com"
+                "3ds.com",
+                "www.3ds.com",
+                "www.archiexpo.com"
             ]
         }
     ],
@@ -106,19 +130,24 @@
     "cookies": 0.0000136,
     "topInitiators": [
         {
+            "domain": "cedexis.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
             "domain": "adobedtm.com",
-            "prevalence": 1
+            "prevalence": 0.4444444444444444
         }
     ],
     "types": {
         "Script": 2,
+        "XHR": 2,
         "Preflight": 2,
-        "XHR": 2
+        "Image": 3
     },
     "nameservers": [
         "ns2.cedexis.net",
         "ns1.cedexis.net",
-        "ns3.cedexis.net",
-        "ns4.cedexis.net"
+        "ns4.cedexis.net",
+        "ns3.cedexis.net"
     ]
 }

@@ -8,7 +8,8 @@
     "sites": 3,
     "subdomains": [
         "ingest.make",
-        "cdn"
+        "cdn",
+        "navi"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,8 +25,11 @@
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c2be491bdb2748dfc0443b0adced706d25147d1eb97090ded5b56ae5bc7ce939",
+                "c2254f87b8b1edacc74d248381afe43fb7bd68b95ca161f06f83cabdadbf4908"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -45,11 +49,8 @@
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [
-                "f7f5130094afa790649b2b3ac8b62a1e14a8138b7f784e93c884104299b46f93",
-                "cd16daee52726a44debf141077f6260cc20a1575aea27353e93c6ab6270e7186"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -93,8 +94,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "bcdf73f23285c2850f92c81f45c29db6196943f81f5b8333f02657eca3142250",
-                "7a803e766a4f91b40181472a73feb77611e1698f47f41314f621b9e562901a19"
+                "c8ab8234d35b17ffbe8730a564f56442607e82a073abf8385421b05d8ca84fc5",
+                "dbac05f12d69f96d1560d6be0d42d800159b4761f918b76a630778426b5b95ec"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -107,15 +108,13 @@
         },
         {
             "rule": "rvohealth\\.com\\/cohesion\\/xs1\\.html",
-            "cookies": 0.000201,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 3,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
+                "Date.prototype.getTime": 3
             },
             "sites": 3,
             "prevalence": 0.000302,
@@ -135,13 +134,11 @@
         {
             "rule": "rvohealth\\.com\\/cohesion\\/xs2\\.html",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {
-                "Document.cookie getter": 1
-            },
+            "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
@@ -179,11 +176,33 @@
                 "www.healthline.com",
                 "www.medicalnewstoday.com"
             ]
+        },
+        {
+            "rule": "rvohealth\\.com\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "navi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "healthline.com",
+                "www.medicalnewstoday.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
@@ -191,15 +210,16 @@
         }
     ],
     "types": {
-        "Preflight": 3,
         "XHR": 9,
+        "Preflight": 3,
         "Script": 3,
-        "Document": 6
+        "Document": 6,
+        "Image": 2
     },
     "nameservers": [
-        "ns-675.awsdns-20.net",
-        "ns-1652.awsdns-14.co.uk",
         "ns-454.awsdns-56.com",
-        "ns-1078.awsdns-06.org"
+        "ns-1078.awsdns-06.org",
+        "ns-1652.awsdns-14.co.uk",
+        "ns-675.awsdns-20.net"
     ]
 }

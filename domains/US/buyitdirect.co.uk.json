@@ -73,9 +73,9 @@
                 "scriptsld"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
-                "Event.prototype.timeStamp": 2,
-                "Navigator.prototype.userAgent": 1
+                "Event.prototype.timeStamp": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -105,11 +105,12 @@
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.appVersion": 2,
                 "Document.cookie getter": 2,
-                "Navigator.prototype.platform": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
+                "Navigator.prototype.platform": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
                 "PerformanceTiming.prototype.navigationStart": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "window.innerHeight": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -120,15 +121,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "bdgeoip": {
-                    "ttl": 172807,
+                    "ttl": 172806,
                     "length": 15,
-                    "prevalence": 0.00001361720670238914,
+                    "prevalence": 0.000013615352671672577,
                     "uniqueness": 0.5
                 },
                 "rtb_uid": {
-                    "ttl": 2592007,
+                    "ttl": 2592006,
                     "length": 36,
-                    "prevalence": 0.00000680860335119457,
+                    "prevalence": 0.000006807676335836289,
+                    "uniqueness": 1
+                },
+                "EnhEcomListName": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.000006807676335836289,
                     "uniqueness": 1
                 }
             },
@@ -167,12 +174,14 @@
         {
             "rule": "buyitdirect\\.co\\.uk\\/Scripts\\/bundles\\/bid_comm_bunjs_2\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scriptsap",
                 "scriptsld"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -305,37 +314,17 @@
             ]
         },
         {
-            "rule": "buyitdirect\\.co\\.uk\\/Scripts\\/product\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scriptsap",
-                "scriptsld"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "42e1097463e09b203d256aa4727bce47029ce131120e60425a7535710ec2e1d0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "appliancesdirect.co.uk",
-                "www.laptopsdirect.co.uk"
-            ]
-        },
-        {
             "rule": "buyitdirect\\.co\\.uk\\/MDC\\/gsmdc\\.html",
-            "cookies": 0,
+            "cookies": 0.00000681,
             "fingerprinting": 1,
             "subdomains": [
                 "contentap"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -344,52 +333,6 @@
                 "ca803c845639d6ff7bdee23c87edc1080746aeeed2e6fd9ccb7b3d98de7eb2a3"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "appliancesdirect.co.uk",
-                "www.laptopsdirect.co.uk"
-            ]
-        },
-        {
-            "rule": "buyitdirect\\.co\\.uk\\/Images\\/icon-right-black\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "contentap",
-                "contentld"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "2fbd8a27cf41ccc22d38a6b445cb526cfb06f9e0a3d959fc36934ba3a4bee264"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "appliancesdirect.co.uk",
-                "www.laptopsdirect.co.uk"
-            ]
-        },
-        {
-            "rule": "buyitdirect\\.co\\.uk\\/Images\\/icon-left-black\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "contentap",
-                "contentld"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "58329ecd1b69e513ab5879558508c8bb9ab2d1e68eeae458b7474ae59335c6d2"
-            ],
-            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -454,15 +397,14 @@
     ],
     "types": {
         "Stylesheet": 8,
-        "Script": 18,
+        "Script": 16,
         "Document": 2,
-        "Image": 6
+        "Image": 2
     },
     "nameservers": [
-        "ns3.no-ip.com",
         "ns1.no-ip.com",
-        "ns4.no-ip.com",
         "ns2.no-ip.com",
-        "ns5.no-ip.com"
+        "ns3.no-ip.com",
+        "ns4.no-ip.com"
     ]
 }
