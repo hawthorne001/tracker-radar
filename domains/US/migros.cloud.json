@@ -12,8 +12,8 @@
         "migros-ch.service",
         "mcap-lb02.gcp",
         "mcap-lb04.gcp",
-        "test.cdn.gcp",
-        "onlineberatung-widget.service"
+        "onlineberatung-widget.service",
+        "test.cdn.gcp"
     ],
     "cnames": [
         {
@@ -41,7 +41,7 @@
             "resolved": "mcap-lb04.gcp.migros.cloud"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "migros\\.cloud\\/ch\\.migros\\/static\\/fonts\\/helvetica-now\\/HelveticaNowTextW05-Bold\\.woff2",
@@ -133,14 +133,14 @@
         },
         {
             "rule": "migros\\.cloud\\/\\.rest\\/fragments\\/v1\\/resources\\/css\\/basics\\.css",
-            "cookies": 0.0000204,
+            "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
                 "migros-ch.service"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [
                 {
                     "original": "shared.migros.ch",
@@ -155,8 +155,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "migros.ch",
-                "filialen.migros.ch",
-                "www.klubschule.ch"
+                "filialen.migros.ch"
             ]
         },
         {
@@ -265,8 +264,8 @@
                 }
             ],
             "responseHashes": [
-                "63a145609fae93d6e40bed6449b75385507ea62a711ab828f1da19e68e593841",
-                "89f0951444d8628ce4c66c505aef592a353401b4840f267bccb0bf2ba1ecd9fa"
+                "9bf4fb7d83ddfdfc501ebe9f4e861174efe5c0007a4174d055bcaf00174eab80",
+                "c62c879d5b4ba61dd28a9df4f0d44267a6355caedd9134636b8dfdb265e11a9c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -353,7 +352,7 @@
                 }
             ],
             "responseHashes": [
-                "a1b7be85090b0cb27bbc35d38837e0d4aacf8325111689c07a044d8fc469e803"
+                "0a3b1f881cb3d8fb165cf72367f9da23995dc04388fc977653aef5c3112ea845"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -361,6 +360,31 @@
             "exampleSites": [
                 "migros.ch",
                 "filialen.migros.ch"
+            ]
+        },
+        {
+            "rule": "migros\\.cloud\\/reactions\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcap-lb04.gcp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "web-api.migros.ch",
+                    "resolved": "mcap-lb04.gcp.migros.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "migros.ch",
+                "migusto.migros.ch"
             ]
         },
         {
@@ -391,28 +415,41 @@
             ]
         },
         {
-            "rule": "migros\\.cloud\\/reactions\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "migros\\.cloud\\/widget\\.js",
+            "cookies": 0.000034,
+            "fingerprinting": 1,
             "subdomains": [
-                "mcap-lb04.gcp"
+                "onlineberatung-widget.service"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "web-api.migros.ch",
-                    "resolved": "mcap-lb04.gcp.migros.cloud"
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 5,
+                "window.innerWidth": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000034,
+            "cnames": [],
+            "responseHashes": [
+                "fa36770bdcade47d6b885ad43c764af9bf519776f1b8e549271cf80bd7fc961a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "onlineberatung-throttled": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00003404440752517584,
+                    "uniqueness": 0.2
                 }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "migros.ch",
-                "migusto.migros.ch"
+                "bikeworld.ch",
+                "www.doitgarden.ch",
+                "www.melectronics.ch",
+                "www.micasa.ch",
+                "www.sportx.ch"
             ]
         },
         {
@@ -549,43 +586,6 @@
             ]
         },
         {
-            "rule": "migros\\.cloud\\/widget\\.js",
-            "cookies": 0.0000272,
-            "fingerprinting": 1,
-            "subdomains": [
-                "onlineberatung-widget.service"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Navigator.prototype.language": 4,
-                "Document.cookie getter": 4,
-                "Document.cookie setter": 4,
-                "window.innerWidth": 4
-            },
-            "sites": 4,
-            "prevalence": 0.0000272,
-            "cnames": [],
-            "responseHashes": [
-                "807f4f5c6ee09dfb15cee56eec62a5255197d348114d4365bd0c8af0e40f1829"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "onlineberatung-throttled": {
-                    "ttl": null,
-                    "length": 5,
-                    "prevalence": 0.000027230705343345155,
-                    "uniqueness": 0.25
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "doitgarden.ch",
-                "www.melectronics.ch",
-                "www.micasa.ch",
-                "www.sportx.ch"
-            ]
-        },
-        {
             "rule": "migros\\.cloud\\/ch\\.migros\\/static\\/img\\/m\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
@@ -593,8 +593,8 @@
                 "prod.cdn.gcp"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "cdn.migros.ch",
@@ -609,7 +609,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "doitgarden.ch",
-                "www.melectronics.ch"
+                "www.melectronics.ch",
+                "www.micasa.ch"
             ]
         },
         {
@@ -683,35 +684,35 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4909090909090909
+            "prevalence": 0.46153846153846156
         },
         {
             "domain": "cloudflare.com",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.38461538461538464
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.12727272727272726
+            "prevalence": 0.1346153846153846
         },
         {
             "domain": "maps.googleapis.com",
-            "prevalence": 0.01818181818181818
+            "prevalence": 0.019230769230769232
         }
     ],
     "types": {
         "Font": 27,
         "XHR": 7,
-        "Stylesheet": 3,
-        "Fetch": 13,
+        "Stylesheet": 2,
+        "Fetch": 14,
         "Ping": 8,
         "Image": 7,
         "Preflight": 2,
-        "Script": 4
+        "Script": 5
     },
     "nameservers": [
-        "ns2-04.azure-dns.net",
         "ns1-04.azure-dns.com",
         "ns4-04.azure-dns.info",
+        "ns2-04.azure-dns.net",
         "ns3-04.azure-dns.org"
     ]
 }

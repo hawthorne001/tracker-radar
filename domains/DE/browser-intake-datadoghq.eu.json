@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000603,
+    "prevalence": 0.000602,
     "sites": 6,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,24 +24,26 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 6,
+            "prevalence": 0.000602,
             "cnames": [],
             "responseHashes": [
-                "724ca4e17bffd947ef332b25623dd048a3077f670d54962c262ec96228d322f0",
-                "7cfba102cc7a8cf6e69eaf11a25e3fa1ab786ea1e573307e19673d234e08fe27",
-                "e5007f947240567ee391fb4028bd894f627dd5e9128f5dcdb7e2fb26bc6caa83",
-                "c4dda24232cf436c43b912b18933144571167c686332363a443d57c9a752a679"
+                "3cee3decc0e3b7dfc9b4c4dd7a75e2266c40f2ad99a319d9982ba8f0766882c5",
+                "edfdec5284d43568997f6ec9fcf7ce66e54112a59af4104fc522b33e6f98f148",
+                "ac28bf16118960f1fda076c4c060a26ae8187468db96002de3094a56d324f966",
+                "af566fa4c313c60aa17e7c895e319871b67960b696a3f3e942fd65f30c56775d",
+                "4a63115f56955f3a5cfa8586a93186fef951a304e23607bc08f54b30f0df32d7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "1komma5grad.com",
-                "autohaus.toyota.de",
+                "knauf.de",
+                "downloads.knauf.de",
+                "my.tui.com",
+                "wolt.com",
                 "www.cupraofficial.de",
-                "www.lexus.de",
-                "www.toyota.de"
+                "www.lefigaro.fr"
             ]
         },
         {
@@ -53,7 +56,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b10090dd35c0cb9b699cede9154844209739e5e9a03711b8cc8c2fb1350830ec"
+                "d6db02a5665b13a57fb3ae6fef25ffbf500c957843cea82b2d19e09e9ad006cb"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -62,6 +65,28 @@
                 "blablacar.de",
                 "www.blablacar.de"
             ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8e64fa2db759e746ddd3b2c28e594867fa6a6e9d0b734d7cc02e143fc1001bea"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupraofficial.de",
+                "www.lefigaro.fr"
+            ]
         }
     ],
     "categories": [],
@@ -69,25 +94,30 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.5769230769230769
+            "domain": "first party",
+            "prevalence": 0.6363636363636364
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3076923076923077
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.18181818181818182
+        },
+        {
+            "domain": "knauf.com",
+            "prevalence": 0.09090909090909091
         },
         {
             "domain": "blablacar.com",
-            "prevalence": 0.11538461538461539
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Fetch": 7
+        "Fetch": 8,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-cloud-e2.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e4.googledomains.com"
     ]
 }

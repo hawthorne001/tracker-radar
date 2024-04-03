@@ -7,8 +7,8 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "september",
-        "september-loadbalancer"
+        "september-loadbalancer",
+        "september"
     ],
     "cnames": [
         {
@@ -16,8 +16,35 @@
             "resolved": "september-loadbalancer.durchsichtig.xyz"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "durchsichtig\\.xyz\\/javascript\\/script\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "september-loadbalancer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "1738964797.armedangels.com",
+                    "resolved": "september-loadbalancer.durchsichtig.xyz"
+                }
+            ],
+            "responseHashes": [
+                "c8fd11d560b30020640f7a3354cf8e18118f3492caf5430728485cf719741548"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armedangels.com",
+                "www.armedangels.com"
+            ]
+        },
         {
             "rule": "durchsichtig\\.xyz\\/back",
             "cookies": 0,
@@ -35,9 +62,7 @@
                     "resolved": "september-loadbalancer.durchsichtig.xyz"
                 }
             ],
-            "responseHashes": [
-                "7f875ece25a870d1ae3942db703c7794050a39c5a7f977e12968c4b68cc1984e"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -63,9 +88,7 @@
                     "resolved": "september-loadbalancer.durchsichtig.xyz"
                 }
             ],
-            "responseHashes": [
-                "492fe23c875e2b44e1b9ef064b88637d4b6675b0dcfaea7919f8ad5896c75774"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -76,33 +99,6 @@
         },
         {
             "rule": "durchsichtig\\.xyz\\/finster",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "september-loadbalancer"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "1738964797.armedangels.com",
-                    "resolved": "september-loadbalancer.durchsichtig.xyz"
-                }
-            ],
-            "responseHashes": [
-                "2aed223868cb6a6e33afcf3770cf67514be529de504f55010b59c45733129ccb"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "armedangels.com",
-                "www.armedangels.com"
-            ]
-        },
-        {
-            "rule": "durchsichtig\\.xyz\\/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g\\/dj1kUXc0dzlXZ1hjUQ==",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -117,8 +113,10 @@
                     "resolved": "september-loadbalancer.durchsichtig.xyz"
                 }
             ],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "60e76a59078a5142d594a1efe0d370785d9db2170b562c0cccde89017e973081"
+            ],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -137,11 +135,12 @@
         }
     ],
     "types": {
-        "Fetch": 6,
+        "Script": 2,
+        "Fetch": 4,
         "Document": 2
     },
     "nameservers": [
-        "journey.ns.cloudflare.com",
-        "ganz.ns.cloudflare.com"
+        "ganz.ns.cloudflare.com",
+        "journey.ns.cloudflare.com"
     ]
 }

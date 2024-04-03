@@ -9,24 +9,17 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000905,
+    "prevalence": 0.000904,
     "sites": 9,
     "subdomains": [
         "unagi",
-        "unagi-eu",
+        "fls-na",
         "fls-eu",
+        "payments",
+        "payments-eu",
         "apay-us"
     ],
-    "cnames": [
-        {
-            "original": "fls-eu.amazon.com.be",
-            "resolved": "fls-eu.amazon.com"
-        },
-        {
-            "original": "unagi.amazon.com.be",
-            "resolved": "unagi-eu.amazon.com"
-        }
-    ],
+    "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
@@ -34,18 +27,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "unagi",
-                "unagi-eu"
+                "unagi"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [
-                {
-                    "original": "unagi.amazon.com.be",
-                    "resolved": "unagi-eu.amazon.com"
-                }
-            ],
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
@@ -55,29 +42,6 @@
             "exampleSites": [
                 "abebooks.fr",
                 "www.abebooks.com",
-                "www.amazon.com.be",
-                "www.audible.fr"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/events\\/com\\.amazon\\.csm\\.nexusclient\\.prod",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "unagi-eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "com.be",
                 "www.audible.fr"
             ]
         },
@@ -86,17 +50,13 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "fls-na",
                 "fls-eu"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "fls-eu.amazon.com.be",
-                    "resolved": "fls-eu.amazon.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
@@ -109,8 +69,31 @@
             ]
         },
         {
+            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payments",
+                "payments-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "677429a248c57d9d24a6589e063e986b0ffea2f69b8398484ea7b0f62a54995b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathway.com",
+                "www.motea.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/cs\\/uedata",
-            "cookies": 0.000101,
+            "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
                 "apay-us"
@@ -129,6 +112,28 @@
                 "mathway.com",
                 "www.mathway.com"
             ]
+        },
+        {
+            "rule": "amazon\\.com\\/cs\\/uedata",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payments-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motea.com",
+                "www.motea.com"
+            ]
         }
     ],
     "categories": [
@@ -140,32 +145,28 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7386363636363636
-        },
-        {
-            "domain": "media-amazon.com",
-            "prevalence": 0.14772727272727273
-        },
-        {
-            "domain": "ssl-images-amazon.com",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.810126582278481
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.13924050632911392
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.02531645569620253
+        },
+        {
+            "domain": "ssl-images-amazon.com",
+            "prevalence": 0.02531645569620253
         }
     ],
     "types": {
-        "Ping": 8,
-        "XHR": 2
+        "Ping": 7,
+        "XHR": 4
     },
     "nameservers": [
         "ns1.amzndns.co.uk",
