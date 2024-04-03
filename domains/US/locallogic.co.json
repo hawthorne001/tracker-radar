@@ -8,39 +8,40 @@
     "sites": 4,
     "subdomains": [
         "cdn",
-        "static"
+        "static",
+        "api",
+        "analytics"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "locallogic\\.co\\/sdk\\/",
-            "cookies": 0.0000204,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 3,
-                "Document.cookie getter": 3,
-                "Document.cookie setter": 3,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
                 "Navigator.prototype.userAgent": 1,
                 "Navigator.prototype.appVersion": 1
             },
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "ec8e6e0337cea9b03dc31e82b8d78a40a4ecb20c096aae6e1d7d41a04834879e",
-                "95ff1ec4d1e8b4a44a400b573829e124f0fe54e055d536a8903d1662b09332fa",
-                "ffa02c4064ec891620c4da4b55cb9c76cf59698a1504390ba15d88df7fac6729"
+                "0240580cf51fd31985b2f6493b9fdd9a9ce2972340f91f6cc3c6da7e3aaf4231"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "ll-visitor-id": {
-                    "ttl": 31536004,
+                    "ttl": 31536005,
                     "length": 36,
-                    "prevalence": 0.000020423029007508866,
+                    "prevalence": 0.000013617763010070337,
                     "uniqueness": 1
                 }
             },
@@ -48,21 +49,18 @@
             "exampleSites": [
                 "centris.ca",
                 "www.johnrwood.com",
-                "www.mhbay.com",
                 "www.royallepage.ca"
             ]
         },
         {
             "rule": "locallogic\\.co\\/cookie\\/xdomain_cookie\\.html",
-            "cookies": 0.0000136,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
             "apis": {
-                "Date.prototype.getTime": 3,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
+                "Date.prototype.getTime": 3
             },
             "sites": 3,
             "prevalence": 0.0000204,
@@ -81,37 +79,29 @@
         },
         {
             "rule": "locallogic\\.co\\/sdk\\/v64bf168f\\/assets\\/framework\\.min\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.00000681,
             "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.appVersion": 3,
-                "Document.cookie getter": 3,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
             },
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "7ecba4daa3193c4b398ec649bfa638ec6f097ecd309276a43e33ba8cc30e404c"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "ll-commute-mode": {
-                    "ttl": 31536018,
-                    "length": 3,
-                    "prevalence": 0.000006807676335836289,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "centris.ca",
-                "www.mhbay.com",
                 "www.royallepage.ca"
             ]
         },
@@ -123,8 +113,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "b049881ebdda1b379776a4306cd73a5dcf12422ff80e6b968f27921da57d6d2b"
@@ -134,29 +124,132 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "centris.ca",
-                "www.mhbay.com",
                 "www.royallepage.ca"
             ]
         },
         {
-            "rule": "locallogic\\.co\\/tracking\\/default\\.js",
+            "rule": "locallogic\\.co\\/v3\\/pois",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "static"
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mhbay.com",
+                "www.mhbay.com"
+            ]
+        },
+        {
+            "rule": "locallogic\\.co\\/v3\\/pois",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "aad5319fa68d4ffea7c51f2994cd36ba8a8fb9a460f3a9f54e49efa059e47d3b"
+                "8303fbcc25f3a9d0aa09ff658cc835cb01fc668d6cd09642100c5945384b34d6"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "johnrwood.com",
+                "mhbay.com",
+                "www.mhbay.com"
+            ]
+        },
+        {
+            "rule": "locallogic\\.co\\/track-v2\\/record",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mhbay.com",
+                "www.mhbay.com"
+            ]
+        },
+        {
+            "rule": "locallogic\\.co\\/track-v2\\/record",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mhbay.com",
+                "www.mhbay.com"
+            ]
+        },
+        {
+            "rule": "locallogic\\.co\\/v3\\/scores",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "060351d466f52e68ce7957c194db3043f74df08f0ef5fbcca5de8fac8ef4bf77"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mhbay.com",
+                "www.mhbay.com"
+            ]
+        },
+        {
+            "rule": "locallogic\\.co\\/v3\\/scores",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mhbay.com",
                 "www.mhbay.com"
             ]
         }
@@ -171,13 +264,15 @@
         }
     ],
     "types": {
-        "Script": 12,
-        "Document": 3
+        "Script": 7,
+        "Document": 3,
+        "Preflight": 6,
+        "Fetch": 6
     },
     "nameservers": [
         "ns-2037.awsdns-62.co.uk",
         "ns-265.awsdns-33.com",
-        "ns-1046.awsdns-02.org",
-        "ns-803.awsdns-36.net"
+        "ns-803.awsdns-36.net",
+        "ns-1046.awsdns-02.org"
     ]
 }

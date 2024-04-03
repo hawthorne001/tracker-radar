@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "idfm-production-common-design.osc-secnum-fr1",
         "rdvmairie-backend-prod.osc-secnum-fr1"
     ],
     "cnames": [
@@ -17,6 +18,31 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "scalingo\\.io\\/common-header\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "idfm-production-common-design.osc-secnum-fr1"
+            ],
+            "apis": {
+                "Navigator.prototype.languages": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "de8b8d6dd07388e2685420166de372b87fb3edf3faf682229d9020e7dda544c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iledefrance-mobilites.fr",
+                "www.iledefrance-mobilites.fr"
+            ]
+        },
         {
             "rule": "scalingo\\.io\\/api\\/Announcement",
             "cookies": 0,
@@ -73,7 +99,14 @@
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
+        "Script": 2,
         "Preflight": 2,
         "XHR": 2
     },
