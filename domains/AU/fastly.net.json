@@ -23,7 +23,34 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "fastly\\.net\\/pa",
+            "rule": "fastly\\.net\\/d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "6db541007d5521088cfbffac49ddc98652e828513590f424bfa31dc753cd5b1f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "speedrun.com",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/d",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -39,7 +66,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Ping",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -67,7 +94,8 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns1.fastly.net",

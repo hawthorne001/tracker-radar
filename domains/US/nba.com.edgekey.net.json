@@ -9,17 +9,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000545,
-    "sites": 8,
+    "prevalence": 0.0000818,
+    "sites": 12,
     "subdomains": [
         "cdn",
+        "core-api",
+        "stats",
+        "identity",
         "stats.gleague",
         "ak-static.cms",
         "cdn-gleague",
-        "core-api",
-        "identity",
         "ottapp-appgw-client",
-        "stats"
+        "storyteller-assets"
     ],
     "cnames": [
         {
@@ -53,20 +54,24 @@
         {
             "original": "stats.nba.com",
             "resolved": "stats.nba.com.edgekey.net"
+        },
+        {
+            "original": "storyteller-assets.nba.com",
+            "resolved": "storyteller-assets.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/user-consent\\/index\\.min\\.js",
-            "cookies": 0.0000272,
+            "cookies": 0.0000409,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [
                 {
                     "original": "cdn.nba.com",
@@ -82,7 +87,191 @@
             "exampleSites": [
                 "nba.com",
                 "gleague.nba.com",
+                "maine.gleague.nba.com",
                 "official.nba.com",
+                "pr.nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/rollingschedule",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/rollingschedule",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0f36944a3c851e33157e8fdf66afc9ce28718663e08314a344ffc55def3d39f6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "cdn.nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/api\\/v1\\/sts",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "identity.nba.com",
+                    "resolved": "identity.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/api\\/v1\\/sts",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "identity.nba.com",
+                    "resolved": "identity.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "4bccc6d127485b10f1b8a41d4a2a16ec87807498bbba8254d22abe1caf05345d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "267429cbbed4ce173a43f8bf45c9c29efe68a3de12007f75be774ff620c58acf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
                 "www.nba.com"
             ]
         },
@@ -94,8 +283,8 @@
                 "stats.gleague"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "stats.gleague.nba.com",
@@ -110,7 +299,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
@@ -121,8 +311,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -137,7 +327,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
@@ -148,8 +339,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -164,19 +355,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709909\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -191,19 +383,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709928\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -218,19 +411,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709931\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -245,19 +439,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709893\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -272,19 +467,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709929\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -299,19 +495,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709932\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -326,19 +523,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709910\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -353,19 +551,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709930\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -380,19 +579,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709917\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -407,19 +607,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709922\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -434,19 +635,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709911\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -461,19 +663,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709921\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -488,19 +691,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709915\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -515,19 +719,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709926\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -542,19 +747,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709924\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -569,19 +775,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709889\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -596,19 +803,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709925\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -623,19 +831,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709920\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -650,19 +859,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709908\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -677,19 +887,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709933\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -704,19 +915,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709903\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -731,19 +943,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709902\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -758,19 +971,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709904\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -785,19 +999,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709905\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -812,19 +1027,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-content\\/uploads\\/logos\\/nbagleague\\/1612709914\\/primary\\/D\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -839,11 +1055,12 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "gleague.nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/03\\/2024_GLPlayoff_Bracket_2000x1333\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/04\\/GL_Awards_FirstTeam_2000x1333\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -859,7 +1076,7 @@
                 }
             ],
             "responseHashes": [
-                "24db0dfead4c6d03fce58b05b6c931a5c64b5f0203b6f5bf1c4dd83b032b7ccf"
+                "25394622a4c1bd4d8f61d2556b664b3097ee5cc0c371e11bd2fe365239e4ee34"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -870,7 +1087,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/03\\/Gui-2000x1333-1\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/04\\/GL_Awards_All-RookieTeam_2000x1333\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -886,7 +1103,7 @@
                 }
             ],
             "responseHashes": [
-                "3772c7f0e0e6116684624dbe5b77db37c6feaa74b35f8d05293950e62e1bf302"
+                "58eb9c95819438a08355bb712292fac7956ecb37fa08c2c2b637a4dbfc485fef"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -897,7 +1114,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/03\\/RGV-2000x1333-1-scaled\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/04\\/GL_Awards_All-DefensiveTeam_2000x1333\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -913,7 +1130,7 @@
                 }
             ],
             "responseHashes": [
-                "3bd966272c3a1be39fdf9bd05cf5a23e7e14d724f7391c8a69cd47b2e5ddf4b0"
+                "2d24f5277b481c206b7d0e1d6ee6a81de676a8f12d4d93c0476ed8fa789d1738"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -924,7 +1141,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/03\\/Maine-2000x1333-1-scaled\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/04\\/CHAMPS\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -940,7 +1157,7 @@
                 }
             ],
             "responseHashes": [
-                "0c818138f1676a7d22e3d679b127c051e912870fc8b5994a635802290ffd1872"
+                "4608c35e98f28f238ed59889eb16802841a1705583df4989abfab90276ca3329"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -951,7 +1168,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/03\\/SLC-2000x1333-1-scaled\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/2\\/2024\\/04\\/DIENG\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -967,7 +1184,7 @@
                 }
             ],
             "responseHashes": [
-                "7ad6426559c9547a4cc8bc90ba4c88fdeb3ca78f6d98b7999b248f47a55cc72d"
+                "d801067d398ce66cfb8439aacf32fdd82a1e4bd398441fbd5376bacc9b52e41d"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -978,8 +1195,8 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/scoreboard\\/todaysScoreboard_20\\.json",
-            "cookies": 0.0000136,
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/1612709915\\/2024\\/03\\/davison-hair-2000x1333-1\\.jpg",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn-gleague"
@@ -994,19 +1211,100 @@
                 }
             ],
             "responseHashes": [
-                "cdeca698541ef239c8dbaefdc04af3518a25d014ce5e0105ea424ae033572c94"
+                "d94a4d7a948e7875a05b1b07604e6d689ba67fe01986d7667e22fc3d2c7cfe89"
             ],
-            "type": "Fetch",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "gleague.nba.com"
+                "maine.gleague.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/1612709915\\/2024\\/04\\/davison-finals-lose\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-gleague"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn-gleague.nba.com",
+                    "resolved": "cdn-gleague.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "b8f1692757f0e435660936c73f001550dbb16021ce14c14d1e479f2b5342dcdc"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "maine.gleague.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/1612709915\\/2024\\/04\\/steward-2000x1333-finals\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-gleague"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn-gleague.nba.com",
+                    "resolved": "cdn-gleague.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "9203bad014199d38abf6d11e9b55e93cbcab2f1dbd86fcd382bb431d848ae8a7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "maine.gleague.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/sites\\/1612709915\\/2024\\/04\\/queta-finals-2000x1333-1\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-gleague"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn-gleague.nba.com",
+                    "resolved": "cdn-gleague.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3e09b494cd85b301a6efec2cda953fb627fa7e50d723ae89f502059eedc1a0cc"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "maine.gleague.nba.com"
             ]
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612743\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1033,7 +1331,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612750\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1060,7 +1358,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612756\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1087,7 +1385,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612746\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1114,7 +1412,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612758\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1141,7 +1439,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612744\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1168,7 +1466,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612763\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1195,7 +1493,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612747\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1222,7 +1520,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612749\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1249,7 +1547,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612748\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1276,7 +1574,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612739\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1303,7 +1601,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612752\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1330,7 +1628,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612755\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1357,7 +1655,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612751\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1384,7 +1682,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612738\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1411,7 +1709,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612737\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1600,7 +1898,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/icons\\/icon-event-play\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1627,7 +1925,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-facebook-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1654,7 +1952,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-instagram-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1681,7 +1979,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-snapchat-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1708,7 +2006,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-tiktok-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1735,7 +2033,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-twitter-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1762,7 +2060,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-youtube-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1789,7 +2087,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/social\\/icon-twitch-color\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1816,7 +2114,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/leagues\\/logo-nba-logoman\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1843,7 +2141,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/leagues\\/logo-nbacares\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1858,7 +2156,7 @@
                 }
             ],
             "responseHashes": [
-                "acc97582a3bdfc81282b3e510955f44188f496566a14c6b060953c5c8e20ca07"
+                "3aab22b4e592fc62f6cfeccf778fd0e9683a0b3e002203043332fb86e528efa3"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1870,7 +2168,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/leagues\\/logo-nbafoundation\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1885,7 +2183,7 @@
                 }
             ],
             "responseHashes": [
-                "cbda7f0547c9e06c1bf1b9bc40d73ad8796ffdfdf613ac4bdbca958735d2e253"
+                "cc61797a52e3da669b81026297a476d7d1c3131d37e2092fb39095f8bc2cefe1"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1897,7 +2195,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/leagues\\/logo-sjc\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1924,7 +2222,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/leagues\\/logo-jr-nba\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -1939,7 +2237,7 @@
                 }
             ],
             "responseHashes": [
-                "5f20fecf5bcda202e67a2964d7ac157efca0dafec5e8e07391aef4e52210c0b1"
+                "017176790d40e416978935d07bd158ab231eca3608131f896de31389c6552d16"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1951,7 +2249,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/next\\/icons\\/icon-external\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2005,7 +2303,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612761\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2032,7 +2330,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612741\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2059,7 +2357,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612765\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2086,7 +2384,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612754\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2113,7 +2411,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612766\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2140,7 +2438,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612753\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2167,7 +2465,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612764\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2194,7 +2492,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612760\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2221,7 +2519,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612757\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2248,7 +2546,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612762\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2275,7 +2573,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612742\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2302,7 +2600,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612745\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2329,7 +2627,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612740\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2356,7 +2654,7 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/logos\\/nba\\/1610612759\\/primary\\/L\\/logo\\.svg",
-            "cookies": 0.00000681,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2382,8 +2680,8 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/NBA_LP_2880x120_RTTP_np_BG_STREAM_NOW_ilp-scaled\\.jpg",
-            "cookies": 0.00000681,
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/cle-orl\\.png",
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2398,7 +2696,7 @@
                 }
             ],
             "responseHashes": [
-                "ee3d43cd8ddc83e159dcf5d614b50d6b2c8b2dad121869a664e3a724c2c9136d"
+                "71d60a0038e64f732bb74be85a2d2072b67930fabca68cc6eb88182ad2c3e11c"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2409,8 +2707,8 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/GettyImages-2115807231-scaled-e1711827147996\\.jpg",
-            "cookies": 0.00000681,
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/NYK-PHI-matchup24-1\\.jpg",
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
@@ -2425,7 +2723,7 @@
                 }
             ],
             "responseHashes": [
-                "1b594ebcf7f5eea19a3c3f7317632ee049377a7cb6e9d799c63c19942267941f"
+                "994f4576d5f5a32ed43a1c9cc69149cbf893527f57e650541844f1b6282a9084"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2436,304 +2734,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/jokic-driving-vs-rockets\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "709862ccc67fa7e4cd7e9f2e76a460a22cd2ee509af7342f3a4a1f0da197191e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/doncic-iso032724\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5cf7c615968802ea7b498fe92a5a56cccd6e0c9b5ef6cb1caf4008e0e4847115"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/SW21949-scaled\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "4b70048f220b16341b01d38d48664defbca4127a2117aeeecdb466ce970575fd"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/USATSI_22840514-scaled-e1711555356603\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "f36122f984b4c660b5800f3e17fcd8454150a3017110b9d36aedded7503cb466"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/What-Weve-Seen_Jokic\\.png",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5fa9a19ce0bc9b378e73d6777c343a83358d1f057cb236e6c0489f16e17b2cda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/GettyImages-2087334331-scaled-e1711467712760\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "05beb06f15f3636fd64e46dc52272343cf83009065641467b0c0e25c95dc6f40"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/What-Weve-Seen_Wemby\\.png",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "0001718c49c337a8d2777fde72064427687dc5db9a59b88eba4378619b4b1b9c"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/USATSI_22610210-scaled-e1711117994421\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "8e64a09d657ca619eacd6e706b37c6a2d9cf6df3a72423733cc139f75536c860"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/jokic-tatum\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e3d1a2b36c8e09b7d9edcdfb0e45d1f4de817dde462212e6701d327645fdaaab"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/16x9-12\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "0a49eca451a68115b9778c599cb404926f5425b03e045e4713d191f1fb258c0e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/2024-SoFi-PlayIn-Logo-White-16-9\\.jpg",
-            "cookies": 0.00000681,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e2abe92aca77be5cf4dd9e53ae13f8678cd3afe9319b76b1b6e711739d9bb184"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/GettyImages-2121059417-scaled-e1711951102757\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/DEN-LAL-matchup24\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2749,7 +2750,7 @@
                 }
             ],
             "responseHashes": [
-                "02ef486b316431732fcc2864203ddb2310093783edc44f1654b96884baa92eb3"
+                "941cf31259978687d408be962c5256e0a81ea8f2c8633636e43b34d6dafd5519"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2760,7 +2761,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/GettyImages-2121058522-scaled-e1711943234308\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/wolves-vs-suns-Series-Matchups-16x9-1\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2776,7 +2777,7 @@
                 }
             ],
             "responseHashes": [
-                "adb648d52d737ed883cfdb9a08b6e1fa2e98021bedfde52581955a48238ec8e7"
+                "451f33a855d675f93803a7b2bb35cdf893412b35dd0cdf840a5538b64f0bef52"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2787,7 +2788,304 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/GettyImages-2121058015-scaled-e1711951025697\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/USATSI_23076610-scaled\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "1cccc6ea1decf569e7d4b7599508c407681c75d340f498576f7cca37eaa23e32"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/USATSI_23076954-scaled\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d85f50f14bc21f1a17ced5ae669ef00872728d0cdcc8bfc32b69b2efcc0663d4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/USATSI_23074982-scaled\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "5c3a913784a9720ee3db543f15408d59bed3942778c5c65252429478a586f57a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/GettyImages-1795880971-scaled-e1713591583497\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e4f8969ebd06753c4bce89f59bdcd3456d95dd38ae3ed0e3d2e65e9f9a0e851d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/16x9-3-scaled\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d36cd3fa39c66ec645ef2eb217bf024869f3998b9ca4c2481106ec1483115b5e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/GettyImages-2062075339\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "85059f740926992f76def2584a14ad1ecca882a46468bb998504c0e016eb3198"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/GettyImages-2023791514\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "9a07df05a6c834934308e7d3c46e10fae13266bb50abb1171add8db1e6044456"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/INSIDE_THE_NBA_GONE_FISHIN_WARRIORS_KINGS_BULLS_HAWKS_APRIL_18_2024_04_20T04_55_14\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "96498e4dbb8ad894ed000c1a56350fd9b08a8767f083656359fb4f5a1d79d951"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/lebron-james-kevin-durant-olympics-medals\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "afcf6934f57331d7e8abc05874cfb444984672635e2a3801b9e0476851e108f1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/01\\/tatum-brown\\.jpg",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8f39c72a34b49811c04c38bd5166903812d98a667d7b33d0d21a46e1983c22d0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/mil-ind\\.png",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "444568daaca6533e1cd8bc0264d8d796c2285ca4e07011c4f4f49c580efa7214"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/LACvsDAL-matchuplogo-24\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2803,7 +3101,7 @@
                 }
             ],
             "responseHashes": [
-                "4ccb74101287ceff6dfc6435b1af344ff81acc791b35aa01180d0ec8d6f9a470"
+                "d05224e7db6ddcc58e8f1f64ce5f673104b44ad477239424b70630e062b676a8"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2814,7 +3112,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/malik-monk-reacts\\.jpg",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/03\\/BOS-MIA-matchup\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2830,7 +3128,7 @@
                 }
             ],
             "responseHashes": [
-                "f5ff3face6cc6dae0e8785ef2d432cdd3e6443c8d0c521b60ab042fe801203d5"
+                "d2455bd7dc0716d8ba10d28d653ea6e6fd2167d4bdd68614b8828a2c6baa5c1e"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2841,23 +3139,25 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/rollingschedule",
-            "cookies": 0,
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/OKC-NOP-matchup\\.jpg",
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
-                "core-api"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "core-api.nba.com",
-                    "resolved": "core-api.nba.com.edgekey.net"
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "248f6bf2c7f88d9c16d45cfb8e3c689d2e38ec7931aa300b7ab436afa44757bd"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -2866,25 +3166,79 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/rollingschedule",
-            "cookies": 0,
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/01\\/jokic-winner-reaction\\.jpg",
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
-                "core-api"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "core-api.nba.com",
-                    "resolved": "core-api.nba.com.edgekey.net"
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "cfaacd43e5a1ee835c0c428b4ad123e862022efe20cf0aa34ce0dea21a8199be"
+                "a153bbd8a9ea33091bc59a8e6898f643036518b324e8804de02a3c85bc3fb580"
             ],
-            "type": "XHR",
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/What-Weve-Seen-16x9-1\\.png",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a73a724669284932ed30ee690b75ba4c7b9280ad72c09f34d4579e6514d6f2e4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/donovan-clingan-zach-edey-iso\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6360418a35283e418710a62c254b7acc43c99674628e13a51f694f93213c98c8"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -2909,7 +3263,7 @@
                 }
             ],
             "responseHashes": [
-                "dbb1b66722f05ad15e11efc647e396f2cdffd31419c129a70d0cd939ef0ae43d"
+                "bc16b0b559cad5ae0cde065b75dbf3f5af8e785f4f7adaebd209c21ea158e91d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -2936,61 +3290,9 @@
                 }
             ],
             "responseHashes": [
-                "e770db6ee0191eef3018f80cda1b705419cf3f3f2a2812d95dab1ab8bafe3840"
+                "0557adf11e2ecd6b5475f4b1ba56030f5e6ffad35b9f9f2943a10e19d7cb58ef"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/api\\/v1\\/sts",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "identity"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "identity.nba.com",
-                    "resolved": "identity.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "d076cda582a5acb49a68c7884872589214fa36d7af4326058235d105ccbe2b28"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/api\\/v1\\/sts",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "identity"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "identity.nba.com",
-                    "resolved": "identity.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -3053,7 +3355,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/01\\/Promo_bg_908x302\\.png",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/desktop\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -3069,7 +3371,7 @@
                 }
             ],
             "responseHashes": [
-                "d8a4018f32fa50ceef12e9d2dceb71be82bfcde5ff843b104f99ce9d693a1dcf"
+                "3d45fb32925802547cbb327760ea87cc86de67489124b30edf161ac0131bb024"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -3080,7 +3382,7 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/01\\/Mask-1\\.png",
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/lp-promo-right-rail\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -3096,34 +3398,7 @@
                 }
             ],
             "responseHashes": [
-                "97815ea081178801cb10f449119cc60f91c1702abd6d4f8498ed6355cc1f1cb8"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/shai-gilgeous-alexander-reacts\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "75fb76c93ea56c891b2b1a627aa7a0fba6ce072c2afe8310284f86c19517e6da"
+                "973e7536016e6c37ef7549631f19ad76bd1446747719fd7bcfa96006581e2205"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -3177,61 +3452,9 @@
                 }
             ],
             "responseHashes": [
-                "1a30f5e466c9255e3a42fab59fdd9ce6df99c3302e59b566230e7502cab4389f"
+                "c9eaa42a5776e5ae20cef9428890fb0ef11a4ea34fedf4917f9e98d814032f65"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "core-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "core-api.nba.com",
-                    "resolved": "core-api.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "core-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "core-api.nba.com",
-                    "resolved": "core-api.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "7689a534ff969ed04d8eb4e69d24faf7c8a38580b68d277607b0b60f15f21863"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -3284,6 +3507,31 @@
             ],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/assets\\/studio-templates\\/ecc550e9-43ad-0cef-ec2c-3a1210ed93c1\\/8ccfcf67-3215-4507-9484-3dec20d05519\\/14612b7a-f27b-5342-ace0-3a1210ed9f57\\/IconRenderOutput\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "storyteller-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "storyteller-assets.nba.com",
+                    "resolved": "storyteller-assets.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -3353,8 +3601,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3369,7 +3617,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3380,8 +3629,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3396,7 +3645,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3407,8 +3657,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3423,7 +3673,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3434,8 +3685,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3450,7 +3701,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3461,8 +3713,8 @@
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3477,7 +3729,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3644,14 +3897,14 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/wp-includes\\/js\\/wp-embed\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "ak-static.cms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "ak-static.cms.nba.com",
@@ -3666,7 +3919,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nba.com",
-                "official.nba.com"
+                "official.nba.com",
+                "pr.nba.com"
             ]
         },
         {
@@ -3724,23 +3978,52 @@
             ]
         },
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
-            "cookies": 0,
+            "rule": "nba\\.com\\.edgekey\\.net\\/ccpa\\.js",
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
-                "stats"
+                "ak-static.cms"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "stats.nba.com",
-                    "resolved": "stats.nba.com.edgekey.net"
+                    "original": "ak-static.cms.nba.com",
+                    "resolved": "ak-static.cms.nba.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "1da5bb25bc2b7409651d2bb9e5b061b3b7916cc42a7633ad8cc5fe3e8d4234df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "pr.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2024\\/04\\/nuggets-game-1-celebration\\.jpg",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8ae3d4a7aabed66581cc38e0095f6d04513ba440c8cbffb7b832d1fdcaa8abf4"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -3751,25 +4034,25 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000545,
+    "cookies": 0.0000818,
     "topInitiators": [
         {
             "domain": "script.ac",
-            "prevalence": 0.75
+            "prevalence": 0.9444444444444444
         },
         {
             "domain": "usestoryteller.com",
-            "prevalence": 0.25
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "Script": 24,
-        "Image": 212,
-        "Fetch": 14,
-        "Font": 4,
+        "Script": 31,
         "Preflight": 8,
         "XHR": 4,
-        "Stylesheet": 10
+        "Fetch": 13,
+        "Image": 258,
+        "Font": 4,
+        "Stylesheet": 13
     },
     "nameservers": []
 }

@@ -4,13 +4,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
         "41r4n34zfdrv",
-        "94s7z8vpy1n8"
+        "94s7z8vpy1n8",
+        "bghgsx0hcy0k",
+        "z26gjbl0d2xs"
     ],
     "cnames": [
+        {
+            "original": "status.foxit.com",
+            "resolved": "z26gjbl0d2xs.stspg-customer.com"
+        },
         {
             "original": "status.ring.com",
             "resolved": "41r4n34zfdrv.stspg-customer.com"
@@ -18,9 +24,13 @@
         {
             "original": "status.snowflake.com",
             "resolved": "94s7z8vpy1n8.stspg-customer.com"
+        },
+        {
+            "original": "status.sonos.com",
+            "resolved": "bghgsx0hcy0k.stspg-customer.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "stspg-customer\\.com\\/api\\/v2\\/status\\.json",
@@ -44,7 +54,7 @@
                 }
             ],
             "responseHashes": [
-                "885bb4c1c27160ba9ab5c9e7d0fda2c46567146f8301173c1931b15809a494d2"
+                "31ff21e316ac32cacf68f92b633e333663b7259060e63fb55263f043f9760ddf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -52,6 +62,38 @@
             "exampleSites": [
                 "ring.com",
                 "docs.snowflake.com"
+            ]
+        },
+        {
+            "rule": "stspg-customer\\.com\\/embed\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bghgsx0hcy0k",
+                "z26gjbl0d2xs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "status.sonos.com",
+                    "resolved": "bghgsx0hcy0k.stspg-customer.com"
+                },
+                {
+                    "original": "status.foxit.com",
+                    "resolved": "z26gjbl0d2xs.stspg-customer.com"
+                }
+            ],
+            "responseHashes": [
+                "c1e3a985c19d0d2c8fe36152283c76ac9f64cdcdb64b415ebfaca3b4f8a43f1a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sonos.com",
+                "www.foxit.com"
             ]
         }
     ],
@@ -77,7 +119,8 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns-1098.awsdns-09.org",

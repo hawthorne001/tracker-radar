@@ -7,11 +7,34 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "sentry",
         "trochi"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "gotoda\\.co\\/api\\/4\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "489b60046cac43d8c0cb8156f807694e58c8f420a52f5ad81d6718db3212dd0d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
         {
             "rule": "gotoda\\.co\\/api",
             "cookies": 0,
@@ -33,6 +56,26 @@
                 "mexc.com",
                 "www.mexc.com"
             ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
         }
     ],
     "categories": [],
@@ -45,7 +88,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Fetch": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-1683.awsdns-18.co.uk",

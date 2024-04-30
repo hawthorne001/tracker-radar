@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
+        "sas.customdomains",
         "onekinship",
         "astminternational.customdomains",
         "kohler-b2c.customdomains",
         "servicenowsignon.customdomains",
+        "wm.customdomains",
         "churchofjesuschrist.customdomains",
         "benjaminmoore.customdomains"
     ],
@@ -21,6 +23,10 @@
         {
             "original": "auth.kohler.ca",
             "resolved": "kohler-b2c.customdomains.okta.com"
+        },
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
         },
         {
             "original": "iam.astm.org",
@@ -35,6 +41,10 @@
             "resolved": "benjaminmoore.customdomains.okta.com"
         },
         {
+            "original": "ssologin.wm.com",
+            "resolved": "wm.customdomains.okta.com"
+        },
+        {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
         }
@@ -42,18 +52,46 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "8df3330ed531f492b846a016992a08e7a7e0ca3641709c2f588c979e747a88c2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000402,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "astminternational.customdomains",
                 "kohler-b2c.customdomains",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "iam.astm.org",
@@ -66,6 +104,10 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -76,22 +118,24 @@
                 "adoptapet.com",
                 "www.astm.org",
                 "www.kohler.ca",
-                "www.servicenow.com"
+                "www.servicenow.com",
+                "www.wm.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000402,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "churchofjesuschrist.customdomains",
                 "kohler-b2c.customdomains",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
@@ -104,10 +148,15 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
                 }
             ],
             "responseHashes": [
-                "a094f801663e8eca9a25e94dfa7b35d3dceaeeb2be5b124720302d883638f949"
+                "c88a5d7ad894683af83c26703722cdf52eb5071789112df4bf6ff196c7ceb21f",
+                "eadb3d3ea65d441e3ecb2e7a71a11659eda918d8210050b8413a28f176cd4b64"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -116,7 +165,8 @@
                 "adoptapet.com",
                 "www.churchofjesuschrist.org",
                 "www.kohler.ca",
-                "www.servicenow.com"
+                "www.servicenow.com",
+                "www.wm.com"
             ]
         },
         {
@@ -141,7 +191,7 @@
                 }
             ],
             "responseHashes": [
-                "ccc5ec9198b8e515fed76642fec0cf56a491b79fa688b2e70be25294dc2d7fc1"
+                "96a0d7cf452149c52e88677c13c4adbed38f9864686dd2225fd98e9375f2b231"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -154,26 +204,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000604,
+    "cookies": 0.001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 4,
-        "XHR": 2
+        "XHR": 4,
+        "Preflight": 5,
+        "Fetch": 5
     },
     "nameservers": [
-        "ns-684.awsdns-21.net",
-        "ns-1563.awsdns-03.co.uk",
-        "edns5.ultradns.net",
-        "edns5.ultradns.org",
-        "ns-285.awsdns-35.com",
         "edns5.ultradns.biz",
         "edns5.ultradns.com",
-        "ns-1459.awsdns-54.org"
+        "edns5.ultradns.net",
+        "edns5.ultradns.org",
+        "ns-1459.awsdns-54.org",
+        "ns-1563.awsdns-03.co.uk",
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net"
     ]
 }

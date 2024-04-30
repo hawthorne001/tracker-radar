@@ -4,23 +4,44 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
+    "prevalence": 0.0000273,
     "sites": 4,
     "subdomains": [
-        "api",
-        "collect1",
+        "rc-api",
+        "gather",
         "assets",
-        "media"
+        "media",
+        "collect1"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "residenthome\\.com\\/auth\\/token",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "rc-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreamcloudsleep.com",
+                "www.nectarsleep.com"
+            ]
+        },
+        {
+            "rule": "residenthome\\.com\\/products",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rc-api"
             ],
             "apis": {},
             "sites": 2,
@@ -40,14 +61,14 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "rc-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "eb896c2944109f3369e1cff782f8698dc18138e3795d1a135264c6ca19e34f91"
+                "1ff63e32071b3423ae9c98e38f17d2d024d42bafe2b61d9e7e92378dd4c600d4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -62,14 +83,14 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "rc-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "e8ab1dc1caf9390bcfa3596d444ecb05ba93b8d1b40c10a1a8c16c839cb7fb2d"
+                "b6020e74893a5acffa821e29892620b76a1087c5c857d9139520a0fa0d1fe5a5"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -80,39 +101,19 @@
             ]
         },
         {
-            "rule": "residenthome\\.com\\/products",
+            "rule": "residenthome\\.com\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dreamcloudsleep.com",
-                "www.nectarsleep.com"
-            ]
-        },
-        {
-            "rule": "residenthome\\.com\\/production\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "collect1"
+                "gather"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "a062c8cfb48d401168a8ab842a617782e6e2985fa19c4a0c85e076f169fc5362",
-                "9241ab32ee8f515ebf673a715f0372c861c1f46bbd2b02487a18041049dfb2bd"
+                "b231d435d5c34ab9434fda89347bcb851b7eea410a066d5e7b2307b74f8e1fe9",
+                "66275b0300c5317fb11c729cb7bfb95c00c96eefec86394233801f27f353d22c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -124,11 +125,11 @@
             ]
         },
         {
-            "rule": "residenthome\\.com\\/production\\/events",
+            "rule": "residenthome\\.com\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "collect1"
+                "gather"
             ],
             "apis": {},
             "sites": 2,
@@ -144,7 +145,7 @@
             ]
         },
         {
-            "rule": "residenthome\\.com\\/nectar\\/287241\\/public\\/stylesheets\\/app-nectar\\.min\\.css",
+            "rule": "residenthome\\.com\\/nectar\\/289065\\/public\\/stylesheets\\/app-nectar\\.min\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -186,6 +187,28 @@
                 "nectarsleep.com",
                 "www.nectarsleep.com"
             ]
+        },
+        {
+            "rule": "residenthome\\.com\\/production\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collect1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6f06e8a3663fa1909c90187e9da7b8cdfccfce895d5c2d99635e129f5721da52"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nectarsleep.com",
+                "www.nectarsleep.com"
+            ]
         }
     ],
     "categories": [],
@@ -194,35 +217,35 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.38095238095238093
+            "prevalence": 0.36363636363636365
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.36363636363636365
         },
         {
             "domain": "tiktok.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.13636363636363635
         },
         {
             "domain": "five9.com",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.09090909090909091
         },
         {
             "domain": "dynamicyield.com",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
         "Preflight": 6,
-        "XHR": 7,
+        "XHR": 9,
         "Stylesheet": 2,
         "Font": 2
     },
     "nameservers": [
-        "ns-701.awsdns-23.net",
-        "ns-1428.awsdns-50.org",
         "ns-194.awsdns-24.com",
-        "ns-1768.awsdns-29.co.uk"
+        "ns-701.awsdns-23.net",
+        "ns-1768.awsdns-29.co.uk",
+        "ns-1428.awsdns-50.org"
     ]
 }
