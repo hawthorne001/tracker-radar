@@ -9,9 +9,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000477,
+    "sites": 7,
     "subdomains": [
+        "booster-dl",
         "api",
         "gtm"
     ],
@@ -21,12 +22,43 @@
             "resolved": "api.groupon.com.edgekey.net"
         },
         {
+            "original": "booster-dl.groupon.com",
+            "resolved": "booster-dl.groupon.com.edgekey.net"
+        },
+        {
             "original": "gtm.groupon.com",
             "resolved": "gtm.groupon.com.edgekey.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "groupon\\.com\\.edgekey\\.net\\/clients\\/groupon_us\\/default\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 3,
+            "subdomains": [
+                "booster-dl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "booster-dl.groupon.com",
+                    "resolved": "booster-dl.groupon.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d51e1d0b67e43ba9b2e0cef551659ba2fa1dcef9beca58b1c82be9a84816e97f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.com",
+                "www.groupon.com"
+            ]
+        },
         {
             "rule": "groupon\\.com\\.edgekey\\.net\\/ai\\/api\\/v1\\/placement",
             "cookies": 0.0000136,
@@ -44,12 +76,12 @@
                 }
             ],
             "responseHashes": [
-                "3267439011224dd443df7d00d6d61cdaf7e44d5b4a82c0b8ae9cc8c1e57c29d8"
+                "73c4004a9f856137bbd1236ea16608d729ea94a1e67165630e4f09599fa3ac4f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00001363261466733012
+                "_li_dcdm_c": 0.000013637634415934212
             },
             "exampleSites": [
                 "groupon.com",
@@ -64,8 +96,8 @@
                 "gtm"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [
                 {
                     "original": "gtm.groupon.com",
@@ -73,20 +105,21 @@
                 }
             ],
             "responseHashes": [
-                "be3f22a71276333b0d66cca84fe85334f19e2b70c79607420dcc7bbf424bfa21",
+                "5fbbe686e33f14dfad3dc13b7a875bde455f6c6bd17c2e239abd82f46b858104",
                 "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ga": 0.00002726522933466024,
-                "_li_dcdm_c": 0.00001363261466733012
+                "_ga": 0.000027275268831868424,
+                "_li_dcdm_c": 0.000013637634415934212
             },
             "exampleSites": [
                 "groupon.com",
                 "www.groupon.com",
+                "www.groupon.de",
                 "www.groupon.co.uk",
-                "www.groupon.de"
+                "www.groupon.it"
             ]
         }
     ],
@@ -95,17 +128,18 @@
     "cookies": 0.0000273,
     "topInitiators": [
         {
-            "domain": "databreakers.com",
-            "prevalence": 0.5
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5833333333333334
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "grouponcdn.com",
+            "prevalence": 0.4166666666666667
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 2,
-        "XHR": 4
+        "XHR": 5
     },
     "nameservers": []
 }

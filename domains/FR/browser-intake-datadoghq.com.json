@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.000906,
+    "sites": 9,
     "subdomains": [
-        "rum"
+        "rum",
+        "logs",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,48 +26,85 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
-                "e96e7a2b8490859e66cec97c508caf28afc2ef1af24c063dcd8bb347568b1a9d",
-                "adaac00e552fac06004e6bbdb6704761a0b304b162bb45eec46d18f005e7a0fa",
-                "28a77a0164d0d155dcc9ce124234ddb7053b1ebc236ad1e7dcf9a366afe14f72",
-                "06622658961d107f055423d9891c0a2e5f697b385eeb5a4ba361d2f9ecf0f3f0",
-                "e6e34c89fc0e41da9e407aa36f8c7d3633ae8ebb1d2d90b4ca2c3b2ac83c3a15"
+                "794f9da16102d4374b328cf2808d8dd006459973dc8f51ac765ddd67b75acb87",
+                "902c6885a6ed8bcda92be14b1c037db4cd23b84926016fd7e80723a84884b20e",
+                "3a5637d2d194769b7fb9f1cfe3d92a26fcda3ec4fecc3388b34a6976976bf4d7",
+                "1fc83f6f43b32a122f2fd953ed92dfeccd259df743192cb9580332159f76ae13",
+                "9c7931e72ae1da7942ba51cde2e9ee3cd5da95fa8ccd9cda124e6899fc880946"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "1password.com",
-                "asana.com",
                 "developer.hashicorp.com",
                 "opensea.io",
                 "www.codecademy.com",
-                "www.expedia.com"
+                "www.nerdwallet.com",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "backmarket.fr",
+                "www.backmarket.fr"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "opensea.io",
+                "www.rei.com"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
+            "subdomains": [],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2e7f71cd9af449144cf59e072037ad63a20d9b99beb5aca96def5112acb30219"
+                "5e4fd7cc13fabf4189c933c65de062f9ebe037e8cf80d0bb1282cbae6556f833"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "asana.com",
-                "opensea.io",
-                "www.codecademy.com"
+                "nerdwallet.com",
+                "www.nerdwallet.com"
             ]
         }
     ],
@@ -75,24 +114,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9192546583850931
-        },
-        {
-            "domain": "travel-assets.com",
-            "prevalence": 0.049689440993788817
+            "prevalence": 0.696969696969697
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.018633540372670808
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "travel-assets.com",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "backmarket.com",
+            "prevalence": 0.06060606060606061
         },
         {
             "domain": "privy.io",
-            "prevalence": 0.012422360248447204
+            "prevalence": 0.06060606060606061
         }
     ],
     "types": {
         "Fetch": 6,
-        "XHR": 3
+        "Ping": 2,
+        "Other": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-1264.awsdns-30.org",

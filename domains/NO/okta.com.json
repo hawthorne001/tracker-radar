@@ -7,17 +7,23 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
+        "infapassport",
+        "sas.customdomains",
         "schibsted",
         "servicenowsignon.customdomains",
-        "sas.customdomains"
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
             "original": "auth.sas.com",
             "resolved": "sas.customdomains.okta.com"
+        },
+        {
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -26,6 +32,36 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "infapassport",
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "433bb4bb46e395547edc82170f5590c71ab1d706215add90043b7caa0a27d1cb",
+                "110aa299efe2f7489ac6c6a57a8c44789e484ba7bb82944b3feb79e61fd5a834"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "informatica.com",
+                "knowledge.informatica.com",
+                "www.sas.com"
+            ]
+        },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000201,
@@ -53,49 +89,58 @@
             ]
         },
         {
-            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
-            "cookies": 0.000201,
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "sas.customdomains"
+                "churchofjesuschrist.customdomains",
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
-                    "original": "auth.sas.com",
-                    "resolved": "sas.customdomains.okta.com"
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [
-                "9e1e71d9428feeffab83131a0c8c681e5d37de3b0e0cfdf428e72f69958ed3f8"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sas.com",
-                "www.sas.com"
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.servicenow.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000603,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
             "domain": "oktacdn.com",
-            "prevalence": 0.75
+            "prevalence": 0.375
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.125
         }
     ],
     "types": {
+        "XHR": 3,
         "Preflight": 2,
-        "XHR": 2
+        "Fetch": 3
     },
     "nameservers": [
         "edns5.ultradns.biz",

@@ -7,15 +7,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000477,
-    "sites": 7,
+    "prevalence": 0.0000409,
+    "sites": 6,
     "subdomains": [
         "jsd-widget",
+        "api-private",
         "atl-onetrust-wrapper",
-        "api"
+        "api",
+        "atl-global",
+        "xxid"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "atlassian\\.com\\/assets\\/embed\\.js",
@@ -42,6 +45,28 @@
             ]
         },
         {
+            "rule": "atlassian\\.com\\/gasv3\\/api\\/v1\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-private"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3f96c74846d55df29bbcd7837594612211f600110fcac55a29cf536f6073a410"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ctbids.com",
+                "www.loom.com"
+            ]
+        },
+        {
             "rule": "atlassian\\.com\\/assets\\/atl-onetrust-wrapper\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -56,31 +81,9 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "e531f5b6f62855ee72b99d157bfdf5f7ac98685ee5e8b0f8ef914998852d4c18"
+                "fedad214cdef949e627a579b08743f5f3991054ce891fcaaed8bdab312c24007"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "loom.com",
-                "www.loom.com"
-            ]
-        },
-        {
-            "rule": "atlassian\\.com\\/flags\\/api\\/v2\\/frontend\\/featureFlagValues",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "4d5d39293a936f1a932b56f22f6fd8e3984ef54931bde41e9bc746eaee63119b"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -109,7 +112,29 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/assets\\/f79f2c2\\/atl-onetrust-wrapper\\.min\\.js",
+            "rule": "atlassian\\.com\\/flags\\/api\\/v2\\/frontend\\/featureFlagValues",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7e68c36f91c5a5cea0c555a219b7b66bcdf22d1f1d1fa61b01bc2242bf6c6e5a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/assets\\/7d4b7ef\\/atl-onetrust-wrapper\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -123,10 +148,235 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "9a0063ce1aab3c14c6e0336a85978f77786971cf73e14a76393da532a74871c7"
+                "9e24b1f1221999e7b5ca261d832c3468ca9b7cf4375faa5e050bd426fa9e68b7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/atl-global\\.min\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "00a246adcd1ab0edb2a641f0c93e30fbebd48b2da62013eabf32cb4263586f3b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "atlCohort": {
+                    "ttl": 315360010,
+                    "length": 96,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 1
+                },
+                "atl_session": {
+                    "ttl": 1810,
+                    "length": 36,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 1
+                },
+                "atlUserHash": {
+                    "ttl": 315360010,
+                    "length": 10,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/xid\\/atl-xid\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "237a1ec3e8d928f9aa8c7740c00a41925abbfe5743091146c6ad016266b54daf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "atl_xid.ts": {
+                    "ttl": 31536009,
+                    "length": 13,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 1
+                },
+                "atl_xid.current": {
+                    "ttl": 31536009,
+                    "length": 147,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/ld\\/ldclient\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c356cfe09e16ba6892b9966e34ca97b030e7622bf0f521178c835161ef6c16ea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xxid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "bdc4fd0410a4195dde1c1f9362a7dd135aa4a13fd78d1916b114b52bb6d4fd1d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/atl-global-2\\.219\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/atl-global-2\\.219\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a89929133880f990f06ddaf8320213946293d61ab0441809f4361b322ec7df79"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/gasv3\\/analytics-web-client\\.with-deps\\.amd\\.min\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 2,
+            "subdomains": [
+                "atl-global"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.devicePixelRatio": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.onLine": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3db9cbd3cb4ed27e56a0421efea8062587c1f82636800fef1059a9b50ff8a921"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ajs_anonymous_id": {
+                    "ttl": 31536010,
+                    "length": 42,
+                    "prevalence": 0.000013637634415934212,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "loom.com",
@@ -136,21 +386,23 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.2
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 6,
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 16,
+        "Fetch": 4,
+        "Preflight": 2,
+        "Document": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-112.awsdns-14.com",

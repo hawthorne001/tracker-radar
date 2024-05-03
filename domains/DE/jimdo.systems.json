@@ -8,9 +8,15 @@
     "sites": 2,
     "subdomains": [
         "at.prod",
-        "feature-flags-proxy.prod"
+        "feature-flags-proxy.prod",
+        "account.prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "account.e.jimdo.com",
+            "resolved": "account.prod.jimdo.systems"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -70,9 +76,34 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "669e3a2964c08d6c3be2318f4e18363cd4e45f1abd73632e97f0af15e8bae7fa"
+                "c1f1ece1606b1a5b5a9d6a2047c27d00e8d9fe9d44a158f6456a75489b6b8382"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jimdo.com",
+                "www.jimdo.com"
+            ]
+        },
+        {
+            "rule": "jimdo\\.systems\\/openid\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "account.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "account.e.jimdo.com",
+                    "resolved": "account.prod.jimdo.systems"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -96,12 +127,13 @@
     ],
     "types": {
         "Ping": 5,
-        "Fetch": 2
+        "Fetch": 2,
+        "Document": 2
     },
     "nameservers": [
-        "ns-1558.awsdns-02.co.uk",
-        "ns-297.awsdns-37.com",
         "ns-538.awsdns-03.net",
-        "ns-1278.awsdns-31.org"
+        "ns-1558.awsdns-02.co.uk",
+        "ns-1278.awsdns-31.org",
+        "ns-297.awsdns-37.com"
     ]
 }

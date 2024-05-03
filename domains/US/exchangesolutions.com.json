@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000546,
+    "sites": 8,
     "subdomains": [
         "kent-esengage.live",
         "bealls-esengage.live",
+        "staplesca-esengage.live",
         "tscweb-esengage.live",
         "bealls-ca-api.live",
         "indo-esengage.live",
-        "indo-ca-api.live"
+        "indo-ca-api.live",
+        "staplesca-ca-api.live"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -27,23 +29,25 @@
             "subdomains": [
                 "kent-esengage.live",
                 "bealls-esengage.live",
+                "staplesca-esengage.live",
                 "tscweb-esengage.live"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 3,
-                "window.localStorage": 3,
-                "Date.prototype.getTime": 3,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
                 "Screen.prototype.width": 2,
                 "window.devicePixelRatio": 2,
                 "Screen.prototype.height": 2,
                 "Date.prototype.getTimezoneOffset": 2,
                 "Document.cookie getter": 1
             },
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
                 "9f5dbb848bf31409737da5e6616dbd1c3193a83e7fc7388d2e00a58c4a8197ef",
+                "23ed256a275c8657d7b9caebcbbfca3acc652a704469c72ec4a831026509ae8f",
                 "45202d4e71701f18e7bf1248ab84a22b3472b9c29ff0315f16fc7f3cdb2fe7ab"
             ],
             "type": "Script",
@@ -52,6 +56,7 @@
             "exampleSites": [
                 "kent.ca",
                 "www.beallsflorida.com",
+                "www.staples.ca",
                 "www.tsc.ca"
             ]
         },
@@ -67,7 +72,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ebaf57ce4279a0a91931d4fc4a2d1b4c8226eb7bd39b5f332cf6547a56bfdfb3"
+                "f189446fa54dfb283fee9b3975602948bf67f904b313eb46556023a3a5515130"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -161,8 +166,10 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "51cd07e468ee7bb3cb0a58f34d41d9938f859b8def07d104f3f0b073f6f1b08a"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -181,15 +188,80 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "c80d30b2564828258c0fb86bd0ef7120f67bc833a5d73b009fc8f7cc07f59e9e"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "indochino.com",
                 "www.indochino.com"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/v4\\/esStyles-min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "staplesca-esengage.live",
+                "tscweb-esengage.live"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "6f6fdb6b06f1ab12d2ba215a3e5773a4d25468a186b88f45f46a95185effd030",
+                "ca117c8989c836074ab70ed9d5b9a5236f5da62922ebb88aa2a98fb9ca27496b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staples.ca",
+                "www.staples.ca",
+                "www.tsc.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/staplescaprd-engage\\/api\\/client\\/staples\\.web\\.staplesca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "staplesca-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2575c9573305c2c641a91fbae1019a988b0677ea1d853927cb234d14d9eab027"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staples.ca",
+                "www.staples.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/staplescaprd-engage\\/api\\/client\\/staples\\.web\\.staplesca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "staplesca-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staples.ca",
+                "www.staples.ca"
             ]
         }
     ],
@@ -199,22 +271,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.875
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
-        },
-        {
-            "domain": "tiktok.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 5,
-        "Fetch": 4,
-        "Preflight": 4,
-        "Stylesheet": 2
+        "Script": 6,
+        "Fetch": 6,
+        "Preflight": 6,
+        "Stylesheet": 5
     },
     "nameservers": [
         "ns-6.awsdns-00.com",
