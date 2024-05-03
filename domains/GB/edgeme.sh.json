@@ -7,26 +7,32 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "api"
+        "static"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "edgeme\\.sh\\/node\\/check",
+            "rule": "edgeme\\.sh\\/client\\.js",
             "cookies": 0.000201,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.connection": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b292cc9d02d4f03ea1186c15cb642e5332388bc5e9c97a2fb5c0214c79861de2"
+                "cec6ada0f5956d2fa5cd11e497003cb4a91373f1140784b35c0774b69d3e5352"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -35,18 +41,20 @@
             ]
         },
         {
-            "rule": "edgeme\\.sh\\/node\\/check",
+            "rule": "edgeme\\.sh\\/edgemesh-sw\\.js",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "static"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "791c7f7eb51840f1764f26533d75991f55d7e0b43c2d6a2428ed81d0b0ad9cf4"
+            ],
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -65,8 +73,8 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Other": 2
     },
     "nameservers": [
         "liz.ns.cloudflare.com",

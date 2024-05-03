@@ -12,15 +12,24 @@
     "prevalence": 0.0000136,
     "sites": 2,
     "subdomains": [
-        "ds.ov12882"
+        "ds.ov12882",
+        "san.external.secure"
     ],
     "cnames": [
+        {
+            "original": "accounts.ikea.com",
+            "resolved": "ds.ov12882.ikea.com.edgekey.net"
+        },
+        {
+            "original": "api.ingka.ikea.com",
+            "resolved": "san.external.secure.ikea.com.edgekey.net"
+        },
         {
             "original": "web-api.ikea.com",
             "resolved": "ds.ov12882.ikea.com.edgekey.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "ikea\\.com\\.edgekey\\.net\\/polyfills\\/v3\\/polyfill\\.min\\.js",
@@ -50,7 +59,86 @@
             ]
         },
         {
-            "rule": "ikea\\.com\\.edgekey\\.net\\/episod\\/inhouseEvent",
+            "rule": "ikea\\.com\\.edgekey\\.net\\/resources\\/cie-utils\\/cie-utils-fragment\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ds.ov12882"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "accounts.ikea.com",
+                    "resolved": "ds.ov12882.ikea.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "266dd0bf1ca59059a7f659ba04d6c410c9beb205b29f938e31795570c3eee2e7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ikea.com",
+                "www.ikea.com"
+            ]
+        },
+        {
+            "rule": "ikea\\.com\\.edgekey\\.net\\/guest\\/token",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "san.external.secure"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.ingka.ikea.com",
+                    "resolved": "san.external.secure.ikea.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0596591b1db36a406aae4cd0cf7662bb9bf842940690489088ea29443ff6bfde"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ikea.com",
+                "www.ikea.com"
+            ]
+        },
+        {
+            "rule": "ikea\\.com\\.edgekey\\.net\\/guest\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "san.external.secure"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.ingka.ikea.com",
+                    "resolved": "san.external.secure.ikea.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ikea.com",
+                "www.ikea.com"
+            ]
+        },
+        {
+            "rule": "ikea\\.com\\.edgekey\\.net\\/cschatbot\\/web-engine\\/sdk\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -65,8 +153,10 @@
                     "resolved": "ds.ov12882.ikea.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "36272f594e811f45b0f9b7c85652470aa004e22b56c23f5517331cea93f4cce9"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -75,9 +165,9 @@
             ]
         },
         {
-            "rule": "ikea\\.com\\.edgekey\\.net\\/episod\\/inhouseEvent",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
+            "rule": "ikea\\.com\\.edgekey\\.net\\/cschatbot\\/web-engine\\/engine\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "ds.ov12882"
             ],
@@ -90,8 +180,10 @@
                     "resolved": "ds.ov12882.ikea.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "99ca1b7dd0938bb8df46ffaff6bb7f7a5d04fb360bc58b03711d23c9dac9e7e5"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -104,9 +196,9 @@
     "performance": {},
     "cookies": 0.0000136,
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 8,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": []
 }

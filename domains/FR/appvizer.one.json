@@ -4,13 +4,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "ariadne"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "appvizer\\.one\\/ariadne\\/flat",
@@ -24,7 +24,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "064e9eb063b27d432d56ac9e0e368730dfe1b756b98a81710d973cc6d7f26de6"
+                "45375e1c2886950dd1cb1e98c7fd9e86c9e3c8abf09bb8cf934be7fdd301a2c1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -32,6 +32,132 @@
             "exampleSites": [
                 "appvizer.fr",
                 "www.appvizer.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/ariadne\\/v1\\/ariadne\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c3a88132f64b7ae62a76fcc88eadd7636136af8312a04a05fb67cc35147098c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.smappen.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/ariadne\\/v1\\/ariadne_scraping\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "33215389cb5bf90465767e46b32e8b9e4c046b7e06f5845c0e85d1814b31c855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.smappen.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/rest\\/ariadne\\/v1\\/domain",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "63073e1badda644cb868c9464e9f781bdba1a1abd0ca1427b4a9845ac2a2d5d2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.smappen.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/rest\\/ariadne\\/v1\\/domain",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.smappen.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/ariadne\\/external-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ariadne"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.cegid.com",
+                "www.smappen.fr"
+            ]
+        },
+        {
+            "rule": "appvizer\\.one\\/ariadne\\/external-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ariadne"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cegid.com",
+                "www.cegid.com",
+                "www.smappen.fr"
             ]
         }
     ],
@@ -41,11 +167,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8888888888888888
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Script": 4,
+        "XHR": 5,
+        "Preflight": 5
     },
     "nameservers": [
         "ns105.ovh.net",

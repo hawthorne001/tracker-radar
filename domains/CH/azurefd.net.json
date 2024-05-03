@@ -15,14 +15,10 @@
         "afd-b2c-iibozyiouoyi4.z01",
         "statuscast-web-1",
         "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01",
-        "assets-jabra-com-czfmfthwe2defdgk.z01",
+        "ti-prod20-fd",
         "sd-tagging"
     ],
     "cnames": [
-        {
-            "original": "assets2.jabra.com",
-            "resolved": "assets-jabra-com-czfmfthwe2defdgk.z01.azurefd.net"
-        },
         {
             "original": "cdn.sympany.ch",
             "resolved": "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01.azurefd.net"
@@ -30,6 +26,10 @@
         {
             "original": "consumer.intel.com",
             "resolved": "afd-b2c-iibozyiouoyi4.z01.azurefd.net"
+        },
+        {
+            "original": "sgtm-fd.ireland.com",
+            "resolved": "ti-prod20-fd.azurefd.net"
         },
         {
             "original": "status.sophos.com",
@@ -80,7 +80,7 @@
                 }
             ],
             "responseHashes": [
-                "3394b86d5bb207bb140ae65222713b9764630eeb0e777d7fb17ac2965a980b9b"
+                "787a6fa3224961cf326970decab702f397240acedd560218191173582f5d018f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -145,30 +145,57 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/6\\/1\\/3\\/4\\/6134565cce4bef9eed60be3698b9f949f0dbda1b_0_Elite_8_Active_Navy\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "azurefd\\.net\\/gtm\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "assets-jabra-com-czfmfthwe2defdgk.z01"
+                "ti-prod20-fd"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "assets2.jabra.com",
-                    "resolved": "assets-jabra-com-czfmfthwe2defdgk.z01.azurefd.net"
+                    "original": "sgtm-fd.ireland.com",
+                    "resolved": "ti-prod20-fd.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "b5c7c8c7d4dfc57a8c719c4e5227e5272ec8abead92eb6b6430f0b2781de2905"
+                "896d89415bf45eebdb9eea0acb6a470f17b4e19473d9ec9f872ffc43ef70643a"
             ],
-            "type": "Image",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
+                "ireland.com",
+                "www.ireland.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ti-prod20-fd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sgtm-fd.ireland.com",
+                    "resolved": "ti-prod20-fd.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ireland.com",
+                "www.ireland.com"
             ]
         },
         {
@@ -183,7 +210,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1074745f2ff67019bc83fbdc4f7b871494117d60f9678b4a391d14885b0266db"
+                "d762e277f8b448e4c9259fa7375050a5b964b72936b5e9e4e915b8070453f541"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -218,19 +245,19 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.001,
+    "cookies": 0.00111,
     "topInitiators": [
         {
-            "domain": "jabraheadsets.ch",
-            "prevalence": 0.6857142857142857
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.8
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.02857142857142857
+            "prevalence": 0.1
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
@@ -238,13 +265,14 @@
         "Fetch": 2,
         "Stylesheet": 2,
         "Font": 2,
-        "Image": 4,
-        "Script": 2
+        "Script": 4,
+        "XHR": 2,
+        "Image": 2
     },
     "nameservers": [
         "ns1-37.azure-dns.com",
-        "ns3-37.azure-dns.org",
         "ns2-37.azure-dns.net",
-        "ns4-37.azure-dns.info"
+        "ns4-37.azure-dns.info",
+        "ns3-37.azure-dns.org"
     ]
 }

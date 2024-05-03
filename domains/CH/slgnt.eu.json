@@ -10,54 +10,49 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "site-azp"
+        "cgn",
+        "unhcr"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
+            "rule": "slgnt\\.eu\\/optiext\\/webtracker\\.dll",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "site-azp"
+                "cgn",
+                "unhcr"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a50e4e2beb343d42b673b7f2bd9081115654f3c248b945e56cf9a0eefb572a3c",
-                "7818f8949d176eac55e70fc379f192e0819af0a341a16075f819ba69bc6991a3"
+                "5d83cfb31a025b3ae91eddacf41ad4569c0cefd9c69e71b52c9d5e137d8a9eed"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "m_ses": {
+                    "ttl": null,
+                    "length": 14,
+                    "prevalence": 0.00020098482564566376,
+                    "uniqueness": 1
+                },
+                "m_cnt": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020098482564566376,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mediapart.fr",
-                "www.mediapart.fr",
-                "www.quattroruote.it"
-            ]
-        },
-        {
-            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "site-azp"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mediapart.fr",
-                "www.mediapart.fr",
-                "www.quattroruote.it"
+                "cgn.ch",
+                "www.unhcr.org"
             ]
         }
     ],
@@ -66,24 +61,27 @@
     "cookies": 0.000402,
     "topInitiators": [
         {
-            "domain": "windows.net",
-            "prevalence": 0.75
+            "domain": "first party",
+            "prevalence": 0.6
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "windows.net",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 3,
-        "Preflight": 3
+        "Script": 2
     },
     "nameservers": [
+        "ns13.dnsmadeeasy.com",
+        "ns15.dnsmadeeasy.com",
+        "ns10.dnsmadeeasy.com",
         "ns12.dnsmadeeasy.com",
         "ns11.dnsmadeeasy.com",
-        "ns14.dnsmadeeasy.com",
-        "ns15.dnsmadeeasy.com",
-        "ns13.dnsmadeeasy.com",
-        "ns10.dnsmadeeasy.com"
+        "ns14.dnsmadeeasy.com"
     ]
 }

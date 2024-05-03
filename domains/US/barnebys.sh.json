@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "static"
+        "static",
+        "analytics-beta"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,12 +21,14 @@
                 "static"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "window.sessionStorage": 1,
-                "Date.prototype.getTime": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.doNotTrack": 1,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Navigator.prototype.language": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -37,7 +40,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "barnebys.com",
+                "collectorsweekly.com",
                 "www.collectorsweekly.com"
             ]
         },
@@ -64,6 +67,26 @@
                 "collectorsweekly.com",
                 "www.collectorsweekly.com"
             ]
+        },
+        {
+            "rule": "barnebys\\.sh\\/bite\\.v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-beta"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moreanauctions.com",
+                "www.moreanauctions.com"
+            ]
         }
     ],
     "categories": [],
@@ -76,12 +99,12 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 6
     },
     "nameservers": [
         "ns4-09.azure-dns.info",
-        "ns1-09.azure-dns.com",
         "ns2-09.azure-dns.net",
+        "ns1-09.azure-dns.com",
         "ns3-09.azure-dns.org"
     ]
 }
