@@ -11,7 +11,9 @@
     "sites": 3,
     "subdomains": [
         "h",
-        "ssp"
+        "ssp",
+        "c-ko",
+        "c-oa"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -39,7 +41,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e7a99cc1fee73fc7cf4a70c404fca0b15342cf09a153c26eac65d2ac4ebf08d3"
+                "c4d363ad266404c14263cfa472054607538e7ec6c38a21c39174708228bb0964"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -61,7 +63,6 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "c00480b887071dffa0a5386607fc6b63344ea4222bf9191b418dc58f43f9fecf",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
@@ -69,38 +70,38 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "idnes.cz",
-                "malves.rajce.idnes.cz",
+                "www.idnes.cz",
                 "www.rajce.idnes.cz"
             ]
         },
         {
-            "rule": "seznam\\.cz\\/hit",
+            "rule": "seznam\\.cz\\/v1\\/xhr",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "h"
+                "ssp"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+                "01fd30dd55720a30ffe30fc9bc1aa6e881b2c8db3ba639acfd2ab4eb8e86b898"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "idnes.cz",
-                "www.rajce.idnes.cz"
+                "www.idnes.cz"
             ]
         },
         {
-            "rule": "seznam\\.cz\\/hit",
+            "rule": "seznam\\.cz\\/v1\\/xhr",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "h"
+                "ssp"
             ],
             "apis": {},
             "sites": 2,
@@ -112,7 +113,96 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "idnes.cz",
+                "www.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/sklik\\/imp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c-ko",
+                "c-oa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "684796e5ae7318fe584dfe4896553a567c8923e1c7151fbb49f0b7fbbf7c250a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.idnes.cz",
                 "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.idnes.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/impress",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.idnes.cz"
             ]
         }
     ],
@@ -122,20 +212,21 @@
     "topInitiators": [
         {
             "domain": "r2b2.cz",
-            "prevalence": 0.9
+            "prevalence": 0.9259259259259259
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.07407407407407407
         }
     ],
     "types": {
         "Script": 2,
-        "XHR": 5,
-        "Preflight": 2
+        "XHR": 10,
+        "Preflight": 5,
+        "Image": 2
     },
     "nameservers": [
-        "ams.seznam.cz",
-        "ans.seznam.cz"
+        "ans.seznam.cz",
+        "ams.seznam.cz"
     ]
 }

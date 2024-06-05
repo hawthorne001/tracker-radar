@@ -7,14 +7,60 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "cdn",
+        "ptm",
         "ihi"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "flowplayer\\.com\\/releases\\/native\\/3\\/stable\\/style\\/flowplayer\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e6869bfd6c942ddccd9b9867b19da3f945345585e359aed46c4eccec2f4c7645"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "batmagasinet.no",
+                "www.seilmagasinet.no"
+            ]
+        },
+        {
+            "rule": "flowplayer\\.com\\/vod\\/d44a64fe-b076-4ffa-ac44-988285bb9099\\/display",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ptm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "batmagasinet.no",
+                "www.seilmagasinet.no"
+            ]
+        },
         {
             "rule": "flowplayer\\.com\\/v1\\/health\\/events",
             "cookies": 0,
@@ -23,8 +69,8 @@
                 "ihi"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -32,7 +78,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "batmagasinet.no",
-                "www.batmagasinet.no"
+                "www.batmagasinet.no",
+                "www.seilmagasinet.no"
             ]
         }
     ],
@@ -41,12 +88,18 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "lwcdn.com",
+            "prevalence": 0.75
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Stylesheet": 2,
+        "XHR": 2,
+        "Fetch": 3
     },
     "nameservers": [
         "ns-239.awsdns-29.com",

@@ -7,17 +7,23 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
         "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
         "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
-        "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
+        "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
+        "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu",
+        "cdn"
     ],
     "cnames": [
         {
             "original": "auth.homegate.ch",
             "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "auth0.s-ge.com",
+            "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
         },
         {
             "original": "login.financescout24.ch",
@@ -32,16 +38,17 @@
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000301,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
                 "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
                 "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
+                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
+                "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "login.financescout24.ch",
@@ -54,11 +61,16 @@
                 {
                     "original": "login.ireland.com",
                     "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth0.s-ge.com",
+                    "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
                 }
             ],
             "responseHashes": [
-                "08ba72513c82031c99d93a24b41d7a11dfd2b322d5a360147e70d1410cf141db",
-                "21c04fb0574d515e46154f62f6ef03c50a7c8145babe0f7147cbd7c2fc52f4d5"
+                "592e5918404a6b9b4b46ef39b3b14f7c02228a3640c74401c10609bb58e308be",
+                "605e09274c2f88679bf5fb0cba0cba7604412ed533c7824afcb936314305faad",
+                "cf6c3f175ad53ee5ebe5f1aa25b83884a0ef34299d42130c7cf7f72cbe9b7f7c"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -66,7 +78,30 @@
             "exampleSites": [
                 "financescout24.ch",
                 "www.homegate.ch",
-                "www.ireland.com"
+                "www.ireland.com",
+                "www.s-ge.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/styleguide\\/components\\/1\\.0\\.8\\/media\\/logos\\/img\\/badge\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8ce9f639d0609bbca3d5362034f3d85efc0d75830259b3b1f56e6387fe9153a9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ireland.com",
+                "www.s-ge.com"
             ]
         },
         {
@@ -149,15 +184,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "native-instruments.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "auth0.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Document": 3,
+        "Document": 4,
+        "Image": 2,
         "Preflight": 2,
         "Script": 2,
         "XHR": 2

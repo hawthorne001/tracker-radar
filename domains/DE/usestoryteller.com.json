@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.0001,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
         "api",
-        "stories"
+        "stories",
+        "nba.webstories"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -137,7 +138,29 @@
             ]
         },
         {
-            "rule": "usestoryteller\\.com\\/amp\\/20240209\\.1\\/rtv\\/012402091015000\\/v0\\/amp-loader-0\\.1\\.js",
+            "rule": "usestoryteller\\.com\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nba.webstories"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "usestoryteller\\.com\\/amp\\/20240209\\.1\\/rtv\\/012402091015000\\/v0\\/amp-viewer-integration-0\\.1\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -148,9 +171,31 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2dc73d2404904871e70b8fa16702ce70236c1201344491ed5136387d5f0c135c"
+                "8b9d80d881071a37ee8d37c0c1df74139da8a95446b75d4ba67c08f7c1a891c6"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "usestoryteller\\.com\\/amp\\/20240209\\.1\\/rtv\\/012402091015000\\/v0\\/amp-story\\.en\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stories"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "66882bb0c785a4eb8ed4f76c06c33d3560b6f40cd1f4a213f165932f89fca690"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -165,16 +210,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Script": 10
+        "Fetch": 4,
+        "Script": 10,
+        "XHR": 2
     },
     "nameservers": [
         "piper.ns.cloudflare.com",

@@ -12,39 +12,12 @@
     "subdomains": [
         "reveal",
         "marketo",
-        "app"
+        "app",
+        "risk"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
-        {
-            "rule": "clearbit\\.com\\/v1\\/companies\\/reveal",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "reveal"
-            ],
-            "apis": {
-                "window.localStorage": 1
-            },
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "d392279e9b1f1c7caa4267799e70091fd2f82c53e10ff958813d19dab4063376",
-                "4db28443e50dc073e181bf7651c1abcf57678338434dbf04984fdf5342f80c46"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "airtable.com",
-                "slack.com",
-                "www.softwareadvice.com",
-                "www.ssh.com"
-            ]
-        },
         {
             "rule": "clearbit\\.com\\/v1\\/companies\\/reveal",
             "cookies": 0,
@@ -57,7 +30,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "01eb6d620f634bd573b6b0b7598c18e7dfa94ed6bc8b2d36d97015e2cc82c1f6"
+                "0c336c1af58b5fecd72d39857e53b9a982524cb524c84b8572dfaab5c6735587"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -69,14 +42,14 @@
         },
         {
             "rule": "clearbit\\.com\\/assets\\/v1\\/marketo\\/forms\\.js",
-            "cookies": 0.000201,
+            "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
                 "marketo"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "4063e72c353fcac556ca10a2d6d26666e4b486aaefaa1872585b3f9e88b91adb"
@@ -86,7 +59,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "calendly.com",
-                "www.elastic.co"
+                "discuss.elastic.co",
+                "www.elastic.co",
+                "www.payscale.com"
             ]
         },
         {
@@ -97,8 +72,8 @@
                 "app"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00131,
+            "sites": 14,
+            "prevalence": 0.00141,
             "cnames": [],
             "responseHashes": [
                 "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
@@ -108,71 +83,184 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "calendly.com",
+                "discuss.elastic.co",
                 "etcher.balena.io",
                 "grafana.com",
                 "laravel.com",
                 "redis.io",
+                "www.backblaze.com",
                 "www.cbinsights.com",
                 "www.descript.com",
                 "www.elastic.co",
                 "www.payscale.com",
                 "www.process.st",
                 "www.projectmanager.com",
-                "www.ssh.com",
                 "zapier.com"
+            ]
+        },
+        {
+            "rule": "clearbit\\.com\\/v1\\/risk\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "risk"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "RTCPeerConnection.prototype.constructor": 2,
+                "MediaSource.isTypeSupported": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.vendorSub": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "Navigator.prototype.webkitPersistentStorage": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.keyboard": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.mediaCapabilities": 2,
+                "Navigator.prototype.permissions": 2,
+                "Navigator.prototype.presentation": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.availLeft": 2,
+                "Screen.prototype.availTop": 2,
+                "Screen.prototype.orientation": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.getBattery": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d608225c48a0a7ec4d3665991dba4382c292c1c389f469e522600923d47168a6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elastic.co",
+                "www.elastic.co"
+            ]
+        },
+        {
+            "rule": "clearbit\\.com\\/v1\\/fingerprint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "risk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elastic.co",
+                "www.elastic.co"
+            ]
+        },
+        {
+            "rule": "clearbit\\.com\\/v1\\/companies\\/reveal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reveal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d392279e9b1f1c7caa4267799e70091fd2f82c53e10ff958813d19dab4063376"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slack.com",
+                "www.softwareadvice.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000503,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3888888888888889
+            "prevalence": 0.42105263157894735
         },
         {
             "domain": "clearbitjs.com",
-            "prevalence": 0.2777777777777778
+            "prevalence": 0.2631578947368421
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.15789473684210525
         },
         {
             "domain": "optimizely.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.02631578947368421
+        },
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.02631578947368421
         },
         {
             "domain": "hubspot.net",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.02631578947368421
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.02631578947368421
         },
         {
             "domain": "bizible.com",
-            "prevalence": 0.027777777777777776
-        },
-        {
-            "domain": "clearbitscripts.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.02631578947368421
         },
         {
             "domain": "zapier-deployment.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.02631578947368421
         }
     ],
     "types": {
-        "Script": 6,
         "Fetch": 2,
-        "XHR": 13
+        "Script": 8,
+        "XHR": 16
     },
     "nameservers": [
         "ns-285.awsdns-35.com",
-        "ns-696.awsdns-23.net",
         "ns-1077.awsdns-06.org",
-        "ns-2027.awsdns-61.co.uk"
+        "ns-2027.awsdns-61.co.uk",
+        "ns-696.awsdns-23.net"
     ]
 }

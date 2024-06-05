@@ -11,10 +11,11 @@
     "sites": 2,
     "subdomains": [
         "event",
-        "widget"
+        "widget",
+        "cms"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "getblue\\.io\\/js\\/blue-tag\\.min\\.js",
@@ -41,9 +42,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "blueID": {
-                    "ttl": 31536007,
+                    "ttl": 31536005,
                     "length": 36,
-                    "prevalence": 0.0002010454362685967,
+                    "prevalence": 0.00020134903855834087,
                     "uniqueness": 1
                 }
             },
@@ -70,7 +71,7 @@
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "blueID": 0.0002010454362685967
+                "blueID": 0.00020134903855834087
             },
             "exampleSites": [
                 "northernreflections.com",
@@ -80,11 +81,15 @@
         {
             "rule": "getblue\\.io\\/event\\/",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "widget"
             ],
-            "apis": {},
+            "apis": {
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -94,11 +99,35 @@
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "blueID": 0.0002010454362685967
+                "blueID": 0.00020134903855834087
             },
             "exampleSites": [
                 "northernreflections.com",
                 "www.vevor.ca"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/cm\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cms"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "blueID": 0.00020134903855834087
+            },
+            "exampleSites": [
+                "northernreflections.com",
+                "www.northernreflections.com"
             ]
         }
     ],
@@ -113,12 +142,13 @@
     ],
     "types": {
         "Script": 4,
-        "Document": 2
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-1053.awsdns-03.org",
         "ns-1752.awsdns-27.co.uk",
         "ns-48.awsdns-06.com",
+        "ns-1053.awsdns-03.org",
         "ns-730.awsdns-27.net"
     ]
 }

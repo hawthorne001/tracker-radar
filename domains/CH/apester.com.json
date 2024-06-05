@@ -10,40 +10,15 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "static",
         "sdk",
-        "events"
+        "events",
+        "static",
+        "display",
+        "interaction"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "apester\\.com\\/js\\/sdk\\/latest\\/apester-sdk\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "Navigator.prototype.platform": 2,
-                "Navigator.prototype.language": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.width": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "itsfoss.com",
-                "linuxhandbook.com"
-            ]
-        },
         {
             "rule": "apester\\.com\\/web-sdk\\.core\\.legacy\\.min\\.js",
             "cookies": 0,
@@ -56,14 +31,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "06b8174f06fbd3147a97ee7311ad7bb7f47816bbe7509080d118b207ce8fb88c"
+                "34ea6508760b122b1493227f559e0d79a232338ac2024bcc792f40fb38cf6969"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itsfoss.com",
-                "linuxhandbook.com"
+                "www.weltfussball.de"
             ]
         },
         {
@@ -77,15 +52,13 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itsfoss.com",
-                "linuxhandbook.com"
+                "www.weltfussball.de"
             ]
         },
         {
@@ -105,7 +78,101 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itsfoss.com",
-                "linuxhandbook.com"
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/js\\/sdk\\/v2\\.0\\/apester-javascript-sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "34ea6508760b122b1493227f559e0d79a232338ac2024bcc792f40fb38cf6969"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/tokens\\/5d36bc636fd059228b1fd925\\/interactions\\/random",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "display"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/tokens\\/5d36bc636fd059228b1fd925\\/interactions\\/random",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "display"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e4dabcfcdc41b6a1bdb4f26a25c11999a3b8e662c6aadee9314bbe8466c8eea2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/interaction-stats\\/6242de8ffb9d86002a4a6b88",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "interaction"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d732ca6e453b4afb7c0499898c1aaef1e7ae4070b1e92c1d4f957ac4fc58d4d2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
             ]
         }
     ],
@@ -115,18 +182,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "weltfussball.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "hs-data.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
         "Script": 4,
-        "XHR": 2,
-        "Preflight": 2
+        "XHR": 4,
+        "Preflight": 4,
+        "Fetch": 2
     },
     "nameservers": [
+        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c2.googledomains.com",
         "ns-cloud-c3.googledomains.com",
-        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c4.googledomains.com"
     ]
 }

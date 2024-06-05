@@ -9,11 +9,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000546,
+    "sites": 8,
     "subdomains": [
         "auth.arte",
-        "api.arte"
+        "api.arte",
+        "media.ufc"
     ],
     "cnames": [
         {
@@ -23,6 +24,10 @@
         {
             "original": "auth.arte.tv",
             "resolved": "auth.arte.tv.edgekey.net"
+        },
+        {
+            "original": "media.ufc.tv",
+            "resolved": "media.ufc.tv.edgekey.net"
         }
     ],
     "fingerprinting": 0,
@@ -95,10 +100,8 @@
                     "resolved": "api.arte.tv.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "9b2c386bf435ecbf4c7d4271d8d3b2995d47d46f36fa9b2477a9b7f2552ce248"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -122,8 +125,10 @@
                     "resolved": "api.arte.tv.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "6e562fe2d1c2c19bdbcd058d253213015aacdf4073bc756d1dc9193419bbd53d"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -148,7 +153,7 @@
                 }
             ],
             "responseHashes": [
-                "99d852b11c6659af40daf2079cb0744e1c6ab2da72b75b37258274d0eb74b621"
+                "b1be78a81df5b01ef605614838b741fc463b766f1ab8e492e087ee43390c7616"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -182,6 +187,85 @@
                 "arte.tv",
                 "www.arte.tv"
             ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/api\\/sso\\/v3\\/me\\/data\\/en",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.arte.tv",
+                    "resolved": "api.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3b33ca4a76493bceb0c992f3d4f996453eb9512f553ea802687109cc208001b8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/api\\/sso\\/v3\\/me\\/data\\/en",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.arte.tv",
+                    "resolved": "api.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/cookieconsent\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media.ufc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "media.ufc.tv",
+                    "resolved": "media.ufc.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ded53312ad0c9fbf1df1d786f966f6965c55ef72a019788fc0de296367d43ec2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ufc.com",
+                "www.ufc.com"
+            ]
         }
     ],
     "categories": [],
@@ -190,12 +274,17 @@
     "topInitiators": [
         {
             "domain": "upc.biz",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 6,
-        "Fetch": 6
+        "Preflight": 8,
+        "Fetch": 8,
+        "Stylesheet": 2
     },
     "nameservers": []
 }

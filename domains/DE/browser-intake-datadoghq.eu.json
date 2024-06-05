@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "rum",
-        "logs"
+        "logs",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,20 +21,17 @@
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
+            "subdomains": [],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000703,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "0a63308129bc538d7d15fd24fb2f5b1457f71f1b13bb335087b36e82243dcb75",
-                "6bcac0823fdbbd093390b466b65dc3705cb406773193d5d201dd2c2f2f5ccc9d",
-                "554cd91cc49eeffbaad3f6a620ef0946ebc9a057edf24117fb4d6a7924d481b9",
-                "a8eddbfad1f2cf0beecb55263ad5a79f5914cbe74b70291df707f8a7ec99a15b",
-                "806da29c03823cf3120a29e776ca85827ec21488dc85c593d22d5b3e2627dac6",
-                "4db4b6c061443aedf5cc9c68efeb06e4db9864f90ab6d80cee647a5e5e7c7903"
+                "8df800c91342a2dfcc788f5213a5b795200b009b90fda812582267df246ead07",
+                "2c71f434249d9f7a7fa145e97afee106e5c55136187d0e71d61be64123b1fef2",
+                "52ec8b5d4fbca726d95c8b4f4589227bd868b72bbb121b75ff16c6b5ec7ebfc1",
+                "1afd00bf293a03f7358ca609c01a63b5421aee9de237d934df1cd13c10250d4d",
+                "571d6cdaa6e38d4a40282ba5d42c7f6b56f9ad445323e3387f2e62de3ff7f8b2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -42,10 +40,9 @@
                 "knauf.de",
                 "downloads.knauf.de",
                 "knauf.com",
-                "my.tui.com",
-                "wolt.com",
-                "www.cupraofficial.de",
-                "www.handyhase.de"
+                "www.esn.com",
+                "www.myposter.de",
+                "www.personio.de"
             ]
         },
         {
@@ -98,12 +95,12 @@
                 "logs"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "f839220aeabf89678ef28b6292ded6be337048a291c9e20998a51f41aefe4bda",
-                "6784034f072cf805f7295332713fbb1142986de0ccec16926f1f6482d5ef58ee"
+                "ccfde0264b1897dd9f7b2fddd25e204ef7eb40d35292ddc1d9ff73f40422d65b",
+                "8ca1147b5a297302bb9c372d617bcc1a78c5b9201c9087af17bbb50cc7350457"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -111,7 +108,52 @@
             "exampleSites": [
                 "blablacar.de",
                 "www.blablacar.de",
-                "www.directferries.de"
+                "www.directferries.de",
+                "www.ns.nl"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "69fae9126b81f47eae1534c17e0df1e4ba10e710d145932efe9a7941ce2ebe39",
+                "952f110362919d0f57fb0895aa10b02436c3cd2fb866f720f4cbe5452a6431a2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "esn.com",
+                "www.esn.com",
+                "www.personio.de"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurowings.com",
+                "www.eurowings.com"
             ]
         }
     ],
@@ -120,34 +162,36 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.3888888888888889
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.631578947368421
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.10526315789473684
         },
         {
             "domain": "knauf.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.07894736842105263
         },
         {
             "domain": "blablacar.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.07894736842105263
         }
     ],
     "types": {
         "Fetch": 12,
-        "Preflight": 2
+        "Preflight": 2,
+        "XHR": 3,
+        "Other": 2
     },
     "nameservers": [
-        "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
     ]
 }

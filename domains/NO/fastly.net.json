@@ -9,14 +9,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "d.sni.us-eu"
     ],
     "cnames": [
         {
             "original": "attr-shift.dotabuff.com",
+            "resolved": "d.sni.us-eu.fastly.net"
+        },
+        {
+            "original": "new-skip.speedrun.com",
             "resolved": "d.sni.us-eu.fastly.net"
         }
     ],
@@ -30,27 +34,63 @@
                 "d.sni.us-eu"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "attr-shift.dotabuff.com",
                     "resolved": "d.sni.us-eu.fastly.net"
+                },
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
                 }
             ],
             "responseHashes": [
-                "8c3fc6ece090b75f36a6c1728d5f6a4cf82546300a64a5b0fa839b3cf2d260f8"
+                "e9c5b023d33213529c14cde9119f44bf0b682daeb80c287d82f7663b906091e0",
+                "2da70addae2487acddf3a36d808364b2740c495840b1e0576726b75feec7e084"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dotabuff.com",
-                "www.dotabuff.com"
+                "www.dotabuff.com",
+                "www.speedrun.com"
             ]
         },
         {
             "rule": "fastly\\.net\\/d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "attr-shift.dotabuff.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                },
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotabuff.com",
+                "www.dotabuff.com",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/v",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -63,15 +103,52 @@
                 {
                     "original": "attr-shift.dotabuff.com",
                     "resolved": "d.sni.us-eu.fastly.net"
+                },
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "2ad3f2e9c9ad7833e9794c1d95941711f092bb2884a091744a248fee7d0c9717"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dotabuff.com",
-                "www.dotabuff.com"
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/pb\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "attr-shift.dotabuff.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                },
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "ab97a5438c26dc11b84d4e2a68bfa9cc6e31f23d8a21b6d04aaeadbb5bf3a993"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotabuff.com",
+                "www.speedrun.com"
             ]
         }
     ],
@@ -98,8 +175,10 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Fetch": 3,
+        "Preflight": 3,
+        "Ping": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns1.fastly.net",
