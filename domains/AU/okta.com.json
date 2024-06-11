@@ -7,13 +7,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000804,
+    "prevalence": 0.000803,
     "sites": 8,
     "subdomains": [
-        "sas.customdomains",
         "login",
-        "churchofjesuschrist.customdomains",
-        "servicenowsignon.customdomains"
+        "sas.customdomains",
+        "servicenowsignon.customdomains",
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
@@ -32,6 +32,55 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "7da97dd12f7ea62d415c181f2fe4d4a8dd9f78a3c99a7d5dcc87d8bf4a1d48b1"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sydney.edu.au",
+                "my.hesta.com.au",
+                "my.unimelb.edu.au"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/lib\\/discoveryIframe-f98a9db6985a9d6db326\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "1d3c326cddf350f019af567bc3729d180231f0b90c3fc522dcced3741cf692b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sydney.edu.au",
+                "my.hesta.com.au",
+                "my.unimelb.edu.au"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -48,7 +97,7 @@
                 }
             ],
             "responseHashes": [
-                "4c4eca426f65987641789d8f3f7acdd20b0f3e2ad3992e66dc9e2744b87b3ea2"
+                "b6de47e4777bae0c95bee5ddd5effb40a06381c5213ae9bd7e1d0c32fd824b7e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -59,55 +108,33 @@
             ]
         },
         {
-            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
-            "cookies": 0,
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "login"
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "60dc78b8cd2f75e38259136101012f4eeccaf2c74f5182a01da7cee168ef5ed2"
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
             ],
-            "type": "Document",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hesta.com.au",
-                "my.unimelb.edu.au"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/lib\\/discoveryIframe-ea9230c42a202475efd8\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "login"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "058bb9d17b2131122ad576569715e4e35cc79848433645fba5d768d9627acbd0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hesta.com.au",
-                "my.unimelb.edu.au"
+                "servicenow.com",
+                "www.servicenow.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "churchofjesuschrist.customdomains",
@@ -115,7 +142,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
@@ -139,25 +166,26 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000603,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.5
+            "prevalence": 0.6
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "service-now.com",
+            "prevalence": 0.2
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Document": 3,
+        "Script": 3,
         "XHR": 2,
-        "Document": 2,
-        "Script": 2,
+        "Preflight": 2,
         "Fetch": 3
     },
     "nameservers": [

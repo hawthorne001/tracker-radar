@@ -8,53 +8,26 @@
     "sites": 1,
     "subdomains": [
         "app",
-        "cdn"
+        "cdn",
+        "rest"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "leadfox\\.co\\/js\\/detect\\.min\\.js",
+            "rule": "leadfox\\.co\\/service\\/api\\/rest\\/",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
                 "app",
                 "cdn"
-            ],
-            "apis": {
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.orientation": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e97d70d3abade06b4790efa6019c525f3bfcf511633d67dd378a0d8773c5e17f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "retraite.com",
-                "www.retraite.com"
-            ]
-        },
-        {
-            "rule": "leadfox\\.co\\/service\\/track\\/get\\/",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "app"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f7b38e0ee01cb539f4f8ed226226a5afe7f5287fcdebd3eb9025489feb250ada"
+                "1eb98ca891b1fc6fe2acfcb1b6549dbffdcbcb131121e14cae24531c6d84acd9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -65,18 +38,18 @@
             ]
         },
         {
-            "rule": "leadfox\\.co\\/service\\/track\\/init\\/",
+            "rule": "leadfox\\.co\\/v1\\/pixel\\/interactions\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "app"
+                "rest"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6a49096a40c02c4d9079156b3932bf359a20816ff4bf4bbb7bbd42dbc5febebf"
+                "e17a7531089bc8014e4021aaa8e3c1235a18ff8cc2a9c80d665218695f70e46c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -98,12 +71,12 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6406743e0ad78ce9d4155808327e3438dd693e79eeee50be4b02accd57cdbba4"
+                "b841e3110aa11cd2a9067c07d9806a69d744f625678604f8920a9153f02f8516"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "__lm": 0.0002012477359629704
+                "__lm": 0.0002010252286661976
             },
             "exampleSites": [
                 "retraite.com",
@@ -133,40 +106,23 @@
             ]
         },
         {
-            "rule": "leadfox\\.co\\/js\\/jquery\\.js",
+            "rule": "leadfox\\.co\\/js\\/api\\/leadfox\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.language": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "836a9fd34edf5af98c7a1139a132bb297674d79223b4c7633aa7254bc2f8b10a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "retraite.com",
-                "www.retraite.com"
-            ]
-        },
-        {
-            "rule": "leadfox\\.co\\/js\\/api\\/popup\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "b7703ccc5881ee89eb0d06d8b34febf982b25c7879d252f502c2130e855b7206"
+                "77c35f25cdc3a830045c3ef8f3cc320cac336ee2b22ea82194f807639827908c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -187,8 +143,48 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "retraite.com",
+                "www.retraite.com"
+            ]
+        },
+        {
+            "rule": "leadfox\\.co\\/js\\/api\\/form\\.js\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "retraite.com",
+                "www.retraite.com"
+            ]
+        },
+        {
+            "rule": "leadfox\\.co\\/404\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
             "responseHashes": [
-                "882ce0d1fce97f9f2e8907cbab42eac387fac8993d20bb0711f1b4822e045b0c"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -204,18 +200,14 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "jquery.com",
-            "prevalence": 0.9545454545454546
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.045454545454545456
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 8,
         "XHR": 6,
-        "Stylesheet": 2
+        "Stylesheet": 2,
+        "Script": 8
     },
     "nameservers": [
         "maria.ns.cloudflare.com",

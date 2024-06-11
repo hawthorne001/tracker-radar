@@ -9,11 +9,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000703,
+    "prevalence": 0.000704,
     "sites": 7,
     "subdomains": [
+        "eu-mobile.events.data",
         "browser.pipe.aria",
-        "browser.events.data"
+        "displaycatalog.mp",
+        "browser.events.data",
+        "edge-auth"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,19 +26,65 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "eu-mobile.events.data",
                 "browser.pipe.aria"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ecoflow.com",
+                "de.ecoflow.com",
+                "my.clevelandclinic.org"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/v7\\/products",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "displaycatalog.mp"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "XHR",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "clevelandclinic.org",
-                "my.clevelandclinic.org"
+                "minecraft.net",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/v7\\/products",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "displaycatalog.mp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5001656d324cde51eda4874c9197f6e81607901b435d8ffe66afebadb3bdec70"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "www.minecraft.net"
             ]
         },
         {
@@ -47,10 +96,10 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "6ee89b59c5730b9cae2cb9c337a2a29de9f2fb5c7a8fa1f130a98bf9c2802a51",
+                "c27bd61a0a2c007534ad439d9c8a14e4b3f94605483518d3ff782f25fb145943",
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
             "type": "XHR",
@@ -61,6 +110,33 @@
                 "www.minecraft.net",
                 "www.trekbikes.com"
             ]
+        },
+        {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "33cc6e61cbb1addafa75cc8ed40216823ee7e50631bb8d2b71eda77ca81a77f3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newsweek.com",
+                "www.salon.com"
+            ]
         }
     ],
     "categories": [
@@ -70,27 +146,30 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.25
+            "prevalence": 0.5652173913043478
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.2608695652173913
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.13043478260869565
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.043478260869565216
         }
     ],
     "types": {
-        "XHR": 5
+        "XHR": 6,
+        "Preflight": 2,
+        "Fetch": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns2-39.azure-dns.net",

@@ -14,7 +14,8 @@
     "subdomains": [
         "statics",
         "www",
-        "api"
+        "api",
+        "api-sps"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -36,7 +37,7 @@
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_cb_svref": 0.000020456451623901317
+                "_cb_svref": 0.000020471946609163245
             },
             "exampleSites": [
                 "iheart.com",
@@ -48,7 +49,7 @@
         {
             "rule": "foxsports\\.com\\/static\\/orion\\/scorestrip\\.js",
             "cookies": 0.0000273,
-            "fingerprinting": 2,
+            "fingerprinting": 1,
             "subdomains": [
                 "statics"
             ],
@@ -60,8 +61,8 @@
                 "Document.cookie setter": 4,
                 "window.localStorage": 4,
                 "window.innerWidth": 4,
-                "Date.prototype.getTime": 4,
-                "window.devicePixelRatio": 1
+                "window.innerHeight": 1,
+                "Date.prototype.getTime": 4
             },
             "sites": 4,
             "prevalence": 0.0000273,
@@ -129,38 +130,60 @@
                 "www.livenowfox.com",
                 "www.pokerstars.com"
             ]
+        },
+        {
+            "rule": "foxsports\\.com\\/locator\\/v1\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2d9f38f9453a2db3b06cb3ccb4e28f08832ed4ef08985a609a1c5c60f773ead8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pokerstars.com",
+                "www.pokerstars.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000477,
+    "cookies": 0.0000409,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6129032258064516
+            "prevalence": 0.7083333333333334
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.3548387096774194
+            "prevalence": 0.25
         },
         {
             "domain": "segment.com",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
         "Stylesheet": 4,
         "Script": 4,
-        "XHR": 11
+        "XHR": 13
     },
     "nameservers": [
-        "ns04.dns.fox",
-        "ns02.dns.fox",
-        "ns03.foxdoua.com",
-        "ns04.foxdoua.com",
-        "ns03.dns.fox",
         "ns01.foxdoua.com",
+        "ns01.dns.fox",
+        "ns03.foxdoua.com",
+        "ns03.dns.fox",
         "ns02.foxdoua.com",
-        "ns01.dns.fox"
+        "ns04.foxdoua.com",
+        "ns02.dns.fox",
+        "ns04.dns.fox"
     ]
 }

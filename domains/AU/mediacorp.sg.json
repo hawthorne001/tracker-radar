@@ -11,8 +11,9 @@
     "sites": 2,
     "subdomains": [
         "www16",
+        "uid",
         "recommend-zoom",
-        "uid"
+        "boost-recommend"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,53 +26,29 @@
                 "www16"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.cookieEnabled": 2,
-                "window.sessionStorage": 1,
-                "Navigator.prototype.appName": 1,
-                "window.localStorage": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie getter": 2
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "window.sessionStorage": 3,
+                "Navigator.prototype.appName": 3,
+                "window.localStorage": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "changiairport.com",
-                "www.channelnewsasia.com"
-            ]
-        },
-        {
-            "rule": "mediacorp\\.sg\\/tag\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 1,
-            "subdomains": [
-                "recommend-zoom"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "de4fda2283ba64e7b4d8e5040159ac9ff4682011b15473fdaebd6e84e0044e08"
+                "1b15e0bf29ae80195e25c623be7cf4966776365e22f5252271a1c19eecc7c0aa"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "channelnewsasia.com",
-                "www.channelnewsasia.com"
+                "www.channelnewsasia.com",
+                "www.changiairport.com"
             ]
         },
         {
@@ -92,30 +69,82 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "decf7a40c5772ca2d0e7e91a81526827296280692052b1a164eed04d9c5304fd"
+                "386c8bab2a3be55acc49e72842c142b53300cb964c818274e6b3b78a84b5a09b"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "UID": {
-                    "ttl": 31536007,
+                    "ttl": 31536011,
                     "length": 36,
-                    "prevalence": 0.0002010454362685967,
+                    "prevalence": 0.00020064205457463884,
                     "uniqueness": 0.5
                 },
                 "MeID_Seg": {
-                    "ttl": 31536010,
+                    "ttl": 31536013,
                     "length": 13,
-                    "prevalence": 0.0002010454362685967,
+                    "prevalence": 0.00020064205457463884,
                     "uniqueness": 0.5
                 },
                 "adtechTargetingKeys": {
-                    "ttl": 31536010,
+                    "ttl": 31536013,
                     "length": 14,
-                    "prevalence": 0.0002010454362685967,
+                    "prevalence": 0.00020064205457463884,
                     "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "channelnewsasia.com",
+                "www.channelnewsasia.com"
+            ]
+        },
+        {
+            "rule": "mediacorp\\.sg\\/tag\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "recommend-zoom"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7803add03c6e1054e2600a099bddfabc8b91e7013da99b03f415c9904ee7c6b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "channelnewsasia.com",
+                "www.channelnewsasia.com"
+            ]
+        },
+        {
+            "rule": "mediacorp\\.sg\\/pixel\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "boost-recommend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "UID": 0.00020064205457463884,
+                "lotame_domain_check": 0.00020064205457463884
+            },
             "exampleSites": [
                 "channelnewsasia.com",
                 "www.channelnewsasia.com"
@@ -128,20 +157,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8461538461538461
+            "prevalence": 0.7333333333333333
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 7,
+        "Image": 2
     },
     "nameservers": [
-        "ns-637.awsdns-15.net",
         "ns-329.awsdns-41.com",
         "ns-1734.awsdns-24.co.uk",
-        "ns-1493.awsdns-58.org"
+        "ns-1493.awsdns-58.org",
+        "ns-637.awsdns-15.net"
     ]
 }

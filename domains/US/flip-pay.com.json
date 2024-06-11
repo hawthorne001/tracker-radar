@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000682,
-    "sites": 10,
+    "prevalence": 0.000102,
+    "sites": 15,
     "subdomains": [
         "api",
         "cdn"
@@ -21,8 +21,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -30,7 +30,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "heavy.com",
-                "m.belfasttelegraph.co.uk"
+                "m.belfasttelegraph.co.uk",
+                "www.euractiv.com",
+                "www.thedailymash.co.uk"
             ]
         },
         {
@@ -41,29 +43,37 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "e333ee13e7e53519c355461cfdef9364246950809a37cbd0019d212ce9ae8b9d"
+                "794dbe335e2ba58dd856cf712be8f14227e83efe1b756024513e307d278260df",
+                "afd940a1aa742b5f618d0f5f5f3edd9d8ea53657dfb4efe08d1dbd04d4676fa7",
+                "56db185d32e3274c20bba1de2a8cf3f41babbe5c7e77b69897a797e499038d40"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "heavy.com",
-                "m.belfasttelegraph.co.uk"
+                "m.belfasttelegraph.co.uk",
+                "www.euractiv.com",
+                "www.thedailymash.co.uk"
             ]
         },
         {
             "rule": "flip-pay\\.com\\/clients\\/mh\\/inm\\/17\\/flip-pay\\.js",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTimezoneOffset": 1
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Document.cookie setter": 1
             },
             "sites": 4,
             "prevalence": 0.0000273,
@@ -72,7 +82,14 @@
                 "2744b92213f535ac66a65ef2de59f1a6cacd9b0a6d46317cd37cea822d6e8e21"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "fp.access.inm": {
+                    "ttl": null,
+                    "length": 13545,
+                    "prevalence": 0.000006823982203054414,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "belfasttelegraph.co.uk",
@@ -80,28 +97,89 @@
                 "www.belfasttelegraph.co.uk",
                 "www.independent.ie"
             ]
+        },
+        {
+            "rule": "flip-pay\\.com\\/clients\\/euractiv\\/config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "edadf0492cfae135ce081c8e08175ebf5cc62bc89b22f0c600b712c8c8a75966",
+                "0cc213ac9f92ef1f7870ca575c479c388b28c93c80363360c9eefda3ebae0ce0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "euractiv.com",
+                "www.euractiv.de",
+                "www.euractiv.com"
+            ]
+        },
+        {
+            "rule": "flip-pay\\.com\\/flip-pay\\.js",
+            "cookies": 0.0000273,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [
+                "ad220819fb551cace4982c93a3f49bbd68e577974b699dba37190be0f32b7102",
+                "db5d8ebf4224a6924694c058d5ca5f3c8f285a4c4c606fd70ebec6835a06222e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fp.browser_session_id": {
+                    "ttl": null,
+                    "length": 38,
+                    "prevalence": 0.000027295928812217658,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "euractiv.com",
+                "www.euractiv.de",
+                "www.euractiv.com",
+                "www.riponpress.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000682,
+    "cookies": 0.0000341,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9285714285714286
+            "prevalence": 0.9523809523809523
         },
         {
             "domain": "agnoplay.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2,
-        "Script": 4
+        "Preflight": 4,
+        "XHR": 4,
+        "Script": 11
     },
     "nameservers": [
-        "bella.ns.cloudflare.com",
-        "woz.ns.cloudflare.com"
+        "woz.ns.cloudflare.com",
+        "bella.ns.cloudflare.com"
     ]
 }

@@ -13,6 +13,7 @@
     "sites": 12,
     "subdomains": [
         "cognito-identity",
+        "fcqyzom2wf.execute-api",
         "d-qua0pdvun5.execute-api",
         "poweroffice.s3"
     ],
@@ -22,8 +23,32 @@
             "resolved": "d-qua0pdvun5.execute-api.eu-north-1.amazonaws.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "eu-north-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "335296c1276bb4ee652685f2f295d5375d5713385d8321a8211e361726a2ffec",
+                "28fbe0ddc9a4b7f2907fe65a73b3efe22b10f4b0e78e57d09cd1de8fb7a9cbe1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klikk.no",
+                "oppskrift.klikk.no",
+                "www.telenor.se"
+            ]
+        },
         {
             "rule": "eu-north-1\\.amazonaws\\.com\\/",
             "cookies": 0,
@@ -35,15 +60,33 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "294dbdc1f4aa9eac8df293e8e9da62f0bde192a55442557a6022a378c94ed1b5"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "klikk.no",
-                "oppskrift.klikk.no"
+                "www.telenor.se"
+            ]
+        },
+        {
+            "rule": "eu-north-1\\.amazonaws\\.com\\/default\\/resizeImages",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fcqyzom2wf.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "p3.no",
+                "urort.p3.no"
             ]
         },
         {
@@ -88,7 +131,7 @@
                 }
             ],
             "responseHashes": [
-                "bd2a44d5fc7fb0a1476eeb045c1201aec0b092fce89ccdad1086384b26ff482a"
+                "4ca2e1f1829ccc808d6a04300f3606c18dd4a1aa787409f6b67e52fb86f05083"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -147,34 +190,31 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8444444444444444
-        },
-        {
-            "domain": "d3g6ix8apt5w4m.cloudfront.net",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.9365079365079365
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.05555555555555555
         },
         {
             "domain": "cvm3.se",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.007936507936507936
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2,
+        "Fetch": 5,
+        "Preflight": 4,
+        "Image": 2,
         "Media": 4
     },
     "nameservers": [
-        "ns1.amzndns.net",
-        "ns2.amzndns.net",
-        "ns2.amzndns.org",
-        "ns2.amzndns.com",
-        "ns2.amzndns.co.uk",
-        "ns1.amzndns.org",
+        "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
-        "ns1.amzndns.co.uk"
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }

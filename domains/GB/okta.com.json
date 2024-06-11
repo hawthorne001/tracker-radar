@@ -10,9 +10,9 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "churchofjesuschrist.customdomains",
+        "servicenowsignon.customdomains",
         "mira-b2c.customdomains",
-        "servicenowsignon.customdomains"
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
@@ -30,6 +30,37 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "mira-b2c.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.mirashowers.co.uk",
+                    "resolved": "mira-b2c.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "www.mirashowers.co.uk",
+                "www.servicenow.com"
+            ]
+        },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000402,
@@ -57,7 +88,7 @@
                 }
             ],
             "responseHashes": [
-                "4775dfb9c70d334d201ff3c31cb3e35ed67f723b6820b75b2ce0c41e8791e747"
+                "39d5f8cbd02552bdd11a93c62bac2a49e8a970ca27c40d359f09e524a3be5282"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -68,36 +99,6 @@
                 "www.mirashowers.co.uk",
                 "www.servicenow.com"
             ]
-        },
-        {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mira-b2c.customdomains",
-                "servicenowsignon.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "auth.mirashowers.co.uk",
-                    "resolved": "mira-b2c.customdomains.okta.com"
-                },
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mirashowers.co.uk",
-                "www.servicenow.com"
-            ]
         }
     ],
     "categories": [],
@@ -105,22 +106,26 @@
     "cookies": 0.000402,
     "topInitiators": [
         {
+            "domain": "service-now.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "adobedtm.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2
+        "Preflight": 3,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
         "edns5.ultradns.biz",
-        "edns5.ultradns.net",
+        "ns-1563.awsdns-03.co.uk",
+        "edns5.ultradns.org",
         "ns-684.awsdns-21.net",
         "ns-285.awsdns-35.com",
-        "edns5.ultradns.org",
-        "edns5.ultradns.com"
+        "ns-1459.awsdns-54.org",
+        "edns5.ultradns.com",
+        "edns5.ultradns.net"
     ]
 }

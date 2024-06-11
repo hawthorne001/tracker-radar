@@ -11,11 +11,104 @@
     "sites": 2,
     "subdomains": [
         "dcf",
+        "pinpoint",
+        "broadband",
+        "plus",
+        "static.web.plus",
         "site.api"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "espn\\.com\\/TWDC-DTCI\\/prod\\/Bootstrap\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dcf"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ee40b4ef9efa358029136f831c788875488f9d899827f01837450306df8b71c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "s_ensNR": {
+                    "ttl": 2592005,
+                    "length": 17,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                },
+                "s_ensPortal": {
+                    "ttl": null,
+                    "length": 6,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                },
+                "s_ensCDS": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                },
+                "_dcf": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                },
+                "s_ensRegion": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                },
+                "s_ensNonIab": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020064205457463884,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/geo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pinpoint"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "30c1766cc9b2c1437d3b3c677367cdfca8a0cf8498a71bbfee193a20268f230f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
         {
             "rule": "espn\\.com\\/privacy\\/v1\\/b\\/r\\.rnc",
             "cookies": 0,
@@ -39,7 +132,152 @@
             ]
         },
         {
-            "rule": "espn\\.com\\/apis\\/personalized\\/v2\\/scoreboard\\/header",
+            "rule": "espn\\.com\\/espn3\\/auth\\/watchespn\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "broadband"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e990589ebd8b745f0a1391749124169fa4e0760d6aacdb7e377e38af5f1524d2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/en\\/sdk-data\\/",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "plus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "87329cda02c5c7ff4c1a7b4e88da1e9885584d5d47e39b917e3eaa7c9e2d1f3a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/espn\\/builds\\/f378d7a92e8f0657487da89d5b7efada6802eb53_1708031265918\\/scripts\\/site-core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static.web.plus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5b13e29e5b815c90ee0c7ec902eeba4eb99775361bbc74c66e0c4c930117201a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/espn\\/builds\\/f378d7a92e8f0657487da89d5b7efada6802eb53_1708031265918\\/scripts\\/globalBundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static.web.plus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ed708a03f27f094a6b8a057ac9612c0f07a3d21a05d11d3d72e1652a608b1bcc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/espn\\/builds\\/f378d7a92e8f0657487da89d5b7efada6802eb53_1708031265918\\/scripts\\/basesite_script_bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static.web.plus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "78f5a8968d2559ea494822e458261403d4deaec137c451d29706aae1cba62d54"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/espn\\/sections\\/sdk-data-api\\/builds\\/8e0db3bac048c212c8fdc11b0c0e747478d34785_1695927048623\\/scripts\\/sdk-data-api_script_bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static.web.plus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "147b9b061b14681d3c60e30e6b1ec60d64fc51d58d31e630c85965f4df65cf77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.nl"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\/apis\\/site\\/v2\\/sports\\/soccer\\/UEFA\\.EUROPA_QUAL\\/scoreboard",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -50,14 +288,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9b87f2407cbd7b20fd89231552d9d5baf5e65027b193d14e2a9c08de5ed657df"
+                "e4732fa082c2c524a1786215375ec219333841ac108550287ff1aefd92cbf163"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "espn.nl",
-                "www.espn.nl"
+                "streameast.uno",
+                "www.streameast.uno"
             ]
         }
     ],
@@ -66,22 +304,33 @@
     "cookies": 0.0001,
     "topInitiators": [
         {
+            "domain": "korbegy.github.io",
+            "prevalence": 0.8317757009345794
+        },
+        {
             "domain": "espncdn.com",
-            "prevalence": 0.75
+            "prevalence": 0.09345794392523364
+        },
+        {
+            "domain": "espn.net",
+            "prevalence": 0.04672897196261682
         },
         {
             "domain": "first party",
-            "prevalence": 0.25
+            "prevalence": 0.028037383177570093
         }
     ],
     "types": {
+        "Script": 10,
+        "XHR": 4,
         "Image": 2,
-        "XHR": 2
+        "Document": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-1936.awsdns-50.co.uk",
-        "ns-122.awsdns-15.com",
         "ns-1045.awsdns-02.org",
+        "ns-122.awsdns-15.com",
+        "ns-1936.awsdns-50.co.uk",
         "ns-846.awsdns-41.net"
     ]
 }
