@@ -7,7 +7,8 @@
     "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "snowplow-collector"
+        "snowplow-collector",
+        "collector"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -53,6 +54,74 @@
                 "apartmentlist.com",
                 "www.apartmentlist.com"
             ]
+        },
+        {
+            "rule": "apartmentlist\\.io\\/gtag\\/js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1c0f76b38da4ea7b6dd4e0c7df78710c2cce43d52927d0d698fc9d3d68af263f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ga_TX5110ML0C": {
+                    "ttl": 63072012,
+                    "length": 45,
+                    "prevalence": 0.000013648523229786536,
+                    "uniqueness": 1
+                },
+                "_ga": {
+                    "ttl": 63072012,
+                    "length": 27,
+                    "prevalence": 0.000013648523229786536,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apartmentlist.com",
+                "www.apartmentlist.com"
+            ]
+        },
+        {
+            "rule": "apartmentlist\\.io\\/g\\/collect",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "0a68fd24c4d4d7f54cd1feaa90b9ab3468fd8bda327bb6d51e4044ea8759a767"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.000013648523229786536,
+                "_li_dcdm_c": 0.000013648523229786536
+            },
+            "exampleSites": [
+                "apartmentlist.com",
+                "www.apartmentlist.com"
+            ]
         }
     ],
     "categories": [],
@@ -65,13 +134,14 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "XHR": 4,
+        "Preflight": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns-175.awsdns-21.com",
-        "ns-514.awsdns-00.net",
         "ns-1313.awsdns-36.org",
+        "ns-514.awsdns-00.net",
+        "ns-175.awsdns-21.com",
         "ns-1959.awsdns-52.co.uk"
     ]
 }

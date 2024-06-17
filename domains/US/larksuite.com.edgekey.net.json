@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000682,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
-        "internal-api-security"
+        "internal-api-security",
+        "accounts"
     ],
     "cnames": [
+        {
+            "original": "accounts.larksuite.com",
+            "resolved": "accounts.larksuite.com.edgekey.net"
+        },
         {
             "original": "internal-api-security.larksuite.com",
             "resolved": "internal-api-security.larksuite.com.edgekey.net"
@@ -22,6 +27,83 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "larksuite\\.com\\.edgekey\\.net\\/lark\\/scs\\/compliance\\/cookie_governor\\/block_cookie",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "internal-api-security"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "internal-api-security.larksuite.com",
+                    "resolved": "internal-api-security.larksuite.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larksuite.com",
+                "www.larksuite.com"
+            ]
+        },
+        {
+            "rule": "larksuite\\.com\\.edgekey\\.net\\/accounts\\/page\\/login",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "accounts.larksuite.com",
+                    "resolved": "accounts.larksuite.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larksuite.com",
+                "www.larksuite.com"
+            ]
+        },
+        {
+            "rule": "larksuite\\.com\\.edgekey\\.net\\/lark\\/scs\\/compliance\\/cookie_governor\\/block_cookie",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "internal-api-security"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "internal-api-security.larksuite.com",
+                    "resolved": "internal-api-security.larksuite.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6582ef3cf3a442fd5daf6d5c0ba0623331f66e33e058122439d491e6a50c6c5d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larksuite.com",
+                "www.larksuite.com"
+            ]
+        },
         {
             "rule": "larksuite\\.com\\.edgekey\\.net\\/lark\\/scs\\/compliance\\/cookie_governor\\/cookie_tracker",
             "cookies": 0,
@@ -64,7 +146,7 @@
                 }
             ],
             "responseHashes": [
-                "a3fea59ee766d0f5f1907253140849e7ec5dcc3fe1f5f941f7e2cac39ee020a1"
+                "37c85558ff3d1b0501e1086df51c7b0368fdbb0d29fd1f4d36c6c7be869bd07a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -90,33 +172,10 @@
                     "resolved": "internal-api-security.larksuite.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "cdde839419b1700c6d86a8195f0c36a01c6b355647de0deef6b29f684af7d9fc"
+            ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "larksuite.com",
-                "www.larksuite.com"
-            ]
-        },
-        {
-            "rule": "larksuite\\.com\\.edgekey\\.net\\/lark\\/scs\\/compliance\\/cookie_governor\\/ip_info",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "internal-api-security"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "internal-api-security.larksuite.com",
-                    "resolved": "internal-api-security.larksuite.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -127,16 +186,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000682,
     "topInitiators": [
         {
+            "domain": "bytedapm.com",
+            "prevalence": 0.6
+        },
+        {
             "domain": "larksuitecdn.com",
-            "prevalence": 1
+            "prevalence": 0.4
         }
     ],
     "types": {
         "Preflight": 4,
-        "XHR": 2,
+        "Document": 2,
+        "XHR": 4,
         "Fetch": 2
     },
     "nameservers": []

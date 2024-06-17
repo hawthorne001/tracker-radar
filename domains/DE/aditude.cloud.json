@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
         "production-cloudcontrol-cache-cdn.infra",
-        "production-raven.infra"
+        "production-raven.infra",
+        "event-ingestor.judy.pnap"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -21,8 +22,8 @@
                 "production-cloudcontrol-cache-cdn.infra"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -31,6 +32,7 @@
             "exampleSites": [
                 "charlieintel.com",
                 "www.dexerto.com",
+                "www.pgatour.com",
                 "www.timesofisrael.com"
             ]
         },
@@ -42,11 +44,35 @@
                 "production-cloudcontrol-cache-cdn.infra"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
                 "0e71b1bd89a185c49b0de76aa4a14d798c29d5d1d90ea4cb5ec21f458054e112"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlieintel.com",
+                "www.dexerto.com",
+                "www.pgatour.com",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "aditude\\.cloud\\/geo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-raven.infra"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "7057c03641ec15d9f15cb926d50758c754a56af49726ab1bde8e1ea6bbce8471"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -66,7 +92,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -79,18 +105,40 @@
             ]
         },
         {
-            "rule": "aditude\\.cloud\\/geo",
+            "rule": "aditude\\.cloud\\/v1\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "production-raven.infra"
+                "event-ingestor.judy.pnap"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlieintel.com",
+                "www.dexerto.com",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "aditude\\.cloud\\/v1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event-ingestor.judy.pnap"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "7057c03641ec15d9f15cb926d50758c754a56af49726ab1bde8e1ea6bbce8471"
+                "7bca2d6d71a0b332aa631e096a32552de8fc9727caf1c3da4067c5d436fc13d9",
+                "1a7a35b28d55ffdadb2995d97aba2554df80fe9dd730296e4fd6b9ac10f3d6fd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -108,15 +156,19 @@
     "topInitiators": [
         {
             "domain": "dn0qt3r0xannq.cloudfront.net",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Preflight": 6,
-        "Fetch": 6
+        "Preflight": 10,
+        "Fetch": 10
     },
     "nameservers": [
-        "david.ns.cloudflare.com",
-        "raina.ns.cloudflare.com"
+        "raina.ns.cloudflare.com",
+        "david.ns.cloudflare.com"
     ]
 }

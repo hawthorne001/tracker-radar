@@ -7,7 +7,7 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000401,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
         "files",
@@ -274,26 +274,6 @@
             ]
         },
         {
-            "rule": "qualifio\\.com\\/charts\\/static\\/chartWebVersions\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "player"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lerobert.com",
-                "www.haarlemsdagblad.nl"
-            ]
-        },
-        {
             "rule": "qualifio\\.com\\/kit\\/qualp\\.2\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -320,11 +300,13 @@
         {
             "rule": "qualifio\\.com\\/kit\\/elastic-apm-opentracing\\.umd\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "files"
             ],
-            "apis": {},
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -354,6 +336,26 @@
                 "37e6c2fe4b96f55a90db446e9e16de6af0875347ca8fe31f617841f1611e49b0"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lerobert.com",
+                "www.haarlemsdagblad.nl"
+            ]
+        },
+        {
+            "rule": "qualifio\\.com\\/charts\\/static\\/chartWebVersions\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -475,7 +477,7 @@
                 }
             ],
             "responseHashes": [
-                "32d55aa983c07ac240d6fb971a0680d69451c53e03fec0b595745052fa3cb4a5"
+                "5f27c22e18ae3cef4602fb286ec92c8c988c7419a18875310bf00f02e365ecea"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -506,12 +508,12 @@
     "types": {
         "Script": 26,
         "Stylesheet": 10,
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-226-a.gandi.net",
         "ns-32-b.gandi.net",
+        "ns-226-a.gandi.net",
         "ns-97-c.gandi.net"
     ]
 }

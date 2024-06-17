@@ -4,31 +4,47 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "husqvarna",
+        "app",
+        "api-husqvarna",
         "api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "mavenoid\\.com\\/api\\/graphql",
+            "rule": "mavenoid\\.com\\/embedded\\/embedded\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "husqvarna",
+                "app"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.devicePixelRatio": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "a69262d6cf9294a49242795a2c4ace4e93bf48a40e139caaf7e029042c49bf03"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "worx.com",
+                "husqvarna.com",
                 "www.worx.com"
             ]
         },
@@ -37,11 +53,34 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "api-husqvarna",
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "husqvarna.com",
+                "locations.husqvarna.com",
+                "www.worx.com"
+            ]
+        },
+        {
+            "rule": "mavenoid\\.com\\/api\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-husqvarna",
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "69469373ce42333ddfdccb34731aa3592a0f547ebb5b3681ad0c57c77b867fb0"
@@ -50,7 +89,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "worx.com",
+                "husqvarna.com",
+                "locations.husqvarna.com",
                 "www.worx.com"
             ]
         }
@@ -61,12 +101,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
         "crystal.ns.cloudflare.com",

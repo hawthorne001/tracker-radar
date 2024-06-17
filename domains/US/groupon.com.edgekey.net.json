@@ -9,17 +9,22 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.0000409,
+    "sites": 6,
     "subdomains": [
-        "gtm",
         "booster-dl",
         "booster-pub",
         "booster-ind",
         "booster-db",
-        "booster"
+        "booster",
+        "api",
+        "gtm"
     ],
     "cnames": [
+        {
+            "original": "api.groupon.com",
+            "resolved": "api.groupon.com.edgekey.net"
+        },
         {
             "original": "booster-db.groupon.com",
             "resolved": "booster-db.groupon.com.edgekey.net"
@@ -48,40 +53,8 @@
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "groupon\\.com\\.edgekey\\.net\\/tag\\/g\\/collect",
-            "cookies": 0.00000682,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gtm"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [
-                {
-                    "original": "gtm.groupon.com",
-                    "resolved": "gtm.groupon.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c",
-                "cf28aa0ba9fc271ed3b02c7973c7f7c8a70e2bfc5d6cf810c832c19773985bb7"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ga": 0.000013647964406108829,
-                "_li_dcdm_c": 0.000006823982203054414
-            },
-            "exampleSites": [
-                "groupon.de",
-                "www.groupon.co.uk",
-                "www.groupon.com"
-            ]
-        },
-        {
             "rule": "groupon\\.com\\.edgekey\\.net\\/clients\\/groupon_us\\/default\\.js",
-            "cookies": 0.00000682,
+            "cookies": 0.0000136,
             "fingerprinting": 3,
             "subdomains": [
                 "booster-dl"
@@ -96,7 +69,7 @@
                 }
             ],
             "responseHashes": [
-                "c4ce5fcffab7694768f7a3d60f6810d11b65a3c53479079e8a4508bd63de5bab"
+                "e0dc5739d0acdf72d1f30019553020a9f0e9c1e18326dabc8c88272a0be9572b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -150,7 +123,7 @@
                 }
             ],
             "responseHashes": [
-                "c109e035db9bbfd84af4bd2106e08e97fefffe708b2709ffa896b6fb9b57a0b8"
+                "c3c8905da502786fb570ef5e01794f667bef4a63152a78d3caebd69f2b50de6b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -213,25 +186,88 @@
                 "groupon.com",
                 "www.groupon.com"
             ]
+        },
+        {
+            "rule": "groupon\\.com\\.edgekey\\.net\\/ai\\/api\\/v1\\/placement",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.groupon.com",
+                    "resolved": "api.groupon.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d7fbe899494a1eda4752e142fcc463d358074d0a9341bd2326f1d41e373277e9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000013648523229786536
+            },
+            "exampleSites": [
+                "groupon.com",
+                "www.groupon.com"
+            ]
+        },
+        {
+            "rule": "groupon\\.com\\.edgekey\\.net\\/tag\\/g\\/collect",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [
+                {
+                    "original": "gtm.groupon.com",
+                    "resolved": "gtm.groupon.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "653c0d469455624eab91e8532949f22bcf8ec5dd10f10b4bb9ab90cabc52e013",
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000013648523229786536,
+                "_ga": 0.00003412130807446634
+            },
+            "exampleSites": [
+                "groupon.com",
+                "www.groupon.com",
+                "www.groupon.de",
+                "www.groupon.co.uk"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000682,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.6
+            "prevalence": 0.6875
         },
         {
             "domain": "grouponcdn.com",
-            "prevalence": 0.4
+            "prevalence": 0.3125
         }
     ],
     "types": {
-        "XHR": 9,
         "Script": 2,
-        "Document": 2
+        "XHR": 10,
+        "Document": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

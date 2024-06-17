@@ -10,13 +10,57 @@
     "prevalence": 0.0012,
     "sites": 12,
     "subdomains": [
-        "cfvod",
         "cdnapisec",
-        "analytics"
+        "analytics",
+        "cfvod"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "kaltura\\.com\\/api_v3\\/service\\/multirequest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnapisec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "aca78fba0901bd8c13d82dbf7db98d8e7e3a12891e24a2304d12a53adf3c031d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "userapps.support.sap.com"
+            ]
+        },
+        {
+            "rule": "kaltura\\.com\\/api_v3\\/index\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "140080d56985b0b8bbdcf790c57813858e96b04c441fad06dd1aa8a0084d039e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "www.oreilly.com"
+            ]
+        },
         {
             "rule": "kaltura\\.com\\/pd\\/p\\/1825021\\/sp\\/182502100\\/serveFlavor\\/entryId\\/1_9xisrkmq\\/v\\/1\\/ev\\/4\\/flavorId\\/1_mhk13rag\\/name\\/a\\.mp4",
             "cookies": 0,
@@ -68,9 +112,7 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "b4fe65a8ee9010b76ad4c1d2c0829b0b648296feb2202c73e2555c640d9a73d3"
-            ],
+            "responseHashes": [],
             "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -91,7 +133,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "05ff81f19196cead900f8830ea635d6ec6c2f27d3940e43598f61409ba53821d"
+                "bd36ded4561bbdac605795354896a5c7c1e794e5076306ce985cffaf2342efa5"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -111,44 +153,22 @@
             "apis": {
                 "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.plugins": 2,
-                "MediaSource.isTypeSupported": 2,
                 "Navigator.prototype.mimeTypes": 2,
                 "Navigator.prototype.platform": 2,
                 "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.plugins": 2,
                 "Document.cookie getter": 2,
                 "Navigator.prototype.javaEnabled": 2,
-                "HTMLMediaElement.prototype.canPlayType": 2
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "MediaSource.isTypeSupported": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "798524e48bc910992778e556a9277793477296b6f9321fafbe5e01b6e4372677"
+                "7e93df8ae077fe6571eeb5be67d0a1e9a55d5d51d8f7a207beee2f915b1bc6b8"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "oreilly.com",
-                "www.oreilly.com"
-            ]
-        },
-        {
-            "rule": "kaltura\\.com\\/api_v3\\/index\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "analytics"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "fd5f543bc37bdd92182d1cabad39e88ffda2cb1c596f194ad9d0bd2dd6d2fa24"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -163,21 +183,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6451612903225806
+            "prevalence": 0.6936936936936937
         },
         {
             "domain": "yotpo.com",
-            "prevalence": 0.3467741935483871
+            "prevalence": 0.2972972972972973
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.008064516129032258
+            "prevalence": 0.009009009009009009
         }
     ],
     "types": {
+        "XHR": 4,
         "Media": 6,
-        "Script": 4,
-        "XHR": 2
+        "Script": 4
     },
     "nameservers": [
         "a10-65.akam.net",

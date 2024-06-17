@@ -12,8 +12,8 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb",
-        "collab-prod.s3"
+        "collab-prod.s3",
+        "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
     ],
     "cnames": [
         {
@@ -23,6 +23,30 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/production\\/delivery\\/web\\/v2\\.0\\/e06178f7-20a0-420e-a3cf-3c38b12f19bf\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collab-prod.s3"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fe80c142bfc38d3fa41a4a508779d2a5dfe889953a76fd86bc80b02da82c15a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "peaveymart.com",
+                "www.peaveymart.com"
+            ]
+        },
         {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
             "cookies": 0,
@@ -44,8 +68,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "afr.com",
-                "www.smh.com.au"
+                "smh.com.au",
+                "www.theage.com.au"
             ]
         },
         {
@@ -56,8 +80,8 @@
                 "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "l.ffx.io",
@@ -71,33 +95,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "afr.com",
-                "www.afr.com",
-                "www.smh.com.au"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/production\\/delivery\\/web\\/v2\\.0\\/e06178f7-20a0-420e-a3cf-3c38b12f19bf\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "collab-prod.s3"
-            ],
-            "apis": {
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "3b38c8b72bd6436d6b3c79351d24232d7ac406c8ec8c1d93bbb483c2488f1ffd"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "peaveymart.com",
-                "www.peaveymart.com"
+                "smh.com.au",
+                "www.theage.com.au"
             ]
         }
     ],
@@ -113,18 +112,18 @@
         }
     ],
     "types": {
+        "Script": 2,
         "Preflight": 2,
-        "XHR": 3,
-        "Script": 2
+        "XHR": 2
     },
     "nameservers": [
+        "ns2.amzndns.org",
         "ns1.amzndns.co.uk",
-        "ns1.amzndns.com",
-        "ns1.amzndns.net",
         "ns1.amzndns.org",
         "ns2.amzndns.co.uk",
-        "ns2.amzndns.com",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns2.amzndns.com",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net"
     ]
 }

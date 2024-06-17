@@ -7,13 +7,24 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000904,
+    "sites": 9,
     "subdomains": [
         "static.developer",
-        "analytics.developer"
+        "xsso",
+        "analytics.developer",
+        "auth"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "xsso.lolesports.com",
+            "resolved": "xsso.riotgames.com"
+        },
+        {
+            "original": "xsso.playvalorant.com",
+            "resolved": "xsso.riotgames.com"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -24,7 +35,7 @@
                 "static.developer"
             ],
             "apis": {
-                "Navigator.prototype.language": 5,
+                "Navigator.prototype.language": 6,
                 "window.sessionStorage": 3,
                 "Navigator.prototype.userAgent": 3,
                 "Screen.prototype.width": 3,
@@ -40,8 +51,8 @@
                 "Navigator.prototype.cookieEnabled": 3,
                 "HTMLCanvasElement.prototype.toDataURL": 3
             },
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [
                 "6e62062be5715767e58cd95f16bd376f79dc4ab8422b9abe83ead5bbde38415f"
@@ -52,10 +63,42 @@
             "exampleSites": [
                 "lolalytics.com",
                 "mobalytics.gg",
+                "porofessor.gg",
                 "u.gg",
                 "www.leagueofgraphs.com",
                 "www.metasrc.com",
                 "www.op.gg"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/xsso",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.lolesports.com",
+                    "resolved": "xsso.riotgames.com"
+                },
+                {
+                    "original": "xsso.playvalorant.com",
+                    "resolved": "xsso.riotgames.com"
+                }
+            ],
+            "responseHashes": [
+                "ad1bc0c4d6980ae8a5d1d093add5dd8960ea827a09c4987ac86a3752c9b8dbcc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
             ]
         },
         {
@@ -66,8 +109,8 @@
                 "analytics.developer"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -78,35 +121,179 @@
             "exampleSites": [
                 "lolalytics.com",
                 "mobalytics.gg",
+                "porofessor.gg",
                 "u.gg",
                 "www.leagueofgraphs.com",
                 "www.op.gg"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/check-session-iframe",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.lolesports.com",
+                    "resolved": "xsso.riotgames.com"
+                },
+                {
+                    "original": "xsso.playvalorant.com",
+                    "resolved": "xsso.riotgames.com"
+                }
+            ],
+            "responseHashes": [
+                "ae191238127841f9b513d691694ee7f3c040eab67ab46a5fabcdc80e6c5489a9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/riot-owned-iframe",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "xsso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.lolesports.com",
+                    "resolved": "xsso.riotgames.com"
+                },
+                {
+                    "original": "xsso.playvalorant.com",
+                    "resolved": "xsso.riotgames.com"
+                }
+            ],
+            "responseHashes": [
+                "e873c72144c594f584279a2a2f5da7ac7eab8c8f8454e2022cc6a4a46622d8b8"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/login",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.lolesports.com",
+                    "resolved": "xsso.riotgames.com"
+                },
+                {
+                    "original": "xsso.playvalorant.com",
+                    "resolved": "xsso.riotgames.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/authorize",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
+            ]
+        },
+        {
+            "rule": "riotgames\\.com\\/redirect",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.lolesports.com",
+                    "resolved": "xsso.riotgames.com"
+                },
+                {
+                    "original": "xsso.playvalorant.com",
+                    "resolved": "xsso.riotgames.com"
+                }
+            ],
+            "responseHashes": [
+                "7d9ce0dd7028022723375585b4f7c48f34e318ad6f775dc3ec9a76db5cf2ccbe"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "playvalorant.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.25
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 6,
-        "XHR": 5
+        "Script": 9,
+        "XHR": 6,
+        "Document": 10
     },
     "nameservers": [
-        "a20-65.akam.net",
-        "a7-67.akam.net",
-        "a8-64.akam.net",
-        "a11-64.akam.net",
         "a1-195.akam.net",
-        "a6-66.akam.net"
+        "a7-67.akam.net",
+        "a20-65.akam.net",
+        "a11-64.akam.net",
+        "a6-66.akam.net",
+        "a8-64.akam.net"
     ]
 }

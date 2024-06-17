@@ -11,8 +11,8 @@
         "unleash-edge",
         "service-messages-api.mtv",
         "service-messages-api.tv4",
-        "client-gateway.tv4",
-        "tv4se-graphql"
+        "tv4se-graphql",
+        "nordic-gateway.tv4"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -29,10 +29,10 @@
             "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
-                "bb4c903e61656519c109a5de18b0d0df0f290bbc34856dcd32df49670ee8d4a6",
+                "bd50e933b4aa13fd88a2179a0dfcd9a95e9ee2dabb37f3c515ef04be1148e26f",
                 "ecb681ea865a41083a1109737eb2c60412e565d46d0321577260154cdbe8109a",
-                "a87271d08833cbab154b3308622159df2fda9d736333dc153b7170567ad31ee8",
-                "dc14d6162265aae5296f57910185cf2992da8f91369f5fef2da3c88ac96dbfe1"
+                "234e1db787d3966f7c95b061bbbfab75aec4764888e37cbb5bffb690e58bfae5",
+                "456373db3f95be597030b50351892f2ec920a648702d865b147dd295854f9f0b"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -77,9 +77,30 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "6e90640099eb1aed4885f43432bb20895f4a443b8614c776dde09b68f16f751e"
+                "1158c3ae4c0675af179d568964f3c223a1847031aa7da6975418400bb15c6866"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.fi",
+                "www.tv4play.se"
+            ]
+        },
+        {
+            "rule": "a2d\\.tv\\/messages\\/published",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service-messages-api.mtv",
+                "service-messages-api.tv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -111,12 +132,35 @@
             ]
         },
         {
-            "rule": "a2d\\.tv\\/messages\\/published",
+            "rule": "a2d\\.tv\\/graphql",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tv4se-graphql",
+                "nordic-gateway.tv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "260d2d2f6f341255498d109a6d5101d87566750efc5273f601fc7ad1c90f09d4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tv4.se",
+                "www.tv4play.se"
+            ]
+        },
+        {
+            "rule": "a2d\\.tv\\/graphql",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "service-messages-api.mtv",
-                "service-messages-api.tv4"
+                "tv4se-graphql",
+                "nordic-gateway.tv4"
             ],
             "apis": {},
             "sites": 2,
@@ -127,55 +171,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mtv.fi",
+                "tv4.se",
                 "www.tv4play.se"
-            ]
-        },
-        {
-            "rule": "a2d\\.tv\\/graphql",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "client-gateway.tv4",
-                "tv4se-graphql"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "e643f5b084e17ebe1e4998c098b7cfe030c17cd5bbe8779dd395ed22b8664f0c",
-                "47bafe2bd78e6c010956a4e6cfe7b88d9e1ce22e0883492ba4ec5f3ca520eec0"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tv4play.se",
-                "www.tv4play.se",
-                "www.tv4.se"
-            ]
-        },
-        {
-            "rule": "a2d\\.tv\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "client-gateway.tv4",
-                "tv4se-graphql"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tv4play.se",
-                "www.tv4play.se",
-                "www.tv4.se"
             ]
         }
     ],
@@ -190,13 +187,13 @@
     ],
     "types": {
         "Image": 5,
-        "Preflight": 7,
-        "Fetch": 7
+        "Preflight": 6,
+        "Fetch": 6
     },
     "nameservers": [
-        "ns-1092.awsdns-08.org",
+        "ns-601.awsdns-11.net",
         "ns-1730.awsdns-24.co.uk",
-        "ns-84.awsdns-10.com",
-        "ns-601.awsdns-11.net"
+        "ns-1092.awsdns-08.org",
+        "ns-84.awsdns-10.com"
     ]
 }

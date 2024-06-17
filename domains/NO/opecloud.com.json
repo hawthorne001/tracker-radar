@@ -9,16 +9,16 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00141,
-    "sites": 14,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
         "adalliance.profiles.tagger",
         "foxus.papi-public.us-east-1.tagger",
-        "pdmp.papi-public.eu-central-1.tagger",
         "foxus.tagger",
         "foxus.dcapi.tagger",
         "fox.dcapi.tagger",
-        "cdn"
+        "cdn",
+        "fox.tagger"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,36 +29,24 @@
             "fingerprinting": 0,
             "subdomains": [
                 "adalliance.profiles.tagger",
-                "foxus.papi-public.us-east-1.tagger",
-                "pdmp.papi-public.eu-central-1.tagger"
+                "foxus.papi-public.us-east-1.tagger"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000804,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "b9958fa81d020e758185440b0dc437005ddcb3a239660519d478f05dd7d4e3a6",
-                "2a68a1a800d8921f69b68c03f491acf7ef39af6dd99f2fc77dcb10f197900316",
-                "03e936b46d851a83928b43460c68f5b013e87e78f263c3bec26a980f32c28dc9",
-                "0f6545d42211227428c96f52b86e13fbc7a7e9d53e288e6ed6f5fff0d15fc3c1",
-                "db4fd58ca979791b364ffc9cf7da68da7f61089bb43c2d3a03f9abcb83568d05",
-                "edf97321a4459d53f70558b4725691e7e576252860e0b5e7247c8a0978f56603",
-                "1a60e3e36e19f763fd11548f2a60692db0bbbca4ad7e5ca83277d34464203a83"
+                "d386d2f2982dfb16d48ab029b9bdeaa5dd10559ed77e4ee9e89ad412d1416b20",
+                "246d93991cf4fb87146e760c332a3a285206d63a48ab44a98291bb61ed349a08",
+                "6fef824e0151f2ae62ee3bc1f913141523de8fe2116c1c1f8474168f778be51c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010045203415369161,
-                "lotame_domain_check": 0.00020090406830738323
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chefkoch.de",
                 "www.foxnews.com",
-                "www.legacy.com",
-                "www.mathway.com",
                 "www.n-tv.de",
-                "www.rtl.de",
-                "www.salon.com",
                 "www.stern.de"
             ]
         },
@@ -86,15 +74,15 @@
         },
         {
             "rule": "opecloud\\.com\\/web\\/visit",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "foxus.dcapi.tagger",
                 "fox.dcapi.tagger"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "d7e83e28a04b537e64424546b14caf9b67bad2f28dabce68116e0d372319fa00"
@@ -105,6 +93,55 @@
             "exampleSites": [
                 "foxnews.com",
                 "www.foxnews.com",
+                "www.foxsports.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/ope-fox\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5dd580ddcfd1e0c964d94a52e5c2291ab1133f916b2d7c95b7f92c5c610e2a37"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/fox\\/v2\\/cookiesync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fox.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com",
                 "www.tmz.com"
             ]
         },
@@ -126,7 +163,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f94ce544d24137d8612fefaa7499988821b47ebd1ae3c2ee4e9ad7b4e680c833"
+                "b4fde61250e80b032a8e55d1cc21507ee8ffd57ad6af3f7df4b95e224f709391"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -135,81 +172,54 @@
                 "lachainemeteo.com",
                 "www.lefigaro.fr"
             ]
-        },
-        {
-            "rule": "opecloud\\.com\\/ope-pdmp\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.colorDepth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "823afaed8844722e85eef523e873fc445cc11b31ab639f8764fb732b8155304a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "legacy.com",
-                "www.mathway.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000301,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.4583333333333333
         },
         {
             "domain": "knotch-cdn.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.125
         },
         {
             "domain": "fox.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "bildstatic.de",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "atp.fox",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.045454545454545456
-        },
-        {
-            "domain": "studybreakmedia.com",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "kataweb.it",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Fetch": 13,
-        "Script": 4
+        "Fetch": 10,
+        "Script": 4,
+        "Image": 2
     },
     "nameservers": [
+        "ns-899.awsdns-48.net",
         "ns-1454.awsdns-53.org",
-        "ns-1611.awsdns-09.co.uk",
         "ns-353.awsdns-44.com",
-        "ns-899.awsdns-48.net"
+        "ns-1611.awsdns-09.co.uk"
     ]
 }
