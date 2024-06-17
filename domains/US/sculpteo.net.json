@@ -7,16 +7,48 @@
     "prevalence": 0.0000136,
     "sites": 2,
     "subdomains": [
+        "sentry2.srv",
         "matomo2.srv"
     ],
     "cnames": [
         {
             "original": "matomo.sculpteo.com",
             "resolved": "matomo2.srv.sculpteo.net"
+        },
+        {
+            "original": "sentry.sculpteo.com",
+            "resolved": "sentry2.srv.sculpteo.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "sculpteo\\.net\\/api\\/7\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry2.srv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "sentry.sculpteo.com",
+                    "resolved": "sentry2.srv.sculpteo.net"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sculpteo.com",
+                "www.sculpteo.com"
+            ]
+        },
         {
             "rule": "sculpteo\\.net\\/matomo\\.js",
             "cookies": 0,
@@ -76,12 +108,13 @@
     "performance": {},
     "cookies": 0,
     "types": {
+        "Fetch": 2,
         "Script": 2,
         "Ping": 2
     },
     "nameservers": [
-        "ns-183-b.gandi.net",
+        "ns-76-a.gandi.net",
         "ns-99-c.gandi.net",
-        "ns-76-a.gandi.net"
+        "ns-183-b.gandi.net"
     ]
 }

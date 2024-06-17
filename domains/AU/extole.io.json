@@ -10,14 +10,10 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "mac-cosmetics",
+        "revzilla",
         "shutterstock"
     ],
     "cnames": [
-        {
-            "original": "share.maccosmetics.com.au",
-            "resolved": "mac-cosmetics.extole.io"
-        },
         {
             "original": "share.shutterstock.com",
             "resolved": "shutterstock.extole.io"
@@ -27,51 +23,55 @@
     "resources": [
         {
             "rule": "extole\\.io\\/core\\.js",
-            "cookies": 0.0001,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
-                "mac-cosmetics",
+                "revzilla",
                 "shutterstock"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
-                {
-                    "original": "share.maccosmetics.com.au",
-                    "resolved": "mac-cosmetics.extole.io"
-                },
                 {
                     "original": "share.shutterstock.com",
                     "resolved": "shutterstock.extole.io"
                 }
             ],
             "responseHashes": [
-                "b32b0a090ee261470b4b7135354a1b067e4901a5c71d1f0b027ff8377f3ca948"
+                "12086bf94d6cc947e0c896610cf65141a3e7a19a8e4b686820480f20b27f6b31"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536008,
+                    "length": 26,
+                    "prevalence": 0.00010035122930255896,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "maccosmetics.com.au",
+                "revzilla.com",
                 "www.shutterstock.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "tiktok.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
             "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
             "prevalence": 0.3333333333333333
         }
     ],
@@ -79,9 +79,8 @@
         "Script": 2
     },
     "nameservers": [
-        "ns-603.awsdns-11.net",
+        "ns-1510.awsdns-60.org",
         "ns-231.awsdns-28.com",
-        "ns-1867.awsdns-41.co.uk",
-        "ns-1510.awsdns-60.org"
+        "ns-603.awsdns-11.net"
     ]
 }

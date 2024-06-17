@@ -4,16 +4,17 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
         "vg-api",
         "openair-california",
+        "em-frontend-assets",
         "em-font-service-prod",
-        "em-frontend-assets"
+        "em-tr4ck-settings"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "airtrfx\\.com\\/graphql",
@@ -27,7 +28,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bab8774228b29d86b1f159f4e9a95fb44137b34cd19aab9468fc43b1425854e6"
+                "1aa9d3983f0bb792b5f16be4a7c722a38b774b768fdc22c3ed3bc030cbb64ab5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -89,7 +90,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e0fd930231a64ce15e0774c5d2a64687ba7cc3e3f8a35a29dc4cff4ffe331c17"
+                "147080e3d43e007c404131165df9eed8047ff32126cfb954c6e965251d7bea4c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -100,45 +101,63 @@
             ]
         },
         {
-            "rule": "airtrfx\\.com\\/",
+            "rule": "airtrfx\\.com\\/components\\/em-cmp-lib-tracking\\/0\\.12\\.6\\/components\\/em-cmp-tracking\\/tracking\\.bundle\\.js",
             "cookies": 0.000201,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "em-font-service-prod"
+                "em-frontend-assets"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rex.com.au",
-                "flights.rex.com.au"
-            ]
-        },
-        {
-            "rule": "airtrfx\\.com\\/",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "em-font-service-prod"
-            ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e2864921d04d151605530624d38cb1c6c6f7b8c03342e31d70c2f232e05a6a6c"
+                "667c5a3a69c986c7c8d67f641c97942e96affaf82c79a2e50b40cf9d87a1ba02"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "emcid": {
+                    "ttl": 34560015,
+                    "length": 11,
+                    "prevalence": 0.00020070245860511792,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rex.com.au",
+                "www.srilankan.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "em-font-service-prod",
+                "em-tr4ck-settings"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "291ad407c126884221c6a44860d41f7d0ce624e673897953bc8664024b25ebeb",
+                "af60d16ecaf69d24033f5743f4af548bafdb10b75e3f26bb9d9c57d270b79536"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rex.com.au",
-                "flights.rex.com.au"
+                "flights.rex.com.au",
+                "www.srilankan.com"
             ]
         },
         {
@@ -175,7 +194,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "183465388e15c84b1398fa52b19f8e86ec4c46b196dfab80a00f542025fa41a7"
+                "513fdedcd3eefab82e859bda8088c2538c696ac2935fe38d07371d2a6c0187b9"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -186,7 +205,7 @@
             ]
         },
         {
-            "rule": "airtrfx\\.com\\/mm\\/1\\.1\\.6\\/adnetify\\.js",
+            "rule": "airtrfx\\.com\\/mm\\/1\\.1\\.7\\/adnetify\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -200,7 +219,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "98331c9f2fdd5ce82e13449d3da01abc604a1c995e6fbe41c2da4b70c03f553d"
+                "d05cf584eb413726c7013f1a140a48a72f8b1c10f6f8cbca4aa4d4998bd88ad1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -209,31 +228,53 @@
                 "etihad.com",
                 "www.vietnamairlines.com"
             ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/hangar-service\\/v2\\/ul\\/airports\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openair-california"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cc74527566f4d5e03e54d33157b993c97efecd366d6727839166cca7a4aca0b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "srilankan.com",
+                "www.srilankan.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000401,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9629629629629629
+            "prevalence": 0.9666666666666667
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.037037037037037035
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
         "Fetch": 4,
-        "Preflight": 6,
-        "XHR": 4,
-        "Script": 4
+        "Preflight": 4,
+        "Script": 6,
+        "XHR": 7
     },
     "nameservers": [
-        "ns-1283.awsdns-32.org",
-        "ns-1770.awsdns-29.co.uk",
         "ns-105.awsdns-13.com",
+        "ns-1770.awsdns-29.co.uk",
+        "ns-1283.awsdns-32.org",
         "ns-990.awsdns-59.net"
     ]
 }

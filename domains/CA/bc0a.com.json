@@ -7,12 +7,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00242,
-    "sites": 24,
+    "prevalence": 0.00292,
+    "sites": 29,
     "subdomains": [
         "marvel-b2-cdn",
         "marvel-processor",
-        "marvel-b1-cdn"
+        "ixfd2-api",
+        "marvel-b1-cdn",
+        "cookie-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,11 +27,11 @@
                 "marvel-b2-cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.appVersion": 2
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.appVersion": 4
             },
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 7,
+            "prevalence": 0.000704,
             "cnames": [],
             "responseHashes": [
                 "190db2ea37186511e3cdfaeb6e37e68830c90647a9c18840f33ce00c03a05bd0"
@@ -38,12 +40,13 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbn.com",
-                "my.eastlink.ca",
+                "eastlink.ca",
                 "www.aao.org",
+                "www.cyberpowersystems.com",
                 "www.eastlink.ca",
+                "www.leupold.com",
                 "www.niagaraparks.com",
-                "www.savagearms.com"
+                "www2.cbn.com"
             ]
         },
         {
@@ -54,26 +57,52 @@
                 "marvel-processor"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 8,
+            "prevalence": 0.000805,
             "cnames": [],
             "responseHashes": [
+                "d0ae61f0fbeeb123467ed5a36faaef01797dfc0b0a6e8977714805466b8ad8f5",
+                "8027d7c74f23b5db6496bd4651c1259a424c1c76d894d6093cc514c3b62d647f",
                 "8b0a5e805fd1d77378265417a16b0e49757c9d0271ea5ae29a1650f300935563",
-                "1dfedd99efde58bdc89d336cd9c41818cd21538653b685cd770d74d9fd63298d",
-                "e58399766b4b651c74e71e5c53caeeb9c2dba540475c6bf0c1dfb77bfa7ab8e9",
-                "af9dbf02c85319fda5ed6e97828a8328ce87a4a11e2a95d506654bf7dee244f4",
-                "d574803985b6b612a9de72f7ad02ab9f2f3421afa959c9044fd3e5ca15328750"
+                "34a646b873da9c3a5a4c9c0429462ab3a9cc2e7e675cc0a2afba53a0d3c46251",
+                "af9dbf02c85319fda5ed6e97828a8328ce87a4a11e2a95d506654bf7dee244f4"
             ],
             "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_cl_30": 0.00010061374383740819
+            },
             "exampleSites": [
                 "eastlink.ca",
                 "my.eastlink.ca",
+                "www.cyberpowersystems.com",
                 "www.eastlink.ca",
                 "www.fairstone.ca",
+                "www.moneris.com",
                 "www.niagaraparks.com",
                 "www.purolator.com"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/api\\/ixf\\/1\\.0\\.0\\/get_capsule\\/f00000000238075\\/1400956314",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ixfd2-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d44c84e36977e75fa0b63cd2dad8e4596c2b404156df5fc46050bfe8b1ebfb2e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arubanetworks.com",
+                "www.arubanetworks.com"
             ]
         },
         {
@@ -95,40 +124,85 @@
                 "fairstone.ca",
                 "www.fairstone.ca"
             ]
+        },
+        {
+            "rule": "bc0a\\.com\\/addcookieeventtoqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cookie-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leupold.com",
+                "www.uoguelph.ca"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/addcookieeventtoqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cookie-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6242aafdb320af8e02c67ba2464536f6a6abafce23f7dd2a37ad065961fc957b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leupold.com",
+                "www.uoguelph.ca"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9673590504451038
+            "prevalence": 0.976545842217484
         },
         {
             "domain": "yimg.com",
-            "prevalence": 0.017804154302670624
+            "prevalence": 0.01279317697228145
         },
         {
             "domain": "engagefront.com",
-            "prevalence": 0.005934718100890208
+            "prevalence": 0.0042643923240938165
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.0021321961620469083
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.002967359050445104
+            "prevalence": 0.0021321961620469083
         },
         {
             "domain": "noibu.com",
-            "prevalence": 0.002967359050445104
-        },
-        {
-            "domain": "rocketcdn.me",
-            "prevalence": 0.002967359050445104
+            "prevalence": 0.0021321961620469083
         }
     ],
     "types": {
-        "Script": 6,
-        "Image": 8
+        "Script": 7,
+        "Image": 10,
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "pdns10.domaincontrol.com",

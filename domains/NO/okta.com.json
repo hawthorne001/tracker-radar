@@ -7,45 +7,61 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
-        "schibsted",
-        "servicenowsignon.customdomains"
+        "sas.customdomains",
+        "servicenowsignon.customdomains",
+        "fzag-b2c.customdomains",
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
+        {
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
+            "original": "id.flughafen-zuerich.ch",
+            "resolved": "fzag-b2c.customdomains.okta.com"
+        },
         {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
             "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "schibsted",
-                "servicenowsignon.customdomains"
+                "sas.customdomains"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [
                 {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "f2a4a93770cd0104c9e72bae3c9eccbcf0a06361635ac26f9894b6c01c6a615e",
+                "62ed70d035379906116e736c85521c1a6a9e75bd9a4000373b5fa71ec4270610"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "schibsted.com",
-                "support.servicenow.com",
-                "www.servicenow.com"
+                "sas.com",
+                "support.sas.com",
+                "www.sas.com"
             ]
         },
         {
@@ -53,8 +69,8 @@
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "schibsted",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "fzag-b2c.customdomains"
             ],
             "apis": {},
             "sites": 2,
@@ -63,49 +79,116 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "id.flughafen-zuerich.ch",
+                    "resolved": "fzag-b2c.customdomains.okta.com"
                 }
             ],
             "responseHashes": [
-                "ce1fc39cdbdeca5d4dd01ff4c8f27db2b38bbe6491c1e44feda19966c755fc93"
+                "9440dd76ce6290b6035a66354761632e700ef88755258e76d63af5522ea639f1"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "schibsted.com",
-                "support.servicenow.com"
+                "servicenow.com",
+                "www.flughafen-zuerich.ch"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "fzag-b2c.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "id.flughafen-zuerich.ch",
+                    "resolved": "fzag-b2c.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "www.flughafen-zuerich.ch",
+                "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "churchofjesuschrist.customdomains",
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.servicenow.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000703,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.5
+            "prevalence": 0.6
         },
         {
             "domain": "service-now.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "XHR": 5,
         "Preflight": 3,
-        "XHR": 2
+        "Fetch": 3
     },
     "nameservers": [
+        "edns5.ultradns.biz",
         "edns5.ultradns.com",
         "edns5.ultradns.net",
         "edns5.ultradns.org",
         "ns-1459.awsdns-54.org",
         "ns-1563.awsdns-03.co.uk",
         "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net",
-        "edns5.ultradns.biz"
+        "ns-684.awsdns-21.net"
     ]
 }

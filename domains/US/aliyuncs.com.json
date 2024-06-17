@@ -7,27 +7,29 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000628,
-    "sites": 92,
+    "prevalence": 0.000662,
+    "sites": 97,
     "subdomains": [
+        "rto-study.oss-us-west-1",
         "ideafyi.oss-us-west-1",
         "s5-cs-pub-std.oss-ap-southeast-1",
+        "p-wonderidea-rdr.us-east-1.log",
         "retcode-us-west-1.arms",
         "arms-retcode",
-        "p-wonderidea-rdr.us-east-1.log",
+        "arms-retcode-sg",
         "nlb-w57plyjk8675g7deja.ap-southeast-1.nlb",
         "wx-analytics.cn-hongkong.log",
         "tap-snow-hk.log-global",
         "tap-snow.cn-beijing.dualstack.log",
-        "file-attachment.oss-us-west-1",
         "tineco-gjgw-us.oss-accelerate",
         "nineonebuf.oss-cn-chengdu",
         "nineone.oss-cn-chengdu",
-        "rto-study.oss-us-west-1",
         "hollyland.oss-us-east-1",
         "holystone.oss-us-east-1",
         "alb-29dr7i1oa6v0o89zez.eu-central-1.alb",
-        "clkj-online.oss-cn-hongkong"
+        "clkj-online.oss-cn-hongkong",
+        "alb-dqyvai2klqlh3bvacf.us-east-1.alb",
+        "aiweb.cn-beijing.log"
     ],
     "cnames": [
         {
@@ -39,8 +41,8 @@
             "resolved": "alb-29dr7i1oa6v0o89zez.eu-central-1.alb.aliyuncs.com"
         },
         {
-            "original": "static-uec.wondershare.com",
-            "resolved": "file-attachment.oss-us-west-1.aliyuncs.com"
+            "original": "login.smallrig.com",
+            "resolved": "alb-dqyvai2klqlh3bvacf.us-east-1.alb.aliyuncs.com"
         },
         {
             "original": "static-ussite.tineco.com",
@@ -58,20 +60,63 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "aliyuncs\\.com\\/scripts\\/omnitrack-lately\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 2,
+            "subdomains": [
+                "rto-study.oss-us-west-1"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.sessionStorage": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "window.localStorage": 3,
+                "Screen.prototype.colorDepth": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.language": 3,
+                "HTMLCanvasElement.prototype.toDataURL": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "5f6fa58766de33730055471ac1be5c48d3a64431326ad77736a654b8feda2e00"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rto_session": {
+                    "ttl": 1808,
+                    "length": 46,
+                    "prevalence": 0.000020472784844679806,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biqu.equipment",
+                "www.ever-pretty.com",
+                "www.saguaro.com"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/js\\/blocker\\.js",
-            "cookies": 0.0000751,
+            "cookies": 0.0000682,
             "fingerprinting": 1,
             "subdomains": [
                 "ideafyi.oss-us-west-1"
             ],
             "apis": {
-                "Document.cookie getter": 11,
-                "window.localStorage": 11,
-                "Date.prototype.getTime": 11,
-                "Document.cookie setter": 11
+                "Document.cookie getter": 10,
+                "window.localStorage": 10,
+                "Date.prototype.getTime": 10,
+                "Document.cookie setter": 10
             },
-            "sites": 14,
-            "prevalence": 0.0000955,
+            "sites": 17,
+            "prevalence": 0.000116,
             "cnames": [],
             "responseHashes": [
                 "37aa431e17f49a3cd27fb00bb465ef300723e6908b0c96439dc40cb477262e73"
@@ -81,7 +126,7 @@
                 "_idy_cid": {
                     "ttl": 157680005,
                     "length": 36,
-                    "prevalence": 0.00007506380423359856,
+                    "prevalence": 0.00006824261614893268,
                     "uniqueness": 1
                 }
             },
@@ -89,17 +134,20 @@
             "exampleSites": [
                 "bossaudio.com",
                 "bowerandbranch.com",
-                "cuttingedgebullets.com",
                 "drclarkstore.com",
+                "farmingparts.com",
                 "holdernessandbourne.com",
+                "koss.com",
                 "mavenbuilt.com",
                 "pondmegastore.com",
                 "signwarehouse.com",
                 "thejeepsterman.com",
-                "uscitrusnursery.com",
+                "www.agtequipment.com",
                 "www.aneros.com",
                 "www.flytanium.com",
+                "www.gokeyless.com",
                 "www.greatgardenplants.com",
+                "www.lightingsupply.com",
                 "www.saintbernard.com"
             ]
         },
@@ -126,12 +174,36 @@
             ]
         },
         {
+            "rule": "aliyuncs\\.com\\/logstores\\/fh5-logstore\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-wonderidea-rdr.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-didaskalia.blogspot.com",
+                "fliphtml5.com",
+                "www.myhorrynews.com"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/r\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "retcode-us-west-1.arms",
-                "arms-retcode"
+                "arms-retcode",
+                "arms-retcode-sg"
             ],
             "apis": {},
             "sites": 15,
@@ -141,90 +213,27 @@
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.0000477678754213809,
-                "Hm_lvt_7794ac8e272363414faaf51f99d343f1": 0.000006823982203054414,
-                "Hm_lpvt_7794ac8e272363414faaf51f99d343f1": 0.000006823982203054414,
-                "_uetsid": 0.000013647964406108829,
-                "_uetvid": 0.000013647964406108829,
-                "_ab_exp": 0.000006823982203054414
+                "_bl_uid": 0.000054594092919146145,
+                "Hm_lvt_7794ac8e272363414faaf51f99d343f1": 0.000006824261614893268,
+                "Hm_lpvt_7794ac8e272363414faaf51f99d343f1": 0.000006824261614893268,
+                "_ab_exp": 0.000006824261614893268
             },
             "exampleSites": [
-                "djicdn.com",
-                "dl.djicdn.com",
+                "dji.com",
                 "forum.dji.com",
                 "forums.insta360.com",
-                "insta360.com",
                 "loklok.com",
+                "loklok.tv",
                 "onlinemanual.insta360.com",
                 "picwish.com",
                 "store.dji.com",
                 "support.dji.com",
-                "www.dji.com",
+                "www.bilibili.tv",
                 "www.hasselblad.com",
                 "www.homestyler.com",
                 "www.insta360.com",
-                "www.seeedstudio.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/r\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "retcode-us-west-1.arms",
-                "arms-retcode"
-            ],
-            "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000955,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_bl_uid": 0.000054591857624435315,
-                "_ab_exp": 0.000006823982203054414
-            },
-            "exampleSites": [
-                "djicdn.com",
-                "dl.djicdn.com",
-                "insta360.com",
-                "loklok.com",
-                "onlinemanual.insta360.com",
-                "picwish.com",
-                "store.dji.com",
-                "support.dji.com",
-                "www.dji.com",
-                "www.gohitv.com",
-                "www.hasselblad.com",
-                "www.homestyler.com",
-                "www.insta360.com",
-                "www.seeedstudio.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/logstores\\/fh5-logstore\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "p-wonderidea-rdr.us-east-1.log"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fliphtml5.com",
-                "www.myhorrynews.com"
+                "www.seeedstudio.com",
+                "www.shangri-la.com"
             ]
         },
         {
@@ -235,8 +244,8 @@
                 "nlb-w57plyjk8675g7deja.ap-southeast-1.nlb"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "ubt-sgp.trip.com",
@@ -249,6 +258,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
+                "hk.trip.com",
                 "jp.trip.com",
                 "www.trip.com"
             ]
@@ -261,8 +271,8 @@
                 "nlb-w57plyjk8675g7deja.ap-southeast-1.nlb"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "ubt-sgp.trip.com",
@@ -270,14 +280,15 @@
                 }
             ],
             "responseHashes": [
-                "b7fc092892adac6b54bb5e6674b23c46ef01cf62a7c1bfc1c0800a46b3c0b767",
-                "726233b537d28bcb311ded44a8fff5d1848e9f1f4773cf425f5ae63778600fe3"
+                "575b4c68f0331b5ae730a18c2b555e75257940b38890c25b99c8079d3d223fa2",
+                "752b91bd0701a5afff9955fca1f7a4065238f53b53388d305afa2c07203ed497"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
+                "hk.trip.com",
                 "jp.trip.com",
                 "www.trip.com"
             ]
@@ -298,13 +309,46 @@
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "apptype": 0.000006823982203054414
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "letsview.com",
                 "picwish.com",
                 "www.apowersoft.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/r\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arms-retcode",
+                "retcode-us-west-1.arms"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000682,
+            "cnames": [],
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.00004776983130425288,
+                "_ab_exp": 0.000006824261614893268
+            },
+            "exampleSites": [
+                "loklok.com",
+                "loklok.tv",
+                "onlinemanual.insta360.com",
+                "picwish.com",
+                "store.dji.com",
+                "support.dji.com",
+                "www.hasselblad.com",
+                "www.homestyler.com",
+                "www.insta360.com",
+                "www.seeedstudio.com"
             ]
         },
         {
@@ -325,40 +369,13 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "msite_uuid": 0.000013647964406108829
+                "msite_uuid": 0.000013648523229786536
             },
             "exampleSites": [
                 "taptap.io",
                 "m.taptap.io",
                 "www.taptap.io",
                 "www.taptap.cn"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/aicrm\\/res\\/1643089824012701767\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "file-attachment.oss-us-west-1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "static-uec.wondershare.com",
-                    "resolved": "file-attachment.oss-us-west-1.aliyuncs.com"
-                }
-            ],
-            "responseHashes": [
-                "8e33cacba897bd8d4267eb3eb433933d897cf355838c0b42ef42dbcfbef9dac5"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wondershare.com",
-                "www.wondershare.com"
             ]
         },
         {
@@ -383,9 +400,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_idy_cid": {
-                    "ttl": 157680015,
+                    "ttl": 157680013,
                     "length": 36,
-                    "prevalence": 0.000006823982203054414,
+                    "prevalence": 0.000006824261614893268,
                     "uniqueness": 1
                 }
             },
@@ -393,50 +410,6 @@
             "exampleSites": [
                 "spellbinderspaperarts.com",
                 "www.cornbreadhemp.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/im_plugin_button_image\\/tid325\\/%E5%AE%A2%E6%9C%8D%20new_1698216884053_lv1fp\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s5-cs-pub-std.oss-ap-southeast-1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "433b1c3fe29325adeb6c170e7b1d9d75a7e0f2efad1934dcb3560e24c0d021a0"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "xreal.com",
-                "us.shop.xreal.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/im_plugin_button_image\\/tid325\\/%E5%AE%A2%E6%9C%8D%20new_1698216878056_n9ago\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s5-cs-pub-std.oss-ap-southeast-1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "433b1c3fe29325adeb6c170e7b1d9d75a7e0f2efad1934dcb3560e24c0d021a0"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "xreal.com",
-                "us.shop.xreal.com"
             ]
         },
         {
@@ -1736,6 +1709,33 @@
             ]
         },
         {
+            "rule": "aliyuncs\\.com\\/download\\.png_2f641d5d-c\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tineco-gjgw-us.oss-accelerate"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "static-ussite.tineco.com",
+                    "resolved": "tineco-gjgw-us.oss-accelerate.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "9d60596bb47240ce214385d169a7279c82b939ce2da22fd12efd913281df5eed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tineco.com",
+                "us.tineco.com"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/514e5b18-1b9d-40f7-bc82-1b74e92fb2e5\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1918,68 +1918,6 @@
             "exampleSites": [
                 "91-av.com",
                 "www.91-av.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/scripts\\/omnitrack-lately\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 2,
-            "subdomains": [
-                "rto-study.oss-us-west-1"
-            ],
-            "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
-                "window.localStorage": 2,
-                "Screen.prototype.colorDepth": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.language": 2,
-                "HTMLCanvasElement.prototype.toDataURL": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "fd1ec5ee9a72489c0076b8ada08bfc86f13cac94108836e707b7394108f8259d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "rto_session": {
-                    "ttl": 1806,
-                    "length": 46,
-                    "prevalence": 0.000013647964406108829,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ever-pretty.com",
-                "www.saguaro.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/r\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arms-retcode"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "gohitv.com",
-                "www.gohitv.com"
             ]
         },
         {
@@ -2329,8 +2267,10 @@
                     "resolved": "alb-29dr7i1oa6v0o89zez.eu-central-1.alb.aliyuncs.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c1e841d46ba11de424a5cd4e01aeecd079e8b02bcde2cdf1eea5fa79e03200d6"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -2358,10 +2298,8 @@
                     "resolved": "alb-29dr7i1oa6v0o89zez.eu-central-1.alb.aliyuncs.com"
                 }
             ],
-            "responseHashes": [
-                "c1e841d46ba11de424a5cd4e01aeecd079e8b02bcde2cdf1eea5fa79e03200d6"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -2390,6 +2328,80 @@
                 "loveinfaith.life",
                 "www.loveinfaith.life"
             ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/getToken\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "alb-dqyvai2klqlh3bvacf.us-east-1.alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "login.smallrig.com",
+                    "resolved": "alb-dqyvai2klqlh3bvacf.us-east-1.alb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "01191fb5e8579c50891b52a9a9be2165946d0bed63dc93a1866d87ac355bdc97"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smallrig.com",
+                "www.smallrig.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/bee\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nlb-w57plyjk8675g7deja.ap-southeast-1.nlb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "ubt-sgp.trip.com",
+                    "resolved": "nlb-w57plyjk8675g7deja.ap-southeast-1.nlb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trip.com",
+                "www.trip.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/ai-so\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aiweb.cn-beijing.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuzhuiso.com",
+                "www.wuzhuiso.com"
+            ]
         }
     ],
     "categories": [],
@@ -2398,58 +2410,60 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.42592592592592593
+            "prevalence": 0.3583138173302108
         },
         {
             "domain": "djicdn.com",
-            "prevalence": 0.26296296296296295
+            "prevalence": 0.22482435597189696
         },
         {
             "domain": "alicdn.com",
-            "prevalence": 0.12037037037037036
-        },
-        {
-            "domain": "sentry-cdn.com",
-            "prevalence": 0.05
-        },
-        {
-            "domain": "tapimg.com",
-            "prevalence": 0.044444444444444446
+            "prevalence": 0.14754098360655737
         },
         {
             "domain": "tripcdn.com",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.05620608899297424
+        },
+        {
+            "domain": "tapimg.com",
+            "prevalence": 0.05620608899297424
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.04449648711943794
         },
         {
             "domain": "bb-os.com",
-            "prevalence": 0.014814814814814815
-        },
-        {
-            "domain": "udesk.cn",
-            "prevalence": 0.012962962962962963
-        },
-        {
-            "domain": "aoscdn.com",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.0234192037470726
         },
         {
             "domain": "loklok.plus",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.01873536299765808
+        },
+        {
+            "domain": "aoscdn.com",
+            "prevalence": 0.01639344262295082
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.00936768149882904
         }
     ],
     "types": {
-        "Script": 22,
-        "Image": 138,
+        "Script": 26,
+        "Image": 134,
+        "XHR": 18,
         "Fetch": 15,
-        "XHR": 21,
-        "Preflight": 5,
-        "Ping": 5,
+        "Preflight": 6,
+        "Ping": 6,
         "Stylesheet": 2,
-        "Media": 10
+        "Media": 10,
+        "Document": 2,
+        "Other": 2
     },
     "nameservers": [
-        "ns4.aliyun.com",
         "ns3.aliyun.com",
+        "ns4.aliyun.com",
         "ns5.aliyun.com"
     ]
 }

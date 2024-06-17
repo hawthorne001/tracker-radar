@@ -4,14 +4,100 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
-        "seo.apps"
+        "joy",
+        "seo.apps",
+        "sizechart.apps"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "avada\\.io\\/app\\/api\\/v1\\/popup\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "joy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadianprotein.com",
+                "www.drmower.ca"
+            ]
+        },
+        {
+            "rule": "avada\\.io\\/app\\/api\\/v1\\/popup\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "joy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9513aa74adc84afa58544cf93731786cdfeec8f34cf45c0ad40e50abd3a56d85"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadianprotein.com",
+                "www.drmower.ca"
+            ]
+        },
+        {
+            "rule": "avada\\.io\\/app\\/api\\/v1\\/popup\\/translation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "joy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadianprotein.com",
+                "www.drmower.ca"
+            ]
+        },
+        {
+            "rule": "avada\\.io\\/app\\/api\\/v1\\/popup\\/translation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "joy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cb26fd4400b907118b1b6b268b93c8376cf00c38e2ba6a77768d2f8b2f31801b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadianprotein.com",
+                "www.drmower.ca"
+            ]
+        },
         {
             "rule": "avada\\.io\\/scripttag\\/avada-seo-installed\\.js",
             "cookies": 0,
@@ -33,6 +119,30 @@
                 "lightscanada.ca",
                 "www.myfonts.com"
             ]
+        },
+        {
+            "rule": "avada\\.io\\/scripttag\\/avada-size-chart\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sizechart.apps"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "37325f58146cda20b41ea458f87a499f695adfdeeee5155d20b452aa5133429e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "racquetguys.ca",
+                "www.brooksbrothers.com"
+            ]
         }
     ],
     "categories": [],
@@ -41,11 +151,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "brooksbrothers.ca",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2
+        "Preflight": 4,
+        "Fetch": 4,
+        "Script": 4
     },
     "nameservers": [
         "kiki.ns.cloudflare.com",

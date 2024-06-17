@@ -4,14 +4,53 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "cdn",
         "rum-ingest.us1"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/latest\\/splunk-otel-web\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.innerWidth": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Event.prototype.timeStamp": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c72c6d8d8cfb7731907af13d378f1991066325aff373d986055a7a322b9854b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_splunk_rum_sid": {
+                    "ttl": 900,
+                    "length": 89,
+                    "prevalence": 0.00010061374383740819,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.com",
+                "www.splunk.com"
+            ]
+        },
         {
             "rule": "signalfx\\.com\\/v1\\/rum",
             "cookies": 0,
@@ -41,10 +80,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "surveymonkey.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
+        "Script": 2,
         "XHR": 2
     },
     "nameservers": [

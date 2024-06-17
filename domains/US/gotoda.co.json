@@ -4,28 +4,98 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000682,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
-        "sentry",
+        "trochilus-web",
         "trochi"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "gotoda\\.co\\/api\\/24\\/envelope\\/",
+            "rule": "gotoda\\.co\\/trochilus-web-sdk-integration\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "trochilus-web"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "477226e6887de8c3ee82c0ac70cd15210a0ab043b98daced6152119ee9209b90"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sentry"
+                "trochi"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1ac4f337916257ba14b8b102a09b913b10370f599db51412ae770c76189b621d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -66,13 +136,14 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "XHR": 2
+        "Script": 2,
+        "Preflight": 4,
+        "XHR": 4
     },
     "nameservers": [
+        "ns-198.awsdns-24.com",
         "ns-835.awsdns-40.net",
         "ns-1205.awsdns-22.org",
-        "ns-1683.awsdns-18.co.uk",
-        "ns-198.awsdns-24.com"
+        "ns-1683.awsdns-18.co.uk"
     ]
 }

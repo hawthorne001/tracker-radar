@@ -7,24 +7,20 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "sas.customdomains",
+        "login",
         "servicenowsignon.customdomains",
         "vl.customdomains",
         "astminternational.customdomains",
         "benjaminmoore.customdomains",
         "onekinship",
-        "kohler-b2c.customdomains",
         "wm.customdomains",
         "churchofjesuschrist.customdomains"
     ],
     "cnames": [
-        {
-            "original": "auth.kohler.ca",
-            "resolved": "kohler-b2c.customdomains.okta.com"
-        },
         {
             "original": "auth.sas.com",
             "resolved": "sas.customdomains.okta.com"
@@ -54,7 +50,7 @@
             "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
@@ -73,7 +69,7 @@
                 }
             ],
             "responseHashes": [
-                "2e7ba7b19dac817cbfd389cea2b38911bad173fe370d56ba68099106eaa1f3e5"
+                "5a27ce2afac190e1b5af3c74354443660db96cecc7a4202e5ad088e5b8910ae1"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -84,8 +80,55 @@
             ]
         },
         {
+            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9647bed331c4194d81a8aa79817697b94cac79e89600e044897ad0330e489b9e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "videotron.com",
+                "helix.videotron.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/lib\\/discoveryIframe-f98a9db6985a9d6db326\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1d3c326cddf350f019af567bc3729d180231f0b90c3fc522dcced3741cf692b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "videotron.com",
+                "helix.videotron.com"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000403,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
                 "servicenowsignon.customdomains",
@@ -95,7 +138,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000403,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "ssosignon.servicenow.com",
@@ -115,9 +158,9 @@
                 }
             ],
             "responseHashes": [
-                "dd72bafcd9fef2c8e2e124c3e72a286984c7b779c630592ee7450dea923a8dbd",
-                "c298157ff2a2af007a784c5a4e39bd8684dfabc0f3af0a8c24e21d5082f61f39",
-                "593ac1fd3575f18491e9d8789e8ea16c76e259353ba1993bb47e4a12450b01e4"
+                "2fbb6ed2cd9073711d34973db60d1a2e4b491b1827e7a02460861a3e2d530410",
+                "cdb2c059681c62bf2a67f8759cec6cdcec176383463fdc8d50cb8182d2aa61ef",
+                "a17f68f314cc8578ac84dc1449c50c3235721450e8e6d93e23c4632adb1b87fe"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -131,18 +174,17 @@
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000604,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
                 "servicenowsignon.customdomains",
                 "onekinship",
                 "astminternational.customdomains",
-                "kohler-b2c.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "ssosignon.servicenow.com",
@@ -151,10 +193,6 @@
                 {
                     "original": "iam.astm.org",
                     "resolved": "astminternational.customdomains.okta.com"
-                },
-                {
-                    "original": "auth.kohler.ca",
-                    "resolved": "kohler-b2c.customdomains.okta.com"
                 },
                 {
                     "original": "ssologin.wm.com",
@@ -169,33 +207,27 @@
                 "servicenow.com",
                 "www.adoptapet.com",
                 "www.astm.org",
-                "www.kohler.ca",
                 "www.servicenow.com",
                 "www.wm.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000503,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "churchofjesuschrist.customdomains",
-                "kohler-b2c.customdomains",
                 "servicenowsignon.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
                     "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
-                {
-                    "original": "auth.kohler.ca",
-                    "resolved": "kohler-b2c.customdomains.okta.com"
                 },
                 {
                     "original": "ssosignon.servicenow.com",
@@ -207,8 +239,7 @@
                 }
             ],
             "responseHashes": [
-                "8f2a74db6e87e0fc0d59782df652d5aa066a3773efc205a66704f88df3c2dd9f",
-                "fec4353ad0e08b8513aca5132ebc9ef76e14daf4ec0952e50219d0c8d5ffb210"
+                "db394b2946d0566399b3b2d2420f2ead05e92fac563e363cf100749e969d9853"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -216,7 +247,6 @@
             "exampleSites": [
                 "adoptapet.com",
                 "www.churchofjesuschrist.org",
-                "www.kohler.ca",
                 "www.servicenow.com",
                 "www.wm.com"
             ]
@@ -227,22 +257,28 @@
     "cookies": 0.00111,
     "topInitiators": [
         {
-            "domain": "service-now.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "adobedtm.com",
+            "domain": "oktacdn.com",
             "prevalence": 0.3333333333333333
         },
         {
             "domain": "first party",
             "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "service-now.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "XHR": 6,
-        "Preflight": 6,
-        "Fetch": 5
+        "Document": 2,
+        "Script": 2,
+        "Preflight": 5,
+        "Fetch": 4
     },
     "nameservers": [
         "edns5.ultradns.biz",

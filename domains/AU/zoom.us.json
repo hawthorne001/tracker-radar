@@ -11,6 +11,7 @@
     "sites": 5,
     "subdomains": [
         "us01ccistatic",
+        "log-gateway",
         "us01apizva",
         "us01campaign"
     ],
@@ -27,23 +28,25 @@
             "apis": {
                 "Navigator.prototype.userAgent": 4,
                 "NavigatorUAData.prototype.brands": 4,
+                "window.localStorage": 4,
                 "Date.prototype.getTime": 4,
-                "Date.prototype.getTimezoneOffset": 4
+                "Date.prototype.getTimezoneOffset": 4,
+                "window.sessionStorage": 4
             },
             "sites": 4,
             "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
-                "e6c79d05c57536c6285110fcb51c606be5f1e262567c55dbe726f96f2b9e45be"
+                "2a1aa8474fec1ddfaee36f22d615ceded64907c8f4fec66813bd358f194cd27f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.papercut.com",
                 "www.tangoenergy.com",
-                "www.zoom.com"
+                "www.zoom.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -60,16 +63,41 @@
             "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
-                "2ddfe2b01b517e4d49fa5bb6534460f0c95c6961a5ee2c045247315dbda0d67e"
+                "82fdd18148b448dc68698b59feb1bafa57124c52665561f72e16aadd0939768a"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.papercut.com",
                 "www.tangoenergy.com",
-                "www.zoom.com"
+                "www.zoom.com",
+                "www.zwift.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/nws\\/join\\/logger\\/zccfelog",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log-gateway"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "support.zoom.com",
+                "www.tangoenergy.com",
+                "www.zoom.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -97,16 +125,16 @@
             "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
-                "aa3ac6f566bdf9316a6e5a91ad9f269cd1a6d004280ba253ded6bbd5b3970473"
+                "e3eec1c55167610e0925bc0999d7aa14bd22b911080e07815b33119761d5992f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.papercut.com",
                 "www.tangoenergy.com",
-                "www.zoom.com"
+                "www.zoom.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -125,8 +153,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "papercut.com",
-                "www.tangoenergy.com"
+                "tangoenergy.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -147,8 +175,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "papercut.com",
-                "www.tangoenergy.com"
+                "tangoenergy.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -163,14 +191,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "7442a09b4d1a2a1413cb0f4a777e7f9c3d995692f82c637a2004776f0a21fee5"
+                "034a36661da8d55a1213b6974508513d8f98a59196c833ba38f5fa87a5401181"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "papercut.com",
-                "www.tangoenergy.com"
+                "tangoenergy.com",
+                "www.zwift.com"
             ]
         },
         {
@@ -185,14 +213,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f3ca2b1369c869cac739beaf4f47938c10134e9fb632fd810edfdbee16e390c1"
+                "432853b9108e3927747a6a8303d6534d623cb0aa09348045d771eccddf3a978e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "papercut.com",
-                "www.tangoenergy.com"
+                "tangoenergy.com",
+                "www.zwift.com"
             ]
         }
     ],
@@ -202,35 +230,32 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "zoom_support_header.js",
-            "prevalence": 0.125
-        },
-        {
-            "domain": "hushly.com",
-            "prevalence": 0.125
+            "prevalence": 0.7142857142857143
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.125
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "zoom_support_header.js",
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "zoom.us",
-            "prevalence": 0.125
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
         "Script": 8,
         "Document": 4,
+        "Ping": 5,
         "Preflight": 2,
         "Fetch": 6
     },
     "nameservers": [
         "ns-1137.awsdns-14.org",
-        "ns-1772.awsdns-29.co.uk",
+        "ns-888.awsdns-47.net",
         "ns-387.awsdns-48.com",
-        "ns-888.awsdns-47.net"
+        "ns-1772.awsdns-29.co.uk"
     ]
 }
