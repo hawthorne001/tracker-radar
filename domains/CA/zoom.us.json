@@ -11,9 +11,9 @@
     "sites": 6,
     "subdomains": [
         "us01ccistatic",
-        "log-gateway",
+        "us01campaign",
         "us01apizva",
-        "us01campaign"
+        "log-gateway"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -21,13 +21,14 @@
         {
             "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/chat-client\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "us01ccistatic"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 5,
                 "NavigatorUAData.prototype.brands": 5,
+                "Navigator.prototype.platform": 5,
                 "window.localStorage": 5,
                 "Date.prototype.getTime": 5,
                 "Date.prototype.getTimezoneOffset": 5,
@@ -37,17 +38,17 @@
             "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "2a1aa8474fec1ddfaee36f22d615ceded64907c8f4fec66813bd358f194cd27f"
+                "58464d8f1ba98e6c67bc8747870ae9bd5546734f4bd5501dab54371d5f9ed8c2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
+                "support.blinkforhome.com",
                 "support.zoom.com",
                 "www.ecolinewindows.ca",
-                "www.fountaintire.com",
-                "www.zoom.com"
+                "www.fountaintire.com"
             ]
         },
         {
@@ -58,7 +59,7 @@
                 "us01ccistatic"
             ],
             "apis": {
-                "window.localStorage": 4
+                "window.localStorage": 3
             },
             "sites": 4,
             "prevalence": 0.000402,
@@ -70,10 +71,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
+                "support.blinkforhome.com",
                 "support.zoom.com",
-                "www.ecolinewindows.ca",
-                "www.zoom.com"
+                "www.ecolinewindows.ca"
             ]
         },
         {
@@ -93,69 +94,23 @@
                 "Document.cookie getter": 4,
                 "window.localStorage": 4,
                 "Date.prototype.getTimezoneOffset": 2,
-                "window.innerWidth": 3,
-                "window.innerHeight": 3,
-                "URL.createObjectURL": 2
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "URL.createObjectURL": 1
             },
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "e3eec1c55167610e0925bc0999d7aa14bd22b911080e07815b33119761d5992f"
+                "dc4ddc07fd20be7f61b7c4eeafdb400e4f697875274a32bda4f8b61c2ab8f308"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
-                "support.zoom.com",
-                "www.ecolinewindows.ca",
-                "www.zoom.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/nws\\/join\\/logger\\/zccfelog",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "log-gateway"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
                 "support.blinkforhome.com",
                 "support.zoom.com",
-                "www.ecolinewindows.ca",
-                "www.fountaintire.com",
-                "www.zoom.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01apizva"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "blinkforhome.com",
                 "www.ecolinewindows.ca"
             ]
         },
@@ -167,8 +122,8 @@
                 "us01campaign"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "6a1799151526cb7621468ea505fc4387931540487263061122eefe050ceb9b99"
@@ -177,8 +132,31 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
+                "support.blinkforhome.com",
                 "www.ecolinewindows.ca"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/v1\\/zcc\\/campaign\\/styleByApiKey",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us01campaign"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bac4be7168647474077264a4054bc0ef148d42986bfd133e8567f16f86a146da"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ring.com",
+                "support.blinkforhome.com"
             ]
         },
         {
@@ -189,8 +167,8 @@
                 "us01campaign"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "034a36661da8d55a1213b6974508513d8f98a59196c833ba38f5fa87a5401181"
@@ -199,7 +177,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
+                "support.blinkforhome.com",
                 "www.ecolinewindows.ca",
                 "www.fountaintire.com"
             ]
@@ -212,18 +191,65 @@
                 "us01apizva"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "432853b9108e3927747a6a8303d6534d623cb0aa09348045d771eccddf3a978e"
+                "dee4992db6ef4143be5df925bf499ea233a04c91e7883e4417da08a9ccfbc3a3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blinkforhome.com",
+                "ring.com",
+                "support.blinkforhome.com",
                 "www.ecolinewindows.ca"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us01apizva"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ring.com",
+                "support.blinkforhome.com",
+                "www.ecolinewindows.ca"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/nws\\/join\\/logger\\/zccfelog",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log-gateway"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blinkforhome.com",
+                "support.blinkforhome.com",
+                "support.zoom.com",
+                "www.ecolinewindows.ca",
+                "www.fountaintire.com"
             ]
         },
         {
@@ -264,48 +290,36 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.35714285714285715
+            "prevalence": 0.5384615384615384
         },
         {
             "domain": "tiktok.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "d39xvdj9d5ntm1.cloudfront.net",
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "zoom_support_header.js",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "cookielaw.org",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "datas3ntinel.com",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "contentsquare.net",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "zi-scripts.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Script": 11,
         "Document": 4,
-        "Ping": 6,
-        "Preflight": 2,
-        "Fetch": 7
+        "Fetch": 12,
+        "Preflight": 3,
+        "Ping": 5
     },
     "nameservers": [
         "ns-1137.awsdns-14.org",
-        "ns-888.awsdns-47.net",
+        "ns-1772.awsdns-29.co.uk",
         "ns-387.awsdns-48.com",
-        "ns-1772.awsdns-29.co.uk"
+        "ns-888.awsdns-47.net"
     ]
 }

@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000614,
-    "sites": 9,
+    "prevalence": 0.0000819,
+    "sites": 12,
     "subdomains": [
         "pprp47.ocado.gslb",
         "p6ekqm.ocado.gslb",
         "poyqro.virginmedia.gslb",
-        "pwd7jm.canadianbs.gslb"
+        "pwd7jm.canadianbs.gslb",
+        "pdddkz.resmed.gslb"
     ],
     "cnames": [
         {
@@ -20,6 +21,10 @@
         {
             "original": "accounts.ocado.com",
             "resolved": "p6ekqm.ocado.gslb.f5silverline.com"
+        },
+        {
+            "original": "dawn-us-pre-prod.resmed.com",
+            "resolved": "pdddkz.resmed.gslb.f5silverline.com"
         },
         {
             "original": "myaccount.blood.ca",
@@ -54,7 +59,7 @@
                 }
             ],
             "responseHashes": [
-                "3830c799f630082e86cfb23911c6e63426b314c381f1d22d66f4478233a37af7"
+                "5fa62e4df4e9eec96b19b56707ee3b8ea2103fc21d110d2cd54774ea7ac9af95"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -65,8 +70,38 @@
             ]
         },
         {
+            "rule": "f5silverline\\.com\\/auth-service\\/sso\\/authorize",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pprp47.ocado.gslb",
+                "p6ekqm.ocado.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "accounts.groceries.morrisons.com",
+                    "resolved": "pprp47.ocado.gslb.f5silverline.com"
+                },
+                {
+                    "original": "accounts.ocado.com",
+                    "resolved": "p6ekqm.ocado.gslb.f5silverline.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "morrisons.com",
+                "www.ocado.com"
+            ]
+        },
+        {
             "rule": "f5silverline\\.com\\/auth-service\\/sso\\/resources\\/dist\\/main\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 0,
             "subdomains": [
                 "pprp47.ocado.gslb",
@@ -141,8 +176,8 @@
                 }
             ],
             "responseHashes": [
-                "58ed5bccc3399558df9999738a28cc5ca620624858710fb508c3912b7103ea77",
-                "b1fa520d2afc35ef9aeca37982078f04e9b5e73ffb90cf255d04606a1a12c9a9"
+                "69014abe22128ffcfc3f89104b8ef9aaeff062532dfcbf285ed97b3970fac9f9",
+                "8e50e15c42a4b5af372cfd410a8114eb8c16c965c3cb8cbb6bd3e2ce7feb289e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -177,19 +212,42 @@
                 "blood.ca",
                 "www.blood.ca"
             ]
+        },
+        {
+            "rule": "f5silverline\\.com\\/chatbot-plugin\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pdddkz.resmed.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "dawn-us-pre-prod.resmed.com",
+                    "resolved": "pdddkz.resmed.gslb.f5silverline.com"
+                }
+            ],
+            "responseHashes": [
+                "651aa20aeb98789e4e945bb0dc831dcd3174183ee4de63dc44bf87f5b1cc1659"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "resmed.com",
+                "www.resmed.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000478,
+    "cookies": 0.0000614,
     "topInitiators": [
         {
             "domain": "virginmedia.co.uk",
-            "prevalence": 0.5714285714285714
-        },
-        {
-            "domain": "contentsquare.net",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "ajax.googleapis.com",
@@ -197,12 +255,12 @@
         }
     ],
     "types": {
-        "Document": 2,
-        "Script": 2,
+        "Document": 4,
+        "Script": 4,
         "XHR": 8
     },
     "nameservers": [
-        "ns1.defense.net",
-        "ns2.defense.net"
+        "ns2.defense.net",
+        "ns1.defense.net"
     ]
 }

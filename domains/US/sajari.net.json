@@ -4,29 +4,29 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000887,
-    "sites": 13,
+    "prevalence": 0.0000819,
+    "sites": 12,
     "subdomains": [
         "cdn",
         "jsonapi",
         "jsonapi-us-valkyrie"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "sajari\\.net\\/js\\/integrations\\/website-search-1\\.3\\.0\\.js",
-            "cookies": 0.00000682,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 1,
+                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 1,
-                "window.sessionStorage": 1,
-                "window.localStorage": 1
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -39,8 +39,8 @@
                 "sjSE": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.000006824261614893268,
-                    "uniqueness": 1
+                    "prevalence": 0.000013648150675583459,
+                    "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
@@ -50,23 +50,37 @@
             ]
         },
         {
-            "rule": "sajari\\.net\\/sajari\\.api\\.pipeline\\.v1\\.Query\\/Search",
+            "rule": "sajari\\.net\\/js\\/integrations\\/website-search-1\\.4\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "jsonapi"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "window.localStorage": 6,
+                "Document.cookie getter": 6,
+                "Navigator.prototype.languages": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.mimeTypes": 6,
+                "Date.prototype.getTime": 5
+            },
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "281c3d529ade91b2e62c0212fdbeb8331def65fa007cc3ddc3ba4f440728bb8b"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "grizzly.com",
-                "www.grizzly.com"
+                "lockheedmartin.com",
+                "www.corbin.com",
+                "www.frc.org",
+                "www.lockheedmartin.com",
+                "www.lockheedmartinjobs.com",
+                "www.tonyperkins.com"
             ]
         },
         {
@@ -78,88 +92,46 @@
                 "jsonapi-us-valkyrie"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "52cc13859a938fe47400f5586514c66485f9c02fe25f94a02e99abc558629cdc",
-                "714ba10db5020657876be0b21a7300dc62f6debe9d4ba4a68816dfd049010a41",
-                "3aa7c5823e91bd4616821c348b25581a7b2dfda3ad08db2fc2fff2116a4de409"
+                "999280d7a7da714a5087db4e5c735098cae499e28e9d090a20518caae7573428"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "grizzly.com",
-                "www.grizzly.com",
-                "www.mofo.com",
+                "mofo.com",
                 "www.surfboard.com"
-            ]
-        },
-        {
-            "rule": "sajari\\.net\\/js\\/integrations\\/website-search-1\\.4\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 5,
-                "window.localStorage": 5,
-                "Document.cookie getter": 5,
-                "Navigator.prototype.languages": 5,
-                "Navigator.prototype.language": 5,
-                "Navigator.prototype.mimeTypes": 5,
-                "Date.prototype.getTime": 4
-            },
-            "sites": 5,
-            "prevalence": 0.0000341,
-            "cnames": [],
-            "responseHashes": [
-                "281c3d529ade91b2e62c0212fdbeb8331def65fa007cc3ddc3ba4f440728bb8b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "corbin.com",
-                "www.frc.org",
-                "www.lockheedmartin.com",
-                "www.lockheedmartinjobs.com",
-                "www.tonyperkins.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000136,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6923076923076923
-        },
-        {
-            "domain": "sentry-cdn.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "lockheedmartin.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "azure.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Script": 7,
-        "Preflight": 2,
-        "Fetch": 4
+        "Script": 8,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-cloud-c4.googledomains.com",
-        "ns-cloud-c3.googledomains.com",
         "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c3.googledomains.com",
         "ns-cloud-c1.googledomains.com"
     ]
 }

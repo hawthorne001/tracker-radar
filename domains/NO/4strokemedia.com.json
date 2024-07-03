@@ -7,7 +7,7 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
         "cdnb",
@@ -62,7 +62,7 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00020096463022508038
+                "lotame_domain_check": 0.00020106564793405046
             },
             "exampleSites": [
                 "footballtransfers.com",
@@ -122,11 +122,15 @@
         {
             "rule": "4strokemedia\\.com\\/carousel\\/v4\\/hls\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdnb"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "URL.createObjectURL": 2,
+                "MediaSource.isTypeSupported": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -140,25 +144,70 @@
                 "footballtransfers.com",
                 "www.footballtransfers.com"
             ]
+        },
+        {
+            "rule": "4strokemedia\\.com\\/uk\\/Premier_list_play_lists\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "74cea367f04371bc314199e68e8e1282d28aaf16bddd8db375fb30690f1278e2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "footballtransfers.com",
+                "www.footballtransfers.com"
+            ]
+        },
+        {
+            "rule": "4strokemedia\\.com\\/events\\/18432\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "footballtransfers.com",
+                "www.footballtransfers.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "adlightning.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.75
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.25
         }
     ],
     "types": {
         "Script": 6,
         "Image": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-52.awsdns-06.com",

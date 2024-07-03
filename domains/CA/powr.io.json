@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
-        "www"
+        "www",
+        "outlet"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -29,18 +30,89 @@
             "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
-                "2c611c82341701554fc479c1f2de64c532ea29d7173708f5945cd9a0547ca3d9"
+                "e94f0a7150c7650bc12fc1d30d6f28a004d1112fbd2b516b89abf146d1556b10"
             ],
             "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "checkout_shop": 0.00010059350165979277
+            },
             "exampleSites": [
                 "barbecuesgalore.ca",
-                "ca.renogy.com",
                 "gourmetwarehouse.ca",
                 "houseofknives.ca",
-                "www.celestron.com",
+                "www.herooutdoors.com",
+                "www.lammles.com",
                 "www.trailheadpaddleshack.ca"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed\\/u\\/sharethis-social-feed-63d5888f576edb001943b23c",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e2989f1903cc0e1896cb2fad9fa3a24641a670cce75eea05990271b23fd4b5c1"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novascotiawebcams.com",
+                "www.novascotiawebcams.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b97833f9e1c76662f9b61775fc663c61fcdb0648d58ee3279773c5aa38b8cdce"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novascotiawebcams.com",
+                "www.novascotiawebcams.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novascotiawebcams.com",
+                "www.novascotiawebcams.com"
             ]
         }
     ],
@@ -50,11 +122,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "sharethis.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "powrcdn.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 6,
+        "Document": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "major.ns.cloudflare.com",

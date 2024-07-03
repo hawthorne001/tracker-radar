@@ -4,15 +4,38 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "auth",
         "geoip",
-        "event"
+        "eua"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "instiengage\\.com\\/auth\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "32dcb7b5d0e79583353a56225e4d8097e004103102d584e245d1b96547f9948d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydramalist.com",
+                "www.sherdog.com"
+            ]
+        },
         {
             "rule": "instiengage\\.com\\/json\\/",
             "cookies": 0,
@@ -32,37 +55,45 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mydramalist.com",
-                "fr.mydramalist.com"
+                "www.sherdog.com"
             ]
         },
         {
-            "rule": "instiengage\\.com\\/v1\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "instiengage\\.com\\/auth\\/authIframe\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "event"
+                "auth"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "d986ac10210e65ce35ce408c2c6900dfb4c02ebe7710fa27b0dd09b86ebdcd2b"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mydramalist.com",
-                "fr.mydramalist.com"
+                "www.sherdog.com"
             ]
         },
         {
-            "rule": "instiengage\\.com\\/v1\\/event",
+            "rule": "instiengage\\.com\\/v1\\/auth\\/token",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "event"
+                "eua"
             ],
             "apis": {},
             "sites": 2,
@@ -74,13 +105,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mydramalist.com",
-                "fr.mydramalist.com"
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/v1\\/auth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eua"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7b77eac10efdc71bd24a0299e39700586b1f5133101af7f88fe216ea4f83cce1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydramalist.com",
+                "www.sherdog.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "d3lcz8vpax4lo2.cloudfront.net",
@@ -88,12 +141,19 @@
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Document": 2,
+        "XHR": 2,
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "carl.ns.cloudflare.com",

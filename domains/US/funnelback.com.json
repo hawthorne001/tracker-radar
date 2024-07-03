@@ -10,14 +10,14 @@
     "prevalence": 0.000109,
     "sites": 16,
     "subdomains": [
+        "delawaregov-search.clients.us",
         "evmsedu-search.clients.us",
-        "gettysburg-search.clients.us",
+        "fortlewis-search.clients.us",
         "gonzaga-search.clients.us",
-        "lmu-search.clients.us",
         "regis-search.clients.us",
-        "highmonkey-search.clients.us",
         "transurban-search.clients",
-        "unsw-search.clients"
+        "unsw-search.clients",
+        "highmonkey-search.clients.us"
     ],
     "cnames": [
         {
@@ -36,22 +36,43 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "funnelback\\.com\\/s\\/search\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delawaregov-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delaware.gov",
+                "www.dhss.delaware.gov"
+            ]
+        },
+        {
             "rule": "funnelback\\.com\\/stencils\\/resources\\/autocompletion\\/js\\/typeahead\\.bundle-0\\.11\\.1\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "evmsedu-search.clients.us",
-                "gettysburg-search.clients.us",
+                "fortlewis-search.clients.us",
                 "gonzaga-search.clients.us",
-                "lmu-search.clients.us",
                 "regis-search.clients.us"
             ],
             "apis": {
-                "window.localStorage": 3,
-                "Navigator.prototype.userAgent": 3
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
             },
-            "sites": 5,
-            "prevalence": 0.0000341,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "search.evms.edu",
@@ -70,61 +91,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "evms.edu",
-                "www.gettysburg.edu",
+                "www.fortlewis.edu",
                 "www.gonzaga.edu",
-                "www.lmu.edu",
                 "www.regis.edu"
-            ]
-        },
-        {
-            "rule": "funnelback\\.com\\/stencils\\/resources\\/autocompletion\\/js\\/handlebars\\.min-v4\\.0\\.5\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gettysburg-search.clients.us",
-                "regis-search.clients.us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "search.regis.edu",
-                    "resolved": "regis-search.clients.us.funnelback.com"
-                }
-            ],
-            "responseHashes": [
-                "121c6721805fae5a7c9fb988d9e7ffa92f7daca3102d93fd1c01e89e01bf2cb0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "gettysburg.edu",
-                "www.regis.edu"
-            ]
-        },
-        {
-            "rule": "funnelback\\.com\\/s\\/resources-global\\/js\\/funnelback\\.autocompletion-2\\.6\\.0\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gettysburg-search.clients.us",
-                "highmonkey-search.clients.us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "9bd2adfe2d8f5d9fb69b6f883e6f2239b14c7ab9610cc07f74d8b7c7aa5631e1"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "gettysburg.edu",
-                "www.rcu.org"
             ]
         },
         {
@@ -167,7 +136,7 @@
                 }
             ],
             "responseHashes": [
-                "26c3e4ddccd8dff150aca019cd931c0da1d7056c7ff8d23877727444595b098d"
+                "bb4fc0d8a04be80925cb1acac524606d864d730db59813c2b598433294127124"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -185,8 +154,8 @@
                 "highmonkey-search.clients.us"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 1
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -223,6 +192,28 @@
                 "rcu.org",
                 "www.rcu.org"
             ]
+        },
+        {
+            "rule": "funnelback\\.com\\/s\\/resources-global\\/js\\/funnelback\\.autocompletion-2\\.6\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "highmonkey-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "9bd2adfe2d8f5d9fb69b6f883e6f2239b14c7ab9610cc07f74d8b7c7aa5631e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rcu.org",
+                "www.rcu.org"
+            ]
         }
     ],
     "categories": [],
@@ -235,12 +226,13 @@
         }
     ],
     "types": {
-        "Script": 15,
+        "XHR": 2,
+        "Script": 12,
         "Fetch": 2
     },
     "nameservers": [
-        "ns-140.awsdns-17.com",
         "ns-597.awsdns-10.net",
+        "ns-140.awsdns-17.com",
         "ns-1282.awsdns-32.org",
         "ns-1974.awsdns-54.co.uk"
     ]
