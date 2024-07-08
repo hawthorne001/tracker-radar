@@ -8,7 +8,8 @@
     "sites": 3,
     "subdomains": [
         "ingest.make",
-        "cdn"
+        "cdn",
+        "navi"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,8 +25,11 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "393f4fc410c8683ab0e1845fb18c6f67e60bec029c1af6a89d69fc249ebd6d49",
+                "6852a618f7032fe5b9c8521d0e6322cd24a74294968e3e4bef3d0035eb91896f"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -45,11 +49,8 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [
-                "7a07395e79fbd50dc696463a066ef5e95399e21c9b9499a8e27f4bb0c410f90e",
-                "25338cbb2adae3430b6b7c98409c11c5e8e1597bd49a331cbe81e9c0734cc117"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -93,8 +94,8 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "6bc06da20164e3191e6196909aef8e1bd77dba565b006b012845218abda59467",
-                "ee44996c6a6e2dad8ac6c6cdb067e4e362fb52d0e98de8e70f80cf4c4bcb3770"
+                "605cf06660c377977f0edba901dac5e4caaed79017b5ea76457d69d664b4584e",
+                "116c78411de65d5eed7f987f67517aa0fd7ea8f24c1b8608990e3fdbbe9027bb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -133,11 +134,13 @@
         {
             "rule": "rvohealth\\.com\\/cohesion\\/xs2\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1
+            },
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
@@ -175,6 +178,28 @@
                 "www.healthline.com",
                 "www.medicalnewstoday.com"
             ]
+        },
+        {
+            "rule": "rvohealth\\.com\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "navi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
         }
     ],
     "categories": [],
@@ -187,10 +212,11 @@
         }
     ],
     "types": {
-        "Preflight": 3,
         "XHR": 9,
+        "Preflight": 3,
         "Script": 3,
-        "Document": 6
+        "Document": 6,
+        "Image": 2
     },
     "nameservers": [
         "ns-675.awsdns-20.net",

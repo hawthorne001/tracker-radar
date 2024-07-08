@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "static"
+        "static",
+        "api",
+        "m"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,8 +22,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "1320216da6be14762af012f47aab7fb789561c3d11a40f5ab2be870bea37592d"
@@ -31,13 +33,137 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "camif.fr",
-                "www.rascol.com"
+                "www.desigual.com",
+                "www.rascol.com",
+                "www.wesco.fr"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/widget\\/v3\\/widget-carousel\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c37ec44773c4a91d8c40fa9ffa8d3a474f7485537010f26b651b35f84736bc61"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ps_analytics": {
+                    "ttl": 2592005,
+                    "length": 47,
+                    "prevalence": 0.000201450443190975,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "desigual.com",
+                "www.wesco.fr"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/widget\\/v3\\/themes\\/Montserrat\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "204fd9b67d894bfdeeb2cdf8812fc46d2d2f29e79778636599b01db1f1e2a0d2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "desigual.com",
+                "www.rascol.com",
+                "www.wesco.fr"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/widget\\/v3\\/themes\\/modern-carousel\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b562892fb9b1fc14112340b935e5f0eec3534355f334dbcc494dcefe631beda8"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "desigual.com",
+                "www.wesco.fr"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/v3\\/widgets\\/record\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "desigual.com",
+                "www.rascol.com",
+                "www.wesco.fr"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/i\\/fit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6f13a7b26dc9fb64c6afe848b316ce3441bc3e76fdc6f4da2b5549ab15aa070b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wesco.fr",
+                "www.wesco.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
@@ -45,7 +171,10 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6,
+        "Stylesheet": 5,
+        "Fetch": 3,
+        "Image": 2
     },
     "nameservers": [
         "clark.ns.cloudflare.com",

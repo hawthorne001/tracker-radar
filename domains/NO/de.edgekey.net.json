@@ -9,24 +9,21 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00151,
-    "sites": 15,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "accounts.bahn",
         "img.ui-portal",
         "js.ui-portal",
-        "api.ardaudiothek",
         "gtm.idealo",
-        "gateway.kleinanzeigen"
+        "gateway.kleinanzeigen",
+        "sso.sportschau",
+        "sso.tagesschau"
     ],
     "cnames": [
         {
             "original": "accounts.bahn.de",
             "resolved": "accounts.bahn.de.edgekey.net"
-        },
-        {
-            "original": "api.ardaudiothek.de",
-            "resolved": "api.ardaudiothek.de.edgekey.net"
         },
         {
             "original": "gateway.kleinanzeigen.de",
@@ -43,6 +40,14 @@
         {
             "original": "js.ui-portal.de",
             "resolved": "js.ui-portal.de.edgekey.net"
+        },
+        {
+            "original": "sso.sportschau.de",
+            "resolved": "sso.sportschau.de.edgekey.net"
+        },
+        {
+            "original": "sso.tagesschau.de",
+            "resolved": "sso.tagesschau.de.edgekey.net"
         }
     ],
     "fingerprinting": 1,
@@ -64,7 +69,7 @@
                 }
             ],
             "responseHashes": [
-                "840a7f438e3b6b326ac580cf90ae1263739fdd5673945e205bf45a82fb92b2c3"
+                "dda307b0c1c3438c236780748f99384ed63683dc7265c4bf590d4644de535d87"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -195,7 +200,7 @@
                 }
             ],
             "responseHashes": [
-                "9782629d7716365f796f63f3829543ac6e5d43845ca8828023be3e79633e5db6"
+                "f7b549c466e6e9a94b3b6c2f684494dadecf1811ab26d5e4a3faa059eb22d76f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -222,7 +227,7 @@
                 }
             ],
             "responseHashes": [
-                "6a5a8aa70194d08f2cc212703944bb780b691f089e4dc4ed02b354fddab3a3fc"
+                "1227cbccf5ce5d1c531cbda0d7598d82c0f00ba9539add22285ca628a3df53c2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -257,58 +262,6 @@
             "exampleSites": [
                 "web.de",
                 "www.gmx.net"
-            ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.ardaudiothek"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.ardaudiothek.de",
-                    "resolved": "api.ardaudiothek.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ardaudiothek.de",
-                "www.ardaudiothek.de"
-            ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.ardaudiothek"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.ardaudiothek.de",
-                    "resolved": "api.ardaudiothek.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "81bb1bc4f5bba575a90a90f8d05f089bef006d69107c4c4db0404a7e6e12ec02"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ardaudiothek.de",
-                "www.ardaudiothek.de"
             ]
         },
         {
@@ -355,7 +308,7 @@
                 }
             ],
             "responseHashes": [
-                "e3bc6016cf485000e20f84f615fb53355c73d6d2a1d66cf36e6ad265276b66c2"
+                "8ee841eac924cf13259a71c9fb4a64e1d638dddfc44ce69c4cf2c440c41db7d9"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -364,39 +317,53 @@
                 "kleinanzeigen.de",
                 "www.kleinanzeigen.de"
             ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/sso\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso.sportschau",
+                "sso.tagesschau"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sso.sportschau.de",
+                    "resolved": "sso.sportschau.de.edgekey.net"
+                },
+                {
+                    "original": "sso.tagesschau.de",
+                    "resolved": "sso.tagesschau.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000804,
+    "cookies": 0.000603,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5652173913043478
+            "prevalence": 0.6428571428571429
         },
         {
             "domain": "uicdn.com",
-            "prevalence": 0.17391304347826086
-        },
-        {
-            "domain": "hs-data.com",
-            "prevalence": 0.08695652173913043
-        },
-        {
-            "domain": "classistatic.de",
-            "prevalence": 0.08695652173913043
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.043478260869565216
-        },
-        {
-            "domain": "bildstatic.de",
-            "prevalence": 0.021739130434782608
-        },
-        {
-            "domain": "usercentrics.eu",
-            "prevalence": 0.021739130434782608
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
@@ -404,8 +371,7 @@
         "Document": 2,
         "Script": 6,
         "XHR": 4,
-        "Image": 4,
-        "Preflight": 2
+        "Image": 4
     },
     "nameservers": []
 }

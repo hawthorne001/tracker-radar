@@ -4,14 +4,39 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
+        "loader.us-east-1.prod.mrc-sunrise.marketing",
         "prod.log.shortbread"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "aws\\.dev\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "loader.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d64f6aca62739e36f62b8b6455e07d3cc0e17b577e6a267b77df949d259e5e0b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazon.com",
+                "s3.amazonaws.com"
+            ]
+        },
         {
             "rule": "aws\\.dev\\/1x1\\.png",
             "cookies": 0,
@@ -20,8 +45,8 @@
                 "prod.log.shortbread"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -33,7 +58,8 @@
                 "amazon.com",
                 "aws.amazon.com",
                 "docs.aws.amazon.com",
-                "repost.aws"
+                "repost.aws",
+                "s3.amazonaws.com"
             ]
         }
     ],
@@ -43,20 +69,25 @@
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.55
+            "prevalence": 0.6071428571428571
         },
         {
             "domain": "first party",
-            "prevalence": 0.45
+            "prevalence": 0.35714285714285715
+        },
+        {
+            "domain": "amazon.com",
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "XHR": 4
+        "Script": 2,
+        "XHR": 5
     },
     "nameservers": [
-        "ns-1918.awsdns-47.co.uk",
         "ns-1108.awsdns-10.org",
-        "ns-964.awsdns-56.net",
-        "ns-399.awsdns-49.com"
+        "ns-399.awsdns-49.com",
+        "ns-1918.awsdns-47.co.uk",
+        "ns-964.awsdns-56.net"
     ]
 }

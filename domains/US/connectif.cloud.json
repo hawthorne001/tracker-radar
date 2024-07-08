@@ -4,15 +4,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000546,
-    "sites": 8,
+    "prevalence": 0.0000682,
+    "sites": 10,
     "subdomains": [
         "tracker",
-        "eu4-api",
-        "cl1-api"
+        "cdn",
+        "eu4-api"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "connectif\\.cloud\\/iframe\\/index\\.html",
@@ -40,6 +40,62 @@
             ]
         },
         {
+            "rule": "connectif\\.cloud\\/eu4\\/client-script\\/bc6a1bd9-8f7b-4a40-9fd4-e17108ce0b5a",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Notification.permission": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "4c6a8ad95283bcf4a601218061cd354013316c02ef9f51fe8ec88a39f49bcae7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadellibro.com",
+                "www.casadellibro.com"
+            ]
+        },
+        {
+            "rule": "connectif\\.cloud\\/integration-type\\/system\\/scrippet-notification\\/bc6a1bd9-8f7b-4a40-9fd4-e17108ce0b5a",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu4-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6e8f416e2aea5c8bbafb3b22284d6c791827614f4367c3f086cc2df6c0ae8542"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadellibro.com",
+                "www.casadellibro.com"
+            ]
+        },
+        {
             "rule": "connectif\\.cloud\\/integration-type\\/system\\/scrippet-notification\\/147b51fe-d2ff-4ffa-8e3b-b6e016dfe711",
             "cookies": 0,
             "fingerprinting": 0,
@@ -51,7 +107,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "2184f047b4772529a979a981b01c6ffe8096908bae8178ed2a5b685e832428c8"
+                "50f14c69aeff25fefd107d65f68c9b7de9437a7f0237cab1946d8de807187b44"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -59,28 +115,6 @@
             "exampleSites": [
                 "herbolariosaludnatural.com",
                 "www.herbolariosaludnatural.com"
-            ]
-        },
-        {
-            "rule": "connectif\\.cloud\\/integration-type\\/system\\/scrippet-notification\\/323bf1a2-8a49-4394-ae70-15130139511f",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cl1-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "957965c4bf9f40e6e081afa1f021b1ce0e0e2440e8738e2b7f79368cb40abd4e"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pccomponentes.com",
-                "www.pccomponentes.com"
             ]
         }
     ],
@@ -90,25 +124,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.625
+            "prevalence": 0.8235294117647058
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
-        },
-        {
-            "domain": "tiktok.com",
-            "prevalence": 0.125
+            "prevalence": 0.17647058823529413
         }
     ],
     "types": {
         "Document": 3,
+        "Script": 2,
         "XHR": 4
     },
     "nameservers": [
+        "ns4-08.azure-dns.info",
         "ns1-08.azure-dns.com",
         "ns3-08.azure-dns.org",
-        "ns2-08.azure-dns.net",
-        "ns4-08.azure-dns.info"
+        "ns2-08.azure-dns.net"
     ]
 }

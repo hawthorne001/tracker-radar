@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000751,
-    "sites": 11,
+    "prevalence": 0.0000819,
+    "sites": 12,
     "subdomains": [
         "secure-us",
         "api3",
         "houstonlibrary",
+        "region-us",
         "arlingtonva",
         "duke"
     ],
@@ -23,8 +24,16 @@
             "resolved": "houstonlibrary.libcal.com"
         },
         {
+            "original": "calendar.libraryweb.org",
+            "resolved": "region-us.libcal.com"
+        },
+        {
             "original": "libevents.abqlibrary.org",
             "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "rooms.himmelfarb.gwu.edu",
+            "resolved": "region-us.libcal.com"
         }
     ],
     "fingerprinting": 1,
@@ -36,7 +45,8 @@
             "subdomains": [
                 "secure-us",
                 "api3",
-                "houstonlibrary"
+                "houstonlibrary",
+                "region-us"
             ],
             "apis": {},
             "sites": 4,
@@ -49,12 +59,16 @@
                 {
                     "original": "calendar.houstonlibrary.org",
                     "resolved": "houstonlibrary.libcal.com"
+                },
+                {
+                    "original": "calendar.libraryweb.org",
+                    "resolved": "region-us.libcal.com"
                 }
             ],
             "responseHashes": [
-                "f45022964b4651149cc13a3c983a54017f17a86a3c61cec0e197d0e6075f9048",
-                "c005ff8cd638afe0f907e19e2b09526cf47a38280d5c0c8402c8b0cca8887d5a",
-                "95c3f0ffa9a291e1d954d2454f5bb4493dbcd0233b58be5cd44f39e426bad858"
+                "6ef69f8cf67793fcdca38e5cc4f04e35c9d7e362bebcfc1054c8afaa717ae1e0",
+                "c4a827bff79ccbe9788021e9a299536c983f0ebe42698e63d3a6f785c47dc993",
+                "b304796cddb25f367b468bcf4df2ea905d77c8f5bac8e85086aef5a6126d8388"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -63,7 +77,7 @@
                 "abqlibrary.org",
                 "boulderlibrary.org",
                 "houstonlibrary.org",
-                "lib.de.us"
+                "libraryweb.org"
             ]
         },
         {
@@ -84,7 +98,7 @@
                 }
             ],
             "responseHashes": [
-                "02b542b3f97dafa5308e1667c219de9e1488ccd76358e99776d669a0fe938912"
+                "465248a9a18df96780629025570c08607635f1b8f6306d33ed887e95c3c7e9e0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -99,21 +113,55 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "arlingtonva",
-                "duke"
+                "region-us",
+                "arlingtonva"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gwu.edu",
+                "library.arlingtonva.us"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/1\\.1\\/oauth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-us",
+                "arlingtonva",
+                "duke"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
             "responseHashes": [
-                "2d389e304b78d09d0e611f3ce2f549e428d21e9b89a7dda34c84b683edc8a770"
+                "4b9964cd61322ac819f400025bb23df2a43c12c664ca06f659f85bf32a5ad517",
+                "43722d3354c00e54e0fadd9983549ce5e1c0a17abeaf21e8efc76cc4d8398a5a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arlingtonva.us",
+                "gwu.edu",
+                "library.arlingtonva.us",
                 "library.duke.edu"
             ]
         },
@@ -129,7 +177,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "120a06d6120d55c517aaa685567969d90dd550eaae3f088e91f00f2b0a165977"
+                "6abc730f382fab14e3004d65002ce3b50395d7bfcca40e05b010a545ce12511c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -168,7 +216,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.7333333333333333
+        },
+        {
+            "domain": "libguides.com",
+            "prevalence": 0.13333333333333333
         },
         {
             "domain": "sirsi.net",
@@ -177,20 +229,17 @@
         {
             "domain": "ajax.googleapis.com",
             "prevalence": 0.06666666666666667
-        },
-        {
-            "domain": "cloudflare.com",
-            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
         "Script": 8,
-        "XHR": 4
+        "Preflight": 2,
+        "XHR": 5
     },
     "nameservers": [
-        "ns-220.awsdns-27.com",
         "ns-834.awsdns-40.net",
+        "ns-1465.awsdns-55.org",
         "ns-1606.awsdns-08.co.uk",
-        "ns-1465.awsdns-55.org"
+        "ns-220.awsdns-27.com"
     ]
 }
