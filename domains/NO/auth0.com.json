@@ -7,14 +7,19 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000905,
-    "sites": 9,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "cdn",
+        "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu",
         "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
-        "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants"
+        "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants",
+        "cdn"
     ],
     "cnames": [
+        {
+            "original": "access.intouch.bmigroup.com",
+            "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
+        },
         {
             "original": "id.naf.no",
             "resolved": "naf-cd-qf7uhj9homrrm574.edge.tenants.eu.auth0.com"
@@ -27,29 +32,41 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu",
+                "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
+                "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants"
             ],
-            "apis": {
-                "Navigator.prototype.appName": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "access.intouch.bmigroup.com",
+                    "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "id.naf.no",
+                    "resolved": "naf-cd-qf7uhj9homrrm574.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.techsmith.com",
+                    "resolved": "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants.auth0.com"
+                }
+            ],
             "responseHashes": [
-                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
+                "7fa93624e26844dbde7de0613fdb18da47bf7e04d95c8a3c54d215f8a7273b9e"
             ],
-            "type": "Script",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vwr.com",
-                "us.vwr.com"
+                "bmigroup.com",
+                "www.naf.no",
+                "www.techsmith.com"
             ]
         },
         {
@@ -60,9 +77,7 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.appName": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -77,38 +92,6 @@
                 "carsguide.com.au",
                 "www.carsguide.com.au"
             ]
-        },
-        {
-            "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
-                "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "id.naf.no",
-                    "resolved": "naf-cd-qf7uhj9homrrm574.edge.tenants.eu.auth0.com"
-                },
-                {
-                    "original": "login.techsmith.com",
-                    "resolved": "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "71baacf433ffec97f7cb85abb0c5d0eb5ccc6311e87d8a955352476605f47f07"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "naf.no",
-                "www.techsmith.com"
-            ]
         }
     ],
     "categories": [],
@@ -117,19 +100,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "bmidxbgroupcprod.netlify.app",
+            "prevalence": 0.14285714285714285
         },
         {
             "domain": "auth0.com",
-            "prevalence": 0.1
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 4,
-        "Document": 2
+        "Document": 3,
+        "Script": 2
     },
     "nameservers": [
-        "monroe.ns.cloudflare.com",
-        "kolton.ns.cloudflare.com"
+        "kolton.ns.cloudflare.com",
+        "monroe.ns.cloudflare.com"
     ]
 }

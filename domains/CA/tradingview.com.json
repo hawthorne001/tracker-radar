@@ -12,9 +12,8 @@
         "s3-symbol-logo",
         "s",
         "pushstream",
-        "www",
-        "scanner",
-        "telemetry"
+        "telemetry",
+        "scanner"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -50,13 +49,13 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000604,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00020118700331958554
+                "lotame_domain_check": 0.00020110608345902463
             },
             "exampleSites": [
                 "beforeitsnews.com",
@@ -138,15 +137,19 @@
         {
             "rule": "tradingview\\.com\\/goldprice\\/widgetembed\\/",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "s"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "3c9d6f9d2c8b6b115d70d5da9e8780f80485b991cc8fd167e42181d058f8d15b"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -203,7 +206,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "s"
             ],
             "apis": {},
             "sites": 2,
@@ -232,7 +235,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e613b2d6ca7e30be025fbb27ac3310605ca590abcbde6297b14601b7a8302eda"
+                "a356fdd00da82b480fb05df017b9c569dc077d6b4308f7d936654129ee209981"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -247,7 +250,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "s"
             ],
             "apis": {},
             "sites": 2,
@@ -257,26 +260,6 @@
                 "daef56a350acb2228ef4d234142cf3ebf1348dcb91b8b5d4af537e92c19958ca"
             ],
             "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "goldprice.org",
-                "silverprice.org"
-            ]
-        },
-        {
-            "rule": "tradingview\\.com\\/symbol",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scanner"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -305,6 +288,28 @@
             ]
         },
         {
+            "rule": "tradingview\\.com\\/symbol",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scanner"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c70701df3b2e2458c40465ee4e8eec48ca118cc18e6382bc28de9b08b6418731"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldprice.org",
+                "silverprice.org"
+            ]
+        },
+        {
             "rule": "tradingview\\.com\\/external-embedding\\/embed-widget-market-overview\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -321,62 +326,39 @@
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_cb_svref": 0.00010059350165979277
+                "_cb_svref": 0.00010055304172951231
             },
             "exampleSites": [
                 "chroniclejournal.com",
                 "www.jpost.com"
             ]
-        },
-        {
-            "rule": "tradingview\\.com\\/embed-widget\\/events\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s",
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "04aa9698afd59782fcc3507eb182535f0b7c62b23e38b9034c34485fc76568d7"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kitco.com",
-                "www.kitco.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "tradingview-widget.com",
-            "prevalence": 0.8125
+            "prevalence": 0.8524590163934426
         },
         {
             "domain": "first party",
-            "prevalence": 0.1875
+            "prevalence": 0.14754098360655737
         }
     ],
     "types": {
         "Script": 6,
         "WebSocket": 9,
         "Image": 8,
-        "Document": 4,
+        "Document": 2,
         "Other": 2,
         "Fetch": 8
     },
     "nameservers": [
+        "ns-234.awsdns-29.com",
         "ns-1533.awsdns-63.org",
         "ns-1853.awsdns-39.co.uk",
-        "ns-234.awsdns-29.com",
         "ns-619.awsdns-13.net"
     ]
 }

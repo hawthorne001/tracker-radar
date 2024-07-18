@@ -8,6 +8,7 @@
     "sites": 30,
     "subdomains": [
         "track",
+        "cdn",
         "media"
     ],
     "cnames": [],
@@ -21,61 +22,57 @@
                 "track"
             ],
             "apis": {},
-            "sites": 28,
-            "prevalence": 0.000191,
+            "sites": 26,
+            "prevalence": 0.000177,
             "cnames": [],
             "responseHashes": [
-                "8a37995fcf56522d586fe863deeaab867b79870a3d88ca52cf308e2973210ae5",
-                "140dd3bc41958724847c6386508bd2cb9fe65fa9f1a900a0092ea27b7d48328b",
-                "3f4c0615cd14fcd977c18424ca9d05f1fda652d48183a76809312c88936e7e93",
-                "d7c88f123a8fa3162f8e08b93621b086e29b7272e2f58fc1ee7af0a81701a75e",
-                "e2586ef147d774bba4c70f0ebaedc8c38b57f5eeccc48b23f17ff403dbdd3bbb",
-                "6fc3c68dfe3b77cb542686195c2d301ee496da3a4d69b608bc1d9297a7c27af4",
-                "62aa37314064c6a8728ba8e48b928f838dab9b7bc87d374e90a31e241cdff746",
-                "22d80b201cbab5182e74139cd041c8b539c5e2c72e2703bf6da7a2579bb8c147",
-                "4a6ead20497405202949e793dd4d3079c39af011ae76b3366a91901095aa0151",
-                "ddc4517ce451ec41111997c94c9dcf49b7c88f602ecd8409de261e4372023c65",
-                "01e5ac25a25b7b092f2342285872aa37ecb9bdfec3c5645380e9a59c178f6273",
-                "bfe2b1eca9cf4a056f5b503025ab3a40a69c267e3042a18a01a29bdb0705b968",
-                "2ed9fb44cdeafc6871dc251ad67cb5e3c4f0b9d03fe911f0d479ffc28a75e0cd",
-                "04166764de7b661df50bce9d9fb3c0c4be8d9c9121913fff7d357156485bc157",
-                "14c41a7f23455f5f9d1e15c237b8062544e2e200ee1568c681146163dbae474b",
-                "0f3b4fbb22128aac4ae82b9a129cce12fc5268490ed9d734c6c2dd78dcb6b5c5",
-                "40cc937e549daddb5913cae34067884fab8597e4677dd0e169e81b05126249c0",
-                "4f0136042ad12a163c220e07a85ead9694d177c2778bf00e101e9fe0266acc0e",
-                "d38c7fb36ff64f53de2a35580d290b8e65d4a53ccc1c033651d3441eae2aa74d",
-                "f1d756cf14cc1c6251b9df17798f570f5f15cc8abdaae8a3422590171606e008",
-                "0aeb9c91993fe06973844a4003cde15fd7a27fd6111b97f7d434cf9b2d0fa730",
-                "cea77f7336f72ccf3d27b8d493bb66b7b81c6287c6a5a884d1c0c5948d485404",
-                "447b621b8a22034e0f79c6d9c9456bae2d0b4314db51942690f5c81b8fd55b52",
-                "1c37189fdacc4b0481ddcc03008612575ae53f617813ed861b586a7a4b96f00f",
-                "2d3e17733e9cda5c3807bbec7629ab10c1b7a4381a35b85477abca4a27a84616",
-                "5e05ca40e97cef76949b288124267d52f1721c799b7790c21b02744c697a6413"
+                "23401a3bc2f185716a671fbcc7f48c8a4c38a0684edb718b35cc880967997b59",
+                "f3925f98792f5123ca745be8ebda40eaa9409a5ba69f67292e68e5f0bfde488c",
+                "fd9e29867ff7b45320597ac05bcceaa3ba4388ef9be58c8b61b5dbaf960dba2a",
+                "1927e7d3dbcc6e25aa661d92dbf5e3355aa746e32ab69c2b463667383b42b915",
+                "74fef4d35c898a7d010a0c1c2183bfde5ed9c217f8b4bc086bd0ccd4ee54edaf",
+                "8bdc73e33a9bf19ccfc2c18067b472d9fc93f648de124ab44aa528e071f21374",
+                "c396aa565131b362e2a15a0833150bf99e4ec3301f25adc020ddad136d13e220",
+                "9ef1b3a69ef8243d64c37224bde7ba7ee7256d9f1f56fc7a10d80c3843c262ab",
+                "653634b5305cd854a02b59f0710cb28c0db0186ff654d815dca658617ca2b552",
+                "1b745ea34ca169ebee1313438efd95db4f3bb29bf1fc4258043f48116748b6a1",
+                "3edb5f43bda153cf2e02e22393eb1a13e31d750fa16a470d163257e5ec03aa07",
+                "1a95704a43afe2336cd86df311fcea70ca01569fb18f5d59bcea77252ff7c59b",
+                "fadd4bafa8ddd994f8a80b5fecb24ec6fa05b655888c7a9d1677b6189350966d",
+                "1b94e4890a0d194558fa5bac49c65bba78258f2528fbad46ff0f6abde370de95",
+                "8c53a22cfe9bfa75b27153ea7bfc79f06ce870f266ab74c183e618e1ec30fea1",
+                "941d47d8d704ccdbe52d048e015c18c3e38a760a2d6fa9afd31493480ad84777",
+                "6b2f3b4990717abbbcdf3f916d82613960dbfd793c4694b7ff5aad70de380824",
+                "7a761f031281cc182bb8ccf1c8fb735d2e14773755b169fca6e22d58ad3d5689",
+                "69f43bdec0580a4672b64d268787fb0951fe16892176415bdda241841ca047d5",
+                "2b63be45c477361e951159841c610bb5f0b786d6bebae6f51129e5ecdf342aaa",
+                "55f437ef3464ea5365c157aa04346da9d53d4d8daacc42d2662f1963114078d3",
+                "0530b1d3e2fd4ece3a51d6e600db6be48ef353164b668faa995aeeedf6c97cc3"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.porntrex.com",
-                "bokepsan.lat",
-                "eropic.cc",
-                "hotmovs.com",
-                "upornia.com",
-                "www.playcrot.com",
-                "kr3.hasha.in",
                 "www.playcrot.org",
-                "heavyfetish.com",
-                "xtapes.me",
+                "hotmovs.com",
+                "porntop.com",
+                "www.pornhits.com",
+                "colmek.link",
+                "abxxx.com",
                 "heekub.com",
-                "colmeklinkindo.click",
-                "pornzog.com",
-                "pornwatch.ws",
-                "voyeurhit.tube",
+                "abjav.com",
                 "www.bokepsan.net",
-                "pasarbokep.ds2play.bar",
-                "avtub.today",
-                "m.porn555.com",
-                "porngo.xxx"
+                "avtubindo.click",
+                "shemalez.com",
+                "avtub.skin",
+                "kr3.hasha.in",
+                "www.colmeklink.com",
+                "thegay.com",
+                "agenbokep.autos",
+                "m.see.xxx",
+                "www.playcrot.top",
+                "bokepsan.lat",
+                "hclips.com"
             ]
         },
         {
@@ -83,59 +80,61 @@
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
+                "cdn",
                 "media"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 28,
-                "Document.cookie getter": 24,
+                "Document.cookie getter": 21,
+                "Navigator.prototype.userAgent": 25,
                 "window.innerWidth": 1,
                 "window.innerHeight": 1,
                 "Navigator.prototype.languages": 1,
                 "Navigator.prototype.language": 1,
                 "Date.prototype.getTime": 1
             },
-            "sites": 29,
-            "prevalence": 0.000198,
+            "sites": 26,
+            "prevalence": 0.000177,
             "cnames": [],
             "responseHashes": [
+                "d5d88479786a179899a77a4d24b191c3d323350fb354b6fe9aee28912cf9ec07",
                 "74706ac4c247643b318e5e2469ab54627c5de74fd4b7f8caecb85cbadd3e257e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.porntrex.com",
-                "pornwatch.ws",
-                "www.whoreshub.com",
-                "pornzog.com",
-                "www.onlyporn.tube",
-                "tamilyogi.show",
-                "colmeklinkindo.click",
-                "pasarbokep.ds2play.bar",
-                "bokepindo.ds2play.bar",
+                "heekub.com",
+                "thegay.com",
                 "colmek.link",
-                "upornia.com",
-                "javdaddy.com",
-                "eropic.cc",
-                "porngo.xxx",
-                "m.porn555.com",
-                "www.bokepsan.net",
                 "hotmovs.com",
+                "shemalez.com",
+                "hclips.com",
+                "colmeklinkindo.click",
+                "asuracomic.net",
+                "abxxx.com",
+                "avtub.skin",
+                "www.playcrot.top",
+                "avtubindo.click",
+                "m.see.xxx",
+                "voyeurhit.tube",
+                "kr3.hasha.in",
                 "www.playcrot.com",
                 "bokepsan.lat",
-                "heavyfetish.com"
+                "www.colmeklink.com",
+                "porntop.com",
+                "xtapes.me"
             ]
         },
         {
             "rule": "amon1\\.net\\/wtf\\.js",
-            "cookies": 0.000191,
+            "cookies": 0.000177,
             "fingerprinting": 0,
             "subdomains": [
                 "track"
             ],
             "apis": {},
-            "sites": 29,
-            "prevalence": 0.000198,
+            "sites": 26,
+            "prevalence": 0.000177,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -144,26 +143,26 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.porntrex.com",
-                "hotmovs.com",
-                "ceweksange.ds2play.bar",
-                "colmek.link",
+                "www.pornhits.com",
+                "m.see.xxx",
+                "www.colmeklink.com",
                 "heekub.com",
+                "www.bokepsan.net",
+                "porntop.com",
+                "xtapes.me",
+                "avtubindo.click",
+                "www.playcrot.top",
+                "agenbokep.autos",
+                "thegay.com",
+                "colmeklinkindo.click",
                 "voyeurhit.tube",
-                "www.playcrot.com",
-                "m.porn555.com",
-                "avtub.today",
-                "pornzog.com",
-                "www.onlyporn.tube",
-                "www.playcrot.org",
-                "pasarbokep.ds2play.bar",
-                "heavyfetish.com",
+                "hclips.com",
                 "ehentai.to",
-                "hdzog.com",
-                "bokepsan.lat",
-                "bokepindo.ds2play.bar",
-                "upornia.com",
-                "www.bokepsan.net"
+                "www.playcrot.org",
+                "avtub.skin",
+                "abjav.com",
+                "hotmovs.com",
+                "shemalez.com"
             ]
         }
     ],
@@ -173,31 +172,39 @@
     "topInitiators": [
         {
             "domain": "onclckbn.com",
-            "prevalence": 0.5588235294117647
+            "prevalence": 0.6190476190476191
         },
         {
             "domain": "poloptrex.com",
-            "prevalence": 0.23529411764705882
-        },
-        {
-            "domain": "rtbrenab.com",
-            "prevalence": 0.14705882352941177
-        },
-        {
-            "domain": "aso1.net",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "netpub.media",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "rtbrenab.com",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.023809523809523808
+        },
+        {
+            "domain": "aso1.net",
+            "prevalence": 0.023809523809523808
+        },
+        {
+            "domain": "sjsabb.com",
+            "prevalence": 0.023809523809523808
         }
     ],
     "types": {
-        "Document": 28,
-        "Script": 58
+        "Document": 26,
+        "Script": 52
     },
     "nameservers": [
-        "kate.ns.cloudflare.com",
-        "ian.ns.cloudflare.com"
+        "graham.ns.cloudflare.com",
+        "kim.ns.cloudflare.com"
     ]
 }

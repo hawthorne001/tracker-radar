@@ -12,8 +12,8 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "content-api-prod",
-        "cdn"
+        "cdn",
+        "core-api"
     ],
     "cnames": [
         {
@@ -21,39 +21,12 @@
             "resolved": "cdn.nba.com.edgekey.net"
         },
         {
-            "original": "content-api-prod.nba.com",
-            "resolved": "content-api-prod.nba.com.edgekey.net"
+            "original": "core-api.nba.com",
+            "resolved": "core-api.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/public\\/1\\/leagues\\/nba\\/draft\\/2024\\/board",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "content-api-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "content-api-prod.nba.com",
-                    "resolved": "content-api-prod.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5e7bb360bbc731df8be8c3e127ac8ae5f6d189a717d68021198260780ce08ff5"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
             "cookies": 0.000201,
@@ -98,7 +71,7 @@
                 }
             ],
             "responseHashes": [
-                "cf0741ae32c23626d32fd32689a076e6f174353e6dab30a04efceaaf60a9f7d1"
+                "5c2b871d7da5ff6306a96686a17f56a4a1036fbe76ed664cb25a11afffd9b0f5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -125,9 +98,36 @@
                 }
             ],
             "responseHashes": [
-                "0d596fa0f80b438d223ba1ed86eebc33435a78d52faa8c680425a62a9bb6893f"
+                "07ad1c15ea24321acdb4f414af8c3aea80a135057f5a3b1a06085ba8667eb26d"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.3\\/feeds\\/gamecardfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "1a9392f5d89ebac1c2f3c483af4505817176cfc5e2bb5e58a6f8d801f0ce2096"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -142,15 +142,12 @@
     "topInitiators": [
         {
             "domain": "script.ac",
-            "prevalence": 0.6
-        },
-        {
-            "domain": "usestoryteller.com",
-            "prevalence": 0.4
+            "prevalence": 1
         }
     ],
     "types": {
-        "Fetch": 8
+        "Fetch": 6,
+        "XHR": 2
     },
     "nameservers": []
 }

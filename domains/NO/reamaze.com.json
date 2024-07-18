@@ -11,35 +11,12 @@
     "sites": 2,
     "subdomains": [
         "cdn",
-        "push"
+        "push",
+        "ws"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "reamaze\\.com\\/assets\\/reamaze-loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "9ff6132c06f5c2347685836056a90d3c7d2edd38d9b9eb56e7a15fb2ab347738"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miljostein.no",
-                "vossabia.no"
-            ]
-        },
         {
             "rule": "reamaze\\.com\\/assets\\/reamaze\\.js",
             "cookies": 0,
@@ -56,8 +33,8 @@
                 "window.innerWidth": 2,
                 "HTMLMediaElement.prototype.canPlayType": 2,
                 "Event.prototype.timeStamp": 2,
-                "Date.prototype.getTimezoneOffset": 1,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -70,7 +47,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miljostein.no",
-                "vossabia.no"
+                "raider.io"
             ]
         },
         {
@@ -94,119 +71,27 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miljostein.no",
-                "vossabia.no"
+                "raider.io"
             ]
         },
         {
-            "rule": "reamaze\\.com\\/assets\\/fonts\\.css",
+            "rule": "reamaze\\.com\\/app\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "ws"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "9a8300407b7824ffb53d49284fed7d1cd5438f91b2446de8fcc6750e7d93f99a"
-            ],
-            "type": "Stylesheet",
+            "responseHashes": [],
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miljostein.no",
-                "vossabia.no"
-            ]
-        },
-        {
-            "rule": "reamaze\\.com\\/assets\\/widget\\.frame\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "4a253d50228964ad02c4c86efc819d03fffafdd9f911152acd8e1262df002714"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miljostein.no",
-                "vossabia.no"
-            ]
-        },
-        {
-            "rule": "reamaze\\.com\\/assets\\/widget\\.frame\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.platform": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "f73f5fd8c842c650763898635f3deb86d2e5ad629a830de3ea0a21fbad27c91b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miljostein.no",
-                "vossabia.no"
-            ]
-        },
-        {
-            "rule": "reamaze\\.com\\/fonts\\/Nunito-latin-400\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d1bb8b207b20dfe2dcf475b59cc4d2d8c58e691dca3c025c2e05e2e3d7b4eacf"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miljostein.no",
-                "vossabia.no"
-            ]
-        },
-        {
-            "rule": "reamaze\\.com\\/fonts\\/Nunito-latin-700\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d1bb8b207b20dfe2dcf475b59cc4d2d8c58e691dca3c025c2e05e2e3d7b4eacf"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miljostein.no",
-                "vossabia.no"
+                "raider.io"
             ]
         }
     ],
@@ -216,13 +101,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "rollbar.com",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "raiderio.net",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 8,
-        "Stylesheet": 4,
-        "Font": 4
+        "Script": 4,
+        "WebSocket": 2
     },
     "nameservers": [
         "sam.ns.cloudflare.com",

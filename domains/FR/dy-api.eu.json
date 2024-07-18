@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "direct"
+        "direct",
+        "direct-collect"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -28,7 +29,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "adameteve.fr",
+                "casashops.com",
                 "www.adameteve.fr",
                 "www.sklum.com"
             ]
@@ -45,7 +46,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "596a40e4f69f35522d51bb8dda112eb064259eed0c30bcec1bf2d8768362ef97"
+                "22dd9c49cf80c77ba8f74819f0f20385cad87acaaa92ea56d5a58318c0b9a474"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casashops.com",
+                "www.sklum.com"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "480779babe3579cca7d1207439c5a4ed9c25b2903681fd90274d85705c75b877"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -53,6 +76,26 @@
             "exampleSites": [
                 "adameteve.fr",
                 "www.adameteve.fr"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.fr",
+                "www.ullapopken.fr"
             ]
         }
     ],
@@ -62,17 +105,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Preflight": 3,
+        "Preflight": 5,
+        "Fetch": 2,
         "XHR": 2
     },
     "nameservers": [
         "ns-1242.awsdns-27.org",
-        "ns-926.awsdns-51.net",
+        "ns-1819.awsdns-35.co.uk",
         "ns-204.awsdns-25.com",
-        "ns-1819.awsdns-35.co.uk"
+        "ns-926.awsdns-51.net"
     ]
 }

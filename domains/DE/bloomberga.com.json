@@ -7,12 +7,17 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "eventrecorder.arcus.cm"
+        "eventrecorder.arcus.cm",
+        "personalization.bloomberg.com.shared"
     ],
     "cnames": [
         {
             "original": "eventrecorder.cm.bloomberg.com",
             "resolved": "eventrecorder.arcus.cm.bloomberga.com"
+        },
+        {
+            "original": "personalization.bloomberg.com",
+            "resolved": "personalization.bloomberg.com.shared.bloomberga.com"
         }
     ],
     "fingerprinting": 2,
@@ -43,6 +48,33 @@
                 "bloomberg.com",
                 "www.bloomberg.com"
             ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/user\\/recommendations\\/cfru",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalization.bloomberg.com.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "personalization.bloomberg.com",
+                    "resolved": "personalization.bloomberg.com.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "df168a55b77692c4843108860bba022445ca6db103a29223034b7c5ec11b0488"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
         }
     ],
     "categories": [],
@@ -51,15 +83,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8956521739130435
+            "prevalence": 0.8879310344827587
         },
         {
             "domain": "bwbx.io",
-            "prevalence": 0.10434782608695652
+            "prevalence": 0.11206896551724138
         }
     ],
     "types": {
-        "Ping": 2
+        "Ping": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "dns1.p01.nsone.net",

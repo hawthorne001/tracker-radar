@@ -7,12 +7,17 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
+        "sas.customdomains",
         "servicenowsignon.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
         {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
@@ -20,6 +25,33 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "798405280b7222dc71439cbe9ad39102c1b76593297bc32f06fbabee9a6f2120"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000201,
@@ -48,7 +80,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000401,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -60,6 +92,7 @@
         }
     ],
     "types": {
+        "XHR": 2,
         "Preflight": 2
     },
     "nameservers": [

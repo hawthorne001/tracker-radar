@@ -7,12 +7,42 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "prod.pyxis",
-        "prod.fennec"
+        "prod.fennec",
+        "prod.pyxis"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8170d06d2465816c8694a88de137fb6dffd29b95847784b33dc4f03869d15d41"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com",
+                "www.foxnews.com"
+            ]
+        },
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
             "cookies": 0,
@@ -46,8 +76,8 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "a2a3fd41b9f4de0f8b1dfdea59d02463485ecf5958591c39ae5037b5c11e0d75",
-                "bffc197aeeb4b273d9e8e59e4d40be68426e009a048175abf6f4a49550ff7c91"
+                "92648ec0d6a0feacd1cf1b196f78f855817e9d6119411963109fffb4897d4cfa",
+                "2510c249bb618e071807cd6279d619dd93ced32fb3075fbb28d55e5d8f9e7807"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -59,33 +89,27 @@
             ]
         },
         {
-            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "rule": "atp\\.fox\\/config\\/v2",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
                 "prod.fennec"
             ],
-            "apis": {
-                "Document.cookie getter": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.outerWidth": 2,
-                "window.outerHeight": 2,
-                "window.innerHeight": 2,
-                "window.innerWidth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "8170d06d2465816c8694a88de137fb6dffd29b95847784b33dc4f03869d15d41"
+                "29588fd20246af5426a9d8a79f50250a2ee4fab6d6dd9926b7aeafd5f064f7e1",
+                "7078c49328499e056d49ec4dab0157a74e84f8da71b7366256d1a76ce80b9ff8"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxsports.com",
-                "www.foxnews.com"
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.foxsports.com"
             ]
         },
         {
@@ -96,38 +120,17 @@
                 "prod.fennec"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxsports.com",
-                "www.foxnews.com"
-            ]
-        },
-        {
-            "rule": "atp\\.fox\\/config\\/v2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prod.fennec"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "29588fd20246af5426a9d8a79f50250a2ee4fab6d6dd9926b7aeafd5f064f7e1"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxsports.com",
-                "www.foxnews.com"
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.foxsports.com"
             ]
         }
     ],
@@ -149,19 +152,19 @@
         }
     ],
     "types": {
-        "Preflight": 5,
-        "Fetch": 3,
         "Script": 2,
-        "XHR": 2
+        "Preflight": 6,
+        "Fetch": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "ns02.foxdoua.com",
-        "ns04.dns.fox",
-        "ns01.foxdoua.com",
         "ns01.dns.fox",
-        "ns04.foxdoua.com",
+        "ns01.foxdoua.com",
         "ns02.dns.fox",
+        "ns02.foxdoua.com",
+        "ns03.dns.fox",
         "ns03.foxdoua.com",
-        "ns03.dns.fox"
+        "ns04.dns.fox",
+        "ns04.foxdoua.com"
     ]
 }
