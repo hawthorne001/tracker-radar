@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
-        "centrocdn"
+        "centrocdn",
+        "pixel",
+        "centroclick"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,10 +23,10 @@
             ],
             "apis": {
                 "window.localStorage": 2,
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 3
             },
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "64f79d2b82f30e45a0f64e55d407500f68dd1de845dac688084e88cc4bfff4e4"
@@ -33,8 +35,51 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "affirm.com",
+                "intheswim.com",
+                "www.affirm.com",
                 "www.gsb.stanford.edu"
+            ]
+        },
+        {
+            "rule": "kiosk\\.tm\\/dmp\\/asyncPixelSync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intheswim.com",
+                "www.affirm.com"
+            ]
+        },
+        {
+            "rule": "kiosk\\.tm\\/conv\\/e872d8548dfb7897",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "centroclick"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intheswim.com",
+                "www.affirm.com"
             ]
         }
     ],
@@ -44,20 +89,22 @@
     "topInitiators": [
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.6
+            "prevalence": 0.75
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-537.awsdns-03.net",
-        "ns-1849.awsdns-39.co.uk",
         "ns-348.awsdns-43.com",
-        "ns-1517.awsdns-61.org"
+        "ns-537.awsdns-03.net",
+        "ns-1517.awsdns-61.org",
+        "ns-1849.awsdns-39.co.uk"
     ]
 }

@@ -7,14 +7,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
         "player",
         "collector-1",
         "cdn",
-        "sync",
-        "cdn-channels-pixel"
+        "cdn-channels-pixel",
+        "sync"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -27,23 +27,25 @@
                 "player"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 7,
+            "prevalence": 0.000704,
             "cnames": [],
             "responseHashes": [
-                "788ddcc4fab6503f100f6b83736c4b3bdd6c6cf2b9a02cc424033756476dbbc7",
-                "6b3b2503b0b4b083d0e35fef71904766226a53bded582b1240ac23e06ebadea9"
+                "d4f11bd5ccddd2ba534ed1a4c07c8223afe9c8230d1c39e1b02354655ed1130a",
+                "40dd8b42befb220a2ca4a93443faf26f4f4b5ebed42a851155bd8d3079394c21",
+                "4703c2e047bca7766fdce5ea8392b00278127b17fafdc6dee0185ab47fc58731"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "allakhazam.com",
-                "smallbusiness.chron.com",
+                "chron.com",
                 "worldpopulationreview.com",
                 "www.dailykos.com",
+                "www.reviewjournal.com",
                 "www.sfgate.com",
-                "www.weekand.com"
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -54,8 +56,8 @@
                 "collector-1"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 7,
+            "prevalence": 0.000704,
             "cnames": [],
             "responseHashes": [
                 "cebe87559cf861d01e9c6b1cefd38ab1db9e13c8fe316b85a296b6cf220f883e"
@@ -64,56 +66,13 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "allakhazam.com",
-                "everquest.allakhazam.com",
-                "smallbusiness.chron.com",
+                "chron.com",
                 "worldpopulationreview.com",
+                "www.dailykos.com",
+                "www.reviewjournal.com",
                 "www.sfgate.com",
-                "www.weekand.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/player\\/hls\\/1\\.4\\.10-exco\\/hls\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "MediaSource.isTypeSupported": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "64f289189523a38054e3214b1bef7b711fe83e1223af9c0b0ffec5134312f0d6"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "allakhazam.com",
-                "www.weekand.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/v1\\/cookie_sync",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "allakhazam.com",
-                "www.weekand.com"
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -130,7 +89,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1bd609645e72b70cb67558c080c295bad9ac0bf62da800f76d7728226a2deb72"
+                "1c1d28e2932c4b358ef70311314d005366d10b58822231cb9e712bf1a8e3884e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -138,6 +97,37 @@
             "exampleSites": [
                 "dailykos.com",
                 "www.dailykos.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/ap\\/4\\.63\\.0-0d0d19b\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "HTMLMediaElement.prototype.canPlayType": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "fab4e39757e37b02e37edc1ee2f4a387f77e84f9e13c8e544d28aa7470b5ea94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reviewjournal.com",
+                "www.sfgate.com",
+                "www.weekand.com"
             ]
         },
         {
@@ -161,47 +151,143 @@
                 "sfgate.com",
                 "www.weekand.com"
             ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-112537f\\/cookie_sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "67f05dbc2dec78ac840807860c8c88990c52085c32dfbd37d2378476df1c2184"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/hls\\/1\\.4\\.10-exco\\/hls\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-112537f\\/sync-cfbf3e6c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weekand.com",
+                "www.wowhead.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6774193548387096
+            "prevalence": 0.6585365853658537
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.12903225806451613
+            "prevalence": 0.0975609756097561
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.0967741935483871
+            "prevalence": 0.07317073170731707
         },
         {
-            "domain": "fanbyte.com",
-            "prevalence": 0.03225806451612903
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.07317073170731707
         },
         {
             "domain": "proper.io",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.024390243902439025
+        },
+        {
+            "domain": "d3plfjw9uod7ab.cloudfront.net",
+            "prevalence": 0.024390243902439025
         },
         {
             "domain": "sfgate.com",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.024390243902439025
+        },
+        {
+            "domain": "fanbyte.com",
+            "prevalence": 0.024390243902439025
         }
     ],
     "types": {
-        "Fetch": 8,
-        "XHR": 6,
-        "Script": 4,
-        "Image": 2
+        "Fetch": 7,
+        "XHR": 7,
+        "Script": 9,
+        "Image": 2,
+        "Document": 4
     },
     "nameservers": [
-        "ns-141.awsdns-17.com",
-        "ns-709.awsdns-24.net",
         "ns-1048.awsdns-03.org",
+        "ns-709.awsdns-24.net",
+        "ns-141.awsdns-17.com",
         "ns-1853.awsdns-39.co.uk"
     ]
 }

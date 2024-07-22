@@ -7,16 +7,22 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
+        "cdn",
         "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
-        "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu"
+        "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu",
+        "thesocialhub-cd-em0t0tfwnewupsqg.edge.tenants.eu"
     ],
     "cnames": [
         {
             "original": "auth.pearle.nl",
             "resolved": "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "auth.thesocialhub.co",
+            "resolved": "thesocialhub-cd-em0t0tfwnewupsqg.edge.tenants.eu.auth0.com"
         },
         {
             "original": "login.ireland.com",
@@ -25,6 +31,32 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.10\\.4\\/auth0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c0d6b64bfbad44b071a08b23499a4490148c6c5821db36d77a257c96bfd4d90f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carsguide.com.au",
+                "www.carsguide.com.au"
+            ]
+        },
         {
             "rule": "auth0\\.com\\/usernamepassword\\/challenge",
             "cookies": 0.000201,
@@ -104,15 +136,16 @@
         },
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000301,
+            "cookies": 0.000401,
             "fingerprinting": 0,
             "subdomains": [
                 "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
-                "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu"
+                "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu",
+                "thesocialhub-cd-em0t0tfwnewupsqg.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [
                 {
                     "original": "login.ireland.com",
@@ -121,10 +154,15 @@
                 {
                     "original": "auth.pearle.nl",
                     "resolved": "nl-pearle-production-cd-r5rywauugxl8k8co.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth.thesocialhub.co",
+                    "resolved": "thesocialhub-cd-em0t0tfwnewupsqg.edge.tenants.eu.auth0.com"
                 }
             ],
             "responseHashes": [
-                "478a0736d800d086c7d3a5ad26461c5957185221ca5683232407180a6f883981"
+                "072706dbd698de3bcea207bcd21141c7badad949ae885ed5ee883bc5aad605e8",
+                "6aa743543e85702f21eb8067751c085e806c3ea9b08de513b99ff4b1d073ee2d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -132,28 +170,29 @@
             "exampleSites": [
                 "ireland.com",
                 "www.ireland.com",
-                "www.pearle.nl"
+                "www.pearle.nl",
+                "www.thesocialhub.co"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000401,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.9166666666666666
         },
         {
             "domain": "grandvision.io",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
+        "Script": 4,
         "Preflight": 2,
-        "Script": 2,
         "XHR": 2,
-        "Document": 3
+        "Document": 4
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

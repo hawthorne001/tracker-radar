@@ -4,16 +4,102 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "p-sdp-fe.tvs",
+        "p-sdp-mqtt.tvs",
+        "p-sdp-sso.tvs",
         "test",
-        "faro.apc",
-        "p-sdp-fe.tvs"
+        "faro.apc"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "telenor\\.net\\/g2_config\\/branding\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-sdp-fe.tvs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cb74eb0074a0714b0a38d2786081df29d72a270537e458c1ebab9e00cf011639"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twe.no",
+                "www.twe.no"
+            ]
+        },
+        {
+            "rule": "telenor\\.net\\/g2_config\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-sdp-fe.tvs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a9270742c297548d412e292f4a4a74ee6e8e31e9687044745c6e31a469da3d20"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twe.no",
+                "www.twe.no"
+            ]
+        },
+        {
+            "rule": "telenor\\.net\\/mqtt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-sdp-mqtt.tvs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twe.no",
+                "www.twe.no"
+            ]
+        },
+        {
+            "rule": "telenor\\.net\\/auth\\/realms\\/ADB\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-sdp-sso.tvs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twe.no",
+                "www.twe.no"
+            ]
+        },
         {
             "rule": "telenor\\.net\\/ws",
             "cookies": 0,
@@ -57,74 +143,52 @@
             ]
         },
         {
-            "rule": "telenor\\.net\\/g2_config\\/branding\\/",
-            "cookies": 0.000201,
+            "rule": "telenor\\.net\\/collect",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "p-sdp-fe.tvs"
+                "faro.apc"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "cb74eb0074a0714b0a38d2786081df29d72a270537e458c1ebab9e00cf011639"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "twe.no",
-                "www.twe.no"
-            ]
-        },
-        {
-            "rule": "telenor\\.net\\/g2_config\\/",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "p-sdp-fe.tvs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "f9a5ee66d3361551de04e9a545575072a5ab8adebe013ae79368750f1a3d9cb6"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "twe.no",
-                "www.twe.no"
+                "telenor.no",
+                "www.telenor.no"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "telenorcdn.net",
-            "prevalence": 0.64
+            "prevalence": 0.7894736842105263
         },
         {
             "domain": "first party",
-            "prevalence": 0.24
+            "prevalence": 0.13157894736842105
         },
         {
             "domain": "cdnst.net",
-            "prevalence": 0.12
+            "prevalence": 0.07894736842105263
         }
     ],
     "types": {
-        "WebSocket": 2,
-        "Fetch": 6
+        "Fetch": 6,
+        "WebSocket": 4,
+        "Document": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "nn.uninett.no",
         "ns1.nextra.no",
+        "nn.uninett.no",
         "ns2.nextra.no"
     ]
 }

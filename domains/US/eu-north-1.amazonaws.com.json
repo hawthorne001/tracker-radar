@@ -9,9 +9,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000955,
+    "prevalence": 0.0000956,
     "sites": 14,
     "subdomains": [
+        "abtest-ld-v2.s3",
         "d-u2tm1pzv93.execute-api",
         "d-m0mt5xgfbj.execute-api",
         "d-mtvy3zmyug.execute-api",
@@ -43,6 +44,40 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "eu-north-1\\.amazonaws\\.com\\/LD-Prod\\/LaunchDarkly_setup\\.js",
+            "cookies": 0.00000683,
+            "fingerprinting": 1,
+            "subdomains": [
+                "abtest-ld-v2.s3"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9dfabee3d115f774a1779ea8a8fc37ecc751a5d1ccd8f3a04b3968e3c7c6d20b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ldId": {
+                    "ttl": 2073612,
+                    "length": 16,
+                    "prevalence": 0.000006826870562534134,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bwin.com",
+                "www.betmgm.com"
+            ]
+        },
         {
             "rule": "eu-north-1\\.amazonaws\\.com\\/static\\/DhPixel\\.js",
             "cookies": 0.0000205,
@@ -120,7 +155,7 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.0000068240753377917296
+                "IR_gbd": 0.000006826870562534134
             },
             "exampleSites": [
                 "starzplay.com",
@@ -130,14 +165,14 @@
         },
         {
             "rule": "eu-north-1\\.amazonaws\\.com\\/static\\/DhPixelSnap\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
                 "d-heyjjt1mj7.execute-api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "s2s.pacsun.com",
@@ -164,7 +199,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "s2s.pacsun.com",
@@ -177,9 +212,9 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "dy_fs_page": 0.000013648150675583459,
-                "__cq_uuid": 0.0000068240753377917296,
-                "utag_main_vapi_domain": 0.000013648150675583459
+                "dy_fs_page": 0.000013653741125068269,
+                "__cq_uuid": 0.000013653741125068269,
+                "utag_main_vapi_domain": 0.000013653741125068269
             },
             "exampleSites": [
                 "pacsun.com",
@@ -195,10 +230,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "14843dc2e0ffd610e5cd5d3f86780347efbf0fa022df65d07ded1f00bae09243"
+                "c4484889bbe7012b20661955cdbd4282980b782560a7277b94461cb52c841557"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -213,15 +248,19 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.000041,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7
+            "prevalence": 0.675
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
             "prevalence": 0.075
+        },
+        {
+            "domain": "itsfogo.com",
+            "prevalence": 0.05
         },
         {
             "domain": "googletagmanager.com",
@@ -230,10 +269,6 @@
         {
             "domain": "tiqcdn.com",
             "prevalence": 0.05
-        },
-        {
-            "domain": "itsfogo.com",
-            "prevalence": 0.025
         },
         {
             "domain": "adobedtm.com",
@@ -253,18 +288,18 @@
         }
     ],
     "types": {
-        "Script": 6,
+        "Script": 8,
         "XHR": 5,
         "Fetch": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",
-        "ns1.amzndns.com",
-        "ns1.amzndns.net",
+        "ns2.amzndns.org",
         "ns1.amzndns.org",
         "ns2.amzndns.co.uk",
-        "ns2.amzndns.com",
+        "ns1.amzndns.net",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns2.amzndns.com",
+        "ns1.amzndns.com"
     ]
 }

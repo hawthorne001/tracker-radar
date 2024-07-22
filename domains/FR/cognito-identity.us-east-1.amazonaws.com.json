@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,15 +24,35 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buoyhealth.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cognito-identity\\.us-east-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
             "responseHashes": [
-                "4cb890eee9229bb3562c4ce01e042c6f047ceef8d64e080ada80e7596252379e"
+                "6ac01e5bafcdd084b5650343af6b99ae2662905aca45e923e2e8d65b44b6b3a2",
+                "6a34280ab9cbba4e2b8a8c75532f1cb750b09cc9db69dbba2486e6253fd7d448"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "buoyhealth.com",
-                "www.buoyhealth.com"
+                "www.buoyhealth.com",
+                "www.cbssports.com"
             ]
         }
     ],
@@ -44,16 +64,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 2
+        "Preflight": 2,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-467.awsdns-58.com",
-        "ns-689.awsdns-22.net",
         "ns-1031.awsdns-00.org",
-        "ns-1600.awsdns-08.co.uk"
+        "ns-1600.awsdns-08.co.uk",
+        "ns-467.awsdns-58.com",
+        "ns-689.awsdns-22.net"
     ]
 }

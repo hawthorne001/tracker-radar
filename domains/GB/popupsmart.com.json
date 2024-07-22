@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "handler-api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -15,22 +16,22 @@
         {
             "rule": "popupsmart\\.com\\/bundle\\.js",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Document.cookie getter": 4,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
                 "Navigator.prototype.language": 2,
+                "window.localStorage": 2,
                 "window.sessionStorage": 2,
-                "window.localStorage": 1,
                 "Navigator.prototype.languages": 1
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
                 "00cc63b111441e806249634a69ef055ae55c2970fed3a8f8450d540175b18d1a"
@@ -42,7 +43,50 @@
                 "ox.ac.uk",
                 "www.eurochange.co.uk",
                 "www.jewishvirtuallibrary.org",
-                "www.nbc.com"
+                "www.nbc.com",
+                "www.zen.co.uk"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "handler-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0e03f97ae4697775c8757637d0f2cd95f1aae5bcbe3e97abffc258e5beef50b9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jewishvirtuallibrary.org",
+                "www.zen.co.uk"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "handler-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jewishvirtuallibrary.org",
+                "www.zen.co.uk"
             ]
         }
     ],
@@ -52,23 +96,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.625
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.23076923076923078
+            "prevalence": 0.25
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.0625
         },
         {
             "domain": "nbcuni.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 5,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "curt.ns.cloudflare.com",
