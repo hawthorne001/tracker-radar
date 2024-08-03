@@ -8,33 +8,12 @@
     "sites": 5,
     "subdomains": [
         "ingress.eu2",
-        "ingress.us1"
+        "ingress.us1",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "rum-ingress-coralogix\\.com\\/browser\\/v1beta\\/logs",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ingress.eu2",
-                "ingress.us1"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "farfetch.com",
-                "portal.nutanix.com",
-                "www.farfetch.com"
-            ]
-        },
         {
             "rule": "rum-ingress-coralogix\\.com\\/browser\\/v1beta\\/logs",
             "cookies": 0,
@@ -55,8 +34,55 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "farfetch.com",
-                "portal.nutanix.com",
-                "www.farfetch.com"
+                "www.farfetch.com",
+                "www.surveyjunkie.com"
+            ]
+        },
+        {
+            "rule": "rum-ingress-coralogix\\.com\\/browser\\/v1beta\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress.eu2",
+                "ingress.us1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "farfetch.com",
+                "www.farfetch.com",
+                "www.surveyjunkie.com"
+            ]
+        },
+        {
+            "rule": "rum-ingress-coralogix\\.com\\/coralogix\\/browser\\/1\\.1\\.11\\/coralogix-browser-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f9b87173b29de2872be308ca9844713efb92c7d3745813cc818eea86f995f8b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "surveyjunkie.com",
+                "www.surveyjunkie.com"
             ]
         }
     ],
@@ -70,8 +96,9 @@
         }
     ],
     "types": {
+        "Fetch": 3,
         "Preflight": 3,
-        "Fetch": 3
+        "Script": 2
     },
     "nameservers": [
         "jule.ns.cloudflare.com",

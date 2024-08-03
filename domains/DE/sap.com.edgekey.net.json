@@ -9,19 +9,57 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "www54-qa"
+        "account",
+        "www54-qa",
+        "cdn.udex.services"
     ],
     "cnames": [
+        {
+            "original": "cdn.account.sap.com",
+            "resolved": "account.sap.com.edgekey.net"
+        },
+        {
+            "original": "cdn.udex.services.sap.com",
+            "resolved": "cdn.udex.services.sap.com.edgekey.net"
+        },
         {
             "original": "www-qa.sap.com",
             "resolved": "www54-qa.sap.com.edgekey.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "sap\\.com\\.edgekey\\.net\\/js\\/uid-baseline\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "account"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "cdn.account.sap.com",
+                    "resolved": "account.sap.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "efc93a0d7ae0513748fef278ea08af79dfeff42e0a1af4e7d716745af6effccc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "answers.sap.com",
+                "community.sap.com"
+            ]
+        },
         {
             "rule": "sap\\.com\\.edgekey\\.net\\/etc\\/designs\\/sapdx\\/clientlib-ip-detection\\/js\\/getCountryCode\\.json",
             "cookies": 0.000201,
@@ -39,7 +77,7 @@
                 }
             ],
             "responseHashes": [
-                "41daf0de4bb788f3c2ab2c554c2f5565c94d02c024667583fef4d6137a15093b"
+                "44523ba01d8903e99c0e70921b9fdda51419d169d765afa006f736f83e375501"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -47,6 +85,33 @@
             "exampleSites": [
                 "sap.com",
                 "help.sap.com"
+            ]
+        },
+        {
+            "rule": "sap\\.com\\.edgekey\\.net\\/dds\\/design-tokens\\/latest\\/css\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.udex.services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "cdn.udex.services.sap.com",
+                    "resolved": "cdn.udex.services.sap.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d6f64497a74f7add990a4001404f2d19b0270ddc6466a8be367568d3b23a2912"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "userapps.support.sap.com"
             ]
         }
     ],
@@ -60,7 +125,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 3,
+        "XHR": 2,
+        "Stylesheet": 2
     },
     "nameservers": []
 }

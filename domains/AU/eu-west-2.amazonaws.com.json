@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "d-u7ic8z9gb4.execute-api"
+        "d-u7ic8z9gb4.execute-api",
+        "cognito-identity",
+        "hd55dly43vcebpbx7vbbb5etym.appsync-api"
     ],
     "cnames": [
         {
@@ -22,6 +24,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "eu-west-2\\.amazonaws\\.com\\/pihub\\/securitywaittime",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-u7ic8z9gb4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api-dp-prod.dp.heathrow.com",
+                    "resolved": "d-u7ic8z9gb4.execute-api.eu-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "d410a2a2667c70b0d3c2391771e1c943a92808fd4e710d7a09394851b26a9256"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heathrow.com",
+                "www.heathrow.com"
+            ]
+        },
         {
             "rule": "eu-west-2\\.amazonaws\\.com\\/pihub\\/weather\\/forecasts\\/352409",
             "cookies": 0,
@@ -39,7 +68,7 @@
                 }
             ],
             "responseHashes": [
-                "743fe0ea588ebde2b1eab2cab1f728b3ea66e2b0ec307972a4ea785754e86c3c"
+                "5bfa01efd42c188b8d3c6c9a52901c980e6d51eae3bddd21f28f7b49f8369e66"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -48,6 +77,50 @@
                 "heathrow.com",
                 "www.heathrow.com"
             ]
+        },
+        {
+            "rule": "eu-west-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f8c097b48b8c26519f225ebb721663b6f4c43d34017cf58a2588912a3a72f868"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "horseandhound.co.uk",
+                "www.horseandhound.co.uk"
+            ]
+        },
+        {
+            "rule": "eu-west-2\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hd55dly43vcebpbx7vbbb5etym.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fde4c04caa22303f237c4ca368eda12bb6c7a2d981df9eb774e815c79e2a7982"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "horseandhound.co.uk",
+                "www.horseandhound.co.uk"
+            ]
         }
     ],
     "categories": [
@@ -55,17 +128,24 @@
     ],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "XHR": 2
+        "XHR": 6,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns2.amzndns.com",
-        "ns1.amzndns.co.uk",
+        "ns1.amzndns.net",
+        "ns2.amzndns.co.uk",
         "ns1.amzndns.org",
         "ns2.amzndns.net",
         "ns1.amzndns.com",
-        "ns1.amzndns.net",
-        "ns2.amzndns.org",
-        "ns2.amzndns.co.uk"
+        "ns1.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.org"
     ]
 }

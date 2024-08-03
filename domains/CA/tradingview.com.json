@@ -4,19 +4,19 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
         "s3",
         "widgetdata",
         "s3-symbol-logo",
         "s",
         "pushstream",
-        "telemetry",
-        "scanner"
+        "scanner",
+        "telemetry"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "tradingview\\.com\\/external-embedding\\/embed-widget-ticker-tape\\.js",
@@ -48,20 +48,21 @@
                 "widgetdata"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00020110608345902463
+                "lotame_domain_check": 0.00010049241282283188
             },
             "exampleSites": [
                 "beforeitsnews.com",
+                "boereport.com",
                 "goldprice.org",
+                "goldseek.com",
                 "silverprice.org",
-                "www.chroniclejournal.com",
                 "www.investopedia.com",
                 "www.jpost.com"
             ]
@@ -74,8 +75,8 @@
                 "s3-symbol-logo"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "35ab1f9323296d11a94fe10bc0cc8c77b440ffe53075dd73e50a5f048d9f39c9"
@@ -85,6 +86,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "beforeitsnews.com",
+                "goldseek.com",
                 "www.investopedia.com",
                 "www.kitco.com"
             ]
@@ -97,8 +99,8 @@
                 "s3-symbol-logo"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "b47993af3ef9963a193ddc9d0bd10fc8f1f773fe0881ffa3c8d2151498fccf03"
@@ -108,8 +110,34 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "beforeitsnews.com",
+                "goldseek.com",
                 "www.investopedia.com",
                 "www.kitco.com"
+            ]
+        },
+        {
+            "rule": "tradingview\\.com\\/external-embedding\\/embed-widget-market-overview\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "3825b8f61dd55e2d8f49472f5922c98f8e352643798015b198eb8422ad1c3858"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_cb_svref": 0.00010049241282283188
+            },
+            "exampleSites": [
+                "boereport.com",
+                "goldseek.com",
+                "www.jpost.com"
             ]
         },
         {
@@ -137,18 +165,16 @@
         {
             "rule": "tradingview\\.com\\/goldprice\\/widgetembed\\/",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "s"
             ],
-            "apis": {
-                "Document.cookie getter": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3c9d6f9d2c8b6b115d70d5da9e8780f80485b991cc8fd167e42181d058f8d15b"
+                "1d280e615770e586c2ad47e10500e9f875eaebc4c8a1163c557115e5e54f5147"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -189,7 +215,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -235,7 +261,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a356fdd00da82b480fb05df017b9c569dc077d6b4308f7d936654129ee209981"
+                "3684e30d823d247ab8804f71c97b9123142e5c25b2f826aee490e19c2fb47912"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -268,6 +294,28 @@
             ]
         },
         {
+            "rule": "tradingview\\.com\\/symbol",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scanner"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "45ad6b3dd6f4bb061dc9f40a22afabce9147f7581ede34d22dda84b964ed884c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldprice.org",
+                "silverprice.org"
+            ]
+        },
+        {
             "rule": "tradingview\\.com\\/widget\\/report",
             "cookies": 0,
             "fingerprinting": 0,
@@ -288,77 +336,75 @@
             ]
         },
         {
-            "rule": "tradingview\\.com\\/symbol",
+            "rule": "tradingview\\.com\\/country\\/CA\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "scanner"
+                "s3-symbol-logo"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c70701df3b2e2458c40465ee4e8eec48ca118cc18e6382bc28de9b08b6418731"
+                "4fb8085bfd098cb58f6c39c7c724b34d4354b8efb5135ecf762a6be5ab6677a2"
             ],
-            "type": "Fetch",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "goldprice.org",
-                "silverprice.org"
+                "goldseek.com",
+                "www.kitco.com"
             ]
         },
         {
-            "rule": "tradingview\\.com\\/external-embedding\\/embed-widget-market-overview\\.js",
+            "rule": "tradingview\\.com\\/country\\/GB\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "s3"
+                "s3-symbol-logo"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3825b8f61dd55e2d8f49472f5922c98f8e352643798015b198eb8422ad1c3858"
+                "b3e463d925abc879f5b76428144c0da44bc02fae2188f71bc9e7aa7ab6f46037"
             ],
-            "type": "Script",
+            "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_cb_svref": 0.00010055304172951231
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chroniclejournal.com",
-                "www.jpost.com"
+                "goldseek.com",
+                "www.kitco.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "tradingview-widget.com",
-            "prevalence": 0.8524590163934426
+            "prevalence": 0.8701298701298701
         },
         {
             "domain": "first party",
-            "prevalence": 0.14754098360655737
+            "prevalence": 0.12987012987012986
         }
     ],
     "types": {
-        "Script": 6,
-        "WebSocket": 9,
-        "Image": 8,
+        "Script": 7,
+        "WebSocket": 10,
+        "Image": 14,
         "Document": 2,
         "Other": 2,
         "Fetch": 8
     },
     "nameservers": [
-        "ns-234.awsdns-29.com",
-        "ns-1533.awsdns-63.org",
         "ns-1853.awsdns-39.co.uk",
-        "ns-619.awsdns-13.net"
+        "ns-234.awsdns-29.com",
+        "ns-619.awsdns-13.net",
+        "ns-1533.awsdns-63.org"
     ]
 }
