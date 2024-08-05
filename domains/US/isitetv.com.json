@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.0000409,
+    "sites": 6,
     "subdomains": [
-        "static"
+        "static",
+        "paapi",
+        "events"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,13 +17,15 @@
         {
             "rule": "isitetv\\.com\\/api\\/embed\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "706ebe1ddf8c65db11ea9e51f63c154404be225506a5c28b5ccc177e5efb82ba"
@@ -31,7 +35,72 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "currys.co.uk",
-                "www.currys.co.uk"
+                "www.currys.co.uk",
+                "www.currys.ie"
+            ]
+        },
+        {
+            "rule": "isitetv\\.com\\/isitetv_cms\\/paapi\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "paapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1303d6b7450050d4ba487ddbfcd080a54bf85804d789b56b03912798fd500bff"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beko.co.uk",
+                "www.currys.ie"
+            ]
+        },
+        {
+            "rule": "isitetv\\.com\\/api\\/Event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beko.co.uk",
+                "www.beko.co.uk"
+            ]
+        },
+        {
+            "rule": "isitetv\\.com\\/api\\/Event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beko.co.uk",
+                "www.beko.co.uk"
             ]
         }
     ],
@@ -45,7 +114,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "XHR": 4,
+        "Preflight": 2
     },
     "nameservers": [
         "a11-65.akam.net",

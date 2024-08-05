@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
         "ws",
         "ws.v2",
-        "api"
+        "api",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,8 +24,8 @@
                 "ws.v2"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -33,61 +34,93 @@
             "exampleSites": [
                 "bakerenogkokken.no",
                 "www.follestad.no",
+                "www.maxgaming.com",
                 "www.maxgaming.no",
+                "www.oscarjacobson.com",
                 "www.synsam.no",
                 "www.zoo.no"
             ]
         },
         {
             "rule": "depict\\.ai\\/v2\\/recommend\\/products\\/general",
-            "cookies": 0.000302,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "api"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "f374e4bb89407afc40a6695a4bfc896a79356b575784e833b185e8031c90390c",
-                "9aaee5167e25ead5a4794d40b6846ce711ea98a8c5734989f0aafb3593ecd77d"
+                "9b2b77d3faf7f4085481364341c6db677a3ee2b6227245c26b7f53c0676d033c",
+                "85fc37abe34c71dd0a5304f5cbee84e06c14d107393e63fb6dab231cd4242715"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bakerenogkokken.no",
-                "www.maxgaming.no",
-                "www.suserisivet.no"
+                "www.maxgaming.com",
+                "www.maxgaming.no"
+            ]
+        },
+        {
+            "rule": "depict\\.ai\\/maxgaming\\/depict-ai\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fa76e2d1c503e6503ebfd88b64be93e2b6e98eda532eb62bd652e17710e3dd2d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maxgaming.com",
+                "www.maxgaming.no"
             ]
         },
         {
             "rule": "depict\\.ai\\/v2\\/recommend\\/products\\/product",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "50b14c5026a398193db5bc951d12323a5c437a94c9a8ebda3a71407188cee117"
+                "f6593bd07539a1426a33f11a6b2d7050dfd1196bc6d9bbca5f5fdf43dde28c02",
+                "88e1b937163b7e56ed5b5cc5adc8fcf0cd22e38b542e302834ff7e289a75f9a9"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "maxgaming.no",
-                "www.maxgaming.no"
+                "maxgaming.com",
+                "www.maxgaming.no",
+                "www.maxgaming.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
@@ -95,11 +128,12 @@
         }
     ],
     "types": {
-        "WebSocket": 5,
-        "Fetch": 5
+        "WebSocket": 7,
+        "Fetch": 6,
+        "Script": 2
     },
     "nameservers": [
-        "clayton.ns.cloudflare.com",
-        "rosa.ns.cloudflare.com"
+        "rosa.ns.cloudflare.com",
+        "clayton.ns.cloudflare.com"
     ]
 }

@@ -7,13 +7,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000502,
+    "prevalence": 0.000503,
     "sites": 5,
     "subdomains": [
-        "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
-        "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
-        "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu",
-        "cdn"
+        "cdn",
+        "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+        "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu"
     ],
     "cnames": [
         {
@@ -21,174 +20,84 @@
             "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
         },
         {
-            "original": "auth0.s-ge.com",
-            "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
-        },
-        {
-            "original": "login.ireland.com",
-            "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
+            "original": "login.financescout24.ch",
+            "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
-            "subdomains": [
-                "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
-                "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [
-                {
-                    "original": "auth.homegate.ch",
-                    "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
-                },
-                {
-                    "original": "login.ireland.com",
-                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
-                },
-                {
-                    "original": "auth0.s-ge.com",
-                    "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "2de337ce65714b97d5ba03c50198a19813575f299cd747a5a6cdef9561e4c9e9",
-                "b7cb8f7b7cbdc21f42793a2b40e0f998381febac853e5d5d3143bda022de3635"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "homegate.ch",
-                "www.ireland.com",
-                "www.s-ge.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/styleguide\\/components\\/1\\.0\\.8\\/media\\/logos\\/img\\/badge\\.png",
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.20\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8ce9f639d0609bbca3d5362034f3d85efc0d75830259b3b1f56e6387fe9153a9"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ireland.com",
-                "www.s-ge.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/usernamepassword\\/challenge",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "login.ireland.com",
-                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ireland.com",
-                "www.ireland.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/client\\/NoHUbkPTHIyq4HDAb7n2cnOZx8xZiKaj\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "login.ireland.com",
-                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "d3479aa9952c8c0c7ab819f3687130f5c9d4fb86a840e9954a94da1c2ca2745f"
+                "ebf5fe084506fa53aecb68bc4d315b1e1b149b56a0465d7bc7e584ca9711c6dc"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ireland.com",
-                "www.ireland.com"
+                "bunte.de",
+                "www.focus.de"
             ]
         },
         {
-            "rule": "auth0\\.com\\/usernamepassword\\/challenge",
-            "cookies": 0,
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
+                "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+                "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "login.ireland.com",
-                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
+                    "original": "login.financescout24.ch",
+                    "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth.homegate.ch",
+                    "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "XHR",
+            "responseHashes": [
+                "7e15291039068e8b59c362de7c7db06fc787bc5c586b1cafd76932af6571ef59"
+            ],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ireland.com",
-                "www.ireland.com"
+                "financescout24.ch",
+                "www.homegate.ch"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
-        },
-        {
-            "domain": "auth0.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 1
         }
     ],
     "types": {
-        "Document": 3,
-        "Image": 2,
-        "Preflight": 2,
         "Script": 2,
-        "XHR": 2
+        "Document": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

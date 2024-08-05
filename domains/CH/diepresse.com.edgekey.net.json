@@ -9,46 +9,24 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.0001,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "api"
+        "api",
+        "comments"
     ],
     "cnames": [
         {
             "original": "api.diepresse.com",
             "resolved": "api.diepresse.com.edgekey.net"
+        },
+        {
+            "original": "comments.diepresse.com",
+            "resolved": "comments.diepresse.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "diepresse\\.com\\.edgekey\\.net\\/gateway\\/v2\\/jwPlayer\\/getData",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.diepresse.com",
-                    "resolved": "api.diepresse.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5036b53f275c39e61f6afa49301a8ede425521da337133a53af067280ea31164"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "diepresse.com",
-                "www.diepresse.com"
-            ]
-        },
         {
             "rule": "diepresse\\.com\\.edgekey\\.net\\/gateway\\/v2\\/newsletter\\/getSubscriptions",
             "cookies": 0,
@@ -75,19 +53,41 @@
                 "diepresse.com",
                 "www.diepresse.com"
             ]
+        },
+        {
+            "rule": "diepresse\\.com\\.edgekey\\.net\\/api\\/story\\/count\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "comments"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "comments.diepresse.com",
+                    "resolved": "comments.diepresse.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "679d7ca5bb361b266ff41f74eb20045e4f7ca809e1109019dd281e7d05f2efb0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "diepresse.com",
+                "www.diepresse.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0,
-    "topInitiators": [
-        {
-            "domain": "privacy-center.org",
-            "prevalence": 1
-        }
-    ],
     "types": {
-        "XHR": 4
+        "XHR": 2,
+        "Script": 2
     },
     "nameservers": []
 }

@@ -9,13 +9,23 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000904,
+    "prevalence": 0.000903,
     "sites": 9,
     "subdomains": [
+        "sso",
         "slot9428",
-        "slot11847"
+        "slot11847",
+        "slot9430"
     ],
     "cnames": [
+        {
+            "original": "auth.ebay.com",
+            "resolved": "sso.ebay.com.edgekey.net"
+        },
+        {
+            "original": "auth.ebay.com.au",
+            "resolved": "sso.ebay.com.edgekey.net"
+        },
         {
             "original": "p.ebaystatic.com",
             "resolved": "slot11847.ebay.com.edgekey.net"
@@ -51,10 +61,51 @@
         {
             "original": "secureir.ebaystatic.com",
             "resolved": "slot9428.ebay.com.edgekey.net"
+        },
+        {
+            "original": "signin.ebay.ca",
+            "resolved": "slot9430.ebay.com.edgekey.net"
+        },
+        {
+            "original": "signin.ebay.com",
+            "resolved": "slot9430.ebay.com.edgekey.net"
+        },
+        {
+            "original": "signin.ebay.com.au",
+            "resolved": "slot9430.ebay.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "ebay\\.com\\.edgekey\\.net\\/oauth2\\/authorize",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.ebay.com",
+                    "resolved": "sso.ebay.com.edgekey.net"
+                },
+                {
+                    "original": "auth.ebay.com.au",
+                    "resolved": "sso.ebay.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay.com",
+                "community.ebay.com.au"
+            ]
+        },
         {
             "rule": "ebay\\.com\\.edgekey\\.net\\/cr\\/v\\/c1\\/jquery\\/jquery-3\\.7\\.0\\.min\\.js",
             "cookies": 0,
@@ -89,14 +140,14 @@
         },
         {
             "rule": "ebay\\.com\\.edgekey\\.net\\/roverimp\\/0\\/0\\/9",
-            "cookies": 0.000502,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
                 "slot9428"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "rover.ebay.com.au",
@@ -115,7 +166,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ebay.com.au",
-                "my.ebay.com.au",
                 "pages.ebay.com.au",
                 "www.ebay.com.au",
                 "www.ebay.co.uk"
@@ -130,7 +180,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -154,11 +204,11 @@
                 }
             ],
             "responseHashes": [
-                "6b13692875c1b659ac0dce7f1eb57c7e6fdbc18430c4e046b7db24bd840afac1",
-                "f0f9b3b3b4efcef9b3f93f6c3bf4e3d37953d1c0e1ca3193f4513c81c58cc29f",
-                "ad1d581dc1d90d5d6cfc964d98b4b8fe61d7a892861d0c8dfc52e9cd9d55b5b5",
-                "b4d31d7ca05a8883473fb9340c593991fada5b284fe9b73eb03c3ff6fc7b4fd5",
-                "529fb3e424349a1a6c024ff313da38dddafbccb00b599dd02213a85c5e264822"
+                "46d512977bf73e5b55d93af6d74074ecf2f604d3638e4e9c69c205609f735f34",
+                "8b78e8f8da8f76ebbbce7e81389a2df5c117d767215350cc7e30e0e3e69c82d9",
+                "9d8b1e67b277c0346e850f7a39e3d93313a5961cd419a818dc6d9fa0fc3e2e04",
+                "f7ac559b6cce58e2496745e7e43365e0de4151184093b49a5897bd3467d25e9b",
+                "3dd62cac74e01d017295a5ef86dd596224495b5455c958a0f2e6ea5017c157c9"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -181,7 +231,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -205,11 +255,11 @@
                 }
             ],
             "responseHashes": [
-                "cb95b4d312245b6671b215710d208a6fa4a7cfa1c53fca13a4ce8ccbbeb1f882",
-                "d617b0876de932cf46d6372d8d456b27317e85ac92db326ceead3fbb3cb15ab2",
-                "db57aec4e9a71a8e4dbe517ac0836a301351bfc19193c162b6a854c1df746e80",
-                "a3cb44a23c5228d3373f412477a8d1c75d755d0a9a2b3fd1f0ab7298fcb49419",
-                "fb66f0a576363f349f1262f92438315e6a122705796986f37be73721ee405aaf"
+                "35972e20f29299e2f2fe3a53cfc6e929aebf5cf6a78fdf95bfa7060470d09d13",
+                "4f7477470fe81f90e6c4be618d7c078fa9ae2c36bcf2d6b6d94876468c2bd0f5",
+                "285639c0b7770615d96b146b7171a85cae7edf63082099ef47fe1ea458ebf0f1",
+                "c821f9660ae8dc4b32ea1cdc43c844f182c9c7a8e5d4a94f9b2ea0fc98ab9cc0",
+                "2b06ab920928cd0ceee67933f6b714e245584ac67b0065453d1fb78077e64b4a"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -232,7 +282,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -256,11 +306,11 @@
                 }
             ],
             "responseHashes": [
-                "285d787520405bf7166a2da046a2798001e3d87c43b78ddec84f95fbca884edc",
-                "35dda953b4a7b7e2544e8120faf53ca09fa9f787b99ff3aca772bdd2b293b2c6",
-                "da8aa931da80d1182b621e5e893b23ca0eb3c5d3c0c2c73bc550073ffc67f48b",
-                "21187454cb131050c10e9d5e3e0f0e8db4958a09cf810a1e1b64b5f743e85985",
-                "8db56aea8b3330952dd4475e09ecea286ba5ceed8dcf6b35e23835c7384516c6"
+                "bda55f3c390383a79e9fc80da800ce5b7cebc2e9d010edefce06ee091075e48c",
+                "cea3f97d68f4dea8b137f93b75648aca347e2c09ca5413dcb8283b9184fe11bf",
+                "9026bcc98b0c3502aed57e478aa29297e9d48a5fd183c103e41ce099aa3b8c86",
+                "d48514f771f70e2523a5bc4b02a18ac50496a3e9f124bb6667749e543f2fb3d4",
+                "14f5cae0a2623ef5a1163278be5dbea0db137c8c283f5ea7911b625c3d0791e0"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -283,7 +333,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -307,11 +357,11 @@
                 }
             ],
             "responseHashes": [
-                "6b7edfc5afa9f6b345ef2e356d237c5cf19d4e388e372188d62e6847ddcc841f",
-                "a202c96dec33755e3a7276c55a4478ca5815b27053a1431c11289c569d41e6c5",
-                "5fe997abade8bb00a8094398219b93e86fbc2f95a085ad7be7729d54cd3d2edf",
-                "016bc73a03d3c49794912c9736eb8025d8ecef3309929ffcc3cd96b0ef9efda7",
-                "a1033f61252f9d3b2e67472732b965b6b02c84b01d6d1b1cf89dbfd9899e9553"
+                "89a4294131da657ceb84d746f6e397c767023dc67ec62926c55aedf6670a1b0a",
+                "ee0a4e4a3ab27da5cff94f8aad65136caf05c3a3d0fb35ce517306d43e0e6add",
+                "c75c52220c4785521ec1c2f37bc81423a8a6cb4bb4d6d56cf241a75bf8aeeeab",
+                "1728c1161786d483a819d417f97b654c75f781668072836ec1b96353371af394",
+                "5eb11a6986f294c5f31c701ebb26a9a061a614c3a4b5206e62ca3c9bf13df7db"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -334,7 +384,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -358,11 +408,11 @@
                 }
             ],
             "responseHashes": [
-                "51ba06d7c4e7a1968ea4f387fe0898911e232bb205f1252961bbeb7c5d72ae34",
-                "b89b6ceb4ae2668235a0034ff3db96ae21d6373da4f402320262fe9feb12aa89",
-                "fb23a03f42ded0f582083460dd2cc38c6d36db2a8189c008fd6b39dd005fc9da",
-                "1b6eb5225fef8a6888820820963d2ca7b97d83dd6a237b83edccd1d668b31cda",
-                "da1d0f65e30cfa38360a1c9c64dba0d51c5b04d7673f3e31e4e1b88a68efe218"
+                "0a7393b5f9ab8eb3689bcadda45518844b0a638873fc6063fe78c8329216329e",
+                "00ab5b77be90fe7613dceae5b6b0419ce8be467e1dc27236207619052467a686",
+                "94580b26b6e7ecf5c99d49043d99effbb316af6a5d9aa65fa2afa03055e09d8c",
+                "6f3b95a9e56c11962831b686f495c6196ffa0bf9fa3a73845aaf90cd94275b9d",
+                "ce57027692ebd3ead043ac781b55277ceccf0e36fcbd82f1279b4cb438df7347"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -385,7 +435,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -409,11 +459,11 @@
                 }
             ],
             "responseHashes": [
-                "8f530af7f97f7957dd33a796ad33794acb693338c6dbd97986b107f8830d32d6",
-                "ee68d03b9de436f3dbf5e879f116f71b57a6d793bdfd6a29bc565484ed15e54d",
-                "c56573659e7bd598128821df7bfceb1a27545e8a484aa0db28d63764f8432c19",
-                "e4a2cda6c5e9650daaa426e554547b8df991d7f0b95199e03252a38401b5f07f",
-                "b963ad94025a937aac4e2a9e310219dce765414fbb7e57c0a5e5cf264c7c91e2"
+                "039d4691432f248a5e4d9a84de4aee39c19ee2f8139cc80834c070b1cacc36ab",
+                "a399095a627037056c745dcd30420c186b6d88bbfdf36d44bacfd4d5a7e21482",
+                "5c59ceda39fa7800b1df6143c7c375fc8d8a658625bed955a0fb44c486140c4c",
+                "cdeb15907c631b78142b9db0ceb73038c295287fd6c19c03d3403f28af2b25a2",
+                "373c110107d9cbdc15fb8c6d1478bfffd6be4fae7cb7e05bc6c6df6eb5d68858"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -436,7 +486,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -460,11 +510,11 @@
                 }
             ],
             "responseHashes": [
-                "9dab432701b6b7827f24c4aa8c5b69df371c056452715deaa19f55e292ff43a3",
-                "2e0626d06575883308640e893e07a04b53e035a00e049feb6db11ca1a5fcb6ae",
-                "6d6193c998f8ba51c393ef57cbc5791a5c72f4154da36b3b11b566c4cadbdff7",
-                "1a3824c8126759abc7249fbbe2bd45c6d485ef9737e675f55e45c4ab26527713",
-                "3d34a51285077da517c5942d5e4a3cf64f958ba42ba3ec9f8f3c2093a16c1e12"
+                "01f1434d70a808c7ffa50a3a500401403ce8945de7f9e5586f40790482fd5ebc",
+                "f99b2d3ee938b6f6d9a0b98690ffcf9c368e877209af65400f6548b8f42701d4",
+                "8a9333cad05dc157fbe716b22625f0e0cbe84090c9494265d154d3d0e0ed760c",
+                "a307b16acbef65ab63c631721f49d5ac40699a89ad466feb6312ee6b1d47cfbb",
+                "49a9e375ed255c939f941baa1e2c8625bed523b7c3de1e7ea018bd7b8132a040"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -487,7 +537,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -511,11 +561,11 @@
                 }
             ],
             "responseHashes": [
-                "02aca81ffa673b55f34442e9dacca03570ae2f4c5aee77619d735a9fc85ff489",
-                "9a043cffd98314b10dfc5ed261f3216941f7b0da27316ca233d28cbe126f78a9",
-                "e6004c8408bdad0186dfef5c3d4ed1208d02601d993553412df61cec3a9f2a6d",
-                "5d51f2fcbf99d8fc515a5de1b4460e15f23f1867992eacdcde70171d931dddf4",
-                "e5f96eeb93d4dec1173ca56f882ee3a79fbc4cef7e9f893643a08a54adbe5aa8"
+                "b39356f0aba8ffea7f46a206ca8efc78a5aae1226e0ff0523cf7f39696207bee",
+                "c646cd469a3a2a9db7354f8e79afb18917fa561794e0146c62311e0dfeff6e4d",
+                "6d1fd0aca405e688132499cbdf9cb8bda09f1a4ae605d9d17fce8383ba84959c",
+                "6fb18a0f50436eecec80efad4f1e2e6f24c546a40d9df7c55ccb26e6ce053a59",
+                "04dd08b157d8ff39e6de993bf2b26dc9afbef94e24e00143b7469f98ce9e48f7"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -538,7 +588,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [
                 {
                     "original": "pages.ebay.com.au",
@@ -562,11 +612,11 @@
                 }
             ],
             "responseHashes": [
-                "475ba527c10e9922e2fcbcead21a6e741047963fa1c5675b80567448e75e0a96",
-                "9487158bd808468d257bb2f1fb12ee5e60c621929c04c0d115ec6b3de0d1db49",
-                "e0999652543c4bee89f0a88d00abb43f6e172238be54023de0c1d47275b59360",
-                "826e70468cd3454a94498ba07438f606d2519f6337b0588696a508a0d59947ef",
-                "a8b010bae0afa8c6b6384ace57218729dee099a1b732f7e9080f4719608bcefc"
+                "00b6f842e72e0c22e1690307bbdcfb7e0df7a78d9264e148034dda4963c63024",
+                "86e7dd449f0dbd1486e36ce6bb74dfa8ebc1a5071b1928c20d6bf51803306100",
+                "852c846458b7c12016de2e4f0a66a2b59a8275bec2ae8027355a4105190a63cd",
+                "0b5754064ec2f3226c48c470af39eede9c29c5ceb4f13cdd6c7c782ebb4c14fd",
+                "82f374e9ebde6b8d0fbf7af0f7157d8adaa6dbdf07259641074835dde5bde6ba"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -609,10 +659,10 @@
                 }
             ],
             "responseHashes": [
-                "ad83d78cba2b8662d5f0a05d8995746a84d5a6acc91330576fded03eb48d1b3a",
-                "0e2db317c79f328528077b78e809554d7b2bbf9650c328722baa7378180702cb",
-                "8fe5ce5e70b92b2095433398361ccc4f62c86d5e8baaf30bfafe2273242614a4",
-                "00e8cddf0c3259693ad04b63093469ab444d2db62ec86fa8bdc66e7442e00169"
+                "d54e17b774d9a1c72922f19502c3b5b47d92e6efb7ec89ce5646a13e55074025",
+                "d6a32489464075700692e831203739c95ffc2212b845bfd690581839a2503a4d",
+                "0225196582b2bcdd1c3243b37aabce6a8ff146eefd0097c7ccc088ec689a91ed",
+                "ae8e82919307e3da4ffa0888a45be08f6298883570fade3256638c1af47aaf29"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -644,6 +694,42 @@
             "responseHashes": [
                 "19f1fc9519fc29ca1b80f47c07408015ba896db57a1aa2a63fe1aa4269412142"
             ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay.com.au",
+                "pages.ebay.com.au",
+                "www.ebay.com.au",
+                "www.ebay.ca",
+                "www.ebay.com"
+            ]
+        },
+        {
+            "rule": "ebay\\.com\\.edgekey\\.net\\/signin\\/id",
+            "cookies": 0.000502,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slot9430"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [
+                {
+                    "original": "signin.ebay.com.au",
+                    "resolved": "slot9430.ebay.com.edgekey.net"
+                },
+                {
+                    "original": "signin.ebay.ca",
+                    "resolved": "slot9430.ebay.com.edgekey.net"
+                },
+                {
+                    "original": "signin.ebay.com",
+                    "resolved": "slot9430.ebay.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -710,52 +796,25 @@
                 "pages.ebay.com.au",
                 "www.ebay.com.au"
             ]
-        },
-        {
-            "rule": "ebay\\.com\\.edgekey\\.net\\/identity\\/device\\/t_n6\\.html",
-            "cookies": 0.000201,
-            "fingerprinting": 2,
-            "subdomains": [
-                "slot11847"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "pages.ebay.com",
-                    "resolved": "slot11847.ebay.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "6e41a0df39e151a446afea32af61d5bf0d46d0c78c4f96f64986a0c055a06761"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ebay.com.au",
-                "www.ebay.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000703,
+    "cookies": 0.000803,
     "topInitiators": [
         {
             "domain": "ebaystatic.com",
-            "prevalence": 0.7888888888888889
+            "prevalence": 0.7978723404255319
         },
         {
             "domain": "first party",
-            "prevalence": 0.2111111111111111
+            "prevalence": 0.20212765957446807
         }
     ],
     "types": {
+        "Document": 71,
         "Script": 7,
-        "Image": 11,
-        "Document": 66
+        "Image": 10
     },
     "nameservers": []
 }

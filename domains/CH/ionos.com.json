@@ -10,7 +10,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "shop-api"
+        "shop-api",
+        "frontend-services"
     ],
     "cnames": [
         {
@@ -22,7 +23,7 @@
             "resolved": "shop-api.ionos.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "ionos\\.com\\/v1\\/api\\/shop\\/session",
@@ -116,7 +117,36 @@
             ]
         },
         {
-            "rule": "ionos\\.com\\/api\\/shop\\/v1\\/tracking\\/saleschannel",
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/tracking\\/saleschannel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.fr",
+                    "resolved": "shop-api.ionos.com"
+                },
+                {
+                    "original": "shop-api.ionos.de",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/tracking\\/saleschannel",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
@@ -147,56 +177,20 @@
             ]
         },
         {
-            "rule": "ionos\\.com\\/api\\/shop\\/v1\\/tracking\\/saleschannel",
+            "rule": "ionos\\.com\\/t\\/tag\\/IONOS\\/shop\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "shop-api"
+                "frontend-services"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "shop-api.ionos.fr",
-                    "resolved": "shop-api.ionos.com"
-                },
-                {
-                    "original": "shop-api.ionos.de",
-                    "resolved": "shop-api.ionos.com"
-                }
+            "cnames": [],
+            "responseHashes": [
+                "66301f6d611a0d09905ddf473cad73063831520edadef1d177fb7c81369bd7c9"
             ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ionos.fr",
-                "www.ionos.de"
-            ]
-        },
-        {
-            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/users\\/variant",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "shop-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "shop-api.ionos.fr",
-                    "resolved": "shop-api.ionos.com"
-                },
-                {
-                    "original": "shop-api.ionos.de",
-                    "resolved": "shop-api.ionos.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -236,15 +230,15 @@
             ]
         },
         {
-            "rule": "ionos\\.com\\/v1\\/ipLocator\\/isoCountryCode",
-            "cookies": 0.000301,
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/ipLocator\\/isoCountryCode",
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "shop-api"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "shop-api.ionos.fr",
@@ -268,7 +262,36 @@
             ]
         },
         {
-            "rule": "ionos\\.com\\/v1\\/ipLocator\\/isoCountryCode",
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/users\\/variant",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.fr",
+                    "resolved": "shop-api.ionos.com"
+                },
+                {
+                    "original": "shop-api.ionos.de",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/ipLocator\\/isoCountryCode",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -276,7 +299,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "shop-api.ionos.fr",
@@ -356,20 +379,97 @@
                 "ionos.fr",
                 "www.ionos.de"
             ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/sentry\\/bundle\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "446e661df3f91198c9bf3aa78539687f88da3e4385bd817d4a0436b694c72003"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/t\\/js\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9c71c2378c0c1efec8a91808424dc2caca6ccbddc2fcc367492667a0507a69fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/ias\\/js\\/ias\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bb432e7ec5f4ea3e8de1afdb88749e0f4ce50e32c8d3d8b2bf37158e15232d05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
         "Fetch": 11,
         "Preflight": 11,
+        "Script": 8,
         "XHR": 2
     },
     "nameservers": [
-        "ns-1and1.ui-dns.com",
-        "ns-1and1.ui-dns.biz",
         "ns-1and1.ui-dns.de",
-        "ns-1and1.ui-dns.org"
+        "ns-1and1.ui-dns.org",
+        "ns-1and1.ui-dns.biz",
+        "ns-1and1.ui-dns.com"
     ]
 }
