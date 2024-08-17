@@ -9,10 +9,14 @@
     "subdomains": [
         "assets-bwbx-io.shared",
         "eventrecorder.arcus.cm",
-        "location.arcus.cm",
-        "coordinator.arcus.cm"
+        "coordinator.arcus.cm",
+        "adservice.arcus.cm"
     ],
     "cnames": [
+        {
+            "original": "adservice.cm.bloomberg.com",
+            "resolved": "adservice.arcus.cm.bloomberga.com"
+        },
         {
             "original": "assets.bwbx.io",
             "resolved": "assets-bwbx-io.shared.bloomberga.com"
@@ -24,10 +28,6 @@
         {
             "original": "eventrecorder.cm.bloomberg.com",
             "resolved": "eventrecorder.arcus.cm.bloomberga.com"
-        },
-        {
-            "original": "location.cm.bloomberg.com",
-            "resolved": "location.arcus.cm.bloomberga.com"
         }
     ],
     "fingerprinting": 2,
@@ -116,7 +116,7 @@
         {
             "rule": "bloomberga\\.com\\/s3\\/sparkle\\/v6\\/sparkle\\.mjs",
             "cookies": 0.0000136,
-            "fingerprinting": 2,
+            "fingerprinting": 1,
             "subdomains": [
                 "assets-bwbx-io.shared"
             ],
@@ -130,7 +130,7 @@
                 }
             ],
             "responseHashes": [
-                "b309f9a5b508fc28f5864e68a34738d5ea40575667fbd67aa94e161bcacd93d9"
+                "83f1131d6dc98c265322f57701e5bdf83888d41a860070b7f621276ccf7c7e86"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -164,7 +164,7 @@
                 "bbgconsentstring": {
                     "ttl": 31536005,
                     "length": 12,
-                    "prevalence": 0.000013635774818814642,
+                    "prevalence": 0.000013632242981098896,
                     "uniqueness": 0.5
                 }
             },
@@ -194,6 +194,60 @@
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
             ],
             "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/s3\\/abba\\/feed\\/frontend\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "d06345bfccd2366185dbb40b01304bd2903f402a1b7bec3b159c8494945dbc03"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/coordination",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "coordinator.arcus.cm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "coordinator.cm.bloomberg.com",
+                    "resolved": "coordinator.arcus.cm.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "180d9c3276bfa3c27e2d40377be4f14cf58e0dea8531b0d69604a4047c158892"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -337,77 +391,23 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/query",
+            "rule": "bloomberga\\.com\\/ad-targeting",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "location.arcus.cm"
+                "adservice.arcus.cm"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "location.cm.bloomberg.com",
-                    "resolved": "location.arcus.cm.bloomberga.com"
+                    "original": "adservice.cm.bloomberg.com",
+                    "resolved": "adservice.arcus.cm.bloomberga.com"
                 }
             ],
             "responseHashes": [
-                "3bf1a7882fa0080d17faa288ddace8034de61da8c30247423bd9bef74640ce2e"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
-            "rule": "bloomberga\\.com\\/s3\\/abba\\/feed\\/frontend\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets-bwbx-io.shared"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "assets.bwbx.io",
-                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "80463289e6e375482e157b1eb777564eac2f4c09e1861a1a7b62a1a26a0222df"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
-            "rule": "bloomberga\\.com\\/coordination",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "coordinator.arcus.cm"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "coordinator.cm.bloomberg.com",
-                    "resolved": "coordinator.arcus.cm.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "b2effc2dd64ba4c287673b7f9106b4eb8b73aa00d7b133f04159ec6ba3428718"
+                "13f63915fd15f6136b238109a7b6991d2727998be46613aa42246b61b1dc1340"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -441,91 +441,10 @@
                 "__sppvid": {
                     "ttl": null,
                     "length": 36,
-                    "prevalence": 0.000013635774818814642,
+                    "prevalence": 0.000013632242981098896,
                     "uniqueness": 1
                 }
             },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
-            "rule": "bloomberga\\.com\\/sanger",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets-bwbx-io.shared"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "assets.bwbx.io",
-                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "f516b2f65c5daff61cfeefc8f995673464c1502ea0841de106e9d91e3edfdbde"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
-            "rule": "bloomberga\\.com\\/s3\\/fontservice\\/fonts\\/BWHaasGrotesk-95Black-Web-3629d1569b\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets-bwbx-io.shared"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "assets.bwbx.io",
-                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "ec2047754d9ce0c59edf3e55435d075cf77d349cf300ebdc3d87f62d9ebdbcba"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
-            "rule": "bloomberga\\.com\\/s3\\/mediaservices\\/superelastic\\/data\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets-bwbx-io.shared"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "assets.bwbx.io",
-                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "452798f8b275b229c951910d4e874c3ae8103005f3e1ce2aa3e218fec36d4681"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bloomberg.com",
@@ -539,27 +458,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6722689075630253
+            "prevalence": 0.8045977011494253
         },
         {
             "domain": "bwbx.io",
-            "prevalence": 0.3235294117647059
-        },
-        {
-            "domain": "doubleclick.net",
-            "prevalence": 0.004201680672268907
+            "prevalence": 0.19540229885057472
         }
     ],
     "types": {
         "Script": 12,
         "Ping": 2,
-        "Font": 12,
-        "Fetch": 10
+        "Fetch": 6,
+        "Font": 10
     },
     "nameservers": [
-        "dns1.p07.nsone.net",
-        "dns3.p07.nsone.net",
-        "dns2.p07.nsone.net",
-        "dns4.p07.nsone.net"
+        "dns1.p01.nsone.net",
+        "dns2.p01.nsone.net",
+        "dns3.p01.nsone.net",
+        "dns4.p01.nsone.net"
     ]
 }

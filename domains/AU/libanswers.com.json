@@ -4,42 +4,95 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
+        "region-au",
+        "unswlibrary",
         "usyd",
-        "unswlibrary"
+        "chat-au"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "answers.library.westernsydney.edu.au",
+            "resolved": "region-au.libanswers.com"
+        },
+        {
+            "original": "faq.lib.uts.edu.au",
+            "resolved": "region-au.libanswers.com"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "libanswers\\.com\\/load_chat\\.php",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "usyd",
-                "unswlibrary"
+                "region-au",
+                "unswlibrary",
+                "usyd"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [
+                {
+                    "original": "answers.library.westernsydney.edu.au",
+                    "resolved": "region-au.libanswers.com"
+                },
+                {
+                    "original": "faq.lib.uts.edu.au",
+                    "resolved": "region-au.libanswers.com"
+                }
+            ],
             "responseHashes": [
-                "4152966ad01a9e55a0b9439ed145636fce842e555e57c8bc8b0040af82036ba4"
+                "8a0a1f17887ac286c897963dee8bbee3032e257d851a730b85770c05f7ed3b66",
+                "8eb299c1daa387476c5981f5a2ad50fdfdc107d102064618505d5773d928fbe6",
+                "4152966ad01a9e55a0b9439ed145636fce842e555e57c8bc8b0040af82036ba4",
+                "eb77f869666929c4d14e8e14fffdafd674a3a0460721007554347f5e30dcd30e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sydney.edu.au",
+                "westernsydney.edu.au",
+                "libguides.jcu.edu.au",
+                "www.lib.uts.edu.au",
+                "www.library.unsw.edu.au",
+                "www.library.sydney.edu.au"
+            ]
+        },
+        {
+            "rule": "libanswers\\.com\\/widget_status",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat-au"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "3a9a829a2d6d3cb512e940e516485c8f750496193b0c487a5101a2f57d953e68",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westernsydney.edu.au",
+                "www.lib.uts.edu.au",
                 "www.library.unsw.edu.au"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000301,
     "topInitiators": [
         {
             "domain": "first party",
@@ -47,12 +100,13 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-140.awsdns-17.com",
         "ns-591.awsdns-09.net",
         "ns-1830.awsdns-36.co.uk",
-        "ns-1474.awsdns-56.org"
+        "ns-1474.awsdns-56.org",
+        "ns-140.awsdns-17.com"
     ]
 }

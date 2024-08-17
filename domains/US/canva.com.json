@@ -12,10 +12,11 @@
     "subdomains": [
         "sdk",
         "api",
-        "www"
+        "www",
+        "telemetry"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "canva\\.com\\/designbutton\\/v2\\/api\\.js",
@@ -108,16 +109,42 @@
         {
             "rule": "canva\\.com\\/design\\/DAFj22h136I\\/watch",
             "cookies": 0.0000136,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
+            ],
+            "apis": {
+                "window.matchMedia(\"prefers-color-scheme\")": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "bcc647c33eda1a6ca6aa4ab3ad4acb7be9e2eda9e82dda17033275afac8931ea"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "silhouetteschoolblog.com",
+                "www.silhouetteschoolblog.com"
+            ]
+        },
+        {
+            "rule": "canva\\.com\\/v1\\/traces",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "telemetry"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
+            "responseHashes": [
+                "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -132,7 +159,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9166666666666666
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
@@ -140,7 +171,8 @@
         "Stylesheet": 2,
         "Preflight": 2,
         "XHR": 2,
-        "Document": 2
+        "Document": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns1.canva.com",

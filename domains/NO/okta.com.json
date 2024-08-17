@@ -7,67 +7,112 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000602,
+    "sites": 6,
     "subdomains": [
-        "sas.customdomains",
+        "servicenowsignon.customdomains",
+        "logon.customdomains",
         "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
-            "original": "auth.sas.com",
-            "resolved": "sas.customdomains.okta.com"
-        },
-        {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
+            "original": "logon.bcg.com",
+            "resolved": "logon.customdomains.okta.com"
+        },
+        {
+            "original": "ssosignon.servicenow.com",
+            "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sas.customdomains"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [
-                {
-                    "original": "auth.sas.com",
-                    "resolved": "sas.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "7a104cec18934d4783288ecb7284e3b903e09996839e00eed1c263d38effe67e",
-                "dce7d32bbcc0382eda98fdd62ec2ec5b901a2dab7f12573e32e43bf2f1ce85ed"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sas.com",
-                "support.sas.com",
-                "www.sas.com"
-            ]
-        },
-        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "churchofjesuschrist.customdomains"
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "a7eb6b8a1fb2456c5f1a159234308d00f01bafb9331e76cc7a20a5ffcd33d727"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "logon.customdomains"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com",
+                "www.bcg.com",
+                "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logon.customdomains",
+                "churchofjesuschrist.customdomains",
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                },
+                {
                     "original": "id.churchofjesuschrist.org",
                     "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -75,40 +120,42 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "churchofjesuschrist.org",
-                "www.churchofjesuschrist.org"
+                "bcg.com",
+                "www.churchofjesuschrist.org",
+                "www.servicenow.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000502,
+    "cookies": 0.000602,
     "topInitiators": [
         {
-            "domain": "oktacdn.com",
-            "prevalence": 0.6666666666666666
+            "domain": "service-now.com",
+            "prevalence": 0.5
         },
         {
-            "domain": "service-now.com",
-            "prevalence": 0.3333333333333333
+            "domain": "walkme.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "oktacdn.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "XHR": 3,
-        "Fetch": 2
+        "XHR": 2,
+        "Preflight": 4,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-cloud-a2.googledomains.com",
         "ns-1459.awsdns-54.org",
-        "edns5.ultradns.biz",
-        "ns-285.awsdns-35.com",
         "ns-1563.awsdns-03.co.uk",
-        "ns-cloud-a1.googledomains.com",
-        "ns-cloud-a3.googledomains.com",
-        "edns5.ultradns.net",
-        "edns5.ultradns.com",
+        "ns-285.awsdns-35.com",
         "ns-684.awsdns-21.net",
-        "edns5.ultradns.org",
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a3.googledomains.com",
         "ns-cloud-a4.googledomains.com"
     ]
 }

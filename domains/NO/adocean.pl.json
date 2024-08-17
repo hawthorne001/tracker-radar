@@ -9,16 +9,22 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "edipresse",
         "tvp",
-        "tvn2"
+        "tvn2",
+        "doz"
     ],
     "cnames": [
         {
             "original": "ads.tvp.pl",
             "resolved": "tvp.adocean.pl"
+        },
+        {
+            "original": "tools.polki.pl",
+            "resolved": "edipresse.adocean.pl"
         }
     ],
     "fingerprinting": 2,
@@ -28,15 +34,28 @@
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
+                "edipresse",
                 "tvp",
-                "tvn2"
+                "tvn2",
+                "doz"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
+                {
+                    "original": "tools.polki.pl",
+                    "resolved": "edipresse.adocean.pl"
+                },
                 {
                     "original": "ads.tvp.pl",
                     "resolved": "tvp.adocean.pl"
@@ -49,8 +68,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tvp.pl",
-                "tvn24.pl"
+                "polki.pl",
+                "sport.tvp.pl",
+                "tvn24.pl",
+                "www.doz.pl"
             ]
         }
     ],
@@ -60,15 +81,19 @@
     "topInitiators": [
         {
             "domain": "cdntvn.pl",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
-        "ns1.gemius.pl",
         "ns2.gemius.pl",
-        "ns3.gemius.pl"
+        "ns3.gemius.pl",
+        "ns1.gemius.pl"
     ]
 }

@@ -4,14 +4,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000477,
-    "sites": 7,
+    "prevalence": 0.0000545,
+    "sites": 8,
     "subdomains": [
         "tools",
         "cdn",
         "static",
         "api.dmp",
-        "pa"
+        "pa",
+        "api.embed"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,8 +27,8 @@
             ],
             "apis": {
                 "window.localStorage": 6,
-                "Navigator.prototype.cookieEnabled": 5,
-                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.cookieEnabled": 6,
+                "Navigator.prototype.userAgent": 6,
                 "Date.prototype.getTimezoneOffset": 6,
                 "Navigator.prototype.doNotTrack": 6,
                 "Screen.prototype.width": 6,
@@ -58,25 +59,35 @@
         },
         {
             "rule": "pinpoll\\.com\\/static\\/start\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.00000682,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "apis": {
+                "Document.cookie setter": 1
+            },
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [
                 "38dfcfd29e5bc35eabebb6db93870261846cb9fa1bcd1631c1a7aef3114de24b"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.000006816121490549448,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
@@ -90,8 +101,8 @@
                 "api.dmp"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [
                 "20bc1392a17b383b46fffc33c8e796755452883bfcfc2d33c90342ea70227639"
@@ -103,6 +114,7 @@
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
@@ -116,8 +128,8 @@
                 "api.dmp"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -127,6 +139,7 @@
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
@@ -134,17 +147,14 @@
         },
         {
             "rule": "pinpoll\\.com\\/static\\/complete\\.html",
-            "cookies": 0.00000682,
-            "fingerprinting": 1,
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "static"
             ],
-            "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1
-            },
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [
                 "6415cb12c174f6986037af95933f36db85e7efdee5f4fea96f9804cb89d3d190"
@@ -156,6 +166,7 @@
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
@@ -169,8 +180,8 @@
                 "pa"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [
                 "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334"
@@ -182,6 +193,7 @@
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
@@ -195,8 +207,8 @@
                 "pa"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -206,9 +218,32 @@
                 "orf.at",
                 "oe3.orf.at",
                 "www.alpin.de",
+                "www.horizont.net",
                 "www.laola1.at",
                 "www.noen.at",
                 "www.nw.de"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/aipolls\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.embed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "ea34290c9474ab4aed7ddf65803a9b9dda15fdc9b7ea64e3b6ba7c46abcec673"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "horizont.net",
+                "www.noen.at"
             ]
         },
         {
@@ -242,26 +277,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5454545454545454
-        },
-        {
-            "domain": "kameleoonglobalscript.js",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.8125
         },
         {
             "domain": "stol.it",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.125
         },
         {
             "domain": "mocafirst.at",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.0625
         }
     ],
     "types": {
         "Script": 8,
-        "Document": 12,
-        "Fetch": 12,
-        "Preflight": 12
+        "Document": 14,
+        "Fetch": 16,
+        "Preflight": 14
     },
     "nameservers": [
         "ns1-04.azure-dns.com",

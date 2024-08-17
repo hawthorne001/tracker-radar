@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000682,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
         "partindexerinfomedia"
     ],
@@ -13,27 +13,34 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "rule": "autonative\\.com\\/js\\/frontend\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "partindexerinfomedia"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "51430f1acd77bc638ff786d572b77434f7b4384f5ce575a1457e0af3c0844ac2"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ford.co.uk",
-                "shop.ford.co.uk"
+                "shop.ford.de"
             ]
         },
         {
-            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "rule": "autonative\\.com\\/css\\/frontend\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -44,14 +51,59 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "fbe2cb9a01ff26d98e797d13c588a58fa65db3e87f439a5c49a6b67fde87451d"
+                "90512d57076d43a8e4e8f4fd972c727c9b522f1245bbdc10c9c677267aa15aa6"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.co.uk",
+                "shop.ford.de"
+            ]
+        },
+        {
+            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partindexerinfomedia"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "1029779b639b556c20fdff67aaafe81117418385b32d2ed199674bf5b724d48e",
+                "530a4662870c17a2e5df43770309a3427186eb2378e0c3dc9794c9079447e1f8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ford.co.uk",
-                "shop.ford.co.uk"
+                "shop.ford.co.uk",
+                "shop.ford.de"
+            ]
+        },
+        {
+            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partindexerinfomedia"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.co.uk",
+                "shop.ford.co.uk",
+                "shop.ford.de"
             ]
         }
     ],
@@ -65,8 +117,10 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 2,
+        "Stylesheet": 2,
+        "XHR": 3,
+        "Preflight": 3
     },
     "nameservers": [
         "alex.ns.cloudflare.com",

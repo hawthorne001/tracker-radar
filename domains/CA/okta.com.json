@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000804,
+    "prevalence": 0.000805,
     "sites": 8,
     "subdomains": [
-        "servicenowsignon.customdomains",
+        "login",
         "vl.customdomains",
+        "astminternational.customdomains",
         "benjaminmoore.customdomains",
         "onekinship",
         "wm.customdomains",
@@ -21,6 +22,10 @@
         {
             "original": "auth.videotron.com",
             "resolved": "vl.customdomains.okta.com"
+        },
+        {
+            "original": "iam.astm.org",
+            "resolved": "astminternational.customdomains.okta.com"
         },
         {
             "original": "id.churchofjesuschrist.org",
@@ -33,34 +38,74 @@
         {
             "original": "ssologin.wm.com",
             "resolved": "wm.customdomains.okta.com"
-        },
-        {
-            "original": "ssosignon.servicenow.com",
-            "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000301,
+            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains",
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9647bed331c4194d81a8aa79817697b94cac79e89600e044897ad0330e489b9e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "videotron.com",
+                "helix.videotron.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/lib\\/discoveryIframe-f98a9db6985a9d6db326\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1d3c326cddf350f019af567bc3729d180231f0b90c3fc522dcced3741cf692b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "videotron.com",
+                "helix.videotron.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
                 "vl.customdomains",
+                "astminternational.customdomains",
                 "benjaminmoore.customdomains"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
-                },
                 {
                     "original": "auth.videotron.com",
                     "resolved": "vl.customdomains.okta.com"
+                },
+                {
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
                 },
                 {
                     "original": "okta.benjaminmoore.com",
@@ -68,34 +113,34 @@
                 }
             ],
             "responseHashes": [
-                "206b06806395877e8cd81146c7d84c46e65566ffda89e7eca5c94cd4bdfbd365",
-                "b7da8493a31ba8d920019a663963567fc23b9a2ce54a880993af3f43c1be9a62"
+                "8d8893263207c04cf3ada728bbf437d43a7812f2be27422ecd4cafceb8d83ba9",
+                "ea10bc0e1f6bcae58918e3323f685246ed57ccd31217b41e1601c1e83d28a32a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
                 "videotron.com",
+                "www.astm.org",
                 "www.benjaminmoore.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000402,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains",
                 "onekinship",
+                "astminternational.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
                 },
                 {
                     "original": "ssologin.wm.com",
@@ -107,33 +152,27 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
-                "www.adoptapet.com",
-                "www.servicenow.com",
+                "adoptapet.com",
+                "www.astm.org",
                 "www.wm.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000402,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "churchofjesuschrist.customdomains",
-                "servicenowsignon.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
                     "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
                     "original": "ssologin.wm.com",
@@ -141,7 +180,7 @@
                 }
             ],
             "responseHashes": [
-                "aa335ade0ad3f04ae01c3f8d23cdc79d4bb7919064bbb2efc81c22b15a0bb1db"
+                "a5d32166f8ef70d2749954f78aee808f43297edcfdd415e0ab30294da84b86a4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -149,41 +188,38 @@
             "exampleSites": [
                 "adoptapet.com",
                 "www.churchofjesuschrist.org",
-                "www.servicenow.com",
                 "www.wm.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000804,
+    "cookies": 0.000705,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "domain": "oktacdn.com",
+            "prevalence": 0.5
         },
         {
-            "domain": "service-now.com",
-            "prevalence": 0.3333333333333333
+            "domain": "first party",
+            "prevalence": 0.5
         }
     ],
     "types": {
+        "Document": 2,
+        "Script": 2,
         "XHR": 3,
-        "Preflight": 4,
-        "Fetch": 4
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-cloud-a3.googledomains.com",
-        "ns-cloud-a2.googledomains.com",
         "ns-1459.awsdns-54.org",
-        "ns-285.awsdns-35.com",
-        "ns-cloud-a4.googledomains.com",
-        "ns-cloud-a1.googledomains.com",
-        "ns-684.awsdns-21.net",
-        "edns5.ultradns.net",
         "ns-1563.awsdns-03.co.uk",
-        "edns5.ultradns.org",
-        "edns5.ultradns.biz",
-        "edns5.ultradns.com"
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net",
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a4.googledomains.com"
     ]
 }

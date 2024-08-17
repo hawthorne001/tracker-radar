@@ -7,12 +7,22 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "www.mcm-prod.hsbc.com.au.gslb-hk1"
+        "www.mcm-prod.hsbc.com.au.gslb-hk1",
+        "www.isstprod.hsbc.com.hk.gslb-hk1",
+        "www.issthk.hsbc.com.hk.gslb-hk1"
     ],
     "cnames": [
+        {
+            "original": "www.issthk.hsbc.com.hk",
+            "resolved": "www.issthk.hsbc.com.hk.gslb-hk1.hsbc.com"
+        },
+        {
+            "original": "www.isstprod.hsbc.com.hk",
+            "resolved": "www.isstprod.hsbc.com.hk.gslb-hk1.hsbc.com"
+        },
         {
             "original": "www.mcm-prod.hsbc.com.au",
             "resolved": "www.mcm-prod.hsbc.com.au.gslb-hk1.hsbc.com"
@@ -21,7 +31,39 @@
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "hsbc\\.com\\/0451\\/1053241727\\/XBW09WEA78JG\\/jsEvent\\.json",
+            "rule": "hsbc\\.com\\/JavascriptInsert\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 3,
+            "subdomains": [
+                "www.mcm-prod.hsbc.com.au.gslb-hk1",
+                "www.isstprod.hsbc.com.hk.gslb-hk1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "www.mcm-prod.hsbc.com.au",
+                    "resolved": "www.mcm-prod.hsbc.com.au.gslb-hk1.hsbc.com"
+                },
+                {
+                    "original": "www.isstprod.hsbc.com.hk",
+                    "resolved": "www.isstprod.hsbc.com.hk.gslb-hk1.hsbc.com"
+                }
+            ],
+            "responseHashes": [
+                "b38119ecf1653e7b2a7c8c04f1621fe94f7540f493c88945ff757f972e18f6bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hsbc.com.au",
+                "www.hsbc.com.hk"
+            ]
+        },
+        {
+            "rule": "hsbc\\.com\\/1335\\/1058311961\\/XBW09WEA78JG\\/jsEvent\\.json",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
@@ -37,7 +79,7 @@
                 }
             ],
             "responseHashes": [
-                "285f72a0ae8be997f80923f0c008f3eb1a9d7b4b10cabeaad16eda88df296a18"
+                "25b16050056b6077c779dec55e9a14b4d4d42b8112dcf6e2efb0696f150ca13e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -46,11 +88,65 @@
                 "hsbc.com.au",
                 "www.hsbc.com.au"
             ]
+        },
+        {
+            "rule": "hsbc\\.com\\/4423\\/9007199763373314\\/js\\/events\\/v10\\/jsEvent\\.json",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.issthk.hsbc.com.hk.gslb-hk1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "www.issthk.hsbc.com.hk",
+                    "resolved": "www.issthk.hsbc.com.hk.gslb-hk1.hsbc.com"
+                }
+            ],
+            "responseHashes": [
+                "d9c88f79a073d20b95c45373e616360392969c85df8915c8c00431d9b344dd8b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hsbc.com.hk",
+                "www.hsbc.com.hk"
+            ]
+        },
+        {
+            "rule": "hsbc\\.com\\/0155\\/13515991667\\/XBW09WEA78JG\\/jsEvent\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.isstprod.hsbc.com.hk.gslb-hk1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "www.isstprod.hsbc.com.hk",
+                    "resolved": "www.isstprod.hsbc.com.hk.gslb-hk1.hsbc.com"
+                }
+            ],
+            "responseHashes": [
+                "4c982287c8c45c5c3bbc909a755e7748992ecf7c1b751876ccfe8560a26348f5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hsbc.com.hk",
+                "www.hsbc.com.hk"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "tiqcdn.com",
@@ -58,14 +154,15 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 6
     },
     "nameservers": [
-        "ns20.hsbc.net",
-        "ns3.hsbc.com",
-        "ns6.hsbc.com",
         "ns20.hsbc.uk",
+        "ns20.hsbc.net",
+        "ns21.hsbc.uk",
         "ns21.hsbc.net",
-        "ns21.hsbc.uk"
+        "ns3.hsbc.com",
+        "ns6.hsbc.com"
     ]
 }
