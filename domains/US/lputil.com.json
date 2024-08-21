@@ -35,6 +35,28 @@
             ]
         },
         {
+            "rule": "lputil\\.com\\/lpassets\\/alero\\/index\\.v1\\.7\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "005fdd26246b533cb918f2009d9e2d5933cc7b8324394538f3340b443e54d29f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lastpass.com",
+                "www.lastpass.com"
+            ]
+        },
+        {
             "rule": "lputil\\.com\\/lpassets\\/drift\\/index\\.html",
             "cookies": 0,
             "fingerprinting": 0,
@@ -57,7 +79,7 @@
             ]
         },
         {
-            "rule": "lputil\\.com\\/lpassets\\/alero\\/index\\.v1\\.7\\.html",
+            "rule": "lputil\\.com\\/lpassets\\/alero\\/alero-iframe\\.v1\\.1\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -68,9 +90,9 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "06b0b8d4c89bce51dfbccc379e417fbfd7e898e6669e94603f05342b7ba67ac4"
+                "2582b29ff0efe0aa30ff85d61a4ae725ce36901872df92abcde344380a9e1ca3"
             ],
-            "type": "Document",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -115,28 +137,6 @@
             "cnames": [],
             "responseHashes": [
                 "7ffecb938dbe0f4e48aab4bd7f687c2baa84eb9f99b2aa5ffe9771c8af907c08"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lastpass.com",
-                "www.lastpass.com"
-            ]
-        },
-        {
-            "rule": "lputil\\.com\\/lpassets\\/alero\\/alero-iframe\\.v1\\.1\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "2582b29ff0efe0aa30ff85d61a4ae725ce36901872df92abcde344380a9e1ca3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -199,21 +199,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_cs_c": {
-                    "ttl": 34164003,
+                    "ttl": 34164004,
                     "length": 1,
-                    "prevalence": 0.000013635774818814642,
+                    "prevalence": 0.000013632242981098896,
                     "uniqueness": 0.5
                 },
                 "_cs_id": {
-                    "ttl": 34164003,
+                    "ttl": 34164004,
                     "length": 87,
-                    "prevalence": 0.000013635774818814642,
+                    "prevalence": 0.000013632242981098896,
                     "uniqueness": 1
                 },
                 "_cs_s": {
-                    "ttl": 1804,
+                    "ttl": 1805,
                     "length": 19,
-                    "prevalence": 0.000013635774818814642,
+                    "prevalence": 0.000013632242981098896,
                     "uniqueness": 1
                 }
             },
@@ -225,13 +225,15 @@
         },
         {
             "rule": "lputil\\.com\\/lpassets\\/munchkin\\/index\\.js",
-            "cookies": 0,
+            "cookies": 0.00000682,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -240,7 +242,14 @@
                 "80522326d963b51a33cc765ca063d84eb2e6370aa7cac5a8404390b46caa5c97"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "SAMESITE_COOKIE1": {
+                    "ttl": 2592005,
+                    "length": 37,
+                    "prevalence": 0.000006816121490549448,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lastpass.com",
@@ -271,14 +280,16 @@
         },
         {
             "rule": "lputil\\.com\\/lpassets\\/munchkin\\/munchkin\\.157\\.js",
-            "cookies": 0,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
                 "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
@@ -298,7 +309,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000204,
     "topInitiators": [
         {
             "domain": "first party",
@@ -310,9 +321,9 @@
         "Script": 14
     },
     "nameservers": [
-        "ns-104.awsdns-13.com",
         "ns-938.awsdns-53.net",
         "ns-1900.awsdns-45.co.uk",
-        "ns-1411.awsdns-48.org"
+        "ns-1411.awsdns-48.org",
+        "ns-104.awsdns-13.com"
     ]
 }

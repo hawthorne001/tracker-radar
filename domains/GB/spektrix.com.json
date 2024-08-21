@@ -7,13 +7,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "webcomponents"
+        "webcomponents",
+        "customers"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "tickets.theatreroyal.org.uk",
+            "resolved": "customers.spektrix.com"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "spektrix\\.com\\/stable\\/webcomponents-loader\\.js",
@@ -23,8 +29,8 @@
                 "webcomponents"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "377780521b72ce761213d8720f37f922b7be69f302703c661cbcd816fcb9e6d1"
@@ -34,7 +40,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cft.org.uk",
-                "www.eif.co.uk"
+                "www.eif.co.uk",
+                "www.theatreroyal.org.uk"
             ]
         },
         {
@@ -45,8 +52,8 @@
                 "webcomponents"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "625a1f40d2601dc92fce062383dadd2bddee2421f82ac97d878d3438895e8ac6"
@@ -56,7 +63,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cft.org.uk",
-                "www.eif.co.uk"
+                "www.eif.co.uk",
+                "www.theatreroyal.org.uk"
             ]
         },
         {
@@ -67,8 +75,8 @@
                 "webcomponents"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "c707d8fef131f279a165c58eebef668131ade1361b995000207b75d66fec68ed"
@@ -78,7 +86,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cft.org.uk",
-                "www.eif.co.uk"
+                "www.eif.co.uk",
+                "www.theatreroyal.org.uk"
             ]
         },
         {
@@ -89,8 +98,8 @@
                 "webcomponents"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "2d590781f66a89eb76afca5a1285b972113010053e846cfe2b6bacc4f43cdc1c"
@@ -100,7 +109,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cft.org.uk",
-                "www.eif.co.uk"
+                "www.eif.co.uk",
+                "www.theatreroyal.org.uk"
             ]
         },
         {
@@ -128,13 +138,16 @@
         {
             "rule": "spektrix\\.com\\/stable\\/spektrix-login-status-es2015\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "webcomponents"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "cc1be65401294a1ac2747a9ed18c7f38eee40877f676c8adde4e34aac39927c7"
@@ -144,7 +157,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cft.org.uk",
-                "www.eif.co.uk"
+                "www.eif.co.uk",
+                "www.theatreroyal.org.uk"
             ]
         },
         {
@@ -168,24 +182,55 @@
                 "cft.org.uk",
                 "www.eif.co.uk"
             ]
+        },
+        {
+            "rule": "spektrix\\.com\\/theatreroyalbath\\/website\\/scripts\\/integrate\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "tickets.theatreroyal.org.uk",
+                    "resolved": "customers.spektrix.com"
+                }
+            ],
+            "responseHashes": [
+                "7c6ab033ac8d16d75bc282e974a62cbfd18a6889748353f06952129abf43cdde"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theatreroyal.org.uk",
+                "www.theatreroyal.org.uk"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "spektrix.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 14
+        "Script": 21
     },
     "nameservers": [
-        "ns-349.awsdns-43.com",
         "ns-1007.awsdns-61.net",
         "dns1.p01.nsone.net",
-        "dns2.p01.nsone.net"
+        "dns2.p01.nsone.net",
+        "ns-349.awsdns-43.com"
     ]
 }

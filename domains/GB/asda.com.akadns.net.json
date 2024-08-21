@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "beacon.direct-cdn"
+        "beacon.direct-cdn",
+        "beacon-cdn"
     ],
     "cnames": [
+        {
+            "original": "beacon.asda.com",
+            "resolved": "beacon-cdn.asda.com.akadns.net"
+        },
         {
             "original": "beacon.direct.asda.com",
             "resolved": "beacon.direct-cdn.asda.com.akadns.net"
@@ -22,6 +27,36 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "asda\\.com\\.akadns\\.net\\/rum\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "beacon.direct-cdn",
+                "beacon-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "beacon.direct.asda.com",
+                    "resolved": "beacon.direct-cdn.asda.com.akadns.net"
+                },
+                {
+                    "original": "beacon.asda.com",
+                    "resolved": "beacon-cdn.asda.com.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asda.com",
+                "m-stage.asda.com"
+            ]
+        },
         {
             "rule": "asda\\.com\\.akadns\\.net\\/rum\\.gif",
             "cookies": 0.000201,
@@ -54,18 +89,15 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "wal.co",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "adobedtm.com",
-            "prevalence": 0.5
+            "prevalence": 1
         }
     ],
     "types": {
+        "Script": 2,
         "Image": 2
     },
     "nameservers": []

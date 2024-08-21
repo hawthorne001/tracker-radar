@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.001,
+    "prevalence": 0.00101,
     "sites": 10,
     "subdomains": [
         "assets",
         "api",
+        "frontend",
         "subscribe-assets"
     ],
     "cnames": [],
@@ -30,7 +31,7 @@
                 "window.innerHeight": 2
             },
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
                 "946196388b60618c7b49b708bfe9d5e22a9bbd9651e80aa9413967a2e76306e0"
@@ -58,7 +59,7 @@
                 "Document.cookie getter": 7
             },
             "sites": 7,
-            "prevalence": 0.000703,
+            "prevalence": 0.000705,
             "cnames": [],
             "responseHashes": [
                 "993c7142303f7b97147c10cdfe3325c7836b7f650f01b8f5c8d56f027116bad9"
@@ -85,10 +86,10 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.000703,
+            "prevalence": 0.000705,
             "cnames": [],
             "responseHashes": [
-                "a91d7cc1eff74cb5a904d6073dd7724daedc69c4d432de62a1630a2e51bf94a6",
+                "61c3c4ab748c769f3504ba049e157c4e8df25b544eced421bc38a63f3750821f",
                 "54dc73cc75aca0b3572b5209958bfaaa692c5800ffff5493905d397a9d2b72a1",
                 "87f51f6ef9f59b63db56cfed502b63c878389ea89fce5a52478114f34734d131",
                 "f477607efdc80efd975a0b03d5ea587e382bdc1291efef24c58b1a132dbf6e86",
@@ -117,7 +118,7 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.000703,
+            "prevalence": 0.000705,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -144,7 +145,7 @@
                 "Document.cookie getter": 3
             },
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "8a720d22d813b7c6ba1097411fddc0027186aeb00223f102907be7db6d019e3c"
@@ -194,7 +195,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "376fd6a302a8dab37548c85b2eeee20c4008410ab1b7f1464709049bef08898f"
+                "218d731a0f5c9e83ba4089ec0b4c0edf64918e1572aff521cecc058d77de86c0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -274,7 +275,30 @@
             ]
         },
         {
-            "rule": "poool\\.fr\\/api\\/v3\\/subscribe\\/site",
+            "rule": "poool\\.fr\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend",
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "futura-sciences.com",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/engage\\/event\\/async",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -285,9 +309,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0855f161f2e2ac998e4a2b96ffc07823bbefcdf6d5ae17b6c8c8f262150f58eb"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "futura-sciences.com",
+                "www.futura-sciences.com"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/subscribe\\/site",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -306,8 +350,10 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "0855f161f2e2ac998e4a2b96ffc07823bbefcdf6d5ae17b6c8c8f262150f58eb"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -341,28 +387,6 @@
             ]
         },
         {
-            "rule": "poool\\.fr\\/vendor-buddy-v3\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "42864b5a1f6431a4244ff8b7771b94f80c79721ed28960559c2bdf0368bcb102"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "larousse.fr",
-                "www.larousse.fr"
-            ]
-        },
-        {
             "rule": "poool\\.fr\\/vendor-buddy\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -375,6 +399,28 @@
             "cnames": [],
             "responseHashes": [
                 "49b07e3d4ea18729612149345b1a3593e186a86be3ab48b0a99f43e964f03b40"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-buddy-v3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "42864b5a1f6431a4244ff8b7771b94f80c79721ed28960559c2bdf0368bcb102"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -415,25 +461,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8181818181818182
+            "prevalence": 0.8125
         },
         {
             "domain": "poool-subscribe.fr",
-            "prevalence": 0.13636363636363635
-        },
-        {
-            "domain": "ladmedia.fr",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.125
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.041666666666666664
+        },
+        {
+            "domain": "ladmedia.fr",
+            "prevalence": 0.020833333333333332
         }
     ],
     "types": {
         "Script": 30,
         "Fetch": 11,
-        "Preflight": 11
+        "Preflight": 11,
+        "XHR": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ara.ns.cloudflare.com",

@@ -9,26 +9,29 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
         "ecollector-corus",
-        "ecollector-wan"
+        "ecollector-wan",
+        "ecollector-tribune",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "sophi\\.io\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "ecollector-corus",
-                "ecollector-wan"
+                "ecollector-wan",
+                "ecollector-tribune"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -38,7 +41,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "globalnews.ca",
-                "thewest.com.au"
+                "thewest.com.au",
+                "www.chicagotribune.com"
             ]
         },
         {
@@ -47,11 +51,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "ecollector-corus",
-                "ecollector-wan"
+                "ecollector-wan",
+                "ecollector-tribune"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -59,27 +64,60 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "globalnews.ca",
-                "thewest.com.au"
+                "thewest.com.au",
+                "www.chicagotribune.com"
+            ]
+        },
+        {
+            "rule": "sophi\\.io\\/sdks\\/paywall\\/1\\/stable\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "360b822224d74d5ed4af7d2fce6e4a7de49386239400e7c0d7da0ef62c37ef0f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.chicagotribune.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000401,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "XHR": 3,
+        "Preflight": 3,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1220.awsdns-24.org",
         "ns-150.awsdns-18.com",
+        "ns-800.awsdns-36.net",
         "ns-1615.awsdns-09.co.uk",
-        "ns-800.awsdns-36.net"
+        "ns-1220.awsdns-24.org"
     ]
 }

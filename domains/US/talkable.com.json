@@ -11,9 +11,14 @@
     "sites": 38,
     "subdomains": [
         "www",
+        "dartagnan.elb",
         "ce-shop.elb"
     ],
     "cnames": [
+        {
+            "original": "share.dartagnan.com",
+            "resolved": "dartagnan.elb.talkable.com"
+        },
         {
             "original": "share.theceshop.com",
             "resolved": "ce-shop.elb.talkable.com"
@@ -23,14 +28,14 @@
     "resources": [
         {
             "rule": "talkable\\.com\\/public\\/1x1\\.gif",
-            "cookies": 0.0000614,
+            "cookies": 0.0000613,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 9,
-            "prevalence": 0.0000614,
+            "prevalence": 0.0000613,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -38,7 +43,7 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_session": 0.000047725211865851246
+                "tkbl_session": 0.000047712850433846134
             },
             "exampleSites": [
                 "august.com",
@@ -69,12 +74,12 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "589b4eee8dd81799bd7f645209b38118b8ea9093b3f14f02180d62d4abee1154"
+                "0a5f9633506e7938395b52357ee68e3894d967e1ce1188563f210cc839a7c170"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_session": 0.000013635774818814642
+                "tkbl_session": 0.000013632242981098896
             },
             "exampleSites": [
                 "aventon.com",
@@ -90,7 +95,6 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 2,
                 "Element.prototype.getClientRects": 2,
                 "window.name": 2,
                 "Document.cookie getter": 2
@@ -99,12 +103,12 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "dd4f68d4f1b075026f04964854baee75d1bbdd4f2e2d15491f6a976c33724204"
+                "221fea639cb9fbc376f45f28c63af1ecce5d3ae5a81ddb913306652f24f0db8b"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_cvuuid": 0.000013635774818814642
+                "tkbl_cvuuid": 0.000013632242981098896
             },
             "exampleSites": [
                 "shopyalehome.com",
@@ -114,21 +118,26 @@
         {
             "rule": "talkable\\.com\\/public\\/wgac-us\\/affiliate_members\\/create\\.html",
             "cookies": 0.00000682,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.name": 2,
+                "Element.prototype.getClientRects": 2,
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ba0482dee01b152a6c5ebfa68eb67494db70eb07b80ccc960ca18b2bfd75f1a5"
+                "47c9a1728044f673cd4990780b9d4a95293639bb8fd9d925d29957dc021231fc"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_session": 0.000013635774818814642
+                "tkbl_session": 0.000013632242981098896
             },
             "exampleSites": [
                 "whogivesacrap.org",
@@ -143,16 +152,13 @@
                 "www"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.name": 1,
-                "Element.prototype.getClientRects": 1,
-                "Document.cookie getter": 1
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "2957799bc9323db8c171f125ad8a7b6c96044a373d4c0e6a9078fc2bc748af03"
+                "5929607d44b3766c3b8996c5832c4902b5bdabaf823bcee0246b8d8c673fa880"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -160,6 +166,62 @@
             "exampleSites": [
                 "autonationmobileservice.com",
                 "www.autonationmobileservice.com"
+            ]
+        },
+        {
+            "rule": "talkable\\.com\\/public\\/dartagnan\\/affiliate_members\\/create\\.html",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dartagnan.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "share.dartagnan.com",
+                    "resolved": "dartagnan.elb.talkable.com"
+                }
+            ],
+            "responseHashes": [
+                "c05eca205ec41c6c5a1bf8fbc2acc88ff071981193379b21c097fa550830d66c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "tkbl_session": 0.000013632242981098896
+            },
+            "exampleSites": [
+                "dartagnan.com",
+                "www.dartagnan.com"
+            ]
+        },
+        {
+            "rule": "talkable\\.com\\/public\\/dartagnan\\/timings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dartagnan.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "share.dartagnan.com",
+                    "resolved": "dartagnan.elb.talkable.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dartagnan.com",
+                "www.dartagnan.com"
             ]
         },
         {
@@ -179,7 +241,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "6f8b045080f60baa70b5f1382b80932ecddfd16a3202aaea7953985c1baf705b"
+                "dec91cadaa6399d9a2ead90f41a5aa3a30024f085920e3bb8a7a70c1dbbeeeba"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -206,7 +268,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "0f0531d9df2b100973689d73dbed4f42ddf95fe6bd2fa482a981f2a06b4c8343"
+                "15404e1aec67df6f282b4d958a764c106e9784d1c337fccc69995958f38629f5"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -233,12 +295,12 @@
                 }
             ],
             "responseHashes": [
-                "df5c0f9267442e3255e9764339eae162148a91a240c289578f23ff170dcc0879"
+                "6140c01d11dbd8da9acb8f34addf384029f6b454c843e40b7a220b9628dce3b5"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_session": 0.000013635774818814642
+                "tkbl_session": 0.000013632242981098896
             },
             "exampleSites": [
                 "theceshop.com",
@@ -261,9 +323,7 @@
                     "resolved": "ce-shop.elb.talkable.com"
                 }
             ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -289,12 +349,12 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "fef039d5704b18ca524e8753376be5c3d56cdcd008e6d416428e1b0644472d69"
+                "0f27dbe8d16883652faf36c2e021a15899a1b8e9ba594f738dfda733195c2b3d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tkbl_session": 0.000013635774818814642
+                "tkbl_session": 0.000013632242981098896
             },
             "exampleSites": [
                 "zwilling.com",
@@ -308,26 +368,26 @@
     "topInitiators": [
         {
             "domain": "d2jjzw81hqbuqv.cloudfront.net",
-            "prevalence": 0.625
+            "prevalence": 0.6326530612244898
         },
         {
             "domain": "first party",
-            "prevalence": 0.3541666666666667
+            "prevalence": 0.32653061224489793
         },
         {
             "domain": "yottaa.com",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.04081632653061224
         }
     ],
     "types": {
         "Image": 9,
-        "Document": 16,
-        "XHR": 2
+        "Document": 18,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-783.awsdns-33.net",
+        "ns-110.awsdns-13.com",
         "ns-1950.awsdns-51.co.uk",
         "ns-1182.awsdns-19.org",
-        "ns-110.awsdns-13.com"
+        "ns-783.awsdns-33.net"
     ]
 }

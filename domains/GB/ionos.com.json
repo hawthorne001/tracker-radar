@@ -13,6 +13,7 @@
         "frontend-services",
         "ahab",
         "sherlock",
+        "sentry",
         "shop-api"
     ],
     "cnames": [
@@ -141,7 +142,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "766b4f46b52f617f5eed0c914617638982f6ee3ca4fdb2a9be0bd96c3832644e"
+                "94a56cfd64979e37d4a79fbafdb8229ab5762c548bb967e3ae5c31bbab9fc42f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -168,7 +169,7 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "bb432e7ec5f4ea3e8de1afdb88749e0f4ce50e32c8d3d8b2bf37158e15232d05"
+                "095aed93f82c431bfd35afa2d53618babad83f146198f887ec010cf63ee3d8a3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -237,7 +238,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d85f4e06bb08350c441f0a0c6d03862fc721d393d1860606adc086ac16b0b1e4"
+                "515e997c50ceaf3d62f89178691ecfb2ed86b176f5a2fba4cb2db1076561a325"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -347,6 +348,28 @@
             ]
         },
         {
+            "rule": "ionos\\.com\\/api\\/14\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df61aa5b540f45d51dfb7c8fb39a43875cb770247a3859729f45fbce3cbb00e7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.co.uk",
+                "login.ionos.co.uk"
+            ]
+        },
+        {
             "rule": "ionos\\.com\\/t\\/t\\/js\\/t\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -358,7 +381,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9c71c2378c0c1efec8a91808424dc2caca6ccbddc2fcc367492667a0507a69fd"
+                "ad0dd0ede1a0b3f2e25088a80bf9b69a7422f8f06e1856e7508facf870875eac"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -422,6 +445,33 @@
         },
         {
             "rule": "ionos\\.com\\/contact-channel\\/shop",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.co.uk",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [
+                "eab13b0abf222c0ef0757a5c50b10e6c5c049c3e8ceecda28225ee40bd3a5dbe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.co.uk",
+                "www.ionos.co.uk"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/contact-channel\\/shop",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -446,7 +496,32 @@
             ]
         },
         {
-            "rule": "ionos\\.com\\/contact-channel\\/shop",
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/domain\\/tld\\/price",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.co.uk",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.co.uk",
+                "www.ionos.co.uk"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/domain\\/tld\\/price",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
@@ -462,9 +537,9 @@
                 }
             ],
             "responseHashes": [
-                "f4b692cf4b64d9f6e4594a7f1b99e270d0218e72ed8cbd68562d0f9643231043"
+                "f12cfcaeacf951aa63f0c1ccdab816bba17eb940106d186d10415262970d1a92"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -479,24 +554,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9166666666666666
+            "prevalence": 0.9230769230769231
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Script": 21,
-        "XHR": 4,
+        "XHR": 6,
         "Stylesheet": 7,
-        "Preflight": 6,
-        "Fetch": 4
+        "Preflight": 8,
+        "Fetch": 6
     },
     "nameservers": [
+        "ns-1and1.ui-dns.com",
         "ns-1and1.ui-dns.biz",
         "ns-1and1.ui-dns.de",
-        "ns-1and1.ui-dns.org",
-        "ns-1and1.ui-dns.com"
+        "ns-1and1.ui-dns.org"
     ]
 }

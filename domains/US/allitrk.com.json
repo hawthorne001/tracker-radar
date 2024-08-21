@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
+    "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "collector"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,15 +21,39 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.appName": 2,
                 "Document.cookie getter": 1,
-                "window.localStorage": 1
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e0551b1a5761fbcd7e07f4635486faa9ac72962c2196cb755c30969c62f34fe3"
+            ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "michaels.com",
+                "www.michaels.com"
+            ]
+        },
+        {
+            "rule": "allitrk\\.com\\/v1\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "cbfd8356b54317ef1f0542a3681d6bd6f155d6d29250b4d7b0accf183c41187a"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,20 +68,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-349.awsdns-43.com",
         "ns-891.awsdns-47.net",
         "ns-1746.awsdns-26.co.uk",
+        "ns-349.awsdns-43.com",
         "ns-1061.awsdns-04.org"
     ]
 }

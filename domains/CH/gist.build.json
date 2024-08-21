@@ -7,7 +7,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "code"
+        "code",
+        "renderer"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,7 +24,8 @@
                 "Navigator.prototype.product": 2,
                 "Navigator.prototype.userAgent": 2,
                 "window.sessionStorage": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -58,6 +60,114 @@
                 "professional.ch",
                 "www.yousty.ch"
             ]
+        },
+        {
+            "rule": "gist\\.build\\/2\\.0\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "professional.ch",
+                "www.professional.ch"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/renderer\\/0\\.2\\.19\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c0e82930f6a757d7e6d5235388d308f882858472451b2696984fe3a58d5acf6e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "professional.ch",
+                "www.professional.ch"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/renderer\\/0\\.2\\.19\\/main\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f8a425cc9c486070ec47b0300f7e0a58179b396d1deb49b1182d3e36274d111e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "professional.ch",
+                "www.professional.ch"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/renderer\\/0\\.2\\.19\\/main\\.dart\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1446b90a921e2fe51d0d45cbe9a35424fc490e7dc3b935893e5b8a455ad78965"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "professional.ch",
+                "www.professional.ch"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/renderer\\/0\\.2\\.19\\/assets\\/FontManifest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "professional.ch",
+                "www.professional.ch"
+            ]
         }
     ],
     "categories": [],
@@ -66,15 +176,17 @@
     "topInitiators": [
         {
             "domain": "customer.io",
-            "prevalence": 0.5
+            "prevalence": 0.75
         },
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 8,
+        "Document": 4,
+        "XHR": 2
     },
     "nameservers": [
         "brett.ns.cloudflare.com",

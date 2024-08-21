@@ -7,13 +7,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000903,
+    "sites": 9,
     "subdomains": [
         "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
+        "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu",
         "cdn"
     ],
     "cnames": [
+        {
+            "original": "access.intouch.bmigroup.com",
+            "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
+        },
         {
             "original": "id.naf.no",
             "resolved": "naf-cd-qf7uhj9homrrm574.edge.tenants.eu.auth0.com"
@@ -23,67 +28,84 @@
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "naf-cd-qf7uhj9homrrm574.edge.tenants.eu"
+                "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
+                "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "id.naf.no",
                     "resolved": "naf-cd-qf7uhj9homrrm574.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "access.intouch.bmigroup.com",
+                    "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "c50bc3abff5b8bd39b6045a22e8b47966258f5585acace77dac8ff3b9b538260"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "naf.no",
+                "www.bmigroup.com",
                 "www.naf.no"
             ]
         },
         {
-            "rule": "auth0\\.com\\/ulp\\/react-components\\/1\\.94\\.6\\/css\\/main\\.cdn\\.min\\.css",
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.20\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0009a6f5c2fb0070291fc9b2e475ce44aa33b7d4911ed49045af8dbded58327f"
+                "ebf5fe084506fa53aecb68bc4d315b1e1b149b56a0465d7bc7e584ca9711c6dc"
             ],
-            "type": "Stylesheet",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "coop.no",
-                "my.remarkable.com"
+                "bunte.de",
+                "www.focus.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Document": 2,
-        "Stylesheet": 2
+        "Document": 3,
+        "Script": 2
     },
     "nameservers": [
-        "monroe.ns.cloudflare.com",
-        "kolton.ns.cloudflare.com"
+        "kolton.ns.cloudflare.com",
+        "monroe.ns.cloudflare.com"
     ]
 }

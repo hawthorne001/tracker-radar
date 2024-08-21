@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
         "mwtw",
-        "ms-ads-monitoring-events"
+        "ms-ads-monitoring-events",
+        "mweb-hb",
+        "ms-cookie-sync"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -24,19 +26,19 @@
                 "mwtw"
             ],
             "apis": {
-                "PerformanceTiming.prototype.navigationStart": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.language": 2,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.language": 3,
                 "window.innerHeight": 1,
                 "window.outerHeight": 1,
                 "window.innerWidth": 1,
                 "window.outerWidth": 1,
                 "window.devicePixelRatio": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "9bf19c04ff94c459b5ae5ad2e017646c7128dcc08ebe77042fbf578816cf636b"
@@ -45,7 +47,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "footmarseille.com",
+                "slate.fr",
+                "www.footmarseille.com",
                 "www.slate.fr"
             ]
         },
@@ -67,7 +70,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "footmarseille.com",
+                "slate.fr",
                 "www.footmarseille.com",
                 "www.slate.fr"
             ]
@@ -88,9 +91,91 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "footmarseille.com",
+                "slate.fr",
                 "www.footmarseille.com",
                 "www.slate.fr"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/api\\/header-bidding-request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mweb-hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "detik.com",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/api\\/header-bidding-request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mweb-hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "detik.com",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/user-sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ms-cookie-sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "detik.com",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "presage\\.io\\/user-sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ms-cookie-sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "overtake.gg",
+                "www.systemrequirementslab.com"
             ]
         }
     ],
@@ -100,25 +185,35 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.3
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.2
         },
         {
             "domain": "htlbid.com",
-            "prevalence": 0.4
+            "prevalence": 0.2
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.2
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 3,
-        "Preflight": 3
+        "Script": 3,
+        "Fetch": 5,
+        "Preflight": 5,
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-223-b.gandi.net",
+        "ns-214-a.gandi.net",
         "ns-20-c.gandi.net",
-        "ns-214-a.gandi.net"
+        "ns-223-b.gandi.net"
     ]
 }

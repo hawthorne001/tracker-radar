@@ -9,9 +9,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000803,
-    "sites": 8,
+    "prevalence": 0.0013,
+    "sites": 13,
     "subdomains": [
+        "accounts.bahn",
+        "img.ui-portal",
         "gtm.idealo",
         "gateway.kleinanzeigen",
         "sso.sportschau",
@@ -19,12 +21,20 @@
     ],
     "cnames": [
         {
+            "original": "accounts.bahn.de",
+            "resolved": "accounts.bahn.de.edgekey.net"
+        },
+        {
             "original": "gateway.kleinanzeigen.de",
             "resolved": "gateway.kleinanzeigen.de.edgekey.net"
         },
         {
             "original": "gtm.idealo.de",
             "resolved": "gtm.idealo.de.edgekey.net"
+        },
+        {
+            "original": "img.ui-portal.de",
+            "resolved": "img.ui-portal.de.edgekey.net"
         },
         {
             "original": "sso.sportschau.de",
@@ -35,8 +45,87 @@
             "resolved": "sso.tagesschau.de.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "988b7e770bb70f19a14f30f8cdf85456d2e075b7bfec736ea0c8b22ece210844"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/pos-cdn\\/tracklib\\/4\\.3\\.0\\/tracklib\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "img.ui-portal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "img.ui-portal.de",
+                    "resolved": "img.ui-portal.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40a6f6526afea19db42dcf345249915ccacc710ee6c97091d5d6285b5f90ead3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gmx.net",
+                "www.mail.com"
+            ]
+        },
         {
             "rule": "de\\.edgekey\\.net\\/webvitals",
             "cookies": 0.000201,
@@ -81,7 +170,7 @@
                 }
             ],
             "responseHashes": [
-                "3104f0cf1ff937a09208c8b56c6d0762bd9f7bd7b5daafc2a70519eae46adeee"
+                "88c4c2159048eb7a5874b404b08dfddd7d1a51f0df5b5ce9ca4bee7e9b31fd0a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -124,20 +213,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000602,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.6153846153846154
+        },
+        {
+            "domain": "uicdn.com",
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "classistatic.de",
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Image": 2,
-        "Fetch": 4
+        "Fetch": 6,
+        "Document": 2,
+        "Script": 2,
+        "Image": 2
     },
     "nameservers": []
 }

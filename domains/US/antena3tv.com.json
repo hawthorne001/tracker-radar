@@ -7,13 +7,17 @@
     "prevalence": 0.0000341,
     "sites": 5,
     "subdomains": [
-        "antena3.origin-cdn",
-        "lasexta.origin-cdn",
         "cdnjs.origin-cdn",
         "properties.origin-cdn",
-        "europafm.origin-cdn"
+        "atp-statics.origin-cdn",
+        "europafm.origin-cdn",
+        "api.origin-cdn"
     ],
     "cnames": [
+        {
+            "original": "api.atresmedia.com",
+            "resolved": "api.origin-cdn.antena3tv.com"
+        },
         {
             "original": "cdnjs.atresmedia.com",
             "resolved": "cdnjs.origin-cdn.antena3tv.com"
@@ -23,52 +27,16 @@
             "resolved": "europafm.origin-cdn.antena3tv.com"
         },
         {
+            "original": "imagenes.atresplayer.com",
+            "resolved": "atp-statics.origin-cdn.antena3tv.com"
+        },
+        {
             "original": "properties.atresplayer.com",
             "resolved": "properties.origin-cdn.antena3tv.com"
-        },
-        {
-            "original": "static.antena3.com",
-            "resolved": "antena3.origin-cdn.antena3tv.com"
-        },
-        {
-            "original": "static.lasexta.com",
-            "resolved": "lasexta.origin-cdn.antena3tv.com"
         }
     ],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "antena3tv\\.com\\/css\\/assets\\/fonts\\/icomoon2\\.woff",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "antena3.origin-cdn",
-                "lasexta.origin-cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "static.antena3.com",
-                    "resolved": "antena3.origin-cdn.antena3tv.com"
-                },
-                {
-                    "original": "static.lasexta.com",
-                    "resolved": "lasexta.origin-cdn.antena3tv.com"
-                }
-            ],
-            "responseHashes": [
-                "6b5708d758a272cd8d164fef28a147e7be4cddc6fb1407d13c8bff4c7669a5f9"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "antena3.com",
-                "www.lasexta.com"
-            ]
-        },
         {
             "rule": "antena3tv\\.com\\/load\\/webapp\\/main\\.e4d94bf80c1c004744a3\\.js",
             "cookies": 0,
@@ -87,33 +55,6 @@
             ],
             "responseHashes": [
                 "f7529090c83d29d48261f67e0e851d01411ca044f270129d32b159088c223a63"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "antena3.com",
-                "www.lasexta.com"
-            ]
-        },
-        {
-            "rule": "antena3tv\\.com\\/load\\/webapp\\/a3sites\\.f23d63b559bbc47b0c31\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdnjs.origin-cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "cdnjs.atresmedia.com",
-                    "resolved": "cdnjs.origin-cdn.antena3tv.com"
-                }
-            ],
-            "responseHashes": [
-                "eb82385daac41e7a0505dc3ad3885525d00a83e18c127749b5690c3e82589f73"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -275,8 +216,33 @@
                 }
             ],
             "responseHashes": [
-                "cd3940489829410970e8b993e3a041deeb7982257b9827c1850b5bae992658ae"
+                "0a7b212b0134eacdeef1a638e263bfdaca0a359cd0c9bc3038da367085015ea3"
             ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atresplayer.com",
+                "www.atresplayer.com"
+            ]
+        },
+        {
+            "rule": "antena3tv\\.com\\/atp\\/clipping\\/cmsimages02\\/2024\\/07\\/01\\/BFDFDD32-0FFB-44B5-8A96-98D316F22F1B\\/\\/386x217\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atp-statics.origin-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "imagenes.atresplayer.com",
+                    "resolved": "atp-statics.origin-cdn.antena3tv.com"
+                }
+            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -311,6 +277,33 @@
                 "europafm.com",
                 "www.europafm.com"
             ]
+        },
+        {
+            "rule": "antena3tv\\.com\\/cmsproperties\\/v1\\/find\\/lasexta",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.origin-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.atresmedia.com",
+                    "resolved": "api.origin-cdn.antena3tv.com"
+                }
+            ],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lasexta.com",
+                "www.lasexta.com"
+            ]
         }
     ],
     "categories": [],
@@ -319,17 +312,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.883495145631068
+            "prevalence": 0.8715596330275229
         },
         {
             "domain": "atresmedia.com",
-            "prevalence": 0.11650485436893204
+            "prevalence": 0.12844036697247707
         }
     ],
     "types": {
-        "Font": 2,
-        "Script": 14,
-        "Fetch": 2,
+        "Script": 12,
+        "Fetch": 6,
         "Image": 2
     },
     "nameservers": [
