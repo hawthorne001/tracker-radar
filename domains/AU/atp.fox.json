@@ -7,7 +7,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -44,8 +45,8 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "bfdd12609696521b4409618face2a89b629f21d531c22709db582cb64aa09f06",
-                "b24fb9cec3e85eea4741fc1ed72c8cdfa94928c940628eb28692ba0b5bd7eb1d"
+                "8ce75dacd805d464b724f7021e4e1b3dfd37144a80ff8685e0dcbaca566d762c",
+                "40f2eb9fafa33fd9d87c61f58552cd7ed68e7710c909f57c141e8cd8c952867e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -53,6 +54,34 @@
             "exampleSites": [
                 "foxnews.com",
                 "www.foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
                 "www.tmz.com"
             ]
         }
@@ -63,33 +92,34 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4
-        },
-        {
-            "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.2
-        },
-        {
-            "domain": "knotch-cdn.com",
-            "prevalence": 0.2
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "fox.com",
-            "prevalence": 0.2
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "webcontentassessor.global.ssl.fastly.net",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "Preflight": 2,
-        "Fetch": 3
+        "Fetch": 3,
+        "Script": 2
     },
     "nameservers": [
         "ns03.dns.fox",
-        "ns01.foxdoua.com",
-        "ns04.dns.fox",
         "ns04.foxdoua.com",
-        "ns02.dns.fox",
-        "ns02.foxdoua.com",
         "ns03.foxdoua.com",
-        "ns01.dns.fox"
+        "ns04.dns.fox",
+        "ns01.dns.fox",
+        "ns02.dns.fox",
+        "ns01.foxdoua.com",
+        "ns02.foxdoua.com"
     ]
 }

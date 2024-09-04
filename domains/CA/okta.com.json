@@ -7,18 +7,24 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "login",
         "vl.customdomains",
         "astminternational.customdomains",
         "benjaminmoore.customdomains",
         "onekinship",
+        "kohler-b2c.customdomains",
+        "servicenowsignon.customdomains",
         "wm.customdomains",
         "churchofjesuschrist.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.kohler.ca",
+            "resolved": "kohler-b2c.customdomains.okta.com"
+        },
         {
             "original": "auth.videotron.com",
             "resolved": "vl.customdomains.okta.com"
@@ -38,9 +44,13 @@
         {
             "original": "ssologin.wm.com",
             "resolved": "wm.customdomains.okta.com"
+        },
+        {
+            "original": "ssosignon.servicenow.com",
+            "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "okta\\.com\\/discovery\\/iframe\\.html",
@@ -54,7 +64,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9647bed331c4194d81a8aa79817697b94cac79e89600e044897ad0330e489b9e"
+                "71475feecc3949dc9cce0b543446cbd172d95a895e88026b7bfcfd35f825a814"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -65,18 +75,21 @@
             ]
         },
         {
-            "rule": "okta\\.com\\/lib\\/discoveryIframe-f98a9db6985a9d6db326\\.min\\.js",
+            "rule": "okta\\.com\\/lib\\/discoveryIframe-17abdf702560067430e5\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "login"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1d3c326cddf350f019af567bc3729d180231f0b90c3fc522dcced3741cf692b0"
+                "803508e3bd746ad2f7a859ec65d5225a4d1b1f641e387685b570bb7a8ac4b9c8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -113,8 +126,8 @@
                 }
             ],
             "responseHashes": [
-                "8d8893263207c04cf3ada728bbf437d43a7812f2be27422ecd4cafceb8d83ba9",
-                "ea10bc0e1f6bcae58918e3323f685246ed57ccd31217b41e1601c1e83d28a32a"
+                "c95bf4fd747cf37b0bbc5f2515b6946350a80d20b22128cebbd49b76b9ea3fc3",
+                "0a1106a94d9dce966ae79544826ef0f61a987a5ff3287ce7e2ed52e63926a427"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -127,20 +140,30 @@
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "astminternational.customdomains",
+                "kohler-b2c.customdomains",
+                "servicenowsignon.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "iam.astm.org",
                     "resolved": "astminternational.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.kohler.ca",
+                    "resolved": "kohler-b2c.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
                     "original": "ssologin.wm.com",
@@ -154,25 +177,37 @@
             "exampleSites": [
                 "adoptapet.com",
                 "www.astm.org",
+                "www.kohler.ca",
+                "www.servicenow.com",
                 "www.wm.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
                 "onekinship",
                 "churchofjesuschrist.customdomains",
+                "kohler-b2c.customdomains",
+                "servicenowsignon.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
                     "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.kohler.ca",
+                    "resolved": "kohler-b2c.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
                     "original": "ssologin.wm.com",
@@ -180,7 +215,8 @@
                 }
             ],
             "responseHashes": [
-                "a5d32166f8ef70d2749954f78aee808f43297edcfdd415e0ab30294da84b86a4"
+                "e012096080ac203c4bad561a9ec5d34871bd253d63327d4648e06b95075c68cd",
+                "1910fa47ebc50a89acf5923c4b980b557efdeed644fc9ddd7d81a0c23cfbd5f2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -188,13 +224,15 @@
             "exampleSites": [
                 "adoptapet.com",
                 "www.churchofjesuschrist.org",
+                "www.kohler.ca",
+                "www.servicenow.com",
                 "www.wm.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000705,
+    "cookies": 0.00101,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -209,8 +247,8 @@
         "Document": 2,
         "Script": 2,
         "XHR": 3,
-        "Preflight": 3,
-        "Fetch": 3
+        "Preflight": 5,
+        "Fetch": 5
     },
     "nameservers": [
         "ns-1459.awsdns-54.org",

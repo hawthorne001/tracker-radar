@@ -4,32 +4,39 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000682,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
+        "app",
         "stat"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "contentaccess\\.com\\/beacon",
+            "rule": "contentaccess\\.com\\/v1\\/ContentAccess\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "stat"
+                "app"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "bbe53b39cc6ea4d0caf3cc30ff2ebe4a27ef8258330330cbdc20bfde178a094e"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "goldenwestcollege.edu",
-                "www.goldenwestcollege.edu"
+                "www.tamusa.edu"
             ]
         },
         {
@@ -40,8 +47,29 @@
                 "stat"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldenwestcollege.edu",
+                "www.goldenwestcollege.edu",
+                "www.tamusa.edu"
+            ]
+        },
+        {
+            "rule": "contentaccess\\.com\\/beacon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stat"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "56c0f39e117ea4051facaaab0a2c5ac8cd2daeafb4c98aa300d3061b26f27bcb"
@@ -51,7 +79,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "goldenwestcollege.edu",
-                "www.goldenwestcollege.edu"
+                "www.goldenwestcollege.edu",
+                "www.tamusa.edu"
             ]
         }
     ],
@@ -69,8 +98,9 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
         "ns1.cascadefactory.com",

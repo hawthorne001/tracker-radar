@@ -4,13 +4,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00151,
-    "sites": 15,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
         "ny-post-decider.cdn",
         "ny-post-ny-post.cdn",
+        "ny-post-page-six.cdn",
         "nhst.auth",
-        "hegnarmedia.auth"
+        "hegnarmedia.auth",
+        "assets"
     ],
     "cnames": [
         {
@@ -20,21 +22,26 @@
         {
             "original": "zephr-v4.nypost.com",
             "resolved": "ny-post-ny-post.cdn.zephr.com"
+        },
+        {
+            "original": "zephr-v4.pagesix.com",
+            "resolved": "ny-post-page-six.cdn.zephr.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "zephr\\.com\\/zephr\\/features",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "ny-post-decider.cdn",
-                "ny-post-ny-post.cdn"
+                "ny-post-ny-post.cdn",
+                "ny-post-page-six.cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "zephr-v4.decider.com",
@@ -43,6 +50,10 @@
                 {
                     "original": "zephr-v4.nypost.com",
                     "resolved": "ny-post-ny-post.cdn.zephr.com"
+                },
+                {
+                    "original": "zephr-v4.pagesix.com",
+                    "resolved": "ny-post-page-six.cdn.zephr.com"
                 }
             ],
             "responseHashes": [
@@ -53,20 +64,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "decider.com",
-                "nypost.com"
+                "nypost.com",
+                "pagesix.com"
             ]
         },
         {
             "rule": "zephr\\.com\\/zephr\\/sso",
-            "cookies": 0.000903,
+            "cookies": 0.000603,
             "fingerprinting": 0,
             "subdomains": [
                 "nhst.auth",
                 "hegnarmedia.auth"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000903,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
@@ -75,19 +87,41 @@
             "exampleSites": [
                 "dn.no",
                 "www.dn.no",
-                "www.europower.no",
-                "www.finansavisen.no",
                 "www.fiskeribladet.no",
+                "www.finansavisen.no",
                 "www.intrafish.com",
-                "www.intrafish.no",
-                "www.kapital.no",
-                "www.tradewindsnews.com"
+                "www.kapital.no"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr-browser\\/1\\.6\\.2\\/zephr-browser\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c4d9864d3ec3a737f48deae45687e2334a34a5012c6b4591cd28172ef46b5705"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.theglobeandmail.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0012,
+    "cookies": 0.001,
     "topInitiators": [
         {
             "domain": "first party",
@@ -99,13 +133,14 @@
         }
     ],
     "types": {
-        "Other": 2,
-        "Document": 9
+        "Other": 3,
+        "Document": 6,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1113.awsdns-11.org",
-        "ns-1991.awsdns-56.co.uk",
         "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net"
+        "ns-877.awsdns-45.net",
+        "ns-1113.awsdns-11.org",
+        "ns-1991.awsdns-56.co.uk"
     ]
 }

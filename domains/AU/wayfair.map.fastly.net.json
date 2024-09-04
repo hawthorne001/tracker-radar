@@ -12,9 +12,14 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "www",
         "t"
     ],
     "cnames": [
+        {
+            "original": "prx.wayfair.com",
+            "resolved": "www.wayfair.map.fastly.net"
+        },
         {
             "original": "s.wayfair.com",
             "resolved": "t.wayfair.map.fastly.net"
@@ -24,8 +29,35 @@
             "resolved": "t.wayfair.map.fastly.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "wayfair\\.map\\.fastly\\.net\\/px\\/xhr\\/api\\/v2\\/collector",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "prx.wayfair.com",
+                    "resolved": "www.wayfair.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "6b2f778f27f5ec3935f7998ae51e090c4345c8c4e8bf423aa8d7ef32551433ad"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wayfair.com",
+                "www.wayfair.com"
+            ]
+        },
         {
             "rule": "wayfair\\.map\\.fastly\\.net\\/events\\/single",
             "cookies": 0,
@@ -67,7 +99,9 @@
                     "resolved": "t.wayfair.map.fastly.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "36486f6f8ea9c0ede9e0b7fa48630f2a837c376efa25adc78efac2a0a2068665"
+            ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -102,58 +136,6 @@
                 "wayfair.com",
                 "www.wayfair.com"
             ]
-        },
-        {
-            "rule": "wayfair\\.map\\.fastly\\.net\\/events\\/single",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "t"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "s.wayfair.com",
-                    "resolved": "t.wayfair.map.fastly.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Other",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wayfair.com",
-                "www.wayfair.com"
-            ]
-        },
-        {
-            "rule": "wayfair\\.map\\.fastly\\.net\\/imp\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "t"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "t.wayfair.com",
-                    "resolved": "t.wayfair.map.fastly.net"
-                }
-            ],
-            "responseHashes": [
-                "695c89d918186f814b304e3e0f8bff5928df9bbb5c8afa277f1dfef9efaeca86"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wayfair.com",
-                "www.wayfair.com"
-            ]
         }
     ],
     "categories": [
@@ -167,23 +149,17 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "wfcdn.com",
-            "prevalence": 0.9890710382513661
-        },
-        {
-            "domain": "adnxs.com",
-            "prevalence": 0.01092896174863388
+            "prevalence": 1
         }
     ],
     "types": {
+        "XHR": 4,
         "Preflight": 2,
-        "Ping": 2,
-        "XHR": 2,
-        "Other": 2,
-        "Image": 2
+        "Ping": 2
     },
     "nameservers": []
 }

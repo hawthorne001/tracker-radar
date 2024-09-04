@@ -4,13 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000818,
-    "sites": 12,
+    "prevalence": 0.0000953,
+    "sites": 14,
     "subdomains": [
         "static",
-        "client"
+        "client",
+        "service-client"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "memberstack-client.bayviewrx.com",
+            "resolved": "service-client.memberstack.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -23,28 +29,29 @@
             "apis": {
                 "Navigator.prototype.product": 8,
                 "Navigator.prototype.userAgent": 8,
-                "window.localStorage": 8,
+                "window.localStorage": 9,
                 "Document.cookie getter": 8,
                 "window.sessionStorage": 8
             },
-            "sites": 8,
-            "prevalence": 0.0000545,
+            "sites": 9,
+            "prevalence": 0.0000613,
             "cnames": [],
             "responseHashes": [
-                "69a8383d2de860fb682b36e54f5af7ced95367b8ff053dcdd43dc97c24188d82"
+                "6a4f60aaf36081acba7fe01a09eb2218bfb6dc5986eb2f7734d2e8063d8a9c77"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bennyjohnson.com",
+                "bayviewrx.com",
                 "www.dimensions.com",
                 "www.gardenista.com",
                 "www.marinalife.com",
                 "www.mtlblog.com",
                 "www.narcity.com",
                 "www.prizepicks.com",
-                "www.remodelista.com"
+                "www.remodelista.com",
+                "www.seedtime.us"
             ]
         },
         {
@@ -55,49 +62,59 @@
                 "client"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
-            "cnames": [],
-            "responseHashes": [
-                "05fa1cac9cc55d9b9fb3b744a347e375dc5e550de41800805d67229820ba9cf8",
-                "2e4c4fbb0344c7c5871dacc5d6163fe2ac2f56a19af47c1d734637f809c1d1c4",
-                "a8cb501e6b16d6e0534368ed159b44cb1177dfd5e788779771d0ca341eff3b84",
-                "fd2052393d195bb8f5d3c554d6bd62144ef72cbc03d3aa7ff9a28d44f34d87b9"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bennyjohnson.com",
-                "www.dimensions.com",
-                "www.gardenista.com",
-                "www.marinalife.com",
-                "www.prizepicks.com",
-                "www.remodelista.com"
-            ]
-        },
-        {
-            "rule": "memberstack\\.com\\/app-member",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "client"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bennyjohnson.com",
+                "bayviewrx.com",
                 "www.dimensions.com",
                 "www.gardenista.com",
                 "www.marinalife.com",
                 "www.prizepicks.com",
-                "www.remodelista.com"
+                "www.remodelista.com",
+                "www.seedtime.us"
+            ]
+        },
+        {
+            "rule": "memberstack\\.com\\/app-member",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client",
+                "service-client"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000545,
+            "cnames": [
+                {
+                    "original": "memberstack-client.bayviewrx.com",
+                    "resolved": "service-client.memberstack.com"
+                }
+            ],
+            "responseHashes": [
+                "05fa1cac9cc55d9b9fb3b744a347e375dc5e550de41800805d67229820ba9cf8",
+                "2e4c4fbb0344c7c5871dacc5d6163fe2ac2f56a19af47c1d734637f809c1d1c4",
+                "b4e69dabdcb166820b8f5be763e3d68adc90fa53f8c834db155e20072e1a0556",
+                "fd2052393d195bb8f5d3c554d6bd62144ef72cbc03d3aa7ff9a28d44f34d87b9",
+                "a47225d6ab9965210649e6cf040011b2deb39ecbb42f2209459aaeaae0508079"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bayviewrx.com",
+                "www.bayviewrx.com",
+                "www.dimensions.com",
+                "www.gardenista.com",
+                "www.marinalife.com",
+                "www.prizepicks.com",
+                "www.remodelista.com",
+                "www.seedtime.us"
             ]
         },
         {
@@ -111,7 +128,9 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "196f1f58b950e73b3fec3ff785b51c234db168daedd0e3cc513abc07c196bd66"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -147,13 +166,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9473684210526315
+        },
+        {
+            "domain": "memberstack.com",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 8,
-        "XHR": 8,
-        "Preflight": 8
+        "Script": 9,
+        "Preflight": 9,
+        "XHR": 10
     },
     "nameservers": [
         "nick.ns.cloudflare.com",

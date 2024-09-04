@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000389,
-    "sites": 57,
+    "prevalence": 0.000375,
+    "sites": 55,
     "subdomains": [
         "webchat",
         "api",
@@ -71,8 +71,11 @@
                 "webchat"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.language": 1
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -140,10 +143,8 @@
                 "webchat"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "PerformanceTiming.prototype.navigationStart": 1,
-                "NavigatorUAData.prototype.getHighEntropyValues": 1
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -167,11 +168,9 @@
                 "webchat"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
                 "Event.prototype.timeStamp": 2,
-                "PerformanceTiming.prototype.navigationStart": 1,
-                "Navigator.prototype.language": 1,
-                "NavigatorUAData.prototype.getHighEntropyValues": 1
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -220,8 +219,10 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "ac0a2ccc8c6111053bc7180c3714847e4840c520559d1064cd4243579151436c"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -240,15 +241,35 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "ac0a2ccc8c6111053bc7180c3714847e4840c520559d1064cd4243579151436c"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "humanfoodbar.com",
                 "www.drlamcoaching.com"
+            ]
+        },
+        {
+            "rule": "mobilemonkey\\.com\\/js\\/mm_47b7735a-9d75-4888-a632-6ad62ca2e387-05930366\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b0de34647d482b0cc658dd9558a3d0176f704af0231bf95530febd8ae441f5b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "softstarthome.com",
+                "www.softstartrv.com"
             ]
         },
         {
@@ -268,14 +289,14 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "56423457f65c7892d15e3bf28ae21bbec56bac59c76321ccc004a38c22327a90"
+                "b5772c848e96ddca014cd8a7815c0ea44dedc8fa87d33fb6f5baa752c5b5b579"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "mmuid": {
                     "ttl": 31536000,
                     "length": 16,
-                    "prevalence": 0.000013632242981098896,
+                    "prevalence": 0.000013619153978154877,
                     "uniqueness": 0.5
                 }
             },
@@ -297,7 +318,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "56423457f65c7892d15e3bf28ae21bbec56bac59c76321ccc004a38c22327a90"
+                "b5772c848e96ddca014cd8a7815c0ea44dedc8fa87d33fb6f5baa752c5b5b579"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -308,67 +329,21 @@
             ]
         },
         {
-            "rule": "mobilemonkey\\.com\\/js\\/mm_cf9ed7e7-c6f6-44e3-b07b-3a3528cb50a0-57073341\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "c7a5b044c4c045e4e13de506c8d2652c95e595071774094515db32db52841437"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "mmuid": {
-                    "ttl": 31536000,
-                    "length": 16,
-                    "prevalence": 0.000013632242981098896,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "digi.com",
-                "www.digi.com"
-            ]
-        },
-        {
             "rule": "mobilemonkey\\.com\\/js\\/mm_92e62e7d-459d-4405-8944-ec2f7412d69b-77930543\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "static"
             ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c7b5cc9f614e1527571282a7a976201239a18b8676f0ececec371076577e3fd4"
+                "59a74a459ed2c8ccf91fe64cb7caf3de6e29854b90eb7cdb5feacc3e0ec26e22"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "mmuid": {
-                    "ttl": 31536000,
-                    "length": 16,
-                    "prevalence": 0.000013632242981098896,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "goodranchers.com",
@@ -387,7 +362,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c7b5cc9f614e1527571282a7a976201239a18b8676f0ececec371076577e3fd4"
+                "59a74a459ed2c8ccf91fe64cb7caf3de6e29854b90eb7cdb5feacc3e0ec26e22"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -419,7 +394,7 @@
                 "mmuid": {
                     "ttl": 31536000,
                     "length": 16,
-                    "prevalence": 0.000013632242981098896,
+                    "prevalence": 0.000013619153978154877,
                     "uniqueness": 1
                 }
             },
@@ -441,7 +416,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "1cedcb04001b004e39e575ba1129daa862e19f978a02250be876cb53b265c3b1"
+                "380d56b2b4df5f92c24dc01dd711d45708a46bc9d877c75d7129cb0f4e1f944c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -449,51 +424,6 @@
             "exampleSites": [
                 "microminimus.com",
                 "www.microminimus.com"
-            ]
-        },
-        {
-            "rule": "mobilemonkey\\.com\\/js\\/mm_437facc5-e3ec-4b1c-ad99-c198e794b309-17404237\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nextiva.com",
-                "www.nextiva.com"
-            ]
-        },
-        {
-            "rule": "mobilemonkey\\.com\\/js\\/91089066763\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "static"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "55858a18a1bfc2936b9c06621d4c7314eaa499c7fe10c4f84c8ebb0f4afc28c0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nextiva.com",
-                "www.nextiva.com"
             ]
         },
         {
@@ -508,7 +438,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "7d90e0fb5a5e9d52e8ae4c8a3758df71616fe4a4270674be6d6fa4785b752da8"
+                "99b7f310382ea9dca4b8ef8c8bf0c1473616278bd87102a1b216497b5414d9bb"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -530,7 +460,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "7d90e0fb5a5e9d52e8ae4c8a3758df71616fe4a4270674be6d6fa4785b752da8"
+                "99b7f310382ea9dca4b8ef8c8bf0c1473616278bd87102a1b216497b5414d9bb"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -578,15 +508,13 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "3825f96eac91bf9a932fb55ddd3694205304ceba6eda0d84e28df8b5b0490659"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {
                 "mmuid": {
                     "ttl": 31536000,
                     "length": 16,
-                    "prevalence": 0.000013632242981098896,
+                    "prevalence": 0.000013619153978154877,
                     "uniqueness": 1
                 }
             },
@@ -608,7 +536,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "3825f96eac91bf9a932fb55ddd3694205304ceba6eda0d84e28df8b5b0490659"
+                "9762e5990d3fb3ba28b67bad5cf88cfa383426227f1d3c692c880b735ff956b4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -620,20 +548,32 @@
         },
         {
             "rule": "mobilemonkey\\.com\\/js\\/mm_254d81f1-ae5a-45c7-a68f-c401bb5129c2-21973626\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "a2e23c6dd2baf47a65867b3510a58b8efbfba0a97c2787a0b7dc5269c2ef20fa"
+                "07d42f8e922dd07b90a93683133714a6b5394535dd8cfa781b97df54f8abb398"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "mmuid": {
+                    "ttl": 31536000,
+                    "length": 16,
+                    "prevalence": 0.000013619153978154877,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "saltstrong.com",
@@ -652,7 +592,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "a2e23c6dd2baf47a65867b3510a58b8efbfba0a97c2787a0b7dc5269c2ef20fa"
+                "07d42f8e922dd07b90a93683133714a6b5394535dd8cfa781b97df54f8abb398"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -689,32 +629,18 @@
         },
         {
             "rule": "mobilemonkey\\.com\\/js\\/mm_aef7a30b-f0bb-4462-9f86-6cc1ed51ea13-83700348\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "static"
             ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "6684089983a3af6af330db4cce8d072d989a8053e38c6ddce13b58fcc2104bcb"
-            ],
+            "responseHashes": [],
             "type": "Script",
-            "firstPartyCookies": {
-                "mmuid": {
-                    "ttl": 31536000,
-                    "length": 16,
-                    "prevalence": 0.000013632242981098896,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trailersplus.com",
@@ -733,7 +659,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "6684089983a3af6af330db4cce8d072d989a8053e38c6ddce13b58fcc2104bcb"
+                "2ee5b1c1c406e91bcf29412b9dcfd82db5c28942ed3581a5de4518c5ddc57213"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -746,31 +672,31 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00017,
+    "cookies": 0.000123,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.45054945054945056
+            "domain": "first party",
+            "prevalence": 0.4883720930232558
         },
         {
-            "domain": "first party",
-            "prevalence": 0.43956043956043955
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3953488372093023
         },
         {
             "domain": "mm-uxrv.com",
-            "prevalence": 0.08791208791208792
+            "prevalence": 0.09302325581395349
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.02197802197802198
+            "prevalence": 0.023255813953488372
         }
     ],
     "types": {
-        "Script": 46,
+        "Script": 42,
         "Document": 6,
         "Image": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-52.awsdns-06.com",

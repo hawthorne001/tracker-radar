@@ -4,62 +4,40 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
+        "auth",
         "config"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "lrcontent\\.com\\/ciam\\/consent",
+            "rule": "lrcontent\\.com\\/v2\\/LoginRadiusV2\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "config"
+                "auth"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "birminghammail.co.uk",
-                "www.devonlive.com",
-                "www.express.co.uk",
-                "www.liverpoolecho.co.uk",
-                "www.manchestereveningnews.co.uk",
-                "www.mirror.co.uk"
-            ]
-        },
-        {
-            "rule": "lrcontent\\.com\\/ciam\\/consent",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "config"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f9b58fd40e2b3ae1a0ccbcd4369afbcb8e39073016622c550077c63e0799363f"
+                "2c1cd912006884427e5b206fc39d264ff7c80ffb5fbb0935b68eb4b403f8d4e8"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "birminghammail.co.uk",
-                "www.devonlive.com",
-                "www.express.co.uk",
-                "www.liverpoolecho.co.uk",
-                "www.manchestereveningnews.co.uk",
-                "www.mirror.co.uk"
+                "nationalpost.com",
+                "www.cbc.ca"
             ]
         },
         {
@@ -103,6 +81,52 @@
                 "cbc.ca",
                 "www.cbc.ca"
             ]
+        },
+        {
+            "rule": "lrcontent\\.com\\/ciam\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.liverpoolecho.co.uk",
+                "www.manchestereveningnews.co.uk",
+                "www.mirror.co.uk"
+            ]
+        },
+        {
+            "rule": "lrcontent\\.com\\/ciam\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "f9b58fd40e2b3ae1a0ccbcd4369afbcb8e39073016622c550077c63e0799363f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.liverpoolecho.co.uk",
+                "www.manchestereveningnews.co.uk",
+                "www.mirror.co.uk"
+            ]
         }
     ],
     "categories": [],
@@ -111,7 +135,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.7777777777777778
+        },
+        {
+            "domain": "viafoura.net",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "adlightning.com",
@@ -119,9 +147,10 @@
         }
     ],
     "types": {
-        "Preflight": 8,
-        "Fetch": 6,
-        "XHR": 2
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 6,
+        "Fetch": 4
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

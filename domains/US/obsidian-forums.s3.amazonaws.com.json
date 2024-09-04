@@ -13,7 +13,7 @@
     "sites": 2,
     "subdomains": [],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "obsidian-forums\\.s3\\.amazonaws\\.com\\/css_built_14\\/341e4a57816af3ba440d891ca87450ff_framework\\.css\\.gz",
@@ -238,9 +238,13 @@
         {
             "rule": "obsidian-forums\\.s3\\.amazonaws\\.com\\/javascript_global\\/root_library\\.js\\.gz",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Element.prototype.getClientRects": 2,
+                "Event.prototype.timeStamp": 2
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -277,20 +281,40 @@
         },
         {
             "rule": "obsidian-forums\\.s3\\.amazonaws\\.com\\/javascript_global\\/root_framework\\.js\\.gz",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "cookies": 0.0000136,
+            "fingerprinting": 2,
             "subdomains": [],
             "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Notification.permission": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
                 "Date.prototype.getTime": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "64fe54474a0a550d67be83ea1096e1655ceca9fc359c10716f5a267b2135ab19"
+                "351dc2e1b541939276421fc11c725a6807a290368d61d322042d244167e9707f"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "ips4_ipsTimezone": {
+                    "ttl": null,
+                    "length": 16,
+                    "prevalence": 0.000013619153978154877,
+                    "uniqueness": 0.5
+                },
+                "ips4_hasJS": {
+                    "ttl": 86405,
+                    "length": 4,
+                    "prevalence": 0.000013619153978154877,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "obsidian.net",
@@ -369,7 +393,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "325706034bd3d94600730f9e05be3bc6ef3e4e3a723f8785bd169bd1e70ed323"
+                "c236ca3d479fddc86fd0be5227e0e36562c3da1e066791e1bf21af317cecc720"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -384,7 +408,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
             "domain": "first party",
@@ -398,8 +422,8 @@
     },
     "nameservers": [
         "ns-674.awsdns-20.net",
-        "ns-1620.awsdns-10.co.uk",
         "ns-1173.awsdns-18.org",
+        "ns-1620.awsdns-10.co.uk",
         "ns-328.awsdns-41.com"
     ]
 }
