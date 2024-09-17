@@ -9,12 +9,15 @@
     "subdomains": [
         "pbel7-ciam",
         "pbel4-ciam",
-        "pbel1-ciam",
-        "assets"
+        "pbel1-ciam"
     ],
     "cnames": [
         {
             "original": "auth.belmond.com",
+            "resolved": "pbel7-ciam.reach5.co"
+        },
+        {
+            "original": "auth.loropiana.com",
             "resolved": "pbel7-ciam.reach5.co"
         },
         {
@@ -26,7 +29,7 @@
             "resolved": "pbel4-ciam.reach5.co"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "reach5\\.co\\/identity\\/v1\\/config",
@@ -38,9 +41,13 @@
                 "pbel1-ciam"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [
+                {
+                    "original": "auth.loropiana.com",
+                    "resolved": "pbel7-ciam.reach5.co"
+                },
                 {
                     "original": "auth.belmond.com",
                     "resolved": "pbel7-ciam.reach5.co"
@@ -57,15 +64,50 @@
             "responseHashes": [
                 "879f3b8237a7259a9e7d7e42b5417ee1aa34deea0a7e143b322643378d81c5af",
                 "2f7932fb27c7f2daec8b850101fd6a7a5ce892151cfcbeccbd59977b3c40a01e",
+                "ca9f85de5b03f8ae730b3b3686643e4c232ac916e7a4a65967095c0efa3666d7",
                 "916652a5579887aa1a7ba3c86fa73c27e3b72d7d63a703d344245026c247fb3a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "belmond.com",
+                "loropiana.com",
                 "www.belmond.com",
                 "www.kiabi.com",
+                "www.loropiana.com",
+                "www.parcasterix.fr"
+            ]
+        },
+        {
+            "rule": "reach5\\.co\\/identity\\/v1\\/sso\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbel7-ciam",
+                "pbel1-ciam"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "auth.loropiana.com",
+                    "resolved": "pbel7-ciam.reach5.co"
+                },
+                {
+                    "original": "auth.parcasterix.fr",
+                    "resolved": "pbel1-ciam.reach5.co"
+                }
+            ],
+            "responseHashes": [
+                "d86be136e179cf490315dd4f3a70192318a9886d62dc0f7be0e9dedebf96578a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loropiana.com",
+                "www.loropiana.com",
                 "www.parcasterix.fr"
             ]
         },
@@ -102,31 +144,6 @@
                 "www.belmond.com",
                 "www.kiabi.com"
             ]
-        },
-        {
-            "rule": "reach5\\.co\\/hassets\\/sdk\\/identity\\.core\\.2899907d8bcc282c1409\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.appName": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "d6344fe2cbe2d8e422fd51e72fe99332c9e0462f2fcb554c35cf40bfdb06fbcf"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "laredoute.co.uk",
-                "www.laredoute.fr"
-            ]
         }
     ],
     "categories": [],
@@ -134,19 +151,18 @@
     "cookies": 0.0000204,
     "topInitiators": [
         {
-            "domain": "reach5.net",
+            "domain": "kleecks.com",
             "prevalence": 1
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Document": 3,
-        "Script": 2
+        "Fetch": 8,
+        "Document": 3
     },
     "nameservers": [
-        "ns-63.awsdns-07.com",
-        "ns-1015.awsdns-62.net",
         "ns-1447.awsdns-52.org",
-        "ns-1972.awsdns-54.co.uk"
+        "ns-1972.awsdns-54.co.uk",
+        "ns-1015.awsdns-62.net",
+        "ns-63.awsdns-07.com"
     ]
 }

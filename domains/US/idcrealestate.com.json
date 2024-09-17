@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000682,
-    "sites": 1,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
-        "avm-service"
+        "avm-service",
+        "ip-service"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,11 +16,13 @@
         {
             "rule": "idcrealestate\\.com\\/config",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "avm-service"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -33,6 +36,48 @@
                 "premiersothebysrealty.com",
                 "www.premiersothebysrealty.com"
             ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ip-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theagencyre.com",
+                "www.theagencyre.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ip-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f43e568ad5a5860899551abce9fbcd2d327705ea96ddd4f5a691a4808b1d4b89"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theagencyre.com",
+                "www.theagencyre.com"
+            ]
         }
     ],
     "categories": [],
@@ -45,10 +90,12 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns28.worldnic.com",
-        "ns27.worldnic.com"
+        "ns27.worldnic.com",
+        "ns28.worldnic.com"
     ]
 }

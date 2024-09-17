@@ -8,8 +8,8 @@
     "sites": 2,
     "subdomains": [
         "iptv",
-        "chatproxy",
-        "user-monitor"
+        "user-monitor",
+        "chatproxy"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -132,7 +132,7 @@
                 "iptv"
             ],
             "apis": {
-                "window.sessionStorage": 2
+                "window.sessionStorage": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -216,15 +216,13 @@
         },
         {
             "rule": "firestormmedia\\.tv\\/apps\\/voicall\\/js\\/voicall\\.analytics\\.js",
-            "cookies": 0.00000682,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "iptv"
             ],
             "apis": {
-                "Document.cookie getter": 1,
                 "Date.prototype.getTime": 1,
-                "Document.cookie setter": 1,
                 "Navigator.prototype.userAgent": 1,
                 "Screen.prototype.width": 1,
                 "Screen.prototype.height": 1
@@ -236,14 +234,7 @@
                 "5d41fa0253674416fe013e7c968ee279328509dc006f465758a797b8a0935e29"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "uuid": {
-                    "ttl": 31536007,
-                    "length": 36,
-                    "prevalence": 0.000006816121490549448,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "babestation.tv",
@@ -278,6 +269,26 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "user-monitor"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babestation.tv",
+                "www.babestation.tv"
+            ]
+        },
+        {
+            "rule": "firestormmedia\\.tv\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
                 "chatproxy"
             ],
             "apis": {},
@@ -293,33 +304,11 @@
                 "www.babestation.tv",
                 "www.rampant.tv"
             ]
-        },
-        {
-            "rule": "firestormmedia\\.tv\\/socket\\.io\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "user-monitor"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "uuid": 0.000013632242981098896
-            },
-            "exampleSites": [
-                "babestation.tv",
-                "www.babestation.tv"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000682,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
@@ -337,11 +326,11 @@
     "types": {
         "Stylesheet": 10,
         "Script": 13,
-        "WebSocket": 3,
-        "XHR": 2
+        "XHR": 2,
+        "WebSocket": 3
     },
     "nameservers": [
-        "evan.ns.cloudflare.com",
-        "dell.ns.cloudflare.com"
+        "dell.ns.cloudflare.com",
+        "evan.ns.cloudflare.com"
     ]
 }

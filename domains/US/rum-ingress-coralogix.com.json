@@ -4,36 +4,41 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
-    "sites": 5,
+    "prevalence": 0.0000545,
+    "sites": 8,
     "subdomains": [
-        "ingress.us1",
-        "ingress.eu2",
-        "cdn"
+        "cdn",
+        "ingress.eu1",
+        "ingress.eu2"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "rum-ingress-coralogix\\.com\\/browser\\/v1beta\\/logs",
+            "rule": "rum-ingress-coralogix\\.com\\/coralogix\\/browser\\/latest\\/coralogix-browser-sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "ingress.us1",
-                "ingress.eu2"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.sessionStorage": 3,
+                "Date.prototype.getTime": 3
+            },
             "sites": 3,
             "prevalence": 0.0000204,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c704285b893afd8ec2c2e2d21fb4a5d782d539e817b711043d8057948658d0be"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nutanix.com",
-                "www.farfetch.com",
-                "www.surveyjunkie.com"
+                "puma.com",
+                "uk.puma.com",
+                "us.puma.com"
             ]
         },
         {
@@ -41,12 +46,35 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ingress.us1",
+                "ingress.eu1",
                 "ingress.eu2"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "puma.com",
+                "uk.puma.com",
+                "us.puma.com",
+                "www.farfetch.com"
+            ]
+        },
+        {
+            "rule": "rum-ingress-coralogix\\.com\\/browser\\/v1beta\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress.eu1",
+                "ingress.eu2"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
                 "3d23d39a30bb7323f8ccfd64c52cf286138fba4f83e78f7edcf66703b7c23aaa"
@@ -55,34 +83,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nutanix.com",
-                "www.farfetch.com",
-                "www.surveyjunkie.com"
-            ]
-        },
-        {
-            "rule": "rum-ingress-coralogix\\.com\\/coralogix\\/browser\\/1\\.1\\.11\\/coralogix-browser-sdk\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.sessionStorage": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "f9b87173b29de2872be308ca9844713efb92c7d3745813cc818eea86f995f8b0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "surveyjunkie.com",
-                "www.surveyjunkie.com"
+                "puma.com",
+                "uk.puma.com",
+                "us.puma.com",
+                "www.farfetch.com"
             ]
         }
     ],
@@ -92,13 +96,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9019607843137255
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.09803921568627451
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 3,
-        "Script": 2
+        "Script": 3,
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "bob.ns.cloudflare.com",

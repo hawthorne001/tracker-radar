@@ -4,18 +4,27 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000075,
-    "sites": 11,
+    "prevalence": 0.000129,
+    "sites": 19,
     "subdomains": [
         "secure-us",
         "api3",
         "houstonlibrary",
         "region-us",
+        "tamu",
+        "colostate",
         "arlingtonva",
-        "duke",
-        "static-assets-us"
+        "duke"
     ],
     "cnames": [
+        {
+            "original": "booking.lib.buffalo.edu",
+            "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "booking.smu.edu",
+            "resolved": "secure-us.libcal.com"
+        },
         {
             "original": "calendar.boulderlibrary.org",
             "resolved": "secure-us.libcal.com"
@@ -31,6 +40,10 @@
         {
             "original": "libevents.abqlibrary.org",
             "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "rooms.himmelfarb.gwu.edu",
+            "resolved": "region-us.libcal.com"
         }
     ],
     "fingerprinting": 1,
@@ -43,11 +56,12 @@
                 "secure-us",
                 "api3",
                 "houstonlibrary",
-                "region-us"
+                "region-us",
+                "tamu"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 7,
+            "prevalence": 0.0000477,
             "cnames": [
                 {
                     "original": "libevents.abqlibrary.org",
@@ -63,9 +77,12 @@
                 }
             ],
             "responseHashes": [
-                "0812f0d48a6187802a37a9b492e49f1f9f366f2197787e8779672ea7c0028089",
-                "64d84230bf28bb52bc5c8f4ae09768052413ac64163d65b61d340ac088fc38b4",
-                "193ee52834d409b14f958ffea2d9bfc9da6d2098a388892690dbcc931214a421"
+                "aff2f871ab00b5f5f391ab074ba85b392d3322a7119e5b366de128144231398c",
+                "50778c7384e80f1c1d57482a98528b05f73f8c0d07a8ffdf07287206c2653af1",
+                "1be26539c4c818c33320a2178329cdbf62a4e883a6d439197a203421417226a1",
+                "a20818294e79738ffc8691c215cbef09311ad5dc872bffa1fccb4b7740a07402",
+                "ddf748906c48f4349cd1c98bc26c2221a6e776d697b251b2d3f8585e94c710fb",
+                "43dfa01bc12e60e5a9cb869b52e59f45984cca3bf2ee9cf2a857cc3f45219fb0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -74,7 +91,10 @@
                 "abqlibrary.org",
                 "boulderlibrary.org",
                 "houstonlibrary.org",
-                "libraryweb.org"
+                "library.buffalo.edu",
+                "libraryweb.org",
+                "library.tamu.edu",
+                "www.lib.uidaho.edu"
             ]
         },
         {
@@ -83,26 +103,37 @@
             "fingerprinting": 0,
             "subdomains": [
                 "secure-us",
+                "colostate",
                 "api3"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [
                 {
                     "original": "calendar.boulderlibrary.org",
                     "resolved": "secure-us.libcal.com"
+                },
+                {
+                    "original": "booking.smu.edu",
+                    "resolved": "secure-us.libcal.com"
                 }
             ],
             "responseHashes": [
-                "465248a9a18df96780629025570c08607635f1b8f6306d33ed887e95c3c7e9e0"
+                "b7167134f1846a840b1c95502fa642496592cd610c9aa0cd4dc4e574984327b2",
+                "253c1d8505d3af799dd2e4a36de20125e2d84aa70ce537039933d85bdbf484e5",
+                "ff6e9f2742e32cce6cb579a3845e8fe0be9abe7bce2884abba3a8363862a82a3",
+                "541a7a55da86ec62a5f06294f641603290eda0e70b5c0b91dc2072ebad18dc81"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "boulderlibrary.org",
-                "tarlton.law.utexas.edu"
+                "lib.colostate.edu",
+                "lib.asu.edu",
+                "tarlton.law.utexas.edu",
+                "www.smu.edu"
             ]
         },
         {
@@ -110,22 +141,83 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "arlingtonva",
-                "duke"
+                "region-us",
+                "arlingtonva"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gwu.edu",
+                "library.arlingtonva.us"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/1\\.1\\/oauth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-us",
+                "arlingtonva",
+                "duke"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
             "responseHashes": [
-                "7aafb752e36271541629fa958972e84ada4cffc3e1e0f2ac4c883ccb370eb08d"
+                "3d169d1533d49df3406d2aa21f3b4ed26e906fbb8584f433afd1a9d9ff2a4852",
+                "a307f7b8615d6a7bf0dbdc49e6c542fe7aa3a6d1db10ada0258c63fb70ae17e3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arlingtonva.us",
+                "gwu.edu",
+                "library.arlingtonva.us",
                 "library.duke.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "booking.lib.buffalo.edu",
+                    "resolved": "secure-us.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "e096ed87a5826166a70bf15511eabc4f692be527963854c59693cc1f2f7290dd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buffalo.edu",
+                "library.buffalo.edu"
             ]
         },
         {
@@ -140,7 +232,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "14c012f079323e89f1e749f520920b7726b3137ffffe6e7cc96cddf820ba7549"
+                "f1ef894a6c71f5e5978d1cdf0543de5f2958cc0f4c2e3fbc7944b853002cf4ed"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -148,143 +240,6 @@
             "exampleSites": [
                 "duke.edu",
                 "library.duke.edu"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/css_537\\/bootstrap3\\.min\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "6d92dfc1700fd38cd130ad818e23bc8aef697f815b2ea5face2b5dfad22f2e11"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/css_537\\/LibCal_public\\.min\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "e9005560e10868d4fd602b476efa5ee26451d94f9875ab5e6b3cab6210dc06e2"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/js_537\\/jquery\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {
-                "Element.prototype.getClientRects": 1,
-                "Event.prototype.timeStamp": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/js_537\\/bootstrap3\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "9ee2fcff6709e4d0d24b09ca0fc56aade12b4961ed9c43fd13b03248bfb57afe"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/js_537\\/LibCal_public\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "a6219a526147b07600546723b2242b117f7a196cbf377b0fbd9a4522cfa58430"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
-            ]
-        },
-        {
-            "rule": "libcal\\.com\\/js_537\\/selectpicker\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "static-assets-us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "a9a72a2df832d89f280f7ed65c0cd139b2f62cae9a3994a5df04f87ac5afcb73"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brunswickcountync.gov",
-                "www.onlib.org"
             ]
         },
         {
@@ -316,26 +271,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8461538461538461
+            "prevalence": 0.8095238095238095
+        },
+        {
+            "domain": "libguides.com",
+            "prevalence": 0.09523809523809523
         },
         {
             "domain": "sirsi.net",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.047619047619047616
         },
         {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Script": 16,
-        "XHR": 4,
-        "Stylesheet": 4
+        "Script": 14,
+        "Preflight": 2,
+        "XHR": 7
     },
     "nameservers": [
-        "ns-834.awsdns-40.net",
-        "ns-1465.awsdns-55.org",
         "ns-220.awsdns-27.com",
-        "ns-1606.awsdns-08.co.uk"
+        "ns-834.awsdns-40.net",
+        "ns-1606.awsdns-08.co.uk",
+        "ns-1465.awsdns-55.org"
     ]
 }

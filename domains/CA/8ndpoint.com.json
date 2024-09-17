@@ -4,35 +4,45 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "aiatag-api",
-        "encryptinfo-api"
+        "tracking-library"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "8ndpoint\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "8ndpoint\\.com\\/usermetrics\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
-                "aiatag-api",
-                "encryptinfo-api"
+                "tracking-library"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "window.sessionStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "613242bc8573c8b329db7d2594980e3e8005c8415ef7bac04c89dbb2092f39dc"
+                "d92e7bd859debaaab6d96e5eee862fedd0e5518879fd9f12189b5b2f5d0a0431"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "_8dp": {
+                    "ttl": 63072007,
+                    "length": 23,
+                    "prevalence": 0.00010056315366049879,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "oneplus.com",
+                "ecoflow.com",
                 "www.oneplus.com"
             ]
         }
@@ -43,14 +53,18 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2
     },
     "nameservers": [
-        "sky.ns.cloudflare.com",
-        "julian.ns.cloudflare.com"
+        "julian.ns.cloudflare.com",
+        "sky.ns.cloudflare.com"
     ]
 }

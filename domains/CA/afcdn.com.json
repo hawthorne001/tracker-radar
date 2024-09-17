@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "static"
+        "static",
+        "implcit"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,17 +24,21 @@
                 "static"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "window.devicePixelRatio": 1,
                 "Date.prototype.getTime": 1,
+                "Navigator.prototype.connection": 1,
                 "window.innerWidth": 1,
                 "window.innerHeight": 1,
-                "PerformanceTiming.prototype.navigationStart": 1,
-                "window.localStorage": 1
+                "PerformanceTiming.prototype.navigationStart": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "770c12b887ad9476a9b4f1455f5bfd75e9a1e7682375d76a372c09b3ee0ff08a"
+                "ffb53a35d96e6c94e475b7d460365b2028ee1d75e554b1a18d5e448b00dd4236"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -41,6 +46,28 @@
             "exampleSites": [
                 "marmiton.org",
                 "www.marmiton.org"
+            ]
+        },
+        {
+            "rule": "afcdn\\.com\\/s\\/gam\\/156\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "implcit"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f2e1bde51fe9703d6a4476003d6d197e333d8b5d79f4bd1ba3905ec49bc363fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "psychologies.com",
+                "www.topsante.com"
             ]
         }
     ],
@@ -50,19 +77,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
-        },
-        {
-            "domain": "privacy-center.org",
-            "prevalence": 0.0625
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.0625
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
         "ram.ns.cloudflare.com",

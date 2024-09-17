@@ -9,17 +9,46 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [],
     "cnames": [
+        {
+            "original": "api.grow.me",
+            "resolved": "l2.shared.global.fastly.net"
+        },
         {
             "original": "map.mp.nbc.com",
             "resolved": "l2.shared.global.fastly.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "l2\\.shared\\.global\\.fastly\\.net\\/identity\\/v1\\/identify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "map.mp.nbc.com",
+                    "resolved": "l2.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "1daa51c6335a983bb4a6df9766be63b6dd59950a98dd5b4b7c8d523dd91efa17"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbc.com",
+                "www.nbc.com"
+            ]
+        },
         {
             "rule": "l2\\.shared\\.global\\.fastly\\.net\\/webevents\\/v2\\/JS\\/69dedba1e9714049b35bde9e2f9bf059\\/Events",
             "cookies": 0,
@@ -35,7 +64,7 @@
                 }
             ],
             "responseHashes": [
-                "80a4c3d42db61a1184c5b29cdf8420e422893d1d840ec9402c005121b726809c"
+                "f4aa7101df80b0e27958656f91da78e90d03ad08c9d6913bc3eaa1aa10d6bd44"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -43,6 +72,31 @@
             "exampleSites": [
                 "nbc.com",
                 "www.nbc.com"
+            ]
+        },
+        {
+            "rule": "l2\\.shared\\.global\\.fastly\\.net\\/location-privacy-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.grow.me",
+                    "resolved": "l2.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "53d96d962b14f85af77ac83c921f37d8883f4458f2f746e7e10781be1513c200"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvfanatic.com",
+                "www.tvfanatic.com"
             ]
         }
     ],
@@ -57,15 +111,20 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "adobe.com",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 4,
+        "Fetch": 2
     },
     "nameservers": []
 }

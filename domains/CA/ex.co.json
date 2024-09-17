@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "player",
         "collector-1",
         "cdn",
         "sync",
-        "cdn-channels-pixel"
+        "cdn-channels-pixel",
+        "rtb"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -27,26 +28,30 @@
                 "player"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000705,
+            "sites": 9,
+            "prevalence": 0.000905,
             "cnames": [],
             "responseHashes": [
-                "013f555014a564bf59eb4a03a78d6ccc4358f516ef3918e135c3fd39045e4957",
-                "d9f7145bc9c82e220e7368985bb980ec9c9e94396d1a89f3176bd86f3e6b579a",
-                "c44da43d37dbfb008a530afb1356f695c5dba6a567459a9b4fdc7bf50d2df128",
-                "a4f3bc386d077ac3a4838e60bfb1cddb95aed191aa6f0cfe99437f77cfa6a184"
+                "7bce88b6eefed06f68b6f5746e5e32242ba198978bfe00aca42c7c281b436e83",
+                "3517d56154b62049f08235762e62c0dad204008d424b47c0caf62987f7c42b41",
+                "2cdc1fde71c5a3a28904d7ccab55e606897fe8473167d3150f03b84ae358bb07",
+                "1bcf6ecd5e607317d58b04b75ae0b0e6368ab5998ec8d50b62c99d8638a8a46d",
+                "fd1ddcea934aa28182b141a1a1a66bdde9cea6479622ac997180cf31c3c59a7a",
+                "f9be5c6c47276dbe66bfff97453e4ee5628d9bd107f13fe95c99813bff685e0f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chron.com",
+                "cartermatt.com",
+                "smallbusiness.chron.com",
                 "worldpopulationreview.com",
                 "www.dailykos.com",
                 "www.drweil.com",
-                "www.reviewjournal.com",
                 "www.sfgate.com",
-                "www.weekand.com"
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -57,8 +62,8 @@
                 "collector-1"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 9,
+            "prevalence": 0.000905,
             "cnames": [],
             "responseHashes": [
                 "cebe87559cf861d01e9c6b1cefd38ab1db9e13c8fe316b85a296b6cf220f883e"
@@ -67,12 +72,15 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chron.com",
+                "cartermatt.com",
+                "smallbusiness.chron.com",
                 "worldpopulationreview.com",
                 "www.dailykos.com",
                 "www.drweil.com",
-                "www.reviewjournal.com",
-                "www.weekand.com"
+                "www.sfgate.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -93,7 +101,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d4c6fa7cafa7ead89779cdf753e6391e3157d2deab6b0d823de6fceb281df9f1"
+                "b7b0987212612c905bab9e6f51409fda292c4868e4e1a3fca9f046c0cf5fcf9a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -105,7 +113,7 @@
         },
         {
             "rule": "ex\\.co\\/player\\/7d9e2d56-2560-49ed-8f7f-00394e00459d",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 2,
             "subdomains": [
                 "player"
@@ -117,16 +125,25 @@
                 "window.devicePixelRatio": 1,
                 "window.sessionStorage": 1,
                 "window.innerHeight": 1,
-                "window.innerWidth": 1
+                "window.innerWidth": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d91003b8c625b8bdd2088ef4c50e8d407956f2c12bd3bbef0dab48b3823102ee"
+                "f0d271d55437a2384435689ce00935ae5ae9ff4e7cca82621bce1b386f1e2572"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "exco-uid": {
+                    "ttl": 2592000,
+                    "length": 16,
+                    "prevalence": 0.00010056315366049879,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dailykos.com",
@@ -134,33 +151,35 @@
             ]
         },
         {
-            "rule": "ex\\.co\\/player\\/ap\\/4\\.75\\.0-9fa5d31\\/player\\.js",
+            "rule": "ex\\.co\\/player\\/ap\\/4\\.78\\.2-661c3d5\\/player\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "HTMLMediaElement.prototype.canPlayType": 1,
-                "window.innerWidth": 1,
-                "window.innerHeight": 1
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "HTMLMediaElement.prototype.canPlayType": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "d084f551ec6d0757e5d99d605bee65c76e6ac1552ca9cc6a6a5cfe9eed049244"
+                "b892a1f2aaa972fd5a0d37fec08a2b6215ed285cfdb20cf2f7360e4f0642daa7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reviewjournal.com",
-                "www.weekand.com"
+                "dailykos.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -171,8 +190,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "67f05dbc2dec78ac840807860c8c88990c52085c32dfbd37d2378476df1c2184"
@@ -181,8 +200,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reviewjournal.com",
-                "www.weekand.com"
+                "dailykos.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -196,8 +217,8 @@
                 "Document.cookie getter": 2,
                 "window.localStorage": 2
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "2836c7c7ef6e47cbf4165efce908d902460c7c9eec551802c426f4d04d53b15a"
@@ -206,30 +227,58 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reviewjournal.com",
-                "www.weekand.com"
+                "dailykos.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/cookie_sync",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "bc7da4599aae475336ba96c1e7583cfb48d8405a1631a807144321ab8b2939fd"
+                "e50e9680d189bcd598428aeca3ec06c7b568023d8bfed94204b9a276b9ef92c4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reviewjournal.com",
-                "www.weekand.com"
+                "dailykos.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "c956a8bbf43bb56f60d1beefcc5a70f2cb0725083a00e8a0daf423176509fd18"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailykos.com",
+                "www.sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -253,52 +302,183 @@
                 "sfgate.com",
                 "www.weekand.com"
             ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/01932eb0-36fa-4b18-b7ba-4a2e429830a8",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "window.sessionStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "17d40cf8317a4ef378d0b0841683e9566576aa6b2b0c020ad2a91fdd50083ebc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "exco-uid": {
+                    "ttl": 2592000,
+                    "length": 16,
+                    "prevalence": 0.00010056315366049879,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sofascore.com",
+                "www.sofascore.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/ads-home\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "aad5319fa68d4ffea7c51f2994cd36ba8a8fb9a460f3a9f54e49efa059e47d3b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/hls\\/1\\.4\\.10-exco\\/hls\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "64f289189523a38054e3214b1bef7b711fe83e1223af9c0b0ffec5134312f0d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sofascore.com",
+                "www.weekand.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/pb\\/3\\.9\\.0\\/expb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ee09002d002a573d6953feb46c0f154090740e843f715136cc185eb9d7cec358"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sofascore.com",
+                "www.weekand.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/openrtb2\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rtb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weekand.com",
+                "www.wowhead.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5714285714285714
-        },
-        {
-            "domain": "d3plfjw9uod7ab.cloudfront.net",
-            "prevalence": 0.17142857142857143
+            "prevalence": 0.5
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.11428571428571428
+            "prevalence": 0.14583333333333334
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.125
         },
         {
             "domain": "proper.io",
-            "prevalence": 0.05714285714285714
+            "prevalence": 0.041666666666666664
         },
         {
-            "domain": "pubmatic.com",
-            "prevalence": 0.02857142857142857
-        },
-        {
-            "domain": "smartadserver.com",
-            "prevalence": 0.02857142857142857
+            "domain": "doubleclick.net",
+            "prevalence": 0.020833333333333332
         },
         {
             "domain": "sfgate.com",
-            "prevalence": 0.02857142857142857
+            "prevalence": 0.020833333333333332
+        },
+        {
+            "domain": "fanbyte.com",
+            "prevalence": 0.020833333333333332
         }
     ],
     "types": {
-        "Fetch": 9,
-        "XHR": 6,
-        "Script": 8,
-        "Document": 2,
+        "Fetch": 18,
+        "XHR": 9,
+        "Script": 19,
+        "Document": 8,
         "Image": 2
     },
     "nameservers": [
         "ns-709.awsdns-24.net",
+        "ns-1048.awsdns-03.org",
         "ns-1853.awsdns-39.co.uk",
-        "ns-141.awsdns-17.com",
-        "ns-1048.awsdns-03.org"
+        "ns-141.awsdns-17.com"
     ]
 }

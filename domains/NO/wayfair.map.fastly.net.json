@@ -12,9 +12,14 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "www",
         "t"
     ],
     "cnames": [
+        {
+            "original": "prx.wayfair.com",
+            "resolved": "www.wayfair.map.fastly.net"
+        },
         {
             "original": "s.wayfair.com",
             "resolved": "t.wayfair.map.fastly.net"
@@ -24,8 +29,35 @@
             "resolved": "t.wayfair.map.fastly.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "wayfair\\.map\\.fastly\\.net\\/px\\/xhr\\/api\\/v2\\/collector",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "prx.wayfair.com",
+                    "resolved": "www.wayfair.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "ade2573bd955bf0e22933f97c7fee46fd9396fb32e398c4bc4b8e6c134a46af7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wayfair.com",
+                "www.wayfair.com"
+            ]
+        },
         {
             "rule": "wayfair\\.map\\.fastly\\.net\\/events\\/single",
             "cookies": 0,
@@ -144,25 +176,21 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "wfcdn.com",
-            "prevalence": 0.9692737430167597
-        },
-        {
-            "domain": "tiktok.com",
-            "prevalence": 0.025139664804469275
+            "prevalence": 0.980544747081712
         },
         {
             "domain": "adnxs.com",
-            "prevalence": 0.00558659217877095
+            "prevalence": 0.019455252918287938
         }
     ],
     "types": {
+        "XHR": 4,
         "Preflight": 2,
         "Ping": 2,
-        "XHR": 2,
         "Image": 2
     },
     "nameservers": []

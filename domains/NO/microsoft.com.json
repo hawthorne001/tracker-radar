@@ -9,15 +9,16 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0013,
-    "sites": 13,
+    "prevalence": 0.00161,
+    "sites": 16,
     "subdomains": [
         "wcpstatic",
         "browser.events.data",
+        "minecraftprivacy",
+        "get",
         "browser.pipe.aria",
         "eu-mobile.events.data",
-        "get",
-        "minecraftprivacy"
+        "edge-auth"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -44,25 +45,26 @@
             "exampleSites": [
                 "azure.github.io",
                 "clipchamp.com",
+                "education.minecraft.net",
                 "microsoft.github.io",
-                "www.flightsimulator.com",
                 "www.minecraft.net"
             ]
         },
         {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0.000301,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
                 "browser.events.data"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "5f6734210e174fc49a6f089b5214e07bc3f7f042ea3c3245605bfcb4bebe7eda",
-                "61d4270665bcef5929b6e563712d11629dee6019a147e6e9af5553a906413ee7",
+                "2ae99d18dc09f3a48b9838f1d6c9ad07937ae54b662fa6d9ac2fbd40a83c46d2",
+                "43649884792fde02d5cacf8c8a33b280e313b995f70eef6622786d04e1daf2d0",
+                "4405e5da4f8e196bfe43fa967e1e0da8baba4f8b000d974b103009fd6e52d9cf",
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
             "type": "XHR",
@@ -71,6 +73,8 @@
             "exampleSites": [
                 "azure.github.io",
                 "clipchamp.com",
+                "education.minecraft.net",
+                "feedback.minecraft.net",
                 "www.minecraft.net",
                 "www.trekbikes.com"
             ]
@@ -83,8 +87,8 @@
                 "browser.events.data"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -93,6 +97,38 @@
             "exampleSites": [
                 "azure.github.io",
                 "clipchamp.com",
+                "education.minecraft.net",
+                "feedback.minecraft.net",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "minecraftprivacy",
+                "get"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "d5f1fb4afa3ea2b862ac9da6aaf0460ea2cf2447d4009cb7cd6acea165d8d7e3",
+                "c7007062036a9e0ffcbbaae633abcf17f787797afcfd93cd97cad50f4123e040",
+                "3495d1b3d7385e66c00e4b93708359a87db36951c08357a91751ef8cdbf2bbef"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "feedback.minecraft.net",
+                "vsco.co",
                 "www.minecraft.net"
             ]
         },
@@ -121,29 +157,30 @@
             ]
         },
         {
-            "rule": "microsoft\\.com\\/iframe\\.html",
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
-                "get",
-                "minecraftprivacy"
+                "edge-auth"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b51b5e88d2b930da192551a0a512f4c5366118516e6e79e5bfe019716eddf075"
+                "33cc6e61cbb1addafa75cc8ed40216823ee7e50631bb8d2b71eda77ca81a77f3"
             ],
-            "type": "Document",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vsco.co",
-                "www.minecraft.net"
+                "nationalpost.com",
+                "www.salon.com"
             ]
         }
     ],
@@ -154,38 +191,42 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000502,
     "topInitiators": [
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.4166666666666667
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.3888888888888889
+            "prevalence": 0.4634146341463415
         },
         {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.08333333333333333
+            "domain": "azureedge.net",
+            "prevalence": 0.2682926829268293
         },
         {
             "domain": "azure.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.12195121951219512
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.07317073170731707
+        },
+        {
+            "domain": "postmedia.digital",
+            "prevalence": 0.024390243902439025
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.024390243902439025
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.024390243902439025
         }
     ],
     "types": {
-        "Script": 5,
-        "XHR": 7,
-        "Preflight": 3,
-        "Document": 2
+        "Script": 7,
+        "XHR": 9,
+        "Preflight": 5,
+        "Document": 4
     },
     "nameservers": [
         "ns1-39.azure-dns.com",

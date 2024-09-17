@@ -4,16 +4,39 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "dep"
+        "dep",
+        "fabulous"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "hmgroup\\.com\\/v1\\/idsync\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dep"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cos.com",
+                "www2.hm.com"
+            ]
+        },
+        {
+            "rule": "hmgroup\\.com\\/v1\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -31,31 +54,56 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cos.com",
-                "www.stories.com",
+                "www.cos.com",
                 "www2.hm.com"
             ]
         },
         {
-            "rule": "hmgroup\\.com\\/v1\\/",
+            "rule": "hmgroup\\.com\\/files\\/fabulous\\.bundle\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "dep"
+                "fabulous"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "12f2953248b25e49687cfb3f9d6e9cfc2fbeab67a9d394effd3d6ad45c96e11c"
             ],
-            "type": "Ping",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cos.com",
-                "www.cos.com",
-                "www.stories.com",
+                "hm.com",
+                "www2.hm.com"
+            ]
+        },
+        {
+            "rule": "hmgroup\\.com\\/files\\/datafile\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fabulous"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0821c265ef97e50972233be751321857fcd28eedf502c63be3f29f8f12c30dda"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hm.com",
                 "www2.hm.com"
             ]
         }
@@ -65,23 +113,25 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.7
+            "domain": "first party",
+            "prevalence": 0.631578947368421
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3
+            "domain": "tiqcdn.com",
+            "prevalence": 0.3684210526315789
         }
     ],
     "types": {
-        "Ping": 7
+        "Ping": 5,
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "a1-139.akam.net",
-        "a11-66.akam.net",
+        "a12-67.akam.net",
         "a28-64.akam.net",
         "a5-65.akam.net",
-        "a12-67.akam.net",
+        "a11-66.akam.net",
+        "a1-139.akam.net",
         "a8-66.akam.net"
     ]
 }

@@ -12,13 +12,67 @@
     "prevalence": 0.000502,
     "sites": 5,
     "subdomains": [
-        "get",
         "onetag-geo",
-        "signal-beacon"
+        "signal-beacon",
+        "get",
+        "connect-metrics-collector",
+        "signal-metrics-collector-beta"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "s-onetag\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "onetag-geo"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "c5df855bb7f3551f87eef4460c632047936ad10699f9c1bc5b4495a8751ae9ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotnettutorials.net",
+                "edition.cnn.com",
+                "liveuamap.com",
+                "www.cnn.com",
+                "www.yourdictionary.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/beacon\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "signal-beacon"
+            ],
+            "apis": {
+                "window.localStorage": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "59ac7e0e835546751a1acf6fcb71a35bf336b3fee79a513b67bb980effbdb280"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotnettutorials.net",
+                "edition.cnn.com",
+                "liveuamap.com",
+                "www.cnn.com",
+                "www.yourdictionary.com"
+            ]
+        },
         {
             "rule": "s-onetag\\.com\\/c15ddde9-ec7d-4a49-b8ca-7a21bc4b943b\\/tag\\.min\\.js",
             "cookies": 0,
@@ -44,54 +98,23 @@
             ]
         },
         {
-            "rule": "s-onetag\\.com\\/",
+            "rule": "s-onetag\\.com\\/metrics",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "onetag-geo"
+                "connect-metrics-collector",
+                "signal-metrics-collector-beta"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "c5df855bb7f3551f87eef4460c632047936ad10699f9c1bc5b4495a8751ae9ae"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnn.com",
-                "www.cnn.com",
-                "www.gumtree.com",
-                "www.myjewishlearning.com",
-                "www.yourdictionary.com"
-            ]
-        },
-        {
-            "rule": "s-onetag\\.com\\/beacon\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "signal-beacon"
-            ],
-            "apis": {
-                "window.localStorage": 5
-            },
-            "sites": 5,
-            "prevalence": 0.000502,
-            "cnames": [],
-            "responseHashes": [
-                "59ac7e0e835546751a1acf6fcb71a35bf336b3fee79a513b67bb980effbdb280"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cnn.com",
-                "www.cnn.com",
-                "www.gumtree.com",
-                "www.myjewishlearning.com",
+                "yourdictionary.com",
                 "www.yourdictionary.com"
             ]
         }
@@ -105,11 +128,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.2222222222222222
+            "domain": "ezojs.com",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "htlbid.com",
@@ -121,13 +144,14 @@
         }
     ],
     "types": {
+        "Fetch": 5,
         "Script": 7,
-        "Fetch": 5
+        "Ping": 2
     },
     "nameservers": [
-        "ns-697.awsdns-23.net",
+        "ns-13.awsdns-01.com",
         "ns-1395.awsdns-46.org",
         "ns-1550.awsdns-01.co.uk",
-        "ns-13.awsdns-01.com"
+        "ns-697.awsdns-23.net"
     ]
 }

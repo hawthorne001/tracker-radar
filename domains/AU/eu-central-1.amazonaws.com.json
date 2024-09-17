@@ -13,7 +13,8 @@
     "sites": 6,
     "subdomains": [
         "rkkck31tec.execute-api",
-        "cognito-identity"
+        "cognito-identity",
+        "dataplane.rum"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -26,15 +27,17 @@
                 "rkkck31tec.execute-api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "charlieintel.com",
+                "loopearplugs.com",
+                "au.loopearplugs.com",
+                "www.charlieintel.com",
                 "www.dexerto.com"
             ]
         },
@@ -49,8 +52,72 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seton.net.au",
+                "www.traveluniverse.com.au"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
             "responseHashes": [
-                "825efaba4ef86e6d05cbfd99fecfcde6d35e007cfe688f2624d829c011f5c46e"
+                "065be8c91e93b0e44287459f3fb08c500ee5395f19f77c7a9bc01b703b2f9fc5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seton.net.au",
+                "www.seton.net.au"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/438002c3-e7c6-4931-8f3a-1a6c4b38738f",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seton.net.au",
+                "www.seton.net.au"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "36dfb9c56fdb16d244256090c37e85759491263ee3b44104ff5dae2bf7bbc21a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -68,30 +135,35 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.4166666666666667
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.25
         },
         {
             "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "sooqr.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 2,
+        "Fetch": 8,
+        "Preflight": 2,
         "XHR": 2
     },
     "nameservers": [
-        "ns1.amzndns.com",
-        "ns1.amzndns.net",
-        "ns1.amzndns.org",
-        "ns2.amzndns.co.uk",
         "ns2.amzndns.com",
-        "ns2.amzndns.net",
+        "ns1.amzndns.co.uk",
+        "ns2.amzndns.co.uk",
+        "ns1.amzndns.com",
         "ns2.amzndns.org",
-        "ns1.amzndns.co.uk"
+        "ns1.amzndns.org",
+        "ns2.amzndns.net",
+        "ns1.amzndns.net"
     ]
 }
