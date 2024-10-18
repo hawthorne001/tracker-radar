@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
+        "session-replay",
+        "logs",
         "rum",
-        "logs"
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,14 +25,14 @@
             "subdomains": [],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000602,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "3598eac34dbd553271add945d35115d6fbbb78fc00c2fe190461e8dc8fe4adf5",
-                "db7bfc92886c918ddbf1f283444cde36f7efc084534d88ab81c934482e70ee8e",
-                "6df887294144eb1a1a278d6d30b927b28b1dddf19d48ed72380e6b33597091b8",
-                "7020ed87c73fad630eda5baef962249d0bbe476fd516bf33d695ef14ad2bed0f",
-                "75a54bff05e716418f59dc9e92ef37587b140fe5f98d6607e4ba7e1a3f4d02a0"
+                "5b2a3f5639b01b35a9530cf84eb272bdf333ff72304bed4a1b87822997c04938",
+                "fe80f805a42836b50db1077680596c54793678b57cd8ff907512f404548fbb8a",
+                "8155b055137a197ac1a0515cd612eb91279a2389b9077e594cdfd3a8424081d3",
+                "3b6a33a8024ea1527907ff2b9dcfda89a6df592afca46da19b4f867fb542679b",
+                "24bc5bd5845c1aebe67a33d860d6b35fb7ad84af05e69ea04c1f86822febd467"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -41,7 +43,51 @@
                 "de.toyota.ch",
                 "fr.toyota.ch",
                 "knauf.com",
-                "www.migros.ch"
+                "www.just-eat.ch"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fe683d06de43b97e79fab00602e7c0bb72b62cec72933e35beb53e0eb4e61d12"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lexus.ch",
+                "parkingportal.ch"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f6d6343945a2c505d66ca7ba088c2122e948bda87130528701e7fc724fa57de7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polymarket.com",
+                "www.directferries.de"
             ]
         },
         {
@@ -93,23 +139,21 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "logs"
+                "csp-report"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "48854f48c41f7d893ebd54fc40de252e0e99c3352bf818e7a11ccc45da3fe3da",
-                "5f86c1aa982ba6c5072ad4503340b70dbb13964e633828e0053b655099414225"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "blablacar.fr",
-                "www.blablacar.fr",
-                "www.directferries.de"
+                "eurowings.com",
+                "www.eurowings.com"
             ]
         }
     ],
@@ -119,29 +163,27 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.7142857142857143
-        },
-        {
-            "domain": "blablacar.com",
-            "prevalence": 0.11428571428571428
+            "prevalence": 0.6444444444444445
         },
         {
             "domain": "first party",
-            "prevalence": 0.08571428571428572
+            "prevalence": 0.28888888888888886
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08571428571428572
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Fetch": 12,
-        "Preflight": 3
+        "Fetch": 11,
+        "XHR": 2,
+        "Preflight": 3,
+        "Other": 2
     },
     "nameservers": [
+        "ns-cloud-e1.googledomains.com",
         "ns-cloud-e3.googledomains.com",
         "ns-cloud-e2.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e1.googledomains.com"
+        "ns-cloud-e4.googledomains.com"
     ]
 }

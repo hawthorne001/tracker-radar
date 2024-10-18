@@ -4,15 +4,41 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000205,
+    "sites": 3,
     "subdomains": [
+        "chat-window",
         "chatwindow-v2.api",
         "chatwindow.api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "kmblabs\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat-window"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9a04905effbe7fbf6f1067edcb207a029c7128ca9b4a819ae7eb8769800edf99"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adecco.fr",
+                "www.century21.fr"
+            ]
+        },
         {
             "rule": "kmblabs\\.com\\/config",
             "cookies": 0,
@@ -22,17 +48,16 @@
                 "chatwindow.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [
-                "07c0edbb5bc8027d5b90ece0cc91616e29a00b566cc3ae919976f31b34f81b16"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "century21.fr",
+                "adecco.fr",
+                "www.century21.fr",
                 "www.laforet.com"
             ]
         },
@@ -45,15 +70,19 @@
                 "chatwindow.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "a84f32ba12ad4cf170573a631e40594f4f048f4659fc573216d27f28afec41a8",
+                "07c0edbb5bc8027d5b90ece0cc91616e29a00b566cc3ae919976f31b34f81b16"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "century21.fr",
+                "adecco.fr",
+                "www.century21.fr",
                 "www.laforet.com"
             ]
         }
@@ -63,17 +92,22 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "kick-my-bot.s3-eu-west-1.amazonaws.com",
-            "prevalence": 0.5
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
         "ns10.ovh.net",

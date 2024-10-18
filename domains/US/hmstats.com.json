@@ -4,25 +4,25 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
+    "prevalence": 0.000041,
     "sites": 6,
     "subdomains": [
         "www",
         "s.update"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "hmstats\\.com\\/3pcc\\/start",
-            "cookies": 0.0000272,
+            "cookies": 0.0000273,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000272,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
                 "b0db750006509669f3cb50554a0e47fc2656e414676feb6dc5b3a27ff040ff31"
@@ -39,20 +39,30 @@
         },
         {
             "rule": "hmstats\\.com\\/3pcc\\/complete",
-            "cookies": 0.0000272,
-            "fingerprinting": 0,
+            "cookies": 0.0000273,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 4,
-            "prevalence": 0.0000272,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
                 "b0db750006509669f3cb50554a0e47fc2656e414676feb6dc5b3a27ff040ff31"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "hmcthirdparty": {
+                    "ttl": 60,
+                    "length": 2,
+                    "prevalence": 0.00000682640453273261,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "decoist.com",
@@ -70,10 +80,11 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000272,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "21b4918486550435d62dc0e7ee30bdebe37b963aef1ff97ee697c42556eacab9"
+                "42dc5f5abfb1a7e46e2f7238d55052616398f551554e493ef5faccc568aafa6b",
+                "300c4666ef61c3865a48522296480e5dc2b7f1819fc942915f5ba4c38868a9b0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -84,20 +95,45 @@
                 "www.thevintagenews.com",
                 "www.warhistoryonline.com"
             ]
+        },
+        {
+            "rule": "hmstats\\.com\\/2\\/2\\.146\\.0\\/486951\\/AwxRhwsFBGWCP13I\\/postback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s.update"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "warhistoryonline.com",
+                "www.warhistoryonline.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.000041,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Document": 8,
-        "Script": 4
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
         "pdns11.domaincontrol.com",

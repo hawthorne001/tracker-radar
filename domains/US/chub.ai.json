@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "api"
+        "api",
+        "odo"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "chub\\.ai\\/api\\/characters\\/download",
@@ -21,7 +22,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -35,6 +36,53 @@
             ]
         },
         {
+            "rule": "chub\\.ai\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "odo"
+            ],
+            "apis": {
+                "Navigator.prototype.webdriver": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "characterhub.org",
+                "www.characterhub.org"
+            ]
+        },
+        {
+            "rule": "chub\\.ai\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "odo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "characterhub.org",
+                "www.characterhub.org"
+            ]
+        },
+        {
             "rule": "chub\\.ai\\/search",
             "cookies": 0,
             "fingerprinting": 0,
@@ -43,10 +91,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e19c8e5f6a07b8843f8dee70bb0d3d9b8849011f5db88ca7bcd0f209c24887a8"
+                "362bfdac208f18188d943cc00ad3a99fcc4592d918c80b3aa1faa81a6980141d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -67,10 +115,12 @@
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 4,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "sage.ns.cloudflare.com",
-        "angelina.ns.cloudflare.com"
+        "angelina.ns.cloudflare.com",
+        "sage.ns.cloudflare.com"
     ]
 }

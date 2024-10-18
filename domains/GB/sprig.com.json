@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -15,31 +16,75 @@
         {
             "rule": "sprig\\.com\\/shim\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
                 "window.sessionStorage": 6,
                 "window.localStorage": 6,
-                "window.indexedDB": 6
+                "window.indexedDB": 6,
+                "Navigator.prototype.storage": 5
             },
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000602,
             "cnames": [],
             "responseHashes": [
-                "a6a10759097db886e581ff34a0b28693b7cbfa96a750b09cc9428fbfeedd890c"
+                "e130f33fbe0e71af43390a2ac38426865b6ff99a0890acbb9f10c951632b249d",
+                "a2dbbc41423dff2ef975c5d6b5fc6e636c38c1fe818e38bedd50e4488b86d44f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bibleproject.com",
-                "reverb.com",
                 "webflow.com",
+                "www.getagent.co.uk",
+                "www.liveauctioneers.com",
                 "www.roku.com",
                 "www.surfline.com",
                 "www.the-saleroom.com"
+            ]
+        },
+        {
+            "rule": "sprig\\.com\\/sdk\\/1\\/visitors\\/f8a96c13-3d1a-4853-baa9-7ee866ff580f\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getagent.co.uk",
+                "www.getagent.co.uk"
+            ]
+        },
+        {
+            "rule": "sprig\\.com\\/sdk\\/1\\/visitors\\/f8a96c13-3d1a-4853-baa9-7ee866ff580f\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b21cee84ca5d680dc82a1d3ce15da45b165cd89b219be5c4f0c9e7cdc504c300"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getagent.co.uk",
+                "www.getagent.co.uk"
             ]
         }
     ],
@@ -49,23 +94,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7368421052631579
-        },
-        {
-            "domain": "reverb-assets.com",
-            "prevalence": 0.10526315789473684
+            "prevalence": 0.8095238095238095
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.10526315789473684
-        },
-        {
-            "domain": "openreplay.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.19047619047619047
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1076.awsdns-06.org",

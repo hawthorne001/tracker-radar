@@ -4,9 +4,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "freiburger-nachrichten.es.eu-central-2.aws",
+        "mpb-production-elk.apm.europe-west2.gcp",
         "rightmove-rum-apm.apm.europe-west2.gcp",
         "deloitte-com-prod.es.northeurope.azure"
     ],
@@ -14,10 +16,53 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "elastic-cloud\\.com\\/news_translations\\/_search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "freiburger-nachrichten.es.eu-central-2.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freiburger-nachrichten.ch",
+                "www.freiburger-nachrichten.ch"
+            ]
+        },
+        {
+            "rule": "elastic-cloud\\.com\\/news_translations\\/_search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "freiburger-nachrichten.es.eu-central-2.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c620d82df9b9d808ad43a532d0d71ffd0dd62e034387b53efa25eae7ad7a4512"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freiburger-nachrichten.ch",
+                "www.freiburger-nachrichten.ch"
+            ]
+        },
+        {
             "rule": "elastic-cloud\\.com\\/intake\\/v2\\/rum\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "mpb-production-elk.apm.europe-west2.gcp",
                 "rightmove-rum-apm.apm.europe-west2.gcp"
             ],
             "apis": {},
@@ -31,7 +76,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rightmove.co.uk",
+                "mpb.com",
+                "www.rightmove.co.uk"
+            ]
+        },
+        {
+            "rule": "elastic-cloud\\.com\\/intake\\/v2\\/rum\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpb-production-elk.apm.europe-west2.gcp",
+                "rightmove-rum-apm.apm.europe-west2.gcp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mpb.com",
                 "www.rightmove.co.uk"
             ]
         },
@@ -47,7 +113,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e9b799bc3e018b1db95fe91df04eb8d13c2245c0d9d71ca89a214660e6fac052"
+                "d30594f6310b75e1553c86ce6f0a00a88da9b4352a86199e1121eb85d7544828"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -68,8 +134,9 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "XHR": 2
+        "Preflight": 4,
+        "XHR": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-729.awsdns-27.net",
