@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "apil1"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,21 +16,48 @@
         {
             "rule": "spinnaker-js\\.com\\/rc\\/19174\\/scripts\\/s\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "2da38b5d5a8aca1fc64bdd32cb444ad738d49010a1a28e4933ac3d50cc84af6b"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "booking.com",
                 "partner.booking.com"
+            ]
+        },
+        {
+            "rule": "spinnaker-js\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apil1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "booking.com",
+                "www.jotun.com"
             ]
         }
     ],
@@ -43,10 +71,11 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "magica.drlinux.no",
-        "skrue.drlinux.no"
+        "skrue.drlinux.no",
+        "magica.drlinux.no"
     ]
 }

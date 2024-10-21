@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "i.w",
         "a.w"
     ],
     "cnames": [
@@ -17,10 +18,41 @@
         {
             "original": "cm.bilibili.com",
             "resolved": "a.w.bilicdn1.com"
+        },
+        {
+            "original": "data.bilibili.tv",
+            "resolved": "i.w.bilicdn1.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "bilicdn1\\.com\\/log\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i.w"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data.bilibili.tv",
+                    "resolved": "i.w.bilicdn1.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bilibili.tv",
+                "www.bilibili.tv"
+            ]
+        },
         {
             "rule": "bilicdn1\\.com\\/x\\/kv-frontend\\/namespace\\/data",
             "cookies": 0,
@@ -38,7 +70,7 @@
                 }
             ],
             "responseHashes": [
-                "da25c7013b58310117216b7a48ea06d136e97712c7936ba48a894792708d26df"
+                "d0d6f7dad42e288f502eb94a8038cc8f9528cafef5a309cb40a36a091fc4affb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -65,7 +97,7 @@
                 }
             ],
             "responseHashes": [
-                "f8917c9a7d378b4082c71b5572574e67c6e6be60dc15f89db1e7cc145b9bf9de"
+                "7cf4df39adafc8bf7680c9d6e53093a88119e3a5057a387628d3c08c81052f19"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -144,7 +176,7 @@
                 }
             ],
             "responseHashes": [
-                "0e76f6dad876a1e52eab5bff17fed4bc2f5c878beb88532e6e9e8d84c710b9e5"
+                "a5a626acfddaa19c283f9467719210ac19cfae5937c96a7c95ed64f56c166b2d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -161,16 +193,21 @@
     "topInitiators": [
         {
             "domain": "hdslb.com",
-            "prevalence": 1
+            "prevalence": 0.625
+        },
+        {
+            "domain": "bstarstatic.com",
+            "prevalence": 0.375
         }
     ],
     "types": {
+        "Ping": 2,
         "XHR": 4,
         "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": [
-        "ns3.dnsv5.com",
-        "ns4.dnsv5.com"
+        "ns4.dnsv5.com",
+        "ns3.dnsv5.com"
     ]
 }

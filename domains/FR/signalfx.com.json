@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "rum-ingest.us1",
         "rum-ingest.eu0"
@@ -13,6 +13,30 @@
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "signalfx\\.com\\/v1\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.us1",
+                "rum-ingest.eu0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpconnected.com",
+                "instantink.hpconnected.com",
+                "www.reezocar.com"
+            ]
+        },
         {
             "rule": "signalfx\\.com\\/v1\\/rum",
             "cookies": 0,
@@ -34,28 +58,6 @@
                 "hpsmart.com",
                 "www.hpsmart.com"
             ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.eu0"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "reezocar.com",
-                "www.reezocar.com"
-            ]
         }
     ],
     "categories": [],
@@ -64,12 +66,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7
+        },
+        {
+            "domain": "instantink.com",
+            "prevalence": 0.3
         }
     ],
     "types": {
-        "Ping": 2,
-        "XHR": 2
+        "XHR": 3,
+        "Ping": 2
     },
     "nameservers": [
         "ns-5.awsdns-00.com",

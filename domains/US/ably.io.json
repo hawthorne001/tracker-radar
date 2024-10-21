@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000749,
-    "sites": 11,
+    "prevalence": 0.0000683,
+    "sites": 10,
     "subdomains": [
-        "cdn",
+        "ta-rest",
         "turing-group-rest",
         "rest",
-        "turing-group-realtime",
+        "ta-realtime",
         "realtime",
-        "menti-cname-realtime"
+        "turing-group-realtime",
+        "menti-cname-realtime",
+        "cdn"
     ],
     "cnames": [
         {
@@ -25,6 +27,66 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "ably\\.io\\/comet\\/connect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ta-rest",
+                "turing-group-rest",
+                "rest"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [
+                "2b1a07e52c2fe33895ca2337de70d694ac0c8051c81cf7ead8cc18433a318844",
+                "a89429711c477280393239331e54db7aec6156680e8c46a59e8c7c12ba6bdff0",
+                "689595c221de07147c86de777eb7977201dec081e8a6ecfb5ca049f2c4253875"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ausopen.com",
+                "ridertools.metrarail.com",
+                "rokfin.com",
+                "watch.thechosen.tv"
+            ]
+        },
+        {
+            "rule": "ably\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ta-realtime",
+                "realtime",
+                "turing-group-realtime",
+                "menti-cname-realtime"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "realtime.ably.menti.com",
+                    "resolved": "menti-cname-realtime.ably.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ausopen.com",
+                "hubstaff.com",
+                "ridertools.metrarail.com",
+                "rokfin.com",
+                "watch.thechosen.tv",
+                "www.menti.com"
+            ]
+        },
         {
             "rule": "ably\\.io\\/lib\\/ably\\.min-1\\.js",
             "cookies": 0,
@@ -38,7 +100,7 @@
                 "window.localStorage": 3
             },
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "9a64625eb9dfdc04e88c65f33f03521c11a96d2252e4e0f02e05de3de0624d16"
@@ -53,37 +115,7 @@
             ]
         },
         {
-            "rule": "ably\\.io\\/comet\\/connect",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "turing-group-rest",
-                "rest"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
-            "cnames": [],
-            "responseHashes": [
-                "36bc65f7bcaea8010cb65db4074fcc9f8583d5904f0b8028101a9309057121b9",
-                "952b32ab730bdef81fe4dbc56b05355e65b28899ccbafcccfdba3f3b8b18941f",
-                "a5fbd68d76af0e46bd4d4c6c86c1af6f6833bf475c25f33aa32eb3b4f7a4a261",
-                "d6e9a83d38b894a63e846a4d366100040c0404e62d370994491dbf99d7f7a527"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "metrarail.com",
-                "ridertools.metrarail.com",
-                "rokfin.com",
-                "watch.thechosen.tv",
-                "www.chelseafc.com",
-                "www.southamptonfc.com"
-            ]
-        },
-        {
-            "rule": "ably\\.io\\/comet\\/e7dhyb_8ABfuWy!mNe73nENEdAXjz3spNr3FM-545dd\\/send",
+            "rule": "ably\\.io\\/comet\\/86fbGt1DwBhVPD!kyjtg3PXmsARcR9G9OwEqk-96936\\/send",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -91,7 +123,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
@@ -105,7 +137,7 @@
             ]
         },
         {
-            "rule": "ably\\.io\\/comet\\/e7dhyb_8ABfuWy!mNe73nENEdAXjz3spNr3FM-545dd\\/send",
+            "rule": "ably\\.io\\/comet\\/86fbGt1DwBhVPD!kyjtg3PXmsARcR9G9OwEqk-96936\\/send",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -113,7 +145,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -125,39 +157,7 @@
             ]
         },
         {
-            "rule": "ably\\.io\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "turing-group-realtime",
-                "realtime",
-                "menti-cname-realtime"
-            ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000477,
-            "cnames": [
-                {
-                    "original": "realtime.ably.menti.com",
-                    "resolved": "menti-cname-realtime.ably.io"
-                }
-            ],
-            "responseHashes": [],
-            "type": "WebSocket",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "metrarail.com",
-                "ridertools.metrarail.com",
-                "rokfin.com",
-                "watch.thechosen.tv",
-                "www.chelseafc.com",
-                "www.menti.com",
-                "www.southamptonfc.com"
-            ]
-        },
-        {
-            "rule": "ably\\.io\\/comet\\/e7dhyb_8ABfuWy!mNe73nENEdAXjz3spNr3FM-545dd\\/recv",
+            "rule": "ably\\.io\\/comet\\/86fbGt1DwBhVPD!kyjtg3PXmsARcR9G9OwEqk-96936\\/recv",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -165,10 +165,30 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "metrarail.com",
+                "ridertools.metrarail.com"
+            ]
+        },
+        {
+            "rule": "ably\\.io\\/comet\\/86ffJVpggBhVHw!u5QJN1dKoHAW1qIYdvsano-48302\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "turing-group-rest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "bc00adedd363a23395b865080dbaf40fdf58d7126d587c49820144c06feabf10"
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -179,7 +199,7 @@
             ]
         },
         {
-            "rule": "ably\\.io\\/comet\\/86flFxomQBfoLi!iKBKdhqW06AVfOrwWoiisI-155deb\\/send",
+            "rule": "ably\\.io\\/comet\\/86ffJVpggBhVHw!u5QJN1dKoHAW1qIYdvsano-48302\\/send",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -187,7 +207,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -199,7 +219,7 @@
             ]
         },
         {
-            "rule": "ably\\.io\\/comet\\/86flFxomQBfoLi!iKBKdhqW06AVfOrwWoiisI-155deb\\/send",
+            "rule": "ably\\.io\\/comet\\/86ffJVpggBhVHw!u5QJN1dKoHAW1qIYdvsano-48302\\/recv",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -207,29 +227,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "97112252edc600b0f57cda8c96e75062952c2c90152a2d9e60413101d5947832"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "metrarail.com",
-                "ridertools.metrarail.com"
-            ]
-        },
-        {
-            "rule": "ably\\.io\\/comet\\/86flFxomQBfoLi!iKBKdhqW06AVfOrwWoiisI-155deb\\/recv",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "turing-group-rest"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "XHR",
@@ -249,7 +247,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "realtime.ably.menti.com",
@@ -274,7 +272,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "realtime.ably.menti.com",
@@ -282,7 +280,7 @@
                 }
             ],
             "responseHashes": [
-                "826290d5eb55edb8b53703886a51df7b2b32aa194648529a647faa186c3b36f4"
+                "c84946df6f5235ec9f02553e74695745e54133e83570a57316f70591d0af7eb8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -290,26 +288,6 @@
             "exampleSites": [
                 "menti.com",
                 "www.menti.com"
-            ]
-        },
-        {
-            "rule": "ably\\.io\\/comet\\/86fmzBl9gBflr8!7s2m8zk26HAUKYRiG4eO4g-1c57ff\\/recv",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rest"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "southamptonfc.com",
-                "www.southamptonfc.com"
             ]
         }
     ],
@@ -319,14 +297,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6976744186046512
+        },
+        {
+            "domain": "frontrowcdn.com",
+            "prevalence": 0.27906976744186046
+        },
+        {
+            "domain": "getripe.com",
+            "prevalence": 0.023255813953488372
         }
     ],
     "types": {
+        "XHR": 14,
+        "WebSocket": 6,
         "Script": 3,
-        "XHR": 18,
-        "Preflight": 6,
-        "WebSocket": 7
+        "Preflight": 6
     },
     "nameservers": [
         "ns-1050.awsdns-03.org",

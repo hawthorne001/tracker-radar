@@ -7,16 +7,17 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.25\\.1\\/rollbar\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -30,6 +31,31 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
+                "e0389aba2ceca8bccb790fa1f5a2dbea47d00a6693d1f5b2091c6831bacf88c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babbel.com",
+                "www.babbel.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
                 "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
             ],
             "type": "Script",
@@ -37,7 +63,51 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "homeservice24.ch",
-                "www.litcharts.com"
+                "petsitting24.ch",
+                "www.litcharts.com",
+                "www.nobelprize.org"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "on.com",
+                "www.on.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0acf9079ba5660e25b727fccf97d2526ae691abb7862c09388160a63a931d9fb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "on.com",
+                "www.on.com"
             ]
         }
     ],
@@ -47,11 +117,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "opinionstage.com",
+            "prevalence": 0.2916666666666667
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "tori.ns.cloudflare.com",

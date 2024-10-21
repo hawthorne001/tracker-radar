@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "i.w",
         "a.w"
     ],
     "cnames": [
@@ -17,10 +18,41 @@
         {
             "original": "cm.bilibili.com",
             "resolved": "a.w.bilicdn1.com"
+        },
+        {
+            "original": "data.bilibili.tv",
+            "resolved": "i.w.bilicdn1.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "bilicdn1\\.com\\/log\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i.w"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data.bilibili.tv",
+                    "resolved": "i.w.bilicdn1.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bilibili.tv",
+                "www.bilibili.tv"
+            ]
+        },
         {
             "rule": "bilicdn1\\.com\\/x\\/kv-frontend\\/namespace\\/data",
             "cookies": 0,
@@ -38,7 +70,7 @@
                 }
             ],
             "responseHashes": [
-                "2764681347b2706422f0183f0d242c2212232370b6a7b123a7c0146618018780"
+                "8e54d6d2b1c325a2ce36655875d4a6d6dc408fd5d3b0ad42126ff160850ce08b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -65,7 +97,7 @@
                 }
             ],
             "responseHashes": [
-                "56e97a8bab3e998e99615d4f74d3e2433b90d95971c835e245b5cb9e42adb46a"
+                "8ec88aa6d5dc76750f45e9cb2c7ef70cd42c3d3e5c2389b06fa00b6a47bb3814"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -134,10 +166,15 @@
     "topInitiators": [
         {
             "domain": "hdslb.com",
-            "prevalence": 1
+            "prevalence": 0.6052631578947368
+        },
+        {
+            "domain": "bstarstatic.com",
+            "prevalence": 0.39473684210526316
         }
     ],
     "types": {
+        "Ping": 2,
         "XHR": 4,
         "Fetch": 2,
         "Preflight": 2

@@ -4,46 +4,144 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
-        "gateway"
+        "cdn",
+        "gateway",
+        "paynow"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "pmnts\\.io\\/fraud\\/fingerprint\\/readingcinemas\\.js",
-            "cookies": 0.000301,
+            "rule": "pmnts\\.io\\/sdk\\/v1\\/fatzebra\\.js",
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "gateway"
+                "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 3,
-                "Date.prototype.getTime": 3,
-                "Document.cookie setter": 3
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.product": 4
             },
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "c20d2ba5f12ea14daae64dfca6a017283803d7f0b4a51f194b72f3e3402093fb"
+                "a3d684cb91ae1f9ed2d1524cb46f11b56ea8c3ecc9523b20b8096e060ad19d83"
             ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arborgreen.com.au",
+                "www.chefshat.com.au",
+                "www.horsleyparkgunshop.com.au",
+                "www.jewellerssupplies.com.au"
+            ]
+        },
+        {
+            "rule": "pmnts\\.io\\/fraud\\/fingerprint\\/fz-savethechildrencornucopia\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gateway",
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {
                 "forterToken": {
-                    "ttl": 157680004,
-                    "length": 57,
-                    "prevalence": 0.00030105368790767686,
+                    "ttl": 157680007,
+                    "length": 53,
+                    "prevalence": 0.0001003814495081309,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "readingcinemas.com.au",
-                "statecinema.com.au",
-                "www.readingcinemas.com.au"
+                "savethechildren.org.au",
+                "www.savethechildren.org.au"
+            ]
+        },
+        {
+            "rule": "pmnts\\.io\\/assets\\/application-5d4cfd2e7ca289dea47646f3e82ae4eeb5244bab7bb596f4cc14c28783a7c4b0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "paynow"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "86ff088c7e2ca9ac2f3f8476a08c158be11b9074764e0bd872883443ca64d694"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savethechildren.org.au",
+                "www.savethechildren.org.au"
+            ]
+        },
+        {
+            "rule": "pmnts\\.io\\/assets\\/application-ab14c5062231a2d6bee629b2d7989c0165e23784f00d9380c554cf19dcfa7042\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "paynow"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "window.devicePixelRatio": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "46abe1c929d08f8f260202412b1d430aa182b0d2349f08d8a6e8da9b2c85726d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savethechildren.org.au",
+                "www.savethechildren.org.au"
+            ]
+        },
+        {
+            "rule": "pmnts\\.io\\/css\\.css",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "paynow"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3ac356cb6da19d4315bcb1562d6e7e68832f53122f64c1152207976560581edc"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savethechildren.org.au",
+                "www.savethechildren.org.au"
             ]
         }
     ],
@@ -53,16 +151,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9473684210526315
+        },
+        {
+            "domain": "pmnts.io",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 8,
+        "Stylesheet": 4
     },
     "nameservers": [
-        "ns-577.awsdns-08.net",
         "ns-440.awsdns-55.com",
         "ns-1254.awsdns-28.org",
+        "ns-577.awsdns-08.net",
         "ns-1884.awsdns-43.co.uk"
     ]
 }

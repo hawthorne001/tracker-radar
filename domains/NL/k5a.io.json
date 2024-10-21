@@ -10,19 +10,101 @@
     "prevalence": 0.000502,
     "sites": 5,
     "subdomains": [
-        "cl",
+        "cl-eu7",
         "cl-eu4",
-        "cl-eu5"
+        "cl-eu5",
+        "streams-eu7-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "k5a\\.io\\/66dae0c909ab49132654c112\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cl-eu7"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "acaff6839031a72b2d0500f932afc88232426a12a4876b863c95e6879dda1c64"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.businessinsider.nl"
+            ]
+        },
+        {
+            "rule": "k5a\\.io\\/66dae0c909ab49132654c112\\.module\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cl-eu7"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "932984867530056f8d5029f07da092f47f6bdf793d101746a767b602bd52affe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_k5a": {
+                    "ttl": 31536004,
+                    "length": 64,
+                    "prevalence": 0.00010036130068245685,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.businessinsider.nl"
+            ]
+        },
+        {
+            "rule": "k5a\\.io\\/66dae0c909ab49132654c112\\.streams\\.module\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cl-eu7"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8b569edbc30e67165f6e462ba198342697b721d7707f60fcfd6303ca5d8f6502"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.nl",
+                "www.businessinsider.com"
+            ]
+        },
+        {
             "rule": "k5a\\.io\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cl",
+                "cl-eu7",
                 "cl-eu4",
                 "cl-eu5"
             ],
@@ -35,13 +117,59 @@
             ],
             "type": "Ping",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.0002007226013649137
+            },
             "exampleSites": [
-                "winq.nl",
-                "www.merkur.de",
+                "businessinsider.nl",
+                "www.businessinsider.com",
                 "www.skoften.net",
                 "www.televizier.nl",
                 "www.yr.no"
+            ]
+        },
+        {
+            "rule": "k5a\\.io\\/streams\\/v2\\/66dae0c909ab49132654c112\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "streams-eu7-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7c4ea7f738a1b55c5db9812b82c83980cc80ff71b6de0c1f562a904b70fbd6b3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.businessinsider.nl"
+            ]
+        },
+        {
+            "rule": "k5a\\.io\\/streams\\/v1\\/66dae0c909ab49132654c112\\/get\\/66f2b9ed21ccab60f61ec202",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "streams-eu7-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b2e9e505cae894f31114a79257efaae3cfeafad62f298f511c5637ab28925967"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.nl",
+                "www.businessinsider.com"
             ]
         }
     ],
@@ -51,7 +179,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.6
+        },
+        {
+            "domain": "businessinsider.nl",
+            "prevalence": 0.2
         },
         {
             "domain": "medietall.no",
@@ -59,11 +191,13 @@
         }
     ],
     "types": {
-        "Ping": 5
+        "Script": 6,
+        "Ping": 5,
+        "Fetch": 4
     },
     "nameservers": [
         "hydrogen.ns.hetzner.com",
-        "oxygen.ns.hetzner.com",
-        "helium.ns.hetzner.de"
+        "helium.ns.hetzner.de",
+        "oxygen.ns.hetzner.com"
     ]
 }

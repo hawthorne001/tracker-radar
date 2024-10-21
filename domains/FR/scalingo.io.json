@@ -7,17 +7,44 @@
     "prevalence": 0.000503,
     "sites": 5,
     "subdomains": [
-        "idfm-production-common-design.osc-secnum-fr1",
-        "rdvmairie-backend-prod.osc-secnum-fr1"
+        "inclusion-matomo-production.osc-secnum-fr1",
+        "idfm-production-common-design.osc-secnum-fr1"
     ],
     "cnames": [
         {
-            "original": "api.rendezvouspasseport.ants.gouv.fr",
-            "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+            "original": "matomo.inclusion.beta.gouv.fr",
+            "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "scalingo\\.io\\/piwik\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "inclusion-matomo-production.osc-secnum-fr1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "matomo.inclusion.beta.gouv.fr",
+                    "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beta.gouv.fr",
+                "immersion-facile.beta.gouv.fr"
+            ]
+        },
         {
             "rule": "scalingo\\.io\\/common-header\\.js",
             "cookies": 0,
@@ -33,7 +60,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ec18af08d182bfdf53e52d1e9bcb521ccf4770c5510655a1d7bd51874e9c1ba3"
+                "f0487fd203287acb2b0584398f73a1287545c101187793aba410fde64a6bea05"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -41,58 +68,6 @@
             "exampleSites": [
                 "iledefrance-mobilites.fr",
                 "www.iledefrance-mobilites.fr"
-            ]
-        },
-        {
-            "rule": "scalingo\\.io\\/api\\/Announcement",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rdvmairie-backend-prod.osc-secnum-fr1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.rendezvouspasseport.ants.gouv.fr",
-                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ants.gouv.fr",
-                "rendezvouspasseport.ants.gouv.fr"
-            ]
-        },
-        {
-            "rule": "scalingo\\.io\\/api\\/Announcement",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rdvmairie-backend-prod.osc-secnum-fr1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.rendezvouspasseport.ants.gouv.fr",
-                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ants.gouv.fr",
-                "rendezvouspasseport.ants.gouv.fr"
             ]
         }
     ],
@@ -106,9 +81,8 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "Ping": 2,
+        "Script": 2
     },
     "nameservers": [
         "burt.ns.cloudflare.com",

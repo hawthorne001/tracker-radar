@@ -9,6 +9,7 @@
     "subdomains": [
         "bfw-api-prod",
         "bfw-cms-prod",
+        "bfw-mobile-api-prod",
         "prodo-api"
     ],
     "cnames": [
@@ -19,6 +20,10 @@
         {
             "original": "cms.boerse-frankfurt.de",
             "resolved": "bfw-cms-prod.ariva-services.de"
+        },
+        {
+            "original": "mobile-api.boerse-frankfurt.de",
+            "resolved": "bfw-mobile-api-prod.ariva-services.de"
         }
     ],
     "fingerprinting": 0,
@@ -40,7 +45,7 @@
                 }
             ],
             "responseHashes": [
-                "10e456b577f8a9a940f203c8327ba57f3aed676d06bbfbb832f88e7c15d2b541"
+                "94ef741bbf14016a5304841e8bd2634ca71fe4a3a35ae84f3a9908f4c230c0d6"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -144,9 +149,34 @@
                 }
             ],
             "responseHashes": [
-                "5883bf0847dd66c11c7972752932843fc8c8d7a576f27ca8e629f4687253b807"
+                "f9ea4cf464dbc0ec2f2d9b470079cee750b21099726a9b4dabd08e6e4a6aea26"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/unleash",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-mobile-api-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "mobile-api.boerse-frankfurt.de",
+                    "resolved": "bfw-mobile-api-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -190,10 +220,11 @@
         "Image": 2,
         "Preflight": 4,
         "XHR": 4,
+        "Fetch": 2,
         "Script": 2
     },
     "nameservers": [
-        "ens1.ariva.de",
-        "ens2.ariva.de"
+        "ens2.ariva.de",
+        "ens1.ariva.de"
     ]
 }

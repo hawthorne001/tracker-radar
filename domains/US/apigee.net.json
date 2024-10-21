@@ -9,14 +9,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000143,
-    "sites": 21,
+    "prevalence": 0.000205,
+    "sites": 30,
     "subdomains": [
         "accor-group-prod-prod",
         "cisco-dsc-prod",
-        "ascension-prod",
         "mns-00.dn",
-        "jnj-prod"
+        "ascension-prod",
+        "jnj-dev",
+        "tesco-production"
     ],
     "cnames": [
         {
@@ -26,6 +27,10 @@
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "api.tesco.com",
+            "resolved": "tesco-production.apigee.net"
         },
         {
             "original": "dsc.cisco.com",
@@ -40,14 +45,14 @@
     "resources": [
         {
             "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
-            "cookies": 0.0000204,
+            "cookies": 0.0000205,
             "fingerprinting": 0,
             "subdomains": [
                 "accor-group-prod-prod"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -73,7 +78,32 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/referential\\/v1\\/pos\\/currencies",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -92,31 +122,6 @@
             ]
         },
         {
-            "rule": "apigee\\.net\\/referential\\/v1\\/pos\\/currencies",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "accor-group-prod-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "api.accor.com",
-                    "resolved": "accor-group-prod-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
-            ]
-        },
-        {
             "rule": "apigee\\.net\\/referential\\/v1\\/pos\\/countries",
             "cookies": 0,
             "fingerprinting": 0,
@@ -125,7 +130,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -151,7 +156,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -171,14 +176,14 @@
         },
         {
             "rule": "apigee\\.net\\/referential\\/v1\\/best-visit\\/cookie-attribution",
-            "cookies": 0.0000204,
+            "cookies": 0.0000205,
             "fingerprinting": 0,
             "subdomains": [
                 "accor-group-prod-prod"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -206,7 +211,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -224,6 +229,33 @@
             ]
         },
         {
+            "rule": "apigee\\.net\\/referentials\\/v1",
+            "cookies": 0.00000683,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "778b4d67c487551cb5deb5303449b9ce88ceee78c2c1f3f0ca1fdaa554cf6735"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
@@ -232,7 +264,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "dsc.cisco.com",
@@ -240,7 +272,7 @@
                 }
             ],
             "responseHashes": [
-                "ace7a6f4daa69c648c193a7e24ce0b4b3f9ec980bab9780ec26dfb22fcb75041"
+                "25d1a3a3b059c651daa4bc16a257d8b4188cebcd609cc3376007c29e3bb62800"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -251,113 +283,6 @@
             ]
         },
         {
-            "rule": "apigee\\.net\\/v1\\/netid",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cisco-dsc-prod"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [
-                {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [
-                "3a816557c9c8d0d8014d164c7ca49215e53c6e2f1efd7858cd8dc6928b85b3ba",
-                "9219fc57338ad3dd9fe2bd5c9575f7893b5885f77e1f7f97cc3dc630bbcf5cab"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cisco.com",
-                "community.cisco.com",
-                "www.cisco.com"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/v1\\/netid",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cisco-dsc-prod"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [
-                {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cisco.com",
-                "community.cisco.com",
-                "www.cisco.com"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/myaccount\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ascension-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "prod-api.ascension.org",
-                    "resolved": "ascension-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ascension.org",
-                "healthcare.ascension.org"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/myaccount\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ascension-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "prod-api.ascension.org",
-                    "resolved": "ascension-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [
-                "ccea1ad6051b7ad1a5a2f5b2c7b262dca125ac80281de97c373977bcb83b016c"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ascension.org",
-                "healthcare.ascension.org"
-            ]
-        },
-        {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
             "cookies": 0,
             "fingerprinting": 0,
@@ -365,8 +290,8 @@
                 "mns-00.dn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -379,19 +304,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "marksandspencer.com",
+                "christmasfood.marksandspencer.com",
                 "www.marksandspencer.com"
             ]
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0,
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -406,49 +332,221 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "marksandspencer.com",
+                "christmasfood.marksandspencer.com",
                 "www.marksandspencer.com"
             ]
         },
         {
-            "rule": "apigee\\.net\\/allergycast\\/v1\\/api\\/pollen",
+            "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "jnj-prod"
+                "cisco-dsc-prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "f06d47548147f2410563f9153e67845e618b9f4f076ebf07d6fda0ad70025646",
+                "dd59d810a096581809a936474ac7ea43f869b1c335d464873d11307205707606"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "community.cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zyrtec.com",
+                "cisco.com",
+                "community.cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/myaccount\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ascension-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prod-api.ascension.org",
+                    "resolved": "ascension-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "16713a9cc9319718ecdf76a0441c174e870c342e1aade1f08894d0ac12ec2a2d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ascension.org",
+                "healthcare.ascension.org"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/bazaar-voice-styling-v1\\/styles\\/brands\\/na_brands\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jnj-dev"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000478,
+            "cnames": [],
+            "responseHashes": [
+                "74cd04f0eb1883d51399baf8266483e250a79a79d7dda48cec46d91976a88271"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aveeno.com",
+                "www.band-aid.com",
+                "www.benadryl.com",
+                "www.listerine.com",
+                "www.sudafed.com",
+                "www.tylenol.com",
                 "www.zyrtec.com"
             ]
         },
         {
-            "rule": "apigee\\.net\\/allergycast\\/v1\\/api\\/pollen",
+            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "jnj-prod"
+                "cisco-dsc-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "cecef5bcbb45d08df2d53dd9ecf0156dda5a839f7d1ddaad4fe59a36d6359da0"
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
             ],
-            "type": "XHR",
+            "responseHashes": [
+                "010d01665655ab5a37d081ba66f0b47af7580dd7c00a7c75bfc1fced835d8810"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zyrtec.com",
-                "www.zyrtec.com"
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/shoppingexperience",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tesco-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.tesco.com",
+                    "resolved": "tesco-production.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tesco.com",
+                "www.tesco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/shoppingexperience",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tesco-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.tesco.com",
+                    "resolved": "tesco-production.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "50486c5337b9060f9ab67adcf0a76e50c2e21efef50bd95308780b0b2701b46b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tesco.com",
+                "www.tesco.com"
             ]
         }
     ],
@@ -456,44 +554,45 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.0000614,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.30434782608695654
-        },
-        {
-            "domain": "static-p46175-e229011.adobeaemcloud.com",
-            "prevalence": 0.2608695652173913
+            "prevalence": 0.3225806451612903
         },
         {
             "domain": "mparticle.com",
-            "prevalence": 0.17391304347826086
+            "prevalence": 0.22580645161290322
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.13043478260869565
-        },
-        {
-            "domain": "cookielaw.org",
-            "prevalence": 0.08695652173913043
+            "prevalence": 0.16129032258064516
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.043478260869565216
+            "prevalence": 0.12903225806451613
+        },
+        {
+            "domain": "static-p46175-e229011.adobeaemcloud.com",
+            "prevalence": 0.0967741935483871
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.06451612903225806
         }
     ],
     "types": {
         "Document": 3,
-        "XHR": 11,
-        "Preflight": 17,
+        "Preflight": 18,
+        "XHR": 12,
         "Script": 2,
-        "Fetch": 5
+        "Fetch": 9,
+        "Stylesheet": 7
     },
     "nameservers": [
-        "ns-670.awsdns-19.net",
-        "ns-1907.awsdns-46.co.uk",
+        "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
-        "ns-116.awsdns-14.com"
+        "ns-1907.awsdns-46.co.uk",
+        "ns-670.awsdns-19.net"
     ]
 }

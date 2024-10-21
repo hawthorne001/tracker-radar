@@ -4,30 +4,37 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000681,
+    "prevalence": 0.0000683,
     "sites": 10,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "app"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "talkjs\\.com\\/talk\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "window.localStorage": 6,
-                "Navigator.prototype.userAgent": 6
+                "window.localStorage": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Notification.permission": 1,
+                "Document.cookie getter": 1,
+                "window.innerHeight": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Date.prototype.getTime": 1
             },
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000478,
             "cnames": [],
             "responseHashes": [
-                "5188c339c28c15e8f7fbb32bb5494e736b9a767bc89a98b9f5a7898114a1ef98"
+                "df10bd7f6f757a01fd28cbaf2425e00a9bf14d253d81df6f6322e1075d0be83b",
+                "cc329f600fa9c65f3b1ec829f45ce02ac20ccc242da391cb372585f82761eff5"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -36,6 +43,7 @@
                 "boatplanet.com",
                 "www.cz.nl",
                 "www.eldorado.gg",
+                "www.jaarbeurs.nl",
                 "www.kinguin.net",
                 "www.styleseat.com",
                 "www.thomsonlocal.com"
@@ -49,8 +57,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000409,
+            "sites": 7,
+            "prevalence": 0.0000478,
             "cnames": [],
             "responseHashes": [
                 "3f2233bafce24bf9656d7b09a7c3728eaa32ba2002a42c226a61ea68dd3ebfa6"
@@ -62,9 +70,30 @@
                 "boatplanet.com",
                 "www.cz.nl",
                 "www.eldorado.gg",
+                "www.jaarbeurs.nl",
                 "www.kinguin.net",
                 "www.styleseat.com",
                 "www.thomsonlocal.com"
+            ]
+        },
+        {
+            "rule": "talkjs\\.com\\/api\\/v0\\/yfaMgVd3\\/socket\\/websocket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaarbeurs.nl",
+                "www.jaarbeurs.nl"
             ]
         }
     ],
@@ -74,12 +103,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.96875
+        },
+        {
+            "domain": "trackjs.com",
+            "prevalence": 0.03125
         }
     ],
     "types": {
-        "Script": 6,
-        "Media": 6
+        "Script": 7,
+        "Media": 7,
+        "WebSocket": 2
     },
     "nameservers": [
         "sid.ns.cloudflare.com",

@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.000904,
+    "sites": 9,
     "subdomains": [
-        "rum"
+        "rum",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,58 +24,32 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [
-                "2f2cca58e3814070db3d60c4738d4e89e5b01b1018494eeac4cc3984359138a8",
-                "22bbb8c997f1af13de78338c181b1efe972e3c708e99819bb79e5617661a72dd",
-                "a523eedcc5fecc0367f1f1bdc293b5e87cd8a95bb90e090f3a7d7cac355302d2",
-                "57bc89a6f0d29beb98a1701bc2d5344218f7a536f50919b784f22129ea7596e6",
-                "e075e8fc9b77da578ecae2d8f26752a02747b0dfe7c433800f0dd12a070eeddd",
-                "f23ddfcbef55a1f2392713eaa6b539a1e8c1a8dffd0570f899b0d3fb1c23afb8",
-                "257bcc2855ecaab941a5554bf74820d4bb84409888e8725635cf8ac5f04fd053"
+                "580bdaada7ad505e67f4cbdec29938156761532da91321f292acf8e961309f22",
+                "d61360c40aa8d00fbc95ecbc0a33d9812fbeaa9e1fa96615ea54b56cbcb0351a",
+                "25ff3d182ee8100d8cb7cd2bdf40bc5d447576e9e4e9f32e990519fbb225d18e",
+                "8d0e0834048fde1011e4fcd3ae5cfcd559964350ecbba099da5c8c8232f97371",
+                "5950c25cbb50b9c62bdb8a06f6c543af959b3dbe3d69f8543f539f5abe255653",
+                "82236c24f807e4101fd94723c8ed7ca00f39e45306f0c7d3782cbc13f6cee629"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "1password.com",
-                "asana.com",
+                "clickup.com",
+                "community.xano.com",
                 "developer.hashicorp.com",
-                "graphite.dev",
                 "www.cbinsights.com",
                 "www.codecademy.com",
-                "www.nerdwallet.com",
-                "www.today.com"
+                "www.disneyplus.com",
+                "www.nerdwallet.com"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "65531ad68961b9ae4eafcbb3551dc020634bba6f9226b532a8317823dbfba707",
-                "7d7af632482abff976f6cb26fb71bb7f130c7978852455fe0d4d2cba173d5ac8"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "asana.com",
-                "www.nerdwallet.com",
-                "www.today.com"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -83,14 +58,37 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "7ea1c3cfbf8f1ca0004af5dce666e1826bbe11b06d9ee0bfd4e8dd3e11e8b2a0"
+                "50013e01ce9433a802e000e50cbd37259f3be9bbdaaed4842ebc96f09544f6c4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "codecademy.com",
-                "www.codecademy.com"
+                "clickup.com",
+                "www.nerdwallet.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moonpay.com",
+                "www.moonpay.com",
+                "www.rei.com"
             ]
         }
     ],
@@ -100,25 +98,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7846153846153846
-        },
-        {
-            "domain": "nbcnews.com",
-            "prevalence": 0.11538461538461539
+            "prevalence": 0.776595744680851
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.1
+            "prevalence": 0.13829787234042554
+        },
+        {
+            "domain": "t-assets.net",
+            "prevalence": 0.06382978723404255
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02127659574468085
         }
     ],
     "types": {
-        "Fetch": 8,
-        "XHR": 5
+        "Fetch": 7,
+        "XHR": 2,
+        "Other": 3
     },
     "nameservers": [
+        "ns-560.awsdns-06.net",
         "ns-1264.awsdns-30.org",
         "ns-1907.awsdns-46.co.uk",
-        "ns-128.awsdns-16.com",
-        "ns-560.awsdns-06.net"
+        "ns-128.awsdns-16.com"
     ]
 }

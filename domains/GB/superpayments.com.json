@@ -4,14 +4,81 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "bigcommerce-plugin"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "superpayments\\.com\\/payments\\/plugin\\/bigcommerce\\/js\\/super_pay_bc\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "57538f026c83e48c27c9c144bf611b3e5f68ea8ebeaa1acd9d0c130f0584830c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartridgeworld.co.uk",
+                "www.philipmorrisdirect.co.uk"
+            ]
+        },
+        {
+            "rule": "superpayments\\.com\\/marketing-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bigcommerce-plugin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f06f4ad96e7fd6a2240ea02974d6cdd44c12afe6fcd9b949d23b34dc8533bb68"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartridgeworld.co.uk",
+                "www.philipmorrisdirect.co.uk"
+            ]
+        },
+        {
+            "rule": "superpayments\\.com\\/css\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bigcommerce-plugin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6734e7630f3b33822d1b12828f0d22f390d825030880fb01ff33aa0f570ffa6b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartridgeworld.co.uk",
+                "www.philipmorrisdirect.co.uk"
+            ]
+        },
         {
             "rule": "superpayments\\.com\\/js\\/super\\.js",
             "cookies": 0,
@@ -26,16 +93,16 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "01c2b1c56993cb14251f4f2c85e3623842c0967b599255ee1373657a3f8f253f"
+                "51f6ab2faae14ccdb1b09d6f69971d9d87f8800a783823c26fc5a7dce2c852a8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hartsofstur.com",
-                "www.hifix.co.uk",
                 "www.philipmorrisdirect.co.uk",
-                "www.plumbingworld.co.uk"
+                "www.plumbingworld.co.uk",
+                "www.the-home-brew-shop.co.uk"
             ]
         }
     ],
@@ -45,11 +112,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 6,
+        "XHR": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
         "ns-68.awsdns-08.com",

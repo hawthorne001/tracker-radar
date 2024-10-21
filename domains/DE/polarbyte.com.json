@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000401,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
+        "events",
         "sp-eu.dev",
-        "events"
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -18,12 +19,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sp-eu.dev",
-                "events"
+                "events",
+                "sp-eu.dev"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -37,15 +38,15 @@
         },
         {
             "rule": "polarbyte\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000301,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "sp-eu.dev",
-                "events"
+                "events",
+                "sp-eu.dev"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -58,11 +59,130 @@
                 "dictionary.cambridge.org",
                 "www.collinsdictionary.com"
             ]
+        },
+        {
+            "rule": "polarbyte\\.com\\/idm\\/lgt\\/iaw\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.connection": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.permissions": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Notification.permission": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3f7b94c8f338763776fda0ef506d5342bb67476ca02389423a5d25f67e13b745"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "iawpvccs": {
+                    "ttl": 31536003,
+                    "length": 1,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 0.5
+                },
+                "iawsc1m": {
+                    "ttl": 2592003,
+                    "length": 1,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 0.5
+                },
+                "iawpvc": {
+                    "ttl": 31536003,
+                    "length": 1,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 0.5
+                },
+                "iawpvtc1m": {
+                    "ttl": 2592003,
+                    "length": 1,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "langenscheidt.com",
+                "en.langenscheidt.com"
+            ]
+        },
+        {
+            "rule": "polarbyte\\.com\\/idm\\/lgt\\/pb\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "21cfd5b60f08453daf2130595ca1e17c355040e178c62fbcae92364f89a48ef9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "langenscheidt.com",
+                "en.langenscheidt.com"
+            ]
+        },
+        {
+            "rule": "polarbyte\\.com\\/idm\\/lgt\\/forbiddenads\\.txt",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "01c48bb1b32c834e0b5333f951c6433b4e58dee832f6a5d9d1f4953e8f0dfde1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "langenscheidt.com",
+                "en.langenscheidt.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000401,
+    "cookies": 0.000604,
     "topInitiators": [
         {
             "domain": "first party",
@@ -71,7 +191,8 @@
     ],
     "types": {
         "Preflight": 3,
-        "XHR": 3
+        "XHR": 5,
+        "Script": 4
     },
     "nameservers": [
         "tim.ns.cloudflare.com",

@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "web-sdk-cdn",
         "sdk-api-v1"
@@ -17,6 +17,28 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "singular\\.net\\/singular-gtm-interface\\/latest\\/singular-gtm-interface\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "63f11d1dfb1dd2cfd334094ddad0c1f3c43f5b28b6f90e7db147094db29e33ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "vimeo.com"
+            ]
+        },
+        {
             "rule": "singular\\.net\\/singular-sdk\\/latest\\/singular-sdk\\.js",
             "cookies": 0.000101,
             "fingerprinting": 2,
@@ -24,20 +46,20 @@
                 "web-sdk-cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 2,
                 "Document.cookie setter": 1,
-                "window.sessionStorage": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.width": 2,
-                "Navigator.prototype.platform": 2,
-                "NavigatorUAData.prototype.getHighEntropyValues": 2,
-                "Navigator.prototype.language": 2
+                "window.sessionStorage": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.width": 3,
+                "Navigator.prototype.platform": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "Navigator.prototype.language": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "a5f20e9b821bed653ca955a4f1a07f3ccb774616234e9b74f1d604c81b7a84a0"
@@ -45,15 +67,16 @@
             "type": "Script",
             "firstPartyCookies": {
                 "singular_device_id": {
-                    "ttl": 31536011,
+                    "ttl": 31536010,
                     "length": 36,
-                    "prevalence": 0.00010058338362502515,
+                    "prevalence": 0.00010057326762546515,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "clickup.com",
+                "vimeo.com",
                 "www.boredpanda.com"
             ]
         },
@@ -65,30 +88,8 @@
                 "sdk-api-v1"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "singular_device_id": 0.00010058338362502515
-            },
-            "exampleSites": [
-                "clickup.com",
-                "www.boredpanda.com"
-            ]
-        },
-        {
-            "rule": "singular\\.net\\/api\\/v1\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sdk-api-v1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "8a49ea5083c8030f058182dcd6ae7da0960e68a0d762f71e8e8375f5732fb2fb"
@@ -96,10 +97,34 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "singular_device_id": 0.00010058338362502515
+                "singular_device_id": 0.00010057326762546515
             },
             "exampleSites": [
                 "clickup.com",
+                "vimeo.com",
+                "www.boredpanda.com"
+            ]
+        },
+        {
+            "rule": "singular\\.net\\/api\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api-v1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "singular_device_id": 0.00010057326762546515
+            },
+            "exampleSites": [
+                "clickup.com",
+                "vimeo.com",
                 "www.boredpanda.com"
             ]
         }
@@ -110,21 +135,25 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "transcend-cdn.com",
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2222222222222222
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 5,
+        "XHR": 3,
+        "Preflight": 3
     },
     "nameservers": [
-        "ns-887.awsdns-46.net",
         "ns-26.awsdns-03.com",
+        "ns-887.awsdns-46.net",
         "ns-1710.awsdns-21.co.uk",
         "ns-1422.awsdns-49.org"
     ]
