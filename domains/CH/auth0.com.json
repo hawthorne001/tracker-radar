@@ -7,17 +7,27 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
-        "cdn",
+        "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu",
         "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
-        "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu"
+        "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
+        "smg-re-is24-prod-cd-rxz2zytmegdd5syg.edge.tenants.eu",
+        "cdn"
     ],
     "cnames": [
         {
+            "original": "auth.apollo.de",
+            "resolved": "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu.auth0.com"
+        },
+        {
             "original": "auth.homegate.ch",
             "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "auth.immoscout24.ch",
+            "resolved": "smg-re-is24-prod-cd-rxz2zytmegdd5syg.edge.tenants.eu.auth0.com"
         },
         {
             "original": "login.financescout24.ch",
@@ -26,6 +36,52 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu",
+                "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+                "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu",
+                "smg-re-is24-prod-cd-rxz2zytmegdd5syg.edge.tenants.eu"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "auth.apollo.de",
+                    "resolved": "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.financescout24.ch",
+                    "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth.homegate.ch",
+                    "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth.immoscout24.ch",
+                    "resolved": "smg-re-is24-prod-cd-rxz2zytmegdd5syg.edge.tenants.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "6df3905203155daae707869e90293a44b540c560b332047d4fa195efa23a78e1",
+                "f7b7b73bf21c0c58a7b1203a0699dd68ffd585f9d957930b59800549a542df35",
+                "07ed8273a64245ee1c5af4dcea8274d5e8f2aa012dcaa8272d16c74fdde3b1ad"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apollo.de",
+                "www.financescout24.ch",
+                "www.homegate.ch",
+                "www.immoscout24.ch"
+            ]
+        },
         {
             "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.20\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
@@ -52,52 +108,24 @@
                 "bunte.de",
                 "www.focus.de"
             ]
-        },
-        {
-            "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
-                "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "login.financescout24.ch",
-                    "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
-                },
-                {
-                    "original": "auth.homegate.ch",
-                    "resolved": "smg-re-hg-prod-cd-3vgtjlmddg0chobv.edge.tenants.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "cab6a67adc3756d7efd7dc513aa1e209d1336d141cd9cc0f6d6f5e7162350df3"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "financescout24.ch",
-                "www.homegate.ch"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "grandvision.io",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2,
-        "Document": 2
+        "Document": 4,
+        "Script": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

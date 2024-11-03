@@ -15,7 +15,9 @@
         "cn-content",
         "de-content",
         "signin",
-        "customer-api"
+        "customer-api",
+        "personalization-api",
+        "de-personalization-api"
     ],
     "cnames": [
         {
@@ -31,11 +33,19 @@
             "resolved": "de-content.delta.com.edgekey.net"
         },
         {
+            "original": "de-personalization-api.delta.com",
+            "resolved": "de-personalization-api.delta.com.edgekey.net"
+        },
+        {
+            "original": "personalization-api.delta.com",
+            "resolved": "personalization-api.delta.com.edgekey.net"
+        },
+        {
             "original": "signin.delta.com",
             "resolved": "signin.delta.com.edgekey.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "delta\\.com\\.edgekey\\.net\\/content\\/dam\\/delta-applications\\/homepage\\/24\\.10\\.2\\/scripts\\.js",
@@ -72,7 +82,7 @@
         {
             "rule": "delta\\.com\\.edgekey\\.net\\/content\\/dam\\/delta-applications\\/fresh-air-core\\/24\\.7\\.0\\/js\\/trackjs\\.js",
             "cookies": 0.0001,
-            "fingerprinting": 3,
+            "fingerprinting": 1,
             "subdomains": [
                 "cn-content",
                 "de-content"
@@ -232,7 +242,7 @@
         {
             "rule": "delta\\.com\\.edgekey\\.net\\/content\\/dam\\/delta-applications\\/homepage\\/24\\.10\\.2\\/main\\.js",
             "cookies": 0.000201,
-            "fingerprinting": 3,
+            "fingerprinting": 2,
             "subdomains": [
                 "cn-content",
                 "de-content"
@@ -251,7 +261,7 @@
                 }
             ],
             "responseHashes": [
-                "dc26e1a5c74d71b98a294f48e47a38b657d5f18883dcb8c46c8934ff7ab4ba44"
+                "adb1a1067f20392846b85b4a7b2382d5e9b9f9bd308d5be4186578096fc23746"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -264,7 +274,7 @@
         {
             "rule": "delta\\.com\\.edgekey\\.net\\/content\\/dam\\/delta-applications\\/login-modal\\/24\\.10\\.0\\/element\\.js",
             "cookies": 0.0001,
-            "fingerprinting": 3,
+            "fingerprinting": 1,
             "subdomains": [
                 "cn-content",
                 "de-content"
@@ -660,7 +670,7 @@
                 }
             ],
             "responseHashes": [
-                "0552e1b7d39ee9242b05abab9aafc63a6246b69e4bd32c07c0eee352bf4f54a4"
+                "df6ebac592edb36173a332ce06247305d7cd5f8eb1867390562f1fb72cab5207"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -715,6 +725,68 @@
             ],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delta.com",
+                "www.delta.com"
+            ]
+        },
+        {
+            "rule": "delta\\.com\\.edgekey\\.net\\/personalization-api\\/getMultiplePersonalizedContent",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalization-api",
+                "de-personalization-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "personalization-api.delta.com",
+                    "resolved": "personalization-api.delta.com.edgekey.net"
+                },
+                {
+                    "original": "de-personalization-api.delta.com",
+                    "resolved": "de-personalization-api.delta.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delta.com",
+                "www.delta.com"
+            ]
+        },
+        {
+            "rule": "delta\\.com\\.edgekey\\.net\\/personalization-api\\/getMultiplePersonalizedContent",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalization-api",
+                "de-personalization-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "personalization-api.delta.com",
+                    "resolved": "personalization-api.delta.com.edgekey.net"
+                },
+                {
+                    "original": "de-personalization-api.delta.com",
+                    "resolved": "de-personalization-api.delta.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d9ba9b855acc89118b65d980479223563e03b8cdbdc5992d0ae458251c8c0a26"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -857,19 +929,19 @@
     "topInitiators": [
         {
             "domain": "onelink-translations.com",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "quantummetric.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
         "Script": 14,
         "Stylesheet": 22,
         "Font": 2,
-        "XHR": 4,
-        "Preflight": 2,
+        "XHR": 6,
+        "Preflight": 4,
         "Image": 8
     },
     "nameservers": []

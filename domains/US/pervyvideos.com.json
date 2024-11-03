@@ -10,16 +10,19 @@
         "player"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "pervyvideos\\.com\\/js\\/websocket_ip\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "player"
             ],
-            "apis": {},
+            "apis": {
+                "RTCPeerConnection.prototype.constructor": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -113,6 +116,9 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.webdriver": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
                 "Navigator.prototype.mimeTypes": 2,
@@ -160,20 +166,75 @@
             ]
         },
         {
-            "rule": "pervyvideos\\.com\\/player\\/embed_player\\.php",
+            "rule": "pervyvideos\\.com\\/js\\/script_33\\.11\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "player"
             ],
             "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.screenLeft": 2,
+                "window.screenX": 2,
+                "window.screenTop": 2,
+                "window.screenY": 2,
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "8f199d364f5de29b3531d9ce101bd34647faeb8eec2f7bda105a54a1cc4827b8"
+                "13971a21e52963922af2a4ce68153931184b5404db0dcbb53233e441209ae0ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xvidzone.com",
+                "www.xvidzone.com"
+            ]
+        },
+        {
+            "rule": "pervyvideos\\.com\\/cdn-cgi\\/trace",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a65ac3be5fe87c0313bd6d17ae3c8ca4b211ab85c7f1f0b297c343eb23fc485f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xvidzone.com",
+                "www.xvidzone.com"
+            ]
+        },
+        {
+            "rule": "pervyvideos\\.com\\/player\\/embed_player\\.php",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.outerWidth": 2,
+                "window.innerWidth": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "069ffc472ea33f29caabad18f3d35fafda800d9b7d9b740f6a4d6e026fd5dccb"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -189,21 +250,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "unpkg.com",
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "unpkg.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 10,
+        "Script": 12,
         "Stylesheet": 2,
+        "XHR": 2,
         "Document": 2
     },
     "nameservers": [
-        "jeremy.ns.cloudflare.com",
-        "rihana.ns.cloudflare.com"
+        "rihana.ns.cloudflare.com",
+        "jeremy.ns.cloudflare.com"
     ]
 }

@@ -4,19 +4,110 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
+        "arm-prod-public.lb",
+        "splunk-elb.lb",
         "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
+            "original": "api.arm.com",
+            "resolved": "arm-prod-public.lb.anypointdns.net"
+        },
+        {
             "original": "apib2c.services.honda.ca",
             "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
+        },
+        {
+            "original": "apps-api.splunk.com",
+            "resolved": "splunk-elb.lb.anypointdns.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "anypointdns\\.net\\/e-coveo-search\\/v1\\/anonToken",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arm-prod-public.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.arm.com",
+                    "resolved": "arm-prod-public.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "f2bf30023b8e66ca1f627a67bebdfdd54f6220c18806113b58e543a6a500b8be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arm.com",
+                "developer.arm.com"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "www.splunk.com"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "b46e6a778e04cd93574d2d435004163def1e52293f61c699e039b1fbacc1a54c",
+                "b3e438f837db5b9f7aff8f891174cb0fe543db353b0613d382133ed002b04494"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com",
+                "www.splunk.com"
+            ]
+        },
         {
             "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
             "cookies": 0,
@@ -59,7 +150,7 @@
                 }
             ],
             "responseHashes": [
-                "c92314548d7aac12f59331c81469f81fec10ffb91e3521c7b60381d3375c9c8d"
+                "e095f244279f91fef6b526582e86a6bf6791a6c6401e5ba1d096e1a28093476c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -72,15 +163,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "d38eume8qu1hmc.cloudfront.net",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "d221cp5lqk6y64.cloudfront.net",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "d7koym0rxduxm.cloudfront.net",
+            "prevalence": 0.08333333333333333
+        }
+    ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 4,
+        "Preflight": 4,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-180.awsdns-22.com",
         "ns-1546.awsdns-01.co.uk",
-        "ns-975.awsdns-57.net",
-        "ns-1343.awsdns-39.org"
+        "ns-180.awsdns-22.com",
+        "ns-1343.awsdns-39.org",
+        "ns-975.awsdns-57.net"
     ]
 }

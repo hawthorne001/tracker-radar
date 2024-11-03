@@ -9,22 +9,24 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00041,
-    "sites": 60,
+    "prevalence": 0.00043,
+    "sites": 63,
     "subdomains": [
+        "sf-api-gwy-prod",
         "apimgs-jamstack-prod-wus3-001",
         "apim-website-prod-eastus",
+        "paycorapimproduction",
         "apim-production-eastus",
         "sharkninja-prd-cus-001",
         "spo-partner-api",
         "spo-prod-apim",
-        "sf-api-gwy-prod",
+        "apim-marketing-001",
         "em-mm-uks-stg-dna-eas-apim",
         "drinkaware-apim",
         "fiba-apim-service-prod",
+        "apim-qa-eastus",
         "apim-gw-azu-nyc-prod",
         "aswest2extprodampwapi",
-        "prodapisitecorecdp",
         "apimgmt-global-external",
         "rexelapiprd",
         "gateway-prod-sonesta",
@@ -40,6 +42,10 @@
         {
             "original": "api.nyc.gov",
             "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+        },
+        {
+            "original": "api.paycor.com",
+            "resolved": "paycorapimproduction.azure-api.net"
         },
         {
             "original": "api.rexel.fr",
@@ -70,8 +76,31 @@
             "resolved": "uiapim2b80e30deb7e.azure-api.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "azure-api\\.net\\/webstore\\/info",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sf-api-gwy-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "17721111f5ef89ee352c04fa9e329d0b9caab14da7e879b279ecfaaab34be8d2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avid.com",
+                "www.avid.com",
+                "www.sibelius.com"
+            ]
+        },
         {
             "rule": "azure-api\\.net\\/vis\\/v3\\/prod\\/get-inventory",
             "cookies": 0,
@@ -104,7 +133,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "dc37b9899f9f41c6c0a4cbb939688496548d7af505f9320d61c8f72f109d0a55"
+                "68b3215c2e99b9bf10405edeb819baa31031a393c903aeac6df08fa23380ee69"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -146,7 +175,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "ebe419387357bcdccb1ac7134fee4d19f5f030a27abb718f4cfb957ad7a58aa4"
+                "abceabafcab8f5490ccf577a2f0156883565bf7f14786d6992fbfb5303dab183"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -157,24 +186,28 @@
             ]
         },
         {
-            "rule": "azure-api\\.net\\/content-svc\\/catalog\\/services",
+            "rule": "azure-api\\.net\\/navigation\\/v1\\/User\\/CompaniesClients",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "apim-production-eastus"
+                "paycorapimproduction"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.paycor.com",
+                    "resolved": "paycorapimproduction.azure-api.net"
+                }
+            ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mavis.com",
-                "www.mavis.com",
-                "www.ntb.com"
+                "paycor.com",
+                "hcm.paycor.com"
             ]
         },
         {
@@ -189,8 +222,8 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "75cd3397ed6540b6a75e410dd942ae111c841f23dc4861fc4997845c8c706603",
-                "aecc85efb389cfed3edb18962ea241a3b2fd2b478d09ed6015596aaca4a988c9"
+                "48536b5fc41544a010b673c0064884637ce055c5547e5d2089ce03988723a39a",
+                "7eb548d13f2adc2daf60c0377acc621ea1f7c430b893c51134fb8b2d3de9093b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -202,6 +235,27 @@
             ]
         },
         {
+            "rule": "azure-api\\.net\\/content-svc\\/catalog\\/services",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-production-eastus"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mavis.com",
+                "www.mavis.com",
+                "www.ntb.com"
+            ]
+        },
+        {
             "rule": "azure-api\\.net\\/content-svc\\/stores\\/4283",
             "cookies": 0,
             "fingerprinting": 0,
@@ -234,8 +288,8 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "e40f08184bac1b4a46b6bb3ff7b1211d15bfb0e9b3834474f5827e8d6eb52899",
-                "5f9737e64a2bde71d90a8e4ce9ada545d8c181304b978ddba8b689ad11ec6c6b"
+                "f80dd1372e69428ffcd967c16e89f336dae7ae856b1d5db875d7e1ef7a9b3a09",
+                "b84f4c52e17bb3aa4d992527fa9c86a96accdc55ca16c1bbe411e9c34ea11cd7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -279,8 +333,8 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "c69edcd0e97e6b6cb8a8694bfc9263d908c10ee03050cacdc6f843d96f695746",
-                "24d2d83a8a5f32761338e1ebc64fcbec8a22b37af5c44c418c8ae5480e78fc33"
+                "c5e941a612c41b8c047df0042b0aa1e7aa6e86a33c958a0e2a76350971f67e16",
+                "41051c5625ae40e4a33f7b1a8e0ca8eb1b19cc328007d603cdba3943a8637d64"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -324,8 +378,8 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "447ea4135121bf8670f1b8797ca0b4e67e47920fc8b63366c4c1a98a30400415",
-                "f9564f0fbc47fabbb7b0d35f7b31b9f183420c7d7d1f06709226a87fcec907f9"
+                "1659bc88a1e24bc8018c4ded3919094f94a3b387c658042589f3970f33f9e346",
+                "8d533b9815191b71aa5cee19aa5b018cc6af639810c22004173fe2eca2a99738"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -432,9 +486,8 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "6571a024d7de10d9908c03fab06cf6ae496c3fb99b6c1c6c93aceeeb46f8121b",
-                "166d11136918c470566880e20a1ef146e1b83f56d456b6cb714af57f1eada5da",
-                "c767be33269b4f65dd9d8d3bfa878e753f2167b6ade21736ca325264e30c444e"
+                "637c020b06bf5e5cab53c850f6605eddb319750a240848202e0c1e279311cd75",
+                "e41cc7f19366e760186bc40f2a2e2de26b8f712dc22bab25c09a9fad092b8d67"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -478,7 +531,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "893fdd01ea21494bafd187853285aa20d60584b96abbad166417a39dfba51f4a"
+                "74746b85def5b1a1a1e49edec5525ca4cf4463be85c5edc59e9d8b0e04abccfd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -500,13 +553,13 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3d8ee89121808c4c86ff018053d8df65cf5539d258abac100ecb0da8b33a07bd"
+                "5762e6a51a5a6d7bd787f757aeaa6b7982bb523c3c84c3fe9fdba06119ebe008"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "t2s-analytics": 0.00001365280906546522,
-                "t2s-p": 0.00001365280906546522
+                "t2s-analytics": 0.000013659989208608526,
+                "t2s-p": 0.000013659989208608526
             },
             "exampleSites": [
                 "simon.com",
@@ -609,7 +662,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "e3437ac852b0341a25b0cb2a916bfdf7de7ff7fc7e0344c69f3a9727d0050ab8"
+                "18397ad345ae92e86ee7e7576e57cb53e1da774be40d1b3abf8b0c3f11a14efe"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -621,26 +674,74 @@
             ]
         },
         {
-            "rule": "azure-api\\.net\\/webstore\\/info",
+            "rule": "azure-api\\.net\\/FeedService\\/v1\\/Feed\\/Resorts",
             "cookies": 0.0000205,
             "fingerprinting": 0,
             "subdomains": [
-                "sf-api-gwy-prod"
+                "apim-marketing-001"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "17721111f5ef89ee352c04fa9e329d0b9caab14da7e879b279ecfaaab34be8d2"
+                "6e1934b3c7df48e2f5e4440b60fbf4a4e26de9b75c0d04673f772ebbb42b2e03"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "avid.com",
-                "www.avid.com",
-                "www.sibelius.com"
+                "bigskyresort.com",
+                "www.bigskyresort.com",
+                "www.sundayriver.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/FeedService\\/v1\\/Feed",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-marketing-001"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "1aacff25a5de677fb9bfbaaa7df9adbffb29da2d271d11232fd479749c62edf1",
+                "099d8b49e6098d4c16280eb931ecd1c520da4e4c6a3f2acac83f0bac8458efa6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigskyresort.com",
+                "www.bigskyresort.com",
+                "www.sundayriver.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/FeedService\\/v1\\/Feed\\/Facilities\\/Areas\\/Lifts\\/All",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-marketing-001"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2124b881f2329be504c6cc150fa51eb1fca9a39ae93ead3d1521b4998d2ad129",
+                "5de2d59525a529fda1d3637e0249d9087ff19c0e51b36432dcaaf1a963bfb73b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigskyresort.com",
+                "www.bigskyresort.com",
+                "www.sundayriver.com"
             ]
         },
         {
@@ -754,7 +855,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -778,9 +879,7 @@
                     "resolved": "fiba-apim-service-prod.azure-api.net"
                 }
             ],
-            "responseHashes": [
-                "701618c27576dad15a76c0f4dc83c79cc43bdb6c67479d0634e39aaaa3ec173a"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -790,7 +889,7 @@
             ]
         },
         {
-            "rule": "azure-api\\.net\\/hapi\\/getgdapgamesbycompetitionid",
+            "rule": "azure-api\\.net\\/hapi\\/getgdapgamebyid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -806,7 +905,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -815,7 +914,7 @@
             ]
         },
         {
-            "rule": "azure-api\\.net\\/hapi\\/getgdapgamesbycompetitionid",
+            "rule": "azure-api\\.net\\/hapi\\/getgdapgamebyid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -830,9 +929,7 @@
                     "resolved": "fiba-apim-service-prod.azure-api.net"
                 }
             ],
-            "responseHashes": [
-                "86ac1798695e8e291512ef3fd4395f3ff2b1931f1a906ea2ba4ebebd6625b818"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -873,7 +970,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "a7f136a83ad828f05191c847e3b5de15b35f3f8419501a1b08d6f82397b42042"
+                "f0c0aa633d2d9c0b48857653c11da803e0e8975ac915f304b1851ee40ca8becd"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -894,28 +991,8 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ntb.com",
-                "www.ntb.com"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/content-svc\\/stores\\/4270",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "apim-production-eastus"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
             "responseHashes": [
-                "bfa24f12d917c5c60a9b2a401e6079b3064fc6398b2f8dfee29dcc8b8e872f45"
+                "8556f18fcb3dd44ffed93740bd3ad18d0334689fbe5bdfaf21fcd8b89c6888ef"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -936,8 +1013,10 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "25765a5f9911358202579701338acb4740e43b567c7112851923b2045808352e"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -946,25 +1025,87 @@
             ]
         },
         {
-            "rule": "azure-api\\.net\\/content-svc\\/stores\\/4270\\/amenities",
+            "rule": "azure-api\\.net\\/catalog-svc\\/vehicles\\/makes",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "apim-production-eastus"
+                "apim-qa-eastus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ntb.com",
+                "www.tirekingdom.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/catalog-svc\\/vehicles\\/makes",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-qa-eastus"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "df688c6d6990f0e2bcc8b72c76625839325da098750d17c247636d02c378bf41"
+                "c3729cbb8ae405d690fc7a9b41da6a1f63d04d2dd11f3187dea43e66c34e58ea"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ntb.com",
-                "www.ntb.com"
+                "www.tirekingdom.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/catalog-svc\\/tires\\/widths",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-qa-eastus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ntb.com",
+                "www.tirekingdom.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/catalog-svc\\/tires\\/widths",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-qa-eastus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6902bc442158257ef7c7520df33eec2d527466b3fd97e5677957f9c860f88b56"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ntb.com",
+                "www.tirekingdom.com"
             ]
         },
         {
@@ -983,8 +1124,10 @@
                     "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "69371f7124e4062d8828b97418e657af3330c18f9c6873c5dc5c13d4f01924d4"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1008,10 +1151,8 @@
                     "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
                 }
             ],
-            "responseHashes": [
-                "5110150c76731675628e7fd2610eabdd642332b1ed1724fa71ab5236c25147c6"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1061,7 +1202,7 @@
                 }
             ],
             "responseHashes": [
-                "6c4af369d0b5792f182262526a6cfbd10dd2317449b0817e00bf9d0681280aab"
+                "a7cb32e4e16ba4eecca0085e524cf826786e98ca751ea241957e0b59e43001b8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -1069,193 +1210,6 @@
             "exampleSites": [
                 "oregonlottery.org",
                 "www.oregonlottery.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/web-flow-libs\\/189e591c6fdf89bd12d9d\\/web-version\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "7850262c9d5fdd2a4e96e879afdaf915bbd3dc82a8d3f4d19ba0f1dfed544403"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/web-flow-libs\\/189e591c6fdf89bd12d9d\\/15\\/web-lib\\.min\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "1077043349fdf2f3ba3d4d2fa10b8985811d97ac761b4dc628043b3423e49ded"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "bx_bucket_number": {
-                    "ttl": null,
-                    "length": 2,
-                    "prevalence": 0.00001365280906546522,
-                    "uniqueness": 0.5
-                },
-                "bx_guest_ref": {
-                    "ttl": null,
-                    "length": 36,
-                    "prevalence": 0.00001365280906546522,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/getBucket",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "438015a503f76d47468b645fefbdbf594cb3e7a5a1d532350caf0c7e1986bfb5"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/getBucket",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/callFlows\\/350d239b-1d97-4b99-bb99-1e8fb28c1da0\\/variants\\/9925d9c7-1db9-4af6-8a4f-16d43e555303",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "5c09a8f78450c0e48211ddbd5fa792b5f72f509958d30283e8976dd0ed7876ae"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/callFlows\\/350d239b-1d97-4b99-bb99-1e8fb28c1da0\\/variants\\/9925d9c7-1db9-4af6-8a4f-16d43e555303",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/callFlows\\/3129e460-e126-49b7-b2f2-274f88dea4af\\/variants\\/ca79f837-095b-426f-968e-45cf68d7e259",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
-            ]
-        },
-        {
-            "rule": "azure-api\\.net\\/v2\\/callFlows\\/3129e460-e126-49b7-b2f2-274f88dea4af\\/variants\\/ca79f837-095b-426f-968e-45cf68d7e259",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prodapisitecorecdp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "5c09a8f78450c0e48211ddbd5fa792b5f72f509958d30283e8976dd0ed7876ae"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pivotalventures.org",
-                "www.pivotalventures.org"
             ]
         },
         {
@@ -1353,10 +1307,8 @@
                     "resolved": "gateway-prod-sonesta.azure-api.net"
                 }
             ],
-            "responseHashes": [
-                "c7a60950fde3ab6e1ebf53c15e5a75a703e8f039a03e105f9d5cb1bd8bd498d0"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1380,8 +1332,10 @@
                     "resolved": "gateway-prod-sonesta.azure-api.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c7a60950fde3ab6e1ebf53c15e5a75a703e8f039a03e105f9d5cb1bd8bd498d0"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1487,7 +1441,7 @@
                 }
             ],
             "responseHashes": [
-                "089ea2dba3be41e562c9063917019c3d40fb93b7dab0e09fbe6faadf0f6cf80c"
+                "68ce3ee7885efdfbe0c2f84afbee49eb4a0ca187406aad5d3f24f51fe6565183"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1564,7 +1518,7 @@
                 }
             ],
             "responseHashes": [
-                "6ae85650a895406b8a22b623abbdd00548b38ffda70da2456ef6b10218aad99c"
+                "541ee653a0d2a609ce34000b89c64500cb9d80dd24bb07ef0e1f78df93a6e249"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1586,7 +1540,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1606,7 +1560,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1626,7 +1580,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1646,7 +1600,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1666,7 +1620,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1686,6 +1640,138 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/Global\\/favicons",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cfa0576825e56956692e4f8b1b18cfeb170e97a2eafa6f3efd3119dc6d9344d3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/Global\\/alerts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/Global\\/navigation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3cf8a3b22fae724c474d80983fba1c67c1a5aa1bdb27a3c5da145b0aac709bea"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/Global\\/toolbar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "39aeeec46430e9ac65b2187571c053607ff093f5bcbc2e01ad116edc4f5d0fe5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/global\\/footer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "864d601b84aa02853458203759b56e1390eabfdf2032146ad8ab8aa5d6a672b7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vystarcu.org",
+                "www.vystarcu.org"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/vcuweb\\/api\\/Page\\/GetBySlugAndTag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-shared-prod01-eu-vy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "da82b821d045602f85c20fad3eb6e2f4e378b5a443351294ff45effd9284be01"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -1697,60 +1783,60 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000956,
+    "cookies": 0.000116,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7186147186147186
+            "prevalence": 0.8060836501901141
         },
         {
             "domain": "rexel.com",
-            "prevalence": 0.06493506493506493
-        },
-        {
-            "domain": "mavis.com",
-            "prevalence": 0.05194805194805195
+            "prevalence": 0.057034220532319393
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.05194805194805195
+            "prevalence": 0.049429657794676805
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.03463203463203463
-        },
-        {
-            "domain": "busyrooms.co",
-            "prevalence": 0.030303030303030304
+            "domain": "mavis.com",
+            "prevalence": 0.045627376425855515
         },
         {
             "domain": "avid.com",
-            "prevalence": 0.012987012987012988
+            "prevalence": 0.011406844106463879
         },
         {
             "domain": "quantummetric.com",
-            "prevalence": 0.012987012987012988
+            "prevalence": 0.011406844106463879
         },
         {
             "domain": "constellationdealer.com",
-            "prevalence": 0.004329004329004329
+            "prevalence": 0.0038022813688212928
         },
         {
             "domain": "bigcommerce.com",
-            "prevalence": 0.004329004329004329
+            "prevalence": 0.0038022813688212928
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0038022813688212928
+        },
+        {
+            "domain": "floridalottery.com",
+            "prevalence": 0.0038022813688212928
         }
     ],
     "types": {
-        "Preflight": 58,
-        "Fetch": 52,
-        "XHR": 36,
-        "Script": 4,
+        "Fetch": 57,
+        "Preflight": 60,
+        "XHR": 40,
+        "Other": 4,
         "Image": 2
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
         "ns4-05.azure-dns.info",
         "ns3-05.azure-dns.org",
+        "ns1-05.azure-dns.com",
         "ns2-05.azure-dns.net"
     ]
 }

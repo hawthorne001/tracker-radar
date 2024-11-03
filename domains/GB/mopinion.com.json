@@ -4,13 +4,17 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "deploy"
+        "deploy",
+        "collect",
+        "cacheorcheck",
+        "fonts",
+        "gstatic"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "mopinion\\.com\\/js\\/pastease\\.js",
@@ -20,13 +24,14 @@
                 "deploy"
             ],
             "apis": {
-                "Document.cookie getter": 4,
-                "window.sessionStorage": 4,
-                "Date.prototype.getTime": 4,
-                "window.localStorage": 3
+                "Document.cookie getter": 6,
+                "window.sessionStorage": 6,
+                "Date.prototype.getTime": 6,
+                "window.localStorage": 5,
+                "window.innerHeight": 1
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "ae863e07d6f0548acb2681cd03beae5a8638b7faa4d811812e6c2cf6ea62d16a"
@@ -35,9 +40,107 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tomtom.com",
+                "acm.org",
+                "help.tomtom.com",
+                "www.carexpert.com.au",
                 "www.colgate.com",
                 "www.theuniguide.co.uk",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/assets\\/surveys\\/2\\.0\\/js\\/survey\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "collect"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Document.cookie getter": 2,
+                "window.innerWidth": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c7ebc39ac6797ead509bd1b5ca548513a369e13aada507753734b9796b98f960"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/survey\\/public\\/json-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cacheorcheck"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c31c725b4783e4c0b5cd6a24fb26d0b2003e19f33d4714e034da576f9c48fdef"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fonts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "afaee983d13f3414d92c4e95278e89393f2c1a39483468638c30328b2a68735d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/s\\/opensans\\/v40\\/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQUwaEQbjA\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bda61cc88bc5f3641d01ad8aff9f054296966714bf89aea90331ec372f497c09"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
                 "www.tomtom.com"
             ]
         },
@@ -53,7 +156,7 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "71a24dc0f752c7b45da5f57adb333d54222e3460fcec161d612e350bd0cf2de6"
+                "664b7a09f7dce7acbd70ad7577ce33053af6a4d1e798c587836d7132865d0820"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -93,28 +196,35 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.38095238095238093
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.19047619047619047
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.09523809523809523
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 5
+        "Script": 8,
+        "XHR": 7,
+        "Stylesheet": 2,
+        "Font": 2
     },
     "nameservers": [
-        "ns-869.awsdns-44.net",
         "ns-1628.awsdns-11.co.uk",
-        "ns-1425.awsdns-50.org"
+        "ns-869.awsdns-44.net",
+        "ns-1425.awsdns-50.org",
+        "ns-134.awsdns-16.com"
     ]
 }

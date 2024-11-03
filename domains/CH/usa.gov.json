@@ -8,9 +8,14 @@
     "sites": 3,
     "subdomains": [
         "search",
-        "justice.sites.infr.search"
+        "justice.sites.infr.search",
+        "dos_stategov.sites.infr.search"
     ],
     "cnames": [
+        {
+            "original": "findit.state.gov",
+            "resolved": "dos_stategov.sites.infr.search.usa.gov"
+        },
         {
             "original": "search.justice.gov",
             "resolved": "justice.sites.infr.search.usa.gov"
@@ -24,7 +29,8 @@
             "fingerprinting": 0,
             "subdomains": [
                 "search",
-                "justice.sites.infr.search"
+                "justice.sites.infr.search",
+                "dos_stategov.sites.infr.search"
             ],
             "apis": {},
             "sites": 3,
@@ -33,6 +39,10 @@
                 {
                     "original": "search.justice.gov",
                     "resolved": "justice.sites.infr.search.usa.gov"
+                },
+                {
+                    "original": "findit.state.gov",
+                    "resolved": "dos_stategov.sites.infr.search.usa.gov"
                 }
             ],
             "responseHashes": [],
@@ -42,7 +52,7 @@
             "exampleSites": [
                 "usembassy.gov",
                 "www.justice.gov",
-                "www.swpc.noaa.gov"
+                "www.state.gov"
             ]
         },
         {
@@ -50,16 +60,21 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "search",
                 "justice.sites.infr.search",
-                "search"
+                "dos_stategov.sites.infr.search"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "search.justice.gov",
                     "resolved": "justice.sites.infr.search.usa.gov"
+                },
+                {
+                    "original": "findit.state.gov",
+                    "resolved": "dos_stategov.sites.infr.search.usa.gov"
                 }
             ],
             "responseHashes": [
@@ -69,8 +84,55 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "justice.gov",
-                "www.swpc.noaa.gov"
+                "usembassy.gov",
+                "www.justice.gov",
+                "www.state.gov"
+            ]
+        },
+        {
+            "rule": "usa\\.gov\\/assets\\/sayt\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "091a9401ca251dc57ceec5384488086872fb47de2b4e55b35171e816dad75b68"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usembassy.gov",
+                "www.state.gov"
+            ]
+        },
+        {
+            "rule": "usa\\.gov\\/assets\\/sayt_loader_libs\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2750954dc9e8dd41f39fc3f3f4ae6d5cd453b285502b876f3ce89c16010952b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usembassy.gov",
+                "www.state.gov"
             ]
         }
     ],
@@ -80,11 +142,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 8,
+        "Stylesheet": 2
     },
     "nameservers": [
         "dns.gsa.gov",
