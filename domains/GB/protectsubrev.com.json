@@ -7,24 +7,29 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "app"
+        "app",
+        "pages"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "protectsubrev\\.com\\/catch_rp\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "app"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.innerHeight": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fe5a16bb04faed995518bb06bb0d3e66d3ea41dfd6c775b511931b23e987aa6e"
+                "61f91ad98f7b3b217b2458124c5d92ebb755c299776f7bda4a41aec7a3df5530"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -33,11 +38,31 @@
                 "oilprice.com",
                 "www.allfreeknitting.com"
             ]
+        },
+        {
+            "rule": "protectsubrev\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pages"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.allfreeknitting.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
@@ -45,10 +70,11 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "venus.ns.cloudflare.com",
-        "renan.ns.cloudflare.com"
+        "renan.ns.cloudflare.com",
+        "venus.ns.cloudflare.com"
     ]
 }

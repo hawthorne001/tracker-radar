@@ -9,12 +9,18 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "sharkninja-prd-cus-001"
+        "sharkninja-prd-cus-001",
+        "apim-gw-azu-nyc-prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "api.nyc.gov",
+            "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -49,7 +55,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4c69bab27c31f6e8acc9b145372313446e8f8011b4110dcdce7ca8494a66cf1e"
+                "4427a41348c1bd02e98c259b80613e0fb0dc4d489f4474262b6b269749666c08"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -91,7 +97,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "173c4f43ef1732a5c6878aedda6df22a07c730ca60a38f9875390f1d36b29dc2"
+                "5617cdd518844d8d768472c1517394a2ed6a6ccb89f0e18dbe9be18ae9ec4807"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -99,6 +105,58 @@
             "exampleSites": [
                 "ninjakitchen.com",
                 "www.ninjakitchen.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/public\\/api\\/GetCalendar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-gw-azu-nyc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.nyc.gov",
+                    "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "a0b86bb0a8432bf17c8c90a04d55acf7c8e9e6c823afe75a3f9f8cd9459bc607"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nyc.gov",
+                "www.nyc.gov"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/public\\/api\\/GetCalendar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apim-gw-azu-nyc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.nyc.gov",
+                    "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nyc.gov",
+                "www.nyc.gov"
             ]
         },
         {
@@ -133,7 +191,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "eec8530f9c9ab4c64bb3429c85ffdc273241b97b51debff8877180ba25352f5c"
+                "0478b384da7cf831a12fcbed7688feb736b98c8052baa050f209d87f38343d26"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -146,7 +204,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -154,13 +212,13 @@
         }
     ],
     "types": {
-        "Preflight": 6,
-        "XHR": 6
+        "Preflight": 8,
+        "XHR": 8
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
-        "ns2-05.azure-dns.net",
         "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info"
+        "ns2-05.azure-dns.net",
+        "ns4-05.azure-dns.info",
+        "ns1-05.azure-dns.com"
     ]
 }

@@ -10,7 +10,10 @@
     "prevalence": 0.001,
     "sites": 10,
     "subdomains": [
-        "servedby"
+        "servedby",
+        "d9",
+        "ad-events",
+        "stat"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -38,28 +41,62 @@
             ]
         },
         {
-            "rule": "flashtalking\\.com\\/segment\\/2\\/read\\/a",
+            "rule": "flashtalking\\.com\\/d9core",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "d9"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.devicePixelRatio": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "083748f3c626540383623671ca0d3dcceb2056ba5f025d27d0625deed9d02bec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "strategywiki.org",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "flashtalking\\.com\\/lgc",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "servedby"
+                "d9"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "2577fd1470fa192497cc292750833b14ebbc8cb92283449b928b9edc36de5df8"
-            ],
-            "type": "Image",
+            "responseHashes": [],
+            "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010041168792047395,
-                "IR_gbd": 0.00010041168792047395
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "citizenwatch.com",
-                "www.mbusa.com"
+                "strategywiki.org",
+                "www.sherdog.com"
             ]
         },
         {
@@ -74,14 +111,55 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9789faca119774a006c12a7d8a294a10ff5fcf49852931702fd1b327113cb276"
+                "bef3994f94573b6cbf6ecdd962593ef31b98153d1e88b12c9209f828e7ca278d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mpgtolitres.com",
-                "www.typescripttutorial.net"
+                "behindthename.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "flashtalking\\.com\\/state\\/7936485",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad-events",
+                "servedby"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sherdog.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "flashtalking\\.com\\/reportV3\\/ft\\.stat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sherdog.com",
+                "www.sherdog.com"
             ]
         }
     ],
@@ -96,36 +174,45 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000904,
+    "cookies": 0.000703,
     "topInitiators": [
         {
+            "domain": "geoedge.be",
+            "prevalence": 0.5263157894736842
+        },
+        {
             "domain": "demdex.net",
-            "prevalence": 0.3
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.3
-        },
-        {
-            "domain": "staticneo.com",
-            "prevalence": 0.1
-        },
-        {
-            "domain": "doubleclick.net",
-            "prevalence": 0.1
+            "prevalence": 0.15789473684210525
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.05263157894736842
         },
         {
-            "domain": "adobedtm.com",
-            "prevalence": 0.1
+            "domain": "staticneo.com",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Image": 6,
-        "Script": 2
+        "Image": 8,
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
         "dns1.p02.nsone.net",

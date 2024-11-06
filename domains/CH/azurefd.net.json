@@ -9,17 +9,22 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00211,
-    "sites": 21,
+    "prevalence": 0.00241,
+    "sites": 24,
     "subdomains": [
         "afd-b2c-iibozyiouoyi4.z01",
+        "statuscast-web-1",
         "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01",
         "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
-        "hbpulse",
-        "sd-tagging",
-        "cdn-valais-prod-bff-e2a8hsaefef7gcac.z01"
+        "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03",
+        "apim-pr-laliga-gsbfgmgtgkaca5ef.z01",
+        "sd-tagging"
     ],
     "cnames": [
+        {
+            "original": "apim.laliga.com",
+            "resolved": "apim-pr-laliga-gsbfgmgtgkaca5ef.z01.azurefd.net"
+        },
         {
             "original": "cdn.sympany.ch",
             "resolved": "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01.azurefd.net"
@@ -33,8 +38,12 @@
             "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
         },
         {
-            "original": "norkon.handelsblatt.com",
-            "resolved": "hbpulse.azurefd.net"
+            "original": "content.www.wiwo.de",
+            "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+        },
+        {
+            "original": "status.sophos.com",
+            "resolved": "statuscast-web-1.azurefd.net"
         }
     ],
     "fingerprinting": 1,
@@ -62,6 +71,33 @@
             "exampleSites": [
                 "intel.com",
                 "community.intel.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/components\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statuscast-web-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "status.sophos.com",
+                    "resolved": "statuscast-web-1.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "f4dd6ff908c20c21827ebaba8ec7b2e2816dd62846e2a4af0e35f239d620b206"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sophos.com",
+                "docs.sophos.com"
             ]
         },
         {
@@ -96,7 +132,42 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01"
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "content.www.handelsblatt.com",
+                    "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
+                },
+                {
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "46441137713f7bc81e33b995ced7d25aaffd25e5336fe27849a170f8ec0bc237",
+                "66d532da50e4b834eaba7db1377a3e1e1a184aaa3558d221797e0dabd0f3bc44"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handelsblatt.com",
+                "www.handelsblatt.com",
+                "www.wiwo.de"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/api\\/init\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
             ],
             "apis": {},
             "sites": 2,
@@ -105,44 +176,48 @@
                 {
                     "original": "content.www.handelsblatt.com",
                     "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
+                },
+                {
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "1e07aa717c6e48f50cd9bd65281d3b26d8defd3fcdd945186d7ada79069f1baa"
+                "09bf275279ec2d6ddfa1e89d43cb1d2b9fc9849ec230988477832b6d6c88d67f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "handelsblatt.com",
-                "www.handelsblatt.com"
+                "www.wiwo.de"
             ]
         },
         {
-            "rule": "azurefd\\.net\\/api\\/v1\\/models\\/hb-front",
+            "rule": "azurefd\\.net\\/webview\\/api\\/web\\/subscriptions\\/laliga-easports-2024\\/standing",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "hbpulse"
+                "apim-pr-laliga-gsbfgmgtgkaca5ef.z01"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "norkon.handelsblatt.com",
-                    "resolved": "hbpulse.azurefd.net"
+                    "original": "apim.laliga.com",
+                    "resolved": "apim-pr-laliga-gsbfgmgtgkaca5ef.z01.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "630b566500b3cded114ce8fc5ecb4c4935ae6fb0f1748fc5ba1c6075aaf99df9"
+                "662c80f004985acc74cbcfd4b552b191c73fe1eab4ec42ffd7d6a5ac06154a70"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "handelsblatt.com",
-                "www.handelsblatt.com"
+                "laliga.com",
+                "www.laliga.com"
             ]
         },
         {
@@ -157,7 +232,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "5ea61356cfbc1c300508083b65f8d3f66f95d3c7f583e09e2ccaf34c92163a6d"
+                "6357e141a46037be8578d9d80b1a50f92cd607de32897f56f3cfd9e5839f69c3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -190,81 +265,70 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/",
+            "rule": "azurefd\\.net\\/api\\/log",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn-valais-prod-bff-e2a8hsaefef7gcac.z01"
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "valais.ch",
-                "www.valais.ch"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-valais-prod-bff-e2a8hsaefef7gcac.z01"
+            "cnames": [
+                {
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+                }
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
             "responseHashes": [
-                "610da6571f122a39640d9ef8cac903a54281c5bfdb8c15a382508584e70a5bba"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "valais.ch",
-                "www.valais.ch"
+                "wiwo.de",
+                "www.wiwo.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0011,
+    "cookies": 0.00131,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7941176470588235
+            "prevalence": 0.84
         },
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.14705882352941177
+            "domain": "go-mpulse.net",
+            "prevalence": 0.04
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.04
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.04
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.04
         }
     ],
     "types": {
         "Document": 2,
+        "Fetch": 9,
         "Stylesheet": 2,
-        "Fetch": 6,
+        "XHR": 2,
         "Script": 2,
-        "Image": 2,
-        "Preflight": 2
+        "Image": 2
     },
     "nameservers": [
         "ns1-37.azure-dns.com",
+        "ns3-37.azure-dns.org",
         "ns2-37.azure-dns.net",
-        "ns4-37.azure-dns.info",
-        "ns3-37.azure-dns.org"
+        "ns4-37.azure-dns.info"
     ]
 }

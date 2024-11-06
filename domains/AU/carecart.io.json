@@ -7,14 +7,39 @@
     "prevalence": 0.000602,
     "sites": 6,
     "subdomains": [
-        "tracking-sales-pop",
         "sales-pop",
+        "tracking-sales-pop",
         "app-spinner",
         "tracking-app-sas"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "carecart\\.io\\/lib\\/salesnotifier\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sales-pop"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "australianorganicproducts.com.au",
+                "www.rvonline.com.au"
+            ]
+        },
         {
             "rule": "carecart\\.io\\/index\\.php\\/FrontController\\/checkStore\\/",
             "cookies": 0,
@@ -23,20 +48,22 @@
                 "tracking-sales-pop"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "56871ac5ad0af5193bf352e4c7596cffb299427294f250d439301a46cf071ade"
+                "2c4cc59f8705dae05fa9679d8fa6a4254d8489d4e3948019a033dbbea7a56735",
+                "5dac2e206aacba165233323ed9734bfe16774ee8333c3597bc38d83dbd595a53"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_hjTLDTest": 0.0001003814495081309
+                "_hjTLDTest": 0.00010039152695512498
             },
             "exampleSites": [
                 "australianorganicproducts.com.au",
-                "www.myautoparts.com.au"
+                "www.myautoparts.com.au",
+                "www.rvonline.com.au"
             ]
         },
         {
@@ -47,8 +74,8 @@
                 "sales-pop"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "fb78f4e498cd8beaee49ed0ec513ef98d9d9fdf2da6df743b9573e6954ee186b"
@@ -58,48 +85,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "australianorganicproducts.com.au",
-                "www.myautoparts.com.au"
-            ]
-        },
-        {
-            "rule": "carecart\\.io\\/library\\/carecartSpinnerApp\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "app-spinner"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.innerWidth": 1,
-                "Screen.prototype.width": 1,
-                "window.outerWidth": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "australiansportsnutrition.com.au",
-                "www.camec.com.au"
+                "www.myautoparts.com.au",
+                "www.rvonline.com.au"
             ]
         },
         {
             "rule": "carecart\\.io\\/store-front-api\\/get-store-information",
-            "cookies": 0.000402,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "app-spinner",
                 "tracking-app-sas"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -108,25 +108,23 @@
             "exampleSites": [
                 "australiansportsnutrition.com.au",
                 "www.bathwaredirect.com.au",
-                "www.camec.com.au",
                 "www.megavitamins.com.au"
             ]
         },
         {
             "rule": "carecart\\.io\\/store-front-api\\/get-store-information",
-            "cookies": 0.000402,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "app-spinner",
                 "tracking-app-sas"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "a30a3e24751b834d8daff511f541147877cdfaee63c57ed20771773f4910bc80",
-                "8353854a11613999f5af07eabccbfc3136bafbbcac4ac395edc48a1a26a01a47",
                 "525249d2d0ea507fcb764036a7bd6bead5c3e16fc7a51d2aa4f61edfc710320e"
             ],
             "type": "XHR",
@@ -135,29 +133,28 @@
             "exampleSites": [
                 "australiansportsnutrition.com.au",
                 "www.bathwaredirect.com.au",
-                "www.camec.com.au",
                 "www.megavitamins.com.au"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000301,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "domain": "jquery.com",
+            "prevalence": 0.5789473684210527
         },
         {
-            "domain": "jquery.com",
-            "prevalence": 0.4444444444444444
+            "domain": "first party",
+            "prevalence": 0.42105263157894735
         }
     ],
     "types": {
-        "Script": 4,
-        "Stylesheet": 2,
-        "Preflight": 4,
-        "XHR": 4
+        "Script": 5,
+        "Stylesheet": 3,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

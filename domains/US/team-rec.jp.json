@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000819,
-    "sites": 12,
+    "prevalence": 0.0000956,
+    "sites": 14,
     "subdomains": [
         "mybaito-inhale",
         "booklista-inhale",
@@ -18,14 +18,14 @@
         "stg-enoteca-inhale",
         "livable-inhale",
         "mybaito-beacon",
-        "readerstore-recommend-beacon",
         "toto-b",
         "lhe-beacon",
         "twrcd-beacon",
+        "biccamera-b",
         "readerstore-recommend-api",
         "toto-recommend",
         "narita-recommend",
-        "livable-r-search"
+        "lhe-webapi"
     ],
     "cnames": [
         {
@@ -35,13 +35,9 @@
         {
             "original": "recommend-api.ebookstore.sony.jp",
             "resolved": "readerstore-recommend-api.team-rec.jp"
-        },
-        {
-            "original": "recommend-b.ebookstore.sony.jp",
-            "resolved": "readerstore-recommend-beacon.team-rec.jp"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "team-rec\\.jp\\/js\\/tlab-dmp\\.js",
@@ -77,25 +73,25 @@
                 "usertrack_asp3": {
                     "ttl": 31536006,
                     "length": 24,
-                    "prevalence": 0.00001365280906546522,
+                    "prevalence": 0.000013659989208608526,
                     "uniqueness": 1
                 },
                 "tlb_sid": {
                     "ttl": 1800,
                     "length": 10,
-                    "prevalence": 0.00004095842719639566,
+                    "prevalence": 0.00004097996762582558,
                     "uniqueness": 1
                 },
                 "tlab.tracking_id": {
                     "ttl": 31536009,
                     "length": 24,
-                    "prevalence": 0.00001365280906546522,
+                    "prevalence": 0.000013659989208608526,
                     "uniqueness": 1
                 },
                 "usertid": {
-                    "ttl": 31536006,
+                    "ttl": 31536003,
                     "length": 24,
-                    "prevalence": 0.00000682640453273261,
+                    "prevalence": 0.000006829994604304263,
                     "uniqueness": 1
                 }
             },
@@ -116,19 +112,15 @@
             "fingerprinting": 0,
             "subdomains": [
                 "mybaito-beacon",
-                "readerstore-recommend-beacon",
                 "toto-b",
                 "lhe-beacon",
-                "twrcd-beacon"
+                "twrcd-beacon",
+                "biccamera-b"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
+            "sites": 6,
+            "prevalence": 0.000041,
             "cnames": [
-                {
-                    "original": "recommend-b.ebookstore.sony.jp",
-                    "resolved": "readerstore-recommend-beacon.team-rec.jp"
-                },
                 {
                     "original": "beacon-recommend.tower.jp",
                     "resolved": "twrcd-beacon.team-rec.jp"
@@ -140,14 +132,16 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "usertrack_asp3": 0.00000682640453273261
+                "usertrack_asp3": 0.000006829994604304263,
+                "tlab.tracking_id": 0.000006829994604304263
             },
             "exampleSites": [
                 "mynavi.jp",
-                "ebookstore.sony.jp",
                 "jp.toto.com",
                 "l-tike.com",
-                "tower.jp"
+                "tower.jp",
+                "www.biccamera.com",
+                "www.hmv.co.jp"
             ]
         },
         {
@@ -172,13 +166,12 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "usertrack_asp3": 0.00001365280906546522,
-                "tlb_sid": 0.00004778483172912827,
-                "tlab.tracking_id": 0.00001365280906546522,
-                "__ph_opt_in_out_phc_tnQZyAK9BM0WkS5fdAZAxA1bNnyKUlWSACWzmxDfVrA": 0.00001365280906546522,
-                "_ga": 0.00001365280906546522,
-                "usertid": 0.00000682640453273261,
-                "9fcrenbd6r8": 0.00000682640453273261
+                "usertrack_asp3": 0.000013659989208608526,
+                "tlb_sid": 0.00004780996223012984,
+                "tlab.tracking_id": 0.000013659989208608526,
+                "__ph_opt_in_out_phc_tnQZyAK9BM0WkS5fdAZAxA1bNnyKUlWSACWzmxDfVrA": 0.000013659989208608526,
+                "usertid": 0.000006829994604304263,
+                "ecufa2k8tb": 0.000006829994604304263
             },
             "exampleSites": [
                 "mynavi.jp",
@@ -223,25 +216,48 @@
             ]
         },
         {
-            "rule": "team-rec\\.jp\\/select",
+            "rule": "team-rec\\.jp\\/recommend\\.html",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "livable-r-search"
+                "readerstore-recommend-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "recommend-api.ebookstore.sony.jp",
+                    "resolved": "readerstore-recommend-api.team-rec.jp"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "ebookstore.sony.jp"
+            ]
+        },
+        {
+            "rule": "team-rec\\.jp\\/recommend\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lhe-webapi"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "85b0f6a855ff04231b77c8fb80e1ff64c4b3a84f839d3d3aa26cfb4cc485ddc4"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "livable.co.jp",
-                "www.livable.co.jp"
+                "l-tike.com",
+                "www.hmv.co.jp"
             ]
         }
     ],
@@ -251,29 +267,30 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.44
-        },
-        {
-            "domain": "amazonaws.com",
-            "prevalence": 0.28
+            "prevalence": 0.4074074074074074
         },
         {
             "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.2962962962962963
+        },
+        {
+            "domain": "amazonaws.com",
+            "prevalence": 0.25925925925925924
         },
         {
             "domain": "onetrust.com",
-            "prevalence": 0.08
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
         "Script": 12,
-        "Image": 12
+        "Image": 13,
+        "Document": 2
     },
     "nameservers": [
-        "ns-345.awsdns-43.com",
-        "ns-1076.awsdns-06.org",
         "ns-717.awsdns-25.net",
-        "ns-1923.awsdns-48.co.uk"
+        "ns-1923.awsdns-48.co.uk",
+        "ns-345.awsdns-43.com",
+        "ns-1076.awsdns-06.org"
     ]
 }

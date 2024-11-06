@@ -11,10 +11,12 @@
         "hi-impact",
         "cdn-utils",
         "bsrv-as",
-        "bsrv",
-        "prebid",
         "test-schain",
-        "bsrv-qa"
+        "prebid",
+        "bsrv",
+        "bsrv-qa",
+        "vidsrv-cdn",
+        "test-fsrv"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -28,11 +30,11 @@
                 "hi-impact"
             ],
             "apis": {
-                "Date.prototype.getTime": 13,
-                "window.innerHeight": 10
+                "Date.prototype.getTime": 15,
+                "window.innerHeight": 8
             },
-            "sites": 18,
-            "prevalence": 0.000123,
+            "sites": 19,
+            "prevalence": 0.00013,
             "cnames": [],
             "responseHashes": [
                 "ca45778186db317ba0cb7d85893972e2c626ed815a7e2b70e87630db5c5906e8"
@@ -41,23 +43,24 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eva.vn",
+                "hellodoktor.com",
                 "hellodoctor.com.ph",
-                "helloswasthya.com",
-                "helloyishi.com.tw",
+                "m.rediff.com",
+                "ngoisao.vnexpress.net",
                 "odishatv.in",
-                "parenting.firstcry.com",
-                "tamil.asianetnews.com",
                 "vnexpress.net",
+                "www.24h.com.vn",
                 "www.business-standard.com",
                 "www.dinamani.com",
                 "www.firstcry.com",
-                "www.firstpost.com",
                 "www.gmanetwork.com",
-                "www.haaretz.com",
                 "www.moneycontrol.com",
                 "www.newindianexpress.com",
+                "www.rediff.com",
                 "www.republicworld.com",
                 "www.team-bhp.com",
+                "www.thairath.co.th",
                 "www.vikatan.com"
             ]
         },
@@ -69,10 +72,10 @@
                 "cdn-utils"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 14
+                "Navigator.prototype.userAgent": 17
             },
-            "sites": 16,
-            "prevalence": 0.000109,
+            "sites": 17,
+            "prevalence": 0.000116,
             "cnames": [],
             "responseHashes": [
                 "afc11366be12cde139b3db4a05b617b3bcea82d88bc61d782e9f0397d2c9d53d"
@@ -81,19 +84,20 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eva.vn",
                 "hellodoctor.com.ph",
-                "helloswasthya.com",
+                "m.rediff.com",
+                "ngoisao.vnexpress.net",
                 "odishatv.in",
-                "parenting.firstcry.com",
-                "tamil.asianetnews.com",
                 "vnexpress.net",
+                "www.24h.com.vn",
                 "www.business-standard.com",
                 "www.dinamani.com",
                 "www.firstcry.com",
-                "www.firstpost.com",
-                "www.haaretz.com",
+                "www.gmanetwork.com",
                 "www.moneycontrol.com",
                 "www.newindianexpress.com",
+                "www.rediff.com",
                 "www.republicworld.com",
                 "www.team-bhp.com",
                 "www.vikatan.com"
@@ -107,64 +111,104 @@
                 "bsrv-as"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000887,
+            "sites": 17,
+            "prevalence": 0.000116,
             "cnames": [],
             "responseHashes": [
-                "a1900c7a74c392a04c6fff6c8e5089ed5218f80d246fbbb5dd3810c37bca1e8f",
-                "046d437090b176940d35591dc354d5236882804bb956331394a91dbf8054d075",
-                "9a0795b56cf0aa9af5a3902e374edf5eba5ffbfe7621e5bcd06f288713e069e8",
-                "2d74c20797ccedf17e52946603df9e0ca448c219da159b4c6c3bba17e75339c3",
-                "dea8924d80f1b254b5fc1e20165aec830d432a1a7c2c085ff585de74d5087adb",
-                "e987c4b14cc59af879f1f5b369c7a3cd28af515ffca1876dc61058684356a246",
-                "accd8348951a0a44c029cc6e45ad36ffe735bcccd2718aaf8ec58710b7a75286",
-                "c3bf857e1ea225ca44cfdf12ed66de9a57bdd03972f0c16abed66f0c9cc1191f",
-                "9bb9a6b1e15b5dda601751fe63efef2a8cc70a3151237250053c6ce5a295bde3",
-                "727f42b76a8d274523d33a6255443f85767bc0f8dc46378234a626752c2ebfda",
-                "85fdf6d0f59db7151979fa8f117e281b8fb6bcff9ca754e74aabd69cee35a4f4"
+                "8608c7af3b1c1bd5a6f6e52f89d12947f533fb402ae9f3b81c34cd39e31a92be",
+                "c222aeb1e57187c143929aede98a435c84c64aed888777d9f7ae31afe6636565",
+                "3b59b022883f73e188126057ed6673b0e7813b72627def3efee9593834d224c6",
+                "9e1c293e8639ab1f4df3557938e3005f2ce2ccbfcf631b98594b53b1ec215b6b",
+                "700780b0dd5945f70975681de1f254352c8ed17e213a0aa4f3e622ccf8851de3",
+                "956dfb61fafe3466f8fbc88f674248e18eb339a2ed016c01cc061c4fdba151e5",
+                "6e1d9bb4bf1d7b1e93ab86443f2daf0d1394fbcf0d0660a2c5875865221799b3",
+                "08cb6f52cd39c58e0b1da5e45843fd22d31e92dcf3692f13b574761f910f9ef5",
+                "c7fbce22649a7559fa440b7ab9d50f0a4eaa97dd61a543ecab1faeebbeeb5f67",
+                "62ea0e144d7631fb829847c1d87e1400ce5e99e5ff5dd6675489da272e2635c1",
+                "711b21f68fbbae056af80bc59866aa43fe7206661508449c1cfe986183a80570"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eva.vn",
                 "hellodoctor.com.ph",
-                "helloswasthya.com",
+                "m.rediff.com",
+                "ngoisao.vnexpress.net",
                 "odishatv.in",
                 "vnexpress.net",
+                "www.24h.com.vn",
                 "www.business-standard.com",
                 "www.dinamani.com",
                 "www.firstcry.com",
-                "www.firstpost.com",
+                "www.gmanetwork.com",
                 "www.moneycontrol.com",
                 "www.newindianexpress.com",
+                "www.rediff.com",
                 "www.republicworld.com",
                 "www.team-bhp.com",
                 "www.vikatan.com"
             ]
         },
         {
-            "rule": "bidsxchange\\.com\\/codebase\\/bsrv_v2\\/templates_v2\\/STDB\\/refresher-stdb\\/refresher-stdb_all_DSK_all_all\\.js",
+            "rule": "bidsxchange\\.com\\/v3_schain",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "bsrv"
+                "test-schain"
             ],
-            "apis": {
-                "Date.prototype.getTime": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000615,
             "cnames": [],
-            "responseHashes": [
-                "bb5dd31fafbe438807a665fb0fdab06d30675a1e1b4f14f93113023039aff995"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hellodoctor.com.ph",
-                "helloswasthya.com",
-                "www.dinamani.com"
+                "eva.vn",
+                "odishatv.in",
+                "vnexpress.net",
+                "www.business-standard.com",
+                "www.dinamani.com",
+                "www.firstcry.com",
+                "www.newindianexpress.com",
+                "www.team-bhp.com",
+                "www.vikatan.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/v3_schain",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "test-schain"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000615,
+            "cnames": [],
+            "responseHashes": [
+                "9a8de65f3fb581b1c0aa6ad291be11df211c7b433070f08b5bde44df21e19013",
+                "38c9805ae563ff7001ded4a2d6383e56767e0ef851870bbb034f6e3ff463457c",
+                "dccc0f3b6c1a1e849045987bc6277d634ab409361c76669f4ccc6f96b19fb07f",
+                "8bbabd4adb61a8cc7bef13350bccde9598656463da1322d2332a10597c6a27b6",
+                "3bb13f540a3a8771f7baf5d864666f3ff47be51e1a5e6087397e314af620b419",
+                "3cbd9ec06dd6779a5d9b2ee23c4de8e3e85bc5a8df68b4eb7c1362fceb9338dc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eva.vn",
+                "odishatv.in",
+                "vnexpress.net",
+                "www.business-standard.com",
+                "www.dinamani.com",
+                "www.firstcry.com",
+                "www.newindianexpress.com",
+                "www.team-bhp.com",
+                "www.vikatan.com"
             ]
         },
         {
@@ -188,15 +232,6 @@
                 "Navigator.prototype.language": 6,
                 "Navigator.prototype.webdriver": 6,
                 "Navigator.prototype.cookieEnabled": 6,
-                "Document.cookie getter": 5,
-                "Navigator.prototype.connection": 6,
-                "window.devicePixelRatio": 6,
-                "Screen.prototype.orientation": 6,
-                "Navigator.prototype.hardwareConcurrency": 6,
-                "Navigator.prototype.deviceMemory": 6,
-                "window.localStorage": 4,
-                "Date.prototype.getTimezoneOffset": 5,
-                "Navigator.prototype.languages": 5,
                 "window.outerWidth": 5,
                 "window.outerHeight": 5,
                 "Screen.prototype.availWidth": 5,
@@ -204,10 +239,19 @@
                 "window.screenLeft": 5,
                 "window.screenTop": 5,
                 "PerformanceTiming.prototype.navigationStart": 5,
+                "window.localStorage": 4,
+                "Navigator.prototype.connection": 6,
+                "Document.cookie getter": 5,
+                "Date.prototype.getTimezoneOffset": 5,
+                "Navigator.prototype.languages": 5,
+                "window.devicePixelRatio": 6,
+                "Screen.prototype.orientation": 6,
+                "Navigator.prototype.hardwareConcurrency": 6,
+                "Navigator.prototype.deviceMemory": 6,
                 "Navigator.prototype.maxTouchPoints": 2
             },
-            "sites": 12,
-            "prevalence": 0.0000819,
+            "sites": 11,
+            "prevalence": 0.0000751,
             "cnames": [],
             "responseHashes": [
                 "89fabacb69f943714fd314ccecfecac3788cd2ce3e5b599bf470ec094d863b76"
@@ -216,108 +260,13 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eva.vn",
                 "hellodoctor.com.ph",
-                "helloswasthya.com",
                 "odishatv.in",
                 "vnexpress.net",
                 "www.business-standard.com",
                 "www.dinamani.com",
                 "www.firstcry.com",
-                "www.firstpost.com",
-                "www.newindianexpress.com",
-                "www.republicworld.com",
-                "www.team-bhp.com",
-                "www.vikatan.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bsrv-as"
-            ],
-            "apis": {},
-            "sites": 11,
-            "prevalence": 0.0000751,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hellodoctor.com.ph",
-                "helloswasthya.com",
-                "odishatv.in",
-                "vnexpress.net",
-                "www.business-standard.com",
-                "www.dinamani.com",
-                "www.firstcry.com",
-                "www.firstpost.com",
-                "www.newindianexpress.com",
-                "www.republicworld.com",
-                "www.team-bhp.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/v3_schain",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "test-schain"
-            ],
-            "apis": {},
-            "sites": 9,
-            "prevalence": 0.0000614,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "odishatv.in",
-                "www.business-standard.com",
-                "www.dinamani.com",
-                "www.firstcry.com",
-                "www.firstpost.com",
-                "www.newindianexpress.com",
-                "www.republicworld.com",
-                "www.team-bhp.com",
-                "www.vikatan.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/v3_schain",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "test-schain"
-            ],
-            "apis": {},
-            "sites": 10,
-            "prevalence": 0.0000683,
-            "cnames": [],
-            "responseHashes": [
-                "dccc0f3b6c1a1e849045987bc6277d634ab409361c76669f4ccc6f96b19fb07f",
-                "869a60b3d9c32af271e48a3783af3e0fead49333c486b3f803b742e02422dd63",
-                "28ea2431b9fdadb1d7827fd38d5052223207111378d2a723899b9c653c270692",
-                "3bb13f540a3a8771f7baf5d864666f3ff47be51e1a5e6087397e314af620b419",
-                "2dee2aa11b764c4e3c0915ef611efdcecf0738ec6ff2f9b2bf3a53e74aaa9457",
-                "4cda30b6bf10da8afba9a8d8c0344c45f19fee6686ea428ecc0c2264e41bc775",
-                "9eb786bbbddc4b4c5e4e17874304b39542df7c8fc0b1c1048748e095b29db5c1"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "odishatv.in",
-                "vnexpress.net",
-                "www.business-standard.com",
-                "www.dinamani.com",
-                "www.firstcry.com",
-                "www.firstpost.com",
                 "www.newindianexpress.com",
                 "www.republicworld.com",
                 "www.team-bhp.com",
@@ -332,10 +281,10 @@
                 "bsrv"
             ],
             "apis": {
-                "Date.prototype.getTime": 6
+                "Date.prototype.getTime": 5
             },
-            "sites": 6,
-            "prevalence": 0.000041,
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
                 "19ec131f0c26ede03b6f2a1b41f24ce4db1c324afb764c6f793d95374181eb67"
@@ -344,16 +293,136 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eva.vn",
                 "odishatv.in",
-                "vnexpress.net",
                 "www.business-standard.com",
-                "www.firstpost.com",
+                "www.dinamani.com",
+                "www.newindianexpress.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bsrv-as"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000615,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eva.vn",
+                "hellodoctor.com.ph",
+                "odishatv.in",
+                "www.business-standard.com",
+                "www.dinamani.com",
+                "www.firstcry.com",
+                "www.newindianexpress.com",
+                "www.republicworld.com",
+                "www.team-bhp.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/7232\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bsrv-qa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rediff.com",
+                "www.rediff.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/streamline_videos\\/food\\/thunbnails\\/we-bet-you-didnt-know-these-crazy-facts-about-vietnamese-food\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vidsrv-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "25b39bb119d7685b4c245146c73b16b5a23de319001f45701943f4e6f28b1ac9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rediff.com",
+                "www.rediff.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/codebase\\/bsrv_v2\\/templates_v2\\/HIS_HB\\/intrstl_v2\\/intrstl_all_DSK_all_all\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "bsrv"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "45a1063e04e84e66f73889ccfbaa8c336cbe29ff3c3e4a0e7b0d95b6ddd721a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dinamani.com",
+                "www.newindianexpress.com"
+            ]
+        },
+        {
+            "rule": "bidsxchange\\.com\\/extras\\/close_nw\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bsrv"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "5ffdf6617c0712f9d03ee5b430eeb48cf168bb4e013686ccc14fcf5dc7d4726c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dinamani.com",
                 "www.newindianexpress.com",
                 "www.republicworld.com"
             ]
         },
         {
-            "rule": "bidsxchange\\.com\\/4879\\.js",
+            "rule": "bidsxchange\\.com\\/5761\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -370,52 +439,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "business-standard.com",
-                "www.business-standard.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/6003\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bsrv-qa"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "firstpost.com",
-                "www.firstpost.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/6002\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bsrv-qa"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "firstpost.com",
-                "www.firstpost.com"
+                "moneycontrol.com",
+                "www.moneycontrol.com"
             ]
         },
         {
@@ -460,54 +485,6 @@
             "exampleSites": [
                 "newindianexpress.com",
                 "www.newindianexpress.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/codebase\\/bsrv_v2\\/templates_v2\\/HIS_HB\\/intrstl_v2\\/intrstl_all_DSK_all_all\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "bsrv"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "45a1063e04e84e66f73889ccfbaa8c336cbe29ff3c3e4a0e7b0d95b6ddd721a1"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "newindianexpress.com",
-                "www.newindianexpress.com"
-            ]
-        },
-        {
-            "rule": "bidsxchange\\.com\\/extras\\/close_nw\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bsrv"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "5ffdf6617c0712f9d03ee5b430eeb48cf168bb4e013686ccc14fcf5dc7d4726c"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "newindianexpress.com",
-                "www.newindianexpress.com",
-                "www.republicworld.com"
             ]
         },
         {
@@ -558,6 +535,28 @@
             ]
         },
         {
+            "rule": "bidsxchange\\.com\\/672\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "test-fsrv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b3f5242838a6bc1f06fc7eed513ccc295803cab409cc3332fbaf9d675ca4dd07"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "republicworld.com",
+                "www.republicworld.com"
+            ]
+        },
+        {
             "rule": "bidsxchange\\.com\\/1401\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -594,8 +593,10 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "eb797c9fc5f5b9ebc036bac161ae7ef576909dc4daed7b879ad14b556d5d21a9"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -614,10 +615,8 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "eb797c9fc5f5b9ebc036bac161ae7ef576909dc4daed7b879ad14b556d5d21a9"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -635,8 +634,8 @@
             "apis": {
                 "Date.prototype.getTime": 2
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "066682562f056eaa054ebb3bfdc524f7c8ea7f249a7da8bd7b8f1dea99dbf061"
@@ -646,7 +645,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "team-bhp.com",
-                "www.team-bhp.com"
+                "www.team-bhp.com",
+                "www.vikatan.com"
             ]
         },
         {
@@ -660,9 +660,7 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -678,40 +676,36 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5777777777777777
+            "prevalence": 0.5388888888888889
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.3277777777777778
-        },
-        {
-            "domain": "geoedge.be",
-            "prevalence": 0.05
+            "prevalence": 0.40555555555555556
         },
         {
             "domain": "assettype.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.03333333333333333
         },
         {
             "domain": "googlesyndication.com",
             "prevalence": 0.011111111111111112
         },
         {
-            "domain": "jixie.media",
-            "prevalence": 0.005555555555555556
+            "domain": "geoedge.be",
+            "prevalence": 0.011111111111111112
         }
     ],
     "types": {
-        "Script": 77,
-        "XHR": 25,
-        "Ping": 11,
+        "Script": 75,
+        "XHR": 28,
         "Preflight": 11,
-        "Image": 3
+        "Ping": 9,
+        "Image": 5
     },
     "nameservers": [
-        "ns-1295.awsdns-33.org",
-        "ns-184.awsdns-23.com",
         "ns-759.awsdns-30.net",
-        "ns-1683.awsdns-18.co.uk"
+        "ns-1683.awsdns-18.co.uk",
+        "ns-1295.awsdns-33.org",
+        "ns-184.awsdns-23.com"
     ]
 }

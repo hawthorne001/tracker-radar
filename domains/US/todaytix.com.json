@@ -8,10 +8,9 @@
     "sites": 4,
     "subdomains": [
         "api",
-        "content-service",
-        "t",
         "sc",
-        "sa"
+        "sa",
+        "content-service"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -34,26 +33,6 @@
             "exampleSites": [
                 "londontheatre.co.uk",
                 "www.londontheatre.co.uk",
-                "www.newyorktheatreguide.com"
-            ]
-        },
-        {
-            "rule": "todaytix\\.com\\/api\\/v3\\/retailerRating",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "content-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "londontheatre.co.uk",
                 "www.newyorktheatreguide.com"
             ]
         },
@@ -81,45 +60,37 @@
             ]
         },
         {
-            "rule": "todaytix\\.com\\/api\\/v3\\/retailerRating",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "todaytix\\.com\\/analytics\\.js\\/v1\\/6TvpXczbtWMt3xHUMUBkUiMSgvUfJeTF\\/analytics\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
             "subdomains": [
-                "content-service"
+                "sc"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "9ddec619e23ac6d760a96089ff6481b2592ae23c062e10c6fb7acfffbf0474db",
-                "3eee4882f769b34a76c2bac9252df3a185fef2b956be8d1f48aa3e09cc602202"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "londontheatre.co.uk",
-                "www.londontheatre.co.uk",
-                "www.newyorktheatreguide.com"
-            ]
-        },
-        {
-            "rule": "todaytix\\.com\\/t\\/experiment_viewed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "t"
-            ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "bebbb9866d2b84398d674336d69c65aabf0bc2f5d7ef523e8109828dae9b4e7a"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "ajs_anonymous_id": {
+                    "ttl": 31536005,
+                    "length": 36,
+                    "prevalence": 0.000013659989208608526,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "londontheatre.co.uk",
@@ -171,44 +142,6 @@
             ]
         },
         {
-            "rule": "todaytix\\.com\\/analytics\\.js\\/v1\\/6TvpXczbtWMt3xHUMUBkUiMSgvUfJeTF\\/analytics\\.min\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 2,
-            "subdomains": [
-                "sc"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
-                "Document.cookie getter": 2,
-                "Navigator.prototype.onLine": 2,
-                "Navigator.prototype.language": 2,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "bebbb9866d2b84398d674336d69c65aabf0bc2f5d7ef523e8109828dae9b4e7a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "ajs_anonymous_id": {
-                    "ttl": 31536005,
-                    "length": 36,
-                    "prevalence": 0.00001365280906546522,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "londontheatre.co.uk",
-                "www.londontheatre.co.uk"
-            ]
-        },
-        {
             "rule": "todaytix\\.com\\/v1\\/projects\\/6TvpXczbtWMt3xHUMUBkUiMSgvUfJeTF\\/settings",
             "cookies": 0,
             "fingerprinting": 0,
@@ -220,7 +153,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7c9e7734daf463beec5a4734fa89ef2c491bac0ec3ce33b5622d1fc46aa9b8c7"
+                "ac67c67b3fe119568539233e693f4b2a6a3164527db3c23b003d88e35681bdc6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -277,7 +210,7 @@
             ]
         },
         {
-            "rule": "todaytix\\.com\\/next-integrations\\/actions\\/google-analytics-4-web\\/3d7967e6cef0f568aafa\\.js",
+            "rule": "todaytix\\.com\\/next-integrations\\/actions\\/google-analytics-4-web\\/2c69bee66ca16e286c8a\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -288,7 +221,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "24c623ca85aeb7eb9e6b4fc98d9c0b5666dbdfe290680ad484998f04667bc19b"
+                "96b227fd0dec8b3853c8aa559eb63e7ab437b9ecafa92892b959776e3c45069e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -300,7 +233,7 @@
             ]
         },
         {
-            "rule": "todaytix\\.com\\/next-integrations\\/actions\\/845\\/d41568b7f25714884231\\.js",
+            "rule": "todaytix\\.com\\/next-integrations\\/actions\\/845\\/449cd4534726259c2a8c\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -311,7 +244,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "ad4ec56c04477d9acc30ce9a07150d3b241ea38d96ec99aa0c6617e2379f1445"
+                "c664e784d6cba355616ea0a6eb59603579a7b0e49fc4b9595264ba736aeccb4d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -465,49 +398,29 @@
             ]
         },
         {
-            "rule": "todaytix\\.com\\/api\\/v2\\/shows\\/14894\\/showtimes",
+            "rule": "todaytix\\.com\\/v1\\/m",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "newyorktheatreguide.com",
-                "www.newyorktheatreguide.com"
-            ]
-        },
-        {
-            "rule": "todaytix\\.com\\/api\\/v2\\/shows\\/14894\\/showtimes",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
+                "sa"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "1cabeddd983d4c3b8d092739bbc3accd26af926c18d1db2eca2f4f4befeca08e"
+                "12f71cb993958eefc4bdb41d7dbbda490779a9c7aba448f7be52bb63912e0254"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "newyorktheatreguide.com",
-                "www.newyorktheatreguide.com"
+                "londontheatre.co.uk",
+                "www.londontheatre.co.uk"
             ]
         },
         {
-            "rule": "todaytix\\.com\\/api\\/v3\\/products\\/14894",
+            "rule": "todaytix\\.com\\/api\\/v3\\/retailerRating",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -518,18 +431,18 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "cd79111815da9ad82541bb72a3cd7ac4f7caa1bd2e6813066100a38e4edea9f9"
+                "3eee4882f769b34a76c2bac9252df3a185fef2b956be8d1f48aa3e09cc602202"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "newyorktheatreguide.com",
+                "londontheatre.co.uk",
                 "www.newyorktheatreguide.com"
             ]
         },
         {
-            "rule": "todaytix\\.com\\/api\\/v3\\/products\\/14894",
+            "rule": "todaytix\\.com\\/api\\/v3\\/retailerRating",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -544,7 +457,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "newyorktheatreguide.com",
+                "londontheatre.co.uk",
                 "www.newyorktheatreguide.com"
             ]
         },
@@ -576,54 +489,10 @@
                 "ajs_anonymous_id": {
                     "ttl": 31536006,
                     "length": 36,
-                    "prevalence": 0.00001365280906546522,
+                    "prevalence": 0.000013659989208608526,
                     "uniqueness": 1
                 }
             },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "newyorktheatreguide.com",
-                "www.newyorktheatreguide.com"
-            ]
-        },
-        {
-            "rule": "todaytix\\.com\\/v1\\/projects\\/A6otKX8Sb4fQEKvEQoyb4U2WxsJEGcpx\\/settings",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sc"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "663f496fbb420e33a650869abc716bdced00533a21c44ab981ddf8152f4a62e7"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "newyorktheatreguide.com",
-                "www.newyorktheatreguide.com"
-            ]
-        },
-        {
-            "rule": "todaytix\\.com\\/next-integrations\\/integrations\\/bing-ads\\/2\\.0\\.1\\/bing-ads\\.dynamic\\.js\\.gz",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sc"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e91bd6d37a2d6c0a38558cfe458338d7f0437252d5d4e3ebfffa5d2ba8e5aaa2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "newyorktheatreguide.com",
@@ -637,23 +506,23 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.875
+            "prevalence": 0.8611111111111112
         },
         {
             "domain": "first party",
-            "prevalence": 0.125
+            "prevalence": 0.1388888888888889
         }
     ],
     "types": {
-        "Preflight": 12,
-        "XHR": 13,
-        "Fetch": 12,
-        "Script": 30
+        "Preflight": 8,
+        "XHR": 8,
+        "Script": 28,
+        "Fetch": 10
     },
     "nameservers": [
+        "ns-1907.awsdns-46.co.uk",
         "ns-257.awsdns-32.com",
-        "ns-971.awsdns-57.net",
         "ns-1232.awsdns-26.org",
-        "ns-1907.awsdns-46.co.uk"
+        "ns-971.awsdns-57.net"
     ]
 }

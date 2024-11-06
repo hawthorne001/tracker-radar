@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00191,
-    "sites": 19,
+    "prevalence": 0.00181,
+    "sites": 18,
     "subdomains": [
         "afd-b2c-iibozyiouoyi4.z01",
         "statuscast-web-1",
@@ -20,7 +20,7 @@
         "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
         "fcsp-cdn-etaed4h5eackgzeb.a01",
         "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
-        "hbpulse"
+        "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
     ],
     "cnames": [
         {
@@ -36,16 +36,16 @@
             "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
         },
         {
+            "original": "content.www.wiwo.de",
+            "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+        },
+        {
             "original": "gtm.flysas.com",
             "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
         },
         {
             "original": "metrics.boels.com",
             "resolved": "ase-gtm-prod-fmfbh8dkc5cxf3cr.a02.azurefd.net"
-        },
-        {
-            "original": "norkon.handelsblatt.com",
-            "resolved": "hbpulse.azurefd.net"
         },
         {
             "original": "oidc.dfb.de",
@@ -140,8 +140,8 @@
         },
         {
             "rule": "azurefd\\.net\\/auth\\/realms\\/AK\\/protocol\\/openid-connect\\/3p-cookies\\/step2\\.html",
-            "cookies": 0.000101,
-            "fingerprinting": 1,
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "frontdoor-zdienste-prod"
             ],
@@ -181,7 +181,9 @@
                     "resolved": "frontdoor-zdienste-prod.azurefd.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "c61d7dcdc611e611b172293b91270c556075307db62e1c22e5cdd6be36dc243e"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -968,7 +970,7 @@
                 }
             ],
             "responseHashes": [
-                "47f41399594a48a39705c1ffa75c8af40ab1740cefa8324e07a96eb537674bdc"
+                "8acd8c9dc160d116a5f6ae9391ef23b10278273cc926be77703ec429a74d6131"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -999,31 +1001,46 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/192438\\/dirk-laabs-lesung-clubheim-fcsp\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fcsp-cdn-etaed4h5eackgzeb.a01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fcstpauli.com",
-                "www.fcstpauli.com"
-            ]
-        },
-        {
             "rule": "azurefd\\.net\\/api\\/content\\/eager\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01"
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "content.www.handelsblatt.com",
+                    "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
+                },
+                {
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "6c19170d4b861041c5144a70fcf707684c3e1d05997779d7bf5b2fcb80458dc3",
+                "b3c266cc5f12dd1fb88e6d77d81f23bdb67c7c5e481bb1cd46dc3914f5c6c1d2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handelsblatt.com",
+                "www.handelsblatt.com",
+                "www.wiwo.de"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/api\\/init\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
             ],
             "apis": {},
             "sites": 2,
@@ -1032,50 +1049,54 @@
                 {
                     "original": "content.www.handelsblatt.com",
                     "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
+                },
+                {
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "5e1e3d9ebd26352b5a1d6dff79ed86cbd3f4e926561f703b43f53afcfe460eee"
+                "5d19983ad741541a2a6ea934308b1d41352ee6c05ae6981fffbb628d00c41c51"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "handelsblatt.com",
-                "www.handelsblatt.com"
+                "www.wiwo.de"
             ]
         },
         {
-            "rule": "azurefd\\.net\\/api\\/v1\\/models\\/hb-front",
+            "rule": "azurefd\\.net\\/api\\/log",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "hbpulse"
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "norkon.handelsblatt.com",
-                    "resolved": "hbpulse.azurefd.net"
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "1b04325d9c2c2a8e7294dfe0c400a00936e1cf4e02386c0184b3d5e2fe8c530f"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "handelsblatt.com",
-                "www.handelsblatt.com"
+                "wiwo.de",
+                "www.wiwo.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00131,
+    "cookies": 0.00121,
     "topInitiators": [
         {
             "domain": "first party",
@@ -1084,16 +1105,16 @@
     ],
     "types": {
         "Document": 9,
-        "Fetch": 8,
+        "Fetch": 11,
         "Font": 4,
         "Script": 30,
         "Stylesheet": 22,
-        "Image": 4
+        "Image": 2
     },
     "nameservers": [
-        "ns3-37.azure-dns.org",
-        "ns2-37.azure-dns.net",
         "ns1-37.azure-dns.com",
-        "ns4-37.azure-dns.info"
+        "ns2-37.azure-dns.net",
+        "ns4-37.azure-dns.info",
+        "ns3-37.azure-dns.org"
     ]
 }
