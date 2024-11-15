@@ -7,7 +7,7 @@ sqlite3 << 'END_SQL'
 .import categorized_trackers.csv trackers
 CREATE UNIQUE INDEX domain_idx ON trackers(domain);
 -- Instructions to modify the table here
-.read "category_patches/001 - Support chat widgets.sql"
+.read "category_patches/002 - TR Update Nov 2024.sql"
 -- END modification - now export
 .output categorized_trackers.csv
 .headers on
