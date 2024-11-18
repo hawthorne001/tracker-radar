@@ -4,12 +4,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
-        "cdnap"
+        "cdnap",
+        "login.production-v.p5x"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "accounts.login.idm.telekom.com",
+            "resolved": "login.production-v.p5x.telekom.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -33,28 +39,77 @@
                 "telekom.de",
                 "geschaeftskunden.telekom.de"
             ]
+        },
+        {
+            "rule": "telekom\\.net\\/oauth2\\/auth",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login.production-v.p5x"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "accounts.login.idm.telekom.com",
+                    "resolved": "login.production-v.p5x.telekom.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.telekom.de"
+            ]
+        },
+        {
+            "rule": "telekom\\.net\\/hilfe\\/ruxitagentjs_ICA7NVfhqrtux_10301241007103824\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnap"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "34d701e4aea84de285fc33285e2f0ba75c04a947af304849442be533c676fec2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.telekom.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.6
         },
         {
             "domain": "telekom-dienste.de",
-            "prevalence": 0.5
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Font": 2
+        "Font": 2,
+        "Document": 2,
+        "Script": 2
     },
     "nameservers": [
-        "pns.dtag.de",
-        "dns1.telekom.de",
         "dns2.telekom.de",
-        "ns1.telekom.net"
+        "ns1.telekom.net",
+        "dns1.telekom.de",
+        "pns.dtag.de"
     ]
 }

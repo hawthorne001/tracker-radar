@@ -11,7 +11,8 @@
     "sites": 1,
     "subdomains": [
         "image-service.web",
-        "pv-apps.web"
+        "pv-apps.web",
+        "analytics-pv"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -30,6 +31,26 @@
             "responseHashes": [
                 "ba4a5df4bb76de3ae1715ecf34f36366f570d03d4f1552cf7c6c4d173ce8f032"
             ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nightjet.com",
+                "www.nightjet.com"
+            ]
+        },
+        {
+            "rule": "oebb\\.at\\/www\\.nightjet\\.com\\/\\.imaging\\/default\\/dam\\/nightjet\\/hero-header\\/header-overlay-1422x800\\/laender-und-staedte-1422x800\\/venedig-canal-grande\\.jpg\\/jcr:content\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image-service.web"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -59,6 +80,26 @@
                 "nightjet.com",
                 "www.nightjet.com"
             ]
+        },
+        {
+            "rule": "oebb\\.at\\/matomo\\/piwik\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-pv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nightjet.com",
+                "www.nightjet.com"
+            ]
         }
     ],
     "categories": [],
@@ -71,13 +112,14 @@
         }
     ],
     "types": {
-        "Image": 2,
-        "Fetch": 2
+        "Image": 4,
+        "Fetch": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "sec2.rcode0.net",
         "sec1.rcode0.net",
+        "dns2.oebb.at",
         "dns1.oebb.at",
-        "dns2.oebb.at"
+        "sec2.rcode0.net"
     ]
 }
