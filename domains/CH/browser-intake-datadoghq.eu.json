@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00131,
-    "sites": 13,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
+        "session-replay",
         "rum",
+        "csp-report",
         "logs"
     ],
     "cnames": [],
@@ -22,18 +24,15 @@
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000904,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "bde8ead6fd4c56112516679aa7de5f9076796b1974fb2df1d52b3436e2cb4f56",
-                "da672f4d8d1f3fca70c5b9c0ca3b773c4b5aafb8e0b25dccc4a293ccac5d41ae",
-                "c0b10f234edf0dacbdcab275d28a8ba1b5dc4a79a482f03f4277c306f9d41c77",
-                "c47a607fc33a252b7a71fdb87f64e0aca9cf96af816b3b5ae2c2554494262190",
-                "82f4d989d94d885b236cf8030159dc5873ae81443e5c0889b99dadb18e669a65",
-                "15ab2842d5f879d7113a601c7d0f8dfcce191a3b8d61fe16822ba69619d6f9bc",
-                "3a671ed0e3b2890134158d4f5b59edfbde734440bdd64a60ccf645d74a3e3b4d",
-                "64c9c2790111237fd364fd90397db340f4f80d08072ffd6e04191dba465ce29a"
+                "977c6ddcbbbff308aa438906c15986c7dac377f6d2a9404994068663c382377b",
+                "4547e100ba162663fdedae4dbbfbdf647cbbd0fb005db74290935e11a2fb78a8",
+                "d2f7c195f26807515cd631dfad1b7a6a58bcbdd60a38b4838a57eaa601d97c0c",
+                "d181e695eebfed1eda4e87f1c90d3d60927bfdcdc7f7cdc527354832f1a076c5",
+                "5713cfcef0e6b24491a496bd9fb7aaa43a8c28eafe463303f85dc1323ce8a5fe"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -43,11 +42,76 @@
                 "de.toyota.ch",
                 "fr.toyota.ch",
                 "knauf.com",
-                "www.armani.com",
-                "www.flixbus.ch",
-                "www.hessnatur.com",
-                "www.just-eat.ch",
-                "www.migros.ch"
+                "migros.ch",
+                "www.hessnatur.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ebaa6611a783e1c749840a1ab35b4c1813c3fa567ce76e8b97df3a0e21dbd58f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "www.hessnatur.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "616793eaefa87269a13491fb7328fa301f2709ff3ac4831200859c4b7f74618d",
+                "61f3adaa65eeb381b6e79702347f902e63c21f98e4182d0cd6b0ae9df1632fdd",
+                "6ab410d8a43d29f10b48dc327666269fdc4ad4271f4b3351651ff4198e37a76b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "fr.toyota.ch",
+                "parkingportal.ch",
+                "www.hessnatur.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "b955fcf93eeb1a6def2dcd70bf11d1ba541cd9d5027b28a990c0c2cfdabd1fd5",
+                "d5c886ddef66d5efc12c4f533ef74a09d322ce5c221c7fd8425363a9cace2862"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "de.toyota.ch",
+                "fr.toyota.ch"
             ]
         },
         {
@@ -95,45 +159,26 @@
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "csp-report"
+            ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "9eed3c2456bcb123e600eccb338497985e3587e6460b9384b6781de4c407750e",
-                "a3720481e94a6d806f9fcef156a3a013ad7a4ad8b6c210d58c77f0b494a0850c"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "armani.com",
-                "www.armani.com",
-                "www.hessnatur.com"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "80bbb20f2f014b40d50c404407bba458079960efc8c66f7614f767dbbcd10f40"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "armani.com",
-                "www.armani.com"
+                "atelierdeschefs.fr",
+                "www.atelierdeschefs.fr",
+                "www.eurowings.com"
             ]
         },
         {
@@ -148,7 +193,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bd25ad9228285398efc8a569f1292e84aa4d2650722172189c104fe69ff2e2ce"
+                "296407384ed3cdc88fd5f0ad63b8f49561f05fea2d5177e9277b20304f335c4f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -164,27 +209,32 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6164383561643836
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.5384615384615384
         },
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.3424657534246575
+            "domain": "first party",
+            "prevalence": 0.36538461538461536
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.0410958904109589
+            "prevalence": 0.057692307692307696
+        },
+        {
+            "domain": "axept.io",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
         "Fetch": 14,
+        "XHR": 6,
         "Preflight": 3,
-        "XHR": 5
+        "Other": 3
     },
     "nameservers": [
-        "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
     ]
 }

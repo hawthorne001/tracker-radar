@@ -7,7 +7,8 @@
     "prevalence": 0.000116,
     "sites": 17,
     "subdomains": [
-        "worker-visa"
+        "worker-visa",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,27 +21,47 @@
                 "worker-visa"
             ],
             "apis": {
-                "window.localStorage": 8,
-                "Document.cookie getter": 8
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "Document.cookie getter": 5
             },
-            "sites": 8,
-            "prevalence": 0.0000546,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
-                "049390c7b1961f19909c1fb5e3418feba949b0433cb060c77e83c1d018407f84"
+                "ab1793f1f4f4551f848982b577dd31a9885b53ad5e9bdd513e028f9bca3a030c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "govoffice3.com",
-                "www.electdrach.org",
+                "foxylists.com",
+                "www.gbgunsdepot.com",
                 "www.livefromstudio6b.com",
-                "www.mcohiogop.org",
                 "www.opheliaovertheknee.com",
-                "www.sw-database.com",
-                "www.thechroniclenews.com",
                 "www.topfirearmreviews.com"
+            ]
+        },
+        {
+            "rule": "session-replays\\.io\\/websocket-test\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "27a54b7e98c954ed0df884a2f2605a43d8c394c5d13a3e1e4b2be66188eeaae6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tum.de",
+                "www.virginatlantic.com"
             ]
         }
     ],
@@ -49,24 +70,21 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6
-        },
-        {
             "domain": "visitor-analytics.io",
-            "prevalence": 0.26666666666666666
+            "prevalence": 0.55
         },
         {
-            "domain": "sentry-cdn.com",
-            "prevalence": 0.06666666666666667
+            "domain": "first party",
+            "prevalence": 0.4
         },
         {
             "domain": "raygun.io",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 5,
+        "XHR": 2
     },
     "nameservers": [
         "ns1.first-ns.de",

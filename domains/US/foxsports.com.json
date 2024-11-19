@@ -14,7 +14,8 @@
     "subdomains": [
         "statics",
         "www",
-        "api"
+        "api",
+        "api-sps"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -36,7 +37,7 @@
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_cb_svref": 0.00002048998381291279
+                "_cb_svref": 0.000006832001093120175
             },
             "exampleSites": [
                 "iheart.com",
@@ -47,18 +48,18 @@
         },
         {
             "rule": "foxsports\\.com\\/static\\/orion\\/scorestrip\\.js",
-            "cookies": 0.0000273,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
                 "statics"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Event.prototype.timeStamp": 4,
-                "Navigator.prototype.product": 4,
-                "Document.cookie getter": 4,
-                "Document.cookie setter": 4,
-                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 3,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
                 "window.innerWidth": 4,
                 "Date.prototype.getTime": 4,
                 "window.innerHeight": 1
@@ -88,11 +89,11 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000341,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
-                "8d5937ca9f0a27617e94fbc3f7acc9325fecd6f5caa2ba247c1a8a7271bde9e3",
-                "41a733cd959e7c8c870de4b37c0c71f7552cd4749d10cfe070ef2f39d5712f59"
+                "41a733cd959e7c8c870de4b37c0c71f7552cd4749d10cfe070ef2f39d5712f59",
+                "8d5937ca9f0a27617e94fbc3f7acc9325fecd6f5caa2ba247c1a8a7271bde9e3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -130,38 +131,81 @@
                 "www.livenowfox.com",
                 "www.outkick.com"
             ]
+        },
+        {
+            "rule": "foxsports\\.com\\/locator\\/v1\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outkick.com",
+                "www.outkick.com"
+            ]
+        },
+        {
+            "rule": "foxsports\\.com\\/locator\\/v1\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2d9f38f9453a2db3b06cb3ccb4e28f08832ed4ef08985a609a1c5c60f773ead8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outkick.com",
+                "www.outkick.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000478,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.76
+            "prevalence": 0.8260869565217391
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.16
+            "prevalence": 0.08695652173913043
         },
         {
             "domain": "webcontentassessor.com",
-            "prevalence": 0.08
+            "prevalence": 0.08695652173913043
         }
     ],
     "types": {
         "Stylesheet": 4,
         "Script": 4,
-        "XHR": 11
+        "XHR": 13,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns01.dns.fox",
         "ns02.foxdoua.com",
-        "ns04.foxdoua.com",
         "ns03.dns.fox",
+        "ns01.dns.fox",
         "ns04.dns.fox",
-        "ns02.dns.fox",
+        "ns01.foxdoua.com",
         "ns03.foxdoua.com",
-        "ns01.foxdoua.com"
+        "ns04.foxdoua.com",
+        "ns02.dns.fox"
     ]
 }

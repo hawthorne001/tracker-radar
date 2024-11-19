@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
-    "sites": 6,
+    "prevalence": 0.0000615,
+    "sites": 9,
     "subdomains": [
         "openam-availity-use1.id",
         "openam-lpl-advuse1.id",
         "openam-thrivent-usc.id",
-        "openam-beamsuntory-use1.id"
+        "openam-beamsuntory-use1.id",
+        "openam-univofphoenix-usw2.id"
     ],
     "cnames": [
         {
@@ -28,6 +29,10 @@
         {
             "original": "login-prod.availity.com",
             "resolved": "openam-availity-use1.id.forgerock.io"
+        },
+        {
+            "original": "login.phoenix.edu",
+            "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
         }
     ],
     "fingerprinting": 0,
@@ -42,8 +47,8 @@
                 "openam-thrivent-usc.id"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [
                 {
                     "original": "login-prod.availity.com",
@@ -66,12 +71,13 @@
                 "availity.com",
                 "clientworks.lpl.com",
                 "identity.apps.thrivent.com",
-                "personalprofile.webapp.thrivent.com"
+                "personalprofile.webapp.thrivent.com",
+                "servicing.apps.thrivent.com"
             ]
         },
         {
             "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/realms\\/alpha\\/authenticate",
-            "cookies": 0.0000273,
+            "cookies": 0.0000342,
             "fingerprinting": 0,
             "subdomains": [
                 "openam-availity-use1.id",
@@ -79,8 +85,8 @@
                 "openam-thrivent-usc.id"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [
                 {
                     "original": "login-prod.availity.com",
@@ -96,9 +102,10 @@
                 }
             ],
             "responseHashes": [
-                "c77ec49e29721e5c16ce1267daa85b4590b811dd3557867517ab01b8c6a973d8",
-                "19e801763257a4a2c28373d2f2af76a008aea2a639e85e2745fe1201a0739dec",
-                "60bb928b6bc330ae600980181e464d7037f02efac907be9c2cf9905475418e04"
+                "fc7c5a2c5dac0b141499ec7b53034dc744fec4bc29ea2e97e80c47d645931f1b",
+                "e3d4ac60e8168780896f6af5f5e8acb7ce9d99741b9342b367eac77d63b436d5",
+                "2971e812ac431dc154ff9606948232252260ef866195ba9454714cfde10f548d",
+                "ffe7723d0b624262a315179f7998bb8db04c79d5d0c9234f7ab6070f11fac674"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -107,7 +114,33 @@
                 "availity.com",
                 "clientworks.lpl.com",
                 "identity.apps.thrivent.com",
-                "personalprofile.webapp.thrivent.com"
+                "personalprofile.webapp.thrivent.com",
+                "servicing.apps.thrivent.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/oauth2\\/authorize",
+            "cookies": 0.00000683,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-thrivent-usc.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "iam.thrivent.com",
+                    "resolved": "openam-thrivent-usc.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thrivent.com",
+                "www.thrivent.com"
             ]
         },
         {
@@ -126,37 +159,79 @@
                     "resolved": "openam-beamsuntory-use1.id.forgerock.io"
                 }
             ],
-            "responseHashes": [
-                "8530ae741279efcca43dcd6b7d0a5c4ccbf3c2354278e80344faa027b0af27e2"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "redirectUrl": 0.000013659989208608526
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "makersmark.com",
                 "www.makersmark.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-univofphoenix-usw2.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login.phoenix.edu",
+                    "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "phoenix.edu",
+                "www.phoenix.edu"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-univofphoenix-usw2.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login.phoenix.edu",
+                    "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [
+                "af5fd803088fcdc627e5cd97fb88d7fcbbb02a705f38fd48b1ab5f4ffca50ae8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "phoenix.edu",
+                "www.phoenix.edu"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000273,
-    "topInitiators": [
-        {
-            "domain": "beamsuntory.com",
-            "prevalence": 1
-        }
-    ],
+    "cookies": 0.0000342,
     "types": {
-        "Preflight": 4,
-        "Fetch": 4,
-        "Document": 2
+        "Preflight": 7,
+        "Fetch": 7,
+        "Document": 4
     },
     "nameservers": [
-        "ns-cloud-a1.googledomains.com",
         "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a1.googledomains.com",
         "ns-cloud-a3.googledomains.com",
         "ns-cloud-a2.googledomains.com"
     ]

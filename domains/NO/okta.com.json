@@ -7,17 +7,17 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "sas.customdomains",
         "servicenowsignon.customdomains",
+        "astminternational.customdomains",
         "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
-            "original": "auth.sas.com",
-            "resolved": "sas.customdomains.okta.com"
+            "original": "iam.astm.org",
+            "resolved": "astminternational.customdomains.okta.com"
         },
         {
             "original": "id.churchofjesuschrist.org",
@@ -31,65 +31,12 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sas.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "auth.sas.com",
-                    "resolved": "sas.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "9bc8e081f4b2602cd1f1508e82e2ec79eae4e82874e9d0ff35d2b7ab611cd8d4"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sas.com",
-                "www.sas.com"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "servicenowsignon.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "a102f7c5e822a586164ccc2a2da1129b8ebee3e0a3756ed331dd69fc695b11ba"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "servicenow.com",
-                "support.servicenow.com"
-            ]
-        },
-        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "astminternational.customdomains"
             ],
             "apis": {},
             "sites": 3,
@@ -98,6 +45,44 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "932a9eec9232dd56d285b0a28ac224861fc5a63f7aca707604868d3621820f55",
+                "7045c53c76d5cf083614061ab3a419697497a0150487ee9b0a73ad39b7a98656"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com",
+                "www.astm.org"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "astminternational.customdomains"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -107,6 +92,7 @@
             "exampleSites": [
                 "servicenow.com",
                 "support.servicenow.com",
+                "www.astm.org",
                 "www.servicenow.com"
             ]
         },
@@ -144,28 +130,20 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000603,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "service-now.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "oktacdn.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "walkme.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 3,
+        "XHR": 3,
+        "Preflight": 4,
         "Fetch": 3
     },
     "nameservers": [
