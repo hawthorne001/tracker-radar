@@ -9,17 +9,21 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
         "d2c.aws",
+        "vs.aws",
         "fls-na",
         "aws",
+        "code.buywithprime",
+        "order.buywithprime",
         "unagi",
+        "payments",
         "apay-us"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "amazon\\.com\\/client\\/loader\\/v1\\/d2c-load\\.js",
@@ -67,7 +71,7 @@
         },
         {
             "rule": "amazon\\.com\\/client\\/lib\\/v1\\/module\\/index-e86ee201\\.js",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 2,
             "subdomains": [
                 "d2c.aws"
@@ -76,7 +80,9 @@
                 "Document.cookie getter": 2,
                 "window.innerHeight": 2,
                 "window.innerWidth": 2,
-                "Screen.prototype.colorDepth": 2
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -131,6 +137,27 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/token",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b5342b4fcbf5c07a1c8c2c2f95afecd1beb36ded8ae9882b8e7325e2717fec41"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "s3.amazonaws.com"
             ]
         },
@@ -198,48 +225,6 @@
             ]
         },
         {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_TargetRequesterXHRSuccess@v=2050:u=ms",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_TargetRequesterXHRSuccess@v=2032:u=ms",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
             "rule": "amazon\\.com\\/api\\/dirs\\/typeahead-suggestions\\/items",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -254,6 +239,27 @@
                 "668b86fe91abe21d5246bc9cce3845beeb2091daf8e97d1557188a86246fec3c"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_AWSRequesterXHRSuccess@v=2610:u=ms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fls-na"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -324,6 +330,54 @@
             ]
         },
         {
+            "rule": "amazon\\.com\\/bwp\\.v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "code.buywithprime"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "af65c0b7952d9585a42319d1dbb67fc4a41280fc8985eacd893ceae61347428e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "satechi.net",
+                "www.wyze.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/static\\/storefront-host\\/clickstream\\.eb6a32933db1265deb30\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "order.buywithprime"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8e1246a61ee1d21c44821539700bf54979ed78b4569e5c6336f364d7bbb1a78d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "satechi.net",
+                "www.wyze.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/1\\/events\\/com\\.amazon\\.csm\\.csa\\.prod",
             "cookies": 0,
             "fingerprinting": 0,
@@ -331,8 +385,8 @@
                 "unagi"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -342,6 +396,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abebooks.co.uk",
+                "www.abebooks.co.uk",
                 "www.abebooks.com"
             ]
         },
@@ -350,6 +405,7 @@
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
+                "payments",
                 "apay-us"
             ],
             "apis": {},
@@ -377,45 +433,49 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.83125
+            "prevalence": 0.8128654970760234
         },
         {
             "domain": "first party",
-            "prevalence": 0.125
-        },
-        {
-            "domain": "payments-amazon.com",
-            "prevalence": 0.025
+            "prevalence": 0.12280701754385964
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.0125
+            "prevalence": 0.023391812865497075
+        },
+        {
+            "domain": "payments-amazon.com",
+            "prevalence": 0.023391812865497075
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.011695906432748537
         },
         {
             "domain": "aws.dev",
-            "prevalence": 0.00625
+            "prevalence": 0.005847953216374269
         }
     ],
     "types": {
-        "Script": 6,
-        "Fetch": 2,
+        "Script": 10,
+        "Fetch": 4,
         "Preflight": 2,
-        "Image": 16,
+        "Image": 14,
         "XHR": 4,
-        "Ping": 2
+        "Ping": 3
     },
     "nameservers": [
-        "ns2.amzndns.com",
         "ns1.amzndns.net",
-        "ns1.amzndns.co.uk",
         "ns2.amzndns.org",
-        "ns1.amzndns.org",
+        "ns1.amzndns.com",
         "ns2.amzndns.net",
-        "ns2.amzndns.co.uk",
-        "ns1.amzndns.com"
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.org",
+        "ns2.amzndns.com",
+        "ns2.amzndns.co.uk"
     ]
 }

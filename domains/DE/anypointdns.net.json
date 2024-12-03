@@ -4,12 +4,17 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "arm-prod-public.lb",
         "splunk-elb.lb"
     ],
     "cnames": [
+        {
+            "original": "api.arm.com",
+            "resolved": "arm-prod-public.lb.anypointdns.net"
+        },
         {
             "original": "apps-api.splunk.com",
             "resolved": "splunk-elb.lb.anypointdns.net"
@@ -17,6 +22,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "anypointdns\\.net\\/e-coveo-search\\/v1\\/anonToken",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arm-prod-public.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.arm.com",
+                    "resolved": "arm-prod-public.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "21316cc39a16b7167a5780b846edc114f7b81821c3e9d8ff6b908b2e0b787ca8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arm.com",
+                "developer.arm.com"
+            ]
+        },
         {
             "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
             "cookies": 0.000201,
@@ -34,7 +66,7 @@
                 }
             ],
             "responseHashes": [
-                "086e5573fafc4017e642dd3313b697a28320f690121f766aeabfd0e9b2c34d26"
+                "fefc69bc4a243ef6604032ef97eee8df06c545a5f82796e49ad7abd26aa8aae5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -47,18 +79,23 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.75
+        },
+        {
             "domain": "d221cp5lqk6y64.cloudfront.net",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "d7koym0rxduxm.cloudfront.net",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
+        "XHR": 2,
         "Fetch": 2
     },
     "nameservers": [

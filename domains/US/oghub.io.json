@@ -7,36 +7,59 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000205,
+    "sites": 3,
     "subdomains": [
+        "js",
         "cs",
-        "te-baur-de"
+        "te-baur-de",
+        "te-ottoversand-at"
     ],
     "cnames": [
         {
             "original": "te.baur.de",
             "resolved": "te-baur-de.oghub.io"
+        },
+        {
+            "original": "te.ottoversand.at",
+            "resolved": "te-ottoversand-at.oghub.io"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "oghub\\.io\\/cookie",
+            "rule": "oghub\\.io\\/sync\\/0\\.2\\/baur\\.de:desktop\\/glycerin\\.js",
             "cookies": 0.0000137,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "cs"
+                "js"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "2e400df3f9e41ddcc8d99aac55c35a74b37e4daa069e5c444be7162ce4ff75a2"
+                "884bf3867afa84d7658abbdd6e6c51ea73517d736fbf0821227c8aab65f434b4"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "FP_GLYCERIN": {
+                    "ttl": 94608007,
+                    "length": 177,
+                    "prevalence": 0.000013665309245948236,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "baur.de",
@@ -44,19 +67,48 @@
             ]
         },
         {
+            "rule": "oghub\\.io\\/cookie",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "8083c6e2956efd0d44586523d130032dd3e0813c83793491191737eb30ad11c0",
+                "92757b834a1233a9c2119ab38fc444464b8360021c0e7148825420cfd2d8d365"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baur.de",
+                "www.baur.de",
+                "www.ottoversand.at"
+            ]
+        },
+        {
             "rule": "oghub\\.io\\/collect",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "te-baur-de"
+                "te-baur-de",
+                "te-ottoversand-at"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "te.baur.de",
                     "resolved": "te-baur-de.oghub.io"
+                },
+                {
+                    "original": "te.ottoversand.at",
+                    "resolved": "te-ottoversand-at.oghub.io"
                 }
             ],
             "responseHashes": [
@@ -67,31 +119,36 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "baur.de",
-                "www.baur.de"
+                "www.baur.de",
+                "www.ottoversand.at"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000683,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "oghub.io",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.9142857142857143
         },
         {
             "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.05714285714285714
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02857142857142857
         }
     ],
     "types": {
-        "Script": 2,
-        "Ping": 2
+        "Script": 5,
+        "Ping": 3
     },
     "nameservers": [
+        "ns-1976.awsdns-55.co.uk",
         "ns-282.awsdns-35.com",
         "ns-979.awsdns-58.net",
-        "ns-1300.awsdns-34.org",
-        "ns-1976.awsdns-55.co.uk"
+        "ns-1300.awsdns-34.org"
     ]
 }

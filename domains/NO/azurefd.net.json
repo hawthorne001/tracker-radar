@@ -9,18 +9,21 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00271,
-    "sites": 27,
+    "prevalence": 0.00261,
+    "sites": 26,
     "subdomains": [
         "afd-b2c-iibozyiouoyi4.z01",
         "minprofil-b2c-frontdoor-production-f0bheqfmgyghe4hw.z01",
-        "statuscast-web-1",
-        "fhf-cdn-gdexgwgdcuf5dga0.z01",
+        "corp-edfkcmemdffkajfe.z01",
+        "fd-change-webshop20-prod",
         "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
-        "sasno-gtm-prod-endpoint-b8f0cbfua5fhbeaj.z01",
-        "adnprebid-bjdne3a8htfmd9c9.z02"
+        "sasno-gtm-prod-endpoint-b8f0cbfua5fhbeaj.z01"
     ],
     "cnames": [
+        {
+            "original": "apis-corp.advantech.com",
+            "resolved": "corp-edfkcmemdffkajfe.z01.azurefd.net"
+        },
         {
             "original": "consumer.intel.com",
             "resolved": "afd-b2c-iibozyiouoyi4.z01.azurefd.net"
@@ -36,13 +39,9 @@
         {
             "original": "id.avinor.no",
             "resolved": "minprofil-b2c-frontdoor-production-f0bheqfmgyghe4hw.z01.azurefd.net"
-        },
-        {
-            "original": "status.sophos.com",
-            "resolved": "statuscast-web-1.azurefd.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "azurefd\\.net\\/intelcorpb2c\\.onmicrosoft\\.com\\/B2C_1A_UNIFIEDLOGIN_SISU_STD_OIDC\\/oauth2\\/v2\\.0\\/authorize",
@@ -123,52 +122,72 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/components\\.json",
+            "rule": "azurefd\\.net\\/api\\/v1\\/utility\\/http\\/client-ip",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "statuscast-web-1"
+                "corp-edfkcmemdffkajfe.z01"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "status.sophos.com",
-                    "resolved": "statuscast-web-1.azurefd.net"
+                    "original": "apis-corp.advantech.com",
+                    "resolved": "corp-edfkcmemdffkajfe.z01.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "f4dd6ff908c20c21827ebaba8ec7b2e2816dd62846e2a4af0e35f239d620b206"
+                "00b061d9de52b10e639627f06c9e14c8fe2309ff34be85961b3da6bce72a9a87"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sophos.com",
-                "docs.sophos.com"
+                "advantech.com",
+                "www.advantech.com"
             ]
         },
         {
-            "rule": "azurefd\\.net\\/media\\/xyvnxptv\\/adobestock_592268748-web\\.jpg",
+            "rule": "azurefd\\.net\\/graphql",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fhf-cdn-gdexgwgdcuf5dga0.z01"
+                "fd-change-webshop20-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "change.com",
+                "www.change.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fd-change-webshop20-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d5a71cb44cccba0822fa2f576570e0d7783a9d2c8dfa6a8aff3a170cf17d1e95"
+                "b7a5dfe4045c90274f9d1a39f83bd0eade2800b9063cbd8f3452e5e276ded0b0"
             ],
-            "type": "Image",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fhf.no",
-                "www.fhf.no"
+                "change.com",
+                "www.change.com"
             ]
         },
         {
@@ -193,7 +212,7 @@
                 }
             ],
             "responseHashes": [
-                "a6ecaf1fe3e89686411e63e21bd715f411cb9cea67a457cb7360d3e6471c4ff8"
+                "d0348feff14d44b72c61518729d9c4969d3229be7e8f51724fe1d1bf76e8b15d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -225,8 +244,8 @@
                 }
             ],
             "responseHashes": [
-                "fcf16a3609d8b952da0867719dc666ebd3d7f1f895195abbf56f25cda3a0ff7f",
-                "ded5aa462186857f5eafd04a742f0d96ad6de3aa45b8e3394ed71dcecc23174b"
+                "8e815a76733dc4601f81e0e038806bab3542eaff34a00d19dccc115a4b1efbef",
+                "d03abde7cb98bfd78868060bd7e232761eb9ab0c36d28bfe6326b6f3fc75d8f4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -242,12 +261,17 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
                 "sasno-gtm-prod-endpoint-b8f0cbfua5fhbeaj.z01"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                },
                 {
                     "original": "gtm.sas.no",
                     "resolved": "sasno-gtm-prod-endpoint-b8f0cbfua5fhbeaj.z01.azurefd.net"
@@ -256,65 +280,41 @@
             "responseHashes": [
                 "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
             ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sas.no",
-                "www.sas.no"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/openrtb2\\/auction",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "adnprebid-bjdne3a8htfmd9c9.z02"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d63e2ed91493361f329b2775a515f1aeb398d701133fb023dcece0850e50c9d0"
-            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thephoblographer.com",
-                "www.thephoblographer.com"
+                "flysas.com",
+                "www.sas.no"
             ]
         }
     ],
-    "categories": [],
+    "categories": [
+        "CDN"
+    ],
     "performance": {},
-    "cookies": 0.00141,
+    "cookies": 0.0014,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.65
-        },
-        {
-            "domain": "azureedge.net",
-            "prevalence": 0.325
+            "prevalence": 0.9736842105263158
         },
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.025
+            "prevalence": 0.02631578947368421
         }
     ],
     "types": {
         "Document": 5,
         "XHR": 4,
+        "Preflight": 2,
         "Fetch": 4,
-        "Image": 2,
         "Script": 5
     },
     "nameservers": [
         "ns1-37.azure-dns.com",
-        "ns3-37.azure-dns.org",
+        "ns2-37.azure-dns.net",
         "ns4-37.azure-dns.info",
-        "ns2-37.azure-dns.net"
+        "ns3-37.azure-dns.org"
     ]
 }

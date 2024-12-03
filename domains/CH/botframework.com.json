@@ -13,7 +13,8 @@
     "sites": 3,
     "subdomains": [
         "directline",
-        "europe.directline"
+        "europe.directline",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -36,7 +37,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ak-bs.ch",
-                "www.gs1.ch"
+                "www.ebl.ch"
             ]
         },
         {
@@ -52,14 +53,46 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f1fd00e006f2b73e7ec0613404332ba537a4bfddb458500c1eede781d3456736"
+                "01c184bed4c29773f7a11301f1d1a10e446790f3f326502ca5e4b34d938dcd06"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ak-bs.ch",
-                "www.gs1.ch"
+                "www.ebl.ch"
+            ]
+        },
+        {
+            "rule": "botframework\\.com\\/botframework-webchat\\/latest\\/webchat\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "window.localStorage": 2,
+                "URL.createObjectURL": 1,
+                "Navigator.prototype.platform": 1,
+                "Element.prototype.getClientRects": 1,
+                "Date.prototype.getTime": 1,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "74f25e06ca7e129830d80ce20633807ee402c2163b758a9642a1845c59cadb14"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ascona-locarno.com",
+                "www.ebl.ch"
             ]
         }
     ],
@@ -69,21 +102,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.625
+            "prevalence": 0.5555555555555556
         },
         {
-            "domain": "powerapps.com",
-            "prevalence": 0.375
+            "domain": "windows.net",
+            "prevalence": 0.4444444444444444
         }
     ],
     "types": {
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns1-205.azure-dns.com",
-        "ns2-205.azure-dns.net",
+        "ns3-205.azure-dns.org",
         "ns4-205.azure-dns.info",
-        "ns3-205.azure-dns.org"
+        "ns2-205.azure-dns.net"
     ]
 }

@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000683,
-    "sites": 10,
+    "prevalence": 0.0000615,
+    "sites": 9,
     "subdomains": [
-        "cdn.harvest"
+        "cdn.harvest",
+        "cdn.watchtower",
+        "watchtower"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -29,34 +31,28 @@
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
                 "window.localStorage": 2,
+                "Document.cookie setter": 2,
                 "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "a7f9137e9b84739f469d9fd8117301f3b09fd4ba0a0108f841e022e2c61b07cb"
+                "a94e6f00760e4a95a991ed5fc7723e319a26668038bf803a8e9af9d55a5af907"
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "ndc_consent": {
-                    "ttl": 63072004,
-                    "length": 249,
-                    "prevalence": 0.00001366400218624035,
-                    "uniqueness": 1
-                },
                 "harvest_session": {
-                    "ttl": 1806,
-                    "length": 1071,
-                    "prevalence": 0.00001366400218624035,
+                    "ttl": 1809,
+                    "length": 1072,
+                    "prevalence": 0.000013665309245948236,
                     "uniqueness": 1
                 },
                 "harvest_user": {
-                    "ttl": 63072006,
+                    "ttl": 63072009,
                     "length": 129,
-                    "prevalence": 0.00001366400218624035,
+                    "prevalence": 0.000013665309245948236,
                     "uniqueness": 1
                 }
             },
@@ -67,19 +63,65 @@
             ]
         },
         {
+            "rule": "graindata\\.com\\/js\\/watchtower-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.watchtower"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "85a5398542fcceaa763b47967e085ff846a874d094a0b126be819cdca66f7341"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvhn.nl",
+                "lc.nl"
+            ]
+        },
+        {
+            "rule": "graindata\\.com\\/api\\/beams\\/mhn_gtm_web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "watchtower"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvhn.nl",
+                "lc.nl"
+            ]
+        },
+        {
             "rule": "graindata\\.com\\/assets\\/consent-monitor\\/consent-monitor\\.js",
-            "cookies": 0.0000547,
+            "cookies": 0.0000478,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.harvest"
             ],
             "apis": {
-                "Document.cookie getter": 8,
-                "Date.prototype.getTime": 8,
-                "Document.cookie setter": 8
+                "Document.cookie getter": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7
             },
-            "sites": 8,
-            "prevalence": 0.0000547,
+            "sites": 7,
+            "prevalence": 0.0000478,
             "cnames": [],
             "responseHashes": [
                 "f020e1e43e16eb81d29f2d3d9c94215ba1428564ca7b17eebf9c42343192320f"
@@ -87,16 +129,15 @@
             "type": "Script",
             "firstPartyCookies": {
                 "__cm_session_id": {
-                    "ttl": 1806,
+                    "ttl": 1804,
                     "length": 36,
-                    "prevalence": 0.0000546560087449614,
+                    "prevalence": 0.000047828582360818826,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "centraalbeheer.nl",
-                "www.defriesland.nl",
                 "www.fbto.nl",
                 "www.hoogvliet.com",
                 "www.interpolis.nl",
@@ -108,27 +149,28 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000683,
+    "cookies": 0.0000615,
     "topInitiators": [
         {
-            "domain": "r42tag.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.5454545454545454
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4
+            "domain": "r42tag.com",
+            "prevalence": 0.36363636363636365
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Script": 10
+        "Script": 11,
+        "Ping": 2
     },
     "nameservers": [
-        "ns2.transip.eu",
         "ns1.transip.nl",
-        "ns0.transip.net"
+        "ns0.transip.net",
+        "ns2.transip.eu"
     ]
 }

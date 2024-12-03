@@ -8,10 +8,11 @@
     "sites": 2,
     "subdomains": [
         "renderer",
-        "code"
+        "code",
+        "engine-consumer-api.cloud"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "gist\\.build\\/3\\.0\\/index\\.html",
@@ -35,7 +36,7 @@
             ]
         },
         {
-            "rule": "gist\\.build\\/renderer\\/0\\.4\\.1\\/index\\.html",
+            "rule": "gist\\.build\\/renderer\\/0\\.4\\.2\\/index\\.html",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -58,7 +59,7 @@
             ]
         },
         {
-            "rule": "gist\\.build\\/renderer\\/0\\.4\\.1\\/main\\.min\\.js",
+            "rule": "gist\\.build\\/renderer\\/0\\.4\\.2\\/main\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -69,7 +70,7 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e5ac742e93b12de3cd0809356f1a53c0f5377125859516050945b18f0ff866df"
+                "a7ee7052c2c87ba6eafaa430214d25bb4f8735ccb62fc3c6ff67f6b897a5c1c6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -81,17 +82,28 @@
             ]
         },
         {
-            "rule": "gist\\.build\\/renderer\\/0\\.4\\.1\\/main\\.dart\\.js",
+            "rule": "gist\\.build\\/renderer\\/0\\.4\\.2\\/main\\.dart\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "code"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.platform": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.languages": 2,
+                "window.matchMedia(\"prefers-color-scheme\")": 2,
+                "window.localStorage": 2
+            },
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "14ae57ab2541bf0aafc4b1928cfdfdb6012feeda5c5581d5bb644d0a839a74d1"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -99,6 +111,68 @@
                 "sermoncentral.com",
                 "www.sermoncentral.com",
                 "www.webstaurantstore.com"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/renderer\\/0\\.4\\.2\\/assets\\/FontManifest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sermoncentral.com",
+                "www.sermoncentral.com"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/api\\/v2\\/configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine-consumer-api.cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sermoncentral.com",
+                "www.sermoncentral.com"
+            ]
+        },
+        {
+            "rule": "gist\\.build\\/api\\/v2\\/configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine-consumer-api.cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sermoncentral.com",
+                "www.sermoncentral.com"
             ]
         }
     ],
@@ -113,10 +187,12 @@
     ],
     "types": {
         "Document": 6,
-        "Script": 6
+        "Script": 6,
+        "XHR": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "brett.ns.cloudflare.com",
-        "uma.ns.cloudflare.com"
+        "uma.ns.cloudflare.com",
+        "brett.ns.cloudflare.com"
     ]
 }

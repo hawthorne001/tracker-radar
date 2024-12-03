@@ -7,35 +7,55 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "imp.control",
-        "web-sdk.control"
+        "assets",
+        "web-sdk.control",
+        "imp.control"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "kochava\\.com\\/track\\/impression",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "kochava\\.com\\/kochava\\.js\\/v2\\.2\\/kochava\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
             "subdomains": [
-                "imp.control"
+                "assets"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "window.localStorage": 3,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "2773bebe58754475ba386259a546e1f57b60f8fab64c99ddb1c46e76b668d374"
             ],
-            "type": "Image",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "kv_id": {
+                    "ttl": 315360011,
+                    "length": 15,
+                    "prevalence": 0.0002006823198876179,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "13cabs.com.au",
-                "www.13cabs.com.au"
+                "paramountplus.com",
+                "wearpact.com",
+                "www.paramountplus.com"
             ]
         },
         {
@@ -56,7 +76,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "13cabs.com.au",
+                "wearpact.com",
                 "www.13cabs.com.au"
             ]
         },
@@ -73,6 +93,28 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.13cabs.com.au"
+            ]
+        },
+        {
+            "rule": "kochava\\.com\\/track\\/impression",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imp.control"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -105,25 +147,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "storage.googleapis.com",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "first party",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Image": 2,
+        "Script": 3,
         "XHR": 2,
         "Preflight": 2,
+        "Image": 2,
         "Fetch": 2
     },
     "nameservers": [

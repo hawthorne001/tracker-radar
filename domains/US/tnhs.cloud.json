@@ -9,20 +9,20 @@
     "subdomains": [
         "scpa-tnew-prod",
         "ocen-tnew-prod",
-        "cmoa-tnew-prod",
+        "cmoi-tnew-prod",
         "mfah-tnew-prod",
         "nash-tnew-prod",
         "natt-tnew-prod",
-        "raca-tnew-prod"
+        "cmoa-tnew-prod"
     ],
     "cnames": [
         {
-            "original": "my.mfah.org",
-            "resolved": "mfah-tnew-prod.tnhs.cloud"
+            "original": "cart.childrensmuseum.org",
+            "resolved": "cmoi-tnew-prod.tnhs.cloud"
         },
         {
-            "original": "my.royalacademy.org.uk",
-            "resolved": "raca-tnew-prod.tnhs.cloud"
+            "original": "my.mfah.org",
+            "resolved": "mfah-tnew-prod.tnhs.cloud"
         },
         {
             "original": "ticketing.clevelandart.org",
@@ -45,7 +45,7 @@
             "resolved": "scpa-tnew-prod.tnhs.cloud"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "tnhs\\.cloud\\/components\\/sharedsession",
@@ -68,7 +68,9 @@
                     "resolved": "ocen-tnew-prod.tnhs.cloud"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "3043d9d31478640dfd5bba41e0125822ea0098c83235da90918bd0d6c11c7326"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -98,13 +100,60 @@
                     "resolved": "ocen-tnew-prod.tnhs.cloud"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "8025ddc436c60e86ae477b34a3e87161baea674b8e225bcf262d0088db87bbaf"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "thesmithcenter.com",
                 "www.overture.org"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
+            "cookies": 0.0000273,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmoi-tnew-prod",
+                "mfah-tnew-prod",
+                "nash-tnew-prod",
+                "natt-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [
+                {
+                    "original": "cart.childrensmuseum.org",
+                    "resolved": "cmoi-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "my.mfah.org",
+                    "resolved": "mfah-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.nashvillesymphony.org",
+                    "resolved": "nash-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.nationaltheatre.org.uk",
+                    "resolved": "natt-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "56f0bdfbaff579e4d75d10168585309f71855bc4cf1e89f615d19afb928c329e",
+                "0c3bd691d4a52e14de29f026f642aa6f6bce91400e07735ea0e2f933b248bcf3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "childrensmuseum.org",
+                "www.mfah.org",
+                "www.nashvillesymphony.org",
+                "www.nationaltheatre.org.uk"
             ]
         },
         {
@@ -124,7 +173,7 @@
                 }
             ],
             "responseHashes": [
-                "0ec3bab379b6eb43b7d28a35934f3dd973c8e77d8acc659eb6c38f8be1ae23b8"
+                "bd98619c8d9840a75c7f98046e7527c8252eda610c9b2d000a33dfcb5bd9bfc2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -132,74 +181,6 @@
             "exampleSites": [
                 "clevelandart.org",
                 "www.clevelandart.org"
-            ]
-        },
-        {
-            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
-            "cookies": 0.0000273,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mfah-tnew-prod",
-                "nash-tnew-prod",
-                "natt-tnew-prod"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [
-                {
-                    "original": "my.mfah.org",
-                    "resolved": "mfah-tnew-prod.tnhs.cloud"
-                },
-                {
-                    "original": "tickets.nashvillesymphony.org",
-                    "resolved": "nash-tnew-prod.tnhs.cloud"
-                },
-                {
-                    "original": "tickets.nationaltheatre.org.uk",
-                    "resolved": "natt-tnew-prod.tnhs.cloud"
-                }
-            ],
-            "responseHashes": [
-                "3f8e2f58bbfdd2795d0d6aba71a46a76f66025b2a4fa8bcacf258318e1c70983",
-                "0db292316953bc7f30fa8fa9275a7fe0694c9ed6cb94096248d8e969191ec070",
-                "14639f7829a2380893070fa9a5fb756c272ebde17ea1cbd714ca8307b3c7bb6d"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mfah.org",
-                "www.mfah.org",
-                "www.nashvillesymphony.org",
-                "www.nationaltheatre.org.uk"
-            ]
-        },
-        {
-            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "raca-tnew-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "my.royalacademy.org.uk",
-                    "resolved": "raca-tnew-prod.tnhs.cloud"
-                }
-            ],
-            "responseHashes": [
-                "e08c152e2964495a7eb50a5972f360f1b77b40dd2d5c80e0e7d8b693055dbff8"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "royalacademy.org.uk",
-                "www.royalacademy.org.uk"
             ]
         }
     ],
@@ -215,13 +196,13 @@
     "types": {
         "Document": 2,
         "Script": 2,
-        "XHR": 4,
-        "Fetch": 4
+        "Fetch": 4,
+        "XHR": 2
     },
     "nameservers": [
         "ns-477.awsdns-59.com",
-        "ns-1737.awsdns-25.co.uk",
+        "ns-885.awsdns-46.net",
         "ns-1438.awsdns-51.org",
-        "ns-885.awsdns-46.net"
+        "ns-1737.awsdns-25.co.uk"
     ]
 }

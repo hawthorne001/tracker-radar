@@ -9,13 +9,14 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
+        "code.buywithprime",
+        "order.buywithprime",
         "d2c.aws",
         "vs.aws",
         "aws",
-        "fls-na",
         "unagi",
         "unagi-fe",
         "apay-us"
@@ -24,6 +25,63 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "amazon\\.com\\/bwp\\.v1\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "code.buywithprime"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "af65c0b7952d9585a42319d1dbb67fc4a41280fc8985eacd893ceae61347428e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ubid_ovr": {
+                    "ttl": 31536005,
+                    "length": 36,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "satechi.net"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/static\\/storefront-host\\/clickstream\\.eb6a32933db1265deb30\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "order.buywithprime"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8e1246a61ee1d21c44821539700bf54979ed78b4569e5c6336f364d7bbb1a78d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "satechi.net"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/client\\/loader\\/v1\\/d2c-load\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -31,8 +89,8 @@
                 "d2c.aws"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "5f486bea01d55fef3dc6c6395101e7253e4f9aad69473a45404abc8884d09e7b"
@@ -41,9 +99,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "repost.aws"
             ]
         },
         {
@@ -54,8 +111,8 @@
                 "d2c.aws"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "8234da25ffbb1478a2e1d471f4b1a1e0ee0e2441f98c0b1fbcd62317dd2e8b90"
@@ -64,28 +121,27 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "repost.aws"
             ]
         },
         {
             "rule": "amazon\\.com\\/client\\/lib\\/v1\\/module\\/index-e86ee201\\.js",
-            "cookies": 0.000201,
+            "cookies": 0.0001,
             "fingerprinting": 2,
             "subdomains": [
                 "d2c.aws"
             ],
             "apis": {
-                "Document.cookie getter": 3,
-                "window.innerHeight": 3,
-                "window.innerWidth": 3,
-                "Screen.prototype.colorDepth": 3,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie getter": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
             },
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "c12963b9ae1c519041a38382c6a010d10f69c02a332d9c12fa309a79c0e2edf7"
@@ -93,17 +149,36 @@
             "type": "Script",
             "firstPartyCookies": {
                 "awsd2c-token-c": {
-                    "ttl": 31536009,
+                    "ttl": 31536010,
                     "length": 625,
-                    "prevalence": 0.0001004419445560466,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "repost.aws"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amplify.aws",
+                "repost.aws"
             ]
         },
         {
@@ -118,230 +193,58 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "aae1ea47d8c4abe635fa88a9d7a9c572ca29e2bf811bfd2fe46ba897816e19c0",
-                "8e52ee4d4f9b94505844c2e1710730f6103ea778ce2592e6c3943038406361df"
+                "07ca81a838444d0882a02210232d5c713fd87d9607a1de0729f4d3aa86353c8b",
+                "22ebba2111cf8772bd481937ca0ae211303225157c30ddf4d02235cb0270bcc9"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/token",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "vs.aws"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "docs.amplify.aws",
+                "repost.aws"
             ]
         },
         {
             "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
             "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "aws",
-                "d2c.aws"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "aws",
-                "d2c.aws"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "calculator.aws",
-                "repost.aws",
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_TargetRequesterXHRStart@v=1:u=c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/api\\/dirs\\/typeahead-suggestions\\/items",
-            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "aws"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [
-                "668b86fe91abe21d5246bc9cce3845beeb2091daf8e97d1557188a86246fec3c"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "docs.amplify.aws",
+                "repost.aws"
             ]
         },
         {
-            "rule": "amazon\\.com\\/1\\/aws-mktg\\/1\\/OE\\/",
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fls-na"
+                "aws"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_AWSRequesterXHRStart@v=1:u=c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_v2_:comp_typeahead_AjaxSuccess@v=1:u=c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:csr_CDNTemplateRequestSuccess@v=1:u=c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:csr_ExperienceHydrationSuccess@v=1:u=c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fls-na"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "s3.amazonaws.com"
+                "amplify.aws",
+                "docs.amplify.aws",
+                "repost.aws"
             ]
         },
         {
@@ -420,32 +323,43 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000502,
     "topInitiators": [
         {
-            "domain": "awsstatic.com",
-            "prevalence": 0.8273809523809523
+            "domain": "first party",
+            "prevalence": 0.2631578947368421
         },
         {
-            "domain": "first party",
-            "prevalence": 0.13690476190476192
+            "domain": "awsstatic.com",
+            "prevalence": 0.21052631578947367
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.21052631578947367
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.10526315789473684
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.011904761904761904
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "aws.dev",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 9,
+        "Script": 10,
+        "Preflight": 5,
         "Fetch": 6,
-        "Preflight": 6,
-        "Image": 12,
-        "XHR": 4,
-        "Ping": 4
+        "Ping": 4,
+        "XHR": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

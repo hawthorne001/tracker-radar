@@ -9,12 +9,21 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000602,
+    "sites": 6,
     "subdomains": [
+        "amp-account",
         "api-music-akam"
     ],
     "cnames": [
+        {
+            "original": "amp-account.apps.apple.com",
+            "resolved": "amp-account.itunes-apple.com.akadns.net"
+        },
+        {
+            "original": "amp-account.music.apple.com",
+            "resolved": "amp-account.itunes-apple.com.akadns.net"
+        },
         {
             "original": "api.music.apple.com",
             "resolved": "api-music-akam.itunes-apple.com.akadns.net"
@@ -22,6 +31,67 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/account\\/web\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "amp-account"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "amp-account.apps.apple.com",
+                    "resolved": "amp-account.itunes-apple.com.akadns.net"
+                },
+                {
+                    "original": "amp-account.music.apple.com",
+                    "resolved": "amp-account.itunes-apple.com.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apple.com",
+                "music.apple.com"
+            ]
+        },
+        {
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/account\\/web\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "amp-account"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "amp-account.apps.apple.com",
+                    "resolved": "amp-account.itunes-apple.com.akadns.net"
+                },
+                {
+                    "original": "amp-account.music.apple.com",
+                    "resolved": "amp-account.itunes-apple.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "7aa57d44bd01f984251929e2ac3f7fe74b47e029fb8285b8e9144aaf21dd153e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apple.com",
+                "account.apple.com",
+                "music.apple.com"
+            ]
+        },
         {
             "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/no\\/songs\\/1771105935",
             "cookies": 0,
@@ -64,7 +134,7 @@
                 }
             ],
             "responseHashes": [
-                "481bb0efcef6f7e8917da780dbd20ef75c3f4c70ee8392debb461c0abca2e43a"
+                "1f939b43ab8819eec6b91da2cdbea24d1c2368f1001c5e6d00896991d6a7fe4f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -79,16 +149,20 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9882352941176471
+        },
+        {
+            "domain": "cdn-apple.com",
+            "prevalence": 0.011764705882352941
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Preflight": 4,
+        "Fetch": 5
     },
     "nameservers": []
 }

@@ -11,14 +11,13 @@
     "sites": 5,
     "subdomains": [
         "pango-virginia-prod-forum.us-east-1.log",
-        "pango-virginia-prod-dji-official.us-east-1.log",
-        "arms-retcode"
+        "pango-virginia-prod-dji-official.us-east-1.log"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "aliyuncs\\.com\\/logstores\\/dji-forum-php-deployments\\/track",
+            "rule": "aliyuncs\\.com\\/logstores\\/forum-php-web\\/track",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -40,6 +39,28 @@
             ]
         },
         {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-web\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dji.com",
+                "www.dji.com"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
             "cookies": 0,
             "fingerprinting": 0,
@@ -58,52 +79,6 @@
                 "dji.com",
                 "www.dji.com"
             ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/r\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arms-retcode"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_bl_uid": 0.00020070245860511792
-            },
-            "exampleSites": [
-                "seeedstudio.com",
-                "www.seeedstudio.com"
-            ]
-        },
-        {
-            "rule": "aliyuncs\\.com\\/r\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arms-retcode"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_bl_uid": 0.00020070245860511792
-            },
-            "exampleSites": [
-                "seeedstudio.com",
-                "www.seeedstudio.com"
-            ]
         }
     ],
     "categories": [],
@@ -111,18 +86,25 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "alicdn.com",
-            "prevalence": 0.6451612903225806
+            "domain": "djicdn.com",
+            "prevalence": 0.7916666666666666
         },
         {
-            "domain": "djicdn.com",
-            "prevalence": 0.3548387096774194
+            "domain": "alicdn.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "apowersoft.info",
+            "prevalence": 0.041666666666666664
+        },
+        {
+            "domain": "aoscdn.com",
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Ping": 2,
-        "Fetch": 4,
-        "XHR": 2
+        "Ping": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "ns3.aliyun.com",

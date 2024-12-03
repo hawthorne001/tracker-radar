@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000702,
+    "sites": 7,
     "subdomains": [
-        "grw"
+        "grw",
+        "cdn.grw"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,20 +21,78 @@
                 "grw"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
-                "d7a960a81d9dc6293c2758fa9274564d391a8e9aa342be96c051eb9cef70ed0b",
-                "fcaa1861f765b955ee62fca75d0d88e1e8d7a866402e17b85c014d07b694c91d"
+                "0b695ef749b95019f0e2d8fb7de86e81d5215e9bf791ab338ad8f5c2ef131e4a",
+                "e2b7ad3c2843d040cb9bd17bb09d7d86757b7e01e85dcf3521401eeb01394cd0",
+                "0f23260eb664a226cfb588125fb2e31c103d812302031a798b9a45f3c524fbf0",
+                "09c747550a930e55fa5f0b5766cf7c492d6e7444701b1e907bb0a2b228362c1b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "acousticcentre.com.au",
-                "www.musicjunction.com.au",
-                "www.mygyc.com.au"
+                "dipacci.com.au",
+                "melbournepowered.com.au",
+                "stockmansteaks.com.au",
+                "www.acousticcentre.com.au",
+                "www.musicjunction.com.au"
+            ]
+        },
+        {
+            "rule": "reputon\\.com\\/img\\/google_logo\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.grw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "973e5fa5a9a0e4163843526a59abd390e5ed0b2817cdc9eafcd8f2a9cab7c5c3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "melbournepowered.com.au",
+                "stockmansteaks.com.au"
+            ]
+        },
+        {
+            "rule": "reputon\\.com\\/assets\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.grw"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000401,
+            "cnames": [],
+            "responseHashes": [
+                "7f81b89dee05591f4f998e3f32237115d2f2d14373b6c72d831992f4a029fc70"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stockmansteaks.com.au",
+                "supercheapfabrics.com.au",
+                "www.acousticcentre.com.au",
+                "www.colemansmusic.com.au"
             ]
         }
     ],
@@ -43,15 +102,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.7
         },
         {
             "domain": "shopify.com",
-            "prevalence": 0.25
+            "prevalence": 0.3
         }
     ],
     "types": {
-        "Fetch": 3
+        "Fetch": 5,
+        "Image": 2,
+        "Script": 4
     },
     "nameservers": [
         "ns-92.awsdns-11.com",
