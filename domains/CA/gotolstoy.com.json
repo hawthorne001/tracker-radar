@@ -4,24 +4,59 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "apilb"
+        "widget",
+        "analytics-v2",
+        "cf-apilb"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "gotolstoy\\.com\\/site-activity\\/page-visit",
+            "rule": "gotolstoy\\.com\\/widget\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "BroadcastChannel.prototype.constructor": 1,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "window.innerWidth": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f0acb6ea1f5529679b630b5d8ae3e611e9016207cf89f93b091fc7cef7c7579a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anovaculinary.com",
+                "theordinary.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/page-visit",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "apilb"
+                "analytics-v2"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -30,8 +65,60 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "anovaculinary.com",
                 "blnts.com",
-                "theordinary.com"
+                "manmadebrand.com",
+                "theordinary.com",
+                "us.manmadebrand.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/we\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "BroadcastChannel.prototype.constructor": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "4ae423ac6081af6cfb624e73cccb0b1e9b0c2d4aca082defcb002a0447d71d8f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blnts.com",
+                "manmadebrand.com",
+                "us.manmadebrand.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/actions\\/accounts\\/a5cae699-484a-4a4d-87b8-60f3fa8597e7",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cf-apilb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manmadebrand.com",
+                "us.manmadebrand.com"
             ]
         }
     ],
@@ -45,7 +132,9 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 5,
+        "Ping": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "ns09.domaincontrol.com",

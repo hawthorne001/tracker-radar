@@ -4,34 +4,69 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "qab",
-        "epb"
+        "cdn",
+        "epb",
+        "qab"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "hextom\\.com\\/qab_get_bars",
+            "rule": "hextom\\.com\\/js\\/eventpromotionbar\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "4f3732c5cb70b336e469ddda5d80876cd426fdfe2e0970ae7287115cfcb79a47"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "epb_previous_pathname": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020100502512562814,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shokz.com",
+                "www.fairment.de",
+                "www.zendure.de"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/epb_get_bars",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "qab"
+                "epb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fairment.de",
+                "shokz.com",
                 "www.fairment.de"
             ]
         },
@@ -47,7 +82,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "5a359125d7cd3ea7acb7c1208d0752ce8961016262e09e5b94d3b4f2affe5120"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shokz.com",
+                "www.fairment.de"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/qab_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "293eb0316222aee5114d1389bb85a5fdfa93b34bd0617fe55704d69d3e02d65c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -56,27 +113,72 @@
                 "fairment.de",
                 "www.fairment.de"
             ]
+        },
+        {
+            "rule": "hextom\\.com\\/epb_record_bar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "epb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "42675d4c2dce6326e5b59458cda2d1175adc4a8b1653309b7250d5cb4aebea4b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fairment.de",
+                "www.fairment.de",
+                "www.zendure.de"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/epb_record_bar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "epb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fairment.de",
+                "www.zendure.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "minmaxify.com",
-            "prevalence": 0.25
+            "prevalence": 0.6
         },
         {
             "domain": "baqend.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 4
+        "Script": 3,
+        "Preflight": 4,
+        "Fetch": 7
     },
     "nameservers": [
         "ns-1484.awsdns-57.org",

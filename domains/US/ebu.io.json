@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
-    "sites": 6,
+    "prevalence": 0.0000615,
+    "sites": 9,
     "subdomains": [
         "pipe-collect",
         "swi.reco",
+        "reco",
+        "peach-static",
         "swi.pilot"
     ],
     "cnames": [],
@@ -22,8 +24,8 @@
                 "pipe-collect"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -31,7 +33,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dw.com",
-                "www.dw.com"
+                "www.dw.com",
+                "www.lrt.lt"
             ]
         },
         {
@@ -43,8 +46,8 @@
                 "swi.reco"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -56,6 +59,63 @@
                 "dw.com",
                 "m.dw.com",
                 "www.dw.com",
+                "www.lrt.lt",
+                "www.swissinfo.ch"
+            ]
+        },
+        {
+            "rule": "ebu\\.io\\/news-reco-franceinfo\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "reco"
+            ],
+            "apis": {
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e52f0b8e0c59ced6cb2d497a2a4b8ba00255d598d53aee6e17fc5b3000d0f39a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "francetvinfo.fr",
+                "www.francetvinfo.fr"
+            ]
+        },
+        {
+            "rule": "ebu\\.io\\/peach-collector\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "peach-static"
+            ],
+            "apis": {
+                "Navigator.prototype.doNotTrack": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "340a48b65b5210fb609bdcec8f3930d76b5ad35227a46c7c3013c5b9cbb6ad6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swissinfo.ch",
                 "www.swissinfo.ch"
             ]
         },
@@ -71,7 +131,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "12aafa0d92bcd45bffa77dc8bf899549f91426505c1c2282341f7e94a7221615"
+                "6838224b1c59227f5ba179332a0d11af645ae88c720f47e3d78132840bd3c954"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -84,22 +144,27 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9285714285714286
+        },
+        {
+            "domain": "ebu-uer.be",
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 4,
+        "Preflight": 3,
+        "XHR": 5,
+        "Script": 4,
         "Image": 2
     },
     "nameservers": [
-        "ns-1116.awsdns-11.org",
-        "ns-1851.awsdns-39.co.uk",
         "ns-247.awsdns-30.com",
-        "ns-969.awsdns-57.net"
+        "ns-969.awsdns-57.net",
+        "ns-1851.awsdns-39.co.uk",
+        "ns-1116.awsdns-11.org"
     ]
 }

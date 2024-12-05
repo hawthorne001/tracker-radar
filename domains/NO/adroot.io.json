@@ -8,7 +8,8 @@
     "sites": 1,
     "subdomains": [
         "admanager",
-        "scripts"
+        "scripts",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -37,17 +38,39 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bf6a35641abc681a21fbbbbb8f6c3b31b45b8c5c0a6718583f313944d0ce3ebe"
+                "239b415459ace861260ef68ea859388f7979c6adb4c9b74d177a6bf651f4e7d5"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "adr_ad_session_id": {
-                    "ttl": 172806,
+                    "ttl": 172807,
                     "length": 36,
-                    "prevalence": 0.00010043185698503566,
+                    "prevalence": 0.00010035122930255896,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sammobile.com",
+                "www.sammobile.com"
+            ]
+        },
+        {
+            "rule": "adroot\\.io\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "10c4d9b755ef6d48a14f82762da1f987579e629ad63043866e2c8897c86223b6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sammobile.com",
@@ -60,19 +83,24 @@
     "cookies": 0.0001,
     "topInitiators": [
         {
-            "domain": "first party",
+            "domain": "doubleclick.net",
             "prevalence": 0.5
         },
         {
-            "domain": "cookiebot.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "galilea.ns.cloudflare.com",
-        "kyree.ns.cloudflare.com"
+        "kyree.ns.cloudflare.com",
+        "galilea.ns.cloudflare.com"
     ]
 }

@@ -4,19 +4,24 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000504,
-    "sites": 5,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
         "inclusion-matomo-production.osc-secnum-fr1",
-        "idfm-production-common-design.osc-secnum-fr1"
+        "idfm-production-common-design.osc-secnum-fr1",
+        "rdvmairie-backend-prod.osc-secnum-fr1"
     ],
     "cnames": [
+        {
+            "original": "api.rendezvouspasseport.ants.gouv.fr",
+            "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+        },
         {
             "original": "matomo.inclusion.beta.gouv.fr",
             "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "scalingo\\.io\\/piwik\\.php",
@@ -27,7 +32,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "matomo.inclusion.beta.gouv.fr",
@@ -57,7 +62,7 @@
                 "Document.cookie getter": 2
             },
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "71c075924d48ba3d58aac193a92a45e1ff1be0c2264c4d4084e658b69f39985b"
@@ -68,6 +73,58 @@
             "exampleSites": [
                 "iledefrance-mobilites.fr",
                 "www.iledefrance-mobilites.fr"
+            ]
+        },
+        {
+            "rule": "scalingo\\.io\\/api\\/Announcement",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rdvmairie-backend-prod.osc-secnum-fr1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.rendezvouspasseport.ants.gouv.fr",
+                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "rendezvouspasseport.ants.gouv.fr"
+            ]
+        },
+        {
+            "rule": "scalingo\\.io\\/api\\/Announcement",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rdvmairie-backend-prod.osc-secnum-fr1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.rendezvouspasseport.ants.gouv.fr",
+                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "rendezvouspasseport.ants.gouv.fr"
             ]
         }
     ],
@@ -82,7 +139,9 @@
     ],
     "types": {
         "Ping": 2,
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "wally.ns.cloudflare.com",

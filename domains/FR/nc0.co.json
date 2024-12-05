@@ -9,13 +9,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
         "twdc-dtci.edge",
-        "dell.edge",
-        "symantec.edge",
-        "delta.edge"
+        "symantec.edge"
     ],
     "cnames": [
         {
@@ -25,26 +23,81 @@
         {
             "original": "ensighten.norton.com",
             "resolved": "symantec.edge.nc0.co"
-        },
-        {
-            "original": "pulse.delta.com",
-            "resolved": "delta.edge.nc0.co"
-        },
-        {
-            "original": "sst.dell.com",
-            "resolved": "dell.edge.nc0.co"
-        },
-        {
-            "original": "tms.delta.com",
-            "resolved": "delta.edge.nc0.co"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/Bootstrap\\.js",
-            "cookies": 0.000403,
+            "cookies": 0.000503,
             "fingerprinting": 1,
+            "subdomains": [
+                "twdc-dtci.edge"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "dcf.espn.com",
+                    "resolved": "twdc-dtci.edge.nc0.co"
+                }
+            ],
+            "responseHashes": [
+                "acd36c66072384d59e8773045351d5c5ac1b9377a37791f55a9387737f40a166"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "s_ensNR": {
+                    "ttl": 2592002,
+                    "length": 17,
+                    "prevalence": 0.00040269807711668175,
+                    "uniqueness": 1
+                },
+                "s_ensCDS": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00040269807711668175,
+                    "uniqueness": 0.25
+                },
+                "_dcf": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00040269807711668175,
+                    "uniqueness": 0.5
+                },
+                "s_ensRegion": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00040269807711668175,
+                    "uniqueness": 0.75
+                },
+                "s_ensNSL": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010067451927917044,
+                    "uniqueness": 1
+                },
+                "s_ensNonIab": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020134903855834087,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "moviesanywhere.com",
+                "www.espncricinfo.com",
+                "www.espn.com",
+                "www.nationalgeographic.com"
+            ]
+        },
+        {
+            "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/serverComponent\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "twdc-dtci.edge"
             ],
@@ -58,80 +111,16 @@
                 }
             ],
             "responseHashes": [
-                "f0746b1d7e31545650d7713fc2e04e2379a91b0e0880354f3c7c5c2638c878d7"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "s_ensNR": {
-                    "ttl": 2592001,
-                    "length": 17,
-                    "prevalence": 0.0003022974607013301,
-                    "uniqueness": 1
-                },
-                "s_ensCDS": {
-                    "ttl": null,
-                    "length": 1,
-                    "prevalence": 0.0003022974607013301,
-                    "uniqueness": 0.3333333333333333
-                },
-                "_dcf": {
-                    "ttl": null,
-                    "length": 1,
-                    "prevalence": 0.0003022974607013301,
-                    "uniqueness": 0.6666666666666666
-                },
-                "s_ensRegion": {
-                    "ttl": null,
-                    "length": 5,
-                    "prevalence": 0.0003022974607013301,
-                    "uniqueness": 1
-                },
-                "s_ensNSL": {
-                    "ttl": null,
-                    "length": 1,
-                    "prevalence": 0.00010076582023377671,
-                    "uniqueness": 1
-                },
-                "s_ensNonIab": {
-                    "ttl": null,
-                    "length": 5,
-                    "prevalence": 0.00010076582023377671,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "go.com",
-                "moviesanywhere.com",
-                "www.espn.com",
-                "www.nationalgeographic.com"
-            ]
-        },
-        {
-            "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/serverComponent\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "twdc-dtci.edge"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [
-                {
-                    "original": "dcf.espn.com",
-                    "resolved": "twdc-dtci.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "4e9f9238bdd3c3223c3d1b356fc0c309ffd22f5174125088890580b3feb9e94d",
-                "d2d1b5b223f109bddfc9d9e4f871391bad4ff2ca1532e109e94a298eaf46b7a6"
+                "c2dab8ee944045c0d8058da43125be88d1d15c2162d5c6942a11eab6cb8d732b",
+                "c24699a383c7c3afc698675aa48ea69a76d0e8803f1606074694622f4fb59272",
+                "56a47f74a94d82a7c51206ac1b2215695925944bd6229972a64a6c9d1a402e9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "go.com",
+                "www.espncricinfo.com",
                 "www.espn.com",
                 "www.nationalgeographic.com"
             ]
@@ -145,7 +134,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -171,8 +160,8 @@
                 "twdc-dtci.edge"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -187,6 +176,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "go.com",
+                "www.espncricinfo.com",
                 "www.espn.com",
                 "www.nationalgeographic.com"
             ]
@@ -199,8 +189,8 @@
                 "twdc-dtci.edge"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -215,6 +205,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "go.com",
+                "www.espncricinfo.com",
                 "www.espn.com",
                 "www.nationalgeographic.com"
             ]
@@ -243,25 +234,25 @@
                 "s_ensNR": {
                     "ttl": 2592009,
                     "length": 17,
-                    "prevalence": 0.0003022974607013301,
+                    "prevalence": 0.0003020235578375113,
                     "uniqueness": 0.6666666666666666
                 },
                 "s_ensCDS": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.0003022974607013301,
+                    "prevalence": 0.0003020235578375113,
                     "uniqueness": 0.3333333333333333
                 },
                 "_dcf": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.0003022974607013301,
+                    "prevalence": 0.0003020235578375113,
                     "uniqueness": 0.6666666666666666
                 },
                 "s_ensRegion": {
                     "ttl": null,
                     "length": 6,
-                    "prevalence": 0.0003022974607013301,
+                    "prevalence": 0.0003020235578375113,
                     "uniqueness": 0.6666666666666666
                 }
             },
@@ -273,65 +264,6 @@
             ]
         },
         {
-            "rule": "nc0\\.co\\/pc\\/dell\\/sst",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dell.edge"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "sst.dell.com",
-                    "resolved": "dell.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dell.com",
-                "www.dell.com"
-            ]
-        },
-        {
-            "rule": "nc0\\.co\\/error\\/e\\.gif",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "symantec.edge",
-                "delta.edge"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "ensighten.norton.com",
-                    "resolved": "symantec.edge.nc0.co"
-                },
-                {
-                    "original": "tms.delta.com",
-                    "resolved": "delta.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "norton.com",
-                "www.delta.com"
-            ]
-        },
-        {
             "rule": "nc0\\.co\\/privacy\\/v1\\/b\\/r\\.rnc",
             "cookies": 0,
             "fingerprinting": 0,
@@ -340,7 +272,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "ensighten.norton.com",
@@ -359,48 +291,16 @@
             ]
         },
         {
-            "rule": "nc0\\.co\\/delta\\/dl_anderson\\/code\\/1cf683428dc0972369dfd50302606b19\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "delta.edge"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "tms.delta.com",
-                    "resolved": "delta.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "f73df9f5de7a22f587f1fd2195ebfdf8366e322e0a09d236d6909085ff11c37c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "delta.com",
-                "www.delta.com"
-            ]
-        },
-        {
             "rule": "nc0\\.co\\/privacy\\/v1\\/b\\/b\\.rnc",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "delta.edge",
                 "twdc-dtci.edge"
             ],
             "apis": {},
             "sites": 4,
             "prevalence": 0.000403,
             "cnames": [
-                {
-                    "original": "tms.delta.com",
-                    "resolved": "delta.edge.nc0.co"
-                },
                 {
                     "original": "dcf.espn.com",
                     "resolved": "twdc-dtci.edge.nc0.co"
@@ -413,64 +313,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "delta.com",
-                "www.delta.com",
+                "espncricinfo.com",
+                "www.espncricinfo.com",
                 "www.espn.com",
                 "www.nationalgeographic.com"
-            ]
-        },
-        {
-            "rule": "nc0\\.co\\/pc\\/delta\\/sst",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "delta.edge"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "pulse.delta.com",
-                    "resolved": "delta.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "delta.com",
-                "www.delta.com"
-            ]
-        },
-        {
-            "rule": "nc0\\.co\\/pc\\/delta\\/sst",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "delta.edge"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "pulse.delta.com",
-                    "resolved": "delta.edge.nc0.co"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "delta.com",
-                "www.delta.com"
             ]
         },
         {
@@ -482,7 +328,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -509,7 +355,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -529,14 +375,14 @@
         },
         {
             "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/code\\/31440df0a609f4c4001ce2cf4dfc45c7\\.js",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 2,
             "subdomains": [
                 "twdc-dtci.edge"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -563,7 +409,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -583,14 +429,14 @@
         },
         {
             "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/code\\/acfe05eadbe86d3966c2e0a57f3d6d0c\\.js",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "twdc-dtci.edge"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -617,7 +463,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -644,7 +490,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -671,7 +517,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -690,15 +536,15 @@
             ]
         },
         {
-            "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/code\\/2c5f09d7e0b3101cb5773c4f1742b4ce\\.js",
+            "rule": "nc0\\.co\\/TWDC-DTCI\\/prod\\/code\\/889e5ba33c5dcde7c5507c89b87fa670\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "twdc-dtci.edge"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "dcf.espn.com",
@@ -706,7 +552,7 @@
                 }
             ],
             "responseHashes": [
-                "bbdcfba36ac8992909c9ce406be2774ceee78a9bfc73e33bddfc89e6c977be6e"
+                "968e6f5981cab11a42b4b5f1a4935f0ac27a7cbae37de4007f7a1101482abb30"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -747,46 +593,41 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00111,
+    "cookies": 0.000805,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.7954545454545454
         },
         {
-            "domain": "onelink-translations.com",
-            "prevalence": 0.10416666666666667
+            "domain": "go-mpulse.net",
+            "prevalence": 0.06818181818181818
         },
         {
             "domain": "abcnews.com",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "espn.co.uk",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "espn.net",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.022727272727272728
         },
         {
             "domain": "espncdn.com",
-            "prevalence": 0.020833333333333332
-        },
-        {
-            "domain": "static-nzz.ch",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.022727272727272728
         }
     ],
     "types": {
-        "Script": 38,
-        "Ping": 4,
-        "Image": 13
+        "Script": 40,
+        "Image": 9
     },
     "nameservers": [
-        "ns-341.awsdns-42.com",
+        "ns-1332.awsdns-38.org",
         "ns-1781.awsdns-30.co.uk",
-        "ns-663.awsdns-18.net",
-        "ns-1332.awsdns-38.org"
+        "ns-341.awsdns-42.com",
+        "ns-663.awsdns-18.net"
     ]
 }

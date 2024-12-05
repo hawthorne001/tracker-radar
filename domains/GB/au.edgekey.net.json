@@ -14,6 +14,7 @@
     "subdomains": [
         "collector.abc.net",
         "carsguide.com",
+        "wildcardsan.news.com",
         "images.sbs.com"
     ],
     "cnames": [
@@ -28,6 +29,10 @@
         {
             "original": "resources.carsguide.com.au",
             "resolved": "carsguide.com.au.edgekey.net"
+        },
+        {
+            "original": "resources.news.com.au",
+            "resolved": "wildcardsan.news.com.au.edgekey.net"
         }
     ],
     "fingerprinting": 1,
@@ -88,8 +93,8 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/gtm\\/dmp-dil-script\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 1,
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "carsguide.com"
             ],
@@ -111,6 +116,31 @@
             "exampleSites": [
                 "carsguide.com.au",
                 "www.carsguide.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/animations\\/62027d\\/476d\\/476de4ddd0dbcfc156af83b04c62027d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wildcardsan.news.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "resources.news.com.au",
+                    "resolved": "wildcardsan.news.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "news.com.au",
+                "www.news.com.au"
             ]
         },
         {
@@ -224,20 +254,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8181818181818182
+            "prevalence": 0.75
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.25
         }
     ],
     "types": {
         "XHR": 2,
         "Script": 4,
+        "Media": 2,
         "Image": 8
     },
     "nameservers": []
