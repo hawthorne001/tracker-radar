@@ -4,26 +4,30 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
+    "prevalence": 0.0000136,
     "sites": 2,
     "subdomains": [
         "livechat",
-        "ocw"
+        "ocw",
+        "livechat-metrics"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "messagebird\\.com\\/bootstrap\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "livechat",
                 "ocw"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
@@ -31,30 +35,54 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "booking.com",
-                "partner.booking.com"
+                "partner.booking.com",
+                "www.falabella.com.co"
+            ]
+        },
+        {
+            "rule": "messagebird\\.com\\/measure",
+            "cookies": 0.00000682,
+            "fingerprinting": 0,
+            "subdomains": [
+                "livechat-metrics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "falabella.com.co",
+                "www.falabella.com.co"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000682,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.6
         },
         {
-            "domain": "mbirdcdn.net",
-            "prevalence": 0.3333333333333333
+            "domain": "adobedtm.com",
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-24.awsdns-03.com",
-        "ns-752.awsdns-30.net",
         "ns-1310.awsdns-35.org",
-        "ns-2001.awsdns-58.co.uk"
+        "ns-2001.awsdns-58.co.uk",
+        "ns-24.awsdns-03.com",
+        "ns-752.awsdns-30.net"
     ]
 }

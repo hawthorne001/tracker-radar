@@ -9,19 +9,17 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.0011,
+    "sites": 11,
     "subdomains": [
+        "accounts.bahn",
         "gtm.idealo",
-        "cdn.ing",
-        "gateway.kleinanzeigen",
-        "sso.sportschau",
-        "sso.tagesschau"
+        "gateway.kleinanzeigen"
     ],
     "cnames": [
         {
-            "original": "cdn.ing.de",
-            "resolved": "cdn.ing.de.edgekey.net"
+            "original": "accounts.bahn.de",
+            "resolved": "accounts.bahn.de.edgekey.net"
         },
         {
             "original": "gateway.kleinanzeigen.de",
@@ -30,18 +28,62 @@
         {
             "original": "gtm.idealo.de",
             "resolved": "gtm.idealo.de.edgekey.net"
-        },
-        {
-            "original": "sso.sportschau.de",
-            "resolved": "sso.sportschau.de.edgekey.net"
-        },
-        {
-            "original": "sso.tagesschau.de",
-            "resolved": "sso.tagesschau.de.edgekey.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6dca5ff62a7dbef057083c6f43d725f826c63a32197b6122fb6e015402fca77d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
         {
             "rule": "de\\.edgekey\\.net\\/webvitals",
             "cookies": 0.000201,
@@ -70,33 +112,6 @@
             ]
         },
         {
-            "rule": "de\\.edgekey\\.net\\/ing-feat-auth-client-de\\/2\\.0\\.0\\/auth-client\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.ing"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "cdn.ing.de",
-                    "resolved": "cdn.ing.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "0b37131a1a5ab407fcbb860f760a4bc98a0471217dd9e7793295337bab259ede"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ing.de",
-                "www.ing.de"
-            ]
-        },
-        {
             "rule": "de\\.edgekey\\.net\\/ignite-ad-search\\/buyside\\/search",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -113,7 +128,7 @@
                 }
             ],
             "responseHashes": [
-                "d8d60336dedd978a81cae6fc076f4dbe4dc988644cd1c6cc5c44b9c39adb91b7"
+                "2bd4e2a5eeb5ec9c3145d81295a74f45b2fadea3a64e8ffa5327fdc7214a9966"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -122,55 +137,33 @@
                 "kleinanzeigen.de",
                 "www.kleinanzeigen.de"
             ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/sso\\/token",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sso.sportschau",
-                "sso.tagesschau"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "sso.sportschau.de",
-                    "resolved": "sso.sportschau.de.edgekey.net"
-                },
-                {
-                    "original": "sso.tagesschau.de",
-                    "resolved": "sso.tagesschau.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sportschau.de",
-                "www.tagesschau.de"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000401,
+    "cookies": 0.000602,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7777777777777778
+            "prevalence": 0.9090909090909091
+        },
+        {
+            "domain": "uicdn.com",
+            "prevalence": 0.03636363636363636
+        },
+        {
+            "domain": "classistatic.de",
+            "prevalence": 0.03636363636363636
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2222222222222222
+            "prevalence": 0.01818181818181818
         }
     ],
     "types": {
-        "Image": 2,
-        "Script": 2,
-        "Fetch": 4
+        "Fetch": 4,
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": []
 }

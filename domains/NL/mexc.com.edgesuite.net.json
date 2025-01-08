@@ -12,16 +12,48 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "otc",
         "futures"
     ],
     "cnames": [
         {
             "original": "futures.mexc.com",
             "resolved": "futures.mexc.com.edgesuite.net"
+        },
+        {
+            "original": "otc.mexc.com",
+            "resolved": "otc.mexc.com.edgesuite.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/asset\\/fiat_switch\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "otc.mexc.com",
+                    "resolved": "otc.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "bcd2b49ced1571dc88f919647f476e8d779efb93edcbcd96859842112afce6b7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
         {
             "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/detail",
             "cookies": 0,
@@ -64,7 +96,59 @@
                 }
             ],
             "responseHashes": [
-                "75d21bbc1194c0c7b9c307276658b897c0da8cd858ee7091a443a4a69b3bb57c"
+                "d99331bbee1471b5ac4a09a65d9165ac36e7dc2b1df1d265b59aa4c1a8bf7828"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/header",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "futures"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "futures.mexc.com",
+                    "resolved": "futures.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/header",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "futures"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "futures.mexc.com",
+                    "resolved": "futures.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "ce4938ebd8afb22f68a3c8730117f2de16720735a08356c8dd6782cb8c9848a1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -116,7 +200,7 @@
                 }
             ],
             "responseHashes": [
-                "aa0b0089c946906903e7f3271cde664a04ad25eea5a11a4654ce9e9b63dfe242"
+                "dfa22466b2007a070dc84658e022886a7541c3cba08ef13e0e7f89b5bff1824d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -135,16 +219,16 @@
     "topInitiators": [
         {
             "domain": "gotoda.co",
-            "prevalence": 0.8
+            "prevalence": 0.8461538461538461
         },
         {
             "domain": "mocortech.com",
-            "prevalence": 0.2
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 4
+        "Fetch": 8,
+        "Preflight": 6
     },
     "nameservers": []
 }

@@ -16,6 +16,28 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "fcagroup\\.com\\/CookieLawProduct\\/resources\\/generatecss",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cookielaw.emea"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alfaromeo.de",
+                "www.media.stellantis.com"
+            ]
+        },
+        {
             "rule": "fcagroup\\.com\\/CookieLawProduct\\/resources\\/generatejs",
             "cookies": 0.000302,
             "fingerprinting": 1,
@@ -31,15 +53,15 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "d0f8321178cbba74ad73a79cb67b6189dcd0838fa7ce34aebca234b33c508ac7",
+                "33170e023827d11050f5bd11f7e5c18174b82eada7f8141b610de9ab2bae45ab",
                 "66754a7a1363d72dc67b535f058489930c06e7b1daabafe3741d7691c00f8b44"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fiat.de",
-                "www.jeep.de",
+                "alfaromeo.de",
+                "www.fiat.de",
                 "www.media.stellantis.com"
             ]
         },
@@ -59,37 +81,15 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "75d793361e7bc56e7b9fde3469dfe028da83162013416b3ff903f78099d89aef",
+                "1bfffd67641d3785ba632407a49bb7c219b0d08beb47625cec88aa499c5c5fd9",
                 "8e595557e01e5e50868d06a0b5b1247deed0faa8ec24fe6480c32effeb633b24"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fiat.de",
-                "www.jeep.de",
-                "www.media.stellantis.com"
-            ]
-        },
-        {
-            "rule": "fcagroup\\.com\\/CookieLawProduct\\/resources\\/generatecss",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cookielaw.emea"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "jeep.de",
+                "alfaromeo.de",
+                "www.fiat.de",
                 "www.media.stellantis.com"
             ]
         }
@@ -100,7 +100,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
+            "prevalence": 0.75
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.125
         },
         {
             "domain": "jquery.com",
@@ -108,9 +112,9 @@
         }
     ],
     "types": {
+        "Stylesheet": 2,
         "Script": 3,
-        "Document": 3,
-        "Stylesheet": 2
+        "Document": 3
     },
     "nameservers": [
         "dns1.p09.nsone.net",

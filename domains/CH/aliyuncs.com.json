@@ -7,16 +7,23 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
         "pango-virginia-prod-forum.us-east-1.log",
         "retcode-us-west-1.arms",
+        "arms-retcode-sg",
         "arms-retcode",
         "pango-virginia-prod-dji-official.us-east-1.log",
-        "f8ds5tkidk-default-us.rum"
+        "f8ds5tkidk-default-us.rum",
+        "alb-ikac97gt6ugf71674c.us-east-1.alb"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "relay-event.talkie-ai.com",
+            "resolved": "alb-ikac97gt6ugf71674c.us-east-1.alb.aliyuncs.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -47,23 +54,23 @@
             "fingerprinting": 0,
             "subdomains": [
                 "retcode-us-west-1.arms",
+                "arms-retcode-sg",
                 "arms-retcode"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_uetsid": 0.00010043185698503566,
-                "_uetvid": 0.00010043185698503566,
-                "_bl_uid": 0.00040172742794014263
+                "_bl_uid": 0.0004016467516818958
             },
             "exampleSites": [
-                "picwish.com",
+                "dji.com",
                 "store.dji.com",
+                "www.bilibili.tv",
                 "www.dji.com",
                 "www.insta360.com"
             ]
@@ -86,10 +93,10 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.00030129557095510696
+                "_bl_uid": 0.0003012350637614218
             },
             "exampleSites": [
-                "picwish.com",
+                "dji.com",
                 "store.dji.com",
                 "www.insta360.com"
             ]
@@ -135,53 +142,72 @@
                 "insta360.com",
                 "www.insta360.com"
             ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/api\\/5\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "alb-ikac97gt6ugf71674c.us-east-1.alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "relay-event.talkie-ai.com",
+                    "resolved": "alb-ikac97gt6ugf71674c.us-east-1.alb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "2419dd29c2efdd9781c4cff125a1d84ca32609a5a49e2eff8766e9bc3fc60e3a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "talkie-ai.com",
+                "www.talkie-ai.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "alicdn.com",
-            "prevalence": 0.390625
-        },
-        {
-            "domain": "djiits.com",
-            "prevalence": 0.234375
+            "prevalence": 0.36
         },
         {
             "domain": "djicdn.com",
-            "prevalence": 0.21875
+            "prevalence": 0.28
         },
         {
-            "domain": "bb-os.com",
-            "prevalence": 0.078125
+            "domain": "djiits.com",
+            "prevalence": 0.26
+        },
+        {
+            "domain": "bstarstatic.com",
+            "prevalence": 0.06
+        },
+        {
+            "domain": "wondershare.cc",
+            "prevalence": 0.02
         },
         {
             "domain": "first party",
-            "prevalence": 0.03125
-        },
-        {
-            "domain": "apowersoft.info",
-            "prevalence": 0.015625
-        },
-        {
-            "domain": "aoscdn.com",
-            "prevalence": 0.015625
-        },
-        {
-            "domain": "fliphtml5.com",
-            "prevalence": 0.015625
+            "prevalence": 0.02
         }
     ],
     "types": {
         "Ping": 4,
-        "Fetch": 6,
+        "Fetch": 9,
         "XHR": 3
     },
     "nameservers": [
+        "ns3.aliyun.com",
         "ns4.aliyun.com",
-        "ns5.aliyun.com",
-        "ns3.aliyun.com"
+        "ns5.aliyun.com"
     ]
 }

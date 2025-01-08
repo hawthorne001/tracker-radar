@@ -7,24 +7,27 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "embed"
+        "embed",
+        "dispatcher.cdp.us-east-1.prod.data"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "typeform\\.com\\/next\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "embed"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "b32ef3d653605e3278a8e50e853fdfe5893a998eb725623ec8cff40960686db4"
@@ -33,8 +36,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zeit.de",
-                "www.izotope.com"
+                "autobatterienbilliger.de",
+                "diablo.fandom.com",
+                "sudoku.zeit.de"
             ]
         },
         {
@@ -55,31 +59,79 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zeit.de",
-                "www.izotope.com"
+                "autobatterienbilliger.de",
+                "sudoku.zeit.de"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dispatcher.cdp.us-east-1.prod.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fandom.com",
+                "diablo.fandom.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dispatcher.cdp.us-east-1.prod.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fandom.com",
+                "diablo.fandom.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.5
+        },
+        {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.4
         },
         {
             "domain": "korfo.org",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2,
-        "Stylesheet": 2
+        "Script": 3,
+        "Stylesheet": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-14.awsdns-01.com",
         "ns-1444.awsdns-52.org",
+        "ns-14.awsdns-01.com",
         "ns-1725.awsdns-23.co.uk",
         "ns-788.awsdns-34.net"
     ]

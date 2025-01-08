@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
+        "he.lefigaro",
         "consents.cuisineactuelle",
         "consents.femmeactuelle",
         "static-lefigaro",
         "api-graphql.lefigaro",
+        "player-video.lefigaro",
         "static.nationalgeographic"
     ],
     "cnames": [
@@ -32,6 +34,14 @@
             "resolved": "consents.femmeactuelle.fr.edgekey.net"
         },
         {
+            "original": "he.lefigaro.fr",
+            "resolved": "he.lefigaro.fr.edgekey.net"
+        },
+        {
+            "original": "player-video.lefigaro.fr",
+            "resolved": "player-video.lefigaro.fr.edgekey.net"
+        },
+        {
             "original": "static.lefigaro.fr",
             "resolved": "static-lefigaro.fr.edgekey.net"
         },
@@ -42,6 +52,34 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "fr\\.edgekey\\.net\\/g\\/collect",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "he.lefigaro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "he.lefigaro.fr",
+                    "resolved": "he.lefigaro.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "uhz": 0.00020132876988121604,
+                "_ga": 0.00010066438494060802
+            },
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lefigaro.fr"
+            ]
+        },
         {
             "rule": "fr\\.edgekey\\.net\\/v2",
             "cookies": 0.000201,
@@ -173,6 +211,31 @@
             ]
         },
         {
+            "rule": "fr\\.edgekey\\.net\\/common\\/fonts\\/NotoSerif\\/notoserif-bolditalic\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-lefigaro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "static.lefigaro.fr",
+                    "resolved": "static-lefigaro.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
             "rule": "fr\\.edgekey\\.net\\/graphql",
             "cookies": 0,
             "fingerprinting": 0,
@@ -189,7 +252,7 @@
                 }
             ],
             "responseHashes": [
-                "c5166512af22e32d4fd198ee38b869c92faf67fcb09bb09bbdae6ac8930b6c79"
+                "cb14504880bc9dacd7f84ee39c7449aa74f40da01207a4c07479b7c23a2f0024"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -200,7 +263,34 @@
             ]
         },
         {
-            "rule": "fr\\.edgekey\\.net\\/files\\/styles\\/image_3200\\/public\\/10956487_img\\.webp",
+            "rule": "fr\\.edgekey\\.net\\/player-short-polling",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player-video.lefigaro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "player-video.lefigaro.fr",
+                    "resolved": "player-video.lefigaro.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
+            "rule": "fr\\.edgekey\\.net\\/files\\/styles\\/image_3200\\/public\\/10966601_img\\.webp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -216,7 +306,7 @@
                 }
             ],
             "responseHashes": [
-                "80d71397fbd9ef7bcfc979ed729d54b3532d3bb7f7600cac8802dee5a4421143"
+                "dee6f99040899ffcfe9e60c84218a7c98c52bbec9d067ccea4128d3575fef8c8"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -233,21 +323,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.7272727272727273
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
-        },
-        {
-            "domain": "privacy-center.org",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.2727272727272727
         }
     ],
     "types": {
+        "Fetch": 6,
         "Document": 2,
-        "Font": 8,
-        "Fetch": 2,
+        "Font": 10,
         "Image": 2
     },
     "nameservers": []
