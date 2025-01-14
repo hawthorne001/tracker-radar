@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000402,
+    "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
+        "accor-group-prod-prod",
         "cisco-dsc-prod",
         "mns-00.dn"
     ],
     "cnames": [
+        {
+            "original": "api.accor.com",
+            "resolved": "accor-group-prod-prod.apigee.net"
+        },
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
@@ -27,6 +32,58 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/customer\\/v1\\/contacts\\/me",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/customer\\/v1\\/contacts\\/me",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "e9703c85976ea43898fc10324f2917f26c13c3d0d6597e20aa261d43170fd397"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
@@ -43,8 +100,10 @@
                     "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "324287e021fe257a0b239a171b5948e9e87bb2ce1de2beacf759d607c75ea13c"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -68,10 +127,8 @@
                     "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
-            "responseHashes": [
-                "87f91ef0ef22282e6dcd980ff546ede602c089c8a1dfc9c098e06c8cc7f1a4db"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -106,7 +163,7 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000101,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
@@ -136,34 +193,34 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.375
+            "prevalence": 0.7058823529411765
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.25
+            "prevalence": 0.11764705882352941
         },
         {
             "domain": "mparticle.com",
-            "prevalence": 0.25
+            "prevalence": 0.11764705882352941
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.125
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 2,
-        "XHR": 2
+        "Preflight": 6,
+        "XHR": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-1907.awsdns-46.co.uk",
+        "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
-        "ns-670.awsdns-19.net",
-        "ns-116.awsdns-14.com"
+        "ns-1907.awsdns-46.co.uk",
+        "ns-670.awsdns-19.net"
     ]
 }

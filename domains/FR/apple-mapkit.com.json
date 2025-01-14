@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "gsp10",
+        "sat-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,10 +31,13 @@
                 "Navigator.prototype.languages": 2,
                 "window.matchMedia(\"prefers-color-scheme\")": 2,
                 "Navigator.prototype.userAgent": 2,
-                "window.devicePixelRatio": 2
+                "window.devicePixelRatio": 2,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.language": 1,
+                "CanvasRenderingContext2D.prototype.measureText": 1
             },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "7f5da4447494edce3536eacd28c7a91f9b812743b75dcd519a4430f997b85f71"
@@ -42,7 +47,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coordonnees-gps.fr",
-                "www.coordonnees-gps.fr"
+                "www.street-view.net"
             ]
         },
         {
@@ -54,7 +59,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -62,7 +67,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coordonnees-gps.fr",
-                "www.coordonnees-gps.fr"
+                "www.street-view.net"
             ]
         },
         {
@@ -74,17 +79,83 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7c9dca98839d3b55a0587f87b40b697cc6f18cee372293b29ab76709aefc4609"
+                "ba6509afea7ec26a6d560bf32a1ac23746302816515bb386ccbd9e62f49e39eb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coordonnees-gps.fr",
-                "www.coordonnees-gps.fr"
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/hvr\\/mw\\/v1\\/spile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gsp10"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "13c6a7b85fcb0443c1d31dafe22561aac714fbaa99d3b9a56474d8dda0c9aee0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/ti\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1efc10f7975f06704175ecf57fd033d05faf1c7707761ff1f5b2a98909c2e2b6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
+            ]
+        },
+        {
+            "rule": "apple-mapkit\\.com\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sat-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2d77fd38b88519191a5d972e88e6e343556d25674dd6088c51fe62ca47481745"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "street-view.net",
+                "www.street-view.net"
             ]
         }
     ],
@@ -100,7 +171,8 @@
     "types": {
         "Script": 2,
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 4,
+        "Image": 4
     },
     "nameservers": [
         "a.ns.apple.com",

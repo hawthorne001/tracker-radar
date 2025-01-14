@@ -4,58 +4,87 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
-    "sites": 6,
+    "prevalence": 0.0000546,
+    "sites": 8,
     "subdomains": [
-        "sdk",
         "sdk-v2",
-        "user-netlify",
-        "api"
+        "sdk",
+        "api",
+        "user-netlify"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "conscent\\.in\\/csc-sdk\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.0000136,
             "fingerprinting": 2,
             "subdomains": [
-                "sdk",
-                "sdk-v2"
+                "sdk-v2",
+                "sdk"
             ],
             "apis": {
+                "window.localStorage": 5,
+                "Date.prototype.getTime": 5,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 5,
                 "Navigator.prototype.userAgent": 3,
                 "Navigator.prototype.product": 3,
                 "Navigator.prototype.platform": 3,
                 "Navigator.prototype.cookieEnabled": 3,
-                "window.localStorage": 4,
-                "window.sessionStorage": 4,
-                "Date.prototype.getTime": 4,
-                "Document.cookie setter": 1,
                 "Document.cookie getter": 1
             },
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
                 "d0a74d70635f6c331752e32bea8ff84bdd9ed3eeae48fa6a68eca3a7663dc6de",
-                "1904259f65526d5b85f1e39a0bb8cdc32fdd1e6f1f6dc82a6e25777b02642911"
+                "60ed1ca677ede923ce676a70ec7ec43df181e0a1755d9ae9267cca7152b7cf7d"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_cscAnonId": {
                     "ttl": null,
                     "length": 36,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000013645450265745144,
+                    "uniqueness": 1
+                },
+                "_cscUserId": {
+                    "ttl": null,
+                    "length": 2,
+                    "prevalence": 0.000006822725132872572,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "abplive.com",
+                "gulfnews.com",
+                "marathi.abplive.com",
                 "news.abplive.com",
                 "theprint.in",
                 "www.abplive.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/api\\/v2\\/client\\/sdk-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f7c47b2f57afd403db064398d673b01ed78eeb5077205dc64781a2a054f739c7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gulfnews.com",
+                "theprint.in"
             ]
         },
         {
@@ -70,7 +99,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "27c6b17dc7aee11f31598f718e05d6be7d8b239d5c8ba81eab5a62d48ea444a0"
+                "f88745d9248f3b06b94e90b4cc1379bf24d152c1977020ddc3fa32cd0231c712"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -82,7 +111,7 @@
             ]
         },
         {
-            "rule": "conscent\\.in\\/static\\/css\\/main\\.6620abd1\\.chunk\\.css",
+            "rule": "conscent\\.in\\/static\\/css\\/main\\.305206bd\\.chunk\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -93,7 +122,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "6b1a372eea0bb0b6fb88e9db9c2358aa8179a96cfdf3e63378557fa79c7f909f"
+                "584cb0a1f3d7d71095fd73b8487c69bd853405bbdaecf620233e446e885dfe10"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -134,7 +163,7 @@
             ]
         },
         {
-            "rule": "conscent\\.in\\/static\\/js\\/main\\.55007f43\\.chunk\\.js",
+            "rule": "conscent\\.in\\/static\\/js\\/main\\.bab16b5c\\.chunk\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -147,7 +176,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "3a935d97a137922374be84f74593f2efdbb100ce9c57a9e59ca37854a4701ec3"
+                "dc1172207c61192ce474550420ea242742ed4fb1540df92c212d0ce2d2997360"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -190,7 +219,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [],
             "type": "XHR",
@@ -204,7 +233,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
@@ -212,7 +241,8 @@
         }
     ],
     "types": {
-        "Script": 13,
+        "Script": 14,
+        "Fetch": 2,
         "Document": 3,
         "Stylesheet": 3,
         "XHR": 2

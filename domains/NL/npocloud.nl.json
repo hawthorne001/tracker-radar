@@ -4,15 +4,20 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
-        "vpro-prod.apps.vpro.cluster.chp5-prod"
+        "vpro-prod.apps.vpro.cluster.chp5-prod",
+        "apps.max.cluster.chp5-prod"
     ],
     "cnames": [
         {
             "original": "rs.vpro.nl",
             "resolved": "vpro-prod.apps.vpro.cluster.chp5-prod.npocloud.nl"
+        },
+        {
+            "original": "www-origin.heelhollandbakt.nl",
+            "resolved": "apps.max.cluster.chp5-prod.npocloud.nl"
         }
     ],
     "fingerprinting": 0,
@@ -59,7 +64,7 @@
                 }
             ],
             "responseHashes": [
-                "b9b54aded6e3d4487acc2ae08f6900fb15e79edbf18f9076f938afd8f700fd19"
+                "45e51947ce7bd281bab95e4950dec968af7fe60fca4b546f5ec581d7f33f951e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -68,6 +73,33 @@
                 "vpro.nl",
                 "3voor12.vpro.nl"
             ]
+        },
+        {
+            "rule": "npocloud\\.nl\\/fallback\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.max.cluster.chp5-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "www-origin.heelhollandbakt.nl",
+                    "resolved": "apps.max.cluster.chp5-prod.npocloud.nl"
+                }
+            ],
+            "responseHashes": [
+                "e36588c8cc574e158e203393784d35b98286b331ffac5a917bdc0a5061cbfd54"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heelhollandbakt.nl",
+                "www.heelhollandbakt.nl"
+            ]
         }
     ],
     "categories": [],
@@ -75,12 +107,13 @@
     "cookies": 0.0001,
     "types": {
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Image": 2
     },
     "nameservers": [
+        "ns-2037.awsdns-62.co.uk",
         "ns-735.awsdns-27.net",
-        "ns-238.awsdns-29.com",
         "ns-1141.awsdns-14.org",
-        "ns-2037.awsdns-62.co.uk"
+        "ns-238.awsdns-29.com"
     ]
 }

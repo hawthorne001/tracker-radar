@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00402,
-    "sites": 40,
+    "prevalence": 0.00432,
+    "sites": 43,
     "subdomains": [
         "floor",
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,75 +22,101 @@
                 "floor"
             ],
             "apis": {},
-            "sites": 32,
-            "prevalence": 0.00322,
+            "sites": 29,
+            "prevalence": 0.00291,
             "cnames": [],
             "responseHashes": [
-                "0f938b7abd96cd3ae141a493012f0e14a9569277b0e477aacae4c38a7fded061",
-                "6ed463ea1002326090dd4d5301ff2c615841d92caad998f68947c09e36d4020f",
-                "51eeed0fe62d51ca40eb7d436147906a2c11d26debd098d7f0cf15f60e1c355d",
-                "f5acec1e2d3ba3f8ebf0386d4d3ebabaafe2561ad690f589026b8b6edb79070b",
-                "b81f22ea35471c2d027b7307587a17e059388a223d4da53484226814354c5b71",
-                "5a5aaae00e2406eec0097d7e4e7031615101981e0074d0695a1fcbf5eb2eaa72",
-                "6e53f41b0998549b8c80650c246c3153900c44d0fc168831f8bdb046a7f0d950",
-                "d1209b1530477a6806a0c4a02049efd55f8d6b337d0de9a7419be142e1e8f881",
-                "feac5a28f78f5ec67c090cde43e90e4b0703cbc2045aff4ec0e4975570b754a7",
-                "992708b09041527a3721c1dd86536979d5dd0422ac82190ecb4aec937943d8c9",
-                "717aa98944cc6b84777ea8fe80637a5def52be24d4abf3837480dd2cd685e8e3",
-                "b60e49e1295865675df9203b0a706e5ba235d9a7e795cdac1ace2c10ac2cc806",
-                "7cbb3f89516e6c449dc2b33f87a353451444c185f1db075100dfa6271d4be304",
-                "16a0d4be95668ab2975367b32fdf360098e6891d40590ef10456f3845abbad66",
-                "fb3d3e5e47d03904f08ef89cc7972cd97695442357d01f97f7af2443cbf8558f",
-                "05a725a84fe0210374de918e64a93281d8e98ca34d17f781478119e7367f4ba7",
-                "6c8513459d2f1781cd46c3661944471260e5d1c80cc63aadd607a78efeb5b71f",
-                "dc521ad0439e22d979befdfc48ba267c5bcafc9533845d485ed7abda1890c1d3",
-                "be9b41fef8f25ee8e193bce715f4c2c192e38cdebbf46ca5e8f7696332e8f387",
-                "2f9da97a52e1e367a8ec992682fb0553687226308d74912fadc22aef48bd4b4e",
-                "e0f46899041c94f522877fd77ee42ea6dec07a9b259ff073f57e869f57039030",
-                "11ce39a0bd1ffa7a543ef06971d072f60ab40a8931e9c6cefd826d77c7f4e693",
-                "ce64d8daa3d45a78c5172a3a0f3b4059216c47d2d40a8da2fed094c7913e7dc8",
-                "89c7a81510f23235c6f4d9a11aaca94f74947d0d130f61e5bc4725b837a85b7d",
-                "6a8f56c7aa32d8b670c66a094a9aab9734bbba8a238a8dd1c73b79b1498cf301",
-                "12d3217dc0a8c58599f641591eb776633b7be6f11de3f7dd3c5df3e40f1b1bbf",
-                "0888616fa8346ee2d510552d9105c9a4c59b4958b36268bed5e18c82f114ce1b",
-                "70a30b1b374c0006ec3e841b5f0e8e95b134b63f19e24055fe358a3f23ebe1df",
-                "650480866021f764198300905c5d19b3bd1726c489f0ee9adc3197a511f59f3c",
-                "0660877f335e18edc42510dcb37fcfc9c3dd9c175c21c05d8b6a067caf06b89a"
+                "216cb8ba250ce2d5a9c14cefc7333d8688c89506a88f17d152f7c94ed78702c7",
+                "de21a993ac099337d72117a71001efb565fcfe61ecc7e0bc8db039e4b1945131",
+                "74c603fb0e44f4f97fb4dd380b33c10b73e9ca745d0fdcc9d1ed55c6dd35d815",
+                "68cc9f1019eb246484a3569f5c68b25c670f56b9c327235d3a25b04019c7f77c",
+                "4944e54c5a3b8219b3d4b224801d76eb937774ac0a93cb91c7202468c7dda75d",
+                "9d954b01ec02649005250a02d6d1d697ad53b60400dd8d0f20009005b2a867f1",
+                "94a8a2bf7a235d927d58f8b6d19a6caca7dc3605d7c3bf89fa61a9c41eb83b19",
+                "8cade8bcef34c8e935b85f5ef23ecf6faea75a765222736c475688d552b7c606",
+                "9ff854144beed76945ad1f042c78d719b47d8b1775658a45a136d091fe2e63af",
+                "876e19d8ee331d79695d3408e393325b0308f4b44223925152a0213786bc3ff9",
+                "61cb1d325226aa247d9edbb37fcc42d58a5308f393700199f647a8a6996478d3",
+                "8a538375c3acac29ba44cbc25886000e0d26317240fb15fec2432175976ef4d2",
+                "82244f11f9110681618736edb30e44b4b35b64de7b28d3c56dd97baaff4c6c9c",
+                "90f0473ea73e5fea59c44005a356025270f51af53293d5379246cd192d8aa6fb",
+                "00652219602febdf3ec85c65c7908f1f33e9bb76de53f7269aa7a45cfc6e0dd7",
+                "eb59fb5109eec02f564173d0fdd68b95805b3eb550aafc8342be1b7f2536df04",
+                "cb0800306143344cad5233fab2e86bb4637053cf58bc89a8dbc46ce76a4848fc",
+                "2a9afc8e92e62adf31ccac5e4a5493b479613f31c0f62c8fe282e2af68578646",
+                "c5d0aca76b74e6a5e7ddab47e040909fb29dd376ca481008b2ed6067a890c600",
+                "57466428c0baab4ebab3535c7927a6a798a7971542271abf02417781731ebe48",
+                "a9ed37efe547768fda90f7ee8241510f195fa555f139a609086d5f3122e27a07",
+                "779a03fe0bc91d1f49cf550814265da6a66972721844d5a9da61757ef3ac2dfb",
+                "b87350a2b0450204ad56412fa629f4f0183150707ab8612ec013b460d7feb321",
+                "c3bd435c88f71126f2528d874c7ff048232abf982a9851650c62a26d35d41f23",
+                "2053dd06775d616bd7fd984fc4f5938fd37db3549f6fa778af1b140c1ef0ad91",
+                "d47527683eebb972fe35e4fec9e3bd4d6cbff9cd6b6fadad211734d4a5beb99f",
+                "fc1a62ca4032e0d53ba0198e036f6479a1f72c6101c12e955539d6376e3178f0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "worldle.teuteuf.fr",
-                "www.isitdownrightnow.com",
                 "calculator-online.net",
-                "www.crosswordsolver.org",
-                "www.boards.ie",
-                "www.bbcgoodfood.com",
-                "www.linguee.fr",
-                "www.radiotimes.com",
+                "www.olivemagazine.com",
+                "uk.investing.com",
+                "nationalpost.com",
+                "www.gardenersworld.com",
+                "www.windfinder.com",
+                "www.investing.com",
                 "mediabiasfactcheck.com",
                 "www.pets4homes.co.uk",
-                "www.gardenersworld.com",
-                "helpdeskgeek.com",
-                "solicitors.lawsociety.org.uk",
-                "meetyou.me",
-                "www.radio-uk.co.uk",
-                "www.notebookcheck.net",
-                "www.investing.com",
+                "www.linguee.fr",
+                "www.fmscout.com",
+                "www.madeformums.com",
                 "www.geoguessr.com",
-                "kerrydalestreet.co.uk",
-                "www.livesoccertv.com"
+                "solicitors.lawsociety.org.uk",
+                "www.radiotimes.com",
+                "worldle.teuteuf.fr",
+                "www.ultimatespecs.com",
+                "www.holiday-weather.com",
+                "www.numbeo.com",
+                "helpdeskgeek.com"
             ]
         },
         {
-            "rule": "pbxai\\.com\\/e81e688b-e119-4bf8-af5e-9c6af50622c1\\.js",
+            "rule": "pbxai\\.com\\/736376db-e1cc-45b9-91e1-f3ccf5a10d38\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "bd998a27aedecf1475d2848e5a362c5e43cde77c477a810a3895e06ec97c3e4f",
+                "35295c0399d452ee58282eddcdec1d23d52ca58ff0b42cad131f7ab4e25b7cbf",
+                "95f8e93a8907670d0656e73560f73a12bb8d0f2ce03f68994ce208b4bd0e6e42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nexusmods.com",
+                "www.nexusmods.com",
+                "www.pcgamebenchmark.com",
+                "www.pockettactics.com"
+            ]
+        },
+        {
+            "rule": "pbxai\\.com\\/e81e688b-e119-4bf8-af5e-9c6af50622c1\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -138,7 +165,7 @@
                 "window.sessionStorage": 5
             },
             "sites": 5,
-            "prevalence": 0.000502,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "a0bfabddb7afd90ed2974dc6e6fc9c7e1f7b5b78852a6837ac1421ad52f1f1c8"
@@ -177,30 +204,6 @@
             ]
         },
         {
-            "rule": "pbxai\\.com\\/5f4a4498-4f1f-48c2-94fc-26ecfea898d8\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "393fe33aabe377b7755ee50b1ffeeec4ae14eb50f2d34ecbdf54e80b8a3ccea4",
-                "e393f941ece2507b66eb5c0ef3fa5dfc6711f4a1d32197422350ede708f9c984"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "carscoops.com",
-                "www.duplichecker.com",
-                "www.islamicfinder.org"
-            ]
-        },
-        {
             "rule": "pbxai\\.com\\/47f20c1b-5e16-45d3-b65a-7dd90864f1b8\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -226,7 +229,7 @@
             ]
         },
         {
-            "rule": "pbxai\\.com\\/736376db-e1cc-45b9-91e1-f3ccf5a10d38\\.js",
+            "rule": "pbxai\\.com\\/5f4a4498-4f1f-48c2-94fc-26ecfea898d8\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -237,14 +240,78 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "95f8e93a8907670d0656e73560f73a12bb8d0f2ce03f68994ce208b4bd0e6e42"
+                "e393f941ece2507b66eb5c0ef3fa5dfc6711f4a1d32197422350ede708f9c984"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nexusmods.com",
-                "www.pockettactics.com"
+                "duplichecker.com",
+                "www.islamicfinder.org"
+            ]
+        },
+        {
+            "rule": "pbxai\\.com\\/analytics\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "duplichecker.com",
+                "www.duplichecker.com"
+            ]
+        },
+        {
+            "rule": "pbxai\\.com\\/analytics\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "duplichecker.com",
+                "www.duplichecker.com"
+            ]
+        },
+        {
+            "rule": "pbxai\\.com\\/e2140966-98d4-471a-b2f6-1c773ac644dc\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "440d94465f9e2a71d5a4306ca6df97f244810c1e2e3629529d97c0285b3569f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "richmond.gov.uk",
+                "www.towerhamlets.gov.uk",
+                "www.walthamforest.gov.uk",
+                "www.wandsworth.gov.uk"
             ]
         }
     ],
@@ -254,53 +321,54 @@
     "topInitiators": [
         {
             "domain": "snigelweb.com",
-            "prevalence": 0.3220338983050847
+            "prevalence": 0.3103448275862069
         },
         {
             "domain": "rubiconproject.com",
-            "prevalence": 0.22033898305084745
+            "prevalence": 0.22413793103448276
         },
         {
             "domain": "first party",
-            "prevalence": 0.13559322033898305
-        },
-        {
-            "domain": "fuseplatform.net",
-            "prevalence": 0.06779661016949153
+            "prevalence": 0.13793103448275862
         },
         {
             "domain": "adpushup.com",
-            "prevalence": 0.06779661016949153
+            "prevalence": 0.06896551724137931
         },
         {
-            "domain": "pubpowerplatform.io",
-            "prevalence": 0.03389830508474576
+            "domain": "counciladvertising.net",
+            "prevalence": 0.06896551724137931
+        },
+        {
+            "domain": "fuseplatform.net",
+            "prevalence": 0.05172413793103448
         },
         {
             "domain": "dsh7ky7308k4b.cloudfront.net",
-            "prevalence": 0.03389830508474576
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "invmed.co",
-            "prevalence": 0.03389830508474576
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "htlbid.com",
-            "prevalence": 0.03389830508474576
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "lwadm.com",
-            "prevalence": 0.03389830508474576
+            "prevalence": 0.034482758620689655
         }
     ],
     "types": {
-        "Fetch": 32,
-        "Script": 18
+        "Fetch": 31,
+        "Script": 23,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1067.awsdns-05.org",
-        "ns-1593.awsdns-07.co.uk",
         "ns-234.awsdns-29.com",
-        "ns-847.awsdns-41.net"
+        "ns-847.awsdns-41.net",
+        "ns-1067.awsdns-05.org",
+        "ns-1593.awsdns-07.co.uk"
     ]
 }

@@ -9,23 +9,21 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00221,
-    "sites": 22,
+    "prevalence": 0.00261,
+    "sites": 26,
     "subdomains": [
-        "afd-b2c-iibozyiouoyi4.z01",
-        "caz-prod-b2c-frontdoorpremium",
+        "statuscast-web-1",
         "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01",
+        "imageservice-beajhpgsh7dxf5g9.a03",
+        "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
         "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
+        "ti-prod20-fd",
         "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
     ],
     "cnames": [
         {
             "original": "cdn.sympany.ch",
             "resolved": "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01.azurefd.net"
-        },
-        {
-            "original": "consumer.intel.com",
-            "resolved": "afd-b2c-iibozyiouoyi4.z01.azurefd.net"
         },
         {
             "original": "content.www.wiwo.de",
@@ -36,62 +34,49 @@
             "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
         },
         {
-            "original": "sec-api-b2c.app.mobiliar.ch",
-            "resolved": "caz-prod-b2c-frontdoorpremium.azurefd.net"
+            "original": "imageservice.ecom-api.beck-shop.de",
+            "resolved": "imageservice-beajhpgsh7dxf5g9.a03.azurefd.net"
+        },
+        {
+            "original": "sgtm-fd.ireland.com",
+            "resolved": "ti-prod20-fd.azurefd.net"
+        },
+        {
+            "original": "sst.ffhs.ch",
+            "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+        },
+        {
+            "original": "status.sophos.com",
+            "resolved": "statuscast-web-1.azurefd.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "azurefd\\.net\\/intelcorpb2c\\.onmicrosoft\\.com\\/B2C_1A_UNIFIEDLOGIN_SISU_STD_OIDC\\/oauth2\\/v2\\.0\\/authorize",
+            "rule": "azurefd\\.net\\/components\\.json",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "afd-b2c-iibozyiouoyi4.z01"
+                "statuscast-web-1"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "consumer.intel.com",
-                    "resolved": "afd-b2c-iibozyiouoyi4.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "intel.com",
-                "community.intel.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/tea\\/traffictriage-internextern\\/ip\\/information",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "caz-prod-b2c-frontdoorpremium"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "sec-api-b2c.app.mobiliar.ch",
-                    "resolved": "caz-prod-b2c-frontdoorpremium.azurefd.net"
+                    "original": "status.sophos.com",
+                    "resolved": "statuscast-web-1.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "d62be9932b582cc954f3e9da472f142cd6d801dde956f83b981808034dd20f31"
+                "f4dd6ff908c20c21827ebaba8ec7b2e2816dd62846e2a4af0e35f239d620b206"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mobiliar.ch",
-                "www.mobiliar.ch"
+                "sophos.com",
+                "docs.sophos.com"
             ]
         },
         {
@@ -122,10 +107,77 @@
             ]
         },
         {
+            "rule": "azurefd\\.net\\/api\\/getimage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imageservice-beajhpgsh7dxf5g9.a03"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "imageservice.ecom-api.beck-shop.de",
+                    "resolved": "imageservice-beajhpgsh7dxf5g9.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e77859a4595d0011b228bd7dcff3b3588108e7fbe07a0f9a1f0c1ad5400c281c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beck-shop.de",
+                "www.beck-shop.de"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/gtm\\.js",
+            "cookies": 0.000301,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
+                "ti-prod20-fd"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                },
+                {
+                    "original": "sgtm-fd.ireland.com",
+                    "resolved": "ti-prod20-fd.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "67a955b4290ea11251f05b209b4250ba044915a81ced27ba40bc15de83c18959",
+                "221a65d0dbfb01804a32a9c28ea6d29b2bbb2d7c4acb73b45d59b8c54024b772"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.flysas.com",
+                "www.ireland.com"
+            ]
+        },
+        {
             "rule": "azurefd\\.net\\/gtag\\/js",
             "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
                 "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
             ],
             "apis": {},
@@ -133,18 +185,83 @@
             "prevalence": 0.000201,
             "cnames": [
                 {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
                     "original": "gtm.flysas.com",
                     "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "ddc624e27260fe9a8d7bd84d93aa8a27187f725c9697eeb25a2d76293dd0119b"
+                "0c0cf207b04d699bac1f4a08de382c014e6385b57b7013603797e0875f08d9b1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "flysas.com",
+                "ffhs.ch",
+                "www.flysas.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/gtag\\/destination",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "afb66bbdcd94ea673ec64ab40e0d4b3e14492d2d33d88d1366e4d765e71fc67a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.ffhs.ch"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/g\\/collect",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "9e69ba023c82561b1cd91bcf10a59dc960b05f69a9e2359ab60da583b5668e4b",
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.ffhs.ch",
                 "www.flysas.com"
             ]
         },
@@ -165,7 +282,7 @@
                 }
             ],
             "responseHashes": [
-                "9af7a65611b560fb8b1c595159808a78c0d1508a11a254692c92e023d16ccba9"
+                "d0975faf6717b66d09b69ed7fe9f0068efcda6bbe47677d92ddf03180954a6d3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -207,36 +324,39 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0011,
+    "cookies": 0.00131,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7894736842105263
-        },
-        {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.10526315789473684
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.041666666666666664
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.041666666666666664
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "handelsblatt.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Document": 2,
-        "XHR": 2,
+        "Fetch": 9,
         "Stylesheet": 2,
-        "Script": 2,
-        "Fetch": 4
+        "Image": 2,
+        "Script": 7
     },
     "nameservers": [
-        "ns4-37.azure-dns.info",
         "ns1-37.azure-dns.com",
-        "ns3-37.azure-dns.org",
-        "ns2-37.azure-dns.net"
+        "ns2-37.azure-dns.net",
+        "ns4-37.azure-dns.info",
+        "ns3-37.azure-dns.org"
     ]
 }

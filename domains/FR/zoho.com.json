@@ -7,9 +7,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
+        "crm",
+        "crmplus",
         "pagesense-collect",
         "webfonts"
     ],
@@ -17,30 +19,40 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "zoho\\.com\\/pslog\\.gif",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
+            "rule": "zoho\\.com\\/crm\\/javascript\\/zcga\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
-                "pagesense-collect"
+                "crm",
+                "crmplus"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+                "d96f4e2562d6e813901bdbd6fc16e2c4a133db6d851991909f0db8bdb5afb3a4"
             ],
-            "type": "Ping",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "gclid": {
+                    "ttl": 2592004,
+                    "length": 9,
+                    "prevalence": 0.0002016942315449778,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "guide-genealogie.com",
-                "www.soundonsound.com",
-                "www.wecasa.fr"
+                "www.stellarinfo.com"
             ]
         },
         {
-            "rule": "zoho\\.com\\/psimg\\.gif",
+            "rule": "zoho\\.com\\/pslog\\.gif",
             "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
@@ -55,30 +67,56 @@
             ],
             "type": "Ping",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guide-genealogie.com",
+                "www.slideteam.net",
+                "www.soundonsound.com",
+                "www.wecasa.fr"
+            ]
+        },
+        {
+            "rule": "zoho\\.com\\/psimg\\.gif",
+            "cookies": 0.000504,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pagesense-collect"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "zabUserId": 0.00040269807711668175,
-                "zsc1361333c972b46a0a579e2052141ff5e": 0.00020134903855834087,
-                "assistanceboutique-_zldt": 0.00010067451927917044,
-                "zscae2389d05b0247cf859b1f61f2723b39": 0.00010067451927917044,
-                "zsce5082152feb94ff093562f2843f93063": 0.00010067451927917044
+                "zabUserId": 0.0005042355788624445,
+                "zsc1361333c972b46a0a579e2052141ff5e": 0.0002016942315449778,
+                "zpsPopupBucket": 0.0001008471157724889,
+                "zsc1a3b568c8c2d41f6bf2e5ab2a87da3a3": 0.0001008471157724889,
+                "zscae2389d05b0247cf859b1f61f2723b39": 0.0001008471157724889,
+                "zsce5082152feb94ff093562f2843f93063": 0.0001008471157724889
             },
             "exampleSites": [
                 "guide-genealogie.com",
                 "www.guide-genealogie.com",
+                "www.slideteam.net",
                 "www.soundonsound.com",
                 "www.wecasa.fr"
             ]
         },
         {
             "rule": "zoho\\.com\\/css",
-            "cookies": 0.000201,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "webfonts"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "52c7b75a8928733705a1f92e1ac8e560b2b13f35585a2b87c9916be2b27b4445"
@@ -101,27 +139,28 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000403,
+    "cookies": 0.000504,
     "topInitiators": [
         {
             "domain": "pagesense.io",
-            "prevalence": 0.6896551724137931
+            "prevalence": 0.7333333333333333
         },
         {
             "domain": "zohocdn.com",
-            "prevalence": 0.1724137931034483
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.06666666666666667
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.06896551724137931
-        },
-        {
-            "domain": "korfo.org",
-            "prevalence": 0.06896551724137931
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
-        "Ping": 7,
+        "Script": 2,
+        "Ping": 9,
         "Stylesheet": 2
     },
     "nameservers": [

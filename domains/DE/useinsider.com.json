@@ -7,11 +7,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
+        "shopify-pixel",
         "hunkemoller.api",
-        "nakd.api",
         "royalqueenseedssp.api",
         "singaporeairlines.api",
         "assets.api",
@@ -27,12 +27,33 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "useinsider\\.com\\/web-pixel\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shopify-pixel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2c5069c4352295e930faf230babd681b5cede0b9a1582c8df5886b5142035e0b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wunschgutschein.de",
+                "www.wunschgutschein.de"
+            ]
+        },
+        {
             "rule": "useinsider\\.com\\/ins\\.js",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 3,
             "subdomains": [
                 "hunkemoller.api",
-                "nakd.api",
                 "royalqueenseedssp.api"
             ],
             "apis": {
@@ -47,21 +68,20 @@
                 "window.sessionStorage": 2,
                 "Navigator.prototype.webkitTemporaryStorage": 2,
                 "Performance.prototype.memory": 2,
-                "Element.prototype.getClientRects": 1
+                "Element.prototype.getClientRects": 1,
+                "window.outerHeight": 1
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "bcafc3de87fd4e7678e15f815b798f23bfed3923e33e864cd3cb0e30a320af82"
+                "3eb4c991e8cc96228f0944e0e394e24827e176f289f51ad3073799c9598ca5bd"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hunkemoller.de",
-                "www.na-kd.com",
                 "www.royalqueenseeds.de"
             ]
         },
@@ -75,11 +95,11 @@
                 "singaporeairlines.api"
             ],
             "apis": {
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 3,
                 "Date.prototype.getTime": 3,
                 "window.localStorage": 3,
-                "Navigator.prototype.userAgent": 3,
-                "Document.cookie getter": 3,
-                "window.name": 1
+                "Document.cookie getter": 3
             },
             "sites": 3,
             "prevalence": 0.000302,
@@ -132,7 +152,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fca0a6de6a82af3916ab21ebdd9f52aa9dd74fcc19f9756f4605fb6290998f3b"
+                "978157215cf0cbb2de28d2cf61cbcdda4fed27dcbccd70025bd55b3bf9cc6f2f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -198,8 +218,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "68a813e455606ae291e9129f933dcb00061c1e440d141f38bb0034b913ffb474",
-                "869d4b6ec8da820ab1ee98f462095db2b9f054a34e0ea0244f06f713d8f97489"
+                "b253dd14a9eb0b2972d6ce3a60a4de36ea46ffb8edac3a3c57314a7fc04c2a79",
+                "57053a79532584829017dc358f14f72fbc204c1293bbea016f3f35675da3cd53"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -270,7 +290,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "537d61aa62f10c795e1b4d5608a9915eadcc2434a0771e48727108038b6631e3"
+                "69f259c0c763122affb97867d2a449f2d7bd3b00efb09d7fbbc7aa8f9c0cba87"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -349,19 +369,15 @@
     "topInitiators": [
         {
             "domain": "glassboxcdn.com",
-            "prevalence": 0.7741935483870968
+            "prevalence": 0.7272727272727273
         },
         {
             "domain": "first party",
-            "prevalence": 0.1935483870967742
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.2727272727272727
         }
     ],
     "types": {
-        "Script": 5,
+        "Script": 6,
         "Document": 3,
         "Stylesheet": 2,
         "XHR": 14,

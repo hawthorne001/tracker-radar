@@ -7,7 +7,8 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "tracking-library"
+        "tracking-library",
+        "aiatag-api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,7 +23,8 @@
             "apis": {
                 "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
             },
             "sites": 3,
             "prevalence": 0.000302,
@@ -33,9 +35,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_8dp": {
-                    "ttl": 63072003,
+                    "ttl": 63072004,
                     "length": 23,
-                    "prevalence": 0.00020120724346076458,
+                    "prevalence": 0.00020132876988121604,
                     "uniqueness": 1
                 }
             },
@@ -43,6 +45,28 @@
             "exampleSites": [
                 "vevor.ca",
                 "www.oneplus.com",
+                "www.vevor.ca"
+            ]
+        },
+        {
+            "rule": "8ndpoint\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aiatag-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d31121ad072c43411cb4585c30217c021442510114fa79aacbf6474be15f63dd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vevor.ca",
                 "www.vevor.ca"
             ]
         }
@@ -53,11 +77,16 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "d16fk4ms6rqz1v.cloudfront.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "sky.ns.cloudflare.com",

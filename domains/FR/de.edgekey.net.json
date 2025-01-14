@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
+        "accounts.bahn",
         "gtm.idealo",
         "gateway.kleinanzeigen"
     ],
     "cnames": [
+        {
+            "original": "accounts.bahn.de",
+            "resolved": "accounts.bahn.de.edgekey.net"
+        },
         {
             "original": "gateway.kleinanzeigen.de",
             "resolved": "gateway.kleinanzeigen.de.edgekey.net"
@@ -25,18 +30,70 @@
             "resolved": "gtm.idealo.de.edgekey.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6dca5ff62a7dbef057083c6f43d725f826c63a32197b6122fb6e015402fca77d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
             "rule": "de\\.edgekey\\.net\\/webvitals",
-            "cookies": 0.000201,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "gtm.idealo"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "gtm.idealo.de",
@@ -56,14 +113,14 @@
         },
         {
             "rule": "de\\.edgekey\\.net\\/ignite-ad-search\\/buyside\\/search",
-            "cookies": 0.000201,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "gateway.kleinanzeigen"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "gateway.kleinanzeigen.de",
@@ -71,7 +128,7 @@
                 }
             ],
             "responseHashes": [
-                "0a0a60fc6f5e62f030a786f1e291a8d4b6ec9803bb78914c7fbac4ed990650a4"
+                "967fd77f477223a519136e999bc24082cfb441b1971b9714fa463f654937c5f6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -84,7 +141,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000504,
     "topInitiators": [
         {
             "domain": "first party",
@@ -100,8 +157,9 @@
         }
     ],
     "types": {
-        "Image": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": []
 }
