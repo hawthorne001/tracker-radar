@@ -7,14 +7,38 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
-        "cache-ssl"
+        "ads",
+        "cache-ssl",
+        "track"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "celtra\\.com\\/events\\/16e2c215\\/web\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2d091ed2d542a1260b8e788e89969527b398972ce16cfee34456738b8d9b9a6d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adidas.ca",
+                "www.adidas.com"
+            ]
+        },
         {
             "rule": "celtra\\.com\\/api\\/trackingpixel",
             "cookies": 0,
@@ -23,10 +47,11 @@
                 "cache-ssl"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
+                "2d091ed2d542a1260b8e788e89969527b398972ce16cfee34456738b8d9b9a6d",
                 "0cc5c633a19742cecd070172a3b2736810c08da5317ba23f9820fbf8ce8e165c"
             ],
             "type": "Script",
@@ -34,6 +59,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adidas.ca",
+                "www.adidas.com",
+                "www.on.com"
+            ]
+        },
+        {
+            "rule": "celtra\\.com\\/pixel\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adidas.com",
+                "www.adidas.com",
                 "www.on.com"
             ]
         }
@@ -44,15 +93,28 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.5384615384615384
         },
         {
-            "domain": "googlesyndication.com",
-            "prevalence": 0.16666666666666666
+            "domain": "tiqcdn.com",
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.07692307692307693
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "XHR": 3
     },
     "nameservers": [
         "ns-1324.awsdns-37.org",

@@ -9,14 +9,23 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
         "collect",
         "privacy",
-        "edreamsodigeo"
+        "edreamsodigeo",
+        "ca-trk-proxy",
+        "trust-phoenix",
+        "ovh",
+        "swissquote"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "ca.hoffmann-group.com",
+            "resolved": "ca-trk-proxy.commander1.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -45,15 +54,15 @@
         },
         {
             "rule": "commander1\\.com\\/get-cookie",
-            "cookies": 0.000402,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "collect",
                 "privacy"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -62,6 +71,7 @@
             "exampleSites": [
                 "carrefour.fr",
                 "www.carrefour.fr",
+                "www.hoffmann-group.com",
                 "www.natureetdecouvertes.com",
                 "www.quechoisir.org",
                 "www.swissquote.com"
@@ -69,19 +79,18 @@
         },
         {
             "rule": "commander1\\.com\\/get-cookie",
-            "cookies": 0.000502,
+            "cookies": 0.000603,
             "fingerprinting": 0,
             "subdomains": [
                 "collect",
                 "privacy"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "5611835348cfea6b4f92eacb9c46848a30df1da9f56c413046f96a9a287572b1",
-                "3e827332264e25fae50e42dfb2741e5d8582eb99ae19ea0a7e35c20e51a17a78"
+                "e13c92e2283a936572fc4d9517b087fd60d2e9711f76759cf13ecba3ca11ae3d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -89,6 +98,7 @@
             "exampleSites": [
                 "carrefour.fr",
                 "www.carrefour.fr",
+                "www.hoffmann-group.com",
                 "www.natureetdecouvertes.com",
                 "www.quechoisir.org",
                 "www.swissquote.com"
@@ -116,6 +126,56 @@
                 "www.edreams.ch",
                 "www.opodo.ch"
             ]
+        },
+        {
+            "rule": "commander1\\.com\\/trust\\/privacy-consent",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ca-trk-proxy",
+                "trust-phoenix"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "ca.hoffmann-group.com",
+                    "resolved": "ca-trk-proxy.commander1.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoffmann-group.com",
+                "www.quechoisir.org",
+                "www.swissquote.com"
+            ]
+        },
+        {
+            "rule": "commander1\\.com\\/getcookie\\.php",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ovh",
+                "swissquote"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "725874c15de0a9ea0f856adc9f1a6747eb1a57017a06f016cd39f627fd8e2c34"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ovhcloud.com",
+                "www.swissquote.com"
+            ]
         }
     ],
     "categories": [
@@ -125,41 +185,42 @@
         "Action Pixels"
     ],
     "performance": {},
-    "cookies": 0.000904,
+    "cookies": 0.001,
     "topInitiators": [
         {
             "domain": "tagcommander.com",
-            "prevalence": 0.71875
-        },
-        {
-            "domain": "ovh.com",
-            "prevalence": 0.09375
-        },
-        {
-            "domain": "3ds.com",
-            "prevalence": 0.0625
+            "prevalence": 0.7105263157894737
         },
         {
             "domain": "first party",
-            "prevalence": 0.0625
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "ovh.com",
+            "prevalence": 0.07894736842105263
+        },
+        {
+            "domain": "3ds.com",
+            "prevalence": 0.05263157894736842
         },
         {
             "domain": "swissquote.ch",
-            "prevalence": 0.0625
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Ping": 4,
-        "Preflight": 5,
-        "XHR": 5,
-        "Image": 3
+        "Ping": 7,
+        "Preflight": 6,
+        "XHR": 6,
+        "Image": 3,
+        "Script": 2
     },
     "nameservers": [
-        "ns-703.awsdns-23.net",
-        "ns-271.awsdns-33.com",
-        "ns1.cdnetdns.net",
+        "ns-1337.awsdns-39.org",
         "ns2.cdnetdns.net",
+        "ns-703.awsdns-23.net",
         "ns-1724.awsdns-23.co.uk",
-        "ns-1337.awsdns-39.org"
+        "ns1.cdnetdns.net",
+        "ns-271.awsdns-33.com"
     ]
 }

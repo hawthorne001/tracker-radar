@@ -8,7 +8,6 @@
     "sites": 2,
     "subdomains": [
         "tools",
-        "cdn",
         "static",
         "api.dmp",
         "pa"
@@ -21,8 +20,7 @@
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
-                "tools",
-                "cdn"
+                "tools"
             ],
             "apis": {
                 "window.localStorage": 2,
@@ -42,24 +40,26 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3c51ccfa010d7bd7968ffe1c6ad31c1862a24913ab8419100c04f42dd1fb01a9"
+                "6d84cd2b5db90b29b8b226e6d8ff3bdba06910a698d8e3ca29de4f1d71c914d2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
             "rule": "pinpoll\\.com\\/static\\/start\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -67,11 +67,18 @@
                 "38dfcfd29e5bc35eabebb6db93870261846cb9fa1bcd1631c1a7aef3114de24b"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.00010049241282283188,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
@@ -93,7 +100,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
@@ -113,17 +120,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
             "rule": "pinpoll\\.com\\/static\\/complete\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -135,7 +145,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
@@ -157,7 +167,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         },
         {
@@ -177,13 +187,13 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alpin.de",
-                "www.vienna.at"
+                "www.vol.at"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
@@ -198,8 +208,8 @@
     },
     "nameservers": [
         "ns1-04.azure-dns.com",
-        "ns2-04.azure-dns.net",
         "ns3-04.azure-dns.org",
-        "ns4-04.azure-dns.info"
+        "ns4-04.azure-dns.info",
+        "ns2-04.azure-dns.net"
     ]
 }

@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
         "get",
         "onetag-geo",
-        "signal-beacon"
+        "signal-beacon",
+        "connect-metrics-collector",
+        "signal-metrics-collector-beta"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -51,8 +53,8 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "f51938710e179807bbf1be9a1e9d7e3441fa74e7dfe9f46841914fb12ca7de3c"
@@ -63,6 +65,8 @@
             "exampleSites": [
                 "cnn.com",
                 "www.cnn.com",
+                "www.falstaff.com",
+                "www.frankysweb.de",
                 "www.ichkoche.de",
                 "www.ichkoche.at"
             ]
@@ -75,10 +79,10 @@
                 "signal-beacon"
             ],
             "apis": {
-                "window.localStorage": 4
+                "window.localStorage": 6
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "e9507d30d1cf0af2969ef782d8ae1bcd30e2661d9dc1d34902f910d7bf4f69ca"
@@ -89,8 +93,33 @@
             "exampleSites": [
                 "cnn.com",
                 "www.cnn.com",
+                "www.falstaff.com",
+                "www.frankysweb.de",
                 "www.ichkoche.de",
                 "www.ichkoche.at"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect-metrics-collector",
+                "signal-metrics-collector-beta"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankysweb.de",
+                "www.frankysweb.de"
             ]
         },
         {
@@ -128,17 +157,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "pixfuture.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 8,
-        "Fetch": 4
+        "Script": 10,
+        "Fetch": 6,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-13.awsdns-01.com",
-        "ns-697.awsdns-23.net",
         "ns-1550.awsdns-01.co.uk",
+        "ns-697.awsdns-23.net",
+        "ns-13.awsdns-01.com",
         "ns-1395.awsdns-46.org"
     ]
 }

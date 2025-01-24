@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,14 +24,34 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abebooks.de",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cognito-identity\\.us-east-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
             "responseHashes": [
-                "27936a23197edbdc7c4c1bb633c1b619cb824f6d83abdaf3cb62635659e44f82"
+                "7aac774e66d364329c674f68a54bd93dea5bfbba26d8bdea0b86cc3f5879ce00",
+                "635e7ec3c7ea1ff04bc8b55851e0cfd4775fe9130191a6bc0ee2dfed0754d2a7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
+                "abebooks.de",
+                "www.abebooks.de",
                 "www.cbssports.com"
             ]
         }
@@ -43,12 +63,17 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "abebookscdn.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 2
+        "Preflight": 2,
+        "Fetch": 3
     },
     "nameservers": [
         "ns-1031.awsdns-00.org",

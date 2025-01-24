@@ -4,12 +4,17 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "arm-prod-public.lb",
         "honda-production-b2c-lb.lb"
     ],
     "cnames": [
+        {
+            "original": "api.arm.com",
+            "resolved": "arm-prod-public.lb.anypointdns.net"
+        },
         {
             "original": "apib2c.services.honda.ca",
             "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
@@ -17,6 +22,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "anypointdns\\.net\\/e-coveo-search\\/v1\\/anonToken",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arm-prod-public.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.arm.com",
+                    "resolved": "arm-prod-public.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "11e064142c5b7c33bea385a0c3e9897388291b67ac8f7fc991d94f0b987a9bfc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arm.com",
+                "developer.arm.com"
+            ]
+        },
         {
             "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
             "cookies": 0,
@@ -59,7 +91,7 @@
                 }
             ],
             "responseHashes": [
-                "8f690a27d5c5d8a6d62e024b022e90b02ccbef946a2b12a83d0aec23c3bea4b5"
+                "f109de2d3503a3f5080565df6e7a8f0b939ba454da8d429433d07af79a8be0b7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -73,14 +105,20 @@
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-180.awsdns-22.com",
         "ns-975.awsdns-57.net",
         "ns-1546.awsdns-01.co.uk",
-        "ns-1343.awsdns-39.org"
+        "ns-1343.awsdns-39.org",
+        "ns-180.awsdns-22.com"
     ]
 }
