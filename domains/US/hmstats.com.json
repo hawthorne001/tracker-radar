@@ -4,7 +4,7 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
+    "prevalence": 0.000041,
     "sites": 6,
     "subdomains": [
         "www",
@@ -16,11 +16,13 @@
         {
             "rule": "hmstats\\.com\\/3pcc\\/start",
             "cookies": 0.0000273,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie setter": 1
+            },
             "sites": 4,
             "prevalence": 0.0000273,
             "cnames": [],
@@ -28,7 +30,14 @@
                 "b0db750006509669f3cb50554a0e47fc2656e414676feb6dc5b3a27ff040ff31"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "hmcthirdparty": {
+                    "ttl": 60,
+                    "length": 3,
+                    "prevalence": 0.0000068286886869114525,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "decoist.com",
@@ -40,11 +49,14 @@
         {
             "rule": "hmstats\\.com\\/3pcc\\/complete",
             "cookies": 0.0000273,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 4,
             "prevalence": 0.0000273,
             "cnames": [],
@@ -52,7 +64,14 @@
                 "b0db750006509669f3cb50554a0e47fc2656e414676feb6dc5b3a27ff040ff31"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "hmcthirdparty": {
+                    "ttl": 60,
+                    "length": 2,
+                    "prevalence": 0.0000068286886869114525,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "decoist.com",
@@ -73,7 +92,7 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "ffc7bd00f357f0b9afce56bbb01a02056e9de678efda82e6561dd017f5452623"
+                "64432dd1cebcfe25c60ea84a14e8ee9bf7580c0cebaf8bbf808543199689d7a8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -84,20 +103,65 @@
                 "www.thevintagenews.com",
                 "www.warhistoryonline.com"
             ]
+        },
+        {
+            "rule": "hmstats\\.com\\/2\\/2\\.153\\.0\\/486951\\/Az7yCL4JBIh0efKE\\/postback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s.update"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decoist.com",
+                "www.decoist.com"
+            ]
+        },
+        {
+            "rule": "hmstats\\.com\\/2\\/2\\.153\\.0\\/486951\\/Az5rf5sHBGQMb2WI\\/postback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s.update"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thevintagenews.com",
+                "www.thevintagenews.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.000041,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Document": 8,
-        "Script": 4
+        "Script": 4,
+        "XHR": 4
     },
     "nameservers": [
         "pdns11.domaincontrol.com",

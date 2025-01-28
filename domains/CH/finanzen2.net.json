@@ -7,7 +7,8 @@
     "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
-        "pushserver.prod.markets.public"
+        "pushserver.prod.markets.public",
+        "geoip.user.public"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -32,6 +33,28 @@
                 "www.finanzen.net",
                 "www.finanzen.ch"
             ]
+        },
+        {
+            "rule": "finanzen2\\.net\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.user.public"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4efdc1c8fdc6b37d5bc5c598d27c79a41ac6fd97435f41f031e4da48520e3927"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finanzen.net",
+                "www.finanzen.net"
+            ]
         }
     ],
     "categories": [],
@@ -40,20 +63,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
-        },
-        {
-            "domain": "finanzen.ch",
-            "prevalence": 0.16666666666666666
+            "prevalence": 1
         }
     ],
     "types": {
-        "WebSocket": 3
+        "WebSocket": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "ns1-05.azure-dns.com",
         "ns4-05.azure-dns.info",
-        "ns2-05.azure-dns.net",
-        "ns3-05.azure-dns.org"
+        "ns3-05.azure-dns.org",
+        "ns2-05.azure-dns.net"
     ]
 }

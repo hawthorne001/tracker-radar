@@ -12,9 +12,14 @@
     "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "services-v3.radio-canada"
+        "services-v3.radio-canada",
+        "san.cbc"
     ],
     "cnames": [
+        {
+            "original": "i.cbc.ca",
+            "resolved": "san.cbc.ca.edgekey.net"
+        },
         {
             "original": "services.radio-canada.ca",
             "resolved": "services-v3.radio-canada.ca.edgekey.net"
@@ -22,6 +27,31 @@
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "ca\\.edgekey\\.net\\/marea\\/logs",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "services-v3.radio-canada"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "services.radio-canada.ca",
+                    "resolved": "services-v3.radio-canada.ca.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radio-canada.ca",
+                "ici.radio-canada.ca"
+            ]
+        },
         {
             "rule": "ca\\.edgekey\\.net\\/marea\\/logs",
             "cookies": 0,
@@ -73,27 +103,56 @@
                 "radio-canada.ca",
                 "www.cbc.ca"
             ]
+        },
+        {
+            "rule": "ca\\.edgekey\\.net\\/ais\\/33cb58bd-b1c8-434c-87b6-34f7fe96e972,1737596616601\\/full\\/max\\/0\\/default\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "san.cbc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "i.cbc.ca",
+                    "resolved": "san.cbc.ca.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "de3a88912182fcbcbbcf73ae040462fba4e7c21063641c7a7bec411dca1d1c11"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.cbc.ca"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000303,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.65
+            "prevalence": 0.6842105263157895
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "prevalence": 0.21052631578947367
         },
         {
             "domain": "blueconic.net",
-            "prevalence": 0.1
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
-        "Fetch": 4
+        "Preflight": 2,
+        "Fetch": 4,
+        "Image": 2
     },
     "nameservers": []
 }

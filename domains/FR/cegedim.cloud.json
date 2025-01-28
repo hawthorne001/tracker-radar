@@ -4,11 +4,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000303,
+    "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "stats-cnrs",
-        "cfo.stats"
+        "stats-analytics",
+        "stats-cnrs"
     ],
     "cnames": [
         {
@@ -19,12 +19,68 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "cegedim\\.cloud\\/matomo\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats-analytics",
+                "stats-cnrs"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.name": 1,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.platform": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "statistiques.cnrs.fr",
+                    "resolved": "stats-cnrs.cegedim.cloud"
+                }
+            ],
+            "responseHashes": [
+                "b39abd9035f703b76dfed940898d572b9864f676eb1912a9142f0639dca6b2ce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.12.d79b": {
+                    "ttl": 33955202,
+                    "length": 28,
+                    "prevalence": 0.00010078613182826043,
+                    "uniqueness": 1
+                },
+                "_pk_ses.12.d79b": {
+                    "ttl": 1802,
+                    "length": 1,
+                    "prevalence": 0.00010078613182826043,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sante.fr",
+                "www.cnrs.fr"
+            ]
+        },
+        {
             "rule": "cegedim\\.cloud\\/matomo\\.php",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "stats-cnrs",
-                "cfo.stats"
+                "stats-analytics",
+                "stats-cnrs"
             ],
             "apis": {},
             "sites": 2,
@@ -42,8 +98,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnrs.fr",
-                "www.myarkevia.com"
+                "sante.fr",
+                "www.cnrs.fr"
             ]
         }
     ],
@@ -57,10 +113,11 @@
         }
     ],
     "types": {
+        "Script": 2,
         "Ping": 2
     },
     "nameservers": [
-        "ns1.cegedim.fr",
-        "ns2.cegedim.com"
+        "ns2.cegedim.com",
+        "ns1.cegedim.fr"
     ]
 }

@@ -11,11 +11,36 @@
     "sites": 5,
     "subdomains": [
         "embed",
+        "images",
         "dispatcher.cdp.us-east-1.prod.data"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "typeform\\.com\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e5a06d30f076b8f2528468513a6c4c5ab7dd4e6d7906917662908d58f4ace6aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "native-instruments.com",
+                "tuna.voicemod.net"
+            ]
+        },
         {
             "rule": "typeform\\.com\\/next\\/embed\\.js",
             "cookies": 0,
@@ -26,62 +51,19 @@
             "apis": {
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "b32ef3d653605e3278a8e50e853fdfe5893a998eb725623ec8cff40960686db4"
+                "384ee944920a7b0a368807b615073fbb88e218ec68dc05a056fbb31b989312d5"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fandom.com",
                 "surfshark.com",
-                "www.help99.co",
+                "www.eurohandball.com",
                 "www.izotope.com"
-            ]
-        },
-        {
-            "rule": "typeform\\.com\\/v1\\/track",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dispatcher.cdp.us-east-1.prod.data"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fandom.com",
-                "diablo.fandom.com"
-            ]
-        },
-        {
-            "rule": "typeform\\.com\\/v1\\/track",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dispatcher.cdp.us-east-1.prod.data"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fandom.com",
-                "diablo.fandom.com"
             ]
         },
         {
@@ -102,8 +84,72 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "help99.co",
+                "eurohandball.com",
                 "www.izotope.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/images\\/YcgYzRFEkGsA\\/image\\/default-firstframe\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4984b2feb8a0d3367391a88b987783011d02a1a4e3baee502113f0044ec6c070"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurohandball.com",
+                "www.eurohandball.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dispatcher.cdp.us-east-1.prod.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurohandball.com",
+                "www.eurohandball.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dispatcher.cdp.us-east-1.prod.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurohandball.com",
+                "www.eurohandball.com"
             ]
         }
     ],
@@ -117,18 +163,19 @@
         },
         {
             "domain": "rudderlabs.com",
-            "prevalence": 0.4
+            "prevalence": 0.4166666666666667
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 2,
+        "Script": 5,
+        "Stylesheet": 2,
+        "Image": 2,
         "Preflight": 2,
-        "Stylesheet": 2
+        "XHR": 2
     },
     "nameservers": [
         "ns-14.awsdns-01.com",

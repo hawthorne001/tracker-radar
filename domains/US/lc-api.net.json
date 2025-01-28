@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000478,
-    "sites": 7,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [
         "lovehoney-ca-offers",
         "lovehoney-com-offers",
@@ -13,10 +13,11 @@
         "lovehoney-com-au-offers",
         "lh-us",
         "lh-eu",
-        "ps-all-hardware"
+        "sentry-static",
+        "sentry"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "lc-api\\.net\\/v2\\/offers",
@@ -33,9 +34,9 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "6f661dd14eb4f173adf669325dfa48e34f9b49f3997af2209cba647d0882735a",
-                "b9de379613ce11c9dde2c2a342a1f71819b3816259073568f90aa39aab08ed23",
-                "93ee57d1b9c3e0b30488d6b2a2623e6164885f3074f562f3c958ef96e57f627c"
+                "2918b98a8a2bb79a364f7a71e610f10e35354fcaea6390d902096eb6114a6605",
+                "dc3a37445d9dfdd93c2cc9cc18f6e40d3ff049de540013aa27441e740fc8c3df",
+                "c848cbbdfc0f465a7bee7fa18fe21bf5c1f603e4db90b123e33851d2ee45c7ac"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -121,25 +122,50 @@
             ]
         },
         {
-            "rule": "lc-api\\.net\\/hardware\\/en-us",
+            "rule": "lc-api\\.net\\/bundle-8\\.30\\.0\\.tracing\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sentry-static"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e898ac474b5c65002911b26904e56a269d5267f98ef2bc41407641435bd49453"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com",
+                "www.lovehoney.co.uk"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/api\\/5\\/envelope\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ps-all-hardware"
+                "sentry"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5796e00e92af3d2575b9a24a987f9985ab0fe1fa30328763bdf38ad7a2c98e6b"
+                "afd62bb643823d053e108feda7157b25e3710f53048a13cdab404e0f50e9a937"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "playstation.com",
-                "www.playstation.com"
+                "lovehoney.com",
+                "www.lovehoney.co.uk"
             ]
         }
     ],
@@ -155,7 +181,8 @@
     "types": {
         "XHR": 4,
         "Preflight": 8,
-        "Fetch": 6
+        "Fetch": 6,
+        "Script": 2
     },
     "nameservers": [
         "ns-100.awsdns-12.com",

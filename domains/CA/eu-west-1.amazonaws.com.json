@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00242,
-    "sites": 24,
+    "prevalence": 0.00181,
+    "sites": 18,
     "subdomains": [
+        "site-tenant-configuration.s3",
         "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb",
-        "cognito-identity"
+        "cognito-identity",
+        "firehose"
     ],
     "cnames": [
         {
@@ -24,6 +26,50 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/index\\/production\\/vistaprint\\/en-CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cb9d46cd070bc8d5b68ea64506cc922fedd51378c9418f09c43f164af7d3a3ce"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.ca",
+                "www.vistaprint.ca"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/site-configurations\\/VP-CA-EN",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8955abffe5d196c77fc17eeb6e84fce2c967118b303a85bfd87992d3bed30502"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.ca",
+                "www.vistaprint.ca"
+            ]
+        },
+        {
             "rule": "eu-west-1\\.amazonaws\\.com\\/player\\/image\\.aspx",
             "cookies": 0,
             "fingerprinting": 0,
@@ -31,8 +77,8 @@
                 "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "mediaweb.musicradio.com",
@@ -40,9 +86,8 @@
                 }
             ],
             "responseHashes": [
-                "e6c0091bd603b0ea255cb5f8b83e9e44fe1daefd47866377b6448435581c7cc0",
-                "7df688a840ee3eb43ee5da167d61e24bfc0b41c4f38bdd01e361f44b5c9918d4",
-                "7009fa0c1b602201a124dffbe73f4f8b0fed2555e2b10ca0b191a1f487d3bcce"
+                "fc86ab6f5b519c4a5ac9d23c3676a6a2401f961cd5b0aca128be1982d4bc8ab7",
+                "48e9861e3d65556966a4b04266306880ff13c6cbab8a679026b8e636d135f376"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -50,7 +95,6 @@
             "exampleSites": [
                 "capitalfm.com",
                 "www.classicfm.com",
-                "www.lbc.co.uk",
                 "www.smoothradio.com"
             ]
         },
@@ -63,19 +107,19 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000503,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "d8458051a883ae62ff66c2ab04507c33f3569dd383525ed462da2160973c01b6",
-                "aed3223ab0ba33beef5a24a2776bde4dd725d9d856a93fe406d03f6ca753bb97"
+                "b39e8f266896b617db65cdd11ed5dd31a73e7bfc08b8432d5b0e8c1d63f00fbd",
+                "d8458051a883ae62ff66c2ab04507c33f3569dd383525ed462da2160973c01b6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coastappliances.ca",
+                "www.coastappliances.ca",
                 "www.datacamp.com",
-                "www.eufy.com",
                 "www.opticsplanet.com",
                 "www.trivago.ca"
             ]
@@ -85,11 +129,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "firehose"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000503,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -97,8 +142,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coastappliances.ca",
+                "www.coastappliances.ca",
                 "www.datacamp.com",
-                "www.eufy.com",
                 "www.opticsplanet.com",
                 "www.trivago.ca"
             ]
@@ -112,50 +157,42 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.7931034482758621
         },
         {
             "domain": "d3odp2r1osuwn0.cloudfront.net",
-            "prevalence": 0.0625
-        },
-        {
-            "domain": "d5zu2f4xvqanl.cloudfront.net",
-            "prevalence": 0.03125
+            "prevalence": 0.06896551724137931
         },
         {
             "domain": "yottaa.com",
-            "prevalence": 0.03125
-        },
-        {
-            "domain": "osano.com",
-            "prevalence": 0.03125
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "uqd.io",
-            "prevalence": 0.03125
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "webeyez.com",
-            "prevalence": 0.03125
+            "prevalence": 0.034482758620689655
         },
         {
             "domain": "smct.io",
-            "prevalence": 0.03125
+            "prevalence": 0.034482758620689655
         }
     ],
     "types": {
-        "Image": 4,
-        "XHR": 5,
+        "XHR": 9,
+        "Image": 3,
         "Preflight": 5
     },
     "nameservers": [
-        "ns2.amzndns.org",
-        "ns2.amzndns.net",
-        "ns1.amzndns.org",
-        "ns1.amzndns.net",
         "ns1.amzndns.com",
         "ns2.amzndns.com",
+        "ns2.amzndns.co.uk",
+        "ns1.amzndns.org",
+        "ns2.amzndns.org",
         "ns1.amzndns.co.uk",
-        "ns2.amzndns.co.uk"
+        "ns1.amzndns.net",
+        "ns2.amzndns.net"
     ]
 }

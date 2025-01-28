@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
         "app",
         "cdn",
@@ -15,12 +15,39 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "leadfox\\.co\\/js\\/api\\/leadfox\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app",
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5693cb58acadf9da0cd0ae65e72479f1c261a9cfdf3b513dfd9d5cb6eeb5ba14"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "compagnons-du-devoir.com",
+                "www.retraite.com"
+            ]
+        },
+        {
             "rule": "leadfox\\.co\\/service\\/api\\/rest\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "app",
-                "cdn"
+                "app"
             ],
             "apis": {},
             "sites": 2,
@@ -33,7 +60,49 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "retraite.com",
+                "compagnons-du-devoir.com",
+                "www.retraite.com"
+            ]
+        },
+        {
+            "rule": "leadfox\\.co\\/v1\\/pixel\\/configuration\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "be6050a029de2cea429d9ec2c3e5a6eb66a3d96a6ead0d15839596f1de4bbed9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "compagnons-du-devoir.com",
+                "www.retraite.com"
+            ]
+        },
+        {
+            "rule": "leadfox\\.co\\/v1\\/pixel\\/configuration\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "compagnons-du-devoir.com",
                 "www.retraite.com"
             ]
         },
@@ -49,7 +118,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e0c1fcba9fbaa863d29de4fc9b03994f79f720c1660335d460bf408a03ed4908"
+                "f2dabec0f70d1a0c73624c77f84cb2118cef01004588203ea716bedafd72380a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -76,7 +145,7 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "__lm": 0.0002016942315449778
+                "__lm": 0.00020157226365652087
             },
             "exampleSites": [
                 "retraite.com",
@@ -104,33 +173,6 @@
                 "retraite.com",
                 "www.retraite.com"
             ]
-        },
-        {
-            "rule": "leadfox\\.co\\/js\\/api\\/leadfox\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Navigator.prototype.language": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "5693cb58acadf9da0cd0ae65e72479f1c261a9cfdf3b513dfd9d5cb6eeb5ba14"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "retraite.com",
-                "www.retraite.com"
-            ]
         }
     ],
     "categories": [],
@@ -143,9 +185,10 @@
         }
     ],
     "types": {
-        "XHR": 6,
-        "Stylesheet": 2,
-        "Script": 2
+        "Script": 2,
+        "XHR": 8,
+        "Preflight": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

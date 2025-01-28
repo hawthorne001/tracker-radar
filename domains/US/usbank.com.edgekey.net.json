@@ -9,13 +9,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
+    "prevalence": 0.000041,
     "sites": 6,
     "subdomains": [
-        "onlinebanking",
         "api",
         "content",
-        "apip"
+        "transec",
+        "apip",
+        "onlinebanking"
     ],
     "cnames": [
         {
@@ -33,35 +34,201 @@
         {
             "original": "onlinebanking.usbank.com",
             "resolved": "onlinebanking.usbank.com.edgekey.net"
+        },
+        {
+            "original": "transec.usbank.com",
+            "resolved": "transec.usbank.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/rwc\\/main-bundle\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "rule": "usbank\\.com\\.edgekey\\.net\\/authentication\\/customer-auth\\/app-config\\/v1\\/config",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
             "subdomains": [
-                "onlinebanking"
+                "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
+                    "original": "api.usbank.com",
+                    "resolved": "api.usbank.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "4b24f4718f70dc5008cdea78c1e4eef50a12c231158ac92009dce40c8e28b378"
+                "8261e114018452fbfdb14440500ff44ffd29ef681affb51c469c3c7713552f43",
+                "b54bdbddedcfe7ee26c7bb4769a7aa1df28ddabe9f9bf909d49d52c90a5c9169"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "usbank.com",
+                "www.myaccountaccess.com",
                 "www.usbank.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/authentication\\/customer-auth\\/app-config\\/v1\\/config",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "api.usbank.com",
+                    "resolved": "api.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usbank.com",
+                "www.myaccountaccess.com",
+                "www.usbank.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/content\\/dam\\/onlinebanking\\/common\\/static\\/fonts\\/HelveticaNeueLTW04-55Roman\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "content.usbank.com",
+                    "resolved": "content.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3def0facd6b6da3de6a9dd0fd966652ff59c5e23b7eeb3b551f1db6c3b9eefcd"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usbank.com",
+                "www.myaccountaccess.com",
+                "www.usbank.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/api\\/v2\\/resources\\/localization",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "transec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "transec.usbank.com",
+                    "resolved": "transec.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "591a44eff798c1b8535eb1a4975efe903917c52ac47e99f82fbe6a58c56f7fb2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usbank.com",
+                "www.access.usbank.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/content\\/dam\\/onlinebanking\\/common\\/static\\/fonts\\/08b57253-2e0d-4c12-9c57-107f6c67bc49\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "content.usbank.com",
+                    "resolved": "content.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "088cb801130141a48121f52ec395e1b8ca9f876ada303dddbe494679b7073d0b"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/partner-creditcard\\/graphql\\/v1\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apip.usbank.com",
+                    "resolved": "apip.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "522a4103cfa954f8c76fab50c8457e2be34b75ab817c2774ba2e742368cc7e8c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/partner-creditcard\\/graphql\\/v1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apip.usbank.com",
+                    "resolved": "apip.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com"
             ]
         },
         {
@@ -81,319 +248,15 @@
                 }
             ],
             "responseHashes": [
-                "00807f18ff7353a45c0f8ba217781eabdaffdaf8ed1503aa78b0a9627eb23980"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/main-efc02a839e655bea1912\\.js",
-            "cookies": 0.0000205,
-            "fingerprinting": 2,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "bf94f6b4a8aeb02e54fd893c9d8a2d07d4c3198107a3b58e376c87831138e80f",
-                "b5d3be34cad22e151571d267ab87ef6351fc84d90fd2001ccbbec7365de9c3f2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/646-92a8c27c8368e2224566\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "cfc88c0329bd13603778e830df8c3a3eb9713ae2a02913b2a7f49863036ba33f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/61-25f68d8218910c9d3542\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "c3b16dfed2a3958b5ba7702c4cc466017ca7ef42b2f806a799797aaee59b77dd"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/132-6c6216da6bfa301ac91f\\.js",
-            "cookies": 0.0000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "6a6e8abe6d33b51889f2456602d2a9ccf0fba1106cd63344b017f8c1763a7fd3"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/authentication\\/customer-auth\\/app-config\\/v1\\/config",
-            "cookies": 0.0000273,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [
-                {
-                    "original": "api.usbank.com",
-                    "resolved": "api.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "onlinebanking.usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/authentication\\/customer-auth\\/app-config\\/v1\\/config",
-            "cookies": 0.0000273,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [
-                {
-                    "original": "api.usbank.com",
-                    "resolved": "api.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "b54bdbddedcfe7ee26c7bb4769a7aa1df28ddabe9f9bf909d49d52c90a5c9169",
-                "7faa9fb6854e431b152f383286dfe962731f1a17ed9742d2091ed5b9733636c5"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "onlinebanking.usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/389-629c6ada471ff94130b0\\.js",
-            "cookies": 0.0000205,
-            "fingerprinting": 1,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "60c9dc6f6599ebfb9be04940f69dd139d3eac2632e33a81f0825b0467e64a37b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/content\\/dam\\/onlinebanking\\/common\\/static\\/fonts\\/HelveticaNeueLTW04-55Roman\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "content"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [
-                {
-                    "original": "content.usbank.com",
-                    "resolved": "content.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "3def0facd6b6da3de6a9dd0fd966652ff59c5e23b7eeb3b551f1db6c3b9eefcd"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "onlinebanking.usbank.com",
-                "www.myaccountaccess.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/digital\\/servicing\\/logging\\/browser-log-transport",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "onlinebanking"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "onlinebanking.usbank.com",
-                    "resolved": "onlinebanking.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usbank.com",
-                "www.usbank.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/partner-creditcard\\/graphql\\/v1\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "apip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "apip.usbank.com",
-                    "resolved": "apip.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "myaccountaccess.com",
-                "www.myaccountaccess.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/partner-creditcard\\/graphql\\/v1\\/",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "apip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "apip.usbank.com",
-                    "resolved": "apip.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "74e27d7f660c03455e463bb7bd219828ed9d0c31b8951849806a7b051f5d25d6"
+                "652c9aa1dfa30132378fb041b271030abbd4c499f81707dc24ac3d8ef5493cda"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "myaccountaccess.com",
-                "www.myaccountaccess.com"
+                "www.myaccountaccess.com",
+                "www.usbank.com"
             ]
         },
         {
@@ -405,7 +268,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "content.usbank.com",
@@ -424,42 +287,15 @@
             ]
         },
         {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/content\\/dam\\/onlinebanking\\/common\\/static\\/fonts\\/08b57253-2e0d-4c12-9c57-107f6c67bc49\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "content"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "content.usbank.com",
-                    "resolved": "content.usbank.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "088cb801130141a48121f52ec395e1b8ca9f876ada303dddbe494679b7073d0b"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "myaccountaccess.com",
-                "www.myaccountaccess.com"
-            ]
-        },
-        {
-            "rule": "usbank\\.com\\.edgekey\\.net\\/digital\\/servicing\\/chat\\/amazon-connect-chat-interface\\.js",
-            "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/main-5ba0f9a4c9a0b021e27d\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 2,
             "subdomains": [
                 "onlinebanking"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "onlinebanking.usbank.com",
@@ -467,14 +303,16 @@
                 }
             ],
             "responseHashes": [
-                "2e51b4160d56648885055159f96ec2cfad055d04d48b505cd0cbc8f1d36226ac"
+                "1df98453eb05ca103ef3c27b8bacf832ec320a5dd83272718413f5b2221ebf42",
+                "9a0601abbc0791af84f353d2056575dff5b7453748262c98b7dd9c7d47e9ece5"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "myaccountaccess.com",
-                "www.myaccountaccess.com"
+                "www.myaccountaccess.com",
+                "www.usbank.com"
             ]
         },
         {
@@ -486,7 +324,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "content.usbank.com",
@@ -505,6 +343,89 @@
             ]
         },
         {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/132-1d1bcd264d40a47f8989\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "onlinebanking"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "onlinebanking.usbank.com",
+                    "resolved": "onlinebanking.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ea495352cf323f76f05922216795b40a89b0da652a168c953e6bcc7f85bc160c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com",
+                "www.usbank.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/digital\\/servicing\\/chat\\/amazon-connect-chat-interface\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "onlinebanking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "onlinebanking.usbank.com",
+                    "resolved": "onlinebanking.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "da314f0015475713e77f732078579b47144cfb4d37715015a79ecd2f56c606b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com"
+            ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/wmf\\/latest\\/361-4b290253da1ed8370deb\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "onlinebanking"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "onlinebanking.usbank.com",
+                    "resolved": "onlinebanking.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "9a83905f6a7a54880e4d32eaf7c3e9202cefca7cec4e9429f2c141af53dd1a1c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myaccountaccess.com",
+                "www.myaccountaccess.com",
+                "www.usbank.com"
+            ]
+        },
+        {
             "rule": "usbank\\.com\\.edgekey\\.net\\/content\\/dam\\/onlinebanking\\/common\\/static\\/fonts\\/240c57a0-fdce-440d-9ce3-85e0cb56f470\\.woff2",
             "cookies": 0,
             "fingerprinting": 0,
@@ -513,7 +434,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
                     "original": "content.usbank.com",
@@ -530,28 +451,54 @@
                 "myaccountaccess.com",
                 "www.myaccountaccess.com"
             ]
+        },
+        {
+            "rule": "usbank\\.com\\.edgekey\\.net\\/auth\\/login\\/rwc\\/main-bundle\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "onlinebanking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "onlinebanking.usbank.com",
+                    "resolved": "onlinebanking.usbank.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "b93cd33df0d4376801c3c534040d979a454663445c2ed86eca7d9db40999617d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usbank.com",
+                "www.usbank.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.000041,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5142857142857142
+            "prevalence": 0.6206896551724138
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.4857142857142857
+            "prevalence": 0.3793103448275862
         }
     ],
     "types": {
-        "Script": 17,
+        "XHR": 5,
+        "Preflight": 5,
+        "Font": 11,
         "Fetch": 5,
-        "Preflight": 6,
-        "XHR": 4,
-        "Font": 12,
-        "Ping": 2
+        "Script": 13
     },
     "nameservers": []
 }
