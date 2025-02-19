@@ -13,7 +13,8 @@
         "cdn1",
         "api-cf",
         "www",
-        "cdn-assets"
+        "cdn-assets",
+        "tracker"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -28,47 +29,41 @@
             "apis": {
                 "PerformanceTiming.prototype.navigationStart": 4,
                 "console.memory": 4,
-                "window.localStorage": 4,
                 "Navigator.prototype.userAgent": 4,
                 "Navigator.prototype.connection": 4,
-                "Document.cookie getter": 3,
                 "Date.prototype.getTime": 4,
-                "Document.cookie setter": 3,
-                "window.devicePixelRatio": 4
+                "window.localStorage": 4,
+                "window.devicePixelRatio": 4,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
             },
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "f03709aa50fc67c07673e9759b6ed02fee4e01008a7933e06b9bca41d9612486"
+                "d1fc74a9680f4dbf4ccc2e2eee42bb85d77810de50e535fdb1402c527d513ec8"
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "tracker_device_is_opt_in": {
-                    "ttl": 157680008,
-                    "length": 4,
-                    "prevalence": 0.0003012350637614218,
-                    "uniqueness": 0.3333333333333333
-                },
                 "cookietest": {
-                    "ttl": -1737686556,
+                    "ttl": -1739932609,
                     "length": 1,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00030135610246107485,
                     "uniqueness": 0.3333333333333333
                 },
                 "tracker_device": {
-                    "ttl": 157680013,
+                    "ttl": 157680014,
                     "length": 36,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00030135610246107485,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ouraring.com",
-                "www.anker.com",
+                "anker.com",
                 "www.eufy.com",
-                "www.iqair.com"
+                "www.iqair.com",
+                "www.uaudio.com"
             ]
         },
         {
@@ -83,18 +78,18 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "488a3893b25f3a243ff8b91e7790774ff4be5ab7c3266c45c1c9d3b897b450e8",
-                "6a4c95c2f4211a425aca662a243f45d43ce0aaa207fba52cc9aade9ea09e305c",
-                "80676c250f2021821ec401e5610918d45423685cbae4ac6cdaf8186756e0c539"
+                "c83645cbbc6c1aed7e9c0dd44d451fa834473371a4f5c15027c02989ca149996",
+                "a849777f1be4bd1a9110790c854c392f7fb0a512b8610c51aa3a51a6a906bc66",
+                "457010d17658485a25d0761f072eedcfb8d14fb4963c19bd950cddd55614f60d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ouraring.com",
-                "www.anker.com",
+                "anker.com",
                 "www.eufy.com",
-                "www.iqair.com"
+                "www.iqair.com",
+                "www.uaudio.com"
             ]
         },
         {
@@ -105,8 +100,8 @@
                 "www"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
                 "924aebf24af414b12986f4af470b2ac7b61d765897f9e222c0af15805de9ae40"
@@ -115,10 +110,11 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ouraring.com",
+                "anker.com",
                 "www.anker.com",
                 "www.eufy.com",
-                "www.iqair.com"
+                "www.iqair.com",
+                "www.uaudio.com"
             ]
         },
         {
@@ -133,16 +129,38 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "a35e055c4b58b454954800e81a8e3f31a32f71ccaf3dfc97da16af01d50ea364"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ouraring.com",
-                "www.anker.com",
+                "anker.com",
                 "www.eufy.com",
-                "www.iqair.com"
+                "www.iqair.com",
+                "www.uaudio.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "70f07df8529a5da355e70cb8fd1a2c6cdbe6dec83a5332bfcf06f5a917e6e607"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eufy.com",
+                "www.eufy.com"
             ]
         }
     ],
@@ -152,21 +170,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.8260869565217391
         },
         {
-            "domain": "noibu.com",
-            "prevalence": 0.2
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.17391304347826086
         }
     ],
     "types": {
         "Script": 4,
-        "Fetch": 12
+        "Fetch": 13,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-1463.awsdns-54.org",
+        "ns-614.awsdns-12.net",
         "ns-1890.awsdns-44.co.uk",
-        "ns-217.awsdns-27.com",
-        "ns-614.awsdns-12.net"
+        "ns-1463.awsdns-54.org",
+        "ns-217.awsdns-27.com"
     ]
 }

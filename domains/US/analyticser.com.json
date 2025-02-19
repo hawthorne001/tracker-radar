@@ -10,10 +10,59 @@
         "admin"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "analyticser\\.com\\/random-string\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "admin"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5a1fa60660100b5897f39344c096872b31b3c835e7affda053e01002ca1fefd9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japaneseactresses.com",
+                "www.japaneseactresses.com"
+            ]
+        },
+        {
+            "rule": "analyticser\\.com\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "admin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "37f7b54e55fe797a32410ad7581350f8895c69b01ae21c34c4915af28e3248be"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japaneseactresses.com",
+                "www.japaneseactresses.com"
+            ]
+        },
+        {
+            "rule": "analyticser\\.com\\/api\\/send",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -24,7 +73,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,7 +92,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "kayleigh.ns.cloudflare.com",

@@ -4,13 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000621,
-    "sites": 91,
+    "prevalence": 0.000526,
+    "sites": 77,
     "subdomains": [
         "loader",
-        "api",
+        "claw",
         "scripts",
-        "claw"
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -18,16 +18,21 @@
         {
             "rule": "mantis-intelligence\\.com\\/nine\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "loader"
             ],
-            "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000888,
+            "apis": {
+                "window.sessionStorage": 11,
+                "window.localStorage": 11,
+                "Date.prototype.getTime": 9,
+                "Date.prototype.getTimezoneOffset": 9
+            },
+            "sites": 11,
+            "prevalence": 0.0000752,
             "cnames": [],
             "responseHashes": [
-                "4f42f6e3c600778d2737c4e89e6ffa089471c3793673efecce5a79327dd4b3d9"
+                "b16652cb657afdd52517a222cde5867f183a3e945b748046c864d8294d2cf6e4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -35,9 +40,7 @@
             "exampleSites": [
                 "nine.com.au",
                 "celebrity.nine.com.au",
-                "coach.nine.com.au",
                 "honey.nine.com.au",
-                "style.nine.com.au",
                 "www.9news.com.au",
                 "www.afr.com",
                 "www.brisbanetimes.com.au",
@@ -49,125 +52,148 @@
             ]
         },
         {
-            "rule": "mantis-intelligence\\.com\\/clientsidetag\\/latest\\/nine\\/mantis\\.min\\.js",
+            "rule": "mantis-intelligence\\.com\\/nationalworld2\\/loader\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "loader"
             ],
             "apis": {
-                "window.sessionStorage": 13,
-                "window.localStorage": 13,
-                "Date.prototype.getTime": 10,
-                "Date.prototype.getTimezoneOffset": 10
+                "window.innerWidth": 10
             },
-            "sites": 13,
-            "prevalence": 0.0000888,
+            "sites": 11,
+            "prevalence": 0.0000752,
             "cnames": [],
             "responseHashes": [
-                "3b052d662ed0e1e997a7dbaaa3fd94d2e42cebc7677450e4fcca19ed78fbedd9"
+                "446a9d52e9b2a0a31a7012b22f569705469172fbba4cf4a83dc7b4605e9a75de"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nine.com.au",
-                "celebrity.nine.com.au",
-                "coach.nine.com.au",
-                "honey.nine.com.au",
-                "style.nine.com.au",
-                "www.9news.com.au",
-                "www.afr.com",
-                "www.brisbanetimes.com.au",
-                "www.nine.com.au",
-                "www.pedestrian.tv",
-                "www.smh.com.au",
-                "www.theage.com.au",
-                "www.watoday.com.au"
+                "birminghamworld.uk",
+                "www.blackpoolgazette.co.uk",
+                "www.derbyshiretimes.co.uk",
+                "www.edinburghnews.scotsman.com",
+                "www.glasgowworld.com",
+                "www.londonworld.com",
+                "www.northernirelandworld.com",
+                "www.scotsman.com",
+                "www.sussexexpress.co.uk",
+                "www.yorkshireeveningpost.co.uk",
+                "www.yorkshirepost.co.uk"
+            ]
+        },
+        {
+            "rule": "mantis-intelligence\\.com\\/recommender\\/articles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "claw"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.000082,
+            "cnames": [],
+            "responseHashes": [
+                "f3210f2c7224dc5e68feb2453a04c66232bce2ff163989c5c5a3084057bdf051",
+                "0d2495ca9562ca97894d40d753ed0161f9b0dfc97116f062539520b69bc04c11",
+                "c2b5ac918b796dde58ef83f0f792e2521affa3a9f0f8968276c93ef52057debe",
+                "96e4335486fb516515c169d474376e561f234cd2b1f3838f38db3e0700d89bd8",
+                "b312d0961e78d06d9b291e4802a3481c91b3f039dbd7653da81fef153cdfccbf",
+                "e2311b7a0a25b45a9a3c22d4d353c7a3f2dfb2a87eca9b540816cc72e7c2df46",
+                "0669a727ac5b1be4aa15bc141dea663ccd9941a3de87b9e92665b1422d12a624",
+                "a596c955943f8bf06067bae69ab86d9de83b43a9ca56da296919cabb40551e11",
+                "c99a7d01eb9ffbc86fe2ca56631acb8205a408406ca8b554949852461cd81ba8",
+                "653b10523fdb9cafd9c9ae1445b3837b57738ac93713c6ccb99653c605b12cfd",
+                "7cb545a4ca4e8293d69d449f7b3a481a578da1f1ea3a974c0237802fdffb04fe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.000041012741291627935,
+                "lotame_domain_check": 0.00003417728440968995
+            },
+            "exampleSites": [
+                "birminghamworld.uk",
+                "www.birminghammail.co.uk",
+                "www.dailystar.co.uk",
+                "www.derbyshiretimes.co.uk",
+                "www.edinburghnews.scotsman.com",
+                "www.expressandstar.com",
+                "www.glasgowworld.com",
+                "www.liverpoolecho.co.uk",
+                "www.northernirelandworld.com",
+                "www.shropshirestar.com",
+                "www.yorkshireeveningpost.co.uk",
+                "www.yorkshirepost.co.uk"
+            ]
+        },
+        {
+            "rule": "mantis-intelligence\\.com\\/mantis-recommender\\/latest\\/reach\\/mantis\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "333e67d9dcd7d3497bd6a6111878858a2eba2fe61cf6d28b7e4edb3730cbd23b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "birminghammail.co.uk",
+                "www.dailystar.co.uk",
+                "www.liverpoolecho.co.uk"
             ]
         },
         {
             "rule": "mantis-intelligence\\.com\\/reachplc\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "loader"
-            ],
-            "apis": {},
-            "sites": 46,
-            "prevalence": 0.000314,
-            "cnames": [],
-            "responseHashes": [
-                "9d97d6cde35ca41f5b675732026fc0c42b90294dbb02707b7f90f935e705d17a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "www.mirror.co.uk",
-                "www.dailypost.co.uk",
-                "www.coventrytelegraph.net",
-                "www.lancs.live",
-                "www.stokesentinel.co.uk",
-                "www.ok.co.uk",
-                "www.dublinlive.ie",
-                "www.corkbeo.ie",
-                "www.dailyrecord.co.uk",
-                "www.manchestereveningnews.co.uk",
-                "www.lincolnshirelive.co.uk",
-                "www.edinburghlive.co.uk",
-                "www.glasgowlive.co.uk",
-                "www.getsurrey.co.uk",
-                "www.sussexlive.co.uk",
-                "www.nottinghampost.com",
-                "www.bristolpost.co.uk",
-                "www.hulldailymail.co.uk",
-                "www.cambridge-news.co.uk",
-                "www.leicestermercury.co.uk"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/clientsidetag\\/latest\\/reach\\/mantis\\.min\\.js",
-            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "loader"
             ],
             "apis": {
-                "window.sessionStorage": 46,
-                "window.localStorage": 46,
-                "Date.prototype.getTime": 46,
-                "Date.prototype.getTimezoneOffset": 46
+                "window.sessionStorage": 44,
+                "window.localStorage": 44,
+                "Date.prototype.getTime": 44,
+                "Date.prototype.getTimezoneOffset": 44
             },
-            "sites": 46,
-            "prevalence": 0.000314,
+            "sites": 44,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "5784e6a30870dfe87c44d71e34bfbf69be30b91a30171b3ed5bf03a22286209b"
+                "af552e183cd897fa2ed96cbbf0d66308273667b1174304a4d09ecf837f900291"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.mirror.co.uk",
-                "www.lancs.live",
-                "www.irishstar.com",
-                "www.glasgowlive.co.uk",
-                "www.essexlive.news",
-                "www.devonlive.com",
-                "www.gloucestershirelive.co.uk",
-                "www.corkbeo.ie",
-                "www.manchestereveningnews.co.uk",
-                "www.bristolpost.co.uk",
-                "www.scottishdailyexpress.co.uk",
-                "www.gazettelive.co.uk",
                 "www.liverpool.com",
-                "www.grimsbytelegraph.co.uk",
-                "www.dailypost.co.uk",
+                "www.gloucestershirelive.co.uk",
+                "www.cornwalllive.com",
                 "www.irishmirror.ie",
-                "www.coventrytelegraph.net",
-                "www.walesonline.co.uk",
+                "www.lancs.live",
                 "www.examinerlive.co.uk",
+                "www.rsvplive.ie",
+                "www.nottinghampost.com",
+                "www.kentlive.news",
+                "www.mylondon.news",
+                "www.derbytelegraph.co.uk",
+                "www.hulldailymail.co.uk",
+                "www.corkbeo.ie",
+                "www.themirror.com",
+                "www.cambridge-news.co.uk",
+                "www.gazettelive.co.uk",
+                "www.grimsbytelegraph.co.uk",
+                "www.leicestermercury.co.uk",
                 "www.getsurrey.co.uk"
             ]
         },
@@ -179,348 +205,77 @@
                 "api"
             ],
             "apis": {},
-            "sites": 40,
-            "prevalence": 0.000273,
+            "sites": 39,
+            "prevalence": 0.000267,
             "cnames": [],
             "responseHashes": [
+                "db66c7d7d6d465bd72fc356d16eddcd9b272fca9741bfe219ca5d72ab4549f6e",
+                "9526b581fd322db0c7705590cc75799bfaa682bc03e0f470672a2e00b1ee4dd7",
+                "836880b958bdc27d7033455097341901d9d396ab20fea46936a4a7678b6a2c52",
                 "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-                "6ef19413ddadf81bdb1403707117340d007f633e5849251cc12e0cfaf9594d28",
-                "620ba100e3535fe6a78c55da790667145ba1815cc015ae0438947557837f36ee",
-                "e0ff50737ea3385a727d17deda27eceb898e0e9a072952419b22a4ef01e65075",
-                "def8a5649177c224fd24a785ba00b9907882651b2a9606e573040179b8ec1ef0",
-                "0046eecd6f955331ac043d2a04ed7d639101ea7682d7f040c9bb83baf457d59a",
-                "72165b8e475a2faf9a7fb834145beba634765eb346c8e4a3269973819e9ebd89",
-                "3379acebb71fc4b95571867b32903066dd6b2acaafb85bfd107e96371d06fb41",
-                "c6da2a3f8d1121fa9d3964aa30e9763877c21c616627192a4c4803cc8657e222",
-                "bd708f7d10f08cc551e3e4776da7a1553089e9e60cae78b10bed59b702ec7cf6",
-                "6932dd4692adce72ccb354c200f2922fbfdc92dcff4b058a50defa52466c50a5",
-                "df7e81bd79320836181de9fa18399baf0a9424b890eb2336daa22aa9c867844c",
-                "5cccffd178602f61814e4c3ee856ea5bc66777fa56885cfab534bc694ae9f959",
-                "c24eb7f1daaa978f16149f09827b3fe541e9a05402fc589b847514f423fb86bb",
-                "bb985adbcbc6a4185724c62d264018dbd689ce49f16b2142afc1df09960b1296",
-                "7106acc2a8584e23c8d936e805c3dc60d1a9b862ea7f1d8f300f73aa9bed886f",
-                "1e5f94506c83578dfa7ac083664921402edc0140373f7cbc7329e1759c94d49d",
-                "81f99936b847992221ba4f8be7f42d800d408b87a429a1232e73b0ea8eb004af",
-                "3b66cd6499c3d5ead3639f8f9ed28ec001d0821e31a134eed326a0de3d1f455d",
-                "eaa9f3404d59b5b9f447fa91b4d1775d1d65889a6d02784cf81229dedfba7fa0",
-                "a7eb2706920a0ad4d057ab79b2aedb2aa0f6d7691256b23ffb0f8dd19adc8126",
-                "2de27ee9360260eb22fbf3a62ef2e9daad253eef51bc23f1deb67f41cfd104f3",
-                "b1a5b8c22f89d11fd729701e4631333da701b4b0f8ca1b8c01fcfdf4b639999f",
-                "9df8bc9fc3eeb9bfe2b39976f5bd9d5cf91d3fe76e2452242b97a3bf1ff66a64",
-                "f8fdcfbf2a95418a35fb56adac32bd207639a746c55de482100dbcf3cffe53ae",
-                "c718e06d77f6e6e902a85976a89e6bc5ad1d1f95718d591e96a58f4d8e8c2ca7",
-                "643c4e63d15d3bb8bcaed0d4cef2501ecbbfddcc90c887ad5c14e550713ecf6f",
-                "8b84dab26961836f5c0279c3cd41dfb9998bb24aef9e93d0d9fef1a068789329",
-                "f5e2484fd49494f09d97d3d24f9d87eaeba1ccb1b378782b220397e124a2f1a5",
-                "1cdbb684ab68f8789cd5ba5f486d1f809e0f8b8a625374f696963e726a3a95dd",
-                "09b0633e1a6b3788429fb9363972060710e7527c098572dfd954e8a0f4b3a530",
-                "5d8d140428e9b9363ca84b7ae08dafe5a7a488b7baf335a5e64d318168176b44",
-                "8b596dbdbcc5530d1fe4deea900d59c1de841aa42db81f621cb18e544341ad76",
-                "e288798781cda668714661dec2c38d492c12171d3e3730e0f6265dd2b74d5e7e"
+                "53fe3a43b57e89d247266cb00fcc1c41599b8be25c0fcce83eb9a26ad8dae68d",
+                "b62f3548bf3505921eb1c660abb5963785d96f498967bbe7b963b767235e2c8b",
+                "d3493095d6e40ea9eb85f52aa3b155c0ffb77c759a5edab220fba2070944e193",
+                "e020ed9b456117233fc78ba94f4023224786b1e02f33479b3fffd9c0c685132f",
+                "e191937e14fcb3e044b6862ba4fd4e9cefcfa78090bf7895f019a420d50d439f",
+                "df88ceeaaae77a11090b833ef8f60ef2c69ab9669802153a8d8e475eaa56a572",
+                "8b71f35eac0326efdfc56bb9f38a67261fa695433153c2340264d62312f7ac24",
+                "79c65cda66e2e5599e8b193ca9b69ec7a6e4eb48334d2eebc0ccd74f34a829a6",
+                "48e07c3f19f3a91c5dd360e540bd245787158b24cd16e282a7a25b3a785b8f3a",
+                "0ccb17119f7b4aa252868ba6d1e19bd452b54f397d1fb643b51bb443a75f9281",
+                "03086d34116d086ed470d8302387c64393347509886a713c4510630a5f4a4864",
+                "c985addf8ad2559da85f6b9204dfc4efd620951ee5bf2116d6ea9d8a6380d261",
+                "101528cec3489cf0a393a604a7b300943e7d2830a8a37caa412091f3c388a273",
+                "701041f6c584919c78f882900cc36ed616cdd915f1b26ca943d04ed74117e39a",
+                "24d894ea6b1c891a025f82b854da9bfb59c0df4b229dd51a1eaa32e1fd6e121d",
+                "ead3a2ceaa0f0ce7fcf619365ea8acf1dbd5d2a07113d9ddde7491421abe167c",
+                "ee7dbaff205d2be47076130b46a42cc766481408401cabefe06b2b562de04ab1",
+                "8a1f9f99ceb8996138442966a9829f1c97eea12e673d3db7550f734dd4c6bb93",
+                "45a57799427cfdc1e67c222d3a24f429c7ca539220d4f05527a97f3558eade27",
+                "4bf31166ecff34d21ec3e5b9c64c1e1deeee481752446f18142c0bdf1eab1591",
+                "548af95842ce87e28fa153e24b18e8614a27852333644b30319b97c94006b887",
+                "d53f3665bf7e05687cdbb5de0117ceac9baf991b340578400584e37b0111ab13",
+                "3643bb99a2d764d73e603502666be6793a788ec5585b9540ecafafd2b65b42fe",
+                "0e8fc1954761c5e820490455215338db4218c171a16133ef307802b088ec1ff9",
+                "9e0b40868b89ded16b6007e7025b4b7f9b740d8050d22ccbf1ace06697e4e6a3",
+                "ade524188af14ce64dd9df716931f4f09f2bac14eac9892698a3fca623705abe",
+                "213805141a7063c1e8a29c5c02ea538e6bf81d25a67de40eba4f89e4da28f29b",
+                "6458fccc3c2db6c18b45e959c3921559215fd4a567021299e1291c8153729a33",
+                "5e0466b58ebe4fbfe1b22118040dee9911649ca0b9c9c1a65296a5595d8f65e0",
+                "e4fa3b892dc78f0728945315caf1375898c7980d2df30ff4a8978f53978fbd43",
+                "35c21af7c95f83837b9a2ac1d76c3a07739b04909a0fd199bdf65ae937e1047a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0001297450850513176,
-                "_li_dcdm_c": 0.0000068286886869114525
+                "lotame_domain_check": 0.00010253185322906983,
+                "_li_dcdm_c": 0.000006835456881937989
             },
             "exampleSites": [
                 "www.express.co.uk",
                 "www.mirror.co.uk",
-                "www.devonlive.com",
-                "www.lancs.live",
-                "www.birminghammail.co.uk",
-                "www.themirror.com",
-                "www.ok.co.uk",
+                "www.irishstar.com",
+                "www.bristolpost.co.uk",
+                "www.plymouthherald.co.uk",
+                "www.the-express.com",
                 "www.business-live.co.uk",
-                "www.liverpool.com",
+                "bristolpost.co.uk",
                 "www.cambridge-news.co.uk",
-                "www.sussexlive.co.uk",
-                "www.gloucestershirelive.co.uk",
+                "www.lancs.live",
+                "www.essexlive.news",
+                "www.gazettelive.co.uk",
                 "www.lincolnshirelive.co.uk",
+                "www.football.london",
                 "www.corkbeo.ie",
-                "www.chroniclelive.co.uk",
-                "www.cheshire-live.co.uk",
-                "www.edinburghlive.co.uk",
-                "www.kentlive.news",
-                "www.rsvplive.ie",
-                "www.irishmirror.ie"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/nationalworld2\\/loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "loader"
-            ],
-            "apis": {},
-            "sites": 19,
-            "prevalence": 0.00013,
-            "cnames": [],
-            "responseHashes": [
-                "f29dc89b8404edd5812b9a948b79f7c4eae8a9338f69058a3cc64ea4d3b25cd5"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "blackpoolgazette.co.uk",
-                "www.derbyshiretimes.co.uk",
-                "www.doncasterfreepress.co.uk",
-                "www.edinburghnews.scotsman.com",
-                "www.glasgowworld.com",
-                "www.lep.co.uk",
-                "www.londonworld.com",
-                "www.newsletter.co.uk",
-                "www.northamptonchron.co.uk",
-                "www.peterboroughtoday.co.uk",
-                "www.portsmouth.co.uk",
-                "www.scotsman.com",
-                "www.sunderlandecho.com",
-                "www.sussexexpress.co.uk",
-                "www.thestar.co.uk",
-                "www.totallysnookered.com",
-                "www.wigantoday.net",
-                "www.yorkshireeveningpost.co.uk",
-                "www.yorkshirepost.co.uk"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/mantis-recommender\\/latest\\/nationalworld\\/mantis\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 21,
-            "prevalence": 0.000143,
-            "cnames": [],
-            "responseHashes": [
-                "ab8fa36abd1c4c06013830824be6aa5a0582b05b7fec7757f820e2e47e180fc0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "www.yorkshirepost.co.uk",
-                "www.scotsman.com",
-                "www.newsletter.co.uk",
-                "www.yorkshireeveningpost.co.uk",
-                "www.shropshirestar.com",
-                "www.northamptonchron.co.uk",
-                "blackpoolgazette.co.uk",
-                "www.londonworld.com",
-                "www.thestar.co.uk",
-                "www.expressandstar.com",
-                "www.totallysnookered.com",
-                "www.derbyshiretimes.co.uk",
-                "www.sunderlandecho.com",
-                "www.glasgowworld.com",
-                "www.peterboroughtoday.co.uk",
-                "www.portsmouth.co.uk",
-                "www.sussexexpress.co.uk",
-                "www.lep.co.uk",
-                "www.doncasterfreepress.co.uk",
-                "www.edinburghnews.scotsman.com"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/mantis-ads\\/latest\\/mantis\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 21,
-            "prevalence": 0.000143,
-            "cnames": [],
-            "responseHashes": [
-                "ed1ae95d12b783002ec3d5c216b772ef1df2103ef455d9f69fd72cef09069886",
-                "9776bd9f0ba7e8eccf0d08116ed6078f2faf7ace362a11bd9a99e8d4f0cd16c0",
-                "bec98e26af5832f106f9a0bc7899065dd38ed0cca756a5e3b9cfd95a690db879"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "www.shropshirestar.com",
-                "www.scotsman.com",
-                "www.totallysnookered.com",
-                "www.expressandstar.com",
-                "www.yorkshireeveningpost.co.uk",
-                "www.wigantoday.net",
-                "www.lep.co.uk",
-                "www.glasgowworld.com",
-                "www.edinburghnews.scotsman.com",
-                "www.londonworld.com",
-                "www.northamptonchron.co.uk",
-                "www.derbyshiretimes.co.uk",
-                "www.sussexexpress.co.uk",
-                "www.portsmouth.co.uk",
-                "blackpoolgazette.co.uk",
-                "www.doncasterfreepress.co.uk",
-                "www.peterboroughtoday.co.uk",
-                "www.newsletter.co.uk",
-                "www.sunderlandecho.com",
-                "www.thestar.co.uk"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/recommender\\/articles",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "claw"
-            ],
-            "apis": {},
-            "sites": 18,
-            "prevalence": 0.000123,
-            "cnames": [],
-            "responseHashes": [
-                "213bcd33a8af1fecb2db7a0f99aef7b8ab7a74b5d8b15cbd223e7381707e5779",
-                "be5ec220785533667be7f5767b2808db3b4c297e0c68b1d3b4cb85bf77b4be8f",
-                "8fb2128512f63227b27a386c49487a3ee800f12f4d1cac7eece325322af865ed",
-                "11ef7c30ddd290abe0d803020089dfacfe8307762887af0f470c9e35e2e46255",
-                "f6d8fe5c9fb77cf106449c547ff6ec788e5e03b669b983ba56f618bbfb8d0903",
-                "0c28895317027002492db21b3d9b1053988e96b99328d9a8ec91803983ff9751",
-                "111e1ee76c911d178a20e362cc3cd0b9e53483c22b6c3ded296a44b0f22fe965",
-                "8086994d5ac83bcffc596c1f8d5aef916e92f39b0434543ea71ece0ce75f837f",
-                "92c8c86befaa3583840a992713cf78bbb0b3827291ee970c4e81933ae45bf98c",
-                "cecf3b9a63a99b2b5e57f2d8a16e18dc9975a57d57c4140fb9331643d010505c",
-                "ac94e6f0531bf85ae2e46e0cc9e05903ad0b8f6ae92a91d9356538fdc8ad124a",
-                "4598be2fe9e2a044ae3e77cf4e19f0d6c50132fcbafa7081ec6039507315fdee",
-                "d7ee6a56a9ddd538d7d99816a0f94fcf3c466a1cd6517b29c3c73a5329f0d316",
-                "3e627eaa84cb0927f8478a0cc047667b61d990bbd4bcc8f1c28827cef29d7a0f",
-                "8928234758da653d60265036b0d66308b4e2441a7ad8ef6d693b593c15d49a0e",
-                "9e3d4c06c6ed9df618870d1dfa39874bb154452ba5ffffa7c2b288525cf51ef7"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.000020486066060734357,
-                "__pid": 0.00007511557555602598
-            },
-            "exampleSites": [
-                "blackpoolgazette.co.uk",
-                "www.blackpoolgazette.co.uk",
-                "www.dailystar.co.uk",
-                "www.derbyshiretimes.co.uk",
-                "www.doncasterfreepress.co.uk",
-                "www.edinburghnews.scotsman.com",
-                "www.expressandstar.com",
-                "www.liverpoolecho.co.uk",
-                "www.newsletter.co.uk",
-                "www.peterboroughtoday.co.uk",
-                "www.portsmouth.co.uk",
-                "www.shropshirestar.com",
-                "www.sunderlandecho.com",
-                "www.thestar.co.uk",
-                "www.totallysnookered.com",
-                "www.wigantoday.net",
-                "www.yorkshireeveningpost.co.uk",
-                "www.yorkshirepost.co.uk"
+                "www.cornwalllive.com",
+                "www.derbytelegraph.co.uk",
+                "www.gloucestershirelive.co.uk",
+                "www.examinerlive.co.uk",
+                "www.dublinlive.ie"
             ]
         },
         {
             "rule": "mantis-intelligence\\.com\\/acm\\/loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "loader"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "8f34347125fa1687db3a2970784b2a0e443a34dda28e0084be6e865810953a5b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "canberratimes.com.au",
-                "www.canberratimes.com.au",
-                "www.newcastleherald.com.au"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/clientsidetag\\/latest\\/acm\\/mantis\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "loader"
-            ],
-            "apis": {
-                "window.sessionStorage": 3,
-                "window.localStorage": 3,
-                "Date.prototype.getTime": 3,
-                "Date.prototype.getTimezoneOffset": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "a0380e10427ffbeb70e8f2f893c49aeda623e84cfcfad9b7adda352177891c2a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "canberratimes.com.au",
-                "www.canberratimes.com.au",
-                "www.newcastleherald.com.au"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/mantis-recommender\\/latest\\/reach\\/mantis\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "f03d6bdba2ff89c96cdf8a5363bd234a45ae40c756f6df6bc162f0077874fcb9"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dailystar.co.uk",
-                "www.liverpoolecho.co.uk"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/nationalworld\\/loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "loader"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "28bb75d485eb01bd0747f434c40924d32e00b0d5f017986cc6dcc28510a012ea"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "expressandstar.com",
-                "www.shropshirestar.com"
-            ]
-        },
-        {
-            "rule": "mantis-intelligence\\.com\\/clientsidetag\\/latest\\/nationalworld\\/mantis\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -536,7 +291,35 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "69413d44c591e9aca6e27a812db2d8ebb04f06ef06c7b04f1cefec0dee390abe"
+                "947198859ab7fb5de8695cdd15f71eb3d3b41ed589f48b0b3bd2e53ef7707457"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canberratimes.com.au",
+                "www.canberratimes.com.au"
+            ]
+        },
+        {
+            "rule": "mantis-intelligence\\.com\\/nationalworld\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "loader"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "99e733562439d28afd9dc225d4270237d8871a4fdc1be3ad611d11a4f9bbb43b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -545,6 +328,30 @@
                 "expressandstar.com",
                 "www.shropshirestar.com"
             ]
+        },
+        {
+            "rule": "mantis-intelligence\\.com\\/reach\\/article\\/classification",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1ec0fb298b6cc035c8514518eeb04d497a4a69280829c50d44cf7966bab111e6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006835456881937989
+            },
+            "exampleSites": [
+                "grimsbytelegraph.co.uk",
+                "www.leicestermercury.co.uk"
+            ]
         }
     ],
     "categories": [],
@@ -552,34 +359,30 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.42162162162162165
-        },
-        {
             "domain": "convrse.media",
-            "prevalence": 0.41621621621621624
+            "prevalence": 0.5126582278481012
         },
         {
-            "domain": "webcontentassessor.com",
-            "prevalence": 0.08648648648648649
+            "domain": "first party",
+            "prevalence": 0.41139240506329117
         },
         {
             "domain": "9pub.io",
-            "prevalence": 0.06486486486486487
+            "prevalence": 0.06329113924050633
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.010810810810810811
+            "prevalence": 0.012658227848101266
         }
     ],
     "types": {
-        "Script": 191,
-        "Fetch": 58
+        "Script": 73,
+        "Fetch": 53
     },
     "nameservers": [
+        "ns-1664.awsdns-16.co.uk",
         "ns-1011.awsdns-62.net",
         "ns-1410.awsdns-48.org",
-        "ns-1664.awsdns-16.co.uk",
         "ns-306.awsdns-38.com"
     ]
 }

@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "widgets"
+        "widgets",
+        "partners-endpoint"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,8 +22,8 @@
             ],
             "apis": {
                 "Navigator.prototype.language": 2,
-                "Date.prototype.getTime": 1,
-                "Date.prototype.getTimezoneOffset": 1
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -37,6 +38,48 @@
                 "roughtrade.com",
                 "www.roughtrade.com"
             ]
+        },
+        {
+            "rule": "dice\\.fm\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partners-endpoint"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roughtrade.com",
+                "www.roughtrade.com"
+            ]
+        },
+        {
+            "rule": "dice\\.fm\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partners-endpoint"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2ca498438535d8c2c34e16c81326adcfe4f5712f29a68a455280461314eb9828"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roughtrade.com",
+                "www.roughtrade.com"
+            ]
         }
     ],
     "categories": [],
@@ -45,11 +88,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "prismic.io",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "amir.ns.cloudflare.com",

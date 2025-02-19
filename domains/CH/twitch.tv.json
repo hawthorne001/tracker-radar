@@ -9,12 +9,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
         "gql",
         "passport",
-        "player"
+        "hermes",
+        "pubsub-edge"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -31,7 +32,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "7d3cff0f1a0e5ea0df398f0db32579740483f41372258bbf502c07162d116b16"
+                "178dda606b0cb1d42f801d736eb9c569d105ea6d38b2bd1ba5ca817c0a92317a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -74,7 +75,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4220bf4a7558be085eb038d04fceacd549fa09bb557edca7c8cf8e528cc93d46"
+                "89ba3f8fc8abd417dd67789565423cf4ed8a70293311bcb654ba45c9c2b287e7"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -89,11 +90,14 @@
             "cookies": 0.000201,
             "fingerprinting": 3,
             "subdomains": [
-                "gql",
-                "passport"
+                "passport",
+                "gql"
             ],
             "apis": {
-                "Event.prototype.timeStamp": 1,
+                "window.screenX": 2,
+                "window.screenY": 2,
+                "WebGL2RenderingContext.prototype.getExtension": 2,
+                "WebGL2RenderingContext.prototype.getParameter": 2,
                 "Navigator.prototype.webdriver": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.platform": 2,
@@ -105,12 +109,9 @@
                 "Navigator.prototype.permissions": 2,
                 "Navigator.prototype.maxTouchPoints": 2,
                 "WebGLRenderingContext.prototype.getParameter": 2,
-                "WebGL2RenderingContext.prototype.getParameter": 2,
                 "window.name": 2,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2,
-                "window.screenX": 2,
-                "window.screenY": 2,
                 "window.outerWidth": 2,
                 "window.outerHeight": 2,
                 "window.devicePixelRatio": 2,
@@ -123,24 +124,25 @@
                 "Screen.prototype.width": 2,
                 "Screen.prototype.orientation": 2,
                 "Navigator.prototype.language": 2,
-                "WebGL2RenderingContext.prototype.getExtension": 2,
                 "Navigator.prototype.deviceMemory": 2,
                 "Element.prototype.getClientRects": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Performance.prototype.memory": 2,
                 "Navigator.prototype.mimeTypes": 2,
                 "Navigator.prototype.connection": 2,
                 "Screen.prototype.colorDepth": 2,
-                "Date.prototype.getTimezoneOffset": 2,
                 "BarProp.prototype.visible": 2,
-                "Screen.prototype.availHeight": 2,
-                "Screen.prototype.pixelDepth": 2,
                 "Screen.prototype.availWidth": 2,
-                "Navigator.prototype.appVersion": 2
+                "Navigator.prototype.appVersion": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Event.prototype.timeStamp": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0f6d19834b17ed5f9ac6c675f53436727a67ee3feea7f538613c7c22549802a7"
+                "340dd55588b3580fed249fbacae854ef2c9d66370deb82888e808259e4ec2f10"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -155,8 +157,8 @@
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "gql",
-                "passport"
+                "passport",
+                "gql"
             ],
             "apis": {},
             "sites": 2,
@@ -174,25 +176,24 @@
             ]
         },
         {
-            "rule": "twitch\\.tv\\/js\\/embed\\/v1\\.js",
+            "rule": "twitch\\.tv\\/v1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "player"
+                "hermes",
+                "pubsub-edge"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "922251094bc0c211bd4dffdfd8bcd77b5fc6197e2f32946fc997d3a665cbb4b8"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "uesp.net",
-                "www.directoalpaladar.com"
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net"
             ]
         }
     ],
@@ -205,23 +206,24 @@
     "topInitiators": [
         {
             "domain": "twitchcdn.net",
-            "prevalence": 0.6875
+            "prevalence": 0.7142857142857143
         },
         {
             "domain": "first party",
-            "prevalence": 0.25
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "twitch.tv",
-            "prevalence": 0.0625
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
         "Fetch": 2,
         "Preflight": 2,
         "Document": 2,
-        "Script": 4,
-        "XHR": 2
+        "Script": 2,
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
         "ns-1450.awsdns-53.org",

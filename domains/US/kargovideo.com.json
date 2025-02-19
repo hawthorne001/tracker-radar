@@ -8,13 +8,14 @@
     "sites": 4,
     "subdomains": [
         "static",
+        "analytics-v2-prod",
         "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "kargovideo\\.com\\/fvp-loader\\/v1\\.0\\.0\\/loader\\.js",
+            "rule": "kargovideo\\.com\\/fvp-loader\\/1\\.0\\.0\\/loader\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -25,7 +26,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "ce8fc285a65dbb6e03b35bedc6ee92374ff57e2e2e38be3e6ba8d6d4ceedc574"
+                "79ae10835d691b8e96533dd2a2c5afd5fca27802ddd7dd8f12cd84c861c84a94"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -36,8 +37,50 @@
             ]
         },
         {
-            "rule": "kargovideo\\.com\\/player\\/prebid\\.js",
-            "cookies": 0.00000683,
+            "rule": "kargovideo\\.com\\/api\\/v2\\/stats\\/player-events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-v2-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenmatters.com",
+                "www.greenmatters.com"
+            ]
+        },
+        {
+            "rule": "kargovideo\\.com\\/api\\/v2\\/stats\\/player-events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-v2-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenmatters.com",
+                "www.greenmatters.com"
+            ]
+        },
+        {
+            "rule": "kargovideo\\.com\\/prebid\\/v8\\.52\\.2\\.js",
+            "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "static"
@@ -47,26 +90,27 @@
                 "NavigatorUAData.prototype.platform": 2,
                 "window.sessionStorage": 2,
                 "Navigator.prototype.appName": 2,
-                "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
                 "Document.cookie getter": 2,
-                "Navigator.prototype.cookieEnabled": 2,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2,
                 "Navigator.prototype.doNotTrack": 2,
                 "Navigator.prototype.language": 2,
                 "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.cookieEnabled": 2,
                 "Screen.prototype.height": 2,
                 "Screen.prototype.width": 2,
                 "Navigator.prototype.connection": 2,
-                "Document.cookie setter": 1
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.vendor": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "9509bce28430e06414717ac5d83d36f9fe2939453f88c10c902d09552c0a18f9"
+                "dc3393c13a825f77ceabd156409c6c6c73f4f275ef5e02f4a6cab98ce9cf2c40"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -77,21 +121,26 @@
             ]
         },
         {
-            "rule": "kargovideo\\.com\\/player\\/v3\\.0\\.0\\/fabrik-player\\.js",
+            "rule": "kargovideo\\.com\\/player\\/stable\\/fabrik-player\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "static"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e8d90df71870edc720f022648c9e3e6e77caf380a4348eadce0c1e9d68f8998b"
+                "1772df612c67f44a81ec5e4bc22362893fe73337f933dc63fa96473e39eb1a83"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -146,25 +195,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000683,
+    "cookies": 0,
     "topInitiators": [
         {
-            "domain": "script.ac",
+            "domain": "lngtdv.com",
             "prevalence": 0.5
         },
         {
             "domain": "kargo.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "lngtdv.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.5
         }
     ],
     "types": {
         "Script": 6,
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 4
     },
     "nameservers": [
         "ns-737.awsdns-28.net",

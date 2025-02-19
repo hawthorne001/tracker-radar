@@ -7,26 +7,53 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "promoter\\.ninja\\/web\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "13990c7f9bfa631c32b96a547910d11030f08105207ab942a922e42a45fdbe9f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jameda.de",
+                "www.znanylekarz.pl"
+            ]
+        },
+        {
+            "rule": "promoter\\.ninja\\/api\\/public\\/web\\/2gjYAEQAtcd7\\/people",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "9ae4fcbe225bc7c7cd156f7647b5c199ae49f984081a0bb0f143d75f1d506509"
+                "a6df6c6688022884cb4f99005a67196d2b0eb5d00a148647cd148654c791471a"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -41,16 +68,21 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "docplanner.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-299.awsdns-37.com",
-        "ns-660.awsdns-18.net",
         "ns-1072.awsdns-06.org",
-        "ns-1954.awsdns-52.co.uk"
+        "ns-1954.awsdns-52.co.uk",
+        "ns-299.awsdns-37.com",
+        "ns-660.awsdns-18.net"
     ]
 }

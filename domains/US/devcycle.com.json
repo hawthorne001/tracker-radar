@@ -7,7 +7,8 @@
     "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "sdk-api"
+        "sdk-api",
+        "sse"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,13 +25,13 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "7d09287ae5c960275b200356fcec89c627fc583480c6c7b235f54fb5e77dbf4d",
-                "59515d467c4496b983788839a36586b9055a60d481f6f0477f07387b9f42ed6f"
+                "d22d12ec179d3694ca4bcc6d02c304bef81855bdcf71c3cc5e6c5c5c1dba5683",
+                "61f15a50ac6e630a49a5bfe083f9276a9034358872d43ce5dbdf8beb02262e95"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "ajs_anonymous_id": 0.0000068286886869114525
+                "ajs_anonymous_id": 0.000006835456881937989
             },
             "exampleSites": [
                 "nordpass.com",
@@ -53,12 +54,34 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "ajs_anonymous_id": 0.0000068286886869114525
+                "ajs_anonymous_id": 0.000006835456881937989
             },
             "exampleSites": [
                 "nordpass.com",
                 "app.nordpass.com",
                 "www.cozi.com"
+            ]
+        },
+        {
+            "rule": "devcycle\\.com\\/event-stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sse"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "EventSource",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordpass.com",
+                "app.nordpass.com",
+                "www.cozi.com",
+                "www.influenster.com"
             ]
         }
     ],
@@ -73,7 +96,8 @@
     ],
     "types": {
         "Fetch": 3,
-        "Preflight": 3
+        "Preflight": 3,
+        "EventSource": 4
     },
     "nameservers": [
         "ben.ns.cloudflare.com",
