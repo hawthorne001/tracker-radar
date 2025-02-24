@@ -7,14 +7,70 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000615,
-    "sites": 9,
+    "prevalence": 0.0000478,
+    "sites": 7,
     "subdomains": [
+        "d8cwsdev.prod",
+        "uvahealthnodeprod.prod",
         "commonwealthuprod.prod"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "engineering.dev.oregonstate.edu",
+            "resolved": "d8cwsdev.prod.acquia-sites.com"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "acquia-sites\\.com\\/sites\\/engineering\\.oregonstate\\.edu\\/files\\/2024-07\\/arrow-right-orange\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d8cwsdev.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "engineering.dev.oregonstate.edu",
+                    "resolved": "d8cwsdev.prod.acquia-sites.com"
+                }
+            ],
+            "responseHashes": [
+                "ea52a469895d00bb17dea572deb1d27ec6f0c46a0cac8fa872b638e762a7534c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oregonstate.edu",
+                "web.engr.oregonstate.edu"
+            ]
+        },
+        {
+            "rule": "acquia-sites\\.com\\/api\\/coveotoken",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uvahealthnodeprod.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "af10b5f99371f41fa4b7d3745885fcf4e226a01e4f70bb73e24e1f6f8c5fe4fc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uvahealth.com",
+                "www.healthsystem.virginia.edu"
+            ]
+        },
         {
             "rule": "acquia-sites\\.com\\/media\\/oembed",
             "cookies": 0,
@@ -27,7 +83,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7627354d32634af67ed8414491818ab57bf278c5e5d30c0bf229f6225d4cfaed"
+                "f54fc373b227e4561d6598245ea8fe92ed5f8adc4950941b67f4364ac5289453"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -38,7 +94,7 @@
             ]
         },
         {
-            "rule": "acquia-sites\\.com\\/sites\\/default\\/files\\/css\\/css_b1tTAyjErGSkJISTN3sG2eir0bce9W3nGHvGIUEG3S0\\.css",
+            "rule": "acquia-sites\\.com\\/sites\\/default\\/files\\/css\\/css_jjIgumw2MsY0iMdhHsMWjxqlVyEa6fACVZGE5qo_Jog\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -60,13 +116,15 @@
             ]
         },
         {
-            "rule": "acquia-sites\\.com\\/sites\\/default\\/files\\/js\\/js_77rzZD7N1BAdjui6bhfiX3Y6ef4RP-F2jj7-MyvfImM\\.js",
+            "rule": "acquia-sites\\.com\\/sites\\/default\\/files\\/js\\/js_pYlvY5cW4-2fE7fLJkW-PbL7cslGtyx_tTzpz8JAyA8\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "commonwealthuprod.prod"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -88,18 +146,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "uvahealth.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Image": 2,
+        "Fetch": 2,
         "Document": 2,
         "Stylesheet": 2,
         "Script": 2
     },
     "nameservers": [
-        "ns-24.awsdns-03.com",
-        "ns-821.awsdns-38.net",
         "ns-1123.awsdns-12.org",
-        "ns-1923.awsdns-48.co.uk"
+        "ns-1923.awsdns-48.co.uk",
+        "ns-24.awsdns-03.com",
+        "ns-821.awsdns-38.net"
     ]
 }

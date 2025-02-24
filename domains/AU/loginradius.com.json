@@ -10,6 +10,7 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
+        "postmedia.hub",
         "cbc-login.hub"
     ],
     "cnames": [
@@ -20,6 +21,32 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "postmedia.hub",
+                "cbc-login.hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.cbc.ca"
+            ]
+        },
         {
             "rule": "loginradius\\.com\\/ssologin\\/login",
             "cookies": 0,
@@ -44,31 +71,6 @@
                 "cbc.ca",
                 "www.cbc.ca"
             ]
-        },
-        {
-            "rule": "loginradius\\.com\\/ssologin\\/login",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cbc-login.hub"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "login.cbc.ca",
-                    "resolved": "cbc-login.hub.loginradius.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Other",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cbc.ca",
-                "www.cbc.ca"
-            ]
         }
     ],
     "categories": [],
@@ -85,8 +87,8 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Other": 2
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

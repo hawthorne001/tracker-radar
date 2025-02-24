@@ -8,7 +8,8 @@
     "sites": 4,
     "subdomains": [
         "video-api.prod.video",
-        "avia.prod.video"
+        "avia.prod.video",
+        "sonic-prod"
     ],
     "cnames": [
         {
@@ -20,7 +21,7 @@
             "resolved": "video-api.prod.video.cbssports.cloud"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v1",
@@ -65,8 +66,8 @@
                 }
             ],
             "responseHashes": [
-                "62986697711c546ae44846f34ce4e9d8f45081796159729e8880560bb24c693f",
-                "1624fdd2cecc015eeff212ffac62839cb0dac260746d3abaca3ebdc31ccb65f0"
+                "edf6b3ca8e3b78018b6c2c983861a765f78a80a04bdedd52883affa20e4726ee",
+                "612c59cc1e12149abe6a26347fdfaa918b2484e83b6d89c0f67f48f752faf3f9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -94,9 +95,51 @@
                 }
             ],
             "responseHashes": [
-                "53e847943ab03176d86c0d7a6a20746b9a2ae1717285f6e1b5374c8f6037311e"
+                "9b63989617d46747c409d384f735d635132c9debe25d20b32f0b264a9d7a0e0a"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsline.com",
+                "www.sportsline.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/analytics\\/betting-engagement",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sonic-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "13781f4e0c492373152bb6bb148ce3b4e7ae6b3cc86058259ec63d86b6299ec9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsline.com",
+                "www.sportsline.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/analytics\\/betting-engagement",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sonic-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -110,22 +153,27 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.4
+            "domain": "first party",
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.25
         },
         {
             "domain": "confiant-integrations.net",
-            "prevalence": 0.2
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Preflight": 3,
+        "Preflight": 5,
         "XHR": 3,
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1343.awsdns-39.org",

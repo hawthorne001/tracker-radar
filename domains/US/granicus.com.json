@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000546,
-    "sites": 8,
+    "prevalence": 0.0000684,
+    "sites": 10,
     "subdomains": [
         "denver",
         "dekalbcountyga",
         "carsoncity",
+        "elkgrove",
         "fortworthgov",
+        "ousd",
         "slocounty",
         "phoenix"
     ],
@@ -34,7 +36,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "60c744428f4bb3a7fb84b668d7b49d4e432092269792c6e3c412c9db97893f7b"
+                "e76a5becd0aa82fd47e387ee4ef812a95187c73f37a939da8732d3b7dab019c2"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -95,25 +97,33 @@
         {
             "rule": "granicus\\.com\\/ViewPublisher\\.php",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "carsoncity",
+                "elkgrove",
                 "fortworthgov",
+                "ousd",
                 "slocounty"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
-                "2827780588b67bec0ad126c2d55a7737fca10a8388a971772c523b37c4891a0c"
+                "dd2396f42aba189e110f87a456b234de858cd66a9ac55e6800212c9e8999a299",
+                "cb3dede5eb0ce110281c06b9f61f6023396124f92f62b502b5d1573644488f52",
+                "2e2613c0d87736ce29cd3ac9a1db8acb711fb55db96472aea94e22d268b67392"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "carson.org",
+                "www.elkgrovecity.org",
                 "www.fortworthtexas.gov",
+                "www.ousd.org",
                 "www.slocounty.ca.gov"
             ]
         },
@@ -123,14 +133,15 @@
             "fingerprinting": 1,
             "subdomains": [
                 "carsoncity",
-                "fortworthgov"
+                "fortworthgov",
+                "ousd"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 1
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 2
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "581a36cd2c06dbbbf9d3456490f2acd33e28740afcf7f3cc63ebd6a0dd4ffaaf"
@@ -140,7 +151,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "carson.org",
-                "www.fortworthtexas.gov"
+                "www.fortworthtexas.gov",
+                "www.ousd.org"
             ]
         },
         {
@@ -397,6 +409,28 @@
                 "dekalbcountyga.gov",
                 "www.phoenix.gov"
             ]
+        },
+        {
+            "rule": "granicus\\.com\\/api\\/metrics\\/cspreport",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ousd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ousd.org",
+                "www.ousd.org"
+            ]
         }
     ],
     "categories": [],
@@ -409,10 +443,11 @@
         }
     ],
     "types": {
-        "Document": 7,
-        "Script": 20,
+        "Document": 9,
+        "Script": 21,
         "Stylesheet": 6,
-        "Image": 2
+        "Image": 2,
+        "Other": 2
     },
     "nameservers": [
         "ns-176.awsdns-22.com",

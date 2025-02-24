@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "sa"
+        "sa",
+        "dashboard"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "searchatlas\\.com\\/api\\/v2\\/otto-url-details\\/",
@@ -20,18 +21,48 @@
                 "sa"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "246f9ea220dd63c969e39297d73883e40c47b89fc5302be6a1f008951f2352e7"
+                "246f9ea220dd63c969e39297d73883e40c47b89fc5302be6a1f008951f2352e7",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "ee5cf3b6cc159ed3dd55ff864acd51fa731173050ddb1c925d633c8e2dd66c52",
+                "23d8612a7f8f454e205600a13a2b936ab68153cc22ae3e2486a31b36655a5098"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "candyfunhouse.ca",
-                "foodsguy.com"
+                "canadianpreparedness.com",
+                "foodsguy.com",
+                "herb.co",
+                "naturespath.com",
+                "vitasave.ca"
+            ]
+        },
+        {
+            "rule": "searchatlas\\.com\\/scripts\\/dynamic_optimization\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dashboard"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4d198c1cc69dd62bca8732d36e52126ab690ffae90dc5f95041b3eb1ec47fd39"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "herb.co",
+                "vitasave.ca"
             ]
         }
     ],
@@ -41,15 +72,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.6
         },
         {
             "domain": "linkgraph.com",
-            "prevalence": 0.5
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 5,
+        "Script": 2
     },
     "nameservers": [
         "macy.ns.cloudflare.com",

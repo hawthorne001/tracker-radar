@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "licensing",
+        "analytics-ingress-global"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -27,7 +29,7 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "a81f331b81be2fa5fb9fee9d356485e7118cd2770977c2b5e42c9da1c5bac8a9"
+                "41ea1c51ee5175b8d787533203d44bfa966b359df6b43ddd5077072b75e6d16e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -37,6 +39,51 @@
                 "sport.sky.ch",
                 "www.oe24.at"
             ]
+        },
+        {
+            "rule": "bitmovin\\.com\\/licensing",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "licensing",
+                "analytics-ingress-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fa6313f1c99e2342fb797a92218c39e2efe8303b65e6650576c8d428089f6242"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.familysearch.org"
+            ]
+        },
+        {
+            "rule": "bitmovin\\.com\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-ingress-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "familysearch.org",
+                "www.familysearch.org"
+            ]
         }
     ],
     "categories": [],
@@ -45,15 +92,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9166666666666666
+            "prevalence": 0.6470588235294118
+        },
+        {
+            "domain": "fscdn.org",
+            "prevalence": 0.29411764705882354
         },
         {
             "domain": "video-cdn.net",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "XHR": 4
     },
     "nameservers": [
         "ali.ns.cloudflare.com",

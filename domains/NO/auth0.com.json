@@ -7,16 +7,21 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0013,
-    "sites": 13,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
         "cdn",
         "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+        "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu",
         "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
         "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
         "statista.eu"
     ],
     "cnames": [
+        {
+            "original": "access.intouch.bmigroup.com",
+            "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
+        },
         {
             "original": "auth.androidauthority.com",
             "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
@@ -39,14 +44,11 @@
         {
             "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/2\\.1\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -63,21 +65,26 @@
         },
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000401,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu",
                 "naf-cd-qf7uhj9homrrm574.edge.tenants.eu",
                 "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
                 "statista.eu"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000401,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
                     "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "access.intouch.bmigroup.com",
+                    "resolved": "intouch-prod-cd-mtkohqzrmhzmpdfn.edge.tenants.eu.auth0.com"
                 },
                 {
                     "original": "id.naf.no",
@@ -93,48 +100,18 @@
                 }
             ],
             "responseHashes": [
-                "8b9a3b326763eab54611c44786f14cd72d9baf624ff94ed605f6f08f3f20c8e8"
+                "c48603abd188e2beed42da875691597bbc51d76f357c3c0e93b7f70aa628374a",
+                "0a84b13f6f0ebb6c676d65f4f4aaa8b1f2990e6432b7c99c066f761ad2983ad9"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010031096398836393
-            },
-            "exampleSites": [
-                "androidauthority.com",
-                "www.naf.no",
-                "www.soundguys.com",
-                "www.statista.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
-                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "auth.androidauthority.com",
-                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
-                },
-                {
-                    "original": "auth.soundguys.com",
-                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "androidauthority.com",
-                "www.soundguys.com"
+                "www.bmigroup.com",
+                "www.naf.no",
+                "www.soundguys.com",
+                "www.statista.com"
             ]
         },
         {
@@ -192,6 +169,36 @@
             ]
         },
         {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.androidauthority.com",
+                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "auth.soundguys.com",
+                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/js\\/auth0\\/9\\.10\\.4\\/auth0\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -220,18 +227,22 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000602,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Script": 6,
-        "Document": 4,
-        "Preflight": 2,
-        "XHR": 2
+        "Document": 5,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

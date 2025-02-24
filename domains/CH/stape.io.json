@@ -4,20 +4,101 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
-        "cdn",
-        "leuv"
+        "leu",
+        "leuv",
+        "eul",
+        "usc",
+        "cdn"
     ],
     "cnames": [
         {
+            "original": "assets.comparitech.com",
+            "resolved": "usc.stape.io"
+        },
+        {
+            "original": "load.gtm.guidetoiceland.is",
+            "resolved": "leu.stape.io"
+        },
+        {
             "original": "load.trk.ckw.ch",
             "resolved": "leuv.stape.io"
+        },
+        {
+            "original": "ss.leica-geosystems.com",
+            "resolved": "eul.stape.io"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "stape\\.io\\/gtag\\/js",
+            "cookies": 0.0001,
+            "fingerprinting": 2,
+            "subdomains": [
+                "leu",
+                "leuv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "load.gtm.guidetoiceland.is",
+                    "resolved": "leu.stape.io"
+                },
+                {
+                    "original": "load.trk.ckw.ch",
+                    "resolved": "leuv.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "9283fd14bd3e3168a343291422ec8019473b84292e7c14b2e32707abdc4664b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guidetoiceland.is",
+                "www.ckw.ch"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/g\\/collect",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eul",
+                "usc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ss.leica-geosystems.com",
+                    "resolved": "eul.stape.io"
+                },
+                {
+                    "original": "assets.comparitech.com",
+                    "resolved": "usc.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00010040160642570282
+            },
+            "exampleSites": [
+                "leica-geosystems.com",
+                "www.comparitech.com"
+            ]
+        },
         {
             "rule": "stape\\.io\\/dtag\\/v8\\.js",
             "cookies": 0.000201,
@@ -44,58 +125,36 @@
                 "nordpass.com",
                 "www.peek-cloppenburg.de"
             ]
-        },
-        {
-            "rule": "stape\\.io\\/gtag\\/js",
-            "cookies": 0.000201,
-            "fingerprinting": 1,
-            "subdomains": [
-                "leuv"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "load.trk.ckw.ch",
-                    "resolved": "leuv.stape.io"
-                }
-            ],
-            "responseHashes": [
-                "5a373ff9b2c95b940dbc2145e837bea0c4b94260f668d126238be0b813a0e0a8"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ckw.ch",
-                "www.ckw.ch"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000803,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.6
         },
         {
-            "domain": "hotjar.com",
-            "prevalence": 0.3333333333333333
+            "domain": "lemaitredeslampes.ch",
+            "prevalence": 0.1
         },
         {
             "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
+        },
+        {
+            "domain": "hotjar.com",
+            "prevalence": 0.1
         },
         {
             "domain": "facebook.net",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "aida.ns.cloudflare.com",

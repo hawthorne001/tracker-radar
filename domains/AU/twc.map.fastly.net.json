@@ -11,14 +11,20 @@
     ],
     "prevalence": 0.000201,
     "sites": 2,
-    "subdomains": [],
+    "subdomains": [
+        "dualstack.fx"
+    ],
     "cnames": [
+        {
+            "original": "prod.weatherfx.com",
+            "resolved": "dualstack.fx.twc.map.fastly.net"
+        },
         {
             "original": "s.w-x.co",
             "resolved": "twc.map.fastly.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "twc\\.map\\.fastly\\.net\\/helios\\/twc\\/1\\.40\\.0\\/helios\\.js",
@@ -42,10 +48,62 @@
                 "fv": {
                     "ttl": 1800,
                     "length": 1,
-                    "prevalence": 0.0002008233758409479,
+                    "prevalence": 0.00020090406830738323,
                     "uniqueness": 0.5
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weather.com",
+                "www.wunderground.com"
+            ]
+        },
+        {
+            "rule": "twc\\.map\\.fastly\\.net\\/api\\/v2\\/accounts\\/qCtEFW9rBw\\/segments\\/VfrxOi5vOV\\/xtriggers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack.fx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "prod.weatherfx.com",
+                    "resolved": "dualstack.fx.twc.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weather.com",
+                "www.wunderground.com"
+            ]
+        },
+        {
+            "rule": "twc\\.map\\.fastly\\.net\\/api\\/v2\\/accounts\\/qCtEFW9rBw\\/segments\\/VfrxOi5vOV\\/xtriggers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack.fx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "prod.weatherfx.com",
+                    "resolved": "dualstack.fx.twc.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "420eb433eca2e48d1d3178b64ad81cebf750721e23c5f1cd54df00943ab87abe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "weather.com",
@@ -68,11 +126,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

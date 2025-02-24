@@ -4,36 +4,106 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
-        "srv"
+        "srv",
+        "media",
+        "track"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "bidgx\\.com\\/prebid\\/bidder",
-            "cookies": 0,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "srv"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "ae6df0961651a7f09ab567800b1df8184663d766e1da0bd088ff7d624445716c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ndtv.com",
-                "food.ndtv.com",
+                "lotterypost.com",
                 "www.lotterypost.com",
                 "www.ndtv.com"
+            ]
+        },
+        {
+            "rule": "bidgx\\.com\\/js\\/code\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9119411f43068c84e514773dc23b54167e39de36db7c28c396c74e63a86b83fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lotterypost.com",
+                "www.lotterypost.com"
+            ]
+        },
+        {
+            "rule": "bidgx\\.com\\/wtf\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lotterypost.com",
+                "www.lotterypost.com"
+            ]
+        },
+        {
+            "rule": "bidgx\\.com\\/won",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lotterypost.com",
+                "www.lotterypost.com"
             ]
         }
     ],
@@ -42,16 +112,18 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "pubmatic.com",
-            "prevalence": 0.75
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "pubmatic.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 3,
+        "Script": 4,
+        "Image": 2
     },
     "nameservers": [
         "dorthy.ns.cloudflare.com",

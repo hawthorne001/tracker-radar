@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api-gw"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,8 +21,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
                 "00898f17e88bf5b73ffc78c27d46b48d770e38380490a65ab1910cffd3114cb3"
@@ -30,22 +31,103 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "liquibase.com",
+                "deepgram.com",
+                "docs.liquibase.com",
+                "learning.postman.com",
                 "www.postman.com"
+            ]
+        },
+        {
+            "rule": "metadata\\.io\\/site-insights\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "476cda2bde7910a58186b7b58d2be6d22d3cfacdfeda3354134b84e43d76ac98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "Metadata_visitor_id": {
+                    "ttl": 31536006,
+                    "length": 18,
+                    "prevalence": 0.00020074274816822243,
+                    "uniqueness": 1
+                },
+                "Metadata_session_id": {
+                    "ttl": 1806,
+                    "length": 19,
+                    "prevalence": 0.00020074274816822243,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deepgram.com",
+                "docs.liquibase.com"
+            ]
+        },
+        {
+            "rule": "metadata\\.io\\/traffic",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deepgram.com",
+                "docs.liquibase.com"
+            ]
+        },
+        {
+            "rule": "metadata\\.io\\/traffic",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deepgram.com",
+                "docs.liquibase.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4
+            "prevalence": 0.6
         },
         {
             "domain": "mutinycdn.com",
-            "prevalence": 0.4
+            "prevalence": 0.2
         },
         {
             "domain": "first party",
@@ -53,12 +135,14 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1375.awsdns-43.org",
-        "ns-1614.awsdns-09.co.uk",
+        "ns-477.awsdns-59.com",
         "ns-825.awsdns-39.net",
-        "ns-477.awsdns-59.com"
+        "ns-1375.awsdns-43.org",
+        "ns-1614.awsdns-09.co.uk"
     ]
 }

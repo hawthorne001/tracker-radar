@@ -4,24 +4,18 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000706,
+    "prevalence": 0.000707,
     "sites": 7,
     "subdomains": [
-        "inclusion-matomo-production.osc-secnum-fr1",
-        "idfm-production-common-design.osc-secnum-fr1",
-        "rdvmairie-backend-prod.osc-secnum-fr1"
+        "inclusion-matomo-production.osc-secnum-fr1"
     ],
     "cnames": [
-        {
-            "original": "api.rendezvouspasseport.ants.gouv.fr",
-            "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
-        },
         {
             "original": "matomo.inclusion.beta.gouv.fr",
             "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "scalingo\\.io\\/piwik\\.php",
@@ -51,86 +45,36 @@
             ]
         },
         {
-            "rule": "scalingo\\.io\\/common-header\\.js",
+            "rule": "scalingo\\.io\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "idfm-production-common-design.osc-secnum-fr1"
+                "inclusion-matomo-production.osc-secnum-fr1"
             ],
-            "apis": {
-                "Navigator.prototype.languages": 2,
-                "Document.cookie getter": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "matomo.inclusion.beta.gouv.fr",
+                    "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
+                }
+            ],
             "responseHashes": [
-                "a7fa7675a24734a49d07b1a5ef478a2473afcfb088208b50fa629a3ea61fb9ad"
+                "3619ad0164e86163b8b2d69492d5ffca87a7fed06aeaad51de036002b8598318"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "iledefrance-mobilites.fr",
-                "www.iledefrance-mobilites.fr"
-            ]
-        },
-        {
-            "rule": "scalingo\\.io\\/api\\/Announcement",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rdvmairie-backend-prod.osc-secnum-fr1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "api.rendezvouspasseport.ants.gouv.fr",
-                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ants.gouv.fr",
-                "rendezvouspasseport.ants.gouv.fr"
-            ]
-        },
-        {
-            "rule": "scalingo\\.io\\/api\\/Announcement",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rdvmairie-backend-prod.osc-secnum-fr1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "api.rendezvouspasseport.ants.gouv.fr",
-                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ants.gouv.fr",
-                "rendezvouspasseport.ants.gouv.fr"
+                "beta.gouv.fr",
+                "immersion-facile.beta.gouv.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "first party",
@@ -139,12 +83,10 @@
     ],
     "types": {
         "Ping": 2,
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 2
     },
     "nameservers": [
-        "wally.ns.cloudflare.com",
-        "burt.ns.cloudflare.com"
+        "burt.ns.cloudflare.com",
+        "wally.ns.cloudflare.com"
     ]
 }

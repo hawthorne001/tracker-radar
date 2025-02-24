@@ -4,14 +4,94 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
+    "prevalence": 0.0000342,
     "sites": 5,
     "subdomains": [
-        "static"
+        "static",
+        "tracker"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "personizely\\.net\\/dc5e5edf9f\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "46ebb0c12a7524b466b3efd3977536d4c5a964a9279daec8b1a844d456d80e4c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ply": {
+                    "ttl": 31536023,
+                    "length": 32,
+                    "prevalence": 0.000013670913763875978,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "davines.com",
+                "us.davines.com"
+            ]
+        },
+        {
+            "rule": "personizely\\.net\\/dc5e5edf9f\\/events",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "412c915bc4c70dd31ac7895299801c0bf2947381c8b0d7881763f87435759543"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "davines.com",
+                "us.davines.com"
+            ]
+        },
+        {
+            "rule": "personizely\\.net\\/dc5e5edf9f\\/events",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "davines.com",
+                "us.davines.com"
+            ]
+        },
         {
             "rule": "personizely\\.net\\/ed18c6e9d7\\.js",
             "cookies": 0,
@@ -29,7 +109,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "8bc7f7e1eb3c73647288203d1f017884eff105aa6dd8bbe11b6bc43a680fb956"
+                "67a2ffbb2212db16dea886e95a53450c98c5c25f099c2efe3fb011a60992e730"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -46,11 +126,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "curt.ns.cloudflare.com",

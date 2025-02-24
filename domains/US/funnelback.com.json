@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000102,
-    "sites": 15,
+    "prevalence": 0.000116,
+    "sites": 17,
     "subdomains": [
+        "delawaregov-search.clients.us",
         "actgov-search.clients",
         "gonzaga-search.clients.us",
         "regis-search.clients.us",
@@ -17,17 +18,12 @@
         "transurban-search.clients",
         "unsw-search.clients",
         "monash-search.clients",
-        "highmonkey-search.clients.us",
-        "uncg-search.clients.us"
+        "highmonkey-search.clients.us"
     ],
     "cnames": [
         {
             "original": "search.regis.edu",
             "resolved": "regis-search.clients.us.funnelback.com"
-        },
-        {
-            "original": "search.uncg.edu",
-            "resolved": "uncg-search.clients.us.funnelback.com"
         },
         {
             "original": "search.unsw.edu.au",
@@ -40,6 +36,28 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "funnelback\\.com\\/s\\/search\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delawaregov-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delaware.gov",
+                "www.dhss.delaware.gov"
+            ]
+        },
         {
             "rule": "funnelback\\.com\\/s\\/resources-global\\/js\\/jquery\\/jquery\\.tmpl\\.min\\.js",
             "cookies": 0,
@@ -170,7 +188,7 @@
                 }
             ],
             "responseHashes": [
-                "19786691ad8c2a6a26dc7862621a5b06b8e53f12dcf1dfdb4e09b50fee0dddef"
+                "cf2d05ffa7d9a54ed8ef13702adb2009e0e07f04f5ff84a66029ee476e6e5efc"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -190,8 +208,8 @@
                 "t4-search.clients.us"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "search.regis.edu",
@@ -206,6 +224,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "monash.edu",
+                "www.monash.edu",
                 "www.regis.edu",
                 "www.wheaton.edu"
             ]
@@ -280,34 +299,6 @@
             ]
         },
         {
-            "rule": "funnelback\\.com\\/s\\/resources-global\\/css\\/funnelback\\.autocompletion-2\\.6\\.0\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "uncg-search.clients.us",
-                "t4-search.clients.us"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "search.uncg.edu",
-                    "resolved": "uncg-search.clients.us.funnelback.com"
-                }
-            ],
-            "responseHashes": [
-                "9212c45b09ea31d33e19de196026f7ea6147500771a1fce18c571caccda40443"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "uncg.edu",
-                "www.wheaton.edu"
-            ]
-        },
-        {
             "rule": "funnelback\\.com\\/s\\/resources\\/wheaton-search\\/_default\\/js\\/typeahead\\.fb-2\\.6\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -340,9 +331,9 @@
         }
     ],
     "types": {
-        "Script": 23,
-        "Fetch": 2,
-        "Stylesheet": 2
+        "XHR": 2,
+        "Script": 24,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-140.awsdns-17.com",

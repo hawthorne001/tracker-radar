@@ -8,6 +8,8 @@
     "sites": 4,
     "subdomains": [
         "avm-service",
+        "plugins",
+        "config-service",
         "ip-service"
     ],
     "cnames": [],
@@ -15,30 +17,6 @@
     "resources": [
         {
             "rule": "idcrealestate\\.com\\/dist\\/plugin\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "avm-service"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "ca9627762c696c26ca2672db09560cf0f4bab42343c818f70fafc9d06255d759"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bhhsneproperties.com",
-                "www.premiersothebysrealty.com"
-            ]
-        },
-        {
-            "rule": "idcrealestate\\.com\\/config",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -49,7 +27,81 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c167aa763bed3d869d7eb8b634fee1e01fb0c3bb9e062645c92d41f9f9bd88d4"
+                "39f89664887ac54be3c6dd2475b78041437cfd30e833d3ca527d7f3995701d2f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.premiersothebysrealty.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/agnextloader\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "plugins"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "207c915d7e0d06dc772d5febcc449a7242eebe7f814dc38cd535acf4845a2263"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.premiersothebysrealty.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/config\\/avmsearch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config-service"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d354cadcc0ce263842a0b548d236855e3c0a23e4c8fc9d17a3130c3b81c4f0db",
+                "5e8de65b4c96a0b18da7c8a7baab4b3c0f08f24f0e170708943651cdfb10defc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.bhhsneproperties.com",
+                "www.premiersothebysrealty.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/avmsearch\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "plugins"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "049f4e0464f8e53aed0115919498d2c88e0c068b3d1e73d107f97aa693cc08f7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -108,11 +160,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 9,
         "Preflight": 2,
         "Fetch": 2
     },

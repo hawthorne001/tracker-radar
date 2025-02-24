@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,12 +21,14 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
-                "5135c9b68998c2cd531e90609a76d54f3e66278739181d12451b75e574efec28",
-                "c48f18778ae4121193bf42a16959cea217a68c6134a9a7a4206cb5e38a3ec072"
+                "8740af05acd1de727944d836ab78075e055948a9ffdaa81d4d83c6cd53dfc596",
+                "14fbfd11c9441933a003ca14966b10666ed2efb1030d92b54328eda4878492ff",
+                "ad14e2be38325c355e222dff43f456200ae0b13356f2d9ac4a2edbe0847d50c1",
+                "9ceaa4590fc97d4f49bdb66350453576ff1e7726dd7fc8f6a4a932d79c852e48"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -33,6 +36,30 @@
             "exampleSites": [
                 "cms.gov",
                 "qpp.cms.gov",
+                "sam.gov",
+                "www.floodsmart.gov",
+                "www.medmutual.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-ddog-gov\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e73288dc7902199fac62921a6111d555502f93c69ee045eb2647e3f2df55a2e8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "floodsmart.gov",
                 "www.medmutual.com"
             ]
         },
@@ -63,19 +90,20 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.6923076923076923
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.625
         },
         {
             "domain": "first party",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.2916666666666667
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Fetch": 3,
+        "Fetch": 5,
+        "XHR": 2,
         "Other": 2
     },
     "nameservers": [

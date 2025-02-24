@@ -10,13 +10,12 @@
     "prevalence": 0.001,
     "sites": 10,
     "subdomains": [
-        "cdn",
         "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
-        "bpp-cd-yhdabwym25ns51mh.edge.tenants.eu",
         "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
         "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
         "statista.eu",
-        "gb-visionexpress-production-cd-kzxbrkbacflvzqzk.edge.tenants.eu"
+        "gb-visionexpress-production-cd-kzxbrkbacflvzqzk.edge.tenants.eu",
+        "cdn"
     ],
     "cnames": [
         {
@@ -32,10 +31,6 @@
             "resolved": "gb-visionexpress-production-cd-kzxbrkbacflvzqzk.edge.tenants.eu.auth0.com"
         },
         {
-            "original": "id.bpp.com",
-            "resolved": "bpp-cd-yhdabwym25ns51mh.edge.tenants.eu.auth0.com"
-        },
-        {
             "original": "login.finder.com",
             "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
         },
@@ -47,50 +42,23 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "auth0\\.com\\/js\\/polyfills\\/1\\.0\\/object-assign\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "2e3281ce824bc83f86243254926e320d7a51fd34e310d76f38ddf5ca4430bcd8"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "three.co.uk",
-                "secure.vanguardinvestor.co.uk"
-            ]
-        },
-        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000603,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
-                "bpp-cd-yhdabwym25ns51mh.edge.tenants.eu",
                 "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
                 "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
                 "statista.eu",
                 "gb-visionexpress-production-cd-kzxbrkbacflvzqzk.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
                     "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
-                },
-                {
-                    "original": "id.bpp.com",
-                    "resolved": "bpp-cd-yhdabwym25ns51mh.edge.tenants.eu.auth0.com"
                 },
                 {
                     "original": "login.finder.com",
@@ -110,16 +78,17 @@
                 }
             ],
             "responseHashes": [
-                "7f31c46f5e9674a9c01e40d2e66ca26c0112b8d60efb47150dbe1b882147b46d",
-                "a9956674f47e7eb9a30be0b96b518af064f904f7d924556cc8239baf167448bf",
-                "ef07ab17c3f48544c58c46f3b6ed53504f43f737fb998b4b49b7fc3650dc08d8"
+                "e85da4bdb60babceab8b19b9a218ff941484a4c52f2a6865a5584593c0ffad4e",
+                "927885d3fd9552a0aa92f6a9489909ac31268f93fd2e8dcb169ba2b4e9ec59ec"
             ],
             "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "tealium_data2track_Tags_AdobeAnalytics_TrafficSourceMid_ThisHit": 0.00010041168792047395,
+                "tealium_data_tags_adobeAnalytics_trafficSourceMid_thisSession": 0.00010041168792047395
+            },
             "exampleSites": [
                 "androidauthority.com",
-                "www.bpp.com",
                 "www.finder.com",
                 "www.soundguys.com",
                 "www.statista.com",
@@ -211,6 +180,32 @@
             ]
         },
         {
+            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carparts4less.co.uk",
+                "www.honeywellhome.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/js\\/auth0\\/9\\.10\\.4\\/auth0\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -239,7 +234,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000603,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "first party",
@@ -251,9 +246,9 @@
         }
     ],
     "types": {
-        "Script": 6,
-        "Document": 6,
+        "Document": 5,
         "Preflight": 2,
+        "Script": 6,
         "XHR": 2
     },
     "nameservers": [
