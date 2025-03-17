@@ -9,46 +9,29 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
-        "accounts.bahn"
+        "accounts.bahn",
+        "gtm.idealo",
+        "gateway.kleinanzeigen"
     ],
     "cnames": [
         {
             "original": "accounts.bahn.de",
             "resolved": "accounts.bahn.de.edgekey.net"
+        },
+        {
+            "original": "gateway.kleinanzeigen.de",
+            "resolved": "gateway.kleinanzeigen.de.edgekey.net"
+        },
+        {
+            "original": "gtm.idealo.de",
+            "resolved": "gtm.idealo.de.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/\\.well-known\\/openid-configuration",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "accounts.bahn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "accounts.bahn.de",
-                    "resolved": "accounts.bahn.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "51e7371ab0e3ce1f6df9c88c05d912207d976b210cc444cdd7cdc14a8200ed73"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bahn.de",
-                "www.bahn.de"
-            ]
-        },
         {
             "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
             "cookies": 0.000201,
@@ -73,20 +56,79 @@
                 "bahn.de",
                 "www.bahn.de"
             ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/webvitals",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm.idealo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gtm.idealo.de",
+                    "resolved": "gtm.idealo.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idealo.de",
+                "www.idealo.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/ignite-ad-search\\/buyside\\/search",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway.kleinanzeigen"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gateway.kleinanzeigen.de",
+                    "resolved": "gateway.kleinanzeigen.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "94d12880e070751163ab8645f4d55853d7047d383fa2119e96504bf63bde441b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000503,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Document": 2
+        "Document": 2,
+        "Image": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

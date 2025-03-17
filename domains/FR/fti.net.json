@@ -4,19 +4,19 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00162,
-    "sites": 16,
+    "prevalence": 0.00172,
+    "sites": 17,
     "subdomains": [
         "poole-soi-https.prod.cachehttp.gslb",
+        "ms-gcs.prod.cachehttp.gslb",
         "datalayer.orange.fr.multis",
         "proxymedia.prod.cachehttp.gslb",
         "pdata.orange.fr.ext",
         "paas.prod.cachehttp.gslb",
         "zgif.prod.cachehttp.gslb",
         "magicrequest.orange.fr.cfy.multis",
-        "rms.orange.fr.cfy.multis",
-        "login.orange.fr.multis",
-        "trust-system-eui.orange.fr.multis"
+        "front-ng.prod.idzone.gslb",
+        "login.sosh.fr.multis"
     ],
     "cnames": [
         {
@@ -40,12 +40,20 @@
             "resolved": "datalayer.orange.fr.multis.fti.net"
         },
         {
+            "original": "elcos.cdn.s.woopic.com",
+            "resolved": "ms-gcs.prod.cachehttp.gslb.fti.net"
+        },
+        {
             "original": "gp.cdn.woopic.com",
             "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
         },
         {
-            "original": "login.orange.fr",
-            "resolved": "login.orange.fr.multis.fti.net"
+            "original": "iz.sosh.fr",
+            "resolved": "front-ng.prod.idzone.gslb.fti.net"
+        },
+        {
+            "original": "login.sosh.fr",
+            "resolved": "login.sosh.fr.multis.fti.net"
         },
         {
             "original": "magicrequest.orange.fr",
@@ -68,23 +76,15 @@
             "resolved": "paas.prod.cachehttp.gslb.fti.net"
         },
         {
-            "original": "rms.orange.fr",
-            "resolved": "rms.orange.fr.cfy.multis.fti.net"
-        },
-        {
             "original": "tools.cdn.woopic.com",
             "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
-        },
-        {
-            "original": "trust-system-eui.orange.fr",
-            "resolved": "trust-system-eui.orange.fr.multis.fti.net"
         },
         {
             "original": "z.woopic.com",
             "resolved": "zgif.prod.cachehttp.gslb.fti.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "fti\\.net\\/libs\\/common\\/o_load_responsive\\.js",
@@ -103,14 +103,14 @@
                 }
             ],
             "responseHashes": [
-                "4a6ebb2c066d1b55bf039a514d5fe88b05c9f2caca1c2003438aeeb696d9bdea"
+                "591dccfd0045e5a58f7e9c2bb5ef9ae15de9714ee58853bf1ef4165aeabae394"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "nav": {
                     "ttl": 900,
                     "length": 3,
-                    "prevalence": 0.001110998889001111,
+                    "prevalence": 0.0011111111111111111,
                     "uniqueness": 0.09090909090909091
                 }
             },
@@ -118,6 +118,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -125,7 +126,82 @@
                 "messagerie.orange.fr",
                 "reseaux.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/cookie-monster\\/cookie-monster\\.lib\\.js",
+            "cookies": 0.00141,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ms-gcs.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [
+                {
+                    "original": "elcos.cdn.s.woopic.com",
+                    "resolved": "ms-gcs.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "b1da53ecdae231ae1e9130edc01ce44d7256c085f461aabe1cf332ef7f54d43b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "nav": {
+                    "ttl": 900,
+                    "length": 3,
+                    "prevalence": 0.0013131313131313131,
+                    "uniqueness": 0.07692307692307693
+                },
+                "utag_main": {
+                    "ttl": 31536006,
+                    "length": 136,
+                    "prevalence": 0.0014141414141414141,
+                    "uniqueness": 1
+                },
+                "userconsent": {
+                    "ttl": 31622405,
+                    "length": 113,
+                    "prevalence": 0.0014141414141414141,
+                    "uniqueness": 1
+                },
+                "LPVID": {
+                    "ttl": 31536008,
+                    "length": 22,
+                    "prevalence": 0.00020202020202020202,
+                    "uniqueness": 1
+                },
+                "LPSID-31127979": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00020202020202020202,
+                    "uniqueness": 1
+                },
+                "callerId": {
+                    "ttl": null,
+                    "length": 43,
+                    "prevalence": 0.00010101010101010101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "actu.orange.fr",
+                "assistancepro.orange.fr",
+                "assistance.orange.fr",
+                "boutique.orange.fr",
+                "cinema-series.orange.fr",
+                "communaute.orange.fr",
+                "espace-client.orange.fr",
+                "messagerie.orange.fr",
+                "pro.orange.fr",
+                "reseaux.orange.fr",
+                "sports.orange.fr",
+                "video-streaming.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -154,6 +230,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -162,14 +239,13 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
         {
-            "rule": "fti\\.net\\/libs\\/50qBrlj4\\/common\\/js\\/common\\.js",
-            "cookies": 0.00141,
-            "fingerprinting": 1,
+            "rule": "fti\\.net\\/libs\\/3HDpaXqv\\/common\\/js\\/common\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
@@ -183,58 +259,16 @@
                 }
             ],
             "responseHashes": [
-                "d473b9848b85c20ce80b51e59ba856930a9a743311ccc516a0d57123b1499240"
+                "715277f26db3df8013126fd2d80296d183108def0d0b61ceeb96abf965f58bf5"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "nav": {
-                    "ttl": 900,
-                    "length": 3,
-                    "prevalence": 0.001413998586001414,
-                    "uniqueness": 0.07142857142857142
-                },
-                "utag_main": {
-                    "ttl": 31536005,
-                    "length": 136,
-                    "prevalence": 0.001312998687001313,
-                    "uniqueness": 1
-                },
-                "userconsent": {
-                    "ttl": 31622405,
-                    "length": 113,
-                    "prevalence": 0.001312998687001313,
-                    "uniqueness": 1
-                },
-                "LPVID": {
-                    "ttl": 31536008,
-                    "length": 22,
-                    "prevalence": 0.000504999495000505,
-                    "uniqueness": 1
-                },
-                "LPSID-31127979": {
-                    "ttl": null,
-                    "length": 22,
-                    "prevalence": 0.000403999596000404,
-                    "uniqueness": 1
-                },
-                "callerId": {
-                    "ttl": null,
-                    "length": 43,
-                    "prevalence": 0.000100999899000101,
-                    "uniqueness": 1
-                },
-                "LPSID-64227774": {
-                    "ttl": null,
-                    "length": 22,
-                    "prevalence": 0.000100999899000101,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -244,7 +278,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -274,6 +307,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -283,7 +317,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -312,6 +345,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -320,7 +354,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -349,6 +382,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -357,7 +391,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -369,8 +402,8 @@
                 "datalayer.orange.fr.multis"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 11,
+            "prevalence": 0.00111,
             "cnames": [
                 {
                     "original": "datalayer.orange.fr",
@@ -379,6 +412,7 @@
             ],
             "responseHashes": [
                 "f6a854fb61d83494d33168a5ec58525558bcc4f29638bfb969a7d112043acbfb",
+                "22377a0a646d586a208dde46c0df928b8ae9cb09a576dc05a051b73535a4be2c",
                 "b94e7f8f1fe8d3f220e4d666957de33d2b7ca558de2782e119277ab0b7d84261",
                 "a39e45e66d6185cd54e5c6fbadb9d1bb3fad1a0d47df999bf5472b4549bfefb3",
                 "0df03074c416b44416fa43efb54ed401b6bc377f65add2a64781346da179b458",
@@ -394,6 +428,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -421,7 +456,7 @@
                 }
             ],
             "responseHashes": [
-                "c19d184034c0cab0679e8386430c1832db85fd7ad332bcc87d355cd676fd33f4"
+                "081b3c92cb163d08e9c2aa38af201176c8f2197a8c742773ec22461f339771c2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -430,6 +465,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -439,20 +475,19 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
         {
-            "rule": "fti\\.net\\/libs\\/50qBrlj4\\/common\\/js\\/elcos-jaffa\\.gp\\.all\\.generic\\.18l86MMaJ\\.js",
+            "rule": "fti\\.net\\/libs\\/3HDpaXqv\\/common\\/js\\/elcos-jaffa\\.gp\\.all\\.generic\\.Ijp9GLSh\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 11,
+            "prevalence": 0.00111,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -460,7 +495,7 @@
                 }
             ],
             "responseHashes": [
-                "875ce29fc9ae3d1c7640b40ab1c0f53d8259931b6ed2840de3242256255ce24c"
+                "015a86dc48d959fc585d7ebd07d4e2161e0fad50eaedadcd59aef347fdc9c115"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -468,6 +503,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -486,8 +522,8 @@
                 "proxymedia.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "proxymedia.woopic.com",
@@ -503,6 +539,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -522,8 +559,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -539,6 +576,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -558,8 +596,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -575,6 +613,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -594,8 +633,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -611,6 +650,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -630,8 +670,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -647,6 +687,44 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
+                "boutique.orange.fr",
+                "cinema-series.orange.fr",
+                "communaute.orange.fr",
+                "espace-client.orange.fr",
+                "messagerie.orange.fr",
+                "reseaux.orange.fr",
+                "sports.orange.fr",
+                "video-streaming.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/imageServiceEtPaiement\\.6792c518ea\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poole-soi-https.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [
+                {
+                    "original": "gp.cdn.woopic.com",
+                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "a29195bec6b7cc2d2868b2e7eb617d63e5cf8124d5cf0d3a55d97dff11ff458b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -666,8 +744,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -683,6 +761,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -702,8 +781,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -719,6 +798,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -738,8 +818,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -755,6 +835,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -774,8 +855,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -791,6 +872,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -810,8 +892,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -827,6 +909,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -846,8 +929,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -863,6 +946,44 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
+                "boutique.orange.fr",
+                "cinema-series.orange.fr",
+                "communaute.orange.fr",
+                "espace-client.orange.fr",
+                "messagerie.orange.fr",
+                "reseaux.orange.fr",
+                "sports.orange.fr",
+                "video-streaming.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/ConseilsEtAteliers_AccessibiliteEtHandicap_visuel\\.8c1b873d88\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poole-soi-https.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [
+                {
+                    "original": "gp.cdn.woopic.com",
+                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "9213afd7e9c260d3a2cbd9652722dfc083af4bfa7c672012da596a7cb2fa9891"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -882,8 +1003,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [
                 {
                     "original": "gp.cdn.woopic.com",
@@ -899,6 +1020,7 @@
             "exampleSites": [
                 "orange.fr",
                 "actu.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -940,6 +1062,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -949,7 +1072,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -983,6 +1105,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -992,7 +1115,6 @@
                 "reseaux.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
-                "wmail.orange.fr",
                 "www.orange.fr"
             ]
         },
@@ -1033,8 +1155,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00131,
+            "sites": 14,
+            "prevalence": 0.00141,
             "cnames": [
                 {
                     "original": "cdn.woopic.com",
@@ -1051,6 +1173,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -1071,8 +1194,8 @@
                 "pdata.orange.fr.ext"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00131,
+            "sites": 14,
+            "prevalence": 0.00141,
             "cnames": [
                 {
                     "original": "pdata.orange.fr",
@@ -1089,6 +1212,7 @@
                 "orange.fr",
                 "actu.orange.fr",
                 "assistancepro.orange.fr",
+                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "cinema-series.orange.fr",
                 "communaute.orange.fr",
@@ -1225,8 +1349,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000606,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [
                 {
                     "original": "cdn.adgtw.orangeads.fr",
@@ -1241,6 +1365,7 @@
                 "orange.fr",
                 "cinema-series.orange.fr",
                 "messagerie.orange.fr",
+                "pro.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
                 "www.orange.fr"
@@ -1254,8 +1379,8 @@
                 "poole-soi-https.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000606,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [
                 {
                     "original": "cdn.adgtw.orangeads.fr",
@@ -1263,7 +1388,7 @@
                 }
             ],
             "responseHashes": [
-                "b729ca6e81362676f1d65732cac67bd9315b70a3165d817d8ec58889dd2a4077"
+                "e7f29201ffd78e465b78de84d21b05f395f19117064162b9b743210f34a930a7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1272,6 +1397,7 @@
                 "orange.fr",
                 "cinema-series.orange.fr",
                 "messagerie.orange.fr",
+                "pro.orange.fr",
                 "sports.orange.fr",
                 "video-streaming.orange.fr",
                 "www.orange.fr"
@@ -1294,14 +1420,14 @@
                 }
             ],
             "responseHashes": [
-                "4a6ebb2c066d1b55bf039a514d5fe88b05c9f2caca1c2003438aeeb696d9bdea"
+                "591dccfd0045e5a58f7e9c2bb5ef9ae15de9714ee58853bf1ef4165aeabae394"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "nav": {
                     "ttl": 900,
                     "length": 3,
-                    "prevalence": 0.000201999798000202,
+                    "prevalence": 0.00020202020202020202,
                     "uniqueness": 0.5
                 }
             },
@@ -1328,7 +1454,7 @@
                 }
             ],
             "responseHashes": [
-                "ac884f3035012a4da85ed958c48fbeb2cfa17ee551bb45a2f020c45fa82a3bd9"
+                "740f3dd6e6734139d7278473ed8ef7dfd82d3a7e1b51271cf2214947e2b1c3a0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1409,7 +1535,7 @@
                 }
             ],
             "responseHashes": [
-                "26a010b08b9bb4fabcdef57d9024febaa69c310a6a9634fae2ef8fa51e58eae9"
+                "f9f7605549c18c0e34b707c407b632b94c00d7ed49621a9d77df8a50f01f7749"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1420,7 +1546,7 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/v1\\/AUTH_59ca9cb325c64069b852d3ca93b50f52\\/elcopro\\/1739873522\\/data\\/prospect\\/pro_datav2_elcos_2\\.1\\.42\\.json",
+            "rule": "fti\\.net\\/v1\\/AUTH_59ca9cb325c64069b852d3ca93b50f52\\/elcopro\\/1741086318\\/data\\/prospect\\/pro_datav2_elcos_2\\.1\\.42\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1436,7 +1562,7 @@
                 }
             ],
             "responseHashes": [
-                "289dff5e2897389335a53b9d7c3ca8aef35362c1685b447800ecd93249972041"
+                "80b338059a4eae5cd25032b1e78d4855c331b509590344c01aaa9855035e6a35"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1497,6 +1623,34 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orange.fr",
+                "pro.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/z\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zgif.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "z.woopic.com",
+                    "resolved": "zgif.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "08e2c358ce13cb67f94ebb35b0f67c8763190a857c0db68da6eb196dfe9da46a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "assistancepro.orange.fr",
                 "pro.orange.fr"
             ]
         },
@@ -1582,34 +1736,6 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/z\\.gif",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "zgif.prod.cachehttp.gslb"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [
-                {
-                    "original": "z.woopic.com",
-                    "resolved": "zgif.prod.cachehttp.gslb.fti.net"
-                }
-            ],
-            "responseHashes": [
-                "08e2c358ce13cb67f94ebb35b0f67c8763190a857c0db68da6eb196dfe9da46a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "orange.fr",
-                "assistancepro.orange.fr",
-                "pro.orange.fr"
-            ]
-        },
-        {
             "rule": "fti\\.net\\/opus-bmc\\/opus-bmc",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1664,7 +1790,67 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1\\.8a6672b58748bf146b3c\\.css",
+            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/app-store\\.8c3941223a\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poole-soi-https.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [
+                {
+                    "original": "gp.cdn.woopic.com",
+                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "961b373bc54f194e906c428f69c1699899b6cc4f6e5be14c7b56b0082ef68eda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "boutique.orange.fr",
+                "espace-client.orange.fr",
+                "reseaux.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/google-play\\.4a146d843b\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poole-soi-https.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [
+                {
+                    "original": "gp.cdn.woopic.com",
+                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "db6eee7ebf243aed82419cd2b2e784b722ba09392ae76b31b2bb7da574d51d77"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "boutique.orange.fr",
+                "espace-client.orange.fr",
+                "reseaux.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1\\.ac90bfc56bcee1d1dbbf\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1680,7 +1866,7 @@
                 }
             ],
             "responseHashes": [
-                "e542f45373d9ebeafc94c995a163a3c710f2105306b1dfe97e24dd6c9ea6766e"
+                "efd9c14aa38aa470554541c02855af8bb4f35a986f17897d63fa0dab06858aef"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -1691,7 +1877,7 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1_accueils\\.a4cabd3ca91111d36146\\.css",
+            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1_accueils\\.feaf1d7787fe8d049208\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1707,7 +1893,7 @@
                 }
             ],
             "responseHashes": [
-                "fedf81f675082bc264b2ae63d28161fb895f84be930af18629aeaca5b18f8245"
+                "b15fa01426d6e6bf32d3830045bd5886c318f59dc63bf205bdf44732f3362121"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -1718,7 +1904,7 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1_accueils\\.28657610d03ba1d5183e\\.js",
+            "rule": "fti\\.net\\/18d8339538654b1dbf96a30e92745731\\/sg1\\/sg1_accueils\\.8a8610d25298f3d83307\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
@@ -1734,7 +1920,7 @@
                 }
             ],
             "responseHashes": [
-                "49929ae337f25c9bcaef8066bb1d9d286f01e6f199408ef064e116b640d21a2f"
+                "25135636f52bf56ff622adef90a2de0ab48d4c45aab7326ecd3812c8fd9f5b92"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1772,174 +1958,192 @@
             ]
         },
         {
-            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/app-store\\.8c3941223a\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "poole-soi-https.prod.cachehttp.gslb"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
-            "cnames": [
-                {
-                    "original": "gp.cdn.woopic.com",
-                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
-                }
-            ],
-            "responseHashes": [
-                "961b373bc54f194e906c428f69c1699899b6cc4f6e5be14c7b56b0082ef68eda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "orange.fr",
-                "espace-client.orange.fr",
-                "reseaux.orange.fr",
-                "www.orange.fr"
-            ]
-        },
-        {
-            "rule": "fti\\.net\\/zema\\/3\\.0\\.0\\/assets\\/google-play\\.4a146d843b\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "poole-soi-https.prod.cachehttp.gslb"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
-            "cnames": [
-                {
-                    "original": "gp.cdn.woopic.com",
-                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
-                }
-            ],
-            "responseHashes": [
-                "db6eee7ebf243aed82419cd2b2e784b722ba09392ae76b31b2bb7da574d51d77"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "orange.fr",
-                "espace-client.orange.fr",
-                "reseaux.orange.fr",
-                "www.orange.fr"
-            ]
-        },
-        {
-            "rule": "fti\\.net\\/",
+            "rule": "fti\\.net\\/$v=3",
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "rms.orange.fr.cfy.multis",
-                "login.orange.fr.multis"
+                "front-ng.prod.idzone.gslb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "rms.orange.fr",
-                    "resolved": "rms.orange.fr.cfy.multis.fti.net"
-                },
-                {
-                    "original": "login.orange.fr",
-                    "resolved": "login.orange.fr.multis.fti.net"
+                    "original": "iz.sosh.fr",
+                    "resolved": "front-ng.prod.idzone.gslb.fti.net"
                 }
             ],
             "responseHashes": [
-                "0f446e149494d40219199a37d94e2bf92459e57b7207dea3db12ff6dd7739eea"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "orange.fr",
-                "wmail.orange.fr"
-            ]
-        },
-        {
-            "rule": "fti\\.net\\/c15d9d8fc98141b084d96f795046449b\\/trust-js-latest\\/trust\\.js",
-            "cookies": 0,
-            "fingerprinting": 3,
-            "subdomains": [
-                "poole-soi-https.prod.cachehttp.gslb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "cdn.woopic.com",
-                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
-                }
-            ],
-            "responseHashes": [
-                "4009fbdd83f7da9f5aae314789fb7048fc5c4d1a7abf08d17b9710e0d414d4f6"
+                "7b2493aa7f7f7d416c609ca0387186470957eff7faa9ce2b3a1909397949a7ce"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "orange.fr",
-                "wmail.orange.fr"
+                "sosh.fr",
+                "communaute.sosh.fr"
             ]
         },
         {
-            "rule": "fti\\.net\\/trust",
-            "cookies": 0,
+            "rule": "fti\\.net\\/api\\/propagate",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "trust-system-eui.orange.fr.multis"
+                "login.sosh.fr.multis"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "trust-system-eui.orange.fr",
-                    "resolved": "trust-system-eui.orange.fr.multis.fti.net"
+                    "original": "login.sosh.fr",
+                    "resolved": "login.sosh.fr.multis.fti.net"
                 }
             ],
             "responseHashes": [],
-            "type": "XHR",
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/api\\/v1\\/images\\/1394%2Fportal-orangepro%2Ficons%2F592x444px_iPhone16e\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxymedia.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "proxymedia.woopic.com",
+                    "resolved": "proxymedia.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "583fdcb5cfe3f42515fd346026f13d60780120a77263626de8e16427fad6c846"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orange.fr",
-                "wmail.orange.fr"
+                "pro.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/api\\/v1\\/images\\/1394%2Fportal-orangepro%2Ficons%2Fescda_2025\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxymedia.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "proxymedia.woopic.com",
+                    "resolved": "proxymedia.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "1a56e64ff0e51aaca54685a17e733c7c3431731c05bca66d0878abb2693d2f55"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "pro.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/api\\/v1\\/images\\/1394%2Fportal-orangepro%2Ficons%2F340x642_HP_Portail_Open_LB7_tel\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxymedia.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "proxymedia.woopic.com",
+                    "resolved": "proxymedia.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "232992d2050672e8ba25feab1e60524170907dd0ecde138df5c3b0a0e762df11"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "pro.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/api\\/v1\\/images\\/1394%2Fportal-orangepro%2Ficons%2F340x642_HP_Portail_Internet_LB7\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxymedia.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "proxymedia.woopic.com",
+                    "resolved": "proxymedia.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "479aaa18d4928807b523157e71e1b0a9032f2c3ba3494f96248cf90e9a135d80"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "pro.orange.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00162,
+    "cookies": 0.00172,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7511737089201878
-        },
-        {
-            "domain": "woopic.com",
-            "prevalence": 0.09859154929577464
+            "prevalence": 0.7555555555555555
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.0892018779342723
+            "prevalence": 0.09333333333333334
+        },
+        {
+            "domain": "woopic.com",
+            "prevalence": 0.08888888888888889
         },
         {
             "domain": "privacy-center.org",
-            "prevalence": 0.06103286384976526
+            "prevalence": 0.06222222222222222
         }
     ],
     "types": {
-        "Script": 86,
-        "Image": 196,
-        "XHR": 16,
-        "Fetch": 31,
+        "Script": 102,
+        "Image": 244,
+        "XHR": 15,
+        "Fetch": 32,
         "Font": 32,
         "Stylesheet": 10,
         "Document": 2

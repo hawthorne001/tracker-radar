@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00534,
-    "sites": 53,
+    "prevalence": 0.00594,
+    "sites": 59,
     "subdomains": [
-        "event-ingestor.judy.pnap"
+        "event-ingestor.judy.pnap",
+        "production-cloudcontrol-cache-cdn.infra"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,59 +21,105 @@
                 "event-ingestor.judy.pnap"
             ],
             "apis": {},
-            "sites": 52,
-            "prevalence": 0.00524,
+            "sites": 58,
+            "prevalence": 0.00584,
             "cnames": [],
             "responseHashes": [
-                "f90daf14401a3148a35444dd82f71a373a2f7e43222572afc49b63d144d0e468",
-                "0bcd50acb9a5841507925ede1fc79ae2724203c00a5bd653e568ca0b4c946a7d",
-                "17f20fcf3df416f11679ccfce53493af3edd4dd5167f175e5c326d00d5742e35",
-                "90c951fab9f3be1915925d5df2a33f760e9497460ac6af5909b5b39e97c33da7",
-                "df9232f5f16f10928bf832022424c35a664ea56f1537a7d81f891ade14cc14d1",
-                "f5ab1f24cbcb96ec6e3833617831a36ace956421b57f474105d0b62dd0cf8c93",
-                "06e1082c4e856e75c8704334aec4abea049dd1357025e664bfbd18c373e6fb62",
-                "1dd99acf1010817558de5a4fd8e4546dbf1b6cee0ff411c8ec3093b5c03b6c2d",
-                "d64d0b462f3b6c6882ead937d7fab1e1a091359d2a9c1a39811e7235de3ce907",
-                "98224c702ab72d15a51dc9bd2b04cb882770202ea97262b6f2a34bdce13ad78d",
-                "f9502246404c5a4b446f428a0d798a4a723dae2144964b07df4557e7e3549562",
-                "32ec2e7f900117140c58077dc5e3e46ee45510a61106ed400815a9c7ce489f85",
-                "3c1d22ef1a0b79e871caf4ecca622ad1506fc00e27050884a43a40d01c8055e8",
-                "da867ae7c0765c76cc65b0af1abf236b38cfc7b5bfab2b14e98d5bf7e52f434c",
-                "4bfd75024ab8b641ca1856a972ee89b63b67a5566196910d5f3323e1dbf9586e",
-                "08caf0b3208f19f2f58a298a630d4f7fc42421b10418e85a3885b7e3ecbbeeb5",
-                "83366834f667fcf28f06aee82cd87fecf9adbfa1812860ed731cb059b6744921",
-                "24256d4bc6af3df6faffe131fb2b7f62cdf88b870295437035859f03ec0b5163",
-                "077690a9d335522603e0e2af3accc8a83448bcddf88ef72370d70779a264a6fd",
-                "b66fc775f56c04e0b4b6ae0378cf1b5c4c24ab86ff0623436c68c33c4941f163",
-                "3a62dc998b53bede22fbb77a3770d504141d8161600cda0ef262f1f10fba73c4",
-                "2b536b3a0579cf690cc34cc19891a8e0f5d0ee8ace9894689c69b66714325946",
-                "46e97fc7a3b37cf290f96ef3f9d728289eee7a7a17096eb18be9cf4dfa26be65",
-                "1d36332ca0b6dd5693fcae7f86b09d883d9949d5e56734cdf8045cb47ca7c7e0"
+                "b1fa50b0513f3ed1bbe50d06f481ba461eb76c6b861d007a253202eee080eb0e",
+                "7936b434bb2940d12111bf0397f84722b25d02ab53f245153ee5bd07bc198c69",
+                "0f7488eecbbb4d7811e32414bda4240698cdeb9df7b3d1a3744ffd3e942fdfba",
+                "0c2d21112ac17024ee4ddd86b1fb6d036034433cf5b2b5893a27cf06a83e835a",
+                "0fff5f10c3f32bd27c8affe0e4b361914e5d6580213cc00f9853b8ead966e5b7",
+                "e763c21d831027b9bd5c65b5e902edddfec05bede6d26cc125a797f7f16d83c2",
+                "5b65adce564f27b5c20a6688f9493e4bd903af22c80ffa8fd5a8b7c9779ecec0",
+                "eea8a2e739afc697fd3350759a69f341da270c47c443312b116bea7614f649d0",
+                "0cc3496fb709c59f611e5b2c77f9f315a281d619783b5ec11036fb3c0534f53f",
+                "d6adf125f785e1125124089a906d46048f3f827c02cd1a79b97c7181cb0e75bc",
+                "79c72ee75dae5f7c83f75500ba7d366a4e51e7228bcc888d73a5cb4d8b911943",
+                "bf212cebde799eeb77d052e19900a71600317ded0a46b1196c0995708403c2bb",
+                "e9c86779c709bb6c37e78e6b30a3260bc9eb2badae3efc133e1b9757e799da3f",
+                "521a0b77ac2a0c0ca060ad56dfcff0da726f592105f5b206a4447f7bbc23da5f",
+                "ffccb6dc6dbd9eb93cecc9000ff24dd8e7502154ff858d9fd7fd59b9a050dd34",
+                "5805ce0e55eaf3958e17739d6962f40274f68576b85e7bdcdf81b0bc21439f91",
+                "498d4772762ea0268c9c527cfa78b8d85b8b972e7ae2d3cd07405435665088d1",
+                "6a64386f02d32b7c2d98c4f7ece8fbee7a79f76dead58e1bdc45dc6ea389ede4",
+                "c88b129253dc7a9defd68c66c482dbbfbc4593571e0812440c7104f3ef5b605a",
+                "cc271ed07a9af4c28668714aefde6d7fed6b10bb4de24e31e0ba8a4f5d5084bb",
+                "d89d9641d934e2f9e49255f757015182785eb1b5487f42d4ca0228aaeb5ab1b1",
+                "c6e43e88a5605ef35e8c22ec135d1bb355094d44020d47326df39996c6f54704",
+                "4b5cf1adf5ed2cc80e5a5e497cffd2db472e42a4ceefc001d065080512b84e6c",
+                "633bb42027213c1bf48ce32b91453f5cc0c9aedfef49a8c98f790589321b88ea",
+                "d0de1d35fe7c524eb07acda87977c491f498162d2b20bbdc9e67a4433eb17cc8",
+                "842c3cde97b071fe47519a845a64b62a4d900245adac7d97f26f4790011b17b4",
+                "61099507bf0e00ff8409400805d86dcfafa729fd168f796e7986e8ddcd5a25ca",
+                "5fcd25a652a2ab02512a5c5469368c04ba1dfa7f7f15e42933bf559364183024"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "giphy.com",
                 "twinfinite.net",
-                "dotesports.com",
-                "wegotthiscovered.com",
-                "www.dailyfaceoff.com",
-                "smittenkitchen.com",
-                "www.uexpress.com",
-                "forums.golfwrx.com",
-                "www.pastemagazine.com",
                 "attackofthefanboy.com",
-                "www.artofmanliness.com",
+                "thelibertydaily.com",
+                "www.deseret.com",
+                "www.hockeyfights.com",
                 "www.the-crossword-solver.com",
-                "www.escapistmagazine.com",
-                "astrostyle.com",
-                "www.gameskinny.com",
-                "uproxx.com",
+                "www.propublica.org",
+                "www.pcinvasion.com",
+                "canucksarmy.com",
+                "games.readersdigest.ca",
+                "golf.com",
+                "www.gamepur.com",
                 "www.statmuse.com",
-                "www.myjewishlearning.com",
-                "www.crosswordsolver.com",
-                "www.westernjournal.com",
-                "www.salon.com"
+                "www.destructoid.com",
+                "www.golfwrx.com",
+                "www.electronics-tutorials.ws",
+                "www.dailyfaceoff.com",
+                "www.escapistmagazine.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "aditude\\.cloud\\/cache\\/static-configs\\/analytics-raven-config\\/latest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-cloudcontrol-cache-cdn.infra"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pgatour.com",
+                "www.theplayers.com"
+            ]
+        },
+        {
+            "rule": "aditude\\.cloud\\/cache\\/static-configs\\/analytics-raven-config\\/latest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-cloudcontrol-cache-cdn.infra"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0e71b1bd89a185c49b0de76aa4a14d798c29d5d1d90ea4cb5ec21f458054e112"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pgatour.com",
+                "www.theplayers.com"
             ]
         }
     ],
@@ -82,27 +129,36 @@
     "topInitiators": [
         {
             "domain": "aditude.io",
-            "prevalence": 0.7538461538461538
+            "prevalence": 0.6197183098591549
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.18309859154929578
+        },
+        {
+            "domain": "dn0qt3r0xannq.cloudfront.net",
+            "prevalence": 0.08450704225352113
         },
         {
             "domain": "first party",
-            "prevalence": 0.046153846153846156
+            "prevalence": 0.056338028169014086
         },
         {
             "domain": "arkadiumhosted.com",
-            "prevalence": 0.03076923076923077
+            "prevalence": 0.028169014084507043
         },
         {
             "domain": "px-cloud.net",
-            "prevalence": 0.015384615384615385
+            "prevalence": 0.014084507042253521
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.014084507042253521
         }
     ],
     "types": {
-        "Fetch": 52
+        "Fetch": 60,
+        "Preflight": 2
     },
     "nameservers": [
         "raina.ns.cloudflare.com",

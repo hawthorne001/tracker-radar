@@ -10,30 +10,37 @@
     "prevalence": 0.000303,
     "sites": 3,
     "subdomains": [
+        "datalayer",
+        "sso",
+        "consent",
+        "pdata",
         "login",
-        "captcha",
         "trust-system-eui"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "sso.sosh.fr",
+            "resolved": "sso.orange.fr"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "orange\\.fr\\/",
-            "cookies": 0.000101,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "login",
-                "captcha"
+                "datalayer"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "7542d4dd9b9fc74e7ecdfbfa65b91e8d2d86289ff3d50d4bf24ccf043614cab4",
-                "0f446e149494d40219199a37d94e2bf92459e57b7207dea3db12ff6dd7739eea"
+                "2a8cb08669c42d31436f0cadfffba0bd4c36fb53d21a9b913854cd7eb51e1803",
+                "a9da9fcfabc7cf509fab1c867430a2cfe5dc6765618d6a15b184bf7941c6ac2a"
             ],
-            "type": "Document",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,25 +50,97 @@
             ]
         },
         {
-            "rule": "orange\\.fr\\/trust",
-            "cookies": 0,
+            "rule": "orange\\.fr\\/pushms\\/advise\\/mct\\/1\\.1\\/proposal",
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [
-                "trust-system-eui"
+                "sso"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "cnames": [
+                {
+                    "original": "sso.sosh.fr",
+                    "resolved": "sso.orange.fr"
+                }
             ],
-            "type": "XHR",
+            "responseHashes": [
+                "8798d7de5a17fdce16b5c2425cf5b19c17763ba38204c32cf4efccb64cca58bd",
+                "b06c74233f60cd62fb10a095e05a67ed675857ff9989996893a0f35bb14445a2"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sosh.fr",
                 "communaute.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/global-cookies\\/97747f45a7b03994b051f5ddaca9abd6be6330be\\/global-cookies\\.97747f45a7b03994b051f5ddaca9abd6be6330be\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fa2ce86457ff3fc269469dd5742744427744101b8e4b511cbbf7484a789f562b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "communaute.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/pconsent\\/_pdb\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pdata"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1bd2aa0bb9f0a0fd919c42a18c81645bd6d9601f60086928b05db8a5be978689"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "communaute.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c645bf2caf03e925c07a64312ae51ac4390df1334b9f53e70fbdc0154219c788"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
                 "www.sosh.fr"
             ]
         },
@@ -84,6 +163,27 @@
                 "sosh.fr",
                 "www.sosh.fr"
             ]
+        },
+        {
+            "rule": "orange\\.fr\\/trust",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trust-system-eui"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "communaute.sosh.fr",
+                "www.sosh.fr"
+            ]
         }
     ],
     "categories": [],
@@ -92,24 +192,25 @@
     "topInitiators": [
         {
             "domain": "woopic.com",
-            "prevalence": 0.875
+            "prevalence": 0.7894736842105263
         },
         {
             "domain": "privacy-center.org",
-            "prevalence": 0.0625
+            "prevalence": 0.10526315789473684
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.0625
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
-        "Document": 3,
         "XHR": 3,
-        "Fetch": 2
+        "Fetch": 8,
+        "Document": 4,
+        "Image": 2
     },
     "nameservers": [
-        "ns1.orange.fr",
-        "ns2.orange.fr"
+        "ns2.orange.fr",
+        "ns1.orange.fr"
     ]
 }

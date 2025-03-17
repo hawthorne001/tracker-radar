@@ -4,12 +4,17 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000707,
-    "sites": 7,
+    "prevalence": 0.000606,
+    "sites": 6,
     "subdomains": [
-        "inclusion-matomo-production.osc-secnum-fr1"
+        "inclusion-matomo-production.osc-secnum-fr1",
+        "rdvmairie-backend-prod.osc-secnum-fr1"
     ],
     "cnames": [
+        {
+            "original": "api.rendezvouspasseport.ants.gouv.fr",
+            "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+        },
         {
             "original": "matomo.inclusion.beta.gouv.fr",
             "resolved": "inclusion-matomo-production.osc-secnum-fr1.scalingo.io"
@@ -61,7 +66,7 @@
                 }
             ],
             "responseHashes": [
-                "3619ad0164e86163b8b2d69492d5ffca87a7fed06aeaad51de036002b8598318"
+                "7b8e5489b6e9de6c65ce544b2697ce292d5dc8ad581762d4b574f8e9186e34ea"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -69,6 +74,58 @@
             "exampleSites": [
                 "beta.gouv.fr",
                 "immersion-facile.beta.gouv.fr"
+            ]
+        },
+        {
+            "rule": "scalingo\\.io\\/api\\/Information",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rdvmairie-backend-prod.osc-secnum-fr1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.rendezvouspasseport.ants.gouv.fr",
+                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "rendezvouspasseport.ants.gouv.fr"
+            ]
+        },
+        {
+            "rule": "scalingo\\.io\\/api\\/Information",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rdvmairie-backend-prod.osc-secnum-fr1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.rendezvouspasseport.ants.gouv.fr",
+                    "resolved": "rdvmairie-backend-prod.osc-secnum-fr1.scalingo.io"
+                }
+            ],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "rendezvouspasseport.ants.gouv.fr"
             ]
         }
     ],
@@ -83,7 +140,9 @@
     ],
     "types": {
         "Ping": 2,
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "burt.ns.cloudflare.com",

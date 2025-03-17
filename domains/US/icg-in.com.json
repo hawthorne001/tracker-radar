@@ -4,15 +4,58 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000684,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
         "service4",
+        "conn-check",
         "service2"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "icg-in\\.com\\/web\\/cchd_config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7425f34337dba4f3dbf446ba81056426a9f2250bc719ad2272625e455286d09f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airbnb.it",
+                "www.ifood.com.br"
+            ]
+        },
+        {
+            "rule": "icg-in\\.com\\/connectioncheck",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "conn-check"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airbnb.it",
+                "www.ifood.com.br"
+            ]
+        },
         {
             "rule": "icg-in\\.com\\/web\\/configs\\/v1",
             "cookies": 0,
@@ -25,13 +68,13 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "555fd3836df5160b8ea14509285b884ba32c658f6eda1ac49de7081c507df1d6"
+                "f63989c0fd57484340681719b7eee1eee9179a6df47278692ebe98f896b6ad8b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ifood.com.br",
+                "airbnb.it",
                 "www.ifood.com.br"
             ]
         },
@@ -51,7 +94,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ifood.com.br",
+                "airbnb.it",
+                "www.ifood.com.br"
+            ]
+        },
+        {
+            "rule": "icg-in\\.com\\/web\\/v4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airbnb.it",
+                "www.airbnb.it",
                 "www.ifood.com.br"
             ]
         },
@@ -66,14 +132,12 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ifood.com.br",
+                "airbnb.it",
                 "www.ifood.com.br"
             ]
         }
@@ -84,16 +148,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9333333333333333
+            "prevalence": 0.7
+        },
+        {
+            "domain": "muscache.com",
+            "prevalence": 0.25
         },
         {
             "domain": "incognia.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "XHR": 7,
+        "WebSocket": 2,
+        "Preflight": 4
     },
     "nameservers": [
         "ed.ns.cloudflare.com",

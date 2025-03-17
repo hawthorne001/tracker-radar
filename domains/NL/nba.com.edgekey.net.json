@@ -12,36 +12,44 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "cdn"
+        "stats",
+        "cdn",
+        "core-api"
     ],
     "cnames": [
         {
             "original": "cdn.nba.com",
             "resolved": "cdn.nba.com.edgekey.net"
+        },
+        {
+            "original": "core-api.nba.com",
+            "resolved": "core-api.nba.com.edgekey.net"
+        },
+        {
+            "original": "stats.nba.com",
+            "resolved": "stats.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "nba\\.com\\.edgekey\\.net\\/manage\\/2025\\/02\\/shaq-ogs-trophy-celebration\\.jpg",
-            "cookies": 0.000201,
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "stats"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "57e0bf24273fc6d61548cdab6c337a4d5a61c456db71debb14ed681c2a5dbf6e"
-            ],
-            "type": "Image",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -66,7 +74,7 @@
                 }
             ],
             "responseHashes": [
-                "59dd59cc01a675798d6753e783a6ad1481db301519c06e712ad84ed170834728"
+                "8e5d4b6cb4b06dbcb4a3f7b03b52852d0ce1271b7473cd6547f8d884a6889975"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -93,7 +101,7 @@
                 }
             ],
             "responseHashes": [
-                "680e92511c5d3c8a74ff0a79444057a66a28a0aeb5faa58e424107b525cc2164"
+                "d41be411a8ef83775e85d2225fa5f4b4914a990abe991bd636e994d4b206207b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -120,9 +128,36 @@
                 }
             ],
             "responseHashes": [
-                "599afceefc876a408c201ebed60fa1b10dd445f6154d6db399b2f663363fec90"
+                "84ecb532b81a4265231e17a76296ca60fd4f10609d5f74a68c523dddf4f494ff"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.9\\/feeds\\/gamecardfeed",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "30d0427caa3e6f0a53ec40eb6da0be8dbb77e5541d682f693d75e16cf3bfa2e7"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -141,8 +176,8 @@
         }
     ],
     "types": {
-        "Image": 2,
-        "Fetch": 6
+        "Fetch": 8,
+        "XHR": 2
     },
     "nameservers": []
 }

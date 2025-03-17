@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
         "as-cobi",
+        "smb-giga",
         "tonline"
     ],
     "cnames": [
@@ -16,27 +17,36 @@
             "resolved": "as-cobi.pur-pass.net"
         },
         {
+            "original": "pur.giga.de",
+            "resolved": "smb-giga.pur-pass.net"
+        },
+        {
             "original": "pur.t-online.de",
             "resolved": "tonline.pur-pass.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pur-pass\\.net\\/now\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "as-cobi",
+                "smb-giga",
                 "tonline"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "pur.computerbild.de",
                     "resolved": "as-cobi.pur-pass.net"
+                },
+                {
+                    "original": "pur.giga.de",
+                    "resolved": "smb-giga.pur-pass.net"
                 },
                 {
                     "original": "pur.t-online.de",
@@ -44,6 +54,7 @@
                 }
             ],
             "responseHashes": [
+                "7e3117adcfa837496f8dc387c728687adc3e70fe5277e31794aab80bd93db6da",
                 "f54a059fec2a3c4f91e16622301605526fe251afe515e0cd942bb97a0dc2ce2b"
             ],
             "type": "Script",
@@ -51,6 +62,57 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "computerbild.de",
+                "www.giga.de",
+                "www.t-online.de"
+            ]
+        },
+        {
+            "rule": "pur-pass\\.net\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tonline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-online.de",
+                "www.t-online.de"
+            ]
+        },
+        {
+            "rule": "pur-pass\\.net\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tonline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-online.de",
                 "www.t-online.de"
             ]
         }
@@ -65,7 +127,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-243-a.gandi.net",

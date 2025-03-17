@@ -10,8 +10,9 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "hub",
-        "cbc-login.hub"
+        "postmedia.hub",
+        "cbc-login.hub",
+        "hub"
     ],
     "cnames": [
         {
@@ -22,28 +23,29 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "loginradius\\.com\\/include\\/js\\/LoginRadius\\.js",
-            "cookies": 0.000301,
-            "fingerprinting": 1,
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
-                "hub"
+                "postmedia.hub",
+                "cbc-login.hub"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "41158c4e6935252861ac55b68074126d6416dd832459de490b77cfa185d9c186"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
             ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "watson.de",
-                "www.watson.ch",
-                "www.watson.de"
+                "nationalpost.com",
+                "www.cbc.ca"
             ]
         },
         {
@@ -74,51 +76,54 @@
             ]
         },
         {
-            "rule": "loginradius\\.com\\/ssologin\\/login",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "loginradius\\.com\\/include\\/js\\/LoginRadius\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "cbc-login.hub"
+                "hub"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "login.cbc.ca",
-                    "resolved": "cbc-login.hub.loginradius.com"
-                }
+            "cnames": [],
+            "responseHashes": [
+                "41158c4e6935252861ac55b68074126d6416dd832459de490b77cfa185d9c186"
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbc.ca",
-                "www.cbc.ca"
+                "watson.ch",
+                "www.watson.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000201,
     "topInitiators": [
-        {
-            "domain": "first party",
-            "prevalence": 0.6
-        },
         {
             "domain": "lrcontent.com",
             "prevalence": 0.4
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "postmedia.digital",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 3,
+        "Preflight": 2,
         "XHR": 2,
-        "Preflight": 2
+        "Script": 2
     },
     "nameservers": [
-        "noah.ns.cloudflare.com",
-        "hope.ns.cloudflare.com"
+        "hope.ns.cloudflare.com",
+        "noah.ns.cloudflare.com"
     ]
 }

@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000803,
-    "sites": 8,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "cdn.by"
+        "cdn.by",
+        "measurements-api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,14 +24,14 @@
                 "cdn.by"
             ],
             "apis": {
-                "window.localStorage": 8,
-                "Notification.permission": 8
+                "window.localStorage": 6,
+                "Notification.permission": 6
             },
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "764559c00ef4f715518e3b9350e3b2ddb2ae871aacc44a1a4f45559335508cf4"
+                "a0891a8664e724e01f8cf7e6f4c5adfa2fc3260e0c6a84d7c3b63fd755b5c03f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -38,8 +39,6 @@
             "exampleSites": [
                 "auf1.tv",
                 "www.dji.com",
-                "www.e-sante.fr",
-                "www.idealwine.com",
                 "www.laliberte.ch",
                 "www.medisite.fr",
                 "www.phonandroid.com",
@@ -47,21 +46,27 @@
             ]
         },
         {
-            "rule": "wonderpush\\.com\\/sdk\\/1\\.1\\.36\\.2\\/wonderpush\\.min\\.js",
+            "rule": "wonderpush\\.com\\/sdk\\/1\\.1\\.37\\.0\\/wonderpush\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn.by"
             ],
             "apis": {
-                "window.localStorage": 8,
-                "Notification.permission": 7
+                "window.localStorage": 6,
+                "Notification.permission": 5,
+                "window.indexedDB": 5,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.permissions": 4,
+                "Navigator.prototype.language": 4,
+                "Navigator.prototype.languages": 4
             },
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "d21d4e07fbaf8aab111cf97e80bff603091dc1db469279292f596c47d87b874b"
+                "ab730cac7b9d7612b9a1a68d9e45e791fbd5e46ff36640a6d5234c303b0e9877"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -69,12 +74,58 @@
             "exampleSites": [
                 "auf1.tv",
                 "www.dji.com",
-                "www.e-sante.fr",
-                "www.idealwine.com",
                 "www.laliberte.ch",
                 "www.medisite.fr",
                 "www.phonandroid.com",
                 "www.sortiraparis.com"
+            ]
+        },
+        {
+            "rule": "wonderpush\\.com\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "measurements-api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "90498414258ad664b689bfeac2a6e597a85b229deffa7912240d65fad72ecd79",
+                "be40ca0617bc283fcdf1e00b167a9b8ceb8e6fac93e80ae2fa32e455cf32e29a",
+                "592138eb8c2ac4b84e66b3203d6c88d1d6a965ee617df9596740305091dc3033"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auf1.tv",
+                "www.laliberte.ch",
+                "www.phonandroid.com",
+                "www.sortiraparis.com"
+            ]
+        },
+        {
+            "rule": "wonderpush\\.com\\/config\\/webkeys\\/e31822339c749cdcb48c511fa5ffec9c09089b25af7857a42cf786434741fbdf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.by"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2d21dfaff76cfbc326e4d85c07f4b268df626cf692d4541ab414b91a0a327040"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laliberte.ch",
+                "www.laliberte.ch"
             ]
         }
     ],
@@ -83,25 +134,27 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.4444444444444444
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4444444444444444
         },
         {
             "domain": "djicdn.com",
-            "prevalence": 0.1
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 16
+        "Script": 12,
+        "XHR": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
     ]
 }
