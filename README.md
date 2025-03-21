@@ -21,4 +21,3 @@ The Tracker Radar data is licensed under the [Creative Commons Attribution-NonCo
 - **Questions about the Tracker Radar?** See our [frequently asked questions](docs/FAQ.md)
 
 - **Need help with other DuckDuckGo things?** See [DuckDuckGo Help Pages](https://help.duckduckgo.com/).
-
