@@ -11,10 +11,8 @@
     "sites": 4,
     "subdomains": [
         "cdn1",
-        "api-cf",
         "www",
-        "cdn-assets",
-        "tracker"
+        "cdn-assets"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -28,41 +26,46 @@
             ],
             "apis": {
                 "PerformanceTiming.prototype.navigationStart": 4,
-                "console.memory": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
                 "Navigator.prototype.userAgent": 4,
                 "Navigator.prototype.connection": 4,
-                "Date.prototype.getTime": 4,
-                "window.localStorage": 4,
+                "Document.cookie setter": 4,
                 "window.devicePixelRatio": 4,
-                "Document.cookie getter": 3,
-                "Document.cookie setter": 3
+                "Date.prototype.getTime": 4
             },
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "d1fc74a9680f4dbf4ccc2e2eee42bb85d77810de50e535fdb1402c527d513ec8"
+                "1a6048b8610a2d116c5c72cc6401f865418a9119e657eea5e649feb863060d2f"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "cookietest": {
-                    "ttl": -1739932609,
+                    "ttl": -1742163287,
                     "length": 1,
-                    "prevalence": 0.00030135610246107485,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.000401888877725309,
+                    "uniqueness": 0.25
+                },
+                "checkout_continuity_service": {
+                    "ttl": 157680008,
+                    "length": 36,
+                    "prevalence": 0.0003014166582939817,
+                    "uniqueness": 1
                 },
                 "tracker_device": {
-                    "ttl": 157680014,
+                    "ttl": 157680008,
                     "length": 36,
-                    "prevalence": 0.00030135610246107485,
+                    "prevalence": 0.0003014166582939817,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anker.com",
+                "www.comptia.org",
                 "www.eufy.com",
-                "www.iqair.com",
                 "www.uaudio.com"
             ]
         },
@@ -71,24 +74,24 @@
             "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
-                "api-cf"
+                "www"
             ],
             "apis": {},
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "c83645cbbc6c1aed7e9c0dd44d451fa834473371a4f5c15027c02989ca149996",
-                "a849777f1be4bd1a9110790c854c392f7fb0a512b8610c51aa3a51a6a906bc66",
-                "457010d17658485a25d0761f072eedcfb8d14fb4963c19bd950cddd55614f60d"
+                "dd41f1060cc873bd47e8eb14a10c4da78f0aa3212de3dce2d3c90baba4622c9a",
+                "05ef4f8bc1870dbf5fed45acdc8d0390b87f42dd1b7de1909512349ac12b2a11",
+                "471e32054923e852eb2662a5de5f62ac9b66b61f39cc4e79b654ed741949959f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anker.com",
+                "www.comptia.org",
                 "www.eufy.com",
-                "www.iqair.com",
                 "www.uaudio.com"
             ]
         },
@@ -112,8 +115,8 @@
             "exampleSites": [
                 "anker.com",
                 "www.anker.com",
+                "www.comptia.org",
                 "www.eufy.com",
-                "www.iqair.com",
                 "www.uaudio.com"
             ]
         },
@@ -129,38 +132,16 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "a35e055c4b58b454954800e81a8e3f31a32f71ccaf3dfc97da16af01d50ea364"
+                "ad2fe15d516b0df971ac6d9c670eb4abd3650ae1c42235d93358a60f868fe672"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anker.com",
+                "www.comptia.org",
                 "www.eufy.com",
-                "www.iqair.com",
                 "www.uaudio.com"
-            ]
-        },
-        {
-            "rule": "affirm\\.com\\/collect",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tracker"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "70f07df8529a5da355e70cb8fd1a2c6cdbe6dec83a5332bfcf06f5a917e6e607"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "eufy.com",
-                "www.eufy.com"
             ]
         }
     ],
@@ -170,22 +151,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8260869565217391
+            "prevalence": 0.75
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.17391304347826086
+            "prevalence": 0.25
         }
     ],
     "types": {
         "Script": 4,
-        "Fetch": 13,
-        "Ping": 2
+        "Fetch": 13
     },
     "nameservers": [
-        "ns-614.awsdns-12.net",
+        "ns-217.awsdns-27.com",
         "ns-1890.awsdns-44.co.uk",
-        "ns-1463.awsdns-54.org",
-        "ns-217.awsdns-27.com"
+        "ns-614.awsdns-12.net",
+        "ns-1463.awsdns-54.org"
     ]
 }

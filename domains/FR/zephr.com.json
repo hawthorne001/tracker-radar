@@ -4,22 +4,27 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000707,
-    "sites": 7,
+    "prevalence": 0.000808,
+    "sites": 8,
     "subdomains": [
+        "ny-post-decider.cdn",
         "ny-post-ny-post.cdn",
-        "ny-post-page-six.cdn",
-        "nhst.auth",
-        "assets"
+        "assets",
+        "economist-production-economistcom.cdn",
+        "newsuk-the-times.cdn"
     ],
     "cnames": [
         {
-            "original": "zephr-v4.nypost.com",
-            "resolved": "ny-post-ny-post.cdn.zephr.com"
+            "original": "p.zephr.economist.com",
+            "resolved": "economist-production-economistcom.cdn.zephr.com"
         },
         {
-            "original": "zephr-v4.pagesix.com",
-            "resolved": "ny-post-page-six.cdn.zephr.com"
+            "original": "zephr-v4.decider.com",
+            "resolved": "ny-post-decider.cdn.zephr.com"
+        },
+        {
+            "original": "zephr-v4.nypost.com",
+            "resolved": "ny-post-ny-post.cdn.zephr.com"
         }
     ],
     "fingerprinting": 1,
@@ -29,20 +34,20 @@
             "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "ny-post-ny-post.cdn",
-                "ny-post-page-six.cdn"
+                "ny-post-decider.cdn",
+                "ny-post-ny-post.cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "zephr-v4.nypost.com",
-                    "resolved": "ny-post-ny-post.cdn.zephr.com"
+                    "original": "zephr-v4.decider.com",
+                    "resolved": "ny-post-decider.cdn.zephr.com"
                 },
                 {
-                    "original": "zephr-v4.pagesix.com",
-                    "resolved": "ny-post-page-six.cdn.zephr.com"
+                    "original": "zephr-v4.nypost.com",
+                    "resolved": "ny-post-ny-post.cdn.zephr.com"
                 }
             ],
             "responseHashes": [
@@ -52,28 +57,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nypost.com",
-                "pagesix.com"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr\\/sso",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "nhst.auth"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dn.no",
-                "www.dn.no"
+                "decider.com",
+                "nypost.com"
             ]
         },
         {
@@ -84,10 +69,11 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "45f491c7c6006913bb2156a02b3416c4661989b03209611e30b765dc841d78d1"
@@ -96,8 +82,92 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "polygon.com",
-                "www.theverge.com"
+                "bikeradar.com",
+                "www.polygon.com",
+                "www.theverge.com",
+                "www.thetimes.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "economist-production-economistcom.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "p.zephr.economist.com",
+                    "resolved": "economist-production-economistcom.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "3c941f42450b176b22a4f79f312eb99960b8fcc82c959b2fe498ffa08368286b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "economist.com",
+                "www.thetimes.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "economist-production-economistcom.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "p.zephr.economist.com",
+                    "resolved": "economist-production-economistcom.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "economist.com",
+                "www.thetimes.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "economist-production-economistcom.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "p.zephr.economist.com",
+                    "resolved": "economist-production-economistcom.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "4e52b8d9d39ab9d37d3568eaccf6b96142fcc387165155af9d6aba4f709338d8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "economist.com",
+                "www.thetimes.com"
             ]
         }
     ],
@@ -107,26 +177,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
-        },
-        {
-            "domain": "nhst.tech",
-            "prevalence": 0.25
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Other": 2,
-        "Document": 2,
-        "Script": 2
+        "Script": 4,
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net",
         "ns-1113.awsdns-11.org",
-        "ns-1991.awsdns-56.co.uk"
+        "ns-1991.awsdns-56.co.uk",
+        "ns-46.awsdns-05.com",
+        "ns-877.awsdns-45.net"
     ]
 }

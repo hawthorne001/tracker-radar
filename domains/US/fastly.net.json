@@ -12,6 +12,7 @@
     "prevalence": 0.0000478,
     "sites": 7,
     "subdomains": [
+        "e.sni.us-eu",
         "d.sni.us-eu"
     ],
     "cnames": [
@@ -20,12 +21,68 @@
             "resolved": "d.sni.us-eu.fastly.net"
         },
         {
+            "original": "my.cityexperiences.com",
+            "resolved": "e.sni.us-eu.fastly.net"
+        },
+        {
             "original": "new-skip.speedrun.com",
             "resolved": "d.sni.us-eu.fastly.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "e.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "my.cityexperiences.com",
+                    "resolved": "e.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cityexperiences.com",
+                "www.cityexperiences.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "e.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "my.cityexperiences.com",
+                    "resolved": "e.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "0a57499cee7daa857968342c7968313120c661a55689e0afd1bd285136d75605"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cityexperiences.com",
+                "www.cityexperiences.com"
+            ]
+        },
         {
             "rule": "fastly\\.net\\/cargo\\.js",
             "cookies": 0,
@@ -54,38 +111,6 @@
             ]
         },
         {
-            "rule": "fastly\\.net\\/v",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "d.sni.us-eu"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [
-                {
-                    "original": "attr-shift.dotabuff.com",
-                    "resolved": "d.sni.us-eu.fastly.net"
-                },
-                {
-                    "original": "new-skip.speedrun.com",
-                    "resolved": "d.sni.us-eu.fastly.net"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dotabuff.com",
-                "www.dotabuff.com",
-                "www.speedrun.com"
-            ]
-        },
-        {
             "rule": "fastly\\.net\\/d",
             "cookies": 0,
             "fingerprinting": 0,
@@ -106,8 +131,8 @@
                 }
             ],
             "responseHashes": [
-                "3d8bfe4605254ad51dfa89d75dd3080d558fbc8cf7c5289a32eb630013c44bbe",
-                "db344beb2ec1aa6e022164e835566fc063b978517cd5d33805eea811db7e24b2"
+                "da0f313bcb492748430afdb2d6c79e45ed46f15bc9227fd5363723b8f2a55b41",
+                "d47be7f836f91d6e30bc5a7a4bf8754d11b7e2283689ecad5b088a920d720c8e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -140,6 +165,38 @@
             ],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotabuff.com",
+                "www.dotabuff.com",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/v",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "attr-shift.dotabuff.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                },
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -251,31 +308,35 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.00000684,
+    "cookies": 0.00000683,
     "topInitiators": [
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.5384615384615384
-        },
-        {
-            "domain": "pubmatic.com",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.46153846153846156
         },
         {
             "domain": "hornblower.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "pubmatic.com",
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
+        "Preflight": 5,
+        "Fetch": 5,
         "Script": 7,
-        "Ping": 6,
-        "Fetch": 3,
-        "Preflight": 3
+        "Ping": 6
     },
     "nameservers": [
-        "ns1.fastly.net",
+        "ns4.fastly.net",
         "ns2.fastly.net",
-        "ns3.fastly.net",
-        "ns4.fastly.net"
+        "ns1.fastly.net",
+        "ns3.fastly.net"
     ]
 }
