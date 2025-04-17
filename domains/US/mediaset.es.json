@@ -12,7 +12,9 @@
     "subdomains": [
         "baul",
         "mab",
-        "medicion"
+        "medicion",
+        "cerbero",
+        "album"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -139,9 +141,10 @@
                 "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
                 "Navigator.prototype.product": 1,
-                "Event.prototype.timeStamp": 2,
                 "Document.cookie getter": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "Event.prototype.timeStamp": 2,
+                "window.sessionStorage": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -154,7 +157,7 @@
                 "57af196ac715da0d6e8b4da87cb6": {
                     "ttl": null,
                     "length": 36,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.00001366577611358993,
                     "uniqueness": 1
                 }
             },
@@ -167,7 +170,7 @@
         {
             "rule": "mediaset\\.es\\/dist\\/commons\\.bundle\\.js",
             "cookies": 0.0000137,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "baul"
             ],
@@ -176,23 +179,25 @@
                 "URL.createObjectURL": 2,
                 "Document.cookie getter": 2,
                 "Document.cookie setter": 2,
-                "window.innerWidth": 2,
+                "NavigatorUAData.prototype.platform": 1,
+                "Navigator.prototype.platform": 1,
+                "window.innerWidth": 1,
                 "window.innerHeight": 1,
-                "window.localStorage": 1,
+                "window.localStorage": 2,
                 "Date.prototype.getTime": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5c6e4578a049534a39d0cf56981195e81ec5647b5a260a47433a1ced0be2f129"
+                "eff54ddf8bd3442acbf4e9771fbb6e2497dcc37cf84e498e82318e79cab5cfb3"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "ms_session_start": {
                     "ttl": null,
                     "length": 13,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.00001366577611358993,
                     "uniqueness": 1
                 }
             },
@@ -205,16 +210,22 @@
         {
             "rule": "mediaset\\.es\\/dist\\/MSPlayerWrapper\\.bundle\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "baul"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.storage": 1,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "8c696fefdc8662597fc2bae6c39f6bf643e201e2cea8a3400bd6bc2b2f5a8a65"
+                "a9e127c0bb2e8fe2307a1d591614e9e6ac4eeb2b50c113837c98510b2bfaf1af"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -236,7 +247,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "1cbcd7ef8593ca08a16f2cfb4dcb96652490ddc10b161d6bbd6f55b153950d38",
+                "2228c2c832a7c2c8d0d167bb34f70251292db306ffae83935c4d76f7ff88833b",
                 "ea4f89ac8706ce04436210e5d622324d667164e4a8d02be55f05a32019caf28c"
             ],
             "type": "Fetch",
@@ -271,18 +282,40 @@
             "type": "Script",
             "firstPartyCookies": {
                 "AMCV_2A150C0F53DB12860A490D45%40AdobeOrg": {
-                    "ttl": 63072006,
+                    "ttl": 63072008,
                     "length": 226,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.00001366577611358993,
                     "uniqueness": 1
                 },
                 "AMCVS_2A150C0F53DB12860A490D45%40AdobeOrg": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.00001366577611358993,
                     "uniqueness": 0.5
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "divinity.es",
+                "www.mitele.es"
+            ]
+        },
+        {
+            "rule": "mediaset\\.es\\/dist\\/assets\\/web-workers\\/checkRun\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "baul"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "aa57cc0bd4faf7ea513491c907bc57e223e054ea9bcebb1365cb0155cede7959"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "divinity.es",
@@ -319,83 +352,6 @@
             ]
         },
         {
-            "rule": "mediaset\\.es\\/js\\/modern\\/s_code\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 2,
-            "subdomains": [
-                "medicion"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.appName": 2,
-                "Date.prototype.getTime": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Document.cookie getter": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "window.devicePixelRatio": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.javaEnabled": 2,
-                "Screen.prototype.pixelDepth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "d526a0d3022a4522cdcdc2d339cc868144f0fa85fc2c35eafdcb5ed127a81119"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "s_ppvl": {
-                    "ttl": null,
-                    "length": 13,
-                    "prevalence": 0.000013665682737509566,
-                    "uniqueness": 0.5
-                },
-                "s_ppv": {
-                    "ttl": null,
-                    "length": 186,
-                    "prevalence": 0.000013665682737509566,
-                    "uniqueness": 1
-                },
-                "s_cc": {
-                    "ttl": null,
-                    "length": 4,
-                    "prevalence": 0.000013665682737509566,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "divinity.es",
-                "www.mitele.es"
-            ]
-        },
-        {
-            "rule": "mediaset\\.es\\/dist\\/assets\\/web-workers\\/checkRun\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "baul"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "aa57cc0bd4faf7ea513491c907bc57e223e054ea9bcebb1365cb0155cede7959"
-            ],
-            "type": "Other",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "divinity.es",
-                "www.mitele.es"
-            ]
-        },
-        {
             "rule": "mediaset\\.es\\/defaultview\\/adjs\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -416,6 +372,125 @@
                 "divinity.es",
                 "www.mitele.es"
             ]
+        },
+        {
+            "rule": "mediaset\\.es\\/js\\/modern\\/s_code\\.js",
+            "cookies": 0.00000683,
+            "fingerprinting": 2,
+            "subdomains": [
+                "medicion"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Screen.prototype.pixelDepth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d526a0d3022a4522cdcdc2d339cc868144f0fa85fc2c35eafdcb5ed127a81119"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "s_ppvl": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.000006832888056794965,
+                    "uniqueness": 1
+                },
+                "s_ppv": {
+                    "ttl": null,
+                    "length": 177,
+                    "prevalence": 0.000006832888056794965,
+                    "uniqueness": 1
+                },
+                "s_cc": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000006832888056794965,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "divinity.es",
+                "www.mitele.es"
+            ]
+        },
+        {
+            "rule": "mediaset\\.es\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cerbero"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "divinity.es",
+                "www.mitele.es"
+            ]
+        },
+        {
+            "rule": "mediaset\\.es\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cerbero"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0522dfb0772106a9ed6797f326d21f7186d249e5ca3a0fd9a5c78c7bba484100"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "divinity.es",
+                "www.mitele.es"
+            ]
+        },
+        {
+            "rule": "mediaset\\.es\\/cimg\\/2024\\/10\\/18\\/cuartomilenio-805_da39\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "album"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1946b87539f432e1ed1b9479cfe1fa0c7c30486f03bf0011d1deda6ba7004452"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mitele.es",
+                "www.mitele.es"
+            ]
         }
     ],
     "categories": [],
@@ -424,24 +499,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.972972972972973
+            "prevalence": 0.9606299212598425
         },
         {
             "domain": "gigya.com",
-            "prevalence": 0.02702702702702703
+            "prevalence": 0.03937007874015748
         }
     ],
     "types": {
         "Stylesheet": 2,
         "Script": 20,
-        "Fetch": 5,
-        "Other": 2
+        "Fetch": 7,
+        "Other": 2,
+        "Preflight": 2,
+        "Image": 2
     },
     "nameservers": [
-        "a1-15.akam.net",
-        "a5-65.akam.net",
-        "ns-309.awsdns-38.com",
         "ns-849.awsdns-42.net",
-        "ns-1193.awsdns-21.org"
+        "a5-65.akam.net",
+        "a9-66.akam.net",
+        "ns-1193.awsdns-21.org",
+        "a1-15.akam.net",
+        "ns-309.awsdns-38.com"
     ]
 }

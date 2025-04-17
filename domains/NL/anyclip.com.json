@@ -9,15 +9,16 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
         "player",
         "marketplace",
         "trafficmanager",
         "assets",
         "cdn5-fstl-tf",
-        "user-sync-api"
+        "user-sync-api",
+        "prebid"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -45,24 +46,24 @@
                 "Navigator.prototype.platform": 3,
                 "Navigator.prototype.doNotTrack": 3,
                 "Document.cookie setter": 3,
+                "window.localStorage": 3,
                 "Event.prototype.timeStamp": 3,
                 "window.innerWidth": 3,
                 "window.innerHeight": 3,
-                "window.localStorage": 3,
                 "window.sessionStorage": 3
             },
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "42e94de94f58861b66f8b38bcde1493373a1991f8f0e6d226805dcb7ad657fe4"
+                "86f1dbef2708fbb4bf52e6cb8973ea940af0b990c890d44c3a78ca975d06b53f"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "ac_user_id": {
                     "ttl": 2592000,
                     "length": 79,
-                    "prevalence": 0.00030105368790767686,
+                    "prevalence": 0.00030111412225233364,
                     "uniqueness": 1
                 }
             },
@@ -108,8 +109,11 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "f0e629aefe228ba1cc9e73ea873a475301fc9bb2bcb09d9b7c009f1142a8d747",
+                "86afc61f862d77ea6be1a58362314bc30b5f9a933c32abcee1aead1138530e80"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -129,11 +133,8 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [
-                "09469913a24f6a5b24d42526a35d15874e0dd115a5516da91497e01699f333d6",
-                "ea5d73a30ae0a7ac1b31d3fb8c01511eef0bd05bf59af9e16991601836416c80"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -168,13 +169,15 @@
         {
             "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/prod\\/v1\\/src\\/display-ads-manager\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "player"
             ],
             "apis": {
                 "Date.prototype.getTime": 3,
                 "window.sessionStorage": 3,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
                 "window.localStorage": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.doNotTrack": 2,
@@ -184,7 +187,7 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "7ee0634f9ad9d1811becca0db7a7aa7a58e06747ae100d787cdac8af0221c96a"
+                "f569a4684fba3db75a68f92154ccb18b5b7dde3c31fec75c30b1f61fc5b23442"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -219,28 +222,6 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/anyclip-logo-rb\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "72e63b3e7e3eb43d89a0cebe950947cde033618473b609b1ed0288f29675439d"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "convertunits.com",
-                "www.thesaurus.com"
-            ]
-        },
-        {
             "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/prod\\/v1\\/src\\/sync\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -264,6 +245,28 @@
             ]
         },
         {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/anyclip-logo-rb\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "72e63b3e7e3eb43d89a0cebe950947cde033618473b609b1ed0288f29675439d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
             "rule": "anyclip\\.com\\/trafficmanager\\/api\\/v2\\/player\\/playlist",
             "cookies": 0,
             "fingerprinting": 0,
@@ -274,11 +277,8 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [
-                "70197bc9d29a8e93656b34f1d5e5a146baf16f299ada925e2c987127dbc18b78",
-                "2fe5983437dcd569fa725304c8149f471b25c77d1dfec22a050d414fdfc7d726"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -298,8 +298,11 @@
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "172704b630f419086da1cabe4c2ca3b0d6d1aa048a5f0e9975db801359ceb9ab",
+                "a52481fc4f84e182f2406a1fae39e6c62023ddac870af35d3f407d7e05e0eeae"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -328,9 +331,9 @@
                 "Navigator.prototype.doNotTrack": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
-                "Date.prototype.getTimezoneOffset": 2,
                 "window.devicePixelRatio": 2,
                 "Navigator.prototype.connection": 2
             },
@@ -338,20 +341,20 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "42700256ae3b72a6117dde775a7c68e7f6cfd9158ea90391d2bd79bb473e97f4"
+                "6cb17ca9fec23c776d1c0c639e5a4c1db939e455e8ca17b73ce0c46f33d9abcf"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_pbjs_userid_consent_data": {
-                    "ttl": 2592022,
+                    "ttl": 2592023,
                     "length": 16,
-                    "prevalence": 0.00020070245860511792,
+                    "prevalence": 0.00020074274816822243,
                     "uniqueness": 0.5
                 },
                 "hb_insticator_uid": {
-                    "ttl": 2592022,
+                    "ttl": 2592024,
                     "length": 36,
-                    "prevalence": 0.00010035122930255896,
+                    "prevalence": 0.00010037137408411121,
                     "uniqueness": 1
                 }
             },
@@ -363,7 +366,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/FgRQMIUBmuzlA6j6i3UX\\/1671552890269_300x169_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/CIrzboYBQqh196x8G6NE\\/1676898679929_300x169_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -374,7 +377,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "29f5a9af06e87bf623ec1978b3763d42c2f8973cfee9c029e58423d0b97a85cc"
+                "5794f878b38c8b9d05ddee5b505a8517ac48fc227c47d49eeea1d7d8dc55e4fc"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -401,34 +404,6 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "convertunits.com",
-                "www.convertunits.com",
-                "www.dictionary.com",
-                "www.thesaurus.com"
-            ]
-        },
-        {
-            "rule": "anyclip\\.com\\/v1\\/waterfall",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "marketplace"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000401,
-            "cnames": [],
-            "responseHashes": [
-                "e0848bd3cb5296bd0725adf124d086e08da6324ddec5bb4ef76ebfb59bb392ee",
-                "3a81ae11cd3d150a77b41eec82765eee6e486fdd595b59b0442260919b317da3",
-                "be6f519fb73a84790724e5aa3fb667843106af9ae543ac5aa4fa77a0b04d2e9e"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010035122930255896
-            },
             "exampleSites": [
                 "convertunits.com",
                 "www.convertunits.com",
@@ -467,11 +442,39 @@
             "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
-                "d612e978879bca195f9f80200c540f476d6ac0bfa0a3181fdf37bb0b70a881c7"
+                "dc50b2b9d4a46327470392173e72deac2bcbd6ecb0ab68196d64828ef8b7b707"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.convertunits.com",
+                "www.dictionary.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/v1\\/waterfall",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marketplace"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000401,
+            "cnames": [],
+            "responseHashes": [
+                "74f9524a3f9eef3a2535a24a44655bc90f7817b98e653df9e9e2fe3877c10b2a",
+                "5518bfcdf12585301942b0c94bc9afd79a0c8722bd6e0274d96155268d9ed92a",
+                "9ddf6356cd815f0d6a9418df857b00f489dfa50f9026a2e8e365f11f24e15e33"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010037137408411121
+            },
             "exampleSites": [
                 "convertunits.com",
                 "www.convertunits.com",
@@ -507,20 +510,20 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "320493eb4b55c023e2b96bc8f845f9f9de37aa3c040b7639ac44316500363a54"
+                "e0afa8b71c8847fdb9f0e822ab81b7f1d9b204bbc9d842a9f3e633588091261a"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_pbjs_userid_consent_data": {
-                    "ttl": 2592016,
+                    "ttl": 2592026,
                     "length": 16,
-                    "prevalence": 0.00030105368790767686,
+                    "prevalence": 0.00030111412225233364,
                     "uniqueness": 0.3333333333333333
                 },
                 "hb_insticator_uid": {
                     "ttl": 2592016,
                     "length": 36,
-                    "prevalence": 0.00010035122930255896,
+                    "prevalence": 0.00010037137408411121,
                     "uniqueness": 1
                 }
             },
@@ -539,8 +542,8 @@
                 "user-sync-api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -552,12 +555,131 @@
                 "convertunits.com",
                 "www.convertunits.com",
                 "www.dictionary.com",
-                "www.jpost.com",
                 "www.thesaurus.com"
             ]
         },
         {
-            "rule": "anyclip\\.com\\/1EXKPpUBtWJnfKcJnOcO\\/1740515289599_852x480_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "user-sync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/volume-off\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/fullscreen\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/pause\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/replay-10\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/anyclip-widget\\/lre-widget\\/assets\\/lre_theme\\/next\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.dictionary.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/p_cq05UBFzPLyxPXQ4cV\\/1743004581176_852x480_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -568,7 +690,7 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "1882ac2544851e554343d395ee65d81379a63f3a29ea5fd0589bcf36dc242fb4"
+                "a9babcf0317c6cd10e2b963312c50ba46ed2b55234d6851dd2c5cba3adcc879a"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -580,7 +702,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/1EXKPpUBtWJnfKcJnOcO\\/1740515289705_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/p_cq05UBFzPLyxPXQ4cV\\/1743004581132_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -591,7 +713,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f052603f3d58c208ec4940af0fb24b81ef431ff7578fed43719d5af43336ed98"
+                "8bf4aa377ba66bd59ac271bdddb06182496114b477f9a3dc633ad2ec8904f0be"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -602,7 +724,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/00XJPpUBtWJnfKcJ8-cE\\/1740515239695_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/4-ec7ZUBiWPex_YZeE_Y\\/1743448278566_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -613,7 +735,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "481226cf2514244bbc413e8f3cb1da7bc33928107d5ff0eaad1a98a2cd983341"
+                "1be00e177d03e47df3a917e4cae5606d589a350651cc91d738875a0af13547d1"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -624,7 +746,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/ddXJPpUBJUUcb49jbpf0\\/1740515208412_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/Bx4p05UBNcijmRwChZNW\\/1743004532189_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -635,7 +757,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bbed4e3941d7ef9d78943e17b884afd1c59053f9b1e9b5e88edcd95991cd4d90"
+                "9f7daa267657b153b4272cfe55d0554e599d91836482c64d3a79f8defdc8670a"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -646,7 +768,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/0kXIPpUBtWJnfKcJ6uft\\/1740515182375_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/z7Uo05UBUX1UGFEv7-nw\\/1743004497018_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -657,7 +779,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3630a0e92bea33ef18147b1a973d58d1b394f4600610a829040038a5b592714c"
+                "45cd3a952f262c3ec4ca7a1bfe7725ce3724a56fb12aac3b9898345fd755d8bc"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -668,7 +790,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/dNXIPpUBJUUcb49jRpdp\\/1740515135402_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/pvco05UBFzPLyxPXJIfw\\/1743004444426_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -679,7 +801,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "5eb69bf8f53b3fef083d0053dbbaad9b02ae77aa4c7737dce7a64ba144c113d6"
+                "bed5939d2991c26280c6df22dfb4753065a6c02a89d760fe3808ab10085d7e68"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -690,7 +812,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/3DvHPpUBy1zUk6OvtzBR\\/1740515093803_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/pfcn05UBFzPLyxPXn4d8\\/1743004409686_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -701,7 +823,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "736506058836d5af85a86a6da1a7ed63c6098292484e2c54da0834d1bfce61c0"
+                "352dfa4fe7a16732898f4d200775a7a2db44410f0f5d432eaf728699561f1239"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -712,7 +834,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/2zvHPpUBy1zUk6OvJDDb\\/1740515055027_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/pPcn05UBFzPLyxPXDYfQ\\/1743004379902_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -723,7 +845,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bad3fb72188fdc89e4c14d8ca5b1b9e50d2d25fc68c38e885ceec834eb83b202"
+                "c2cb4d19829ef645a28f96783bf955de5b6d3b4d85ec318e75db1fe3e90d03eb"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -734,7 +856,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/0UXGPpUBtWJnfKcJiufJ\\/1740515022093_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/Bh4m05UBNcijmRwCJJMD\\/1743004308715_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -745,7 +867,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "df831b66133a55211d6b53c4f9774047d42b0f1873fdc98f976aacf1a1af2a50"
+                "1f5cc442f6d8b3537201f96606989ee375c1af29a1eacd58ad73ebd466cb2743"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -756,7 +878,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/c9XFPpUBJUUcb49j-ZeK\\/1740515010689_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/zrUl05UBUX1UGFEvkel_\\/1743004276686_250x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -767,7 +889,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "be7efa314e19319c3554c74d81d53718949bfd5a8d7da73480dda72f28a1d90c"
+                "58c6228c4e8c1b2053d3a8b1527896a5b746f9c93c33652d6abdb84824f47c62"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -778,7 +900,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/z0XEPpUBtWJnfKcJPucj\\/1740514863201_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/o_ck05UBFzPLyxPXZIck\\/1743004193785_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -789,7 +911,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "855425cf7511859b50e75007c2a597731da576f7d6f0794a60c781b013be47c5"
+                "9971ef61db379dc56a281891104158a4a121404df0d2be3416a165caa6c19715"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -800,7 +922,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/2jvDPpUBy1zUk6OvbTAi\\/1740514815990_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/BR4j05UBNcijmRwCX5Pn\\/1743004128311_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -811,7 +933,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "678d668442d18d3062b263bdcdeb379e09df77f9c5e63c4b498b258dc253177f"
+                "07ef4c1eaeadb2b121ebeed14189438637b2a7c326697e63c99daa68c2ef5316"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -822,7 +944,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/cdXCPpUBJUUcb49jzZc5\\/1740514773192_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/ovci05UBFzPLyxPXb4dl\\/1743004061755_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -833,7 +955,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ceedbe1201a50d49512a764090b04abf2fdbc413d0809ba6dad5110c02cc12c4"
+                "bc61945260abd68ffff7353eb56c2858ec6ebe783406af8309a54d5cec7c64f8"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -844,7 +966,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/cNXCPpUBJUUcb49jOpdl\\/1740514732711_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/BB4h05UBNcijmRwCVJNK\\/1743004001547_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -855,7 +977,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "47f19cae16a88583031a6e4791e902f60029945cd450b635581cef305ceb67d3"
+                "7d8caa31c2a619f14b2e320d265491d9a09b0f7a5752e4adcf13fb326d4542ef"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -866,7 +988,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/2TvBPpUBy1zUk6OvqTAU\\/1740514699171_248x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/ofcg05UBFzPLyxPXpYdD\\/1743003959763_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -877,7 +999,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0a4dbe56abb964ade6d708b162adae5b909ecfa035de0c141758d932563f0b11"
+                "10915ecc946d53b7ba79f2119b28325f0b2b92533de9091f44b4a6f60228908e"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -888,7 +1010,7 @@
             ]
         },
         {
-            "rule": "anyclip\\.com\\/2DvBPpUBy1zUk6OvGTAN\\/1740514663220_250x140_thumbnail\\.jpg",
+            "rule": "anyclip\\.com\\/oPcf05UBFzPLyxPXnYco\\/1743003884396_248x140_thumbnail\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -899,73 +1021,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1628b01784de9c17566e58ec3f44244cd65c5dbb4c30876438a71b9a388f9b95"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dictionary.com",
-                "www.thesaurus.com"
-            ]
-        },
-        {
-            "rule": "anyclip\\.com\\/zkW6PpUBtWJnfKcJ3efF\\/1740514251617_248x140_thumbnail\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn5-fstl-tf"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "5766dd609fc338b929cb75785780df15c7724dc8d493221cc21ce168284844b0"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dictionary.com",
-                "www.thesaurus.com"
-            ]
-        },
-        {
-            "rule": "anyclip\\.com\\/lnbWqJQB6qBhl6cum0WO\\/1737999490380_248x140_thumbnail\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn5-fstl-tf"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "91944eec6fb1d5e9d865eabbb6484b1f73406f427bcdf19905e1a8268cb7f1b6"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dictionary.com",
-                "www.thesaurus.com"
-            ]
-        },
-        {
-            "rule": "anyclip\\.com\\/DYR4t5QB6qBhl6cuRHOq\\/1738244964233_248x140_thumbnail\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn5-fstl-tf"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "a89f70c0d1993d6a0c31378779912025c8e8ac91decb45592bd7d74500a508c0"
+                "f2ae1c68e306bb59777944a015e1cbe8fc61fc0e1dd83d90c81f2b8e20e76d5a"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1260,6 +1316,46 @@
                 "dictionary.com",
                 "www.thesaurus.com"
             ]
+        },
+        {
+            "rule": "anyclip\\.com\\/bid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zerohedge.com",
+                "www.zerohedge.com"
+            ]
+        },
+        {
+            "rule": "anyclip\\.com\\/bid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zerohedge.com",
+                "www.zerohedge.com"
+            ]
         }
     ],
     "categories": [],
@@ -1268,31 +1364,32 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9526627218934911
-        },
-        {
-            "domain": "geniusplus.ai",
-            "prevalence": 0.023668639053254437
+            "prevalence": 0.9457831325301205
         },
         {
             "domain": "imasdk.googleapis.com",
-            "prevalence": 0.011834319526627219
+            "prevalence": 0.024096385542168676
         },
         {
             "domain": "mathtag.com",
-            "prevalence": 0.011834319526627219
+            "prevalence": 0.018072289156626505
+        },
+        {
+            "domain": "casalemedia.com",
+            "prevalence": 0.012048192771084338
         }
     ],
     "types": {
         "Script": 19,
-        "Fetch": 17,
-        "Preflight": 6,
-        "Image": 81
+        "Fetch": 19,
+        "Preflight": 8,
+        "Image": 84,
+        "Document": 2
     },
     "nameservers": [
-        "ns-228.awsdns-28.com",
-        "ns-626.awsdns-14.net",
         "ns-1367.awsdns-42.org",
-        "ns-1634.awsdns-12.co.uk"
+        "ns-1634.awsdns-12.co.uk",
+        "ns-228.awsdns-28.com",
+        "ns-626.awsdns-14.net"
     ]
 }

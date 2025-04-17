@@ -4,15 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000547,
-    "sites": 8,
+    "prevalence": 0.0000752,
+    "sites": 11,
     "subdomains": [
         "openam-availity-use1.id",
+        "openam-lpl-advuse1.id",
         "openam-thrivent-usc.id",
         "openam-beamsuntory-use1.id",
         "openam-univofphoenix-usw2.id"
     ],
     "cnames": [
+        {
+            "original": "auth.advisor.lpl.com",
+            "resolved": "openam-lpl-advuse1.id.forgerock.io"
+        },
         {
             "original": "auth.makersmark.com",
             "resolved": "openam-beamsuntory-use1.id.forgerock.io"
@@ -30,7 +35,7 @@
             "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/realms\\/alpha\\/authenticate",
@@ -38,15 +43,20 @@
             "fingerprinting": 0,
             "subdomains": [
                 "openam-availity-use1.id",
+                "openam-lpl-advuse1.id",
                 "openam-thrivent-usc.id"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [
                 {
                     "original": "login-prod.availity.com",
                     "resolved": "openam-availity-use1.id.forgerock.io"
+                },
+                {
+                    "original": "auth.advisor.lpl.com",
+                    "resolved": "openam-lpl-advuse1.id.forgerock.io"
                 },
                 {
                     "original": "iam.thrivent.com",
@@ -59,25 +69,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "availity.com",
+                "clientworks.lpl.com",
                 "identity.apps.thrivent.com",
+                "login.lpl.com",
                 "personalprofile.webapp.thrivent.com"
             ]
         },
         {
             "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/realms\\/alpha\\/authenticate",
-            "cookies": 0.0000205,
+            "cookies": 0.0000342,
             "fingerprinting": 0,
             "subdomains": [
                 "openam-availity-use1.id",
+                "openam-lpl-advuse1.id",
                 "openam-thrivent-usc.id"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [
                 {
                     "original": "login-prod.availity.com",
                     "resolved": "openam-availity-use1.id.forgerock.io"
+                },
+                {
+                    "original": "auth.advisor.lpl.com",
+                    "resolved": "openam-lpl-advuse1.id.forgerock.io"
                 },
                 {
                     "original": "iam.thrivent.com",
@@ -85,16 +102,45 @@
                 }
             ],
             "responseHashes": [
-                "daaf97cd2fbeb3cfb97c6ec7c3500936db4df724cccd37c29f24937d63954bc1",
-                "d998b788114a00509664a8d18d022018693c0b4b337f3cb1abf8c44b894a9f63"
+                "bb93610ff903698f568382446d9f8a2119016ae4bc30b7740a8cb4ec7951581f",
+                "0555c64e9f6aea473ae76985eb1e9fbf5c252b2d81d6f6c04ff49a06e4b9d50b",
+                "ca2a04a0adfe57b5445fa25c39e28f61d53047c7c0681bd4bc75a815fde376ef",
+                "22aaa6056cabac419524e7935a21f5ae5e43de9dc06a1f42df1e404ce67fbd50"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "availity.com",
+                "clientworks.lpl.com",
                 "identity.apps.thrivent.com",
+                "login.lpl.com",
                 "personalprofile.webapp.thrivent.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/saml2\\/jsp\\/idpSSOInit\\.jsp",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-lpl-advuse1.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "auth.advisor.lpl.com",
+                    "resolved": "openam-lpl-advuse1.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lpl.com",
+                "login.lpl.com"
             ]
         },
         {
@@ -190,9 +236,7 @@
                     "resolved": "openam-thrivent-usc.id.forgerock.io"
                 }
             ],
-            "responseHashes": [
-                "492b812f1c301b14760c338c914efb31a7329af3df44d81ee3d59d262dcaa170"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -204,16 +248,16 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000342,
     "types": {
-        "Preflight": 5,
-        "Fetch": 5,
-        "Document": 4
+        "Preflight": 7,
+        "Fetch": 7,
+        "Document": 6
     },
     "nameservers": [
-        "ns-cloud-a3.googledomains.com",
         "ns-cloud-a4.googledomains.com",
-        "ns-cloud-a2.googledomains.com",
-        "ns-cloud-a1.googledomains.com"
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com"
     ]
 }

@@ -7,11 +7,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000604,
+    "prevalence": 0.000603,
     "sites": 6,
     "subdomains": [
         "ingest",
-        "cdn"
+        "rl"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -31,65 +31,12 @@
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "QuantumMetricSessionID": 0.00010060362173038229,
-                "QuantumMetricUserID": 0.00010060362173038229
+                "QuantumMetricSessionID": 0.00010055304172951231,
+                "QuantumMetricUserID": 0.00010055304172951231
             },
             "exampleSites": [
                 "lenovo.com",
                 "support.lenovo.com"
-            ]
-        },
-        {
-            "rule": "quantummetric\\.com\\/qscripts\\/quantum-vistaprint-test\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "URL.createObjectURL": 2,
-                "Date.prototype.getTime": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.vendor": 2,
-                "window.sessionStorage": 2,
-                "Navigator.prototype.webkitTemporaryStorage": 2,
-                "Performance.prototype.memory": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Document.cookie getter": 2,
-                "Navigator.prototype.connection": 2,
-                "Screen.prototype.orientation": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.doNotTrack": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "cea56ea903e034f120f0523e109a471cae7244b2ea3503cb0135046ef965be27"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "QuantumMetricSessionID": {
-                    "ttl": 1813,
-                    "length": 32,
-                    "prevalence": 0.00020120724346076458,
-                    "uniqueness": 1
-                },
-                "QuantumMetricUserID": {
-                    "ttl": 31536013,
-                    "length": 32,
-                    "prevalence": 0.00020120724346076458,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "vistaprint.de",
-                "www.vistaprint.de"
             ]
         },
         {
@@ -103,12 +50,13 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "331b72f34111a87a2b9a715ed6545cde7eb49f8bf4494695388995dd143d60c8"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "QuantumMetricSessionID": 0.00010055304172951231,
+                "QuantumMetricUserID": 0.00010055304172951231
+            },
             "exampleSites": [
                 "vistaprint.de",
                 "www.vistaprint.de"
@@ -129,12 +77,55 @@
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "QuantumMetricSessionID": 0.00010060362173038229,
-                "QuantumMetricUserID": 0.00010060362173038229
+                "QuantumMetricSessionID": 0.00010055304172951231
             },
             "exampleSites": [
                 "westernunion.com",
                 "www.westernunion.com"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/wu\\/hash-check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westernunion.com",
+                "www.westernunion.com"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/horizon\\/ylo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "QuantumMetricSessionID": 0.00010055304172951231
+            },
+            "exampleSites": [
+                "youngliving.com",
+                "www.youngliving.com"
             ]
         }
     ],
@@ -144,16 +135,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9523809523809523
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "figpii.com",
+            "prevalence": 0.19047619047619047
         },
         {
             "domain": "adobedtm.com",
             "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Fetch": 6,
-        "Script": 2
+        "Fetch": 10
     },
     "nameservers": [
         "ian.ns.cloudflare.com",
