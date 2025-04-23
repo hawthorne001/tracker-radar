@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000369,
-    "sites": 54,
+    "prevalence": 0.000328,
+    "sites": 48,
     "subdomains": [
         "rum",
-        "logs"
+        "logs",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -28,109 +29,81 @@
             "prevalence": 0.000212,
             "cnames": [],
             "responseHashes": [
-                "226e66da11ae646083d31daedb6d2f3979d585a050a32e38f372443852ab8938",
-                "14093885736ffd770b90b03b2d705c980eb14ed42b0e51007465fcb8b0a96865",
-                "6e6c087fcd0a4e35a076dae06864e7efc3d9a57c259a713d5f5867ae39b394a8",
-                "1e3a8f9318f7d4fb733b5ac7774c1488bd68d8a17868923b83786fb24da68c91",
-                "9a4255e2516c309229321fa4f27541fe22c11f5f723256a5d4ef6f39e647f605",
-                "e7b9fa8c35543243d93db3c3114df0072354ec02cece3127ee0885e15c7bdf03",
-                "4ddce61b0cd38ab58739b5bcce98701ee986310f2834f4b08a772358e8d00f80",
-                "b6e9140ebd43e9a3755fae0e96c77dd1ecef1ccf0e32be7e04e7e56a81eb2509",
-                "ec828e4d9960168df4239258df11d3e447b8e60abf2c939e5ffb63aa1a8d8945",
-                "aa8b1034105e35c131a009fd262813bd0581383d802e9232aaab2ea164dbdaa7",
-                "27370a79d96cd10eaeb75c0f44cd920ec9e5bd1e8c2a408964a26af34bc923d2",
-                "b2bd3e46f355b3b9d17931c11833c4acf277a9941628fcb2603a868d26613396",
-                "450fb72ff8472313b71fb678f01a9702e5da8e667a13bcdaae24e1a7d0ec6203",
-                "2bcfdd698d5751e80bd8d5e93a9d171d03cf3fc43b48290c38adb6fcb7cdd243",
-                "07f1f74c8e2e9a69f5d2077dcee964f8340dcae83dcae3ecb2b664d2a934b36f",
-                "184f0d49beaf5e5c9a0ed4f34c19d33c3382f9e4a0b06fd8360c00bcb04aee63",
-                "36c28047b5239650ddde7b852212d916418dc049a125c0ff48e0347e121f6417",
-                "a108c4b5673b161fef8fbfa804a8e0a55be5970e040f85d50a4cfa86074eff2e",
-                "7fff2e6e191a07a7891c1bb4ead0faf064d243d2c6de30d61b06e9691289e6c5",
-                "7d0f8238673ea4006712d047a9938153db470d56bcd7a1daab5cb3900f0def30",
-                "108ee4f7d984067021819af1cccad6bac3553ec6c42030cbd048b8d305f13fc9",
-                "984b76fd77e76232c30dc913d46f7d14bb08967c4c3a151f466b0a8102859d37",
-                "c0f65673fdb6c8c69cbc34566cd58957a054abd16919471a2d132a3f97aa0715",
-                "96e5e5b75570d0644b1c0dbf94618f5393bd5e53aa0a34523ff22c089e65a71d",
-                "d80640038a90c383f0dce2a726da663d5c89d0c922eb5b061c726fa6a2261828",
-                "70436afb53d2da4c337db26b8d46051988ec62c669b3a011b39a1f858090e917",
-                "c7fc5c97cc78d27734bb21318db8eb46f8cf56b9e5c817c5e41eef731b98b8b5",
-                "67c64eaea901fb81c7ebe31abf38c9bc9b8da8815bce7d377e6a5d3921c26729",
-                "768b7b95ead5b5afa1f20e5845d0597c1327d2b5a6010489e1916af06611dd99",
-                "27106c3dd7781254972cd1f320185536e57fd5dfce24396ac46e0737e4cf9791"
+                "d832c33c1fa46c73507726142316fbf582edc7ed4ec63cbfd338abe84d702c60",
+                "3074dea871141a3188bf2dc6f11c914e7b8281031cb50751f05d600a0f0d2e00",
+                "371c51fafd6cfeaba9977ea67e75de5987deef1791de21923dd16a570395859e",
+                "faec44548691f4c441f36081573c7385561c847b147a8a70981c59c813877804",
+                "85a8290f4fe3c4af66af2394a299b6a24e54f31397fa2111cdcf8f2ae1c57da1",
+                "b40a1565ac712ba4d7f97a81447ad6a036bf8a91e5b0202160592d5c3c0c8ed7",
+                "d8eec41efa441ddefd278214e49c57942a0b6d562a9374af9cb97ee7248beb8d",
+                "d17540d93113c90cd537b99dee130fc18cc9e8a7d6c251b7dfeef965fa8573d1",
+                "9eb3420cb2d9deb35670737853b45bf6fdacdb27529b0b71d7fe5604e7be01a6",
+                "805589b1c00bc80cbc32e59e5316fb34c2702235718988650f9c80c3145c2d40",
+                "26d474e553124315d45dd8954dee85fd3117c8ae2f75a58303f3c2d446872f35",
+                "e3cd6b75940923aed5ddf5a7e114fc4c0e0b89324832335eccda3330cfcabeba",
+                "bcbd85cf1555f8e44c5ad6616e8525b959240fd6abcd27fe263e3a9781fff47c",
+                "60282c8aed43c7681d4588feb7de1e60b8e268c2956155013cdca3b5d67e2624",
+                "4fa69f679359b4d8922d5918e2f7ebce659ba4a7a5663b8e0434d972836fae00",
+                "83eed45962469479b16bdc4cc276d21845eb2d226dda1789ade27cabec607215",
+                "9154a59f9341a76cd0628d87c2af8dcf3fa524034b12afda0dda219ab8a3d63d",
+                "7aeaba7bc39236eddf55604f838d5ed36ec683907c303e536cd3e9126558f17e",
+                "6a87d61474a6b951b51be7cf73cdda4d326fe39ada611447d27695e118d31e6f",
+                "dfd80dda8eb391c061929f098ad9149c7c56933ba503c6a9c978fdc56950d471",
+                "c89be6641ee593d8ec45cc69d90a2d8dad8797819d0ba4c5db6238dc8b5e4a37",
+                "88a0b02d83bdfb39791839da9a0023512d9f5ecb9c609bcf34b66fca5ca5568c",
+                "f97fff67d1a8821eaa373e142e56b0e926488e398aa167be0e62a3fa05e1e61a",
+                "a9aab4adf80a1e7c00e3a0d70100b3588ab38daf6036f4bff66269818d8f5154",
+                "33043173000d860a294e1e810f15314ee29bb9f4667475b45205daaaf8f78d8a",
+                "05b673c3b1769ffc25b171476aeca3f5489f846ef5f2786e818452529e8a831e",
+                "8e14409cec0cb43f578aa515b5f577172447139e0602c85c66208f239cd6951e",
+                "7081dccf1a3d7a30efc36bf9bbc4be3180d766f63e25079a8666f66f355c3fcf",
+                "eb92f9a0446aa429512acef2315da93e54dd6882d8fb2dc2de551e5f9cc101a6",
+                "f8bb50b710fcb0e00d45c76d3f1f3053f1f3b84057c6500a73b6d600770d1932"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "IR_gbd": 0.000006832841368754783
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.sensodyne.com",
-                "www.advil.com",
-                "www.flonase.com",
+                "www.outsystems.com",
                 "www.kiabi.com",
-                "www.metagenics.com",
                 "booksy.com",
-                "www.lawdistrict.com",
-                "everywatch.com",
-                "www.boozt.com",
-                "smarty.co.uk",
-                "lawdistrict.com",
                 "www.voltarengel.com",
-                "www.betmgm.co.uk",
-                "www.avios.com",
-                "us.christianlouboutin.com",
-                "www.ayvens.com",
-                "www.sligro.nl",
+                "www.netto.de",
+                "www.lawdistrict.com",
+                "www.metagenics.com",
+                "www.toyota.de",
+                "knauf.com",
+                "privati.vodafone.it",
+                "everywatch.com",
+                "www.flonase.com",
+                "yarnpkg.com",
                 "www.armani.com",
-                "toolstation.com",
-                "www.kozikaza.com"
+                "www.avios.com",
+                "www.gymshark.com",
+                "www.tui.co.uk",
+                "www.betmgm.co.uk",
+                "www.gartentraum.de",
+                "www.ayvens.com"
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
+            "subdomains": [],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000888,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "252d99d5df83dec3835b458c8b327a1652469531e159d021c44276403eb301ac",
-                "67da560538cfc866fde2651d3dffb0e9fa31bc326974d6bfa26c26f095101e47",
-                "56742fba3004ca98242712f350ce4f33003bf61d2140b5ce95cd04c3ba65494c",
-                "efe1466294a32442bf17542a8340d5b88c5daa745bc2de4949fe61196309b278",
-                "1978d216687e56441cdf0a8b21cf1aa311aa2fcd173c1b97617fb625415621ff",
-                "a2bf8bae1b7e6c898bee42daa6acd860a94701657b105a786967955da20205c0",
-                "14f3434ec45e89c979406d382b14a24ea2b8c52f54cd06c2996a89ac84e142d3",
-                "a4ed41074a66da7818096ef9fcf8b802c786315b011240e5bef16a17d046c72e",
-                "54b51526effcfe3c93029cfd119b30ae1c81a6f770a2a39238c8b9f5a25b4cf8",
-                "bcfdca16e6bd38ae96546e40c3bc758b88ae59f62d2a8a33b7f380a791282d3c",
-                "fb63bf31af6ad654e7490990c503e063eace2b0e63443be20caf5841f8297750",
-                "a34336e00b82f1a5ac234743e40664af541b5de0f509848329a87a25a8ffdf74"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Other",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "IR_gbd": 0.000006832841368754783
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "booksy.com",
-                "everywatch.com",
-                "smarty.co.uk",
-                "toolstation.com",
-                "us.christianlouboutin.com",
-                "www.armani.com",
-                "www.betmgm.co.uk",
-                "www.menulog.com.au",
-                "www.metagenics.com",
-                "www.prioritypass.com",
-                "www.sensodyne.com",
-                "www.specsavers.com.au",
-                "www.topdoctors.es"
+                "octopusenergy.de",
+                "www.britishairways.com"
             ]
         },
         {
@@ -141,17 +114,15 @@
                 "logs"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.0000547,
+            "sites": 6,
+            "prevalence": 0.000041,
             "cnames": [],
             "responseHashes": [
-                "9a2e2efe990f0f4dea887bc9a96df219eea1fe9caa549ce83745c090155f6096",
-                "3f95f2f0164a3cb16b172ba18c3609d4b029c7d7d7ab2247bfc1c0390a350639",
-                "9ad9f35c446dd9dd7f913e2114732a2c0c071d6049511c25dd2b7088f0115b2b",
-                "ed51fa30ec84115e63ecfe257fadd7318edb97fa18b184a12d0035e0aa6bf629",
-                "b1ad06e716ac4169275344950d86c5ae7cae906ddc38d44c709ff562398be606",
-                "c07d7e6c192ea1e643a6321335c84dd6ffaa9a221e8d2cd984f8835d7f72906b",
-                "e8b22038441c3f6224a3ba5764d6cd4cfeafa3d882e3d55bc9475c9989314492"
+                "1f4f8ddea526ccf14223b0de1be601a80c576fe96eaf790c00ddd760edeab477",
+                "33e457eac9a628fb9348d94bb0c0bfd3a6bb4142c441219d39c2da95be22fbc3",
+                "999ecc8383499a2b6eb33da4d01d3e266da2af56ae09f002e5fcbd10bc317bc1",
+                "28b12712e92306acaaecf8a55fe58948dba1380e448a750e715c299e8bd55bcb",
+                "c27936dc5b86f46248e73cb49521bd79bb99c4bc726fbc49824c9a1e596e481b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -160,11 +131,65 @@
                 "polymarket.com",
                 "us.ecco.com",
                 "www.ayvens.com",
-                "www.burgerking.de",
+                "www.blablacar.ru",
                 "www.directferries.de",
-                "www.directferries.fr",
-                "www.directferries.com",
-                "www.directferries.co.uk"
+                "www.directferries.fr"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000615,
+            "cnames": [],
+            "responseHashes": [
+                "9bd38415b34bad9940579f2e372a559b95896f79e070595186533a671af81854",
+                "28e479046fcc2ec49fa047aa5ae940fb73da89046128667bc7cc548a1264e8d5",
+                "ab8018ece1f24057e16fa502275f0d446dca75a00116357f56a8b3c770a4c894",
+                "84e8a35e777d57f0c7ba38474d827393a6f0b19271bfc0456c0e28070a1a4613",
+                "f9b6d68c370bdb68cfee1bc98bd77000f526619df784740c335f718ee1fb2589",
+                "8ad0576d26bcf6c2698303f556b5ea9c7f6ff6929fe69869bd6ddf31a70ffd5e",
+                "510a69266a9d0f5b42a2af074fe80c300f849672316170cbae64eec69459abf8",
+                "6140e8acf8196873b8b908c96b00e66722c16d214fe8f2c15d7db8df819dcd32"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smarty.co.uk",
+                "www.armani.com",
+                "www.betmgm.co.uk",
+                "www.eurocarparts.com",
+                "www.metagenics.com",
+                "www.netto.de",
+                "www.toolstation.com",
+                "www.toyota.fr",
+                "www.tui.co.uk"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchibo.de",
+                "www.tchibo.de"
             ]
         },
         {
@@ -190,26 +215,6 @@
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tchibo.de",
-                "www.tchibo.de"
-            ]
-        },
-        {
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
@@ -217,8 +222,8 @@
                 "logs"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -228,8 +233,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "unsee.cc",
-                "www.amboss.com",
-                "www.just-eat.co.uk"
+                "www.amboss.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "580768205f54fcfc6a9f0d15bac1c489cedd16617b108f3c0c90782110d9f4bd",
+                "a390f0630a79f4365eb7dc668bd4dea11de99f0c20785bbf436e01358b70cadc",
+                "8365d42e953133a715590a0c3b0b1e4eddc30ec574fc6522db43d4e6967050e6",
+                "36b07fe892b5844723d7d7a1b95faa98c35d6fa4066ad225c624f8232e4bdd40"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armani.com",
+                "www.eurocarparts.com",
+                "www.toyota.fr",
+                "www.toyota.de",
+                "www.tui.co.uk"
             ]
         },
         {
@@ -242,60 +274,40 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "271cd7b8dae7025f1bda96c7f56a607defc4b5790d113f9700768fe5fffa2c79",
-                "5175dc0bfbfe47f01fd0021a966debfa0b37cbbd6733a49539b0eff6e6d6155a",
-                "ba7d6dbd9d586f30da8ad3e2840dc199ce7f40973be88370b2b365498c72d47f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "christianlouboutin.com",
-                "www.armani.com",
-                "www.metagenics.com",
-                "www.toyota.fr"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "6b11e3cfb259eab616a77c52cf67761f1352157f1ba4c4affe7b6e1c7c126de9"
+                "b22a402e91b3ab1551677b3ad2dbdeea33f9489a774f8a203ba855faae8a33a3",
+                "1279188c8c5daf973fc5412ce3a636bcdc488e131c448bdb15553839bd525448",
+                "cc304994ded850dfe841fa5639697d39de053356f291388a54d8183da1b4067b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "christianlouboutin.com",
-                "www.toyota.fr"
+                "avios.com",
+                "www.avios.com",
+                "www.betmgm.co.uk",
+                "www.gartentraum.de"
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rum"
+                "logs"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "b649cef49686331772f1eb5a4c26642f1a1a2d09396006b144326c4dd8b14cb7"
             ],
-            "type": "Ping",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "topdoctors.es",
-                "www.topdoctors.es"
+                "ayvens.com",
+                "www.ayvens.com"
             ]
         }
     ],
@@ -304,36 +316,37 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.4966139954853273
+            "domain": "first party",
+            "prevalence": 0.732360097323601
         },
         {
-            "domain": "first party",
-            "prevalence": 0.42663656884875845
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.19708029197080293
         },
         {
             "domain": "dk2h3gy4kn9jw.cloudfront.net",
-            "prevalence": 0.05417607223476298
+            "prevalence": 0.058394160583941604
         },
         {
-            "domain": "botco.ai",
-            "prevalence": 0.01805869074492099
+            "domain": "blablacar.com",
+            "prevalence": 0.0072992700729927005
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.004514672686230248
+            "prevalence": 0.004866180048661801
         }
     ],
     "types": {
         "Fetch": 43,
-        "XHR": 17,
+        "Other": 2,
+        "XHR": 16,
         "Preflight": 2,
-        "Ping": 5
+        "Ping": 2
     },
     "nameservers": [
-        "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e4.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
     ]
 }

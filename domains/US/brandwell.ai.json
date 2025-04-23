@@ -15,15 +15,15 @@
     "resources": [
         {
             "rule": "brandwell\\.ai\\/tracking\\.min\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
                 "script"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "window.localStorage": 1
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -34,9 +34,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "luid": {
-                    "ttl": 31536002,
+                    "ttl": 31536006,
                     "length": 32,
-                    "prevalence": 0.000006832841368754783,
+                    "prevalence": 0.00001366577611358993,
                     "uniqueness": 1
                 }
             },
@@ -48,7 +48,7 @@
         },
         {
             "rule": "brandwell\\.ai\\/api\\/tracking-rules",
-            "cookies": 0.00000683,
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
                 "trafficid"
@@ -87,6 +87,26 @@
                 "ameriestate.com",
                 "bemoacademicconsulting.com"
             ]
+        },
+        {
+            "rule": "brandwell\\.ai\\/api\\/track",
+            "cookies": 0.00000683,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trafficid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ameriestate.com",
+                "bemoacademicconsulting.com"
+            ]
         }
     ],
     "categories": [],
@@ -95,13 +115,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.25
         }
     ],
     "types": {
         "Script": 2,
         "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
         "dns1.registrar-servers.com",

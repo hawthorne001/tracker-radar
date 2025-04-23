@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
         "rum",
-        "logs"
+        "logs",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,26 +25,29 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 8,
+            "prevalence": 0.000804,
             "cnames": [],
             "responseHashes": [
-                "207ea46635d7d0d38c64a801dff686c99be0f813453c3d1292fcc6415a635fcb",
-                "442c93a4c01288e922e49c239e6fb71ce494979ef46094055c7dc2c887b65033",
-                "f1e1710973eed64544cb6c1edb8797deee0cd93e25e1794117292ed102092a60",
-                "cbf840e2a36f07ab91cd70217fa6c46f6b3d2afaeaf47eacf3d9f784e2a1cd61",
-                "dba13c20cfacfe8c790942112df5307aa4833fd81a3c30cc1e229d92a1ac6818"
+                "e8e42c215c8d7e6fbe2a45f1285176e4f90673a49f559d609f2b3a275ed4e992",
+                "bf94d53671e3a03924c9072a188b95e5520d791fa0b38651f43ca88009ac7a69",
+                "ecaf8ce9e2102a8b037369ef022959179baf9ab4c4007f06b12e12d80bca8989",
+                "7bce749c4a0a7b9fd48b8986d3f0d9975f3d03c9474bc8c11d41531a1103a2d2",
+                "ab3da2d6b97f2d9ad9172a2b12a15a882e06b486783de3a183be8c15fba15ea3",
+                "40f7f5501454b5c58df68daf7c1733db024585fcf9ff441b72b1047fffe11092"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mollerbil.no",
-                "www.bruktbil.no",
+                "www.adamsmatkasse.no",
+                "www.ayvens.com",
+                "www.directferries.com",
                 "www.godtlevert.no",
                 "www.lexus.no",
                 "www.toyota.no",
-                "yarnpkg.com"
+                "www.tui.no"
             ]
         },
         {
@@ -58,18 +62,82 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "a663b7b773299edbce104a65f1e6d8f575e017176d641d4df0c357b41cf92a93",
-                "a13fe202123ed1fddf002fc2fce01eeec7e9e7232bb67a892c7587b966c9a106",
-                "90027acbdb6a18fe610382f94cdf6f5ac20f5fc555b4205cb51039b57da5a025"
+                "7ea50d680f0c680b13aeb5dfcbf2ac7b02ddc0e692b1cd9a30c3903f38dc2e4c",
+                "46be4ead46dfc62ef2ed44fc6aa891549ed9552c481ae26ad9273a5e43bda76b",
+                "c69cc13bc2bdbea5bddeafecae23c9633755decdb431b7649a227b43d21fa2b7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "directferries.no",
-                "www.directferries.no",
+                "ayvens.com",
+                "www.ayvens.com",
                 "www.directferries.com",
                 "www.nationaltheatret.no"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "158e807d661615d04676697e26c83995d5367798c952b71dfbc9d70773031819",
+                "0cd46b894cbb97462d6ba910fcd2869a0432515ec6aec0522712baec0fe788e5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ayvens.com",
+                "www.directferries.com",
+                "www.tui.no"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "britishairways.com",
+                "www.britishairways.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.no",
+                "www.tui.no"
             ]
         }
     ],
@@ -78,21 +146,23 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.5416666666666666
+            "domain": "first party",
+            "prevalence": 0.6470588235294118
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4583333333333333
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.35294117647058826
         }
     ],
     "types": {
-        "Fetch": 10
+        "Fetch": 12,
+        "XHR": 5,
+        "Other": 2
     },
     "nameservers": [
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e3.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
     ]
 }
