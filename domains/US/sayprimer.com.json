@@ -4,24 +4,58 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000342,
+    "prevalence": 0.0000353,
     "sites": 5,
     "subdomains": [
+        "analytics",
         "web-script.api"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "sayprimer\\.com\\/pixel\\/v1\\/ingest\\/pageview",
+            "rule": "sayprimer\\.com\\/primerAnalytics\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000212,
+            "cnames": [],
+            "responseHashes": [
+                "551d608b1d5cb67afb71fd34a9fba958a20d3f4ff669b5ef27f20bd378040d13"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apollo.io",
+                "www.apollo.io",
+                "www.rippling.com"
+            ]
+        },
+        {
+            "rule": "sayprimer\\.com\\/v2\\/ingest\\/pageview",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "web-script.api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 2,
+            "prevalence": 0.0000141,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,9 +65,27 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "apollo.io",
-                "www.apollo.io",
-                "www.niche.com",
-                "www.rippling.com"
+                "www.apollo.io"
+            ]
+        },
+        {
+            "rule": "sayprimer\\.com\\/v2\\/ingest\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-script.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000141,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apollo.io",
+                "www.apollo.io"
             ]
         },
         {
@@ -44,18 +96,38 @@
                 "web-script.api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 2,
+            "prevalence": 0.0000141,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "niche.com",
+                "www.project44.com"
+            ]
+        },
+        {
+            "rule": "sayprimer\\.com\\/pixel\\/v1\\/ingest\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-script.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000141,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "apollo.io",
-                "www.apollo.io",
-                "www.niche.com",
-                "www.rippling.com"
+                "niche.com",
+                "www.project44.com"
             ]
         }
     ],
@@ -64,20 +136,25 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.42857142857142855
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "s3.us-east-1.amazonaws.com",
-            "prevalence": 0.2
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
+        "Script": 3,
         "XHR": 4,
         "Preflight": 4
     },
     "nameservers": [
-        "boyd.ns.cloudflare.com",
-        "carla.ns.cloudflare.com"
+        "carla.ns.cloudflare.com",
+        "boyd.ns.cloudflare.com"
     ]
 }

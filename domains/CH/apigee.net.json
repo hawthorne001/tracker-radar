@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000617,
+    "sites": 6,
     "subdomains": [
+        "accor-group-prod-prod",
         "mns-00.dn"
     ],
     "cnames": [
+        {
+            "original": "api.accor.com",
+            "resolved": "accor-group-prod-prod.apigee.net"
+        },
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
@@ -22,6 +27,85 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
+            "cookies": 0.000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/referential\\/v1\\/best-visit\\/cookie-attribution",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com",
+                "movenpick.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/referential\\/v1\\/best-visit\\/cookie-attribution",
+            "cookies": 0.000308,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "94b30e0795b36b851bda12ba307f18b699231535c3ae76e5ea1ab3ec312095f6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com",
+                "movenpick.accor.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
             "cookies": 0,
@@ -31,7 +115,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000206,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -49,14 +133,14 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.0001,
+            "cookies": 0.000206,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000206,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -79,24 +163,37 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000411,
     "topInitiators": [
         {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.4
+            "domain": "mparticle.com",
+            "prevalence": 0.3
         },
         {
-            "domain": "mparticle.com",
-            "prevalence": 0.4
+            "domain": "tiqcdn.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         },
         {
             "domain": "signalfx.com",
-            "prevalence": 0.2
+            "prevalence": 0.1
+        },
+        {
+            "domain": "static-p46175-e229011.adobeaemcloud.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Document": 2,
+        "Preflight": 5,
+        "XHR": 5
     },
     "nameservers": [
         "ns-116.awsdns-14.com",
