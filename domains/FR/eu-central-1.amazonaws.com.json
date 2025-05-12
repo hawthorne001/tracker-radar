@@ -9,15 +9,101 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000821,
+    "sites": 8,
     "subdomains": [
+        "steinbergkinesislb-5613b6dcff412a9f.elb",
+        "igio17a3i8.execute-api",
         "p2iqhncxyh.execute-api",
-        "cognito-identity"
+        "cognito-identity",
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "analytics.steinberg.net",
+            "resolved": "steinbergkinesislb-5613b6dcff412a9f.elb.eu-central-1.amazonaws.com"
+        },
+        {
+            "original": "check.cfapps.eu10-004.hana.ondemand.com",
+            "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "steinbergkinesislb-5613b6dcff412a9f.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "analytics.steinberg.net",
+                    "resolved": "steinbergkinesislb-5613b6dcff412a9f.elb.eu-central-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "steinberg.net",
+                "www.steinberg.net"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "steinbergkinesislb-5613b6dcff412a9f.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "analytics.steinberg.net",
+                    "resolved": "steinbergkinesislb-5613b6dcff412a9f.elb.eu-central-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "steinberg.net",
+                "www.steinberg.net"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/xclick",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "igio17a3i8.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "3d23d39a30bb7323f8ccfd64c52cf286138fba4f83e78f7edcf66703b7c23aaa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "meilleurs-jeux-par-navigateur.fr",
+                "top5jeuxenligne.fr"
+            ]
+        },
         {
             "rule": "eu-central-1\\.amazonaws\\.com\\/Production\\/v2\\/beacon",
             "cookies": 0,
@@ -27,15 +113,15 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "avery.fr",
-                "www.avery.fr"
+                "dexerto.fr",
+                "www.dexerto.fr"
             ]
         },
         {
@@ -43,21 +129,29 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [
+                {
+                    "original": "check.cfapps.eu10-004.hana.ondemand.com",
+                    "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [
-                "3c1b671b1e97b9b8404d9b51605924ece0386a5b20ad73d5687e3f6e6ef3cff7"
+                "50f82ec5432d29f2d6070c6750055f91bd3b0d2c616fb82a6cd737cea53b57e8",
+                "c47da02a9e1915f5c881bf5987eaf146d3ae163bb598be8e2536c1c7d87fa720"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "interrail.eu",
-                "www.interrail.eu"
+                "www.interrail.eu",
+                "www.sap.com"
             ]
         }
     ],
@@ -65,23 +159,33 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000205,
     "topInitiators": [
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.5714285714285714
+            "prevalence": 0.3076923076923077
         },
         {
-            "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.2857142857142857
+            "domain": "first party",
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "steinberg-snowplow-static-js.s3.amazonaws.com",
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "api-domain-compado.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "Fetch": 4
+        "Preflight": 2,
+        "XHR": 4,
+        "Fetch": 5
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

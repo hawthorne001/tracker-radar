@@ -7,32 +7,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
-    "sites": 6,
+    "prevalence": 0.0000353,
+    "sites": 5,
     "subdomains": [
         "cdn",
-        "logging"
+        "logging",
+        "www"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "book.hotels-rates.com",
+            "resolved": "www.hotelplanner.com"
+        },
+        {
+            "original": "secure1.reservations.com",
+            "resolved": "www.hotelplanner.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "hotelplanner\\.com\\/js\\/partners\\/client-1\\.0\\.1\\.min\\.js",
+            "rule": "hotelplanner\\.com\\/js\\/partners\\/client-1\\.0\\.2\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
                 "window.localStorage": 2,
-                "Date.prototype.getTime": 2
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000141,
             "cnames": [],
             "responseHashes": [
-                "9c58701679936b901a966ae4bc5af8a3cbea4c319b12999ee401667b7bad3698"
+                "15c0ebb2c237949bdcb3eca4aeac3d07804191927a16924b2c87f5d5dc9888db"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -50,13 +60,46 @@
                 "logging"
             ],
             "apis": {
-                "Date.prototype.getTime": 3
+                "Date.prototype.getTime": 2
             },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000212,
             "cnames": [],
             "responseHashes": [
                 "cd497532e137fc0ce8d28b216c465a5f3f2b7c00c31f3c358f6cc0ade896b87e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.hotels-rates.com",
+                "www.reservations.com"
+            ]
+        },
+        {
+            "rule": "hotelplanner\\.com\\/Common\\/Cfcs\\/Services\\/OfflineSession\\.cfc",
+            "cookies": 0.0000212,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000212,
+            "cnames": [
+                {
+                    "original": "secure1.reservations.com",
+                    "resolved": "www.hotelplanner.com"
+                },
+                {
+                    "original": "book.hotels-rates.com",
+                    "resolved": "www.hotelplanner.com"
+                }
+            ],
+            "responseHashes": [
+                "6ea11b44c2c76dc5047ac486562cffc17a79b56d28ae2a369a3ffe08f96c82fe",
+                "f3ed5a0cdaaef40f45f0b31a73dcf47199023e85134651a4c9ae594139516724"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -76,11 +119,11 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000212,
             "cnames": [],
             "responseHashes": [
-                "d28cb99a583dbb869bdcf257ec2ac3d1b7288fef025b6105aa6feec8fce7d4e2",
-                "86f80227a0f630da6fb75e754d99ce0c5b80eefd001e3805d5eb3bebd7c5f06e"
+                "e945ce4263514e54581bb4bd054fbdc7914252e1312c7ce077a2b3cbca6b353b",
+                "d49f0420698cac2297db926b05fa5b9275b7a15161704ce571810c423eec2928"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -94,15 +137,19 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000683,
+    "cookies": 0.0000212,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "hotelplanner.com",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 11
     },
     "nameservers": [
         "lovisa.ns.cloudflare.com",

@@ -4,12 +4,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.00257,
+    "sites": 25,
     "subdomains": [
         "cdn",
         "api-v6.prod",
-        "api-v4.prod"
+        "api-v4.prod",
+        "api-pv.prod",
+        "gate"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,7 +25,7 @@
             ],
             "apis": {},
             "sites": 8,
-            "prevalence": 0.000804,
+            "prevalence": 0.000822,
             "cnames": [],
             "responseHashes": [
                 "9bfb2575200054965f462be9d282a41715dbf448ec4f9e08a45a3d2ed5d98407"
@@ -35,16 +37,16 @@
                 "orthodidacte.com",
                 "doctonat.com",
                 "expressantworten.com",
-                "schlaraffenwelt.de",
                 "urlebird.com",
+                "wikimonde.com",
                 "www.routenplaner-karten.ch",
-                "www.server-world.info",
+                "www.uamr.de",
                 "www.was-war-wann.de"
             ]
         },
         {
             "rule": "first-id\\.fr\\/sdk\\/script\\/flex-no-tcf-1\\.20\\.0\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.00072,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn"
@@ -56,41 +58,59 @@
                 "Screen.prototype.width": 8,
                 "Screen.prototype.height": 8,
                 "Navigator.prototype.deviceMemory": 8,
-                "Navigator.prototype.hardwareConcurrency": 8
+                "Navigator.prototype.hardwareConcurrency": 8,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7
             },
             "sites": 8,
-            "prevalence": 0.000804,
+            "prevalence": 0.000822,
             "cnames": [],
             "responseHashes": [
                 "1af602c3c4a9e9c85740fd573b49d1c2a5ee6e881cbebe2b3a97ed0932f19a62"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "firstid_flex_type": {
+                    "ttl": 15552005,
+                    "length": 1,
+                    "prevalence": 0.0007195723684210526,
+                    "uniqueness": 0.14285714285714285
+                },
+                "firstid": {
+                    "ttl": 15552005,
+                    "length": 32,
+                    "prevalence": 0.0007195723684210526,
+                    "uniqueness": 0.14285714285714285
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orthodidacte.com",
                 "doctonat.com",
                 "expressantworten.com",
-                "schlaraffenwelt.de",
                 "urlebird.com",
+                "wikimonde.com",
                 "www.routenplaner-karten.ch",
-                "www.server-world.info",
+                "www.uamr.de",
                 "www.was-war-wann.de"
             ]
         },
         {
             "rule": "first-id\\.fr\\/firstId",
-            "cookies": 0.0001,
+            "cookies": 0.000103,
             "fingerprinting": 0,
             "subdomains": [
                 "api-v6.prod",
                 "api-v4.prod"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000904,
+            "sites": 12,
+            "prevalence": 0.00123,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4efb0cea8b4939d553ff188cc9d20d2b47f3d0f7ec33b739711e562e84b20824",
+                "fb1bf528d8237aac3e9ead389ab246ba0068f61fe281610110937ef2b8adefce"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -99,11 +119,77 @@
                 "dictionnaire.orthodidacte.com",
                 "doctonat.com",
                 "expressantworten.com",
-                "schlaraffenwelt.de",
                 "urlebird.com",
+                "wikimonde.com",
+                "www.cuisineaz.com",
+                "www.geo.fr",
+                "www.passeportsante.net",
                 "www.routenplaner-karten.ch",
-                "www.server-world.info",
+                "www.uamr.de",
                 "www.was-war-wann.de"
+            ]
+        },
+        {
+            "rule": "first-id\\.fr\\/pv",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-pv.prod"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00113,
+            "cnames": [],
+            "responseHashes": [
+                "3639efcd08abb273b1619e82e78c29a7df02c1051b1820e99fc395dcaa3326b8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "firstid": 0.0007195723684210526
+            },
+            "exampleSites": [
+                "orthodidacte.com",
+                "doctonat.com",
+                "expressantworten.com",
+                "medicaments.passeportsante.net",
+                "urlebird.com",
+                "wikimonde.com",
+                "www.cuisineaz.com",
+                "www.geo.fr",
+                "www.passeportsante.net",
+                "www.routenplaner-karten.ch",
+                "www.uamr.de"
+            ]
+        },
+        {
+            "rule": "first-id\\.fr\\/",
+            "cookies": 0.000925,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gate"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00103,
+            "cnames": [],
+            "responseHashes": [
+                "73be0205c4249cac06c98eb1915f3744afcf17009929119b7d87272c2d85146a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "passeportsante.net",
+                "photo.cuisineactuelle.fr",
+                "www.caminteresse.fr",
+                "www.cuisineactuelle.fr",
+                "www.cuisineaz.com",
+                "www.femmeactuelle.fr",
+                "www.geo.fr",
+                "www.passeportsante.net",
+                "www.programme-tv.net",
+                "www.voici.fr"
             ]
         },
         {
@@ -114,8 +200,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 11,
+            "prevalence": 0.00113,
             "cnames": [],
             "responseHashes": [
                 "c99980ab0660811f378a5a7232bca29927ec9de09ebbdda6943b0d2e3638c3f1"
@@ -124,22 +210,37 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "larousse.fr",
-                "www.marieclaire.fr"
+                "passeportsante.net",
+                "www.750g.com",
+                "www.automobile-magazine.fr",
+                "www.cuisineaz.com",
+                "www.europe1.fr",
+                "www.geo.fr",
+                "www.jeuxvideo.com",
+                "www.larousse.fr",
+                "www.marieclaire.fr",
+                "www.passeportsante.net",
+                "www.purepeople.com"
             ]
         },
         {
             "rule": "first-id\\.fr\\/sdk\\/script\\/sdk-1\\.20\\.0\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 2
+                "Document.cookie getter": 7,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Navigator.prototype.deviceMemory": 4,
+                "Navigator.prototype.hardwareConcurrency": 4
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 11,
+            "prevalence": 0.00113,
             "cnames": [],
             "responseHashes": [
                 "cf982a788aab1a55eb51f95f49406d4802bbf620b92a405f733c988c5b7c63b5"
@@ -148,31 +249,79 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "larousse.fr",
-                "www.marieclaire.fr"
+                "passeportsante.net",
+                "www.750g.com",
+                "www.automobile-magazine.fr",
+                "www.cuisineaz.com",
+                "www.europe1.fr",
+                "www.geo.fr",
+                "www.jeuxvideo.com",
+                "www.larousse.fr",
+                "www.marieclaire.fr",
+                "www.passeportsante.net",
+                "www.purepeople.com"
+            ]
+        },
+        {
+            "rule": "first-id\\.fr\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-v4.prod",
+                "api-v6.prod"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000514,
+            "cnames": [],
+            "responseHashes": [
+                "3639efcd08abb273b1619e82e78c29a7df02c1051b1820e99fc395dcaa3326b8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "passeportsante.net",
+                "medicaments.passeportsante.net",
+                "www.cuisineaz.com",
+                "www.geo.fr",
+                "www.passeportsante.net"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000804,
+    "cookies": 0.00175,
     "topInitiators": [
         {
+            "domain": "pmdstatic.net",
+            "prevalence": 0.2777777777777778
+        },
+        {
             "domain": "themoneytizer.com",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "first party",
-            "prevalence": 0.23076923076923078
+            "prevalence": 0.16666666666666666
         },
         {
-            "domain": "sentry-cdn.com",
-            "prevalence": 0.15384615384615385
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "getjad.io",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 20,
-        "Fetch": 9
+        "Script": 38,
+        "Fetch": 28,
+        "Document": 10
     },
     "nameservers": [
         "ns-482.awsdns-60.com",

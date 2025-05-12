@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000603,
+    "prevalence": 0.000615,
     "sites": 6,
     "subdomains": [
         "cdn",
         "lb235",
-        "anly"
+        "anly",
+        "kia"
     ],
     "cnames": [
         {
@@ -36,18 +37,20 @@
             "resolved": "lb235.klambt.services"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "klambt\\.services\\/js\\/consent\\/202502181000\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000615,
             "cnames": [],
             "responseHashes": [
                 "3e5a26c53db6631d185c8836b44c91316a6aab1c218595b6db66691e4c0c6741"
@@ -73,7 +76,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000615,
             "cnames": [],
             "responseHashes": [
                 "3cbc8c616a3c5a347a4415499f00cc179f5eb5f6dac3604a21e67262ff6bb3c5"
@@ -99,8 +102,8 @@
                 "anly"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000717,
             "cnames": [
                 {
                     "original": "anly.fuersie.de",
@@ -131,6 +134,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "fuersie.de",
+                "www.fuersie.de",
                 "www.jolie.de",
                 "www.leben-und-erziehen.de",
                 "www.ok-magazin.de",
@@ -139,68 +143,95 @@
             ]
         },
         {
-            "rule": "klambt\\.services\\/fonts\\/raleway\\/raleway-v34-latin-regular\\.woff2",
+            "rule": "klambt\\.services\\/delivery\\/asyncjs\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "kia"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
-                "8b3b9300d31af2e4c3ce6966d87494ca93d603d460b68ff3613529d720760506"
+                "f8c0137f9a17b96b15cccc14a0130ea1ddbf2f6726979a3b791c595610b42b94"
             ],
-            "type": "Font",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ok-magazin.de",
-                "www.vital.de"
+                "fuersie.de",
+                "www.petra.de"
             ]
         },
         {
-            "rule": "klambt\\.services\\/fonts\\/raleway\\/raleway-v34-latin-700\\.woff2",
-            "cookies": 0,
+            "rule": "klambt\\.services\\/delivery\\/asyncspc\\.php",
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "kia"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
-                "005c88f7c8dbda3aeb121166c9d68a44178264d57a892050a2bbae26e8baa470"
+                "b4edc562b648722d94297116852a6723afc0c3758a33c98cdced74a74d8ee2d7"
             ],
-            "type": "Font",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ok-magazin.de",
-                "www.vital.de"
+                "fuersie.de",
+                "www.petra.de"
+            ]
+        },
+        {
+            "rule": "klambt\\.services\\/delivery\\/lg\\.php",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuersie.de",
+                "www.petra.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "klambt.services",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Script": 12,
-        "Ping": 6,
-        "Font": 4
+        "Script": 14,
+        "Ping": 7,
+        "XHR": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-115.awsdns-14.com",
         "ns-1993.awsdns-57.co.uk",
         "ns-1331.awsdns-38.org",
-        "ns-624.awsdns-14.net"
+        "ns-624.awsdns-14.net",
+        "ns-115.awsdns-14.com"
     ]
 }

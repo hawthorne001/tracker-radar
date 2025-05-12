@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000925,
+    "sites": 9,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,11 +24,11 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 3,
-                "Date.prototype.getTime": 3
+                "console.memory": 2,
+                "Date.prototype.getTime": 2
             },
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000206,
             "cnames": [],
             "responseHashes": [
                 "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
@@ -36,9 +37,79 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "babysitting24.ch",
                 "homeservice24.ch",
                 "www.litcharts.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fruugoschweiz.com",
+                "www.hola.com",
+                "www.on.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [],
+            "responseHashes": [
+                "ec462b050e186f1b9bf833a11633c99e712757caae5db59cae32b65ff7ff14a6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fruugoschweiz.com",
+                "www.hola.com",
+                "www.on.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.4\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000411,
+            "cnames": [],
+            "responseHashes": [
+                "229a28cc86ef31dd3ce33153dc2782b219d0a5556f76bf971d9f08d964fb8d7a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hola.com",
+                "www.hola.com",
+                "www.spglobal.com",
+                "www.withings.com"
             ]
         }
     ],
@@ -48,11 +119,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "ceros.com",
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 6,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
         "tori.ns.cloudflare.com",
