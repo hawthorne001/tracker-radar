@@ -9,14 +9,36 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00144,
-    "sites": 14,
+    "prevalence": 0.00113,
+    "sites": 11,
     "subdomains": [
-        "r-login"
+        "public-api",
+        "r-login",
+        "stats"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "wordpress\\.com\\/wp-admin\\/rest-proxy\\/",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jooq.org",
+                "henriettesmatblogg.com"
+            ]
+        },
         {
             "rule": "wordpress\\.com\\/remote-login\\.php",
             "cookies": 0,
@@ -25,21 +47,40 @@
                 "r-login"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000514,
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": [],
-            "responseHashes": [
-                "65efa68b1e79a432faee3104453ce35314a6ef45aa8cdb52fd2dcea52c5d18fd"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "alfhilds.com",
-                "blogg.gartnerbutikken.no",
-                "theslnaturist.com",
-                "tomwaitsoslo.no",
+                "henriettesmatblogg.com",
                 "toppnorsk.com"
+            ]
+        },
+        {
+            "rule": "wordpress\\.com\\/e-202520\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "5badd609a51ede5bab5b89534fc3011a4dd1ab487cc7081d7cf38479bcbab855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ojodepez-fanzine.net",
+                "www.fordclubnorway.no"
             ]
         }
     ],
@@ -48,19 +89,20 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000103,
+    "cookies": 0.000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9787234042553191
+            "prevalence": 0.9574468085106383
         },
         {
             "domain": "wp.com",
-            "prevalence": 0.02127659574468085
+            "prevalence": 0.0425531914893617
         }
     ],
     "types": {
-        "Document": 5
+        "Document": 4,
+        "Script": 2
     },
     "nameservers": [
         "ns1.wordpress.com",

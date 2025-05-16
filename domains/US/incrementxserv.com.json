@@ -4,14 +4,47 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000283,
-    "sites": 4,
+    "prevalence": 0.0000354,
+    "sites": 5,
     "subdomains": [
-        "banner"
+        "banner",
+        "cookie",
+        "imp"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "incrementxserv\\.com\\/scripts\\/pageads\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "banner"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.screenY": 2,
+                "window.outerWidth": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [
+                "3dc074434430ce374b185892b1f4df6f2c4a9dc4056123ca78ac90117ae1be8b",
+                "d4aa9d27c56d8b8e1e046f1eae774d0624e1162f03765c10eb49ee86eb097d75"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dinamani.com",
+                "www.dinamani.com",
+                "www.mid-day.com",
+                "www.newindianexpress.com"
+            ]
+        },
         {
             "rule": "incrementxserv\\.com\\/scripts\\/overlayads\\.js",
             "cookies": 0.0000141,
@@ -30,27 +63,24 @@
             "prevalence": 0.0000141,
             "cnames": [],
             "responseHashes": [
-                "a22c4169ec213a21c8f24f8179a73b108224163a4fb9f2e6351cbc8ddcab1ffe"
+                "73017007e9a1895dde3c97a0e5fbdd8f8a0770d55d8d7dcca6b718dde4f2bd45"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "news24online.com",
+                "mid-day.com",
                 "www.mid-day.com"
             ]
         },
         {
             "rule": "incrementxserv\\.com\\/ixads\\/images\\/t_o\\.frame\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "banner"
             ],
-            "apis": {
-                "Notification.permission": 1,
-                "Navigator.prototype.plugins": 1
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000141,
             "cnames": [],
@@ -61,16 +91,45 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "news24online.com",
+                "mid-day.com",
                 "www.mid-day.com"
             ]
         },
         {
-            "rule": "incrementxserv\\.com\\/scripts\\/pageads\\.js",
+            "rule": "incrementxserv\\.com\\/ixads\\/ad",
+            "cookies": 0.0000212,
+            "fingerprinting": 1,
+            "subdomains": [
+                "banner"
+            ],
+            "apis": {
+                "Notification.permission": 2,
+                "Navigator.prototype.plugins": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000212,
+            "cnames": [],
+            "responseHashes": [
+                "c826e80bf8ee69294081e543a22cf08de733435d0369eb3320f76138f338e411",
+                "9af84ad9252af8e8955d0a83a459cbb9b0409dcb7c368944a7f9b34ef8eabc80"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0000070733363512901765
+            },
+            "exampleSites": [
+                "mid-day.com",
+                "www.mid-day.com",
+                "www.newindianexpress.com"
+            ]
+        },
+        {
+            "rule": "incrementxserv\\.com\\/pixel\\/js\\/csync\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "banner"
+                "cookie"
             ],
             "apis": {},
             "sites": 2,
@@ -81,18 +140,40 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dinamani.com",
-                "www.dinamani.com"
+                "mid-day.com",
+                "www.newindianexpress.com"
+            ]
+        },
+        {
+            "rule": "incrementxserv\\.com\\/empty\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000141,
+            "cnames": [],
+            "responseHashes": [
+                "ad1eaeafde714b48cb15678bf92e82cdcb0ba1ca559b69e376639dfbe916fd2e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mid-day.com",
+                "www.mid-day.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000141,
+    "cookies": 0.0000212,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.5
         },
         {
             "domain": "doubleclick.net",
@@ -100,11 +181,12 @@
         },
         {
             "domain": "rediads.com",
-            "prevalence": 0.2
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 13,
+        "Image": 2
     },
     "nameservers": [
         "ns-106.awsdns-13.com",

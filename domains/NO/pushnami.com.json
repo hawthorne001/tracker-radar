@@ -7,33 +7,38 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000206,
-    "sites": 2,
+    "prevalence": 0.000307,
+    "sites": 3,
     "subdomains": [
+        "cdn",
         "trc",
-        "cdn"
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "pushnami\\.com\\/api\\/push\\/track",
+            "rule": "pushnami\\.com\\/js\\/modules\\/media\\.bundle\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "trc"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2
+            },
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "681ee55310648ed37904ea525c3a727e2e80f6966276a7d5a8f49999a2c9811c"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "biblestudytools.com",
-                "www.christianity.com"
+                "www.miaminewtimes.com"
             ]
         },
         {
@@ -44,8 +49,31 @@
                 "trc"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 3,
+            "prevalence": 0.000307,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblestudytools.com",
+                "www.miaminewtimes.com",
+                "www.premierguitar.com"
+            ]
+        },
+        {
+            "rule": "pushnami\\.com\\/api\\/push\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000307,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -53,7 +81,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "biblestudytools.com",
-                "www.christianity.com"
+                "www.miaminewtimes.com",
+                "www.premierguitar.com"
             ]
         },
         {
@@ -64,8 +93,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000308,
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
                 "1cac3d15a40c9c939c0c23d8ec3f8c55d805c633f473036dda8f9eb9900abecc"
@@ -75,8 +104,27 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "biblestudytools.com",
-                "www.biblestudytools.com",
-                "www.christianity.com"
+                "www.biblestudytools.com"
+            ]
+        },
+        {
+            "rule": "pushnami\\.com\\/scripts\\/v1\\/hub",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.premierguitar.com"
             ]
         }
     ],
@@ -86,18 +134,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2,
-        "Script": 3
+        "Script": 4,
+        "Fetch": 3,
+        "Preflight": 3,
+        "Document": 2
     },
     "nameservers": [
-        "ns-349.awsdns-43.com",
-        "ns-817.awsdns-38.net",
+        "ns-1428.awsdns-50.org",
         "ns-2009.awsdns-59.co.uk",
-        "ns-1428.awsdns-50.org"
+        "ns-349.awsdns-43.com",
+        "ns-817.awsdns-38.net"
     ]
 }

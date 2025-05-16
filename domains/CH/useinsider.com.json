@@ -10,44 +10,48 @@
     "prevalence": 0.000411,
     "sites": 4,
     "subdomains": [
-        "euronewsfr.api",
-        "marionnaudswitzerland.api",
-        "royalqueenseedssp.api"
+        "chargemap.api",
+        "rado.api",
+        "woodbrass.api",
+        "singaporeairlines.api",
+        "hit.api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "useinsider\\.com\\/ins\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
-                "euronewsfr.api",
-                "marionnaudswitzerland.api",
-                "royalqueenseedssp.api"
+                "chargemap.api",
+                "rado.api",
+                "woodbrass.api"
             ],
             "apis": {
-                "window.localStorage": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.maxTouchPoints": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.vendor": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Date.prototype.getTime": 3,
+                "Notification.permission": 3,
+                "Navigator.prototype.plugins": 3,
+                "Navigator.prototype.permissions": 1
             },
-            "sites": 4,
-            "prevalence": 0.000411,
+            "sites": 3,
+            "prevalence": 0.000308,
             "cnames": [],
             "responseHashes": [
-                "b24b607e88ebfadfaad52841a6f87815b90ffa1e0f1ff32650607f77f6314161",
-                "33d12cdf2d1747d1bd87aecf0df4cc3e3dcfaf422993d878550b8d1a938429fd"
+                "6be775c51a5a70c45ea8813046c454f339a18d15de89de81832a1f8fdff652c9",
+                "5c1f3e06e61f2901e9ae236036d558f2cc5c2c64cca2f8f76c8d9f79ff26eaa6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "euronews.com",
-                "fr.euronews.com",
-                "www.marionnaud.ch",
-                "www.royalqueenseeds.de"
+                "chargemap.com",
+                "www.rado.com",
+                "www.woodbrass.com"
             ]
         },
         {
@@ -55,21 +59,49 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "euronewsfr.api",
-                "royalqueenseedssp.api"
+                "chargemap.api",
+                "rado.api",
+                "singaporeairlines.api",
+                "woodbrass.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000411,
+            "cnames": [],
+            "responseHashes": [
+                "407b53a7416c7d2ead78587205c48f6b9d9d8402a4a205c7d3044beefce27f45"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "www.rado.com",
+                "www.singaporeair.com",
+                "www.woodbrass.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hit.api"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000308,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "euronews.com",
-                "fr.euronews.com",
-                "www.royalqueenseeds.de"
+                "chargemap.com",
+                "de.chargemap.com",
+                "www.woodbrass.com"
             ]
         }
     ],
@@ -79,15 +111,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 4,
-        "Document": 3
+        "Script": 3,
+        "Document": 4,
+        "XHR": 3
     },
     "nameservers": [
-        "eva.ns.cloudflare.com",
-        "eric.ns.cloudflare.com"
+        "eric.ns.cloudflare.com",
+        "eva.ns.cloudflare.com"
     ]
 }
