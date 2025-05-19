@@ -7,13 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000353,
+    "prevalence": 0.0000354,
     "sites": 5,
     "subdomains": [
         "www.compass.dhs",
-        "www.dcnr",
-        "www",
-        "www.palottery"
+        "www.palottery",
+        "www.phmc"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -167,8 +166,8 @@
                 "www.compass.dhs"
             ],
             "apis": {
-                "window.localStorage": 2,
                 "window.sessionStorage": 2,
+                "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
                 "Date.prototype.getTimezoneOffset": 2,
                 "CanvasRenderingContext2D.prototype.measureText": 2
@@ -309,7 +308,7 @@
             "prevalence": 0.0000141,
             "cnames": [],
             "responseHashes": [
-                "c53fdd52c206622502e9aed7afa2217e3d4c00d690c8cd8a3e3fda93b6f9df00"
+                "254c1f1d26092e196579f183a958327330f7e09bf5108f5708a87851743e1ce7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -628,63 +627,25 @@
             ]
         },
         {
-            "rule": "pa\\.gov\\/Redirect",
+            "rule": "pa\\.gov\\/assets\\/images\\/hero1\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "www.dcnr"
+                "www.compass.dhs"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000141,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "northcentralpa.com",
-                "www.northcentralpa.com"
-            ]
-        },
-        {
-            "rule": "pa\\.gov\\/en\\/agencies\\/dcnr\\.html",
-            "cookies": 0.00000707,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
+            "responseHashes": [
+                "0719b5a0f2c1bd74ed7d7344607e8a94772d3c79908c7a99a934314d3dbaa936"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
-            "cnames": [],
-            "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "northcentralpa.com",
-                "www.northcentralpa.com"
-            ]
-        },
-        {
-            "rule": "pa\\.gov\\/agencies\\/dcnr\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "northcentralpa.com",
-                "www.northcentralpa.com"
+                "state.pa.us",
+                "www.compass.state.pa.us"
             ]
         },
         {
@@ -756,11 +717,13 @@
         {
             "rule": "pa\\.gov\\/Custom\\/js\\/all-libs-nr\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "www.palottery"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.0000141,
             "cnames": [],
@@ -1532,28 +1495,51 @@
                 "state.pa.us",
                 "www.palottery.state.pa.us"
             ]
+        },
+        {
+            "rule": "pa\\.gov\\/",
+            "cookies": 0.00000707,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www.palottery",
+                "www.phmc"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000141,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.pa.us",
+                "www.phmc.state.pa.us"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000353,
+    "cookies": 0.0000354,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.7142857142857143
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "Document": 2,
+        "Document": 4,
         "Script": 42,
         "Stylesheet": 10,
         "XHR": 12,
         "Other": 2,
-        "Image": 60,
+        "Image": 56,
         "Font": 8
     },
     "nameservers": [
