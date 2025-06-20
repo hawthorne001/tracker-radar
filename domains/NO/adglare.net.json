@@ -4,33 +4,47 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000409,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "candy.engine"
+        "candy.engine",
+        "laweekly.engine",
+        "traceparts.engine"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "engine.laweekly.com",
+            "resolved": "laweekly.engine.adglare.net"
+        },
+        {
+            "original": "engine.traceparts.com",
+            "resolved": "traceparts.engine.adglare.net"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "adglare\\.net\\/",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "candy.engine"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b719cf1d13b54480003977357c25b463c532f4bbee34c5f80cdabc149ffd2c94"
+                "d8c8a221bf02b8172db4cd7d7329b8369f69bfe19dfeec4453c8298c4421068d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "adultgamesworld.com",
                 "f95zone.to",
                 "influencersgonewild.com"
             ]
@@ -44,7 +58,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -53,8 +67,40 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "adultgamesworld.com",
-                "f95zone.to"
+                "f95zone.to",
+                "influencersgonewild.com"
+            ]
+        },
+        {
+            "rule": "adglare\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "laweekly.engine",
+                "traceparts.engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "engine.laweekly.com",
+                    "resolved": "laweekly.engine.adglare.net"
+                },
+                {
+                    "original": "engine.traceparts.com",
+                    "resolved": "traceparts.engine.adglare.net"
+                }
+            ],
+            "responseHashes": [
+                "0a5715e359c297ec0f13f3978fd762ff0fc793294f49816c171c69134352d4dd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laweekly.com",
+                "www.traceparts.com"
             ]
         }
     ],
@@ -64,17 +110,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Document": 3,
-        "Ping": 2
+        "Document": 2,
+        "Ping": 2,
+        "Script": 2
     },
     "nameservers": [
-        "ns10.adglare.eu",
         "ns7.adglare.nl",
         "ns8.adglare.org",
-        "ns9.adglare.info"
+        "ns9.adglare.info",
+        "ns10.adglare.eu"
     ]
 }

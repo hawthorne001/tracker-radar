@@ -7,14 +7,61 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000409,
-    "sites": 4,
+    "prevalence": 0.000606,
+    "sites": 6,
     "subdomains": [
+        "cdn",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "adnz\\.co\\/convey-scripts\\/contextual_10\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ef1dba749931120cf1f695c71992a845a513b1812302686f870b9863a987f6a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "search.ch",
+                "www.bluewin.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-events-sink\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "search.ch",
+                "www.bluewin.ch"
+            ]
+        },
         {
             "rule": "adnz\\.co\\/api\\/ws-clickstream-collector\\/submit",
             "cookies": 0,
@@ -23,8 +70,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -32,6 +79,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "20min.ch",
+                "www.bluewin.ch",
+                "www.lematin.ch",
                 "www.lessentiel.lu"
             ]
         },
@@ -43,8 +92,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -54,6 +103,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "20min.ch",
+                "www.bluewin.ch",
+                "www.lematin.ch",
                 "www.lessentiel.lu"
             ]
         },
@@ -65,10 +116,11 @@
                 "api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "sites": 5,
+            "prevalence": 0.000505,
             "cnames": [],
             "responseHashes": [
+                "8c974e6c67da0e95a2efb8e4b1be22aec4204c58ff35a91eb91c5fc3b6e1bde9",
                 "cabf5609dd3ca129d4a52f774801221dd9715298f4d99d36959ce24dc3c716ad",
                 "8d89bf3bee59ac10780ca9c2c0bcf1008cf2f1421996a2a50ce6b84b6aca729f"
             ],
@@ -77,8 +129,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "20min.ch",
-                "www.letemps.ch",
-                "www.lessentiel.lu"
+                "www.bluewin.ch",
+                "www.lematin.ch",
+                "www.lessentiel.lu",
+                "www.letemps.ch"
             ]
         },
         {
@@ -90,34 +144,12 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "08d1623c441b55a6989fce1086354967eb9f522e4cab47da49e9e1e640afbde6"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "letemps.ch",
-                "www.letemps.ch"
-            ]
-        },
-        {
-            "rule": "adnz\\.co\\/api\\/ws-clickstream-collector\\/submit\\/batch",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -132,20 +164,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6153846153846154
         },
         {
             "domain": "ringier-advertising.ch",
-            "prevalence": 0.25
+            "prevalence": 0.38461538461538464
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 7,
-        "Ping": 2
+        "Script": 2,
+        "Ping": 2,
+        "Preflight": 4,
+        "Fetch": 11
     },
     "nameservers": [
-        "cheryl.ns.cloudflare.com",
-        "charles.ns.cloudflare.com"
+        "charles.ns.cloudflare.com",
+        "cheryl.ns.cloudflare.com"
     ]
 }

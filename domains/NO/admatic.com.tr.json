@@ -4,16 +4,16 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000307,
+    "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
         "setupad.rtb",
-        "1898844950.rtb",
-        "cdn.serve",
-        "static.cdn"
+        "static.cdn",
+        "dsp-service",
+        "prebid"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "admatic\\.com\\.tr\\/pb",
@@ -24,28 +24,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ets2.lt",
-                "samfw.com"
-            ]
-        },
-        {
-            "rule": "admatic\\.com\\.tr\\/pb",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "setupad.rtb",
-                "1898844950.rtb"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -55,40 +34,66 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ets2.lt",
-                "samfw.com",
-                "www.ensonhaber.com"
+                "www.kyivpost.com"
             ]
         },
         {
-            "rule": "admatic\\.com\\.tr\\/showad\\/sync\\.html",
+            "rule": "admatic\\.com\\.tr\\/pb",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.serve"
+                "setupad.rtb"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Document",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ets2.lt",
-                "samfw.com"
+                "www.kyivpost.com"
             ]
         },
         {
             "rule": "admatic\\.com\\.tr\\/sync\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000302,
+            "fingerprinting": 1,
             "subdomains": [
                 "static.cdn"
             ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "37febb06a73baa0908fcf6b7007563db892c081b96e9d7d938e3cc008d31dcad"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ets2.lt",
+                "tvrepublika.pl",
+                "www.kyivpost.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.com\\.tr\\/users\\/sync\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsp-service"
+            ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000307,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
@@ -96,31 +101,77 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ets2.lt",
-                "samfw.com",
-                "www.ensonhaber.com"
+                "tvrepublika.pl",
+                "www.kyivpost.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.com\\.tr\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ets2.lt",
+                "tvrepublika.pl",
+                "www.kyivpost.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.com\\.tr\\/cookie\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static.cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "481c8382889f68e105a819ab253cbea9e6a52e86d611edd9fde5feae25e1d8a7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ets2.lt",
+                "tvrepublika.pl",
+                "www.kyivpost.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "stpd.cloud",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.8
         },
         {
-            "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "domain": "optad360.io",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Fetch": 2,
         "Preflight": 2,
-        "Fetch": 3,
-        "Document": 5
+        "Document": 12
     },
     "nameservers": [
-        "ursula.ns.cloudflare.com",
-        "porter.ns.cloudflare.com"
+        "porter.ns.cloudflare.com",
+        "ursula.ns.cloudflare.com"
     ]
 }

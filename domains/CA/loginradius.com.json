@@ -7,12 +7,18 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000209,
-    "sites": 2,
+    "prevalence": 0.00114,
+    "sites": 11,
     "subdomains": [
-        "postmedia.hub"
+        "postmedia.hub",
+        "cbc-login.hub"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "login.cbc.ca",
+            "resolved": "cbc-login.hub.loginradius.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -23,16 +29,59 @@
                 "postmedia.hub"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000209,
+            "sites": 10,
+            "prevalence": 0.00104,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "edmontonjournal.com",
-                "ottawasun.com"
+                "canoe.com",
+                "calgarysun.com",
+                "driving.ca",
+                "ottawacitizen.com",
+                "www.chathamdailynews.ca",
+                "www.intelligencer.ca",
+                "www.saultstar.com",
+                "www.simcoereformer.ca",
+                "www.thesudburystar.com",
+                "www.timminspress.com"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "postmedia.hub",
+                "cbc-login.hub"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000936,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canoe.com",
+                "newsinteractives.cbc.ca",
+                "ottawacitizen.com",
+                "www.chathamdailynews.ca",
+                "www.intelligencer.ca",
+                "www.saultstar.com",
+                "www.simcoereformer.ca",
+                "www.thesudburystar.com",
+                "www.timminspress.com"
             ]
         },
         {
@@ -44,15 +93,42 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.000208,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "edmontonjournal.com",
-                "ottawasun.com"
+                "calgarysun.com",
+                "driving.ca"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cbc-login.hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [
+                "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "newsinteractives.cbc.ca"
             ]
         }
     ],
@@ -62,12 +138,18 @@
     "topInitiators": [
         {
             "domain": "postmedia.digital",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "lrcontent.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Fetch": 10,
+        "Preflight": 9,
+        "Other": 2,
+        "XHR": 2
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

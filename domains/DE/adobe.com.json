@@ -9,18 +9,20 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000306,
+    "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
         "entitlement.auth",
-        "sp.auth"
+        "sp.auth",
+        "xd",
+        "sstats"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "entitlement.auth"
@@ -28,33 +30,50 @@
             "apis": {
                 "console.memory": 2,
                 "Document.cookie getter": 2,
-                "window.localStorage": 1
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
             },
-            "sites": 3,
-            "prevalence": 0.000306,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e69092da13a80a47c63779b414680735d87fe5f19987f15097245b3c17e6c41b"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "client_type": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020086371397007131,
+                    "uniqueness": 0.5
+                },
+                "client_version": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020086371397007131,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
-                "www.cnbc.com",
+                "cnbc.com",
                 "www.espn.com"
             ]
         },
         {
             "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.html",
-            "cookies": 0.000306,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "sp.auth"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000306,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "1c7bfb5ab78ddcc649d39e28e0cd1ddf0bac2884517d99d84b49f87069758d12"
@@ -63,35 +82,218 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
-                "www.cnbc.com",
+                "cnbc.com",
                 "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "51731367fa6c750624eaa80fc488b9d17b99f625556b437872d30e57ad2d9856"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/register",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0e4e939a795a721f99564b90deb47c56b9303228c9087c651b28e656fd6d6596"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/register",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0e0de6010e9d2999167f1239c7dfde6b4b9b7e34269ebf128802927691f3c542"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/static\\/wasm-a27a5f8e391df2286f79\\.worker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d9649e539e6667eed2af770a0a566ecdad324a077139ca9ff077cfd78011e36c"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nwzonline.de",
+                "www.nwzonline.de"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/static\\/096fcbbe9b6ce3698f9ff66cd604ebd1\\.wasm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "96ad70de2f73a7c4adfad694e0bb981a74622cf4bf47047521a97f7321bafc4c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nwzonline.de",
+                "www.nwzonline.de"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/ee\\/v1\\/interact",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sstats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "13e89291136e08ad664151fba0253c49335b6d13df3214c697e0a493172c1b23"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nwzonline.de",
+                "www.nwzonline.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000306,
+    "cookies": 0.000301,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.4
         },
         {
             "domain": "cnbcfm.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.26666666666666666
         }
     ],
     "types": {
-        "Script": 3,
-        "Document": 3
+        "Script": 4,
+        "Document": 2,
+        "XHR": 6,
+        "Preflight": 4,
+        "Other": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "a10-64.akam.net",
-        "a28-67.akam.net",
+        "a1-217.akam.net",
         "a26-66.akam.net",
         "a7-64.akam.net",
-        "a1-217.akam.net",
+        "a10-64.akam.net",
+        "a28-67.akam.net",
         "a13-65.akam.net"
     ]
 }
