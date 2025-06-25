@@ -4,14 +4,115 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000103,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "eu-app"
+        "eu-chat",
+        "chat",
+        "eu-app",
+        "visitorim",
+        "eu-socket"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "quickcep\\.com\\/initQuickChat\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "eu-chat",
+                "chat"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ade230d24b913876d87c1efcb42d4e58d4bbfcb951220e0e32c1e76fe9478d60"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honor.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im-visitor\\/chatSession\\/visitorSocketConnectCheck2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu-app",
+                "visitorim"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "54fb0395addf6c1db024312b486edb409951d8f785cca15daa437beb255849b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honor.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im-visitor\\/chatSession\\/visitorSocketConnectCheck2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu-app",
+                "visitorim"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honor.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu-socket"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "mp_sessionId": 0.00020112630732099757
+            },
+            "exampleSites": [
+                "honor.com",
+                "www.honor.com"
+            ]
+        },
         {
             "rule": "quickcep\\.com\\/cdp-collect\\/cdp\\/collect\\/event\\/",
             "cookies": 0,
@@ -21,7 +122,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "89060919b114e0bfbc032a7b56ca00d661fd12ee41a65849a5444d87a187043b"
@@ -37,18 +138,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000103,
+    "cookies": 0.000201,
     "topInitiators": [
         {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.6
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 6,
+        "Preflight": 2
     },
     "nameservers": [
-        "vip3.alidns.com",
-        "vip4.alidns.com"
+        "vip4.alidns.com",
+        "vip3.alidns.com"
     ]
 }

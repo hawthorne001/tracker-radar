@@ -4,17 +4,22 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000512,
-    "sites": 5,
+    "prevalence": 0.000707,
+    "sites": 7,
     "subdomains": [
         "94s7z8vpy1n8",
         "0tp9ssgtptvs",
-        "3x6vjqhj2cpt"
+        "3x6vjqhj2cpt",
+        "24hhwlzxx6bz"
     ],
     "cnames": [
         {
             "original": "status.cursor.com",
             "resolved": "0tp9ssgtptvs.stspg-customer.com"
+        },
+        {
+            "original": "status.kahoot.com",
+            "resolved": "24hhwlzxx6bz.stspg-customer.com"
         },
         {
             "original": "status.snowflake.com",
@@ -37,7 +42,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "status.snowflake.com",
@@ -49,7 +54,7 @@
                 }
             ],
             "responseHashes": [
-                "a867421dc809ad403853641f4dde823ca46142d91d26ce6fe4e900731e6d06eb"
+                "a2a0fdd577919193476d25c589e6e7e85005ec05dabfee77d7bb1781f87333e5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -68,7 +73,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "status.wix.com",
@@ -76,7 +81,7 @@
                 }
             ],
             "responseHashes": [
-                "28258f022132a6e75525d6c831b0bed4ba39f436635a18091082d23795cb5c4e"
+                "aed466d16f8f5e95d915ce81709ec257f6a5fac17966c2f078bebea5ff2479b9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -84,6 +89,58 @@
             "exampleSites": [
                 "wix.com",
                 "support.wix.com"
+            ]
+        },
+        {
+            "rule": "stspg-customer\\.com\\/api\\/v2\\/incidents\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "3x6vjqhj2cpt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "status.wix.com",
+                    "resolved": "3x6vjqhj2cpt.stspg-customer.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wix.com",
+                "support.wix.com"
+            ]
+        },
+        {
+            "rule": "stspg-customer\\.com\\/api\\/v2\\/status\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "24hhwlzxx6bz"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "status.kahoot.com",
+                    "resolved": "24hhwlzxx6bz.stspg-customer.com"
+                }
+            ],
+            "responseHashes": [
+                "6f00145e2ce2c2599baac53c03bd9fc20beb0393855f0704fa1f7c4ce94bca0d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kahoot.com",
+                "support.kahoot.com"
             ]
         }
     ],
@@ -93,25 +150,34 @@
     "topInitiators": [
         {
             "domain": "discourse-cdn.com",
-            "prevalence": 0.4
+            "prevalence": 0.25
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.25
         },
         {
             "domain": "parastorage.com",
-            "prevalence": 0.4
+            "prevalence": 0.25
         },
         {
             "domain": "redhatstatic.com",
-            "prevalence": 0.2
+            "prevalence": 0.125
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
         "Fetch": 2,
-        "XHR": 2
+        "XHR": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1098.awsdns-09.org",
-        "ns-1711.awsdns-21.co.uk",
         "ns-441.awsdns-55.com",
-        "ns-817.awsdns-38.net"
+        "ns-1098.awsdns-09.org",
+        "ns-817.awsdns-38.net",
+        "ns-1711.awsdns-21.co.uk"
     ]
 }

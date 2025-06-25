@@ -7,24 +7,70 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.0046,
-    "sites": 44,
+    "prevalence": 0.00385,
+    "sites": 37,
     "subdomains": [
+        "realtimeeventfeeds",
+        "api",
         "i"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "viafoura\\.co\\/v3\\/www\\.healthcentral\\.com\\/ingest",
+            "rule": "viafoura\\.co\\/eventfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realtimeeventfeeds"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000416,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canoe.com",
+                "calgarysun.com",
+                "newsinteractives.cbc.ca",
+                "www.intelligencer.ca"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v2\\/www\\.cbc\\.ca\\/bootstrap\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [],
+            "responseHashes": [
+                "9acad5ba899e16109ec394e4f28d094a2184493f9ed38082486a99516320b579"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v3\\/www\\.cbc\\.ca\\/ingest",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "i"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000209,
+            "sites": 3,
+            "prevalence": 0.000312,
             "cnames": [],
             "responseHashes": [
                 "8b0dd6330236b2fc5ec91d1fd116814d9f792fcecdc674a015ff88415fedaf86"
@@ -32,15 +78,16 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00020916126333403055
+                "_cb_svref": 0.0002079434393844874
             },
             "exampleSites": [
-                "healthcentral.com",
-                "www.healthcentral.com"
+                "cbc.ca",
+                "newsinteractives.cbc.ca",
+                "www.cbc.ca"
             ]
         },
         {
-            "rule": "viafoura\\.co\\/v3\\/www\\.healthcentral\\.com\\/ingest",
+            "rule": "viafoura\\.co\\/v3\\/www\\.cbc\\.ca\\/ingest",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -48,19 +95,17 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.000208,
             "cnames": [],
             "responseHashes": [
                 "8b0dd6330236b2fc5ec91d1fd116814d9f792fcecdc674a015ff88415fedaf86"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00020916126333403055
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "healthcentral.com",
-                "www.healthcentral.com"
+                "cbc.ca",
+                "newsinteractives.cbc.ca"
             ]
         }
     ],
@@ -70,27 +115,25 @@
     "topInitiators": [
         {
             "domain": "viafoura.net",
-            "prevalence": 0.5344827586206896
+            "prevalence": 0.6341463414634146
         },
         {
             "domain": "first party",
-            "prevalence": 0.3275862068965517
+            "prevalence": 0.34146341463414637
         },
         {
             "domain": "futurecdn.net",
-            "prevalence": 0.10344827586206896
+            "prevalence": 0.012195121951219513
         },
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.02586206896551724
-        },
-        {
-            "domain": "sentry-cdn.com",
-            "prevalence": 0.008620689655172414
+            "domain": "script.ac",
+            "prevalence": 0.012195121951219513
         }
     ],
     "types": {
-        "Image": 2,
+        "WebSocket": 4,
+        "Fetch": 2,
+        "Image": 3,
         "Ping": 2
     },
     "nameservers": [

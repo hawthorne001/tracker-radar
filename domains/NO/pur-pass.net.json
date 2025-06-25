@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "as-cobi",
-        "smb-giga"
+        "smb-giga",
+        "smb-kino",
+        "tonline"
     ],
     "cnames": [
         {
@@ -18,21 +20,31 @@
         {
             "original": "pur.giga.de",
             "resolved": "smb-giga.pur-pass.net"
+        },
+        {
+            "original": "pur.kino.de",
+            "resolved": "smb-kino.pur-pass.net"
+        },
+        {
+            "original": "pur.t-online.de",
+            "resolved": "tonline.pur-pass.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pur-pass\\.net\\/now\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "as-cobi",
-                "smb-giga"
+                "smb-giga",
+                "smb-kino",
+                "tonline"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "pur.computerbild.de",
@@ -41,17 +53,54 @@
                 {
                     "original": "pur.giga.de",
                     "resolved": "smb-giga.pur-pass.net"
+                },
+                {
+                    "original": "pur.kino.de",
+                    "resolved": "smb-kino.pur-pass.net"
+                },
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
                 }
             ],
             "responseHashes": [
-                "480b14f7dcc65db315cb3b0c521aabfda059ca7f8af58b906df9df31b119755e"
+                "6d792c0fe158914460bfbe453b019b10ddc4878f113ad2791b7653d4ba342b1d",
+                "2676983aa08d6c325248e6961ced23e817d328455ceb82a2fcdb3333e4a2a065",
+                "157ccb8ceb6e980d816d02077ec67ad6a69263a1fdf92bb0a7183d9b0fd5722d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "computerbild.de",
-                "www.giga.de"
+                "www.giga.de",
+                "www.kino.de",
+                "www.t-online.de"
+            ]
+        },
+        {
+            "rule": "pur-pass\\.net\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tonline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-online.de",
+                "www.t-online.de"
             ]
         }
     ],
@@ -65,11 +114,12 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
+        "ns-141-c.gandi.net",
         "ns-243-a.gandi.net",
-        "ns-35-b.gandi.net",
-        "ns-141-c.gandi.net"
+        "ns-35-b.gandi.net"
     ]
 }

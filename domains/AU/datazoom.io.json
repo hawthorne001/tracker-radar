@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000212,
+    "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "platform"
+        "platform",
+        "broker"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,21 +21,85 @@
                 "platform"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.connection": 1,
-                "window.localStorage": 1,
-                "window.sessionStorage": 1,
-                "window.outerWidth": 1,
-                "window.outerHeight": 1,
-                "Navigator.prototype.cookieEnabled": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.connection": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Navigator.prototype.cookieEnabled": 2
             },
             "sites": 2,
-            "prevalence": 0.000212,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "a48b78e58202b190567beeb9cf4bca1c530c5a2fa56ae9ecfa83947c60df2067"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "pagesix.com"
+            ]
+        },
+        {
+            "rule": "datazoom\\.io\\/beacon\\/v2\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "746bc6fbd1a63920772fcaf481e90896cef6e2e795efb01dc2f33330277fe661"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "pagesix.com"
+            ]
+        },
+        {
+            "rule": "datazoom\\.io\\/broker\\/v1\\/getEpochMillis",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "broker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a730e34cb4508fe46fafe7074a1f1572f894bedc9ce403100e5e87897745db70"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "pagesix.com"
+            ]
+        },
+        {
+            "rule": "datazoom\\.io\\/broker\\/v1\\/getEpochMillis",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "broker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -53,7 +118,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 4,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-126.awsdns-15.com",

@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000637,
-    "sites": 9,
+    "prevalence": 0.0000547,
+    "sites": 8,
     "subdomains": [
         "sales-pop",
         "tracking-sales-pop",
-        "app"
+        "app",
+        "tracking-app-sas"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,12 +23,12 @@
                 "sales-pop"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4
             },
-            "sites": 5,
-            "prevalence": 0.0000354,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
                 "515454b006bcd79ba1348e4e1df00d6613959102bea3a51f2c014d65674510be"
@@ -37,7 +38,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "everdries.com",
-                "looseleafteamarket.com",
                 "mrmaple.com",
                 "www.foxhoundbeecompany.com",
                 "www.nationalguntrusts.com"
@@ -51,36 +51,88 @@
                 "tracking-sales-pop"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000212,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "7107db25caba71d25e2f97e2289e81667ccc965f605a27119e56e862b9c63713",
+                "aa366b515decfc5943faa62c220de267ad2733a176323bb4a99805f00a7cffd8",
+                "3a9fd9a4595823562de625a2b32c947d06fac3837e13152438c5df26d89bd54e"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "looseleafteamarket.com",
+                "everdries.com",
                 "mrmaple.com",
-                "www.foxhoundbeecompany.com"
+                "www.foxhoundbeecompany.com",
+                "www.nationalguntrusts.com"
             ]
         },
         {
             "rule": "carecart\\.io\\/api\\/abandoned-cart\\/js-script",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "app"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000212,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "enginediy.com",
+                "totalgym.com",
+                "www.enginediy.com",
+                "www.thesoutherntrapper.com"
+            ]
+        },
+        {
+            "rule": "carecart\\.io\\/store-front-api\\/get-store-information",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking-app-sas"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "totalgym.com",
+                "www.enginediy.com",
+                "www.thesoutherntrapper.com"
+            ]
+        },
+        {
+            "rule": "carecart\\.io\\/store-front-api\\/get-store-information",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking-app-sas"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "525249d2d0ea507fcb764036a7bd6bead5c3e16fc7a51d2aa4f61edfc710320e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "totalgym.com",
                 "www.enginediy.com",
                 "www.thesoutherntrapper.com"
             ]
@@ -88,23 +140,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.6470588235294118
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.3076923076923077
-        },
-        {
-            "domain": "reamaze.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.35294117647058826
         }
     ],
     "types": {
-        "Script": 11
+        "Script": 11,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

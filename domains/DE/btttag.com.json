@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000408,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
         "ni500z",
+        "landroverdxfde",
         "motorolaus500z",
-        "urbanoutfitters24821z"
+        "d"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,13 +21,14 @@
         {
             "rule": "btttag\\.com\\/btt\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "ni500z",
-                "motorolaus500z",
-                "urbanoutfitters24821z"
+                "landroverdxfde",
+                "motorolaus500z"
             ],
             "apis": {
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
                 "Date.prototype.getTime": 3,
                 "Screen.prototype.height": 3,
                 "Screen.prototype.width": 3,
@@ -35,21 +37,44 @@
                 "PerformanceTiming.prototype.navigationStart": 3
             },
             "sites": 4,
-            "prevalence": 0.000408,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
+                "6fa198ac4973e237deb7a9a75e7735a6ef602cbd5182dbf1f73faee7463f5007",
                 "1803219b40b82ba97b119d17af3e48bfdc0a61e9b1d8ac4fa0af05bb94a2f9c5",
-                "eb679a9902426c384c47dfefadab664824897e447f06eb7a9dc170cdae3c7ef1",
-                "81114c56f93a74876a76ef8d4197fcb0d6e52bcbc801b6dce1df8c2a18e04625"
+                "bf30ad8ef7d7af7d8d928e71e1dba87a7053f5d8a087cb850043dae492493e36"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ni.com",
+                "www.landrover.de",
                 "www.motorola.com",
-                "www.ni.com",
-                "www.urbanoutfitters.com"
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "btttag\\.com\\/err\\.rcv",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ni.com",
+                "www.landrover.de",
+                "www.ni.com"
             ]
         }
     ],
@@ -59,15 +84,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.5
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "XHR": 3
     },
     "nameservers": [
         "cody.ns.cloudflare.com",

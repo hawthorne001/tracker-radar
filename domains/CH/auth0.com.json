@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00103,
+    "prevalence": 0.00101,
     "sites": 10,
     "subdomains": [
         "statista.eu",
         "ptc-atlas-prod.us",
+        "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+        "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu",
         "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
         "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
         "cdn"
@@ -26,6 +28,14 @@
             "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
         },
         {
+            "original": "auth0.s-ge.com",
+            "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "login.financescout24.ch",
+            "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+        },
+        {
             "original": "login.statista.com",
             "resolved": "statista.eu.auth0.com"
         }
@@ -34,28 +44,43 @@
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000308,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
                 "statista.eu",
-                "ptc-atlas-prod.us"
+                "ptc-atlas-prod.us",
+                "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+                "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000308,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "login.statista.com",
                     "resolved": "statista.eu.auth0.com"
+                },
+                {
+                    "original": "login.financescout24.ch",
+                    "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth0.s-ge.com",
+                    "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "db5431dcb0ac07fe18f240a33bed9cc184333c243405fbc79ba0d26b35d50ae0",
+                "8586875c147c3b4f0b5aa9bc3ba37b428261cbd5dedaeef7009ed80265f1abb1"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "statista.com",
                 "support.ptc.com",
+                "www.financescout24.ch",
+                "www.s-ge.com",
                 "www.statista.com"
             ]
         },
@@ -68,7 +93,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "login.statista.com",
@@ -93,7 +118,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "login.statista.com",
@@ -111,7 +136,7 @@
         },
         {
             "rule": "auth0\\.com\\/user\\/geoloc\\/country",
-            "cookies": 0.000205,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
@@ -119,7 +144,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
@@ -148,7 +173,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "cfb7df4155a0322b5a7afdebca4b397934de2101fbce7078201eec93a9720c93"
@@ -163,7 +188,7 @@
         },
         {
             "rule": "auth0\\.com\\/user\\/geoloc\\/country",
-            "cookies": 0.000205,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
@@ -171,7 +196,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
@@ -207,7 +232,7 @@
                 "window.localStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "ebf5fe084506fa53aecb68bc4d315b1e1b149b56a0465d7bc7e584ca9711c6dc"
@@ -223,15 +248,19 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000513,
+    "cookies": 0.000704,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7
+        },
+        {
+            "domain": "auth0.com",
+            "prevalence": 0.3
         }
     ],
     "types": {
-        "Document": 7,
+        "Document": 9,
         "Preflight": 2,
         "Script": 4,
         "XHR": 2
