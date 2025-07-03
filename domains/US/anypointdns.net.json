@@ -4,12 +4,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [
-        "splunk-elb.lb"
+        "splunk-elb.lb",
+        "lbproduction.lb"
     ],
     "cnames": [
+        {
+            "original": "api.rockwellautomation.com",
+            "resolved": "lbproduction.lb.anypointdns.net"
+        },
         {
             "original": "apps-api.splunk.com",
             "resolved": "splunk-elb.lb.anypointdns.net"
@@ -60,8 +65,8 @@
                 }
             ],
             "responseHashes": [
-                "48478b8bf9a5d804ff9fba38d3bfa1b281e69af1a8b161246348087e5fd86b78",
-                "4d5c874f6faa2af028dec1aa067bdf2bef9ce65997c30c2d7224f195e8a561cc"
+                "26d1034a1c9d02705074a75039c8baaa9a28981aefd6b298e3804cf75d2e39cd",
+                "c6edc633d5a6f8b2a7658cb3a69434d79cd39c575aac6d25746e1aa533b00195"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -89,7 +94,7 @@
                 }
             ],
             "responseHashes": [
-                "57045477958a62d84f1f5b34f45975ab5ef297209d11c0f195bd9b77d9e547e5"
+                "a430159e1f2c19acabb00f44885d55d9e1077c9695f489cddaff63ec91a5ba57"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -98,6 +103,58 @@
                 "splunk.com",
                 "docs.splunk.com"
             ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/ra-eapi-cx-public-dashboard-vpcprod\\/api\\/v1\\/partners",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lbproduction.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.rockwellautomation.com",
+                    "resolved": "lbproduction.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "b37eed53b63bcbb485295c8fb2c7e80ce1621857374ba6f7897b323c9f029c4a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rockwellautomation.com",
+                "www.rockwellautomation.com"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/ra-eapi-cx-public-dashboard-vpcprod\\/api\\/v1\\/partners",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lbproduction.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.rockwellautomation.com",
+                    "resolved": "lbproduction.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rockwellautomation.com",
+                "www.rockwellautomation.com"
+            ]
         }
     ],
     "categories": [],
@@ -105,27 +162,43 @@
     "cookies": 0.0000205,
     "topInitiators": [
         {
+            "domain": "adobedtm.com",
+            "prevalence": 0.36363636363636365
+        },
+        {
             "domain": "d7koym0rxduxm.cloudfront.net",
-            "prevalence": 0.6363636363636364
+            "prevalence": 0.3181818181818182
         },
         {
             "domain": "d221cp5lqk6y64.cloudfront.net",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "d38eume8qu1hmc.cloudfront.net",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.045454545454545456
+        },
+        {
+            "domain": "oktacdn.com",
+            "prevalence": 0.045454545454545456
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 3,
+        "Preflight": 5,
+        "Fetch": 5,
         "XHR": 2
     },
     "nameservers": [
-        "ns-1546.awsdns-01.co.uk",
         "ns-180.awsdns-22.com",
         "ns-975.awsdns-57.net",
+        "ns-1546.awsdns-01.co.uk",
         "ns-1343.awsdns-39.org"
     ]
 }

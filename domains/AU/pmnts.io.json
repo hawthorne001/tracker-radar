@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000804,
+    "prevalence": 0.000805,
     "sites": 8,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "gateway"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,42 +21,79 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Navigator.prototype.product": 4
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.product": 3
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "555c181023cb766db055c8cdb2d4a55b11afe7bccae7c430e8a1079d86125752"
+                "34dc497dca58e5939fe3322f0fa51aca1780d267d587b136cc8836a4f9ebdc84"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chefshat.com.au",
-                "www.horsleyparkgunshop.com.au",
+                "horsleyparkgunshop.com.au",
                 "www.jewellerssupplies.com.au",
                 "www.smokemart.com.au"
+            ]
+        },
+        {
+            "rule": "pmnts\\.io\\/fraud\\/fingerprint\\/fz-savethechildrencornucopia\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gateway",
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8ca3618ed776675d0e1f256a7fbcff3d4993b20e99a9240ae9c14ced8cbea071"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "forterToken": {
+                    "ttl": 34560015,
+                    "length": 57,
+                    "prevalence": 0.00010066438494060802,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savethechildren.org.au",
+                "www.savethechildren.org.au"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000503,
+    "cookies": 0.000604,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9375
+        },
+        {
+            "domain": "pmnts.io",
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 5
     },
     "nameservers": [
-        "ns-440.awsdns-55.com",
-        "ns-577.awsdns-08.net",
         "ns-1254.awsdns-28.org",
+        "ns-577.awsdns-08.net",
+        "ns-440.awsdns-55.com",
         "ns-1884.awsdns-43.co.uk"
     ]
 }

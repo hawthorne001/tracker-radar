@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "epnt",
         "monitor"
@@ -18,6 +18,31 @@
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "ebay\\.com\\/static\\/epn-smart-tools\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "epnt"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.product": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ed0697a7999a62c35423b8d924828317ac6cda53744cc78588951b76e07097bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "photrio.com",
+                "www.practicalmachinist.com"
+            ]
+        },
         {
             "rule": "ebay\\.com\\/placement",
             "cookies": 0.000201,
@@ -30,7 +55,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1f444179d482b86695056b18e634a69ada7f0b0eae8bb9222b0b5a4f33e30034"
+                "e992c29afb0ea17e54efbc06e990a4073cc4af9ce309de92aed4fe28c6db5afa"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -118,12 +143,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
+        "Script": 4,
         "Document": 2,
-        "Script": 2,
         "Image": 2,
         "Other": 2
     },

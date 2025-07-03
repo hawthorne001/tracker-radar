@@ -10,13 +10,13 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "workdayciam.customdomains",
-        "servicenowsignon.customdomains"
+        "servicenowsignon.customdomains",
+        "sas.customdomains"
     ],
     "cnames": [
         {
-            "original": "signin.resourcecenter.workday.com",
-            "resolved": "workdayciam.customdomains.okta.com"
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -27,23 +27,23 @@
     "resources": [
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "workdayciam.customdomains",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "sas.customdomains"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
-                {
-                    "original": "signin.resourcecenter.workday.com",
-                    "resolved": "workdayciam.customdomains.okta.com"
-                },
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -51,7 +51,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "workday.com",
+                "servicenow.com",
+                "www.sas.com",
                 "www.servicenow.com"
             ]
         },
@@ -60,7 +61,7 @@
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "workdayciam.customdomains",
+                "sas.customdomains",
                 "servicenowsignon.customdomains"
             ],
             "apis": {},
@@ -68,8 +69,8 @@
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "signin.resourcecenter.workday.com",
-                    "resolved": "workdayciam.customdomains.okta.com"
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
                 },
                 {
                     "original": "ssosignon.servicenow.com",
@@ -81,16 +82,26 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "workday.com",
+                "sas.com",
                 "www.servicenow.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "oktacdn.com",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "service-now.com",
+            "prevalence": 0.25
+        }
+    ],
     "types": {
-        "Preflight": 2,
+        "Preflight": 3,
         "Fetch": 2
     },
     "nameservers": [

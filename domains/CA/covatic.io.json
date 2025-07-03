@@ -4,17 +4,94 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000832,
-    "sites": 8,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "browser",
+        "mobile-lon-lambda",
         "sky-lon-cvc-prod",
         "mobile-cvc-nv-bbc-web",
-        "mobile-cvc-ire-cvc-stg"
+        "nbcu-nv-cvc-prod",
+        "mobile-cvc-ire-cvc-stg",
+        "mobile-cvc-lon-wireless"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "covatic\\.io\\/sdk\\/v1\\/latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "browser"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.permissions": 3,
+                "Navigator.prototype.deviceMemory": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.languages": 3,
+                "Navigator.prototype.vendor": 3,
+                "Navigator.prototype.language": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "dae8fc59f28a6c61094aa3dc4020d37063de0eb6038060b36bd4494778463bb5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "news.bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/tcf_vendor_restrictions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-lon-lambda",
+                "sky-lon-cvc-prod",
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod",
+                "mobile-cvc-ire-cvc-stg",
+                "mobile-cvc-lon-wireless"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "b47fb385be9e0d93d9770727502c4561d7bf2e81c645db51298d99a27e4e0cf5",
+                "95345008e9a970d783c7fd4440e1325182c13e0a33138cf776fe6a2f2b8433a0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "news.sky.com",
+                "news.bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com",
+                "www.motorcyclenews.com",
+                "www.skysports.com",
+                "www.thesun.co.uk",
+                "www.thetimes.com",
+                "www.todays-golfer.com"
+            ]
+        },
         {
             "rule": "covatic\\.io\\/sdk\\/v1\\/sky\\.js",
             "cookies": 0,
@@ -25,10 +102,11 @@
             "apis": {
                 "Navigator.prototype.product": 2,
                 "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "1f2ac2f1c3394aef25979fe43b355ef7c1e680dc58ff3e18b7725e758bdb5583"
@@ -42,35 +120,6 @@
             ]
         },
         {
-            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/tcf_vendor_restrictions",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sky-lon-cvc-prod",
-                "mobile-cvc-nv-bbc-web",
-                "mobile-cvc-ire-cvc-stg"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000624,
-            "cnames": [],
-            "responseHashes": [
-                "95345008e9a970d783c7fd4440e1325182c13e0a33138cf776fe6a2f2b8433a0",
-                "b47fb385be9e0d93d9770727502c4561d7bf2e81c645db51298d99a27e4e0cf5"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sky.com",
-                "news.bbc.co.uk",
-                "www.bbc.com",
-                "www.motorcyclenews.com",
-                "www.skysports.com",
-                "www.todays-golfer.com"
-            ]
-        },
-        {
             "rule": "covatic\\.io\\/profiles\\/default\\.json",
             "cookies": 0,
             "fingerprinting": 0,
@@ -79,7 +128,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000312,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "d9dc55d7f6126a80c50bb617970bfaf69ad1c3dd0c5c537bf4ecb515a8be508d"
@@ -91,41 +140,6 @@
                 "sky.com",
                 "www.motorcyclenews.com",
                 "www.todays-golfer.com"
-            ]
-        },
-        {
-            "rule": "covatic\\.io\\/sdk\\/v1\\/latest\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "browser"
-            ],
-            "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Date.prototype.getTime": 2,
-                "Date.prototype.getTimezoneOffset": 1,
-                "Navigator.prototype.permissions": 1,
-                "Navigator.prototype.deviceMemory": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Navigator.prototype.languages": 1,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.language": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000208,
-            "cnames": [],
-            "responseHashes": [
-                "dae8fc59f28a6c61094aa3dc4020d37063de0eb6038060b36bd4494778463bb5"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bbc.co.uk",
-                "www.bbc.com"
             ]
         },
         {
@@ -136,8 +150,8 @@
                 "browser"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "d9dc55d7f6126a80c50bb617970bfaf69ad1c3dd0c5c537bf4ecb515a8be508d"
@@ -147,6 +161,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
+                "www.bbc.co.uk",
                 "www.bbc.com"
             ]
         },
@@ -156,11 +171,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod",
                 "mobile-cvc-ire-cvc-stg"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000416,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [
                 "69a8db324fb4d50808dc356ce602ee1f63ca6939021dc6e0b5dff474ea928418"
@@ -170,7 +186,85 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
+                "www.bbc.co.uk",
                 "www.bbc.com",
+                "www.bravotv.com",
+                "www.motorcyclenews.com",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/register",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "3fb412947e8b0baf04cb0f5738b8f6c5bc192f9cd13cae547d018a243aacb3e9",
+                "340911f2786de28f03e08467c678ec25393f7992b27e9a1794653f96734c01d1",
+                "74dc58f4fbd59f17fc531c35878932827e2d5d350cf80c76868d74e45863a72d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/register",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/get_auth_token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod",
+                "mobile-cvc-ire-cvc-stg"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com",
                 "www.motorcyclenews.com",
                 "www.todays-golfer.com"
             ]
@@ -181,13 +275,17 @@
             "fingerprinting": 0,
             "subdomains": [
                 "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod",
                 "mobile-cvc-ire-cvc-stg"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [
+                "bb22ea9b822e0f22dcc2e144e88a8a7343221d5ca5ab63e317e4020c8bbfe7c9",
+                "4e520103fe39f7d2102870b47d3d5f1da035e16fbc290c51ef3dab8db1058c3d",
+                "c90d49a2e50d4f0c07603081a07bc82b35aea86cf15185e7718da7265e4f369e",
                 "e953e4f76a45f10f6859290478d09141008e9a0875f32f2ab796d074ec7652a8"
             ],
             "type": "XHR",
@@ -195,20 +293,50 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
-                "www.motorcyclenews.com"
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com",
+                "www.motorcyclenews.com",
+                "www.todays-golfer.com"
             ]
         },
         {
-            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/get_auth_token",
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/profile\\/get_definitions",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "mobile-cvc-nv-bbc-web",
-                "mobile-cvc-ire-cvc-stg"
+                "nbcu-nv-cvc-prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "45212131c8df7214cd1a6b85c12596b9155e2b54e73880d25b107383f67e0956",
+                "2b45e1d11d9217c60b16b2792c904b6319925d5af6ffcd98dcf26db6f82ac285"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/profile\\/get_definitions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -216,7 +344,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
-                "www.motorcyclenews.com"
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
             ]
         },
         {
@@ -225,13 +355,15 @@
             "fingerprinting": 0,
             "subdomains": [
                 "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod",
                 "mobile-cvc-ire-cvc-stg"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [
+                "547b6187eea3838524ae1ca2fe38dc5bb0aa2c4655df5890b8fe73ef06a2f851",
                 "ababfb625ae59387234265de64c63da1ddfd407f13ccaa6f226ff48b95f5f7ce"
             ],
             "type": "XHR",
@@ -239,7 +371,181 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbc.co.uk",
-                "www.motorcyclenews.com"
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com",
+                "www.motorcyclenews.com",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/browser\\/probability_maps",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "7ba8c97f769a255f2f95a4306566c7dd46d1f934bd326fbd9bd779e929078dcc",
+                "7d18489a5ced648bc2151c586ecfaf9b1c71607e9a86cf48d07a9a3a6bc51405",
+                "7913a9943e19ebb2bb27c934fa83a1a0100c1a3d48cc1b62685d6a59d0a33ebf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/browser\\/probability_maps",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/artifacts\\/models\\/66d914965f77c9fabcf62964\\/ml-classifications\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ac7014460bb5109ae7390192cab3e195ac45a03a149e58a64835eb89a4722909",
+                "07737b17e7c7d96515b4c298e7d248b67b9df622deb052986e6ad20c2b2dfce2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/browser\\/device_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "d1940c2dfeffce4d29a89fe68aca6bf9b111771fe66829d5fbe238d49f3f0342"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/browser\\/device_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/profile\\/profile_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/profile\\/profile_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-nv-bbc-web",
+                "nbcu-nv-cvc-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "d1940c2dfeffce4d29a89fe68aca6bf9b111771fe66829d5fbe238d49f3f0342"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbc.co.uk",
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.bravotv.com"
             ]
         },
         {
@@ -256,7 +562,7 @@
                 "Date.prototype.getTime": 2
             },
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "1f2ac2f1c3394aef25979fe43b355ef7c1e680dc58ff3e18b7725e758bdb5583"
@@ -268,6 +574,33 @@
                 "motorcyclenews.com",
                 "www.todays-golfer.com"
             ]
+        },
+        {
+            "rule": "covatic\\.io\\/sdk\\/v1\\/news\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "browser"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "491effa81436a7f40339bcda64c1f1a415eb2f536d60f1030e7ac86fd01d6200"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thesun.co.uk",
+                "www.thetimes.com"
+            ]
         }
     ],
     "categories": [],
@@ -276,34 +609,38 @@
     "topInitiators": [
         {
             "domain": "bbci.co.uk",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.6346153846153846
         },
         {
             "domain": "first party",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.25
         },
         {
             "domain": "webcontentassessor.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.057692307692307696
+        },
+        {
+            "domain": "4strokemedia.com",
+            "prevalence": 0.019230769230769232
         },
         {
             "domain": "nbcuni.com",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.019230769230769232
         },
         {
             "domain": "bauersecure.com",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.019230769230769232
         }
     ],
     "types": {
-        "Script": 6,
-        "XHR": 19,
-        "Preflight": 2
+        "Script": 10,
+        "XHR": 58,
+        "Preflight": 26
     },
     "nameservers": [
+        "ns-1777.awsdns-30.co.uk",
         "ns-1340.awsdns-39.org",
         "ns-530.awsdns-02.net",
-        "ns-1777.awsdns-30.co.uk",
         "ns-494.awsdns-61.com"
     ]
 }

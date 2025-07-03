@@ -7,7 +7,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "home"
+        "home",
+        "analytics-api"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,9 +25,51 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ee6a30dfcf0eaa04539934d74860a2b0a3db4bd73689026db58af521f11cbddc"
+                "b5a29bf06aaa07768148d3ba31feba0d4c2ff8957040a53dd134a2cb55d66417"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com"
+            ]
+        },
+        {
+            "rule": "integrate\\.com\\/v1\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "376d5acffeebe0fbcbc2c05ed9a84c6742148bc3efaaf3efc7a1177d27fe9aaf"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com"
+            ]
+        },
+        {
+            "rule": "integrate\\.com\\/v1\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -41,11 +84,17 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "listenloop.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "a22-67.akam.net",

@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "geoip.cdn"
+        "geoip.cdn",
+        "ams.cdn",
+        "sentry"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -20,17 +22,18 @@
                 "geoip.cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "washingtonpost.com",
-                "games.washingtonpost.com",
-                "wellgames.com"
+                "ledger-enquirer.com",
+                "games.ledger-enquirer.com",
+                "wellgames.com",
+                "www.arkadium.com"
             ]
         },
         {
@@ -41,34 +44,148 @@
                 "geoip.cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "e235420a517c9d1fdae125b9bd4b03bf8034fd94f0155d275c3250a42fcb6a90"
+                "ee29a8d1c541d35fa0306df88557963afe1d81689ffff3bd5e3c8da74775dd51"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "washingtonpost.com",
-                "games.washingtonpost.com",
+                "ledger-enquirer.com",
+                "games.ledger-enquirer.com",
+                "wellgames.com",
+                "www.arkadium.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/advertisement\\/display\\/stable\\/display-ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ams.cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f5c78660d4b3f2129033f6aabf14a988c5f4e9d6c112129e1b056dfb858217a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ledger-enquirer.com",
                 "wellgames.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/advertisement\\/jarvis-bundles\\/v2bundle-U4oGqUePNRmQSPIv7QDaa\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ams.cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dccd932908997a1559fa971d909ccfc5481370a93a1503594d81ed4833b82710"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sharedId": {
+                    "ttl": 7776006,
+                    "length": 36,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 1
+                },
+                "sharedId_cst": {
+                    "ttl": 7776006,
+                    "length": 16,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 0.5
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 5184007,
+                    "length": 93,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 5184007,
+                    "length": 16,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ledger-enquirer.com",
+                "wellgames.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/api\\/3\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a2302a678044756e858fa4029f08bc746e3940bc5bf65f6aae848fab007d1a47"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arkadium.com",
+                "www.arkadium.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.95
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 3
+        "Preflight": 4,
+        "Fetch": 6,
+        "Script": 4
     },
     "nameservers": [
         "ns2.rackspace.com",

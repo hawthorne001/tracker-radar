@@ -9,19 +9,76 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000208,
-    "sites": 2,
+    "prevalence": 0.000404,
+    "sites": 4,
     "subdomains": [
+        "cisco-dsc-prod",
         "mns-00.dn"
     ],
     "cnames": [
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "dsc.cisco.com",
+            "resolved": "cisco-dsc-prod.apigee.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "de1f49a672a09f9e980d0416c80a1c1c52f78eb6f99a93ae8efd20e55fd62353"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
             "cookies": 0,
@@ -31,7 +88,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -49,14 +106,14 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000208,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -79,25 +136,34 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000208,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Preflight": 2,
+        "Fetch": 2,
+        "Preflight": 4,
         "XHR": 2
     },
     "nameservers": [
-        "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
-        "ns-1907.awsdns-46.co.uk",
-        "ns-670.awsdns-19.net"
+        "ns-670.awsdns-19.net",
+        "ns-116.awsdns-14.com",
+        "ns-1907.awsdns-46.co.uk"
     ]
 }

@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "logging"
+        "logging",
+        "telemetry.servers"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -36,6 +37,28 @@
                 "goto.com",
                 "app.goto.com"
             ]
+        },
+        {
+            "rule": "getgo\\.com\\/reportEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "telemetry.servers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goto.com",
+                "support.goto.com"
+            ]
         }
     ],
     "categories": [],
@@ -44,19 +67,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "cdngetgo.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns3.getgo.com",
-        "ns3.p201.dns.oraclecloud.net",
-        "ns1.p201.dns.oraclecloud.net",
-        "ns2.p201.dns.oraclecloud.net",
         "ns2.getgo.com",
-        "ns4.p201.dns.oraclecloud.net",
-        "ns1.getgo.com"
+        "ns2.p201.dns.oraclecloud.net",
+        "ns3.p201.dns.oraclecloud.net",
+        "ns1.getgo.com",
+        "ns1.p201.dns.oraclecloud.net",
+        "ns3.getgo.com",
+        "ns4.p201.dns.oraclecloud.net"
     ]
 }

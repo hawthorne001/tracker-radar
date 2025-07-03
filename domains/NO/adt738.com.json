@@ -4,12 +4,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "cloud"
     ],
     "cnames": [
+        {
+            "original": "in.fabel.no",
+            "resolved": "cloud.adt738.com"
+        },
+        {
+            "original": "in.forsikringtest.no",
+            "resolved": "cloud.adt738.com"
+        },
         {
             "original": "in.jaktogfriluft.no",
             "resolved": "cloud.adt738.com"
@@ -22,7 +30,7 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "adt738\\.com\\/consent-data",
+            "rule": "adt738\\.com\\/jsTag",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -33,21 +41,23 @@
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "in.jaktogfriluft.no",
+                    "original": "in.fabel.no",
                     "resolved": "cloud.adt738.com"
                 },
                 {
-                    "original": "in.tilbords.no",
+                    "original": "in.forsikringtest.no",
                     "resolved": "cloud.adt738.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "121e7426787a86b9a55308212626226f021aa1ae7c3cc39ccdbc5b5d6a8f3a75"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jaktogfriluft.no",
-                "www.tilbords.no"
+                "fabel.no",
+                "www.forsikringtest.no"
             ]
         },
         {
@@ -80,6 +90,35 @@
                 "jaktogfriluft.no",
                 "www.tilbords.no"
             ]
+        },
+        {
+            "rule": "adt738\\.com\\/consent-data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "in.jaktogfriluft.no",
+                    "resolved": "cloud.adt738.com"
+                },
+                {
+                    "original": "in.tilbords.no",
+                    "resolved": "cloud.adt738.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaktogfriluft.no",
+                "www.tilbords.no"
+            ]
         }
     ],
     "categories": [],
@@ -88,12 +127,17 @@
     "topInitiators": [
         {
             "domain": "adt356.com",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-86.awsdns-10.com",
