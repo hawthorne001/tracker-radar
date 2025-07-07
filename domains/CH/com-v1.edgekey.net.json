@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00141,
-    "sites": 14,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
+        "json.bselivefeeds.indiatimes",
         "jsso.indiatimes",
+        "img.etimg",
         "geo.cnbc",
         "www.contact.nespresso"
     ],
@@ -20,6 +22,14 @@
         {
             "original": "geo.cnbc.com",
             "resolved": "geo.cnbc.com-v1.edgekey.net"
+        },
+        {
+            "original": "img.etimg.com",
+            "resolved": "img.etimg.com-v1.edgekey.net"
+        },
+        {
+            "original": "json.bselivefeeds.indiatimes.com",
+            "resolved": "json.bselivefeeds.indiatimes.com-v1.edgekey.net"
         },
         {
             "original": "jsso.indiatimes.com",
@@ -30,11 +40,38 @@
             "resolved": "www.contact.nespresso.com-v1.edgekey.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
+            "rule": "com-v1\\.edgekey\\.net\\/ET_Community\\/holidaylist",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "json.bselivefeeds.indiatimes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "json.bselivefeeds.indiatimes.com",
+                    "resolved": "json.bselivefeeds.indiatimes.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a886af0e6187a62537926a827315b28fc95e1bd18bac002060aeec841e98eeee"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
             "rule": "com-v1\\.edgekey\\.net\\/sso\\/crossapp\\/identity\\/web\\/loggedInUser",
-            "cookies": 0.000101,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "jsso.indiatimes"
@@ -85,6 +122,33 @@
             ]
         },
         {
+            "rule": "com-v1\\.edgekey\\.net\\/photo\\.cms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img.etimg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "img.etimg.com",
+                    "resolved": "img.etimg.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "034792f615d6d87417de55d5c3071526b78c568558f630bde1413a85208c5b00"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
             "rule": "com-v1\\.edgekey\\.net\\/info\\/",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -113,7 +177,7 @@
         },
         {
             "rule": "com-v1\\.edgekey\\.net\\/apps\\.php",
-            "cookies": 0.000101,
+            "cookies": 0.0001,
             "fingerprinting": 1,
             "subdomains": [
                 "www.contact.nespresso"
@@ -168,37 +232,42 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000704,
+    "cookies": 0.000703,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9545454545454546
-        },
-        {
-            "domain": "cnbcfm.com",
-            "prevalence": 0.012987012987012988
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.012987012987012988
+            "prevalence": 0.9776119402985075
         },
         {
             "domain": "toiimg.com",
-            "prevalence": 0.006493506493506494
+            "prevalence": 0.004975124378109453
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.004975124378109453
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.004975124378109453
+        },
+        {
+            "domain": "clmbtech.com",
+            "prevalence": 0.0024875621890547263
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.006493506493506494
+            "prevalence": 0.0024875621890547263
         },
         {
             "domain": "usercentrics.eu",
-            "prevalence": 0.006493506493506494
+            "prevalence": 0.0024875621890547263
         }
     ],
     "types": {
+        "Fetch": 4,
         "XHR": 2,
         "Preflight": 2,
-        "Fetch": 2,
+        "Image": 2,
         "Script": 2,
         "Stylesheet": 2
     },

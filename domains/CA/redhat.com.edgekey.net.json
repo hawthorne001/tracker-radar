@@ -9,12 +9,22 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00052,
+    "prevalence": 0.000505,
     "sites": 5,
     "subdomains": [
-        "static"
+        "static",
+        "id",
+        "smetrics"
     ],
     "cnames": [
+        {
+            "original": "id.redhat.com",
+            "resolved": "id.redhat.com.edgekey.net"
+        },
+        {
+            "original": "smetrics.redhat.com",
+            "resolved": "smetrics.redhat.com.edgekey.net"
+        },
         {
             "original": "static.redhat.com",
             "resolved": "static.redhat.com.edgekey.net"
@@ -31,7 +41,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000416,
+            "prevalence": 0.000404,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -59,8 +69,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -75,19 +85,49 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "redhat.com",
+                "docs.redhat.com",
+                "www.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "id.redhat.com",
+                    "resolved": "id.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "31af2b35cabbbdee0f90ffe403fe8bff7127d98942d7fadd56a96e27192d079f",
+                "ffb03d573453f944da3ebac4bd82b7d633e48e8bf876261eb6d26b1a17e4f2b5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "docs.redhat.com",
                 "www.redhat.com"
             ]
         },
         {
             "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/@redhat\\/marketing\\/latest\\/rh\\.mktg\\.js",
-            "cookies": 0.000208,
+            "cookies": 0.000505,
             "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
+            "sites": 5,
+            "prevalence": 0.000505,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -100,31 +140,72 @@
             "type": "Script",
             "firstPartyCookies": {
                 "rh_omni_tc": {
-                    "ttl": 2592030,
+                    "ttl": 2592002,
                     "length": 18,
-                    "prevalence": 0.0001039717196922437,
+                    "prevalence": 0.00020181634712411706,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ansible.com",
+                "redhat.com",
+                "docs.ansible.com",
+                "docs.redhat.com",
+                "opensource.com",
+                "www.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/ee\\/va6\\/v1\\/interact",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "smetrics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "smetrics.redhat.com",
+                    "resolved": "smetrics.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "54cf8e050ca693449a88330a471ed3d9e2d76599ab63a04a8159f674923cb1d7",
+                "ae6adf5ac0b56d4226fd3d58795978f9068cc87a282d113a97fb628c408d223b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "docs.redhat.com",
                 "www.redhat.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000208,
+    "cookies": 0.000505,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "redhatstatic.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 6,
-        "Image": 2
+        "Script": 9,
+        "Image": 3,
+        "Fetch": 6
     },
     "nameservers": []
 }

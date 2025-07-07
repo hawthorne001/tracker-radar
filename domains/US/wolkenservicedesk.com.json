@@ -10,7 +10,7 @@
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "wolkenservicedesk\\.com\\/wolken-footer-image\\.png",
@@ -31,6 +31,34 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "broadcom.com",
+                "support.citrix.com"
+            ]
+        },
+        {
+            "rule": "wolkenservicedesk\\.com\\/Citrix\\/JS_Files\\/wolkenInsight\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c5204dedf1152461e86023b22585b44077b4e9fb2b28ec925067eb06563c7592"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "citrix.com",
                 "support.citrix.com"
             ]
         },
@@ -173,11 +201,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.95
+        },
+        {
+            "domain": "sitescdn.net",
+            "prevalence": 0.05
         }
     ],
     "types": {
         "Image": 12,
+        "Script": 2,
         "Document": 2
     },
     "nameservers": [

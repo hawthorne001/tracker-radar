@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00121,
-    "sites": 12,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "rum-ingest.au0",
         "rum-ingest.eu0",
@@ -47,8 +47,8 @@
                 "rum-ingest.us1"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000905,
+            "sites": 8,
+            "prevalence": 0.000805,
             "cnames": [],
             "responseHashes": [
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
@@ -60,11 +60,10 @@
                 "accor.com",
                 "all.accor.com",
                 "www.betfair.com.au",
-                "www.betfair.com",
-                "www.heartlandbank.com.au",
                 "www.nswtrainlink.info",
                 "www.oporto.com.au",
                 "www.redrooster.com.au",
+                "www.splunk.com",
                 "www.surveymonkey.com"
             ]
         },
@@ -74,11 +73,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "rum-ingest.eu0",
-                "rum-ingest.au0"
+                "rum-ingest.au0",
+                "rum-ingest.us1"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -86,7 +86,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "accor.com",
-                "www.nswtrainlink.info"
+                "www.nswtrainlink.info",
+                "www.splunk.com"
             ]
         },
         {
@@ -95,11 +96,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "rum-ingest.eu0",
-                "rum-ingest.au0"
+                "rum-ingest.au0",
+                "rum-ingest.us1"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
@@ -110,7 +112,65 @@
             "exampleSites": [
                 "accor.com",
                 "all.accor.com",
-                "www.nswtrainlink.info"
+                "www.nswtrainlink.info",
+                "www.splunk.com"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.22\\.0\\/splunk-otel-web\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_splunk_rum_sid": {
+                    "ttl": 900,
+                    "length": 123,
+                    "prevalence": 0.00010066438494060802,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nswtrainlink.info",
+                "www.opal.com.au"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.22\\.0\\/splunk-otel-web-session-recorder\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nswtrainlink.info",
+                "www.opal.com.au"
             ]
         },
         {
@@ -139,70 +199,14 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.0002010252286661976,
+                    "prevalence": 0.00020132876988121604,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "heartlandbank.com.au",
-                "www.oporto.com.au"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.1\\/splunk-otel-web\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {
-                "_splunk_rum_sid": {
-                    "ttl": 900,
-                    "length": 89,
-                    "prevalence": 0.0001005126143330988,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nswtrainlink.info",
-                "www.opal.com.au"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.1\\/splunk-otel-web-session-recorder\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.innerWidth": 1,
-                "window.innerHeight": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nswtrainlink.info",
-                "www.opal.com.au"
+                "oporto.com.au",
+                "www.splunk.com"
             ]
         }
     ],
@@ -212,39 +216,43 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5789473684210527
+            "prevalence": 0.7021276595744681
         },
         {
             "domain": "transportnsw.info",
-            "prevalence": 0.21052631578947367
-        },
-        {
-            "domain": "betfair.com.au",
-            "prevalence": 0.10526315789473684
+            "prevalence": 0.1702127659574468
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.0425531914893617
         },
         {
             "domain": "surveymonkey.com",
-            "prevalence": 0.02631578947368421
+            "prevalence": 0.02127659574468085
         },
         {
             "domain": "hotjar.com",
-            "prevalence": 0.02631578947368421
+            "prevalence": 0.02127659574468085
+        },
+        {
+            "domain": "adsrvr.org",
+            "prevalence": 0.02127659574468085
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.02127659574468085
         }
     ],
     "types": {
-        "XHR": 11,
-        "Preflight": 2,
-        "Fetch": 3,
+        "XHR": 10,
+        "Preflight": 3,
+        "Fetch": 4,
         "Script": 6
     },
     "nameservers": [
-        "ns-1875.awsdns-42.co.uk",
-        "ns-1270.awsdns-30.org",
         "ns-933.awsdns-52.net",
-        "ns-5.awsdns-00.com"
+        "ns-1875.awsdns-42.co.uk",
+        "ns-5.awsdns-00.com",
+        "ns-1270.awsdns-30.org"
     ]
 }

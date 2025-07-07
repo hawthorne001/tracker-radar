@@ -9,12 +9,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00313,
-    "sites": 31,
+    "prevalence": 0.00394,
+    "sites": 39,
     "subdomains": [
         "cm-messenger-blog-assets.s3",
-        "storefront-cookie-consent-prd.s3",
-        "cognito-identity"
+        "s3",
+        "cognito-identity",
+        "prometheus-prod-media.s3"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -240,25 +241,25 @@
             ]
         },
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/brand-logo\\/BrandLogo-photobox\\.png",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/production-klarna-il-shopify-osm\\/7bec47374bc1cb6b6338dfd4d69e7bffd4f4b70b\\/ecoflow-france\\.myshopify\\.com-1750654240687\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "storefront-cookie-consent-prd.s3"
+                "s3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7afc8b70b20894d793ae9a8419a3774183b352d21f33cff57b844a048c6f3dd1"
+                "63f36f17a5e2b937c834367408da233c08a049389d7d08dd47c76c8c2322f771"
             ],
-            "type": "Image",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "photobox.fr",
-                "www.photobox.fr"
+                "ecoflow.com",
+                "fr.ecoflow.com"
             ]
         },
         {
@@ -273,7 +274,49 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "2e59f6e1e30603ddda57398077d634d4034365e3db0c656f6c8f17b6ad608698"
+                "a5b869e4ee30d53220a0315d953a8ce3f1bebeb63fee90cc49e3642e7fbb52f0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lelo.com",
+                "www.lelo.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lelo.com",
+                "www.mesdepanneurs.fr"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3a8c209a51d271eca28bd58b8a73a4d3486d7c09e90d68a3e66d2758571c44d0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -281,6 +324,28 @@
             "exampleSites": [
                 "mesdepanneurs.fr",
                 "www.mesdepanneurs.fr"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/2025\\/JUN\\/sd_summer_sale_desktop_min\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prometheus-prod-media.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3bcf460d46afb2f26b65dabfa68461041d97c9a02c55aa0666d17b92d34c21c8"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "superdry.fr",
+                "www.superdry.fr"
             ]
         }
     ],
@@ -292,28 +357,48 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9464285714285714
-        },
-        {
-            "domain": "d2zm7i5bmzo6ze.cloudfront.net",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.9211822660098522
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.017857142857142856
+            "prevalence": 0.019704433497536946
+        },
+        {
+            "domain": "captcha-delivery.com",
+            "prevalence": 0.014778325123152709
         },
         {
             "domain": "privacy-center.org",
-            "prevalence": 0.005952380952380952
+            "prevalence": 0.009852216748768473
+        },
+        {
+            "domain": "requestmetrics.com",
+            "prevalence": 0.009852216748768473
+        },
+        {
+            "domain": "d2zm7i5bmzo6ze.cloudfront.net",
+            "prevalence": 0.009852216748768473
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.0049261083743842365
+        },
+        {
+            "domain": "avis-verifies.com",
+            "prevalence": 0.0049261083743842365
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.005952380952380952
+            "prevalence": 0.0049261083743842365
         }
     ],
     "types": {
-        "Image": 22,
-        "Fetch": 2
+        "Image": 20,
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2,
+        "Media": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

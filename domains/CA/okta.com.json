@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00052,
-    "sites": 5,
+    "prevalence": 0.000605,
+    "sites": 6,
     "subdomains": [
         "benjaminmoore.customdomains",
-        "vl.customdomains"
+        "vl.customdomains",
+        "servicenowsignon.customdomains",
+        "wm.customdomains"
     ],
     "cnames": [
         {
@@ -21,13 +23,21 @@
         {
             "original": "okta.benjaminmoore.com",
             "resolved": "benjaminmoore.customdomains.okta.com"
+        },
+        {
+            "original": "ssologin.wm.com",
+            "resolved": "wm.customdomains.okta.com"
+        },
+        {
+            "original": "ssosignon.servicenow.com",
+            "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000104,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "benjaminmoore.customdomains",
@@ -35,7 +45,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "okta.benjaminmoore.com",
@@ -46,7 +56,9 @@
                     "resolved": "vl.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "7089291e1b8e288ad1e481f97b57a1191d24883c371ad4c79bfd7a8ab429aa5d"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -54,11 +66,73 @@
                 "benjaminmoore.com",
                 "www.videotron.com"
             ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "www.wm.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "a3023ac04b323391a41cf2dfdf6df183b26d7fb8a37b144ba2f76bd56fb305b6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "www.wm.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000208,
+    "cookies": 0.000505,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -70,7 +144,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1459.awsdns-54.org",

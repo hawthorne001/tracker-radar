@@ -14,7 +14,7 @@
     "resources": [
         {
             "rule": "fordhamu\\.org\\/mtc\\.js",
-            "cookies": 0,
+            "cookies": 0.0000137,
             "fingerprinting": 2,
             "subdomains": [
                 "my"
@@ -27,7 +27,8 @@
                 "Navigator.prototype.appVersion": 2,
                 "Navigator.prototype.doNotTrack": 2,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -36,6 +37,47 @@
                 "09e9acd120bf435378251df11cd196c383dcb2ca62d148367d372212d6fd1d99"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "mtc_id": {
+                    "ttl": null,
+                    "length": 8,
+                    "prevalence": 0.000013652715866503744,
+                    "uniqueness": 1
+                },
+                "mtc_sid": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.000013652715866503744,
+                    "uniqueness": 1
+                },
+                "mautic_device_id": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.000013652715866503744,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fordham.edu",
+                "www.fordham.edu"
+            ]
+        },
+        {
+            "rule": "fordhamu\\.org\\/mtc\\/event",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "my"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "13546b21a5331be03717da88cdd09a1ce83ee9c756fcad052bfb6a9b9860c2a2"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -62,28 +104,6 @@
                 "fordham.edu",
                 "www.fordham.edu"
             ]
-        },
-        {
-            "rule": "fordhamu\\.org\\/mtc\\/event",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "my"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "25d44f69897b33105af31995ed1483c453e6c02813387d5f0ce7a9c55d419a37"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fordham.edu",
-                "www.fordham.edu"
-            ]
         }
     ],
     "categories": [],
@@ -92,17 +112,21 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "branderblender.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
         "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-213.awsdns-26.com",
         "ns-1181.awsdns-19.org",
+        "ns-213.awsdns-26.com",
         "ns-1644.awsdns-13.co.uk",
         "ns-805.awsdns-36.net"
     ]

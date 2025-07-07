@@ -8,10 +8,11 @@
     "sites": 2,
     "subdomains": [
         "cdn",
-        "cache"
+        "cache",
+        "api-k8s"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "caast\\.tv\\/caast-latest\\/caast\\.js",
@@ -49,7 +50,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+                "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -78,11 +79,53 @@
                 "boulanger.com",
                 "www.decathlon.fr"
             ]
+        },
+        {
+            "rule": "caast\\.tv\\/v1\\/record",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-k8s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.fr",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "caast\\.tv\\/v1\\/record",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-k8s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.fr",
+                "www.decathlon.fr"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
@@ -99,8 +142,8 @@
     ],
     "types": {
         "Script": 2,
-        "Fetch": 2,
-        "Preflight": 2
+        "Fetch": 4,
+        "Preflight": 4
     },
     "nameservers": [
         "ken.ns.cloudflare.com",

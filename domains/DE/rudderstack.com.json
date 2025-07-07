@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
         "api",
         "laraveltrxdkoq.dataplane",
         "tailscaleakz.dataplane",
         "hhadvisoryuamo.dataplane",
-        "fairmenttkzebn.dataplane"
+        "fairmenttkzebn.dataplane",
+        "glassdoor-dataplane"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -27,12 +28,13 @@
                 "api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "2eadea67df3e61d49e47686c99105d032cc5be7f384ba11446fc1d2baac33dce",
-                "dad4484e5e4bb0985f3b294585a0c5dc7555e29f9bb56dc5ba6a30f4221406f1"
+                "f107555837d68a724b3f3ecf7325f2c76b7bb0c6798fda5f16ed12266b7d6687",
+                "dad4484e5e4bb0985f3b294585a0c5dc7555e29f9bb56dc5ba6a30f4221406f1",
+                "aa91990f22fb8b441ae35a045b8253222d7a4dc563d4945715ce1be993d68166"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -40,7 +42,9 @@
             "exampleSites": [
                 "laravel.com",
                 "tailscale.com",
-                "www.bodenrichtwerte-deutschland.de"
+                "www.bodenrichtwerte-deutschland.de",
+                "www.glassdoor.com",
+                "www.glassdoor.de"
             ]
         },
         {
@@ -51,8 +55,33 @@
                 "api"
             ],
             "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laravel.com",
+                "tailscale.com",
+                "www.bodenrichtwerte-deutschland.de",
+                "www.glassdoor.com",
+                "www.glassdoor.de"
+            ]
+        },
+        {
+            "rule": "rudderstack\\.com\\/v1\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "laraveltrxdkoq.dataplane",
+                "tailscaleakz.dataplane",
+                "hhadvisoryuamo.dataplane"
+            ],
+            "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -75,30 +104,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "laravel.com",
-                "tailscale.com",
-                "www.bodenrichtwerte-deutschland.de"
-            ]
-        },
-        {
-            "rule": "rudderstack\\.com\\/v1\\/page",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "laraveltrxdkoq.dataplane",
-                "tailscaleakz.dataplane",
-                "hhadvisoryuamo.dataplane"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -131,6 +137,49 @@
                 "fairment.de",
                 "www.fairment.de"
             ]
+        },
+        {
+            "rule": "rudderstack\\.com\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "glassdoor-dataplane"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glassdoor.com",
+                "www.glassdoor.de"
+            ]
+        },
+        {
+            "rule": "rudderstack\\.com\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "glassdoor-dataplane"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glassdoor.com",
+                "www.glassdoor.com",
+                "www.glassdoor.de"
+            ]
         }
     ],
     "categories": [],
@@ -138,26 +187,30 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.625
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.55
         },
         {
-            "domain": "rudderlabs.com",
+            "domain": "first party",
             "prevalence": 0.25
         },
         {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.15
+        },
+        {
             "domain": "minmaxify.com",
-            "prevalence": 0.125
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "XHR": 6,
-        "Preflight": 8
+        "XHR": 11,
+        "Preflight": 12
     },
     "nameservers": [
         "ns-89.awsdns-11.com",
-        "ns-1554.awsdns-02.co.uk",
         "ns-936.awsdns-53.net",
+        "ns-1554.awsdns-02.co.uk",
         "ns-1084.awsdns-07.org"
     ]
 }

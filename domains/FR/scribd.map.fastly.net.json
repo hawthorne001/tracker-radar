@@ -9,10 +9,14 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [],
     "cnames": [
+        {
+            "original": "api.slidesharecdn.com",
+            "resolved": "scribd.map.fastly.net"
+        },
         {
             "original": "s-f.scribdassets.com",
             "resolved": "scribd.map.fastly.net"
@@ -20,9 +24,13 @@
         {
             "original": "wa.scribd.com",
             "resolved": "scribd.map.fastly.net"
+        },
+        {
+            "original": "wa.slideshare.net",
+            "resolved": "scribd.map.fastly.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "scribd\\.map\\.fastly\\.net\\/webpack\\/assets\\/fonts\\/source_sans_pro\\/regular\\/source_sans_pro_regular\\.latin\\.e8ecbdac\\.woff2",
@@ -175,7 +183,7 @@
             ]
         },
         {
-            "rule": "scribd\\.map\\.fastly\\.net\\/webpack\\/landing-pages\\/app\\.43296d\\.js",
+            "rule": "scribd\\.map\\.fastly\\.net\\/webpack\\/landing-pages\\/app\\.08961a\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -189,7 +197,7 @@
                 }
             ],
             "responseHashes": [
-                "4d5fc2febd9981c7e2b46ad57772f435116605987574c6ce24929a8e95a51049"
+                "6df7415f23e39e46744a527c6ddad20b5a255dc48e5014534326018c6f459307"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -350,7 +358,7 @@
             ]
         },
         {
-            "rule": "scribd\\.map\\.fastly\\.net\\/webpack\\/landing-pages\\/649\\.5c7cd3\\.js",
+            "rule": "scribd\\.map\\.fastly\\.net\\/webpack\\/landing-pages\\/649\\.89d996\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -398,6 +406,79 @@
                 "scribd.com",
                 "www.scribd.com"
             ]
+        },
+        {
+            "rule": "scribd\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.slidesharecdn.com",
+                    "resolved": "scribd.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slideshare.net",
+                "fr.slideshare.net"
+            ]
+        },
+        {
+            "rule": "scribd\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.slidesharecdn.com",
+                    "resolved": "scribd.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "994199c9d9e935706c2a59f60b1e3766e9bc210899104bed305eec54263f20c4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slideshare.net",
+                "fr.slideshare.net"
+            ]
+        },
+        {
+            "rule": "scribd\\.map\\.fastly\\.net\\/api\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "wa.slideshare.net",
+                    "resolved": "scribd.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slideshare.net",
+                "fr.slideshare.net"
+            ]
         }
     ],
     "categories": [
@@ -415,15 +496,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
+            "prevalence": 0.6527777777777778
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.0625
+            "prevalence": 0.2777777777777778
+        },
+        {
+            "domain": "slidesharecdn.com",
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "scribdassets.com",
-            "prevalence": 0.0625
+            "prevalence": 0.027777777777777776
         }
     ],
     "types": {
@@ -432,7 +517,9 @@
         "Image": 10,
         "Script": 2,
         "Other": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": []
 }

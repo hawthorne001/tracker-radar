@@ -7,16 +7,17 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00146,
-    "sites": 14,
+    "prevalence": 0.00172,
+    "sites": 17,
     "subdomains": [
-        "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
-        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
         "cdn",
+        "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
         "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us",
         "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-        "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us",
-        "statista.eu"
+        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
+        "statista.eu",
+        "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
     ],
     "cnames": [
         {
@@ -24,12 +25,12 @@
             "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
         },
         {
-            "original": "auth.soundguys.com",
-            "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+            "original": "auth.flightcentre.ca",
+            "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
         },
         {
-            "original": "id.ramseysolutions.com",
-            "resolved": "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us.auth0.com"
+            "original": "auth.soundguys.com",
+            "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
         },
         {
             "original": "login.finder.com",
@@ -42,13 +43,96 @@
         {
             "original": "my.breville.com",
             "resolved": "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "oauth.airmiles.ca",
+            "resolved": "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2.auth0.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/2\\.1\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d931bfe4b9f39f318e84dc593cdc78fe4f5e463fe4c1fd2a6b72ed583ebaf872"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "betches.com",
+                "literature.rockwellautomation.com",
+                "www.rockwellautomation.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000505,
+            "fingerprinting": 0,
+            "subdomains": [
+                "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
+                "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us",
+                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
+                "statista.eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [
+                {
+                    "original": "oauth.airmiles.ca",
+                    "resolved": "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2.auth0.com"
+                },
+                {
+                    "original": "my.breville.com",
+                    "resolved": "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "login.finder.com",
+                    "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
+                },
+                {
+                    "original": "auth.flightcentre.ca",
+                    "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
+                },
+                {
+                    "original": "login.statista.com",
+                    "resolved": "statista.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "db596edba328ffdc250bdf549f035abe9be9c15b7b56fa3c92d9c18910afefd8",
+                "83e8632952ddee005d369204c5b9332556c97393994e346d0fa5509f122e48d8",
+                "dcf4905039f5e1e32c58e758b3c059ce835e64115f95f0d6e75dc93f712577cd"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00010090817356205853
+            },
+            "exampleSites": [
+                "airmiles.ca",
+                "www.breville.com",
+                "www.finder.com",
+                "www.flightcentre.ca",
+                "www.statista.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
@@ -56,7 +140,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
@@ -68,7 +152,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Other",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -85,9 +169,11 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "cfb7df4155a0322b5a7afdebca4b397934de2101fbce7078201eec93a9720c93"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -98,7 +184,7 @@
         },
         {
             "rule": "auth0\\.com\\/user\\/geoloc\\/country",
-            "cookies": 0,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
@@ -106,7 +192,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "auth.androidauthority.com",
@@ -117,7 +203,9 @@
                     "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "b890637e3e879bc5d50f42c1a3931c52cb4a819f9d0038efc7aef3a4a88eda92"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -125,92 +213,26 @@
                 "androidauthority.com",
                 "www.soundguys.com"
             ]
-        },
-        {
-            "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000416,
-            "fingerprinting": 0,
-            "subdomains": [
-                "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us",
-                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-                "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us",
-                "statista.eu"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000416,
-            "cnames": [
-                {
-                    "original": "my.breville.com",
-                    "resolved": "iden-prod-cd-eaw1hs3njqxohbsm.edge.tenants.us.auth0.com"
-                },
-                {
-                    "original": "login.finder.com",
-                    "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
-                },
-                {
-                    "original": "id.ramseysolutions.com",
-                    "resolved": "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us.auth0.com"
-                },
-                {
-                    "original": "login.statista.com",
-                    "resolved": "statista.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "1ee8fa71d46d60ba6e5f4ad13549c9a85ff9279854a0485077624bac1cfaef03"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "breville.com",
-                "www.finder.com",
-                "www.ramseysolutions.com",
-                "www.statista.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.13\\/auth0-spa-js\\.production\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 2,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000208,
-            "cnames": [],
-            "responseHashes": [
-                "01d6389de5581a2a3eb0cd4d6a05cb136bf07d221306f89173a080c73a38e392"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mercurynews.com",
-                "www.nydailynews.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000416,
+    "cookies": 0.000706,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "flightcentre.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Other": 2,
-        "Script": 4,
-        "XHR": 2,
-        "Document": 4
+        "Script": 5,
+        "Document": 5,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

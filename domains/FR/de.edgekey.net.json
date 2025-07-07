@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "accounts.bahn",
+        "img.ui-portal",
         "ssl.zdf"
     ],
     "cnames": [
@@ -23,9 +24,13 @@
         {
             "original": "api.zdf.de",
             "resolved": "ssl.zdf.de.edgekey.net"
+        },
+        {
+            "original": "img.ui-portal.de",
+            "resolved": "img.ui-portal.de.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
@@ -53,6 +58,33 @@
             ]
         },
         {
+            "rule": "de\\.edgekey\\.net\\/pos-cdn\\/tracklib\\/4\\.3\\.0\\/tracklib\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "img.ui-portal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "img.ui-portal.de",
+                    "resolved": "img.ui-portal.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40a6f6526afea19db42dcf345249915ccacc710ee6c97091d5d6285b5f90ead3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gmx.fr",
+                "www.gmx.net"
+            ]
+        },
+        {
             "rule": "de\\.edgekey\\.net\\/graphql",
             "cookies": 0,
             "fingerprinting": 0,
@@ -68,8 +100,10 @@
                     "resolved": "ssl.zdf.de.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8b11178ba90775af92d7a5c6b0fb626edb7a1c765759e612e4fa96ae04904ea8"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -93,10 +127,8 @@
                     "resolved": "ssl.zdf.de.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "b54e6bb4f456784efb1e2c08c7da524003b9af8cbca3cef98d4e1c7aa5985f7e"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -111,13 +143,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "uicdn.com",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
         "Document": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": []
 }

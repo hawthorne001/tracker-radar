@@ -11,11 +11,36 @@
     "sites": 4,
     "subdomains": [
         "pcs",
-        "hiveplayer-static"
+        "hiveplayer-static",
+        "bam-sdk-configs",
+        "espn.api.edge"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "bamgrid\\.com\\/v1\\/espn",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fb753c1e1b3a99f8651897cf8bcdaae0f15b8a39bab95ae7171c9ed092dd2e72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com.ar",
+                "www.espn.nl",
+                "www.espn.ph"
+            ]
+        },
         {
             "rule": "bamgrid\\.com\\/v1\\/espn",
             "cookies": 0,
@@ -28,33 +53,8 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "fb753c1e1b3a99f8651897cf8bcdaae0f15b8a39bab95ae7171c9ed092dd2e72"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "espn.com.ar",
-                "www.espn.com.sg",
-                "www.espn.nl",
-                "www.espn.ph"
-            ]
-        },
-        {
-            "rule": "bamgrid\\.com\\/v1\\/espn",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "pcs"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
-            "cnames": [],
-            "responseHashes": [
-                "bacf73d1b9128d198b77e03dde24a53b548d4a87e7240c33f7ca21e9c8bd03b4",
-                "3936ed687e4df345b5ec1fcf44adad7625790a4ff42d83258475507954fa4bfe",
-                "ef9629a16b8072d940561937f739f9c9639a98414f252802ff402daf784ba190"
+                "926b48a0b367af7fe25fb7512a37ae849f3ac3c4a4c0edc916bbf493d5fde617",
+                "88f487d3197abf840b6cf38af9040a1aa01fd2e8ee079cb65aacb985114f8ee9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -62,13 +62,12 @@
             "exampleSites": [
                 "espn.com.ar",
                 "www.espn.com.ar",
-                "www.espn.com.sg",
                 "www.espn.nl",
                 "www.espn.ph"
             ]
         },
         {
-            "rule": "bamgrid\\.com\\/artifacts\\/experiments\\/hive\\/playback-service\\/4\\.2\\.1-hotfix-06182025-edge\\.2\\/all_browser_es5\\/playback-service\\.js",
+            "rule": "bamgrid\\.com\\/artifacts\\/hive\\/playback-service\\/4\\.3\\.0\\/all_browser_es5\\/playback-service\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
@@ -87,14 +86,78 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "b12359afe6685c0bdd76919a2b13ed96afbf07b22da885e1758d1ba1297e4fec"
+                "edd3a6026ff182eea48911ef3478be8bbffd2d8ff46aa84fb5860f60809d2599"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "espn.com.ar",
-                "www.espn.com.sg",
+                "www.espn.nl",
+                "www.espn.ph"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/bam-sdk\\/v5\\.0\\/espn-a9b93989\\/browser\\/v32\\.5\\/macosx\\/chrome\\/prod\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bam-sdk-configs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "93c4c0b2689657d391e21690adfe2e951d7e9201daf097c5d8d45c99581ab479"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.ph"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/graph\\/v1\\/device\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "espn.api.edge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.ph"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/graph\\/v1\\/device\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "espn.api.edge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b9de8b48c3b1d2e9071a9799f495a03f65e390d1dac26fc5fafc88e3ffb0cfba"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
                 "www.espn.ph"
             ]
         }
@@ -109,14 +172,15 @@
         }
     ],
     "types": {
-        "Fetch": 4,
-        "XHR": 5,
-        "Script": 3
+        "Fetch": 7,
+        "XHR": 4,
+        "Script": 3,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-732.awsdns-27.net",
-        "ns-489.awsdns-61.com",
         "ns-1037.awsdns-01.org",
-        "ns-1846.awsdns-38.co.uk"
+        "ns-1846.awsdns-38.co.uk",
+        "ns-489.awsdns-61.com",
+        "ns-732.awsdns-27.net"
     ]
 }

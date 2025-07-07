@@ -10,20 +10,23 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
+        "ucm-eu",
         "ucm-us"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "verint-cdn\\.com\\/files\\/modules\\/unified-websdk\\/2\\.11\\.0\\/visitor\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
+                "ucm-eu",
                 "ucm-us"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
+                "Element.prototype.getClientRects": 1,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
                 "window.innerWidth": 2,
@@ -40,31 +43,32 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kbb.com",
+                "bahn.de",
                 "www.mdanderson.org"
             ]
         },
         {
-            "rule": "verint-cdn\\.com\\/files\\/modules\\/unified-websdk\\/2\\.11\\.0\\/analytics-engine\\.js",
+            "rule": "verint-cdn\\.com\\/files\\/modules\\/unified-websdk\\/2\\.11\\.0\\/database\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
+                "ucm-eu",
                 "ucm-us"
             ],
             "apis": {
-                "Date.prototype.getTimezoneOffset": 1
+                "window.indexedDB": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e0a9cd91fcd968c45e17e1b56acc66bf29b05c2ae7d1f98ee712ec59ce42b07a"
+                "10a48c961c79584ba879dd91505ed7bbc960df3da6679c31dd013839d0ad38a4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kbb.com",
+                "bahn.de",
                 "www.mdanderson.org"
             ]
         },
@@ -73,6 +77,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "ucm-eu",
                 "ucm-us"
             ],
             "apis": {},
@@ -86,7 +91,42 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kbb.com",
+                "bahn.de",
+                "www.mdanderson.org"
+            ]
+        },
+        {
+            "rule": "verint-cdn\\.com\\/files\\/modules\\/unified-websdk\\/2\\.11\\.0\\/recording-engine\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "ucm-eu",
+                "ucm-us"
+            ],
+            "apis": {
+                "Screen.prototype.orientation": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b5e99c4fb247be296a9b666dff4751d7fde79b1e5dd231723c58fc2c957c04a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
                 "www.mdanderson.org"
             ]
         }
@@ -97,16 +137,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5882352941176471
+        },
+        {
+            "domain": "static-bahn.de",
+            "prevalence": 0.4117647058823529
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 8
     },
     "nameservers": [
-        "ns-1246.awsdns-27.org",
-        "ns-150.awsdns-18.com",
         "ns-1879.awsdns-42.co.uk",
-        "ns-528.awsdns-02.net"
+        "ns-528.awsdns-02.net",
+        "ns-150.awsdns-18.com",
+        "ns-1246.awsdns-27.org"
     ]
 }

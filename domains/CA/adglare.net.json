@@ -4,34 +4,94 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000312,
+    "prevalence": 0.000303,
     "sites": 3,
     "subdomains": [
-        "funker530.engine"
+        "candy.engine",
+        "candy.cdn",
+        "laweekly.engine"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "engine.laweekly.com",
+            "resolved": "laweekly.engine.adglare.net"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "adglare\\.net\\/",
+            "rule": "adglare\\.net\\/event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "funker530.engine"
+                "candy.engine"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000208,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7d509ee385e13b7d74fb582659f07d4d3a7c7e4b42585f7f86abeb6d6daff43d"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "funker530.com",
-                "www.funker530.com"
+                "f95zone.to",
+                "pmvhaven.com"
+            ]
+        },
+        {
+            "rule": "adglare\\.net\\/OoZ6k-dPdJAP0l_a8Q2EjA\\/1752105600\\/cwgnv_ucprvyde\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "candy.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "16333466af91c75357f440f4c345d78242fa7d478d89d4716479cbd42f8b5580"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "f95zone.to",
+                "pmvhaven.com"
+            ]
+        },
+        {
+            "rule": "adglare\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "candy.engine",
+                "laweekly.engine"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "engine.laweekly.com",
+                    "resolved": "laweekly.engine.adglare.net"
+                }
+            ],
+            "responseHashes": [
+                "ea6018a4509224b799505d43a0783f6c913acd002440882e9b89564e372b2033"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pmvhaven.com",
+                "www.laweekly.com"
             ]
         }
     ],
@@ -45,7 +105,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Ping": 2,
+        "Media": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns7.adglare.nl",
