@@ -9,13 +9,16 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.00181,
-    "sites": 18,
+    "prevalence": 0.00191,
+    "sites": 19,
     "subdomains": [
         "accounts.bahn",
         "static.classistatic",
         "img.ui-portal",
-        "img.tvspielfilm",
+        "web-assets.kaufda",
+        "web-assets.meinprospekt",
+        "sso.sportschau",
+        "sso.tagesschau",
         "ssl.zdf"
     ],
     "cnames": [
@@ -28,16 +31,28 @@
             "resolved": "ssl.zdf.de.edgekey.net"
         },
         {
-            "original": "img.tvspielfilm.de",
-            "resolved": "img.tvspielfilm.de.edgekey.net"
-        },
-        {
             "original": "img.ui-portal.de",
             "resolved": "img.ui-portal.de.edgekey.net"
         },
         {
+            "original": "sso.sportschau.de",
+            "resolved": "sso.sportschau.de.edgekey.net"
+        },
+        {
+            "original": "sso.tagesschau.de",
+            "resolved": "sso.tagesschau.de.edgekey.net"
+        },
+        {
             "original": "static.classistatic.de",
             "resolved": "static.classistatic.de.edgekey.net"
+        },
+        {
+            "original": "web-assets.kaufda.de",
+            "resolved": "web-assets.kaufda.de.edgekey.net"
+        },
+        {
+            "original": "web-assets.meinprospekt.de",
+            "resolved": "web-assets.meinprospekt.de.edgekey.net"
         }
     ],
     "fingerprinting": 1,
@@ -58,9 +73,7 @@
                     "resolved": "accounts.bahn.de.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -205,30 +218,65 @@
             ]
         },
         {
-            "rule": "de\\.edgekey\\.net\\/9e\\/16\\/b1\\/6848066d5677e9475bb1169e\\.jpeg",
+            "rule": "de\\.edgekey\\.net\\/images\\/logo\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "img.tvspielfilm"
+                "web-assets.kaufda",
+                "web-assets.meinprospekt"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "img.tvspielfilm.de",
-                    "resolved": "img.tvspielfilm.de.edgekey.net"
+                    "original": "web-assets.kaufda.de",
+                    "resolved": "web-assets.kaufda.de.edgekey.net"
+                },
+                {
+                    "original": "web-assets.meinprospekt.de",
+                    "resolved": "web-assets.meinprospekt.de.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "711f0337f384efb075786ec7d43daef77419669fe2d0d495ae7c2a76fad406b1"
+                "776551c21a2086f5a5b4216deea7b8556422f0810a66218f4ef2217ece80b915"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tvspielfilm.de",
-                "www.tvspielfilm.de"
+                "kaufda.de",
+                "www.meinprospekt.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/sso\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso.sportschau",
+                "sso.tagesschau"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sso.sportschau.de",
+                    "resolved": "sso.sportschau.de.edgekey.net"
+                },
+                {
+                    "original": "sso.tagesschau.de",
+                    "resolved": "sso.tagesschau.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
             ]
         },
         {
@@ -248,7 +296,7 @@
                 }
             ],
             "responseHashes": [
-                "b84d68cbd6c5d0528d639268b68182ec50dc63ddbcea3ec4f5520248d97d68ab"
+                "bacd42825e464216819804f12ef5e47d791e24837d69e103049f97bd2d6a9476"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -290,15 +338,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.950354609929078
+            "prevalence": 0.9393939393939394
         },
         {
             "domain": "uicdn.com",
-            "prevalence": 0.028368794326241134
+            "prevalence": 0.030303030303030304
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.02127659574468085
+            "prevalence": 0.022727272727272728
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.007575757575757576
         }
     ],
     "types": {
@@ -306,7 +358,7 @@
         "Image": 6,
         "Font": 4,
         "Script": 2,
-        "Fetch": 2,
+        "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": []

@@ -7,19 +7,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000683,
-    "sites": 10,
+    "prevalence": 0.0000956,
+    "sites": 14,
     "subdomains": [
+        "ssl.captcha",
         "t.captcha",
         "res.wx",
         "beacon.cdn",
         "gatherer.m",
         "browsertdidticket.m",
         "otheve.beacon",
-        "sdk.e",
         "snowflake",
         "h.trace",
-        "cdn.midasbuy.com.tegsea.tc"
+        "cdn.midasbuy.com.tegsea.tc",
+        "aegis"
     ],
     "cnames": [
         {
@@ -29,6 +30,95 @@
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "qq\\.com\\/TCaptcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssl.captcha"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "54c6d09db5d8ffbce85f57ee672aa2228da4af16514de5f37de0c2671637b6ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/cap_union_prehandle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "942e5e8f6d349263e3b58fdca99fb77ae3ff7db9376ea344df33aa13577d408b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/tdc\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "RTCPeerConnection.prototype.constructor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e67ab2f41b8a5e1f63c64ab7328948c1dbd076766db74586bacd75a611de193c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "TDC_itoken": {
+                    "ttl": 172312063,
+                    "length": 23,
+                    "prevalence": 0.000013658496609278216,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
         {
             "rule": "qq\\.com\\/cap_union_new_getcapbysig",
             "cookies": 0,
@@ -41,7 +131,29 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c466199deec5d22e8af3340c83677f301fc8c4a14362b3a75d88db92f0b7f9bb"
+                "2d19e4dc3e88cd6069bf87f889cf7dae53e7e6e0596dedcdeed8f4ef410a4b14"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/cap_monitor",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -59,12 +171,12 @@
                 "res.wx"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.platform": 2,
-                "Date.prototype.getTime": 2
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.platform": 3,
+                "Date.prototype.getTime": 3
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -74,7 +186,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "solitaires.com",
-                "www.cnblogs.com"
+                "www.cnblogs.com",
+                "www.kimi.com"
             ]
         },
         {
@@ -179,7 +292,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -195,17 +308,16 @@
                 "otheve.beacon"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "163.com",
-                "www.163.com",
-                "www.iflix.com"
+                "www.163.com"
             ]
         },
         {
@@ -220,7 +332,7 @@
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "ee6b813f25aa7fe4f9307e7227777dd865ed22a0ce5eb6c344e947ddb4690b54"
+                "9dd43ec61524bbae327cb19d76e7aed883bfd75c60e1ced014293346e3a5effd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -232,23 +344,23 @@
             ]
         },
         {
-            "rule": "qq\\.com\\/open\\/v1\\.1\\/game_session\\/seed",
+            "rule": "qq\\.com\\/analytics\\/v2_upload",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sdk.e"
+                "otheve.beacon"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "163.com",
-                "www.163.com"
+                "iflix.com",
+                "www.iflix.com"
             ]
         },
         {
@@ -283,7 +395,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "71f74c66de38378cfc7745e74a3e451a15ad46e02cf0490481b3c4b62cc1217e"
+                "85ce1b1b1ea212181e87109bcf7e9d21495970840104ef3661bdc4b14b3da5a1"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -310,8 +422,8 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "guid": 0.00002730543173300749,
-                "_qimei_uuid42": 0.000013652715866503744
+                "guid": 0.000027316993218556432,
+                "_qimei_uuid42": 0.000013658496609278216
             },
             "exampleSites": [
                 "iflix.com",
@@ -319,9 +431,31 @@
             ]
         },
         {
-            "rule": "qq\\.com\\/midasbuy-ui-lib\\/assets\\/DINMITTELSCHRIFTSTD_12faf69d54217b30\\.woff",
+            "rule": "qq\\.com\\/connect\\/zh_CN\\/htmledition\\/js\\/wxLogin\\.js",
             "cookies": 0,
             "fingerprinting": 0,
+            "subdomains": [
+                "res.wx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4a57514d99b367ee8b390dbf3c61199764163864fe0af0053b37860225fd6ea4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kimi.com",
+                "www.kimi.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/js\\/aegis\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn.midasbuy.com.tegsea.tc"
             ],
@@ -335,9 +469,9 @@
                 }
             ],
             "responseHashes": [
-                "7156a9e6a8a8dc1beb8df3f839bab8a334004bc15bddb1ceed88dfd1fabf127c"
+                "d8dcb49319bd61ccd67610c592b1212bf50921fe2081f97be84d3fa3dff52dbf"
             ],
-            "type": "Font",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -346,9 +480,9 @@
             ]
         },
         {
-            "rule": "qq\\.com\\/videos\\/en\\.2bdfe0f8\\.mp4",
+            "rule": "qq\\.com\\/oversea_web\\/static\\/js\\/midas\\.runtimev1\\.6\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn.midasbuy.com.tegsea.tc"
             ],
@@ -361,8 +495,86 @@
                     "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "5b7a71fd730c9e8b8befc4ca5b6b0ff6351340b11920f02dfb79c4cd7833883e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/js\\/x-midas\\/kEc9hjFh5DQJbz_iPEWrfFxadMVk4PbLDS-5P8jE73pfdUuDwNGKNVZjdEztcHdofAVaHXo6zRGXgLwuvsK_afAEj6w_mKyiUmq-7AesIRU~\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "2ab08d983fd6007359e6d1ab6c80dc87b34c0d1bccf702dea67e6d20b824a872"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/oversea_web\\/static\\/js\\/axios\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "24b7fb13c441efd97f78d07ba6e6d98f8e6d24b11d340c99c3bcf26453ebbdb6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/speed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aegis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -373,42 +585,45 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000341,
     "topInitiators": [
         {
-            "domain": "126.net",
-            "prevalence": 0.30303030303030304
-        },
-        {
-            "domain": "cdn-go.cn",
-            "prevalence": 0.2727272727272727
+            "domain": "first party",
+            "prevalence": 0.26506024096385544
         },
         {
             "domain": "wetvinfo.com",
-            "prevalence": 0.19696969696969696
+            "prevalence": 0.2289156626506024
         },
         {
-            "domain": "first party",
-            "prevalence": 0.15151515151515152
+            "domain": "126.net",
+            "prevalence": 0.1927710843373494
+        },
+        {
+            "domain": "cdn-go.cn",
+            "prevalence": 0.13253012048192772
         },
         {
             "domain": "gtimg.com",
-            "prevalence": 0.07575757575757576
+            "prevalence": 0.12048192771084337
+        },
+        {
+            "domain": "storage.googleapis.com",
+            "prevalence": 0.060240963855421686
         }
     ],
     "types": {
-        "Image": 4,
-        "Script": 6,
-        "XHR": 6,
-        "Preflight": 9,
-        "Fetch": 3,
-        "Font": 2,
-        "Media": 2
+        "Script": 21,
+        "Image": 6,
+        "XHR": 8,
+        "Preflight": 6,
+        "Other": 4,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns3.qq.com",
-        "ns4.qq.com",
+        "ns2.qq.com",
         "ns1.qq.com",
-        "ns2.qq.com"
+        "ns3.qq.com",
+        "ns4.qq.com"
     ]
 }

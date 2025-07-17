@@ -7,10 +7,11 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "resources.design.dev"
+        "resources.design.dev",
+        "routing"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "iagl\\.digital\\/mitga\\/woff2\\/BwMitga-Medium\\.woff2",
@@ -33,6 +34,50 @@
                 "ba.com",
                 "www.avios.com"
             ]
+        },
+        {
+            "rule": "iagl\\.digital\\/_next\\/image",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "routing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5b43ee402ac9eaff517ad733541eef07d458bc45add3b71857dabd96339133c9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avios.com",
+                "www.avios.com"
+            ]
+        },
+        {
+            "rule": "iagl\\.digital\\/auth\\/profile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "routing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avios.com",
+                "www.avios.com"
+            ]
         }
     ],
     "categories": [],
@@ -41,11 +86,17 @@
     "topInitiators": [
         {
             "domain": "avios.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "iagl.digital",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Font": 2
+        "Font": 2,
+        "Image": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1344.awsdns-40.org",

@@ -9,21 +9,80 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000505,
-    "sites": 5,
+    "prevalence": 0.000606,
+    "sites": 6,
     "subdomains": [
+        "xp",
         "api.music-lb"
     ],
     "cnames": [
         {
             "original": "api.music.apple.com",
             "resolved": "api.music-lb.itunes-apple.com.akadns.net"
+        },
+        {
+            "original": "xp.apple.com",
+            "resolved": "xp.itunes-apple.com.akadns.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/fr\\/songs\\/1440769123",
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/report\\/2\\/xp_amp_web_error_log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "xp.apple.com",
+                    "resolved": "xp.itunes-apple.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apple.com",
+                "maps.apple.com",
+                "music.apple.com"
+            ]
+        },
+        {
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/report\\/2\\/xp_amp_web_error_log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "xp.apple.com",
+                    "resolved": "xp.itunes-apple.com.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apple.com",
+                "maps.apple.com",
+                "music.apple.com"
+            ]
+        },
+        {
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/fr\\/songs\\/1804419953",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -48,7 +107,7 @@
             ]
         },
         {
-            "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/fr\\/songs\\/1440769123",
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/fr\\/songs\\/1804419953",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -64,7 +123,7 @@
                 }
             ],
             "responseHashes": [
-                "24a061ebfcbf4cf76ac0d335d52679ded1f9f57fff24cd8aa2b8fd7461c45e84"
+                "610821d27f46ae54f589003e27300c23da8a601e4a24af5efbd8d3b0c20d63c1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -83,12 +142,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.95
+        },
+        {
+            "domain": "apple-mapkit.com",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 5,
+        "Preflight": 5
     },
     "nameservers": []
 }

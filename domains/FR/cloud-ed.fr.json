@@ -4,24 +4,25 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00172,
-    "sites": 17,
+    "prevalence": 0.00192,
+    "sites": 19,
     "subdomains": [
-        "stats.gironde",
-        "cnous-matomo",
         "stats.beta-gouv",
+        "stats.chartres",
+        "cnous-matomo",
         "stats.anct",
         "stats.normandie",
         "reporterre-stats",
+        "stats.ad76",
         "stats.lyon",
         "matomo.wp.afnor",
         "stats.crous",
-        "pix-stats"
+        "stats.gironde"
     ],
     "cnames": [
         {
-            "original": "analytics.pix.fr",
-            "resolved": "pix-stats.cloud-ed.fr"
+            "original": "matomo.chartres.fr",
+            "resolved": "stats.chartres.cloud-ed.fr"
         },
         {
             "original": "matomo.incubateur.anct.gouv.fr",
@@ -39,19 +40,84 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "cloud-ed\\.fr\\/matomo\\.php",
-            "cookies": 0.000101,
+            "rule": "cloud-ed\\.fr\\/piwik\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats.beta-gouv",
+                "stats.chartres"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "stats.beta.gouv.fr",
+                    "resolved": "stats.beta-gouv.cloud-ed.fr"
+                },
+                {
+                    "original": "matomo.chartres.fr",
+                    "resolved": "stats.chartres.cloud-ed.fr"
+                }
+            ],
+            "responseHashes": [
+                "dbefc0fa9b6b7680a9a1c1e5a0f0cc7c8ae3c41a7b15c206a144963cb36a073d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beta.gouv.fr",
+                "www.chartres.fr"
+            ]
+        },
+        {
+            "rule": "cloud-ed\\.fr\\/piwik\\.php",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "stats.gironde",
+                "stats.beta-gouv",
+                "stats.chartres"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "stats.beta.gouv.fr",
+                    "resolved": "stats.beta-gouv.cloud-ed.fr"
+                },
+                {
+                    "original": "matomo.chartres.fr",
+                    "resolved": "stats.chartres.cloud-ed.fr"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beta.gouv.fr",
+                "www.chartres.fr"
+            ]
+        },
+        {
+            "rule": "cloud-ed\\.fr\\/matomo\\.php",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
                 "cnous-matomo",
                 "stats.beta-gouv",
                 "stats.anct",
                 "stats.normandie",
                 "reporterre-stats",
+                "stats.ad76",
                 "stats.lyon",
                 "matomo.wp.afnor",
-                "stats.crous"
+                "stats.crous",
+                "stats.gironde"
             ],
             "apis": {},
             "sites": 14,
@@ -77,16 +143,16 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gironde.fr",
-                "cvec.etudiant.gouv.fr",
+                "etudiant.gouv.fr",
                 "filigrane.beta.gouv.fr",
                 "lesbases.anct.gouv.fr",
                 "nomad.normandie.fr",
                 "reporterre.net",
                 "trouverunlogement.lescrous.fr",
+                "www.archivesdepartementales76.net",
                 "www.bm-lyon.fr",
                 "www.boutique.afnor.org",
-                "www.comparia.beta.gouv.fr",
+                "www.crous-toulouse.fr",
                 "www.gironde.fr",
                 "www.lescrous.fr",
                 "www.lyon.fr",
@@ -94,40 +160,8 @@
             ]
         },
         {
-            "rule": "cloud-ed\\.fr\\/piwik\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "stats.beta-gouv",
-                "pix-stats"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "stats.beta.gouv.fr",
-                    "resolved": "stats.beta-gouv.cloud-ed.fr"
-                },
-                {
-                    "original": "analytics.pix.fr",
-                    "resolved": "pix-stats.cloud-ed.fr"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "beta.gouv.fr",
-                "pix.fr"
-            ]
-        },
-        {
             "rule": "cloud-ed\\.fr\\/matomo\\.js",
-            "cookies": 0.000807,
+            "cookies": 0.000808,
             "fingerprinting": 2,
             "subdomains": [
                 "stats.beta-gouv",
@@ -135,29 +169,29 @@
                 "cnous-matomo",
                 "stats.lyon",
                 "matomo.wp.afnor",
-                "stats.gironde",
-                "stats.crous"
+                "stats.crous",
+                "stats.gironde"
             ],
             "apis": {
-                "Document.cookie getter": 5,
-                "window.name": 5,
-                "NavigatorUAData.prototype.brands": 5,
-                "NavigatorUAData.prototype.platform": 5,
-                "NavigatorUAData.prototype.getHighEntropyValues": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Navigator.prototype.mimeTypes": 5,
-                "Navigator.prototype.javaEnabled": 5,
-                "Navigator.prototype.cookieEnabled": 5,
-                "Screen.prototype.width": 5,
-                "Screen.prototype.height": 5,
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.platform": 5,
-                "Document.cookie setter": 5,
+                "Document.cookie getter": 6,
+                "window.name": 6,
+                "NavigatorUAData.prototype.brands": 6,
+                "NavigatorUAData.prototype.platform": 6,
+                "NavigatorUAData.prototype.getHighEntropyValues": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.mimeTypes": 6,
+                "Navigator.prototype.javaEnabled": 6,
+                "Navigator.prototype.cookieEnabled": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.platform": 6,
+                "Document.cookie setter": 6,
                 "Navigator.prototype.vendor": 1,
                 "Navigator.prototype.doNotTrack": 1
             },
             "sites": 8,
-            "prevalence": 0.000807,
+            "prevalence": 0.000808,
             "cnames": [
                 {
                     "original": "stats.beta.gouv.fr",
@@ -177,61 +211,73 @@
                 "_pk_id.1.5ea2": {
                     "ttl": 33955204,
                     "length": 28,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_ses.1.5ea2": {
                     "ttl": 1803,
                     "length": 1,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_id.27.6b80": {
-                    "ttl": 33955205,
+                    "ttl": 33955203,
                     "length": 28,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_ses.27.6b80": {
-                    "ttl": 1804,
+                    "ttl": 1803,
                     "length": 1,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_id.6.a75f": {
                     "ttl": 33955203,
                     "length": 28,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_ses.6.a75f": {
                     "ttl": 1803,
                     "length": 1,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
+                    "uniqueness": 1
+                },
+                "_pk_id.26.0764": {
+                    "ttl": 33955203,
+                    "length": 28,
+                    "prevalence": 0.00010101010101010101,
+                    "uniqueness": 1
+                },
+                "_pk_ses.26.0764": {
+                    "ttl": 1803,
+                    "length": 1,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_id.1.620b": {
-                    "ttl": 33955201,
+                    "ttl": 33955203,
                     "length": 28,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_ses.1.620b": {
-                    "ttl": 1801,
+                    "ttl": 1803,
                     "length": 1,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_id.1.cd6a": {
                     "ttl": 33955203,
                     "length": 28,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 },
                 "_pk_ses.1.cd6a": {
-                    "ttl": 1802,
+                    "ttl": 1803,
                     "length": 1,
-                    "prevalence": 0.00010090817356205853,
+                    "prevalence": 0.00010101010101010101,
                     "uniqueness": 1
                 }
             },
@@ -242,7 +288,7 @@
                 "trouverunlogement.lescrous.fr",
                 "www.bm-lyon.fr",
                 "www.boutique.afnor.org",
-                "www.comparia.beta.gouv.fr",
+                "www.crous-toulouse.fr",
                 "www.gironde.fr",
                 "www.lescrous.fr"
             ]
@@ -250,24 +296,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00151,
+    "cookies": 0.00152,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "matomo.cloud",
-            "prevalence": 0.1
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Ping": 16,
-        "Script": 8
+        "Script": 10,
+        "Ping": 16
     },
     "nameservers": [
         "dns3.vtech.fr",

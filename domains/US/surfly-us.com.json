@@ -8,7 +8,7 @@
     "sites": 4,
     "subdomains": [],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "surfly-us\\.com\\/surfly\\.js",
@@ -35,17 +35,23 @@
         {
             "rule": "surfly-us\\.com\\/static\\/bundles\\/widget\\/apiframe\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [],
             "apis": {
-                "window.sessionStorage": 3,
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.vendor": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.mediaDevices": 1,
+                "window.sessionStorage": 2,
                 "window.localStorage": 2
             },
             "sites": 4,
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "0baa80ebf2199411470fc00ec40d8a217acde00712df62e58aca0933a2765f6d"
+                "7dc5047d46f8c35f70aa8df2fd05a71c46709a84a538e44897c7cf0a7c94b9a3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -83,21 +89,32 @@
         },
         {
             "rule": "surfly-us\\.com\\/3rdpartycookietest\\/",
-            "cookies": 0,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
             },
             "sites": 4,
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "251cfde9a0e1f97d3827378a92c8797571660180035c2169938e32f1d3b7fed5"
+                "eb3c37c2759d6656e03a732e3b5bc813e7cee851190ad6d9478a2f205d59fa0a"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookies": {
+                "3rdpartycookie-test": {
+                    "ttl": 5,
+                    "length": 6,
+                    "prevalence": 0.000013658496609278216,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "test": 0.000013658496609278216
+            },
             "exampleSites": [
                 "americancentury.com",
                 "www.americancentury.com",
@@ -106,7 +123,7 @@
             ]
         },
         {
-            "rule": "surfly-us\\.com\\/static\\/bundles\\/dashboard\\/translate_global\\.4a26f8184bb9532fbfe7\\.js",
+            "rule": "surfly-us\\.com\\/static\\/bundles\\/dashboard\\/translate_global\\.bcc4e8c609adeaa63283\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -115,7 +132,7 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "5c42a28e95eb3842582dc0cd7c854bf861c32abad3ad9d60fd31aade5880b11c"
+                "bdb9b168e9c8a242c59bae28493f6bf143e9e16e33de46bf5361295846612e06"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -130,7 +147,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -143,11 +160,11 @@
         "Document": 4
     },
     "nameservers": [
-        "ns3.surfly.com",
-        "ns1.surfly.com",
         "ns0.surfly.com",
-        "ns5.surfly.com",
+        "ns4.surfly.com",
         "ns2.surfly.com",
-        "ns4.surfly.com"
+        "ns1.surfly.com",
+        "ns5.surfly.com",
+        "ns3.surfly.com"
     ]
 }

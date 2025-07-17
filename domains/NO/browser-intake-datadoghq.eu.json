@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "rum",
+        "csp-report",
         "logs"
     ],
     "cnames": [],
@@ -28,31 +29,53 @@
             "prevalence": 0.000704,
             "cnames": [],
             "responseHashes": [
-                "47e58e919427bde14192eba2f443dae9bd51cf14adfb953da3339fdb944b407c",
-                "ebc75f534736d16835a59e9819e6085305e460466aca5c263c8d9369453a8f7d",
-                "4befab0743314ff0549674702a467c81245728407dd588df396950c7de9ac282",
-                "8987415896d466d1edaeb13420f9022c04c6e22d52a41a7549e848d5b8351a47",
-                "361ffbafca1477b0f7c26d04a754bac4df3b309c1c8a43e06dd67ed3fba1f5bc",
-                "bdb54e264cd1ec3bd3478d532bf6ff20770322331167fb3afbe98c8609f66041"
+                "8b214f25a3778ed56e73b52cfe80a38043a4c607f1d64227a238269d9cfc063e",
+                "5de9626bc3f4e60d005205e47a3d759695b8b06096be172def24596bc2cc9a01",
+                "01047e1ab1be52bbc757d115ecc176083b7066cd20b5f1ba384c5ef87e2a16fd",
+                "b4860c1c7af05f02b0fe4a2f1625d2aed98aedcbe4b25ff3642ac66fe84d75dd",
+                "d06d9566caabdf010ed7b4f67606e1b661daff09a2f0667a6887ae2541222326",
+                "e5c987db8a665b7a533ab66e1f5dcd825f973e529ffa05f8021ef7e29af554e8"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mollerbil.no",
+                "bruktbil.mollerbil.no",
                 "www.adamsmatkasse.no",
+                "www.airalo.com",
                 "www.godtlevert.no",
-                "www.joyn.de",
-                "www.lexus.no",
                 "www.toyota.no",
                 "www.xing.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "67602117d5da60936f1ed7d21f62346f08e36bd0541b643e7a6d40915d504143"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mollerbil.no",
+                "bruktbil.mollerbil.no"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "csp-report"
+            ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
@@ -64,8 +87,34 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "britishairways.com",
+                "mollerbil.no",
                 "www.britishairways.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "c00533b367f89e23b0216905478e22fbdab1c994f7f21109786fbe8562024ce3",
+                "7dbcc231d63df792b4cbd6419e693111c6dc85704f49cb663ff344da638e2448",
+                "d1063c721c17543e237ada4d77a9a5b66c726179d596a8117852245a25c70299"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ayvens.com",
+                "www.ayvens.com",
+                "www.directferries.no",
+                "www.nationaltheatret.no"
             ]
         },
         {
@@ -80,14 +129,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0ec3e10628cc997636fc70ce9e35f6fb1ca1f97e1420d4ae0ea54d17cbaff061"
+                "22da5541ac6b75d2129dac5ff0bfdf01fc3daab47a38065d30843f2e384833eb"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "directferries.no",
-                "www.nationaltheatret.no"
+                "ayvens.com",
+                "www.ayvens.com"
             ]
         }
     ],
@@ -97,20 +146,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5454545454545454
-        },
-        {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.7659574468085106
         },
         {
             "domain": "xingcdn.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.1276595744680851
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.10638297872340426
         }
     ],
     "types": {
-        "Fetch": 9,
-        "Other": 2
+        "Fetch": 13,
+        "Other": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-cloud-e1.googledomains.com",

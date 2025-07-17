@@ -9,12 +9,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00222,
-    "sites": 22,
+    "prevalence": 0.00242,
+    "sites": 24,
     "subdomains": [
-        "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb",
         "cognito-identity",
-        "firehose"
+        "site-tenant-configuration.s3",
+        "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
     ],
     "cnames": [
         {
@@ -25,32 +25,29 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/player\\/image\\.aspx",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
+                "cognito-identity"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [
-                {
-                    "original": "mediaweb.musicradio.com",
-                    "resolved": "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb.eu-west-1.amazonaws.com"
-                }
-            ],
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
             "responseHashes": [
-                "fc86ab6f5b519c4a5ac9d23c3676a6a2401f961cd5b0aca128be1982d4bc8ab7",
-                "48e9861e3d65556966a4b04266306880ff13c6cbab8a679026b8e636d135f376"
+                "9930e0d165be3575ad38c03f00f159af1cd1f2e5771ee41cda7cf6bddf925312",
+                "ce4fbaf926dc95ba8a2430fba0b0db3b626677885722d0f9ecb2cb91ccb5a08c",
+                "9a2386837dfb8986aaa425bd62df600697a5fa7f2e0bc121651bdc28d7156b8e"
             ],
-            "type": "Image",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "capitalfm.com",
-                "www.classicfm.com",
-                "www.smoothradio.com"
+                "runningroom.com",
+                "www.datacamp.com",
+                "www.motorola.com",
+                "www.trivago.ca"
             ]
         },
         {
@@ -64,46 +61,91 @@
             "sites": 5,
             "prevalence": 0.000505,
             "cnames": [],
-            "responseHashes": [
-                "097922373ebe47d9dcbe3ceca35362ffdc1498d892c795e0e0103faa678012bd",
-                "dfa3c50007d1f20e1c8ef1242bdadb2183e14882f7c211f555cda5f6e59606af",
-                "f5685a8d961d60733b4b5125a13924f8b9e848a0209290b78f1d9d24eb6a625a",
-                "ec8226237289fb44139a9d1273f9a66327fc9c2c14107777b51301d5eb7c3a77"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "datacamp.com",
-                "www.datacamp.com",
-                "www.lelo.com",
-                "www.motorola.com",
-                "www.trivago.ca"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cognito-identity",
-                "firehose"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000605,
-            "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "datacamp.com",
+                "runningroom.com",
                 "www.datacamp.com",
                 "www.fraserway.com",
-                "www.lelo.com",
                 "www.motorola.com",
                 "www.trivago.ca"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/index\\/production\\/vistaprint\\/en-CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "934b83fb4e2a207c4431a46217fcb3e10f05af9507e62dc073bf6675bfb860cb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.ca",
+                "www.vistaprint.ca"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/site-configurations\\/VP-CA-EN",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b1a2c2f88378221df93c172e638c61f334b0875bf8ba18aaddef05c3ca3654f6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.ca",
+                "www.vistaprint.ca"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/player\\/image\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [
+                {
+                    "original": "mediaweb.musicradio.com",
+                    "resolved": "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb.eu-west-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "fc86ab6f5b519c4a5ac9d23c3676a6a2401f961cd5b0aca128be1982d4bc8ab7",
+                "390e56143f634e9c8223564413cbf12389e9b91be837dd047a7927961218ec47",
+                "48e9861e3d65556966a4b04266306880ff13c6cbab8a679026b8e636d135f376"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "capitalfm.com",
+                "www.classicfm.com",
+                "www.heart.co.uk",
+                "www.smoothradio.com"
             ]
         },
         {
@@ -118,7 +160,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "acb2710743ac5abb5027f93d4385ff805f34a0fea534cf54aeabb4c7db140e5f"
+                "e922d7d94ab74c8a114f2a387a738017b1690626c19542a285cadf91849a4aec"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -137,41 +179,41 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5952380952380952
-        },
-        {
-            "domain": "requestmetrics.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.675
         },
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.1
         },
         {
             "domain": "smct.io",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.075
         },
         {
             "domain": "impel.io",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.05
         },
         {
             "domain": "d5zu2f4xvqanl.cloudfront.net",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.025
         },
         {
             "domain": "yottaa.com",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.025
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.025
         },
         {
             "domain": "uqd.io",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.025
         }
     ],
     "types": {
-        "Image": 3,
-        "XHR": 5,
-        "Preflight": 6,
+        "XHR": 8,
+        "Preflight": 5,
+        "Image": 4,
         "Fetch": 2
     },
     "nameservers": [
