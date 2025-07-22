@@ -7,7 +7,9 @@
     "prevalence": 0.0000751,
     "sites": 11,
     "subdomains": [
-        "assets"
+        "assets",
+        "analytic",
+        "bundles"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -63,6 +65,78 @@
                 "www.turktelekom.com.tr",
                 "www.webtekno.com"
             ]
+        },
+        {
+            "rule": "efilli\\.com\\/v1\\/consent-activity",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "34a980318837c2757a3d272ee687a60832e16af5dc229618aefaa6ca06265c39"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "teknosa.com",
+                "www.teknosa.com"
+            ]
+        },
+        {
+            "rule": "efilli\\.com\\/v1\\/consent-activity",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "teknosa.com",
+                "www.teknosa.com"
+            ]
+        },
+        {
+            "rule": "efilli\\.com\\/turkcell\\.com\\.tr\\.prod\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bundles"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "01cc8c0faef7a77627dfb03e93e8adef1acff99221167aca6a43e070e09d8c1f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "turkcell.com.tr",
+                "www.turkcell.com.tr"
+            ]
         }
     ],
     "categories": [],
@@ -71,15 +145,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.25
+        },
+        {
+            "domain": "merlincdn.net",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Image": 12
+        "Image": 12,
+        "Fetch": 2,
+        "Preflight": 2,
+        "Script": 2
     },
     "nameservers": [
         "marge.ns.cloudflare.com",

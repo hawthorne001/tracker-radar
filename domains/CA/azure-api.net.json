@@ -9,15 +9,47 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000505,
+    "sites": 5,
     "subdomains": [
-        "sharkninja-prd-cus-001"
+        "vtex-apim",
+        "sharkninja-prd-cus-001",
+        "spo-partner-api"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "ecomm-apim.jwpepper.com",
+            "resolved": "vtex-apim.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "azure-api\\.net\\/customer-auth\\/org-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vtex-apim"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "ecomm-apim.jwpepper.com",
+                    "resolved": "vtex-apim.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jwpepper.com",
+                "www.jwpepper.com"
+            ]
+        },
+        {
             "rule": "azure-api\\.net\\/icm\\/b2c\\/SharkNinja-CA-Site\\/ninjaca",
             "cookies": 0,
             "fingerprinting": 0,
@@ -49,7 +81,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "a47482287d4f0eb7ebcec756f4af4243bb03bd9ee9118f206cc2fe451283100c"
+                "1208418be53c56cd34cba44cfa737c2b3bbc6dd0e7fb6bf27a2525a3e9fc70cc"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -91,7 +123,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "4a84467b4e87bcfdf4825eeb43898afde36b5551edcf74052d0fec8f02551372"
+                "eca2ab91986c9d4302e1ec5511a4421957e3abaa1f428552e16e664452f16fa3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -99,6 +131,28 @@
             "exampleSites": [
                 "ninjakitchen.com",
                 "www.ninjakitchen.com"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spo-partner-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "66f64c32a54ec1e0dad6b8757075705e586aea4b3d8946ebb97eb58a0a1d7393"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.premiumoutlets.com"
             ]
         },
         {
@@ -112,10 +166,8 @@
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "6fbef73800695d1910218bb4f3bfc5abdca3955e93999a9f7c6119bb2baa0a25"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -134,8 +186,10 @@
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8623d5e1009b9766247267a2cac111699d7f22aa08c9b77b25fb638c78baee11"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -150,10 +204,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9882352941176471
+        },
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.011764705882352941
         }
     ],
     "types": {
+        "Fetch": 4,
         "Preflight": 6,
         "XHR": 6
     },

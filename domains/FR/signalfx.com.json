@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000404,
+    "sites": 4,
     "subdomains": [
         "cdn",
         "rum-ingest.eu0"
@@ -39,7 +39,7 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.00020181634712411706,
+                    "prevalence": 0.00020202020202020202,
                     "uniqueness": 1
                 }
             },
@@ -50,23 +50,18 @@
             ]
         },
         {
-            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.20\\.1\\/splunk-otel-web-session-recorder\\.js",
+            "rule": "signalfx\\.com\\/v1\\/rum",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "rum-ingest.eu0"
             ],
-            "apis": {
-                "window.innerWidth": 2,
-                "window.innerHeight": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "fbac373a9dac5074e1076cd8890c1caaaa20730564c4f9163c84a01576c4dbf6"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -82,8 +77,8 @@
                 "rum-ingest.eu0"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
@@ -94,49 +89,8 @@
             "exampleSites": [
                 "accor.com",
                 "all.accor.com",
-                "ibis.accor.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.eu0"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.eu0"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
+                "ibis.accor.com",
+                "www.aljazeera.com"
             ]
         }
     ],
@@ -146,27 +100,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "dynatrace.com",
-            "prevalence": 0.4
+            "prevalence": 0.9090909090909091
         },
         {
             "domain": "surveymonkey.com",
-            "prevalence": 0.1
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 3,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Ping": 2,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-933.awsdns-52.net",
-        "ns-1875.awsdns-42.co.uk",
         "ns-1270.awsdns-30.org",
-        "ns-5.awsdns-00.com"
+        "ns-1875.awsdns-42.co.uk",
+        "ns-5.awsdns-00.com",
+        "ns-933.awsdns-52.net"
     ]
 }

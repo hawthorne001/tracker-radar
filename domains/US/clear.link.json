@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000109,
-    "sites": 16,
+    "prevalence": 0.000102,
+    "sites": 15,
     "subdomains": [
         "cdn",
         "m",
         "cobra",
-        "chat"
+        "chat",
+        "lapi"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,11 +24,12 @@
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
                 "window.localStorage": 2,
                 "Navigator.prototype.product": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.platform": 1
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -79,9 +81,35 @@
             "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "9029152be04385b1abb793c68d2ae82819826879a483705c33765e7de1a6addf",
-                "6cf9fb2f208f8f14b133acb739e86e9153dc52a995caa96b5cdb4ba5ad989674",
-                "c8d909c83c08ca6970bb381074644b4c6da663166bd2df8bb0e4f9b31c5ca049"
+                "0a609690a128e31578bf96d454ce51108b479c19cbdf2ae4cdca9f4e7b090067",
+                "280fde7d7d1ea6bd06cb3d2cbb0291bb17a783744e8e071b60303627760b849a",
+                "b50f89ad4ecc3d6b3f6ad86cff0b202c3f59ea938866a342ebe348286e4b1a2c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frontier.com",
+                "go.frontier.com",
+                "www.usdish.com",
+                "www.verizonspecials.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [
+                "7cc2c5f9894ca11ec9c2256575f3f74dd771bc4e7cab947def41a0106efc56ed",
+                "45b29ba4df723c119751a432f88e47c44873615323aba68ad0f3271b11a06c2f",
+                "94af9b1520db711996a2f6d928f21ac684ee506562ae676999ef48482638d6d8"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -106,32 +134,6 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "frontier.com",
-                "go.frontier.com",
-                "www.usdish.com",
-                "www.verizonspecials.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [],
-            "responseHashes": [
-                "581e2fa06d77a75fae432d46813d0c63c2b775d2b624a5ffb16c68176a429b3e",
-                "3fe7fc61c1099f67b985cd2190bddd5ff6fac7d09311869c542135b9f99391af",
-                "95319d469b2c4d193cb45e5c0ae85194be0761db329156ebe6288bf87ddbcbe5"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -188,51 +190,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/6e5e586c-1e91-4e60-b4e0-7df74d20c8b1",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "67bf323869474182c0676e2c5388fd7251f5e2009fdbe65a16e77436074e9ae0"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "frontier.com",
-                "go.frontier.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fd7a7c28-5774-4f5b-907a-3c721a59f716",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "815580357b9d16a423d68d77bbb323ef7f904b2da5a3b747028382ab46de72ae"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "frontier.com",
-                "go.frontier.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/6e5e586c-1e91-4e60-b4e0-7df74d20c8b1",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/bfe97847-cbfc-4248-9f2e-44c3a7a28c1e",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -252,7 +210,29 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fd7a7c28-5774-4f5b-907a-3c721a59f716",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/bfe97847-cbfc-4248-9f2e-44c3a7a28c1e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a45d00677f6328e48b71e882658b0db6d27e9acbbea36e51ad0ffe34df081b90"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frontier.com",
+                "go.frontier.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/43c5cd1a-ed08-4c6e-85e4-23e142443bd7",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -264,6 +244,28 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frontier.com",
+                "go.frontier.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/43c5cd1a-ed08-4c6e-85e4-23e142443bd7",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5d2c4d608d24f85a364acd10f581cd572403e54f69319e4d9f8faa471db6ef14"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -411,27 +413,27 @@
             "type": "Script",
             "firstPartyCookies": {
                 "clRequestId": {
-                    "ttl": 1802,
+                    "ttl": 1801,
                     "length": 36,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000020487744913917326,
                     "uniqueness": 1
                 },
                 "promo": {
-                    "ttl": 2592002,
+                    "ttl": 2592001,
                     "length": 6,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000020487744913917326,
                     "uniqueness": 1
                 },
                 "mapiJsPromo": {
-                    "ttl": 2592002,
+                    "ttl": 2592001,
                     "length": 6,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000020487744913917326,
                     "uniqueness": 1
                 },
                 "clVisitorId": {
-                    "ttl": 157680002,
+                    "ttl": 157680003,
                     "length": 36,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 }
             },
@@ -455,11 +457,11 @@
             "prevalence": 0.000041,
             "cnames": [],
             "responseHashes": [
-                "9bd3d8951413e80cf7f6a878f02d95217270abd63bd6f8e139bf1a0252436978",
-                "1378b5a66462467a338e6cbebdcf43b9e1966750b09cce49e60894315a3812e5",
-                "eb2a7bafd40a3b178895751401134322a7113146f63e7f3ffc5bdeea25e9b562",
-                "b4902f2a0c6db3d2a7c11a707cd67735cc3653412c2c232c567cbaf365525008",
-                "db8b84a18312193f4037c634417a12f4a23a1bce29118aaa6bfcef97f0bcc65a"
+                "5318e5de5d8bdebc0087ffa411c545697b06135f8fa0a8a79c61c6d30803061f",
+                "9a0db47634f6dda79963d1458acf28dc4ed65ff3f61da135ce90491b5266c922",
+                "ac8d620f7b85a923fe36783301ad61ee53a246cfdb2dca3d846601c9cbbd86d1",
+                "1ea1ed568385074443b706766a8379f19cb110469b610d3dba3e6c42ca95e6c6",
+                "20ea0aa733102635ac52c6abd4c3b90cfd9157c4fb454271505723c62346a411"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -498,7 +500,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/d6031e74-2f84-4896-a3e1-b1e273e3c539",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/120d55f1-13fa-4523-b806-9e9343a475a4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -509,12 +511,12 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "8968875a9f04e60f5fc2df52a21ec1cf05c9e1f89bbc59a0db33f7181f00431a"
+                "b8b21d1deae23344c559ad1348ec34c28af1222144aedbed7aa37b77d397b5af"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "cabletv.com",
@@ -522,7 +524,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/d6031e74-2f84-4896-a3e1-b1e273e3c539",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/120d55f1-13fa-4523-b806-9e9343a475a4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -536,7 +538,7 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "cabletv.com",
@@ -565,27 +567,27 @@
             "type": "Script",
             "firstPartyCookies": {
                 "clRequestId": {
-                    "ttl": 1803,
+                    "ttl": 1802,
                     "length": 36,
-                    "prevalence": 0.000013652715866503744,
+                    "prevalence": 0.000013658496609278216,
                     "uniqueness": 1
                 },
                 "promo": {
-                    "ttl": 2592003,
+                    "ttl": 2592002,
                     "length": 6,
-                    "prevalence": 0.000013652715866503744,
+                    "prevalence": 0.000013658496609278216,
                     "uniqueness": 1
                 },
                 "mapiJsPromo": {
-                    "ttl": 2592003,
+                    "ttl": 2592002,
                     "length": 6,
-                    "prevalence": 0.000013652715866503744,
+                    "prevalence": 0.000013658496609278216,
                     "uniqueness": 1
                 },
                 "clVisitorId": {
-                    "ttl": 157680003,
+                    "ttl": 157680002,
                     "length": 36,
-                    "prevalence": 0.000013652715866503744,
+                    "prevalence": 0.000013658496609278216,
                     "uniqueness": 1
                 }
             },
@@ -596,7 +598,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/0e4f8e9c-b3fb-47cf-8aa0-bcd134f20eec",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/7820879a-bcfb-43c6-b9b1-7857c8589b06",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -607,12 +609,12 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "792b15c1252b0e0f283d1d924a54005d8167a78120f4bf2b1766217f32300467"
+                "72b0aad4ce23bd30873e5927efb7b2e73995117509d572785274ed05376c5126"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "move.org",
@@ -620,7 +622,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/0e4f8e9c-b3fb-47cf-8aa0-bcd134f20eec",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/7820879a-bcfb-43c6-b9b1-7857c8589b06",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -634,7 +636,7 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "move.org",
@@ -642,7 +644,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/ff4f30e2-6da9-472f-a201-6c4923b812bd",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/4c590aaa-7d1d-4211-b791-2cbd33f761da",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -653,12 +655,12 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "dff76e4ea5b3337fc2e42bec5485427c7ddc67c2d63d2949a2c96b28dcd06e0a"
+                "5ac3d05aabefa824be47636a80e79734da4775d6db3251fd0bf046d1c6ae651d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "move.org",
@@ -666,7 +668,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/ff4f30e2-6da9-472f-a201-6c4923b812bd",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/4c590aaa-7d1d-4211-b791-2cbd33f761da",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -680,7 +682,7 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "move.org",
@@ -688,7 +690,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fec1ecac-eebd-4490-9dab-c03ede5c0def",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/85668281-a096-453a-aca0-1c4750cb3e45",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -699,20 +701,42 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "073ecce9dbf7a6202983af2d93a8568a9f69dd392e2fab148d5f4e9d501da6bf"
+                "9a0db47634f6dda79963d1458acf28dc4ed65ff3f61da135ce90491b5266c922"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "reviews.org",
                 "www.reviews.org"
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fec1ecac-eebd-4490-9dab-c03ede5c0def",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/3288673d-8681-4683-ac9b-f165f5f975e9",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2744df5824cd5c2225d03bd8eb8d94c243eb53934136a8ea4c5e7ec01a565e1e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "clRequestId": 0.000013658496609278216
+            },
+            "exampleSites": [
+                "safewise.com",
+                "www.safewise.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/3288673d-8681-4683-ac9b-f165f5f975e9",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -726,15 +750,15 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
-                "reviews.org",
-                "www.reviews.org"
+                "safewise.com",
+                "www.safewise.com"
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/da02846f-4068-4c45-8cab-13055134e3df",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/28ff900b-6b5f-4aa3-9670-d8e29291a185",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -745,12 +769,12 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3166d897f329c86ce4683b9efad2479e79ee8da6b54b82cae63fb5758d4dd3f5"
+                "023943a1e61f66cdc659025bebf8784f804655561a1b30be2191787de113b1b2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "safewise.com",
@@ -758,7 +782,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/da02846f-4068-4c45-8cab-13055134e3df",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/28ff900b-6b5f-4aa3-9670-d8e29291a185",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -772,7 +796,7 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "safewise.com",
@@ -780,7 +804,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/8e6bbd3e-f7f4-4530-a26a-b74871e5ed54",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/042f5fa4-c9db-4953-8d4a-fa4bca376e3d",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -791,58 +815,12 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "0aa73f61427c4687171416fea6f3d1f4706668299d8478203263e94eecb2d54a"
+                "cb97d75c640f35ee9ec9ef9eb5ea5cbe36102463d5704a1443c2a249d7860ef0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
-            },
-            "exampleSites": [
-                "safewise.com",
-                "www.safewise.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/8e6bbd3e-f7f4-4530-a26a-b74871e5ed54",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
-            },
-            "exampleSites": [
-                "safewise.com",
-                "www.safewise.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/19b5136f-3609-4b68-8e03-5e97e1aaacf7",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "500a0e94490012f4e43d197052dee1acdfdfa9b4ac7bd848a4669e50581fd300"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "satelliteinternet.com",
@@ -850,7 +828,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/19b5136f-3609-4b68-8e03-5e97e1aaacf7",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/042f5fa4-c9db-4953-8d4a-fa4bca376e3d",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -864,7 +842,7 @@
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
+                "clRequestId": 0.000013658496609278216
             },
             "exampleSites": [
                 "satelliteinternet.com",
@@ -872,31 +850,49 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/288f1639-4ac8-4775-b68e-ef61511f6d99",
+            "rule": "clear\\.link\\/log",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "m"
+                "lapi"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "cc465b083610ed07dc33309a1d9085af80fed9f2e8c17ec3a22a6cc73608ef26"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "clRequestId": 0.000013652715866503744
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "satelliteinternet.com",
                 "www.satelliteinternet.com"
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/4e1c5461-dd58-40f9-b9c5-93f7ddbbb55a",
+            "rule": "clear\\.link\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1a1d7611333528d082d7002501715a9bbd208d39dc525895d14d2292f7fab9af"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "satelliteinternet.com",
+                "www.satelliteinternet.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/3d3ceabd-6eed-43f3-9728-f162eac2d179",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -907,7 +903,49 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "db8b84a18312193f4037c634417a12f4a23a1bce29118aaa6bfcef97f0bcc65a"
+                "060baeed5ce31aa3ce46f19410ca26ff7d6a4ed9ec311aad29cb472976c2ccbf"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "satelliteinternet.com",
+                "www.satelliteinternet.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/3d3ceabd-6eed-43f3-9728-f162eac2d179",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "satelliteinternet.com",
+                "www.satelliteinternet.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/f34e5b06-bb92-4d35-acd3-94c9b8174c49",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "20ea0aa733102635ac52c6abd4c3b90cfd9157c4fb454271505723c62346a411"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -918,7 +956,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/4e1c5461-dd58-40f9-b9c5-93f7ddbbb55a",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/f34e5b06-bb92-4d35-acd3-94c9b8174c49",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -938,7 +976,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e80581e5-d3fb-4342-972d-8338bc98575d",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e0e0f5ab-74f1-4e5c-99e4-5e4608dc340d",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -949,7 +987,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d62f0e4eecada5181332680aaa77be564cbf131b799f3c8cc3b0c6e732792f29"
+                "260498149fab23ebaea0322fe276ed178d0d377b83ab5389c03d7938a018f12d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -960,7 +998,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e80581e5-d3fb-4342-972d-8338bc98575d",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e0e0f5ab-74f1-4e5c-99e4-5e4608dc340d",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -980,7 +1018,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/79265bd6-57e7-4436-83c4-05bddc7e3a9c",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/632a106f-3916-4b77-bf55-f394830e986f",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1000,7 +1038,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/79265bd6-57e7-4436-83c4-05bddc7e3a9c",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/632a106f-3916-4b77-bf55-f394830e986f",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1011,7 +1049,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "2aa83dfb86ef1aee3d8ffe6635f1ecaa5e35d13293edd0648ce6c1bbea2bf7ad"
+                "2b8ad3d81f3e6794a7145731deef8534326e31978e0d8dcf2a8c60f39f338327"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1022,7 +1060,29 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fd16ebab-cec6-42bc-a3db-0ecbd71e239c",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/4bddafbf-e205-48bb-a898-47e8bf80abef",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3cb58e6100bc403bf3117402ea340f1fc57d45e48707f8eb4a812e383f70b993"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usdish.com",
+                "www.usdish.com"
+            ]
+        },
+        {
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e6e37279-6fdf-441e-8ea0-36bb78309976",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1034,50 +1094,6 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usdish.com",
-                "www.usdish.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/fd16ebab-cec6-42bc-a3db-0ecbd71e239c",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "7b4c195e57ad1360cd4030ea0ac0b407b8484e3b22a160e430e865c6314ce55c"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usdish.com",
-                "www.usdish.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/6603f6e0-0fc5-4d73-85cd-c8974bb73d55",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "f9ae42aac9ed873ba11c0fb083f41e15e9ff1a1e56c4ae7ccc14a1cc23148bc9"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1086,7 +1102,7 @@
             ]
         },
         {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/9c0ed28a-3eed-4098-922e-119523b4a293",
+            "rule": "clear\\.link\\/cpr\\/external\\/request\\/e6e37279-6fdf-441e-8ea0-36bb78309976",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1097,29 +1113,9 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "9d2c9e1937962b146c2c66d37d8cb781c590ccdab1b8eefc3a55e1b598ac22e3"
+                "1e30d3021b06445aea56760fbcc8ce1ecc2ddf19102c91b08d4f01e189572d0c"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "verizonspecials.com",
-                "www.verizonspecials.com"
-            ]
-        },
-        {
-            "rule": "clear\\.link\\/cpr\\/external\\/request\\/9c0ed28a-3eed-4098-922e-119523b4a293",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "m"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1130,11 +1126,15 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000546,
+    "cookies": 0.0000478,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9818181818181818
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.01818181818181818
         }
     ],
     "types": {
@@ -1144,9 +1144,9 @@
         "XHR": 4
     },
     "nameservers": [
+        "ns-1185.awsdns-20.org",
         "ns-1808.awsdns-34.co.uk",
-        "ns-640.awsdns-16.net",
         "ns-60.awsdns-07.com",
-        "ns-1185.awsdns-20.org"
+        "ns-640.awsdns-16.net"
     ]
 }

@@ -4,36 +4,113 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000546,
-    "sites": 8,
+    "prevalence": 0.0000615,
+    "sites": 9,
     "subdomains": [
         "cdn.backend",
+        "analytics.backend",
+        "brico-depot-eses.backend",
         "brico-depot-ptpt.backend",
         "lapeyre-frfr.backend"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "verbolia\\.com\\/assets\\/global\\/js\\/psl\\.min\\.js",
+            "rule": "verbolia\\.com\\/assets\\/global\\/js\\/vanalytics\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.backend"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "baecf1eca6c4ef82e21d7bf81c6d0dbf5aeff19b58b77981c6d656ef5a6dd953"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clasohlson.com",
+                "dusk.com"
+            ]
+        },
+        {
+            "rule": "verbolia\\.com\\/collect",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.backend"
+                "analytics.backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clasohlson.com",
+                "dusk.com"
+            ]
+        },
+        {
+            "rule": "verbolia\\.com\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics.backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clasohlson.com",
+                "dusk.com"
+            ]
+        },
+        {
+            "rule": "verbolia\\.com\\/v\\/scripts\\/velw\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "brico-depot-eses.backend",
+                "brico-depot-ptpt.backend"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "a465d8738f3558860d654b0ab9b2b10b1414c9d84dae53394bc83978c53c7ddc"
+                "0f8bcb3bad03459c161cb8e731388f311e642f9f4f2a717d10bfce02b4a6a506"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wurth.fr",
-                "www.decathlon.be"
+                "bricodepot.es",
+                "www.bricodepot.pt"
             ]
         },
         {
@@ -41,21 +118,24 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "brico-depot-eses.backend",
                 "brico-depot-ptpt.backend",
                 "lapeyre-frfr.backend"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "ebcea7aca2a2544b083a28cae9770a5eb2a681ee1eb584f08df82936524ad6ba"
+                "567980c0a15c40959bbdf431128979ea25f6cbab966328fd8f86cd1c9e0ebc9c",
+                "14461e4492d9137eaf8918af46db29c0f34d446998ddf7ad506df295650c6017"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bricodepot.pt",
+                "bricodepot.es",
+                "www.bricodepot.pt",
                 "www.lapeyre.fr"
             ]
         }
@@ -66,16 +146,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "witglobal.net",
-            "prevalence": 0.125
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2
+        "Script": 4,
+        "Preflight": 2,
+        "Fetch": 2,
+        "XHR": 3
     },
     "nameservers": [
         "ns104.ovh.net",

@@ -8,7 +8,8 @@
     "sites": 8,
     "subdomains": [
         "cdn",
-        "rum-ingest.eu0"
+        "rum-ingest.eu0",
+        "rum-ingest.us1"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -39,35 +40,10 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.00020092425155716296,
+                    "prevalence": 0.0002010252286661976,
                     "uniqueness": 1
                 }
             },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.20\\.1\\/splunk-otel-web-session-recorder\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.innerWidth": 2,
-                "window.innerHeight": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "fbac373a9dac5074e1076cd8890c1caaaa20730564c4f9163c84a01576c4dbf6"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "accor.com",
@@ -80,6 +56,27 @@
             "fingerprinting": 0,
             "subdomains": [
                 "rum-ingest.eu0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/v1\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.eu0",
+                "rum-ingest.us1"
             ],
             "apis": {},
             "sites": 4,
@@ -95,103 +92,71 @@
                 "accor.com",
                 "all.accor.com",
                 "ibis.accor.com",
-                "www.pmepensioen.nl"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.eu0"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.eu0"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "ibis.accor.com"
+                "www.splunk.com"
             ]
         },
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/latest\\/splunk-otel-web\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "apis": {
+                "window.sessionStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "aa70ee9e195ce4f23e6a66a070cfa5dbdf26c1f31e27484344aa337ecabb8c8f"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "_splunk_rum_sid": {
+                    "ttl": 900,
+                    "length": 123,
+                    "prevalence": 0.0001005126143330988,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rivm.nl",
                 "rijksvaccinatieprogramma.nl",
                 "www.atlasleefomgeving.nl",
-                "www.rivm.nl"
+                "www.rivm.nl",
+                "www.splunk.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6875
-        },
-        {
-            "domain": "dynatrace.com",
-            "prevalence": 0.25
+            "prevalence": 0.9473684210526315
         },
         {
             "domain": "surveymonkey.com",
-            "prevalence": 0.0625
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 8,
-        "XHR": 4,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 7,
+        "Ping": 2,
+        "XHR": 4
     },
     "nameservers": [
+        "ns-5.awsdns-00.com",
         "ns-933.awsdns-52.net",
         "ns-1875.awsdns-42.co.uk",
-        "ns-5.awsdns-00.com",
         "ns-1270.awsdns-30.org"
     ]
 }

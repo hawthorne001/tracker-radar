@@ -7,41 +7,45 @@
     "prevalence": 0.0000683,
     "sites": 10,
     "subdomains": [
+        "sdk",
+        "js",
         "api",
-        "ws",
-        "sdk"
+        "ws"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "gleap\\.io\\/sessions",
+            "rule": "gleap\\.io\\/latest\\/index\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "sdk",
+                "js"
             ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000478,
+            "apis": {
+                "console.memory": 5,
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.language": 5,
+                "window.innerHeight": 5,
+                "Date.prototype.getTime": 4,
+                "window.innerWidth": 1
+            },
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "61626bee6dc2da9d3d4c765df688c719d1e78548333f60c5adae8d0a2e25d582",
-                "81ac6bfcc0b5e775116b1f0f8969b0e0d491ac92e1cdc2af1696cd577b3337f5",
-                "b6f787b30c0c8f318556237f8540ce0e73e186e1f5a33ff5eaf77b363ee3565b",
-                "ae93f5964719e92b23b7e9886bdeb95c7898ff991c350cbdfdb903aefe19679b"
+                "15f94fe8bcc63b89a865152ac7855e6fc195824ea69ab45187aad1d74a44dad1"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dcu.org",
-                "app.dcu.org",
+                "klang.io",
                 "pornify.cc",
-                "transkriptor.com",
-                "www.advisorcheck.com",
                 "www.bibliocad.com",
+                "www.shopper.com",
                 "www.storagetreasures.com"
             ]
         },
@@ -53,20 +57,49 @@
                 "api"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000478,
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "aa56925603d3a1ec21d2e4caa9cd15a780fc93ea007471589f3a5306f13feb5d",
+                "a0e2afaedc8d41bc9226e483e3bf09032a5fa6a2a54095d4643f09cebe4ef3e7",
+                "4435f473c2b51f783e0f85c5fe8c74e8546fd83c4223a6f12531f765034e98cd",
+                "d7e150663d68c4c77b6a54b1efb32f78423739d10d1b5f5166b2a79ec07536a5",
+                "48fcf4f622098e4c05a5aabfdfa97a22dcb318c5d49ed24936140b486cbf4caa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klang.io",
+                "pornify.cc",
+                "transkriptor.com",
+                "www.bibliocad.com",
+                "www.shopper.com",
+                "www.storagetreasures.com"
+            ]
+        },
+        {
+            "rule": "gleap\\.io\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dcu.org",
-                "app.dcu.org",
+                "klang.io",
                 "pornify.cc",
                 "transkriptor.com",
-                "www.advisorcheck.com",
                 "www.bibliocad.com",
+                "www.shopper.com",
                 "www.storagetreasures.com"
             ]
         },
@@ -86,11 +119,34 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dcu.org",
+                "klang.io",
                 "pornify.cc",
                 "transkriptor.com",
-                "www.advisorcheck.com",
                 "www.bibliocad.com",
+                "www.shopper.com",
+                "www.storagetreasures.com"
+            ]
+        },
+        {
+            "rule": "gleap\\.io\\/sessions\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000341,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klang.io",
+                "pornify.cc",
+                "transkriptor.com",
+                "www.shopper.com",
                 "www.storagetreasures.com"
             ]
         },
@@ -112,69 +168,15 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dcu.org",
+                "klang.io",
                 "pornify.cc",
                 "transkriptor.com",
-                "www.advisorcheck.com",
+                "www.shopper.com",
                 "www.storagetreasures.com"
             ]
         },
         {
-            "rule": "gleap\\.io\\/sessions\\/ping",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dcu.org",
-                "pornify.cc",
-                "transkriptor.com",
-                "www.advisorcheck.com",
-                "www.storagetreasures.com"
-            ]
-        },
-        {
-            "rule": "gleap\\.io\\/latest\\/index\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "sdk"
-            ],
-            "apis": {
-                "console.memory": 3,
-                "Navigator.prototype.userAgent": 3,
-                "window.localStorage": 3,
-                "Navigator.prototype.language": 3,
-                "window.innerHeight": 3,
-                "window.innerWidth": 1,
-                "Date.prototype.getTime": 2
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "412ce596382a813f90f8de41ab90b3d1c2b2067dc3e63542fea8171b510dfd12"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pornify.cc",
-                "www.bibliocad.com",
-                "www.storagetreasures.com"
-            ]
-        },
-        {
-            "rule": "gleap\\.io\\/sessions",
+            "rule": "gleap\\.io\\/config\\/TJOEfUhICOfOh1RbNW2JvTVIcK8iCNiW\\/tooltips",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -185,7 +187,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Other",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -284,18 +286,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "XHR": 16,
-        "Preflight": 16,
-        "WebSocket": 6,
-        "Script": 3,
-        "Other": 2
+        "Script": 5,
+        "XHR": 17,
+        "Preflight": 15,
+        "WebSocket": 6
     },
     "nameservers": [
-        "zac.ns.cloudflare.com",
-        "zoe.ns.cloudflare.com"
+        "zoe.ns.cloudflare.com",
+        "zac.ns.cloudflare.com"
     ]
 }

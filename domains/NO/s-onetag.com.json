@@ -9,15 +9,14 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
         "get",
         "onetag-geo",
         "signal-beacon",
-        "signal-dynamic-pricing-analysis",
         "connect-metrics-collector",
-        "signal-metrics-collector-beta"
+        "signal-dynamic-pricing-analysis"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -54,8 +53,8 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000704,
+            "sites": 8,
+            "prevalence": 0.000805,
             "cnames": [],
             "responseHashes": [
                 "6448132c9d86748cc71e9e2d5b4f0241a5dd9385a2baadcf99dc6675fd7870bf"
@@ -65,6 +64,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
+                "rdr2map.com",
                 "www.cnn.com",
                 "www.dictionary.com",
                 "www.jpost.com",
@@ -81,10 +81,11 @@
                 "signal-beacon"
             ],
             "apis": {
-                "window.localStorage": 7
+                "window.localStorage": 8,
+                "window.innerHeight": 1
             },
-            "sites": 7,
-            "prevalence": 0.000704,
+            "sites": 8,
+            "prevalence": 0.000805,
             "cnames": [],
             "responseHashes": [
                 "e9507d30d1cf0af2969ef782d8ae1bcd30e2661d9dc1d34902f910d7bf4f69ca"
@@ -94,7 +95,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
+                "rdr2map.com",
                 "www.cnn.com",
+                "www.dictionary.com",
+                "www.jpost.com",
+                "www.mumsnet.com",
+                "www.thesaurus.com",
+                "www.yourdictionary.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect-metrics-collector",
+                "signal-dynamic-pricing-analysis"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rdr2map.com",
                 "www.dictionary.com",
                 "www.jpost.com",
                 "www.mumsnet.com",
@@ -117,7 +146,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2230fa5c6dcf6b9dbbec9181a1945cfaac34e11b8a829bd79c5f48f67bb2a801"
+                "8a7d48ae32d6ab43aac9ce469718b9de29bb6d76848d4a910442a28b713f6fc0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -128,31 +157,28 @@
             ]
         },
         {
-            "rule": "s-onetag\\.com\\/metrics",
+            "rule": "s-onetag\\.com\\/cce27701-6652-4676-afb0-e48521c3379d\\/tag\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "signal-dynamic-pricing-analysis",
-                "connect-metrics-collector",
-                "signal-metrics-collector-beta"
+                "get"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "apis": {
+                "window.localStorage": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "b079ffa7c303973d18ebf43e18b9e9e591062a2ab567e8a71cdb8046b9f165c0"
             ],
-            "type": "Ping",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dictionary.com",
-                "www.dictionary.com",
-                "www.jpost.com",
-                "www.mumsnet.com",
-                "www.thesaurus.com",
-                "www.yourdictionary.com"
+                "jpost.com",
+                "www.jpost.com"
             ]
         }
     ],
@@ -165,28 +191,36 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6190476190476191
+            "prevalence": 0.5652173913043478
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.08695652173913043
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.19047619047619047
-        },
-        {
-            "domain": "geoedge.be",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.08695652173913043
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "ziffstatic.com",
+            "prevalence": 0.043478260869565216
         },
         {
             "domain": "htlbid.com",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.043478260869565216
         }
     ],
     "types": {
-        "Script": 11,
-        "Fetch": 7,
+        "Script": 14,
+        "Fetch": 8,
         "Ping": 6
     },
     "nameservers": [

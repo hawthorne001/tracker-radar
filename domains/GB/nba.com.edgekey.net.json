@@ -12,16 +12,51 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "cdn"
+        "stats",
+        "cdn",
+        "core-api"
     ],
     "cnames": [
         {
             "original": "cdn.nba.com",
             "resolved": "cdn.nba.com.edgekey.net"
+        },
+        {
+            "original": "core-api.nba.com",
+            "resolved": "core-api.nba.com.edgekey.net"
+        },
+        {
+            "original": "stats.nba.com",
+            "resolved": "stats.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
             "cookies": 0.000201,
@@ -66,7 +101,7 @@
                 }
             ],
             "responseHashes": [
-                "27a0e8a0e32acfbe3504b9f3e9aace137331893b29b39a5e480cfd936250634d"
+                "8dbcf7f542d99fd274a425fce63f6c4f822be7dfd2a2c36c30de3ddfc733577e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -93,9 +128,36 @@
                 }
             ],
             "responseHashes": [
-                "3fac264cd2d30628897181be19de986642664c81021ec5ad1296bab0359c79fa"
+                "b34111270070cf01d614a4bb8e89b961006940c7faf626a4d28488f38705e9ed"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/cp\\/api\\/v1\\.9\\/feeds\\/gamecardfeed",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "core-api.nba.com",
+                    "resolved": "core-api.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f48871d3cdeda2d7e265e2b3edbe577f56233acbad834f517e28cd64c7d0f8d5"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -114,7 +176,8 @@
         }
     ],
     "types": {
-        "Fetch": 6
+        "Fetch": 8,
+        "XHR": 2
     },
     "nameservers": []
 }

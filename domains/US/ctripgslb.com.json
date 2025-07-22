@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000478,
-    "sites": 7,
+    "prevalence": 0.0000546,
+    "sites": 8,
     "subdomains": [
         "static-origin",
         "slb-trip-ak",
@@ -13,9 +13,16 @@
         "dimg04.tripcdn.com",
         "slb-05-xy5-rb5-c11990-os-ares",
         "images3.c-ctrip.com",
-        "file.tripcdn.com"
+        "file.tripcdn.com",
+        "slb-05-xy5-rb5-c11990-trip",
+        "slb-03-xy-rb-ali-ctrip1",
+        "slb-mytrainpal-ak"
     ],
     "cnames": [
+        {
+            "original": "apigateway.mytrainpal.com",
+            "resolved": "slb-mytrainpal-ak.ctripgslb.com"
+        },
         {
             "original": "chloro.trip.com",
             "resolved": "slb-trip-ak.ctripgslb.com"
@@ -33,6 +40,10 @@
             "resolved": "images3.c-ctrip.com.ctripgslb.com"
         },
         {
+            "original": "m.ctrip.com",
+            "resolved": "slb-03-xy-rb-ali-ctrip1.ctripgslb.com"
+        },
+        {
             "original": "pages.trip.com",
             "resolved": "slb-05-xy5-rb5-c11990-os-ares.ctripgslb.com"
         },
@@ -43,6 +54,10 @@
         {
             "original": "ubt-sgp.trip.com",
             "resolved": "slb-trip-ak.ctripgslb.com"
+        },
+        {
+            "original": "ubtpv.trip.com",
+            "resolved": "slb-05-xy5-rb5-c11990-trip.ctripgslb.com"
         },
         {
             "original": "webresource.tripcdn.com",
@@ -68,57 +83,26 @@
                 }
             ],
             "responseHashes": [
-                "acd9397030c616825fcb61ff911db79e6b7a5ce1ffd92530a40f4036675cbb40",
-                "807826b139f3b43229419ec8687638f92a31811d3704770c3abaef9b3ad51f78"
+                "acd9397030c616825fcb61ff911db79e6b7a5ce1ffd92530a40f4036675cbb40"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_bfa": {
-                    "ttl": 34560004,
+                    "ttl": 34560003,
                     "length": 74,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 },
                 "UBT_VID": {
-                    "ttl": 34560004,
+                    "ttl": 34560003,
                     "length": 26,
-                    "prevalence": 0.00002730543173300749,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "jp.trip.com",
-                "us.trip.com",
-                "www.trip.com"
-            ]
-        },
-        {
-            "rule": "ctripgslb\\.com\\/bee\\/collect",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "slb-trip-ak"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
-            "cnames": [
-                {
-                    "original": "ubt-sgp.trip.com",
-                    "resolved": "slb-trip-ak.ctripgslb.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "UBT_VID": 0.00005461086346601498
-            },
-            "exampleSites": [
-                "trip.com",
-                "hk.trip.com",
                 "jp.trip.com",
                 "us.trip.com",
                 "www.trip.com"
@@ -141,21 +125,52 @@
                 }
             ],
             "responseHashes": [
-                "b857d258cc3815e3045d3ee8e08cb244364b8459651b17c101f09c2d18782189",
-                "7da89339e06697e9a09321c321d33a59518dd03981e1e905f055483ec85eb069",
-                "d51b5df515af50f37f5d5d21c605698fa936150084c42f15302fe7adf6b50fd4",
-                "3167c719d5a8344e57dc8862605af14d535b8828f464f196e81446c4a4d4091d"
+                "d7e551f925223c364279ccfe750b2f41ebc8f4a4f4a46ec88d254fe024aaec2a",
+                "c04decf8d1cbd143e0260099d19bfa995579c3b54793a8d2d5806de159eed1e3",
+                "93450f707488c174a4a797576b2074730eb5bf818303190f40e86f9ba1445a88",
+                "dbbf36583f24d46f881f336d0a8fab1c99ea158deb20c42c07374340f0d335b2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "UBT_VID": 0.00005461086346601498
+                "UBT_VID": 0.00006146323474175197
             },
             "exampleSites": [
                 "trip.com",
                 "hk.trip.com",
                 "jp.trip.com",
                 "us.trip.com",
+                "www.trip.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/bee\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-trip-ak"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "ubt-sgp.trip.com",
+                    "resolved": "slb-trip-ak.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "UBT_VID": 0.00006146323474175197
+            },
+            "exampleSites": [
+                "trip.com",
+                "hk.trip.com",
+                "jp.trip.com",
+                "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
@@ -269,14 +284,14 @@
         },
         {
             "rule": "ctripgslb\\.com\\/bee\\/collect",
-            "cookies": 0.0000341,
+            "cookies": 0.000041,
             "fingerprinting": 0,
             "subdomains": [
                 "slb-trip-ak"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
+            "sites": 6,
+            "prevalence": 0.000041,
             "cnames": [
                 {
                     "original": "ubt-sgp.trip.com",
@@ -284,10 +299,11 @@
                 }
             ],
             "responseHashes": [
-                "c31d9fde3d526a41322057bcb3350b95da00560c5269a2e277f7f1ab0ad5643d",
-                "1e51bd04be5ba4af3555cfff4fc62d594561f54bd72a66665af8454c21e5392b",
-                "27bcd61baf96a3eeec93b18c341fdaabd5941eca35997d98405e4cc2af4904b8",
-                "06b77a6c1f752905f4955c64c062679754612eb3ac2626edd0c2ec7e32b229b0"
+                "c8ad6ecd05c84640bcbfd7bc0951d322282b4563c7b77c05497835b455c4de50",
+                "977f3c263c55fffe6ef5b5b2d904c7c2fdb01b922438e76b297eafbcc27a3fcb",
+                "1a8587c1885f20b42ceeced768464da4fb5bffe06b7c4bfdc8417d811780684f",
+                "72beacc561588bd4cf84ba2fb37221a343e0ffdff9c28189e59f436c395219e2",
+                "764629ac75cd96af9b30f0504ac68f58d9fb0b1e97ddcb623b34cb795c7390fe"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
@@ -297,11 +313,12 @@
                 "hk.trip.com",
                 "jp.trip.com",
                 "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/images\\/05E3o12000jaw550cC5B3\\.png",
+            "rule": "ctripgslb\\.com\\/images\\/05E5b12000m1q01t3D4F7\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -317,7 +334,7 @@
                 }
             ],
             "responseHashes": [
-                "40ddf2dbdae03693a077326d77fa4c1e17bf26ebfacc0ff1c62379cf12183315"
+                "5a3753f32117a2cc736f73c499ba69e7bc5abe6874fc8e53435c67f27c5d4c08"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -337,8 +354,8 @@
                 "slb-05-xy5-rb5-c11990-os-ares"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "pages.trip.com",
@@ -353,7 +370,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
@@ -380,7 +398,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
@@ -392,8 +410,8 @@
                 "webresource-origin"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "webresource.tripcdn.com",
@@ -401,7 +419,7 @@
                 }
             ],
             "responseHashes": [
-                "f89f032043f08d01ddad20828ec6140dc84c7cd69c4db4901db39d51ef801d4e"
+                "f7aa888beabe3b2650db3b477be8262c4bdeddac8aa28eca736ac73cc3866a05"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -409,19 +427,20 @@
             "exampleSites": [
                 "trip.com",
                 "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/resaresenglish\\/risk\\/ubtrms\\/d\\.min\\.9f174ecf\\.js",
-            "cookies": 0.0000205,
+            "rule": "ctripgslb\\.com\\/resaresenglish\\/risk\\/ubtrms\\/d\\.min\\.61aa361b\\.js",
+            "cookies": 0.0000273,
             "fingerprinting": 3,
             "subdomains": [
                 "webresource-origin"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "webresource.tripcdn.com",
@@ -429,32 +448,32 @@
                 }
             ],
             "responseHashes": [
-                "401d666059443411a24f6f1ac01f7f263f890598808929abd3a510df52192ea4"
+                "165535b705e222c048f5f0234ffa6717430493ac84e5e2407b00b44b8e75e1fc"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_RF1": {
-                    "ttl": 2290656118,
+                    "ttl": 2289458093,
                     "length": 12,
-                    "prevalence": 0.000020479073799755615,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.000027316993218556432,
+                    "uniqueness": 0.25
                 },
                 "_RSG": {
-                    "ttl": 2290656118,
+                    "ttl": 2289458093,
                     "length": 22,
-                    "prevalence": 0.000020479073799755615,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 },
                 "_RDG": {
-                    "ttl": 2290656118,
+                    "ttl": 2289458093,
                     "length": 34,
-                    "prevalence": 0.000020479073799755615,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 },
                 "_RGUID": {
-                    "ttl": 2290656118,
+                    "ttl": 2289458093,
                     "length": 36,
-                    "prevalence": 0.000020479073799755615,
+                    "prevalence": 0.000027316993218556432,
                     "uniqueness": 1
                 }
             },
@@ -462,6 +481,7 @@
             "exampleSites": [
                 "trip.com",
                 "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
@@ -473,8 +493,8 @@
                 "images3.c-ctrip.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "images3.c-ctrip.com",
@@ -490,6 +510,7 @@
             "exampleSites": [
                 "trip.com",
                 "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
@@ -510,8 +531,8 @@
                 }
             ],
             "responseHashes": [
-                "c6beb5ea2ab327712660e29c70f3e34c7d989c0907cce62b8c7bef6468dddda3",
-                "d50340fddf110e136d96798f911289e39017059c82d64cab936e9a72250c8661"
+                "e26e27af457bbc059f0db952d67c35a75f81bd86c5f930cd803afe99906ab784",
+                "76498a8c5cf8831075f5f045d76200e4bbc6adc550be25e38357701893085e46"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -579,7 +600,7 @@
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/packages\\/ares\\/nfes-libs\\/2\\.0\\.64\\/foundation\\.js",
+            "rule": "ctripgslb\\.com\\/packages\\/ares\\/nfes-libs\\/2\\.0\\.66\\/foundation\\.js",
             "cookies": 0.0000205,
             "fingerprinting": 2,
             "subdomains": [
@@ -595,14 +616,14 @@
                 }
             ],
             "responseHashes": [
-                "13ce46a76de2c55294667b03f24b7667b55b2e4047253dbd45e0fed17a3aba6a"
+                "00d3c4b657aeeda1826093a05f82f5aab59ae09b2e0e79124226983958148086"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "GUID": {
-                    "ttl": 93312015,
+                    "ttl": 93312014,
                     "length": 20,
-                    "prevalence": 0.000020479073799755615,
+                    "prevalence": 0.000020487744913917326,
                     "uniqueness": 1
                 }
             },
@@ -642,30 +663,31 @@
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/files\\/7\\/ibu_online_assets\\/lottie\\/Online-small\\.json",
+            "rule": "ctripgslb\\.com\\/images\\/0a11a12000lvzqc8gBFC4\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "file.tripcdn.com"
+                "dimg04.tripcdn.com"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
-                    "original": "file.tripcdn.com",
-                    "resolved": "file.tripcdn.com.ctripgslb.com"
+                    "original": "dimg04.tripcdn.com",
+                    "resolved": "dimg04.tripcdn.com.ctripgslb.com"
                 }
             ],
             "responseHashes": [
-                "0b40f0879abae67f93d9626ed8f5fad2c57d77d7a389859684b26b8682f08946"
+                "ea707ab1f498d8bd74089654a34451264079b174ab0a23fdda094498a242d408"
             ],
-            "type": "XHR",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
@@ -676,8 +698,8 @@
                 "slb-05-xy5-rb5-c11990-os-ares"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "pages.trip.com",
@@ -692,7 +714,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
@@ -703,8 +726,8 @@
                 "slb-05-xy5-rb5-c11990-os-ares"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "pages.trip.com",
@@ -719,7 +742,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
@@ -730,8 +754,8 @@
                 "slb-05-xy5-rb5-c11990-os-ares"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "pages.trip.com",
@@ -746,7 +770,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
@@ -757,8 +782,8 @@
                 "slb-05-xy5-rb5-c11990-os-ares"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "pages.trip.com",
@@ -773,33 +798,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com"
+                "us.trip.com",
+                "www.trip.com"
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/ares2\\/infosec\\/jigsawCaptcha\\/~2\\.0\\.0\\/default\\/js\\/jigsaw-captcha\\.min\\.js",
+            "rule": "ctripgslb\\.com\\/files\\/7\\/ibu_online_assets\\/lottie\\/Online-small\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "webresource-origin"
+                "file.tripcdn.com"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
-                    "original": "webresource.tripcdn.com",
-                    "resolved": "webresource-origin.ctripgslb.com"
+                    "original": "file.tripcdn.com",
+                    "resolved": "file.tripcdn.com.ctripgslb.com"
                 }
             ],
             "responseHashes": [
-                "f9ab3727ec592d436f820ba5f43c9237e2ecd5df043df7fcd62b44963752c011"
+                "0b40f0879abae67f93d9626ed8f5fad2c57d77d7a389859684b26b8682f08946"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
+                "us.trip.com",
                 "www.trip.com"
             ]
         },
@@ -916,35 +943,35 @@
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/images\\/1zp1g12000llb1x7w5766\\.png",
+            "rule": "ctripgslb\\.com\\/ares2\\/infosec\\/jigsawCaptcha\\/~2\\.0\\.0\\/default\\/js\\/jigsaw-captcha\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dimg04.tripcdn.com"
+                "webresource-origin"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.0000205,
             "cnames": [
                 {
-                    "original": "dimg04.tripcdn.com",
-                    "resolved": "dimg04.tripcdn.com.ctripgslb.com"
+                    "original": "webresource.tripcdn.com",
+                    "resolved": "webresource-origin.ctripgslb.com"
                 }
             ],
             "responseHashes": [
-                "2973644becb7d34c11fc9b062dd3310700c003aa6a1d21784ae0172714e884cb"
+                "f9ab3727ec592d436f820ba5f43c9237e2ecd5df043df7fcd62b44963752c011"
             ],
-            "type": "Image",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trip.com",
-                "us.trip.com",
+                "www.mytrainpal.com",
                 "www.trip.com"
             ]
         },
         {
-            "rule": "ctripgslb\\.com\\/images\\/0a12y12000l47a5fp0268\\.png",
+            "rule": "ctripgslb\\.com\\/images\\/0a12z12000m4xjozt4B3A\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -960,7 +987,7 @@
                 }
             ],
             "responseHashes": [
-                "7d234ef001d6d62cfbcb1223d2507b026c79cd2c04ca2dffe348a3e7887e7235"
+                "8c7c5ab72e0e9453e9c0a270ff38ee06146cc40dfac6f1f06c409a96905a60d9"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -998,33 +1025,272 @@
                 "us.trip.com",
                 "www.trip.com"
             ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/ares2\\/train\\/csec\\/*\\/default\\/sec\\/c-sec\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "webresource-origin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "webresource.tripcdn.com",
+                    "resolved": "webresource-origin.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "60736fef855f734ff93e36c779fed5e46ffd296d01ee95a5552dfe03b1739595"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trip.com",
+                "us.trip.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/mcd_crash_server\\/spring\\/ubt\\/pvCat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-05-xy5-rb5-c11990-trip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ubtpv.trip.com",
+                    "resolved": "slb-05-xy5-rb5-c11990-trip.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/mcd_crash_server\\/spring\\/ubt\\/pvCat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-05-xy5-rb5-c11990-trip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ubtpv.trip.com",
+                    "resolved": "slb-05-xy5-rb5-c11990-trip.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "9af95e7c33a7582d65d2a0f0bad6097f92d52867212eaedeef7bba2dc4a23443"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/18088\\/getAppConfig\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-03-xy-rb-ali-ctrip1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "m.ctrip.com",
+                    "resolved": "slb-03-xy-rb-ali-ctrip1.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "e3db4601cb504ba945b168cc0e66eec0abfa2c43222bb14fc91d9c363fe61a22"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/16163\\/saveLogInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-03-xy-rb-ali-ctrip1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "m.ctrip.com",
+                    "resolved": "slb-03-xy-rb-ali-ctrip1.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "9f7a0710541b09e34930f061e47628e0d175e6888e44fb0a0766841d6a599976"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/31697\\/getRecommendStations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-mytrainpal-ak"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apigateway.mytrainpal.com",
+                    "resolved": "slb-mytrainpal-ak.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/31736\\/getHomePagePricePromise",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-mytrainpal-ak"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apigateway.mytrainpal.com",
+                    "resolved": "slb-mytrainpal-ak.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "84157f78596f7291ce8db2df064ebf350d50ae94bcdf51bc41d51c666c7f1e75"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/31697\\/getRecommendStations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-mytrainpal-ak"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apigateway.mytrainpal.com",
+                    "resolved": "slb-mytrainpal-ak.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "ab0b1fa6368471dda161a08a593a58fba302d31c3176ae8b944ade98ef754a35"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
+        },
+        {
+            "rule": "ctripgslb\\.com\\/restapi\\/soa2\\/31736\\/getHomePageSearchTag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slb-mytrainpal-ak"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apigateway.mytrainpal.com",
+                    "resolved": "slb-mytrainpal-ak.ctripgslb.com"
+                }
+            ],
+            "responseHashes": [
+                "7491885dfa7a30eb1b9d6367d899bc7393524fc701dddc3318355489de346d1b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mytrainpal.com",
+                "www.mytrainpal.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000478,
+    "cookies": 0.0000546,
     "topInitiators": [
         {
             "domain": "tripcdn.com",
-            "prevalence": 0.5879629629629629
+            "prevalence": 0.6045627376425855
         },
         {
             "domain": "first party",
-            "prevalence": 0.41203703703703703
+            "prevalence": 0.39543726235741444
         }
     ],
     "types": {
-        "Script": 24,
-        "Preflight": 5,
-        "Fetch": 8,
-        "Image": 46,
-        "Ping": 5,
-        "XHR": 5
+        "Script": 29,
+        "Fetch": 16,
+        "Preflight": 10,
+        "Image": 52,
+        "Ping": 6,
+        "XHR": 10
     },
     "nameservers": [
-        "cns1.zdnscloud.net",
         "ins1.zdnscloud.com",
         "dns1.zdnscloud.info",
+        "cns1.zdnscloud.net",
         "vns1.zdnscloud.biz"
     ]
 }

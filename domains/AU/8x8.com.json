@@ -13,6 +13,7 @@
         "vcc-au1",
         "cloud8-cc-geo",
         "vcc-au1-cf",
+        "bugsnag",
         "vcc-assets"
     ],
     "cnames": [],
@@ -75,11 +76,13 @@
         {
             "rule": "8x8\\.com\\/CHAT\\/common\\/html\\/config-broker\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "vcc-au1-cf"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -102,17 +105,18 @@
                 "vcc-au1-cf"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "3213faa491297d2e77747de7fae5868665fdf6c17e12a84d98f03cfdc2e5fb13"
+                "622d785483a75bf622da0c5c1924caf5e62a0ad20a1421d7141a424c13a03125"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sungrowpower.com.au",
+                "service.sungrowpower.com.au",
                 "sydneytools.com.au"
             ]
         },
@@ -234,8 +238,8 @@
                 "vcc-au1-cf"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -259,8 +263,8 @@
                 "vcc-au1-cf"
             ],
             "apis": {
-                "Navigator.prototype.mimeTypes": 1,
-                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.language": 1,
                 "Screen.prototype.orientation": 1,
                 "window.localStorage": 1,
@@ -379,7 +383,7 @@
                 "vcc-au1-cf"
             ],
             "apis": {
-                "window.localStorage": 1
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -403,7 +407,7 @@
                 "vcc-au1-cf"
             ],
             "apis": {
-                "window.localStorage": 1,
+                "window.localStorage": 2,
                 "Navigator.prototype.userAgent": 1,
                 "Navigator.prototype.platform": 1
             },
@@ -510,7 +514,29 @@
             ]
         },
         {
-            "rule": "8x8\\.com\\/vcc-embedded-chat-loader\\/10\\.0\\.0\\.0\\.20250627143545867\\/remoteEntry\\.js",
+            "rule": "8x8\\.com\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bugsnag"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0ba7c0356149946bf0642fab4ef85b95e7090f6f785d0fb84323d0c442e5190a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sungrowpower.com.au",
+                "sydneytools.com.au"
+            ]
+        },
+        {
+            "rule": "8x8\\.com\\/vcc-embedded-chat-loader\\/10\\.0\\.0\\.0\\.20250711113626260\\/remoteEntry\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -524,7 +550,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6c18fe07b1b90aada848418a2d491e3ab8705fb9dec855aabbb2181827124c71"
+                "3b55af4b678a030021e98ada2ed38ccb852b1443cd08784defef4ee084e515e4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -535,7 +561,7 @@
             ]
         },
         {
-            "rule": "8x8\\.com\\/vcc-embedded-chat-loader\\/10\\.0\\.0\\.0\\.20250627143545867\\/714\\.js",
+            "rule": "8x8\\.com\\/vcc-embedded-chat-loader\\/10\\.0\\.0\\.0\\.20250711113626260\\/714\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -573,13 +599,13 @@
         "Script": 30,
         "Fetch": 3,
         "Document": 4,
-        "XHR": 2,
+        "XHR": 5,
         "Stylesheet": 8
     },
     "nameservers": [
-        "ns5.packet8.net",
-        "ns6.packet8.net",
+        "ns8.packet8.net",
         "ns7.packet8.net",
-        "ns8.packet8.net"
+        "ns6.packet8.net",
+        "ns5.packet8.net"
     ]
 }

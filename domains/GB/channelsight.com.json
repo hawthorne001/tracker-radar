@@ -4,31 +4,37 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "cdn",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "channelsight\\.com\\/api\\/assets\\/GetAssetConfiguration",
+            "rule": "channelsight\\.com\\/widget\\/scripts\\/cswidget\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8117ff1683902a55482145424754339d9802743d360bbdd86fab19402e2d5239"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hoover-home.com",
+                "haier-europe.com",
                 "www.hoover-home.com"
             ]
         },
@@ -40,17 +46,40 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haier-europe.com",
+                "www.haier-europe.com",
+                "www.hoover-home.com"
+            ]
+        },
+        {
+            "rule": "channelsight\\.com\\/api\\/assets\\/GetAssetConfiguration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
+                "b5e1d16a3943b3e24a2e87c614797eee1e33638d66693bd46694fa2504497aec",
                 "f55f9955027475b6dc1ac284ce2caab54ce7ca09dfc49e5235f11016e1a68302"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hoover-home.com",
+                "haier-europe.com",
+                "www.haier-europe.com",
                 "www.hoover-home.com"
             ]
         }
@@ -65,8 +94,9 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
         "ns1-07.azure-dns.com",
