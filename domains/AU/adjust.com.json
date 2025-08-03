@@ -7,44 +7,37 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "cdn",
-        "app"
+        "app",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "adjust\\.com\\/adjust-latest\\.min\\.js",
+            "rule": "adjust\\.com\\/session",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "app"
             ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.onLine": 2,
-                "window.indexedDB": 2,
-                "Navigator.prototype.platform": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Navigator.prototype.doNotTrack": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "bccf146cba052c5f6bfc56e63f65f21243e01e4da8bb816f759b3d452ee13df8"
+                "b531326b32e56f52a9807a642dba00a14cc2f1c13d48b81100a0a61638fb2ab2",
+                "c818977f74ee1f2a0c87301439e26a00ce3bd90d8b28d581b87275c7e3e419f8"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "getnomad.app",
-                "www.latamairlines.com"
+                "mypikpak.com",
+                "www.latamairlines.com",
+                "www.shortform.com"
             ]
         },
         {
@@ -58,21 +51,40 @@
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [
-                "aea3671c8969fe135461ad3d0a95ff846f8fb9d10488fe3d2c79c009edc84957",
-                "affa948087b27d03cec49093eb00ee9950ea07b875c028f4711e1ec802fabc18"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "getnomad.app",
+                "mypikpak.com",
                 "www.latamairlines.com",
                 "www.shortform.com"
             ]
         },
         {
-            "rule": "adjust\\.com\\/session",
+            "rule": "adjust\\.com\\/attribution",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "12098c832c223182ab6990edcd082fa6db72341c04ccd5c5193294d4983c699c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mypikpak.com",
+                "www.shortform.com"
+            ]
+        },
+        {
+            "rule": "adjust\\.com\\/attribution",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -87,8 +99,39 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "latamairlines.com",
+                "mypikpak.com",
                 "www.shortform.com"
+            ]
+        },
+        {
+            "rule": "adjust\\.com\\/adjust-latest\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bccf146cba052c5f6bfc56e63f65f21243e01e4da8bb816f759b3d452ee13df8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getnomad.app",
+                "www.latamairlines.com"
             ]
         }
     ],
@@ -98,30 +141,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5714285714285714
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 3,
-        "Preflight": 2
+        "XHR": 5,
+        "Preflight": 5,
+        "Script": 2
     },
     "nameservers": [
+        "ns03.adjust.works",
         "dns1.p09.nsone.net",
         "dns4.p09.nsone.net",
-        "ns01.adjust.works",
-        "dns3.p09.nsone.net",
         "ns04.adjust.works",
+        "dns3.p09.nsone.net",
         "dns2.p09.nsone.net",
-        "ns03.adjust.works",
-        "ns02.adjust.works"
+        "ns02.adjust.works",
+        "ns01.adjust.works"
     ]
 }

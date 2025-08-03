@@ -12,19 +12,24 @@
     "prevalence": 0.000303,
     "sites": 3,
     "subdomains": [
-        "media"
+        "media",
+        "recs"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "richrelevance\\.com\\/rrserver\\/js\\/1\\.2\\/p13n\\.js",
             "cookies": 0.000202,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "media"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie setter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
@@ -36,7 +41,29 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cdw.ca",
-                "www.cdw.com"
+                "www.swarovski.com"
+            ]
+        },
+        {
+            "rule": "richrelevance\\.com\\/rrserver\\/p13n_generated\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0d6d944dfb8f8508ceffbae1b72276b229b1fb9840aa86599f1fdde397c27519"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rei.com",
+                "www.swarovski.com"
             ]
         }
     ],
@@ -50,7 +77,7 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
         "rayden.ns.cloudflare.com",

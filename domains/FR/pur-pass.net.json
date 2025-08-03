@@ -4,25 +4,31 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
-        "as-cobi"
+        "as-cobi",
+        "tonline"
     ],
     "cnames": [
         {
             "original": "pur.computerbild.de",
             "resolved": "as-cobi.pur-pass.net"
+        },
+        {
+            "original": "pur.t-online.de",
+            "resolved": "tonline.pur-pass.net"
         }
     ],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "pur-pass\\.net\\/stats",
+            "rule": "pur-pass\\.net\\/now\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 3,
             "subdomains": [
-                "as-cobi"
+                "as-cobi",
+                "tonline"
             ],
             "apis": {},
             "sites": 2,
@@ -31,6 +37,37 @@
                 {
                     "original": "pur.computerbild.de",
                     "resolved": "as-cobi.pur-pass.net"
+                },
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
+                }
+            ],
+            "responseHashes": [
+                "2e15d1c9c53dc927842b4c6d945ee91a638f1eabac3be2cc9539ed4b53e32b4d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "computerbild.de",
+                "www.t-online.de"
+            ]
+        },
+        {
+            "rule": "pur-pass\\.net\\/signal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tonline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "pur.t-online.de",
+                    "resolved": "tonline.pur-pass.net"
                 }
             ],
             "responseHashes": [],
@@ -38,33 +75,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "computerbild.de",
-                "www.computerbild.de"
-            ]
-        },
-        {
-            "rule": "pur-pass\\.net\\/stats",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "as-cobi"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "pur.computerbild.de",
-                    "resolved": "as-cobi.pur-pass.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "computerbild.de",
-                "www.computerbild.de"
+                "t-online.de",
+                "www.t-online.de"
             ]
         }
     ],
@@ -78,8 +90,8 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-243-a.gandi.net",

@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "t1"
     ],
@@ -16,24 +16,72 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "daumcdn\\.net\\/kas\\/static\\/third-party\\/cookie\\/ct2\\.html",
+            "rule": "daumcdn\\.net\\/adfit\\/static\\/kp\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "t1"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c1c1c82bc877a7c01436e27e035eb76830b09d4695803963e4305a932c1e47f3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deadbydaylight.com",
+                "www.klook.com"
+            ]
+        },
+        {
+            "rule": "daumcdn\\.net\\/kas\\/static\\/third-party\\/cookie\\/ct2\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t1"
+            ],
+            "apis": {
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "17784cca25b4fc7c6b55d3dcf9e1cec58fbca4363085a57f3e03fc86636c7352"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "test": {
+                    "ttl": -1754179249,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__Host-test": {
+                    "ttl": -1754179249,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "klook.com",
+                "deadbydaylight.com",
+                "www.klook.com",
+                "www.traveloka.com",
                 "www.vietjetair.com"
             ]
         },
@@ -57,33 +105,37 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6137d7a5e6f9eb2afd9b6d875ed257ca353eba540143c49a8184cd444e5d047a"
+                "c1c1c82bc877a7c01436e27e035eb76830b09d4695803963e4305a932c1e47f3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vietjetair.com",
+                "traveloka.com",
                 "www.vietjetair.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "domain": "osano.com",
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "googletagmanager.com",
             "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Document": 2,
-        "Script": 2
+        "Script": 4,
+        "Document": 4
     },
     "nameservers": [
         "ns2.daum.net",

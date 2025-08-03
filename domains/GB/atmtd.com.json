@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "e01",
         "floors",
-        "scripts"
+        "scripts",
+        "edge"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,8 +23,8 @@
                 "e01"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -34,7 +35,8 @@
             "exampleSites": [
                 "slate.com",
                 "techcrunch.com",
-                "www.salon.com"
+                "www.destructoid.com",
+                "www.sporcle.com"
             ]
         },
         {
@@ -45,8 +47,8 @@
                 "floors"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -56,7 +58,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "techcrunch.com",
-                "www.mlb.com"
+                "www.destructoid.com",
+                "www.mlb.com",
+                "www.sporcle.com"
             ]
         },
         {
@@ -67,22 +71,50 @@
                 "scripts"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "dd1e64e78dac2b7c7fc2b9bc424d32d4b4971ae67208e6e73310bbc4626ab6ec"
+                "9c6acaa4374f1b9fdfd7f0269628ce8e6d918c42f0caec22c227042e75f43808"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "techcrunch.com",
+                "www.destructoid.com",
                 "www.mlb.com",
-                "www.salon.com"
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "atmtd\\.com\\/pub\\/mgnt\\/afihbs\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "3f0c0565724dfd38d311ff8805a169a4073116b4b6bdd60b16b79435ccfcf14c",
+                "2c9c8c29b8283c9ca4f677fbbaa5433b65ec9f18585f97131d94fb8f29c68ed2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "destructoid.com",
+                "www.mlb.com",
+                "www.sporcle.com"
             ]
         },
         {
@@ -93,18 +125,20 @@
                 "floors"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "f22c38398392520816ec5e6fca8125c684bcd80c5496e7841d34abba92cf5605"
+                "4b88cba3ec50a28c9986da08aff07a6b24489b6761a2ece7cc2f53f8bfb6eb7a",
+                "e17ebf0c60be8b6d64dcd4f9e9a4916a21cd078653281c7e1129322c10a17701"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "techcrunch.com",
-                "www.mlb.com"
+                "destructoid.com",
+                "www.mlb.com",
+                "www.sporcle.com"
             ]
         }
     ],
@@ -114,37 +148,33 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.35714285714285715
         },
         {
-            "domain": "servenobid.com",
-            "prevalence": 0.2222222222222222
-        },
-        {
-            "domain": "adlightning.com",
-            "prevalence": 0.1111111111111111
+            "domain": "script.ac",
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "rubiconproject.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "servenobid.com",
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.1111111111111111
-        },
-        {
-            "domain": "dn0qt3r0xannq.cloudfront.net",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Ping": 3,
-        "Other": 2,
-        "Script": 3,
-        "Fetch": 2
+        "Ping": 4,
+        "Other": 4,
+        "Script": 7,
+        "Fetch": 3
     },
     "nameservers": [
-        "grace.ns.cloudflare.com",
-        "kurt.ns.cloudflare.com"
+        "kurt.ns.cloudflare.com",
+        "grace.ns.cloudflare.com"
     ]
 }

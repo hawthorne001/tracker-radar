@@ -10,6 +10,7 @@
     "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
+        "api-waterdata-usgs-gov.domains.api",
         "api-open-fec-gov.domains.api",
         "api-foia-gov.domains.api"
     ],
@@ -21,10 +22,66 @@
         {
             "original": "api.open.fec.gov",
             "resolved": "api-open-fec-gov.domains.api.data.gov"
+        },
+        {
+            "original": "api.waterdata.usgs.gov",
+            "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "data\\.gov\\/ogcapi\\/v0\\/collections\\/time-series-metadata\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-waterdata-usgs-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.waterdata.usgs.gov",
+                    "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usgs.gov",
+                "waterdata.usgs.gov"
+            ]
+        },
+        {
+            "rule": "data\\.gov\\/ogcapi\\/v0\\/collections\\/time-series-metadata\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-waterdata-usgs-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.waterdata.usgs.gov",
+                    "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [
+                "09bdb86d2a70899feff3934e8eb043cb19bacb565b3bdf884ff7d864fe9a4617"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usgs.gov",
+                "waterdata.usgs.gov"
+            ]
+        },
         {
             "rule": "data\\.gov\\/v1\\/calendar-dates\\/",
             "cookies": 0,
@@ -42,7 +99,7 @@
                 }
             ],
             "responseHashes": [
-                "3cd27d2ff67ed3d0b09041d70a3cd8f4e8553f16a4fb149ebb59637804b448b3"
+                "90cd26dbaaa9edf015ab405305fbe444387a046827db8b2d4596f2d63a9631e0"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -69,7 +126,7 @@
                 }
             ],
             "responseHashes": [
-                "6d6504bfd87d1c362d7f67a575e604426d220c0489f0a12d096b5a84bf3628f0"
+                "29dac7d78d2d21b05a57ecc4879b75f5c4e68de59d55478d7ac452f6f785cdc9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -109,8 +166,9 @@
     "performance": {},
     "cookies": 0.00000683,
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Preflight": 4,
+        "Fetch": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-1354.awsdns-41.org",
