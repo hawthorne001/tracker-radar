@@ -7,25 +7,31 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-web-notifications\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.platform": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1,
+                "Notification.permission": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -40,6 +46,28 @@
                 "gbnews.com",
                 "www.timesofisrael.com"
             ]
+        },
+        {
+            "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-service-worker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1d10297914488cef0b959bd1fbd99719ac092820374ffb89f0b31eb243d4d69a"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gbnews.com",
+                "www.timesofisrael.com"
+            ]
         }
     ],
     "categories": [],
@@ -48,11 +76,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Other": 2
     },
     "nameservers": [
         "ns-01.pushwoosh.com",

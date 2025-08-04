@@ -4,14 +4,40 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "security-hub"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "vaimo\\.network\\/static\\/dbmv2\\/frontend_module\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "security-hub"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0beaa59a4b1685a0cd0774514066cc76cf2852e75fc3450e129ccc0890ba4a51"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbr.com",
+                "www.suunto.com"
+            ]
+        },
         {
             "rule": "vaimo\\.network\\/api\\/v2\\.1\\/dbm",
             "cookies": 0,
@@ -20,18 +46,20 @@
                 "security-hub"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "96de972a7d76972eb676ea2f56614a702dd3c4376c57f3ae98cbf91ddbfded32"
+                "1a37698b37f4d94dd25c4e583a12240f01f4e9c51e0dc8ddc2220b1bca9d836d",
+                "60b692ae8a47796b29f12a480526c796ada0db89601a5e6e325bb40c7ae55219"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bbr.com",
-                "www.bbr.com"
+                "www.bbr.com",
+                "www.suunto.com"
             ]
         }
     ],
@@ -41,11 +69,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 3
     },
     "nameservers": [
         "hera.ns.cloudflare.com",

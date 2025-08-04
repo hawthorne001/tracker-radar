@@ -7,10 +7,11 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
@@ -24,7 +25,7 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "6e41b9fbff7ac0ff6dbc8430bd5aacb539652f071b2232359ad76b252a36e0ac"
+                "c79f8f3b3053b22685d5b327cd04e78fc3e05fd9f5d06169a516361e480c3151"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -54,6 +55,34 @@
                 "foxnews.com",
                 "www.tmz.com"
             ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
         }
     ],
     "categories": [],
@@ -62,29 +91,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.2
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.2
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "Fetch": 3,
-        "Preflight": 2
+        "Preflight": 2,
+        "Script": 2
     },
     "nameservers": [
+        "ns01.foxdoua.com",
         "ns04.foxdoua.com",
-        "ns03.foxdoua.com",
         "ns03.dns.fox",
-        "ns04.dns.fox",
-        "ns02.dns.fox",
         "ns02.foxdoua.com",
+        "ns02.dns.fox",
+        "ns03.foxdoua.com",
         "ns01.dns.fox",
-        "ns01.foxdoua.com"
+        "ns04.dns.fox"
     ]
 }

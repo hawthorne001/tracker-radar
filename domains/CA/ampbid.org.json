@@ -7,10 +7,11 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "hb"
+        "hb",
+        "tag"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "ampbid\\.org\\/openrtb2\\/auction",
@@ -24,9 +25,51 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "22c66df2ab23f072a6207e1469bf05b6399544be3142c02b1d03a500bf3a1db7"
+                "eac964dee6976d08541434dbee050edd08769dae497321375daa271f9abd5338"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/bid\\/static\\/load-cookie\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/cookie_sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -45,10 +88,12 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Document": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "major.ns.cloudflare.com",
-        "lara.ns.cloudflare.com"
+        "lara.ns.cloudflare.com",
+        "major.ns.cloudflare.com"
     ]
 }

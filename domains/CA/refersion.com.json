@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000807,
-    "sites": 8,
+    "prevalence": 0.000908,
+    "sites": 9,
     "subdomains": [
-        "tracking"
+        "tracking",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,14 +24,13 @@
                 "tracking"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000505,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "0c2cd42f1460f44ff653fc2802e83aeb16100ad4344ed8dff6a28ab05ca7a960",
-                "3647519ae31856826ffe67ac46be3ba4912d5d807b62fcd949f28ebe12706522",
-                "ed4a4ca4a9394aab4a0f861199c6811da935c006c95ce4d58622aff2c6dfc80f",
-                "a412c9b641cb98d622336b73fde1d9bcf0f78dd8e66896753cbbfafbe2a4886b"
+                "56b6ee7f70ff3770e5ef529164a20e849ea75d33ceaf8fd6845bd3ec796542ad",
+                "91fda753ba2992834fb1207f6d9e5e05a25530a3d06919d3439ba09161aa0b85",
+                "3fa3202058d5741ae61f7307a8aac8fe7888e41af7b1ff5f6bd73bb584db6aa1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -39,7 +39,6 @@
                 "casadesante.com",
                 "eightouncecoffee.ca",
                 "organika.com",
-                "teddybaldassarre.com",
                 "www.westcoastseeds.com"
             ]
         },
@@ -52,7 +51,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000606,
+            "prevalence": 0.000605,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -62,9 +61,56 @@
                 "casadesante.com",
                 "eightouncecoffee.ca",
                 "organika.com",
-                "teddybaldassarre.com",
+                "www.getnomad.app",
                 "www.mindbodygreen.com",
                 "www.westcoastseeds.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/refersion\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7b80aadfb5bcc23aab5d0cce6f378bc6c89868b855d067e39adb533e66056c20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getnomad.app",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4bc18460adc53a015bed21ff147df60b2f2ec70fcaee1d906a4f4fe3c5db104b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getnomad.app",
+                "www.mindbodygreen.com"
             ]
         }
     ],
@@ -78,8 +124,10 @@
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 6
+        "Fetch": 4,
+        "Preflight": 6,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
         "beau.ns.cloudflare.com",

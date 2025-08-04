@@ -7,6 +7,7 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
+        "cdn",
         "collector4",
         "collector"
     ],
@@ -14,24 +15,41 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "leadinfo\\.net\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "rule": "leadinfo\\.net\\/ping\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "collector4",
-                "collector"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "apis": {
+                "Navigator.prototype.doNotTrack": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "4fb5270f1e3727bda6ee73ed049bd987bf83603bbcc7e6b44cae37b5daf56a13"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "industryarena.com",
-                "de.industryarena.com",
+                "exxpress.at",
                 "www.ford-koegler.de"
             ]
         },
@@ -53,7 +71,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "industryarena.com",
+                "exxpress.at",
+                "www.ford-koegler.de"
+            ]
+        },
+        {
+            "rule": "leadinfo\\.net\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector4",
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exxpress.at",
                 "www.ford-koegler.de"
             ]
         },
@@ -75,7 +114,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "industryarena.com",
+                "exxpress.at",
                 "www.ford-koegler.de"
             ]
         }
@@ -86,20 +125,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "leadinfo.eu",
-            "prevalence": 0.375
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.125
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Preflight": 3,
+        "Script": 2,
         "Fetch": 2,
+        "Preflight": 2,
         "XHR": 2
     },
     "nameservers": [

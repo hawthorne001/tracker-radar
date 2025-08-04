@@ -8,12 +8,10 @@
     "sites": 2,
     "subdomains": [
         "static.cdn",
-        "setupad.rtb",
-        "dsp-service",
         "prebid"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "admatic\\.com\\.tr\\/sync\\.html",
@@ -42,46 +40,6 @@
             ]
         },
         {
-            "rule": "admatic\\.com\\.tr\\/pb",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "setupad.rtb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kyivpost.com",
-                "www.kyivpost.com"
-            ]
-        },
-        {
-            "rule": "admatic\\.com\\.tr\\/users\\/sync\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dsp-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kyivpost.com",
-                "www.kyivpost.com"
-            ]
-        },
-        {
             "rule": "admatic\\.com\\.tr\\/setuid",
             "cookies": 0,
             "fingerprinting": 0,
@@ -104,15 +62,19 @@
         {
             "rule": "admatic\\.com\\.tr\\/cookie\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static.cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "481c8382889f68e105a819ab253cbea9e6a52e86d611edd9fde5feae25e1d8a7"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -127,24 +89,19 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5714285714285714
-        },
-        {
             "domain": "stpd.cloud",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "adtelligent.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Document": 8,
-        "Fetch": 2
+        "Document": 6
     },
     "nameservers": [
-        "porter.ns.cloudflare.com",
-        "ursula.ns.cloudflare.com"
+        "ursula.ns.cloudflare.com",
+        "porter.ns.cloudflare.com"
     ]
 }

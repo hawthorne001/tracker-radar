@@ -12,15 +12,10 @@
     "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "accor-group-prod-prod",
         "cisco-dsc-prod",
         "mns-00.dn"
     ],
     "cnames": [
-        {
-            "original": "api.accor.com",
-            "resolved": "accor-group-prod-prod.apigee.net"
-        },
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
@@ -32,31 +27,6 @@
     ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "accor-group-prod-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "api.accor.com",
-                    "resolved": "accor-group-prod-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "all.accor.com"
-            ]
-        },
         {
             "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
@@ -73,8 +43,10 @@
                     "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "aa362b54c90535319a283f01dabef2ed13cfc1c5403b795754c806b138413f5d"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -98,10 +70,8 @@
                     "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
-            "responseHashes": [
-                "153d693f31ea570848ddf34042e8f347524a0937cb2fd902de7a74a9c51ae06d"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -136,7 +106,7 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
@@ -166,11 +136,11 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.5
+            "prevalence": 0.4
         },
         {
             "domain": "cookielaw.org",
@@ -183,12 +153,15 @@
         {
             "domain": "tiqcdn.com",
             "prevalence": 0.1
+        },
+        {
+            "domain": "appdynamics.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Document": 2,
-        "Preflight": 4,
         "Fetch": 2,
+        "Preflight": 4,
         "XHR": 2
     },
     "nameservers": [

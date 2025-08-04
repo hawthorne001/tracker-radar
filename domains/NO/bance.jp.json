@@ -7,15 +7,93 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "js.dsp",
-        "dmp.dsp",
-        "tr.ssp",
         "js.ssp",
-        "bid.ssp"
+        "bid.ssp",
+        "tr.ssp",
+        "js.dsp",
+        "dmp.dsp"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "bance\\.jp\\/bnctag\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js.ssp"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "60e23ab7d50b8dac06a05b090cc684d2d8eacd190308345a99f257c1a15881fc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__bnc_pfpuid__": {
+                    "ttl": 604800,
+                    "length": 15,
+                    "prevalence": 0.00020098482564566376,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "5ch.net",
+                "jump.5ch.net"
+            ]
+        },
+        {
+            "rule": "bance\\.jp\\/ssp-bid\\/bid\\/bnc-bid",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bid.ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "45783feaefd16d6b33cf9cb2dc9a3b23249adecfdc91d218387a396849e411f4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__bnc_pfpuid__": 0.00020098482564566376
+            },
+            "exampleSites": [
+                "5ch.net",
+                "jump.5ch.net"
+            ]
+        },
+        {
+            "rule": "bance\\.jp\\/ssp-track\\/sync",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr.ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "5ch.net",
+                "jump.5ch.net"
+            ]
+        },
         {
             "rule": "bance\\.jp\\/bncdmp\\.js",
             "cookies": 0,
@@ -101,83 +179,6 @@
                 "dlsite.com",
                 "www.dlsite.com"
             ]
-        },
-        {
-            "rule": "bance\\.jp\\/bnctag\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 1,
-            "subdomains": [
-                "js.ssp"
-            ],
-            "apis": {
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
-                "window.name": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "60e23ab7d50b8dac06a05b090cc684d2d8eacd190308345a99f257c1a15881fc"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "__bnc_pfpuid__": {
-                    "ttl": 604800,
-                    "length": 15,
-                    "prevalence": 0.0002011465352509303,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "iwara.tv",
-                "www.iwara.tv"
-            ]
-        },
-        {
-            "rule": "bance\\.jp\\/ssp-bid\\/bid\\/bnc-bid",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bid.ssp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "c522571707f32c701bc0888318ddfd252680419712d549bcee46c44d18bc021b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "iwara.tv",
-                "www.iwara.tv"
-            ]
-        },
-        {
-            "rule": "bance\\.jp\\/ssp-track\\/sync",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tr.ssp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "iwara.tv",
-                "www.iwara.tv"
-            ]
         }
     ],
     "categories": [],
@@ -186,31 +187,35 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.3
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
         },
         {
             "domain": "im-apps.net",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.2
         },
         {
             "domain": "jp1media.com",
-            "prevalence": 0.21428571428571427
+            "prevalence": 0.15
         },
         {
-            "domain": "tyamahori.com",
-            "prevalence": 0.07142857142857142
+            "domain": "microad.net",
+            "prevalence": 0.1
         }
     ],
     "types": {
         "Script": 4,
         "Fetch": 6,
-        "Document": 2,
-        "Image": 2
+        "Image": 2,
+        "Document": 2
     },
     "nameservers": [
         "03.dnsv.jp",
-        "04.dnsv.jp",
         "01.dnsv.jp",
-        "02.dnsv.jp"
+        "02.dnsv.jp",
+        "04.dnsv.jp"
     ]
 }

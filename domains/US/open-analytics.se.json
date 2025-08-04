@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [
-        "tracker.hsb"
+        "tracker.vattenfall",
+        "tracker.hsb",
+        "tracker.oph"
     ],
     "cnames": [
         {
@@ -17,10 +19,65 @@
         {
             "original": "open-analytics.hrw.org",
             "resolved": "open-analytics.se"
+        },
+        {
+            "original": "statistics.vattenfall.com",
+            "resolved": "tracker.vattenfall.open-analytics.se"
+        },
+        {
+            "original": "tracking.oph.fi",
+            "resolved": "tracker.oph.open-analytics.se"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "open-analytics\\.se\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker.vattenfall",
+                "tracker.hsb",
+                "tracker.oph"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [
+                {
+                    "original": "statistics.vattenfall.com",
+                    "resolved": "tracker.vattenfall.open-analytics.se"
+                },
+                {
+                    "original": "open-analytics.hrw.org",
+                    "resolved": "open-analytics.se"
+                },
+                {
+                    "original": "matomotracking.naturvardsverket.se",
+                    "resolved": "open-analytics.se"
+                },
+                {
+                    "original": "tracking.oph.fi",
+                    "resolved": "tracker.oph.open-analytics.se"
+                }
+            ],
+            "responseHashes": [
+                "4e036fc0a1d89fc9b4d920dd9c325f4ca8d2483abbf5f6fe9ec8eeac0ad615ac",
+                "11dd3bba01b1f61fc7704dd3955ecb6fb91e256a065d068bee4e127567246673",
+                "673e4ce52ebfd550a4bab0e625a9f44d1b8a9f09ba1ff03aa002f244aa9bd2e4",
+                "b5c7ec121e63ac5633cc15c92175cb8568e16c8a2383f8997aacea5b8bb7239e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vattenfall.com",
+                "www.hrw.org",
+                "www.hsb.se",
+                "www.naturvardsverket.se",
+                "www.oph.fi"
+            ]
+        },
         {
             "rule": "open-analytics\\.se\\/js\\/container_MOFt5fSb\\.js",
             "cookies": 0,
@@ -51,11 +108,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "tracker.hsb"
+                "tracker.hsb",
+                "tracker.oph"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [
                 {
                     "original": "open-analytics.hrw.org",
@@ -64,6 +122,10 @@
                 {
                     "original": "matomotracking.naturvardsverket.se",
                     "resolved": "open-analytics.se"
+                },
+                {
+                    "original": "tracking.oph.fi",
+                    "resolved": "tracker.oph.open-analytics.se"
                 }
             ],
             "responseHashes": [
@@ -76,42 +138,8 @@
                 "hrw.org",
                 "www.hrw.org",
                 "www.hsb.se",
-                "www.naturvardsverket.se"
-            ]
-        },
-        {
-            "rule": "open-analytics\\.se\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tracker.hsb"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [
-                {
-                    "original": "open-analytics.hrw.org",
-                    "resolved": "open-analytics.se"
-                },
-                {
-                    "original": "matomotracking.naturvardsverket.se",
-                    "resolved": "open-analytics.se"
-                }
-            ],
-            "responseHashes": [
-                "51356ac0b02fc3e0ea1e8e53e561b716533388717d8e5e7b3eab8498248a837b",
-                "ca00e3890f75bca7ee21d6feed27b1af971d932e16dbea3591a1b245ce70ad4c",
-                "ec22292eaa213f00d25856fd37b1b16f6f834844e87a4add569a6a94fd293ac7"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hrw.org",
-                "www.hrw.org",
-                "www.hsb.se",
-                "www.naturvardsverket.se"
+                "www.naturvardsverket.se",
+                "www.oph.fi"
             ]
         }
     ],
@@ -125,8 +153,8 @@
         }
     ],
     "types": {
-        "Script": 6,
-        "Ping": 4
+        "Script": 7,
+        "Ping": 5
     },
     "nameservers": [
         "ns1.dnshost.net",

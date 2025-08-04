@@ -13,7 +13,8 @@
     "sites": 4,
     "subdomains": [
         "gui-ipv6",
-        "csp"
+        "csp",
+        "digitalcare"
     ],
     "cnames": [
         {
@@ -21,11 +22,15 @@
             "resolved": "csp.godaddy.com.edgekey.net"
         },
         {
+            "original": "digitalcare.godaddy.com",
+            "resolved": "digitalcare.godaddy.com.edgekey.net"
+        },
+        {
             "original": "gui.godaddy.com",
             "resolved": "gui-ipv6.godaddy.com.edgekey.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "godaddy\\.com\\.edgekey\\.net\\/pcjson\\/applicationheader",
@@ -83,11 +88,38 @@
                 "sso.godaddy.com",
                 "www.godaddy.com"
             ]
+        },
+        {
+            "rule": "godaddy\\.com\\.edgekey\\.net\\/dc-apis\\/proxy\\/contentful",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "digitalcare"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalcare.godaddy.com",
+                    "resolved": "digitalcare.godaddy.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e085f393387447debf29a13f0f7d5e5532a82634f7347116f8f5486ec73ed638"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godaddy.com",
+                "www.godaddy.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000683,
     "topInitiators": [
         {
             "domain": "wsimg.com",
@@ -95,7 +127,7 @@
         }
     ],
     "types": {
-        "Fetch": 7
+        "Fetch": 9
     },
     "nameservers": []
 }
