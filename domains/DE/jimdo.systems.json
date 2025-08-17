@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
+    "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "at.prod"
+        "at.prod",
+        "feature-flags-proxy.prod"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -21,7 +22,54 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000503,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anzugsmoment.de",
+                "www.anzugsmoment.de",
+                "www.din-5008-richtlinien.de",
+                "www.happy-mahlzeit.com",
+                "www.jimdo.com"
+            ]
+        },
+        {
+            "rule": "jimdo\\.systems\\/feature-flags",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feature-flags-proxy.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "578cdd95e3872c48f0e0cbc18de94ea72ba56aa934891b662e4c870ce36b8060"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jimdo.com",
+                "www.jimdo.com"
+            ]
+        },
+        {
+            "rule": "jimdo\\.systems\\/rich",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "at.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,10 +79,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "jimdo.com",
-                "account.e.jimdo.com",
-                "www.anzugsmoment.de",
-                "www.din-5008-richtlinien.de",
-                "www.happy-mahlzeit.com"
+                "www.jimdo.com"
             ]
         }
     ],
@@ -43,17 +88,22 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.6086956521739131
+        },
+        {
             "domain": "jimstatic.com",
-            "prevalence": 1
+            "prevalence": 0.391304347826087
         }
     ],
     "types": {
-        "Ping": 5
+        "Ping": 7,
+        "Fetch": 2
     },
     "nameservers": [
+        "ns-1278.awsdns-31.org",
         "ns-538.awsdns-03.net",
-        "ns-1558.awsdns-02.co.uk",
         "ns-297.awsdns-37.com",
-        "ns-1278.awsdns-31.org"
+        "ns-1558.awsdns-02.co.uk"
     ]
 }

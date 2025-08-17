@@ -7,10 +7,11 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
-        "info"
+        "info",
+        "stats"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ewaltech\\.com\\/script\\.js",
@@ -41,18 +42,44 @@
             ]
         },
         {
-            "rule": "ewaltech\\.com\\/api\\/send",
+            "rule": "ewaltech\\.com\\/js\\/script\\.outbound-links\\.pageview-props\\.tagged-events\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d4d9b2022e26af4204fafa6c3ad692c5548e9b96990e613536fda280ee9c7130"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bskyinfo.com",
+                "www.bskyinfo.com"
+            ]
+        },
+        {
+            "rule": "ewaltech\\.com\\/api\\/event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "info"
+                "stats"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "76ed37236ef1ae6b93489b1d7f5dc6acca2aa0e97698edfdb4e87bc5ba7a20b7"
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -81,6 +108,28 @@
                 "bskyinfo.com",
                 "www.bskyinfo.com"
             ]
+        },
+        {
+            "rule": "ewaltech\\.com\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "info"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "080fbf112b63f872d0fd537c89bff93487ac0c3a1c328a4297c862b36f6e08eb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bskyinfo.com",
+                "www.bskyinfo.com"
+            ]
         }
     ],
     "categories": [],
@@ -93,8 +142,8 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 2,
+        "Script": 4,
+        "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": [

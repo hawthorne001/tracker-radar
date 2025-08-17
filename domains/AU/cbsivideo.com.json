@@ -4,10 +4,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000403,
+    "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "doppler-config"
+        "doppler-config",
+        "poolcabe1d37.airspace-f",
+        "poolcabe1d37.airspace-q",
+        "doppler-beacon"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,7 +27,7 @@
                 "Date.prototype.getTime": 1
             },
             "sites": 4,
-            "prevalence": 0.000403,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
@@ -46,7 +49,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000403,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "84e879a720600ee162f064c9efab4b25a4734fdafe7a6dec54327145a9a5f559"
@@ -69,12 +72,12 @@
                 "doppler-config"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "1ab1375e430283de29124f3720bd1d7f152ab57271c16d30b81197da2de40cfa",
-                "121d7670f388ee64b82aec42bdc2649e3591073fc2c7a9b54fa94c2896223564"
+                "9fd661fb7fd504d7be218cd1398155a1bc0e9601aad57381435a797dda589d04",
+                "cd49150ab10f37b0c54e52df28484a69cac93bef7cf887c0bff98ddb537dff8d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -82,7 +85,49 @@
             "exampleSites": [
                 "cc.com",
                 "www.cbsnews.com",
+                "www.cbssports.com",
                 "www.southparkstudios.com"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/measurements\\/1536197413045-1555KB\\.ts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poolcabe1d37.airspace-f",
+                "poolcabe1d37.airspace-q"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cc.com",
+                "southpark.cc.com"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-beacon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cc.com",
+                "southpark.cc.com"
             ]
         }
     ],
@@ -91,25 +136,25 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
+            "domain": "southparkstudios.com",
             "prevalence": 0.5
         },
         {
-            "domain": "southparkstudios.com",
-            "prevalence": 0.3
+            "domain": "first party",
+            "prevalence": 0.35714285714285715
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.2
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Script": 8,
-        "Fetch": 3
+        "Fetch": 8
     },
     "nameservers": [
-        "ns-1546.awsdns-01.co.uk",
         "ns-1327.awsdns-37.org",
+        "ns-1546.awsdns-01.co.uk",
         "ns-399.awsdns-49.com",
         "ns-883.awsdns-46.net"
     ]
