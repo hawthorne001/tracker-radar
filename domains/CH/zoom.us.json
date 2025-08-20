@@ -7,13 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000302,
+    "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
         "us01ccistatic",
-        "us01campaign",
-        "us01apizva",
-        "us01cciapi"
+        "www"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,7 +24,7 @@
                 "us01ccistatic"
             ],
             "apis": {
-                "window.localStorage": 4
+                "window.localStorage": 2
             },
             "sites": 4,
             "prevalence": 0.000402,
@@ -41,7 +39,7 @@
                 "broadcom.com",
                 "knowledge.broadcom.com",
                 "support.zoom.com",
-                "www.zwift.com"
+                "www.zoom.com"
             ]
         },
         {
@@ -62,15 +60,15 @@
                 "window.localStorage": 3,
                 "Date.prototype.getTime": 3,
                 "Document.cookie getter": 3,
+                "URL.createObjectURL": 2,
                 "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "URL.createObjectURL": 1
+                "window.innerHeight": 2
             },
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "e3d59795cd3261040c46c3e6c504965ec6c9363896f426ad7a2c7b4c7e252493"
+                "32c4f4392ead204a92241b0ac1c4899ebd8e89c8968d3ccc5351fbc97d25ba01"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -78,137 +76,39 @@
             "exampleSites": [
                 "broadcom.com",
                 "support.zoom.com",
-                "www.zwift.com"
+                "www.zoom.com"
             ]
         },
         {
-            "rule": "zoom\\.us\\/v1\\/zcc\\/campaign\\/language\\/list",
+            "rule": "zoom\\.us\\/third_party_cookie_check\\.html",
             "cookies": 0.000201,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "us01campaign"
+                "www"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fe299e021015b0d79303f8a100cbdba9e9dfcad201e8d57f02f273aa0f259ad4"
+                "1fd5e09c96059384c5439264a0659d9397cb32786d1b17e9eca43b936af3e3bb"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty_test": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/zcc\\/campaign\\/styleByApiKey",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01campaign"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "6a4e0d9da9c6cb8f2499339a0be131bd25b8886c51b37d9699ef70fb657cc1ec"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/live-sdk-version\\/fast",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01campaign"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "cf55a8e6cdba7989c0940ddd524d8fefc2ee29719945662c39c507b60f59134b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01apizva"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "60e7a4a9f0afe98e777268faf756a13a6fdd726d043d944fa15a08df073c35cd"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01apizva"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
-            ]
-        },
-        {
-            "rule": "zoom\\.us\\/v1\\/livesdk\\/info",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01cciapi"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "60e7a4a9f0afe98e777268faf756a13a6fdd726d043d944fa15a08df073c35cd"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.zwift.com"
+                "zoom.com",
+                "www.zoom.com"
             ]
         },
         {
@@ -220,11 +120,11 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "NavigatorUAData.prototype.brands": 1,
-                "Navigator.prototype.maxTouchPoints": 1,
-                "Navigator.prototype.platform": 1,
-                "Navigator.prototype.language": 1,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "NavigatorUAData.prototype.brands": 2,
                 "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
                 "window.sessionStorage": 2,
@@ -235,48 +135,63 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3c2f1fdb2cb7ae442efc10cc57e2fb28037acd4b9d0d06a61d769f61cc80b64f"
+                "3959e6bdc8d0bbefa9a77d473f4fc70db0b9f324a94298edccd59b287a79236f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.zwift.com"
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "prismic.io",
-            "prevalence": 0.4166666666666667
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.8181818181818182
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.13636363636363635
         },
         {
             "domain": "zoom_support_header.js",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "Document": 4,
+        "Document": 6,
         "Script": 5,
-        "Fetch": 10,
-        "Preflight": 2
+        "XHR": 2
     },
     "nameservers": [
         "ns-1137.awsdns-14.org",
-        "ns-1772.awsdns-29.co.uk",
+        "ns-888.awsdns-47.net",
         "ns-387.awsdns-48.com",
-        "ns-888.awsdns-47.net"
+        "ns-1772.awsdns-29.co.uk"
     ]
 }

@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000683,
+    "prevalence": 0.0000684,
     "sites": 10,
     "subdomains": [
         "cdn",
         "mtm",
         "app",
         "broadcaster",
-        "my"
+        "my",
+        "img-li-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -39,7 +40,7 @@
             "exampleSites": [
                 "porsche.com",
                 "www.acuvue.com",
-                "www.lionsclubs.org",
+                "www.leonardodrs.com",
                 "www.phly.com",
                 "www.rit.edu"
             ]
@@ -213,10 +214,10 @@
                 "cdn"
             ],
             "apis": {
-                "Event.prototype.timeStamp": 2,
-                "window.devicePixelRatio": 2,
                 "Navigator.prototype.product": 1,
-                "window.localStorage": 1
+                "window.localStorage": 2,
+                "Event.prototype.timeStamp": 2,
+                "window.devicePixelRatio": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -240,18 +241,18 @@
                 "mtm"
             ],
             "apis": {
-                "Document.cookie getter": 2,
-                "window.name": 2,
-                "NavigatorUAData.prototype.brands": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "NavigatorUAData.prototype.getHighEntropyValues": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.mimeTypes": 2,
-                "Navigator.prototype.javaEnabled": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Date.prototype.getTime": 2
+                "Document.cookie getter": 3,
+                "window.name": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.mimeTypes": 3,
+                "Navigator.prototype.javaEnabled": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTime": 3
             },
             "sites": 3,
             "prevalence": 0.0000205,
@@ -299,8 +300,8 @@
                 "broadcaster"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -308,7 +309,29 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "porsche.com",
-                "newsroom.porsche.com",
+                "www.dvm360.com",
+                "www.rit.edu"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/mtm\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mtm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "porsche.com",
                 "www.dvm360.com",
                 "www.rit.edu"
             ]
@@ -328,53 +351,6 @@
                 "edd7bcfc13fa8f537cb97599105190f1adef410461b91844aba932920fbf5a9f"
             ],
             "type": "Other",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "porsche.com",
-                "www.dvm360.com",
-                "www.rit.edu"
-            ]
-        },
-        {
-            "rule": "walls\\.io\\/socket\\.io\\/",
-            "cookies": 0.0000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "broadcaster"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df",
-                "1d310ad8bc34bcea4a15cec3cfd00a8752c41e700a37df91a27acb7d50a0a90f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "porsche.com",
-                "newsroom.porsche.com",
-                "www.dvm360.com"
-            ]
-        },
-        {
-            "rule": "walls\\.io\\/mtm\\.php",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mtm"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -441,9 +417,7 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "03d0c30744baefcb1a27241f9455c0f0ec41a51f1b8e158c71fd232af4c0517d"
-            ],
+            "responseHashes": [],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -463,9 +437,7 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "80ff88398e8b5831e70850f7bc31b631d82d5233c1bd5df22f4164fd6ebb4e5c"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -483,15 +455,13 @@
             ],
             "apis": {
                 "Navigator.prototype.product": 2,
-                "Event.prototype.timeStamp": 2,
-                "window.devicePixelRatio": 1
+                "window.devicePixelRatio": 2,
+                "Event.prototype.timeStamp": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "a9dbad1089a48e8a0265c775f31112eec5b18755018633993e440193ef39a0c8"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -511,10 +481,164 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "722db36b9ba2208f76b23d8e90f667cfcbe5e18c3db9d88b4ecee099e39a3226"
-            ],
+            "responseHashes": [],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/socket\\.io\\/",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "broadcaster"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df",
+                "e7c879484d28167d7dd6a8e8f12a718aaabe73851b82081abdc6a4bbfc8de54d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com",
+                "www.rit.edu"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2Q2CHA8X7VTS0VKNHGDNJV1+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f93a93f8beeb0aa928b1a08390525c116b589b024964a762fdbe81461366b4f6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2Q2CHA7CE8CQ9C0DNYE8418+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1cce25535c557aa782e1127738cf618d62701485ff19632404c183a1e406cd68"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2PFD8PXTT320CF9ER1JAAP7+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0332aae3f9b0098a45797fd6175327caf327cdf155e687ccba5fe71ce41ad8fe"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2PFD8PXTT320CF9ER1JAAP6+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "637039d44a1280a9f7d9ddce3f273b1efcb34eac6bd669fe2fbb869d4d6f4280"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2N7G77CPRVSJA7J4FEE8P32+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3f10a078a9b9a9431e260e32097eb9e77f1c7766cd5759bed042e5a528c33b97"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dvm360.com",
+                "www.dvm360.com"
+            ]
+        },
+        {
+            "rule": "walls\\.io\\/01K2N7G77CPRVSJA7J4FEE8P31+linkedin+default",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img-li-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "71c25f3125acdaa0972a749763e2b12e29c4c806c12b545e42122ededa29721c"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -525,7 +649,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
             "domain": "first party",
@@ -536,15 +660,16 @@
         "Script": 36,
         "Stylesheet": 4,
         "Ping": 6,
-        "WebSocket": 4,
+        "WebSocket": 3,
         "Other": 3,
+        "Document": 2,
         "XHR": 3,
-        "Document": 2
+        "Image": 12
     },
     "nameservers": [
         "ns-1519.awsdns-61.org",
-        "ns-2037.awsdns-62.co.uk",
         "ns-501.awsdns-62.com",
-        "ns-570.awsdns-07.net"
+        "ns-570.awsdns-07.net",
+        "ns-2037.awsdns-62.co.uk"
     ]
 }
