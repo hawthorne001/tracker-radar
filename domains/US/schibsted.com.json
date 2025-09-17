@@ -7,12 +7,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000684,
+    "prevalence": 0.0000685,
     "sites": 10,
     "subdomains": [
         "ncis",
         "static.privacy",
-        "session-service.login"
+        "hasher",
+        "session-service.login",
+        "sdk.pulse"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -51,9 +53,9 @@
             "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
-                "7e16e87a6a0b80a41e140813302193576748585b8cbfaa72213cf2041bdc36d5",
-                "9a80fec25a0565309cd134b5297c12e6b5fada46ddabdf39d96af811354e7e8b",
-                "ac4de2dc0686b0115e96422d02ea1130ffa35a20e8b8328f8f61a4725a247ab8"
+                "72038c48654a46545e0ee9d83069e58d2ed5a74272ec48462c3595f130e08888",
+                "f68f08a0070a9d4508b48f775217c50fd693047022870bb194319ab1cedfa93a",
+                "63bad5ef76dcbee6b2e6efc6fa94af3f1002a190ca8ea37e68a18f4812e35b6b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -74,7 +76,7 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.0000479,
+            "prevalence": 0.000048,
             "cnames": [],
             "responseHashes": [
                 "84255d24e92f853624bcd2f2fe8e69dcbc11742f62bdbf8b286bc4eb5881b116"
@@ -101,7 +103,7 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.0000479,
+            "prevalence": 0.000048,
             "cnames": [],
             "responseHashes": [
                 "dddb14fe0ef8a8f25b11b5fcac8a50f057b1123262fe11bccba21325178c72f0"
@@ -128,7 +130,7 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.0000479,
+            "prevalence": 0.000048,
             "cnames": [],
             "responseHashes": [
                 "53a98e310c4db79172f690c63752dac0230996667934dd7322dfbf5d861d9a1c"
@@ -139,11 +141,53 @@
             "exampleSites": [
                 "e24.no",
                 "omni.se",
-                "www.aftenbladet.no",
                 "www.aftenposten.no",
+                "www.aftenbladet.no",
                 "www.bt.no",
                 "www.godare.se",
                 "www.tv.nu"
+            ]
+        },
+        {
+            "rule": "schibsted\\.com\\/api\\/v1\\/hash",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hasher"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "de54c4f5bd8b957a537222e44f14e0a7e58f4201c3fb6a263cd69d31730a2855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e24.no",
+                "omni.se"
+            ]
+        },
+        {
+            "rule": "schibsted\\.com\\/api\\/v1\\/hash",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hasher"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e24.no",
+                "omni.se"
             ]
         },
         {
@@ -155,9 +199,11 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000206,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -175,11 +221,11 @@
                 "static.privacy"
             ],
             "apis": {
-                "PerformanceTiming.prototype.navigationStart": 5,
-                "Navigator.prototype.userAgent": 5
+                "PerformanceTiming.prototype.navigationStart": 6,
+                "Navigator.prototype.userAgent": 6
             },
-            "sites": 6,
-            "prevalence": 0.000041,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [],
             "responseHashes": [
                 "6c97d91feae26615d46b9c75bc728aa84b933fb9338c5a7e8656c20807109b39"
@@ -192,6 +238,7 @@
                 "www.aftenbladet.no",
                 "www.bt.no",
                 "www.godare.se",
+                "www.godt.no",
                 "www.tek.no",
                 "www.tv.nu"
             ]
@@ -205,7 +252,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "28885d54f98e4f35ce8e06ce3991dd4da7505ce771252465bbead57930a07778"
@@ -218,6 +265,60 @@
                 "www.godare.se",
                 "www.tv.nu"
             ]
+        },
+        {
+            "rule": "schibsted\\.com\\/versioned\\/3\\.3\\/loader\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk.pulse"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c761f99622dfe7a157c59e19af83475da1a3acabf2e94b277d1a1ab4e60bbb80"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godt.no",
+                "www.tek.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.com\\/versioned\\/3\\.3\\.7\\/pulse\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk.pulse"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "afa676001b608bb77c0fb1f3bfb49a9f3434e18a2b4821d9d1477e478c07c99e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godt.no",
+                "www.tek.no"
+            ]
         }
     ],
     "categories": [],
@@ -226,23 +327,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9482758620689655
+            "prevalence": 0.958904109589041
         },
         {
             "domain": "aftonbladet.se",
-            "prevalence": 0.05172413793103448
+            "prevalence": 0.0410958904109589
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 7,
+        "Preflight": 6,
+        "Fetch": 9,
         "Image": 24,
-        "Script": 6
+        "Script": 11
     },
     "nameservers": [
-        "ns-1082.awsdns-07.org",
+        "ns-182.awsdns-22.com",
         "ns-791.awsdns-34.net",
-        "ns-2019.awsdns-60.co.uk",
-        "ns-182.awsdns-22.com"
+        "ns-1082.awsdns-07.org",
+        "ns-2019.awsdns-60.co.uk"
     ]
 }

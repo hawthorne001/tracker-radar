@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000507,
+    "sites": 5,
     "subdomains": [
         "sdk",
         "auth"
@@ -24,18 +24,19 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
-            "responseHashes": [
-                "ae95d65ed739881e2be7fe34144b109a3bd949d9afea0223f12afc2f9cd95838"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miro.com",
-                "www.familysearch.org"
+                "www.eventbrite.fr",
+                "www.familysearch.org",
+                "www.zillow.com",
+                "zapier.com"
             ]
         },
         {
@@ -46,38 +47,24 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miro.com",
-                "www.familysearch.org"
-            ]
-        },
-        {
-            "rule": "split\\.io\\/api\\/v2\\/auth",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "auth"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [
-                "cc465d5fb49ea6c66b609f5578757e402698946e55a6071a06372f20d4d58ee6"
+                "2d03574cb88b07a5239c9434e75fc8a84be0aa348717c08376a5118e3868dca6",
+                "33427444c9ee3f03b9c4247ed277b0a2233249672d5595a6bbb3f6b2eeb92c5f",
+                "d5ea63cc1508155dc6139484fcace11f306eeb6aeb6e220944b4e6e571af8780",
+                "7999a92de378491dfe3b3b31db72ba7e3d10def734e752f5f20e92d8a2d49f66"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miro.com",
-                "www.familysearch.org"
+                "www.eventbrite.fr",
+                "www.familysearch.org",
+                "www.zillow.com",
+                "zapier.com"
             ]
         },
         {
@@ -88,8 +75,35 @@
                 "auth"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 5,
+            "prevalence": 0.000507,
+            "cnames": [],
+            "responseHashes": [
+                "12ef4a404385e1985e6e6ec150a998dd489324c57ced2b7f097f400e2626890e",
+                "62dec166e813b73094be6165319d4cba5a01fdcd7c8b8259da388cbb4c04e5f1",
+                "d00e189b1fa990db471be6f5ed0af9e048e62fd1b201d8b2f611ddb8fdea9c7f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miro.com",
+                "www.eventbrite.fr",
+                "www.familysearch.org",
+                "www.zillow.com",
+                "zapier.com"
+            ]
+        },
+        {
+            "rule": "split\\.io\\/api\\/v2\\/auth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -97,7 +111,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miro.com",
-                "www.familysearch.org"
+                "www.eventbrite.fr",
+                "www.familysearch.org",
+                "www.zillow.com",
+                "zapier.com"
+            ]
+        },
+        {
+            "rule": "split\\.io\\/api\\/memberships\\/dc87dbe5-d5a7-4408-86ad-176823468279",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "eca7f978478fad23a6c99f0bdd5c0bae1e683e04bd66e5bc3c2110f4f400ada9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zillow.com",
+                "www.zillow.com"
             ]
         }
     ],
@@ -106,22 +145,34 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "zapier-deployment.com",
+            "prevalence": 0.46875
+        },
+        {
             "domain": "fscdn.org",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.15625
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.15625
         },
         {
             "domain": "mirostatic.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.125
+        },
+        {
+            "domain": "eventbrite.com",
+            "prevalence": 0.09375
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 4
+        "Preflight": 10,
+        "Fetch": 12
     },
     "nameservers": [
-        "ns-1842.awsdns-38.co.uk",
-        "ns-335.awsdns-41.com",
         "ns-877.awsdns-45.net",
-        "ns-1183.awsdns-19.org"
+        "ns-1183.awsdns-19.org",
+        "ns-1842.awsdns-38.co.uk",
+        "ns-335.awsdns-41.com"
     ]
 }

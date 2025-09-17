@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
-        "cp-common"
+        "cp-common",
+        "kong-proxy-intranet"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,20 +24,43 @@
                 "cp-common"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "93af4ec97145fdc3e0d14e02d3ca29c1f9673d49e3f132231057490acd0be12e"
+                "9f0e174f3d42fdc968b02620d06b6b2e0df75845b7822fa35c1768a25ea7abbe"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "toyota.ch",
-                "fr.toyota.ch"
+                "fr.toyota.ch",
+                "garage.toyota.ch"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/dxp\\/toyota\\/ch\\/de\\/bin\\/api\\/dxp\\/i18n\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kong-proxy-intranet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d775e099bf1520cc0384afd1b8d488c5150f4de251edd618f327de69c7bb48a6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "garage.toyota.ch"
             ]
         }
     ],
@@ -50,11 +74,12 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns1.toyota-europe.com",
-        "pdns2.cscdns.net",
-        "pdns1.cscdns.net"
+        "ns2.netnames.net",
+        "ns1.netnames.net",
+        "ns1.toyota-europe.com"
     ]
 }

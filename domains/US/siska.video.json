@@ -4,14 +4,37 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
+    "prevalence": 0.0000206,
     "sites": 3,
     "subdomains": [
+        "www",
         "player"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "siska\\.video\\/category\\/French\\/233796625\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ff3c7adac41ba7521b62da80c7025f02731661b21bcf7641d7940bc32b6f3af8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siska.tv",
+                "xtime.video"
+            ]
+        },
         {
             "rule": "siska\\.video\\/js\\/websocket_ip\\.min\\.js",
             "cookies": 0,
@@ -20,7 +43,8 @@
                 "player"
             ],
             "apis": {
-                "RTCPeerConnection.prototype.constructor": 2
+                "RTCPeerConnection.prototype.constructor": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -165,6 +189,58 @@
             ]
         },
         {
+            "rule": "siska\\.video\\/js\\/script_33\\.11\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.screenLeft": 2,
+                "window.screenX": 2,
+                "window.screenTop": 2,
+                "window.screenY": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "13971a21e52963922af2a4ce68153931184b5404db0dcbb53233e441209ae0ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siska.tv",
+                "www.siska.tv"
+            ]
+        },
+        {
+            "rule": "siska\\.video\\/cdn-cgi\\/trace",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1f02c67b74c8e9d25844551bd5e33df9ffa02c283db4b796395974367239b2cb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siska.tv",
+                "www.siska.tv"
+            ]
+        },
+        {
             "rule": "siska\\.video\\/player\\/embed_player\\.php",
             "cookies": 0,
             "fingerprinting": 1,
@@ -178,7 +254,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7813a850f92ae6f54dbe42403371df385ae7e011ed6076fc58d7b2bbfbc422a7"
+                "e4a60d7a6f3599445e881629294d1efa3e08d1bf711cb40a7fa244ee4d3b0149"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -195,16 +271,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.975609756097561
+            "prevalence": 0.9583333333333334
         },
         {
             "domain": "unpkg.com",
-            "prevalence": 0.024390243902439025
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Script": 10,
+        "Image": 2,
+        "Script": 12,
         "Stylesheet": 2,
+        "XHR": 2,
         "Document": 2
     },
     "nameservers": [
