@@ -4,35 +4,15 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000405,
+    "sites": 4,
     "subdomains": [
-        "geoip.user.public",
-        "pushserver.prod.markets.public"
+        "pushserver.prod.markets.public",
+        "geoip.user.public"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "finanzen2\\.net\\/json\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "geoip.user.public"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "finanzen.net",
-                "www.finanzen.net"
-            ]
-        },
         {
             "rule": "finanzen2\\.net\\/socket\\.io\\/",
             "cookies": 0,
@@ -41,16 +21,41 @@
                 "pushserver.prod.markets.public"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000405,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "finanzen.net",
+                "businessinsider.com",
+                "www.finanzen.net",
+                "www.finanzen.at",
                 "www.finanzen.ch"
+            ]
+        },
+        {
+            "rule": "finanzen2\\.net\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.user.public"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d59270597c93741c41db7efa6d5513f125a136d1f49114925b59583d5ed63fe9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finanzen.net",
+                "www.finanzen.net",
+                "www.finanzen.at"
             ]
         }
     ],
@@ -60,12 +65,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "finanzen.ch",
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Fetch": 2,
-        "WebSocket": 2
+        "WebSocket": 4,
+        "Fetch": 3
     },
     "nameservers": [
         "ns1-05.azure-dns.com",

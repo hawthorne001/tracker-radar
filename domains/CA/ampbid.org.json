@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000204,
     "sites": 2,
     "subdomains": [
-        "hb"
+        "hb",
+        "tag"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,12 +22,56 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "9c5d2d5fd46982cb66f1d36041306a85400935add5075c10daf04f511c6f7d0c"
+                "73def71af046600486c1474734a319c94d6fdb21ef122a5c5d514b534cefd2d2"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/bid\\/static\\/load-cookie\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "a640f6295b8f8e123cb30fade058118aca17ce64fe9384da772b461bfa2b2c5f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/cookie_sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -45,7 +90,9 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Document": 2,
+        "XHR": 2
     },
     "nameservers": [
         "lara.ns.cloudflare.com",

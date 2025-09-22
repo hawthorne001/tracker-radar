@@ -4,34 +4,84 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000301,
+    "prevalence": 0.000303,
     "sites": 3,
     "subdomains": [
-        "static"
+        "static",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "gimii\\.fr\\/sdk\\.js",
+            "rule": "gimii\\.fr\\/gimii\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2
+            },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "08d0b76e1162dc3bc47b527769717cee2bcf8305d7b558989c46ae723582574a"
+                "fc17cc7a13b5ced899fc582797ec84b5adbfcbe5710d79f03317642dc77c2150"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "actugaming.net",
-                "www.medisite.fr"
+                "minecraft.fr",
+                "www.lesnumeriques.com"
+            ]
+        },
+        {
+            "rule": "gimii\\.fr\\/services",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d903220a0172fb4558804ff0503d05f4a8b4811b033d06e5f31e344c052b4ffd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.fr",
+                "www.lesnumeriques.com"
+            ]
+        },
+        {
+            "rule": "gimii\\.fr\\/sdk-1\\.7\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "52a2833a6e31a8e7fe472dac12e3db3d1a879fea651d136c5f11f35c3cc93332"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.fr",
+                "www.lesnumeriques.com"
             ]
         }
     ],
@@ -49,10 +99,11 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "kristin.ns.cloudflare.com",
-        "clayton.ns.cloudflare.com"
+        "clayton.ns.cloudflare.com",
+        "kristin.ns.cloudflare.com"
     ]
 }

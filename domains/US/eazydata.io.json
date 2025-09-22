@@ -12,14 +12,16 @@
     "resources": [
         {
             "rule": "eazydata\\.io\\/js\\/script\\.js",
-            "cookies": 0,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [],
             "apis": {
                 "Document.cookie getter": 2,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -28,7 +30,20 @@
                 "660decc2510082f52fd45f9a81ae2d25f2808318749f4ad80863d12940173388"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "ED_visitor_id": {
+                    "ttl": 31536007,
+                    "length": 36,
+                    "prevalence": 0.000013707267593277956,
+                    "uniqueness": 1
+                },
+                "ED_session_id": {
+                    "ttl": 1808,
+                    "length": 36,
+                    "prevalence": 0.000013707267593277956,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "godofprompt.ai",
@@ -55,6 +70,46 @@
         },
         {
             "rule": "eazydata\\.io\\/api\\/sessions\\/start",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "08e7f3007fa586af85d3ad653c5beb90908c045c114f7b052b83b9a7a7d5e365"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godofprompt.ai",
+                "www.godofprompt.ai"
+            ]
+        },
+        {
+            "rule": "eazydata\\.io\\/api\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godofprompt.ai",
+                "www.godofprompt.ai"
+            ]
+        },
+        {
+            "rule": "eazydata\\.io\\/api\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -63,7 +118,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -74,7 +129,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -83,8 +138,8 @@
     ],
     "types": {
         "Script": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "burt.ns.cloudflare.com",
