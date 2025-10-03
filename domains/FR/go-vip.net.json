@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000608,
+    "prevalence": 0.000609,
     "sites": 6,
     "subdomains": [
         "aleteia",
-        "time-com"
+        "time-com",
+        "nasa-tv"
     ],
     "cnames": [
         {
             "original": "api.time.com",
             "resolved": "time-com.go-vip.net"
+        },
+        {
+            "original": "plus.nasa.gov",
+            "resolved": "nasa-tv.go-vip.net"
         },
         {
             "original": "wp.fr.aleteia.org",
@@ -22,6 +27,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/6\\/2025\\/09\\/Gabrielle-Neuville-UNE\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aleteia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "wp.fr.aleteia.org",
+                    "resolved": "aleteia.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "1444c5c163c3b1851b1e60b040ba6696c5cdc2aabd404c6c8d3a83407050cf72"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aleteia.org",
+                "fr.aleteia.org"
+            ]
+        },
         {
             "rule": "go-vip\\.net\\/graphql",
             "cookies": 0,
@@ -44,7 +76,7 @@
                 }
             ],
             "responseHashes": [
-                "e75295c02804bee937c8f0e86d6ad29ccd09694b81d1f2e55093b582823cfdc0",
+                "312ba98dd5617579b18d658f56b33515cd927681fa53c92bf224ff357c8a2404",
                 "f3ddbf173ac41b807c1021f95aa590818b624c015e442f9864d83cc7c522a949"
             ],
             "type": "Fetch",
@@ -55,19 +87,42 @@
                 "fr.aleteia.org",
                 "time.com"
             ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-json\\/nasaplus\\/v1\\/live",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nasa-tv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "plus.nasa.gov",
+                    "resolved": "nasa-tv.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nasa.gov",
+                "www.nasa.gov"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0,
-    "topInitiators": [
-        {
-            "domain": "tinypass.com",
-            "prevalence": 1
-        }
-    ],
     "types": {
-        "Fetch": 3
+        "Image": 2,
+        "Fetch": 3,
+        "XHR": 2
     },
     "nameservers": [
         "ns1.go-vip.net",

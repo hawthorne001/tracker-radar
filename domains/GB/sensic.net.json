@@ -8,22 +8,25 @@
     "sites": 5,
     "subdomains": [
         "es-config",
-        "1758057233766499cb0dcd0c9d5424a2f2d25783c4bd93f72a00de39.trk",
-        "175805620041333d43953761f0444c2e4018371ee8f34dc419f1525c.trk",
-        "1758060346130d16997f0bd45533fd126019ba331e2506eab9303d78.trk",
-        "175805892841556a3b90795350e3032cc317d5fa93ddab1c8469aa1e.trk",
-        "17580554847639be54d896fb30cab1913e7f3b0bfc7a5afa0a8297bf.trk",
-        "es1-s2s"
+        "sg-config",
+        "17594438914390c61729b88f983f70bf969a14fba298dc7683a7c727.trk",
+        "1759445039339c0666cfa2cdff754f7ce402ea5f6d28fd610e91bdc3.trk",
+        "1759445720159206fe2b80362233846270d1ad2e704f50442ac8cc3f.trk",
+        "17594455386438d618bb266d58127226ece1be1135199cf982c4899e.trk",
+        "17594419969848a4f510f6b893997a499eec65a34fb6701d784d320d.trk",
+        "es1-s2s",
+        "sg2-s2s"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "sensic\\.net\\/s2s-web\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "cookies": 0.000101,
+            "fingerprinting": 2,
             "subdomains": [
-                "es-config"
+                "es-config",
+                "sg-config"
             ],
             "apis": {
                 "window.localStorage": 5,
@@ -31,35 +34,48 @@
                 "Navigator.prototype.maxTouchPoints": 5,
                 "Navigator.prototype.userAgent": 5,
                 "Navigator.prototype.platform": 5,
-                "Navigator.prototype.language": 5
+                "Navigator.prototype.language": 5,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 5,
             "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [
-                "329a1011b5222322375bfa20bad2635715951f1eb8af606ce3ecdc1d1af846d0"
+                "329a1011b5222322375bfa20bad2635715951f1eb8af606ce3ecdc1d1af846d0",
+                "77d899613e906622a905efb99f2f10ecd49d2a124a149aebd80ac4129841fb4b"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "sui_1pc": {
+                    "ttl": 63072018,
+                    "length": 56,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "elpais.com",
                 "en.as.com",
-                "english.elpais.com",
                 "www.marca.com",
+                "www.straitstimes.com",
                 "www.yourweather.co.uk"
             ]
         },
         {
             "rule": "sensic\\.net\\/3pc\\.html",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 1,
             "subdomains": [
-                "es-config"
+                "es-config",
+                "sg-config"
             ],
             "apis": {
+                "Document.cookie getter": 5,
                 "window.localStorage": 3,
-                "Document.cookie getter": 5
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
             },
             "sites": 5,
             "prevalence": 0.000507,
@@ -73,8 +89,8 @@
             "exampleSites": [
                 "elpais.com",
                 "en.as.com",
-                "english.elpais.com",
                 "www.marca.com",
+                "www.straitstimes.com",
                 "www.yourweather.co.uk"
             ]
         },
@@ -83,11 +99,11 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "1758057233766499cb0dcd0c9d5424a2f2d25783c4bd93f72a00de39.trk",
-                "175805620041333d43953761f0444c2e4018371ee8f34dc419f1525c.trk",
-                "1758060346130d16997f0bd45533fd126019ba331e2506eab9303d78.trk",
-                "175805892841556a3b90795350e3032cc317d5fa93ddab1c8469aa1e.trk",
-                "17580554847639be54d896fb30cab1913e7f3b0bfc7a5afa0a8297bf.trk"
+                "17594438914390c61729b88f983f70bf969a14fba298dc7683a7c727.trk",
+                "1759445039339c0666cfa2cdff754f7ce402ea5f6d28fd610e91bdc3.trk",
+                "1759445720159206fe2b80362233846270d1ad2e704f50442ac8cc3f.trk",
+                "17594455386438d618bb266d58127226ece1be1135199cf982c4899e.trk",
+                "17594419969848a4f510f6b893997a499eec65a34fb6701d784d320d.trk"
             ],
             "apis": {},
             "sites": 5,
@@ -102,8 +118,8 @@
             "exampleSites": [
                 "elpais.com",
                 "en.as.com",
-                "english.elpais.com",
                 "www.marca.com",
+                "www.straitstimes.com",
                 "www.yourweather.co.uk"
             ]
         },
@@ -112,7 +128,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "es1-s2s"
+                "es1-s2s",
+                "sg2-s2s"
             ],
             "apis": {},
             "sites": 5,
@@ -125,33 +142,64 @@
             "exampleSites": [
                 "elpais.com",
                 "en.as.com",
-                "english.elpais.com",
                 "www.marca.com",
+                "www.straitstimes.com",
                 "www.yourweather.co.uk"
+            ]
+        },
+        {
+            "rule": "sensic\\.net\\/id",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "es1-s2s",
+                "sg2-s2s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marca.com",
+                "www.straitstimes.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "sph.com.sg",
+            "prevalence": 0.4
+        },
+        {
             "domain": "adobedtm.com",
-            "prevalence": 0.5
+            "prevalence": 0.2
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2
         },
         {
             "domain": "prisamedia.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
         "Script": 5,
         "Document": 5,
-        "XHR": 5,
+        "XHR": 7,
         "Fetch": 5
     },
     "nameservers": [

@@ -12,7 +12,8 @@
     "subdomains": [
         "prod-main-datapipeline",
         "www",
-        "sentryv2"
+        "sentryv2",
+        "sli"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -41,17 +42,19 @@
         },
         {
             "rule": "zumper\\.com\\/",
-            "cookies": 0.00000685,
-            "fingerprinting": 0,
+            "cookies": 0.00000686,
+            "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "473989b943ecd13acdb56f24699c4898439ae72c439ef46c03cae3b4a8f330c7"
+                "60d2c14d7c947034e1e27ff8ca520c8bfe9d73325d3b5d8630eea89b3a1efc69"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -73,7 +76,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3dfbad731371322447dbd04d79663d530209218073f5455c2b4237d2f419666d"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -95,7 +98,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "03179e49aed66fdc3a7ac686a391b3f347d655cb80e206a3c01c76c20c275d49"
+                "0585d11555d0b7e69cfd445d46f6136a4abe3e5d24404b4bcb8a0a1a8faace4d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -117,7 +120,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "2e451f76bd23cce58a3601feed2e208262d938c9ca74af9510f6c54a20115a04"
+                "cd5ef0e94351d0da929c5078562449a2616e649fe510e6847dca944e40c6e88d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -139,7 +142,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5e6d50fe74b887aa23d156ffc5594dee42ea735254d684e5b735ddd0896e726b"
+                "5b5cb6e2105252e9162657c29525da875dd5f5a0802c475171c69ef89d21fdbe"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -150,8 +153,28 @@
             ]
         },
         {
-            "rule": "zumper\\.com\\/houses-for-rent\\/west-lafayette-in",
-            "cookies": 0.00000685,
+            "rule": "zumper\\.com\\/baker",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sli"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zumperrentals.com",
+                "www.zumperrentals.com"
+            ]
+        },
+        {
+            "rule": "zumper\\.com\\/houses-for-rent\\/platte-city-mo\\/pet-friendly",
+            "cookies": 0.00000686,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
@@ -163,7 +186,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "21104df169869c708cb9a186632313fbce0aaac6e123a013c98758afbf683aa9"
+                "67f17addd02c7aa7be4751532a9999e2196f02d139bd3156321c1e4d016dca8d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -174,7 +197,7 @@
             ]
         },
         {
-            "rule": "zumper\\.com\\/87b78d41-ea25-4d0b-9bef-011bbded5fa9",
+            "rule": "zumper\\.com\\/55164b7e-d619-4451-9152-b57df46e0ee7",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -202,20 +225,21 @@
     "topInitiators": [
         {
             "domain": "d214hhm15p4t1d.cloudfront.net",
-            "prevalence": 0.625
+            "prevalence": 0.6086956521739131
         },
         {
             "domain": "zumper.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.30434782608695654
         },
         {
             "domain": "liadm.com",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.08695652173913043
         }
     ],
     "types": {
         "Fetch": 10,
         "Document": 4,
+        "Image": 2,
         "Other": 2
     },
     "nameservers": [

@@ -4,14 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000411,
-    "sites": 6,
+    "prevalence": 0.000048,
+    "sites": 7,
     "subdomains": [
         "scw-hugendubel-de",
         "api--shop-prod-kik-de",
-        "push-ls--tc-de"
+        "push-ls--tc-de",
+        "analytics-php-net"
     ],
     "cnames": [
+        {
+            "original": "analytics.php.net",
+            "resolved": "analytics-php-net.ax4z.com"
+        },
         {
             "original": "api-shop.prod.kik.de",
             "resolved": "api--shop-prod-kik-de.ax4z.com"
@@ -50,35 +55,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ebook.de",
-                "www.hugendubel.de"
-            ]
-        },
-        {
-            "rule": "ax4z\\.com\\/fp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scw-hugendubel-de"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [
-                {
-                    "original": "scw.hugendubel.de",
-                    "resolved": "scw-hugendubel-de.ax4z.com"
-                }
-            ],
-            "responseHashes": [
-                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ebook.de",
-                "www.ebook.de",
+                "hugendubel.de",
                 "www.hugendubel.de"
             ]
         },
@@ -98,12 +75,14 @@
                     "resolved": "scw-hugendubel-de.ax4z.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ebook.de",
+                "hugendubel.de",
                 "www.hugendubel.de"
             ]
         },
@@ -149,7 +128,7 @@
                 }
             ],
             "responseHashes": [
-                "bd7050976ac6c3eed0aaff4d45d4c99f0cc96371118239d336cf7c57416e3b68"
+                "db189c16f1aced785b0da1887d6cc2ea405160e9e5fc40185c20cafe22e67798"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -183,6 +162,60 @@
                 "ls-tc.de",
                 "www.ls-tc.de"
             ]
+        },
+        {
+            "rule": "ax4z\\.com\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics-php-net"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "analytics.php.net",
+                    "resolved": "analytics-php-net.ax4z.com"
+                }
+            ],
+            "responseHashes": [
+                "dbefc0fa9b6b7680a9a1c1e5a0f0cc7c8ae3c41a7b15c206a144963cb36a073d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "php.net",
+                "www.php.net"
+            ]
+        },
+        {
+            "rule": "ax4z\\.com\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-php-net"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "analytics.php.net",
+                    "resolved": "analytics-php-net.ax4z.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "php.net",
+                "www.php.net"
+            ]
         }
     ],
     "categories": [],
@@ -190,16 +223,16 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
+            "domain": "googletagmanager.com",
             "prevalence": 1
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 5,
-        "Preflight": 2,
+        "Script": 4,
+        "XHR": 4,
         "Fetch": 2,
-        "WebSocket": 2
+        "WebSocket": 2,
+        "Ping": 2
     },
     "nameservers": [
         "c.ax4z.com",
