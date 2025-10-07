@@ -7,12 +7,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000808,
-    "sites": 8,
+    "prevalence": 0.000909,
+    "sites": 9,
     "subdomains": [
         "statista.eu",
         "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu",
         "danfoss-cd-rwxf4doanqtcbpwe.edge.tenants.eu",
+        "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
         "cdn"
     ],
     "cnames": [
@@ -21,8 +23,16 @@
             "resolved": "danfoss-cd-rwxf4doanqtcbpwe.edge.tenants.eu.auth0.com"
         },
         {
+            "original": "auth.androidauthority.com",
+            "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+        },
+        {
             "original": "auth.apollo.de",
             "resolved": "de-apollo-production-cd-0fmbq870scjfgl6r.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "auth.soundguys.com",
+            "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
         },
         {
             "original": "login.statista.com",
@@ -58,14 +68,11 @@
                 }
             ],
             "responseHashes": [
-                "b808c09280c4b52f23dd1d19720dba2652bce101184229082b03c3b3799ee303"
+                "f27ef5a445a233dbc136f9b15488f233f79385ec3f7f2536ad91f6429ba78d37"
             ],
             "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "tealium_data2track_Tags_AdobeAnalytics_TrafficSourceMid_ThisHit": 0.00010102030508132135,
-                "tealium_data_tags_adobeAnalytics_trafficSourceMid_thisSession": 0.00010102030508132135
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "statista.com",
                 "www.apollo.de",
@@ -124,6 +131,90 @@
             ]
         },
         {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "auth.androidauthority.com",
+                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "auth.soundguys.com",
+                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/lock\\/13\\.1\\.0\\/en\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cfb7df4155a0322b5a7afdebca4b397934de2101fbce7078201eec93a9720c93"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "auth.androidauthority.com",
+                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "auth.soundguys.com",
+                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "67c482243f604951ac751908daddf1a2b1b3f3cf9923d9526c2e2b25e909176d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.20\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -153,20 +244,22 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000505,
+    "cookies": 0.000606,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "grandvision.io",
-            "prevalence": 0.2
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "Document": 8,
-        "Script": 2
+        "Preflight": 2,
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

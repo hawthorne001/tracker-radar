@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000404,
-    "sites": 4,
+    "prevalence": 0.000505,
+    "sites": 5,
     "subdomains": [
-        "isgprivacy"
+        "isgprivacy",
+        "sports-global"
     ],
     "cnames": [
         {
@@ -22,6 +23,10 @@
         {
             "original": "production-cmp.isgprivacy.cbsi.com",
             "resolved": "isgprivacy.cbsi.map.fastly.net"
+        },
+        {
+            "original": "slc.cbssports.com",
+            "resolved": "sports-global.cbsi.map.fastly.net"
         }
     ],
     "fingerprinting": 1,
@@ -90,8 +95,8 @@
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "cdn.privacy.paramount.com",
@@ -106,7 +111,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cbsnews.com",
-                "www.cbsnews.com"
+                "www.cbsnews.com",
+                "www.cbssports.com"
             ]
         },
         {
@@ -117,8 +123,8 @@
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "cdn.privacy.paramount.com",
@@ -133,7 +139,60 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cbsnews.com",
-                "www.cbsnews.com"
+                "www.cbsnews.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "slc.cbssports.com",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "slc.cbssports.com",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "6320580e7b281be3e14b23e762ebe0d7cee029e6c7eec8e201fe5936906ff119"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
             ]
         }
     ],
@@ -148,20 +207,25 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.940677966101695
+        },
+        {
+            "domain": "cbsistatic.com",
+            "prevalence": 0.0423728813559322
         },
         {
             "domain": "paramount.com",
-            "prevalence": 0.25
+            "prevalence": 0.01694915254237288
         }
     ],
     "types": {
-        "Script": 8,
-        "Fetch": 2
+        "Script": 9,
+        "Fetch": 5,
+        "Preflight": 2
     },
     "nameservers": []
 }

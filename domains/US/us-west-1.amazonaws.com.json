@@ -9,15 +9,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0011,
-    "sites": 161,
+    "prevalence": 0.00114,
+    "sites": 166,
     "subdomains": [
         "gameon-static.s3",
+        "truemed-public.s3",
         "brcc-headless.s3",
         "zt6taxfu2g.execute-api",
         "soar-api-content-p.s3",
         "pmc-pp-tou.s3",
-        "truemed-public.s3",
         "w0a7cq3k2e.execute-api",
         "prod-ui-entry-widget-sta-createproduientrywidgetb-mi53q2gqfpif.s3",
         "pro-chatwoot-001.s3",
@@ -25,10 +25,12 @@
         "fievnbyjld.execute-api",
         "labg3uadr2.execute-api",
         "prod-buywith-public-scripts.s3",
-        "autelrobotics-offical-website.s3",
         "sd7sf8u3fj.execute-api",
+        "autelrobotics-offical-website.s3",
         "acropolis-wp-content-uploads.s3",
-        "awa-fred-hutch.s3",
+        "cognito-identity",
+        "cog-prod.s3",
+        "ideafyi.s3",
         "jboard-tenant.s3",
         "sborg-usscif1-scif.s3",
         "assets-videomaker-com.s3"
@@ -55,7 +57,44 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "wnba.com",
-                "www.toyotacenter.com"
+                "aces.wnba.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/truemed-ads\\/prequal-widget\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "truemed-public.s3"
+            ],
+            "apis": {
+                "window.localStorage": 13,
+                "Date.prototype.getTime": 11
+            },
+            "sites": 14,
+            "prevalence": 0.0000961,
+            "cnames": [],
+            "responseHashes": [
+                "4e3cf4ea72a09102fe0e92a7ceade830f3c9aefa9988fce6139b29ff0538855d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bidetking.com",
+                "dosedaily.co",
+                "gruns.co",
+                "nakednutrition.com",
+                "orthofeet.com",
+                "pendulumlife.com",
+                "sauna.space",
+                "thelumebox.com",
+                "www.bubsnaturals.com",
+                "www.equipfoods.com",
+                "www.iqair.com",
+                "www.maryruthorganics.com",
+                "www.orthofeet.com",
+                "www.wildfoods.co"
             ]
         },
         {
@@ -92,9 +131,9 @@
             "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
-                "cf491c9c61cf3943bf84cf875c717064e51ad2e604579733c24f98320c1afbf9",
-                "bea7bf0dc6c2ce5ddb3822c4cffa8bdcf84375b2836e53b1a25b4ade1ce6847f",
-                "827ae745570434d360ce03ecc876e9965036d00aea2b2aef8b3965c31bd0dd5d",
+                "4c515f9d3d372ce9e4132a7c9ed5ae2c794155a7f988c3ac7df488b03a09349c",
+                "9e0cb171be1fa570b411f84c31562ffadf29ef599b40de39d701f751c8037af9",
+                "713dc2820491cafae8facf94cf1b40bdcb681d214763f1db16a74164dd97c9b0",
                 "1291f112d6b7d17575f2fbe82c0fb706eaa7e25ed5672eb76361cbc05e0db1bf"
             ],
             "type": "Fetch",
@@ -186,7 +225,7 @@
                 "Document.cookie getter": 17
             },
             "sites": 18,
-            "prevalence": 0.000123,
+            "prevalence": 0.000124,
             "cnames": [],
             "responseHashes": [
                 "0448e1ecd300d740f6f91b5983c5c68795e2334ce4611b4c96663321eeb0801b"
@@ -253,41 +292,6 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/truemed-ads\\/prequal-widget\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "truemed-public.s3"
-            ],
-            "apis": {
-                "window.localStorage": 11,
-                "Date.prototype.getTime": 10
-            },
-            "sites": 12,
-            "prevalence": 0.0000822,
-            "cnames": [],
-            "responseHashes": [
-                "4e3cf4ea72a09102fe0e92a7ceade830f3c9aefa9988fce6139b29ff0538855d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dosedaily.co",
-                "gruns.co",
-                "nakednutrition.com",
-                "orthofeet.com",
-                "pendulumlife.com",
-                "thelumebox.com",
-                "www.bubsnaturals.com",
-                "www.equipfoods.com",
-                "www.iqair.com",
-                "www.maryruthorganics.com",
-                "www.orthofeet.com",
-                "www.wildfoods.co"
-            ]
-        },
-        {
             "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/auth\\/store",
             "cookies": 0,
             "fingerprinting": 0,
@@ -298,8 +302,10 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "b5c2e0a379eeb355924c2c6e096b95a9124b5e86d5e34295c03bc6adc03d732e"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -318,10 +324,8 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "b5c2e0a379eeb355924c2c6e096b95a9124b5e86d5e34295c03bc6adc03d732e"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -350,6 +354,112 @@
             ]
         },
         {
+            "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zt6taxfu2g.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "88f24644f00786e371f851c6a9839943e809a645ef1e97e6106bb6be67784422"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethoscannabis.com",
+                "thrivedispensaries.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zt6taxfu2g.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethoscannabis.com",
+                "thrivedispensaries.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zt6taxfu2g.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f26f53f34328814784ccfa7c25e74da683caf042791f903267abd0e975fa885b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethoscannabis.com",
+                "thrivedispensaries.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/retail\\/locations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zt6taxfu2g.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethoscannabis.com",
+                "thrivedispensaries.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/prod\\/retail\\/locations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zt6taxfu2g.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3e38f6d7cb1743a257529319c9a9dbe79746303350cba8d5f1a02eed53e19a87"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethoscannabis.com",
+                "thrivedispensaries.com"
+            ]
+        },
+        {
             "rule": "us-west-1\\.amazonaws\\.com\\/tags",
             "cookies": 0,
             "fingerprinting": 0,
@@ -357,15 +467,14 @@
                 "w0a7cq3k2e.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000411,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [],
             "responseHashes": [
                 "b65127afbde024ea044ab0a01639aa63a8d139485f1d913560dab64c4c0c5817",
+                "8cdffe95ab1f325529584ea77a26a9ead799b9443da404009a39cffd03bd9e59",
                 "2cc36e24ab003d3b14080787d91cb75dd7ceabce8481411763abc7e04bffd221",
-                "f39189e68abf5c698ec30a60d45d05d3101590134ede6a098858ea358a4bba1b",
-                "99f657af846b82e6ff80d942c897a3174a9b80023ede4df35257700bd47a1d6b",
-                "8cdffe95ab1f325529584ea77a26a9ead799b9443da404009a39cffd03bd9e59"
+                "99f657af846b82e6ff80d942c897a3174a9b80023ede4df35257700bd47a1d6b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -373,9 +482,10 @@
             "exampleSites": [
                 "heartandsoil.co",
                 "mmlafleur.com",
+                "smartpakequine.com",
                 "www.bareminerals.com",
-                "www.brooklinen.com",
                 "www.lauramercier.com",
+                "www.nestnewyork.com",
                 "www.smartpakequine.com"
             ]
         },
@@ -388,7 +498,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.0000411,
+            "prevalence": 0.0000412,
             "cnames": [],
             "responseHashes": [
                 "d8db70b02f777115f4bed3c2ee84caaa5bebc825d088af45243f8afa26b4d5a9"
@@ -399,8 +509,8 @@
             "exampleSites": [
                 "heartandsoil.co",
                 "mmlafleur.com",
+                "smartpakequine.com",
                 "www.bareminerals.com",
-                "www.brooklinen.com",
                 "www.lauramercier.com",
                 "www.smartpakequine.com"
             ]
@@ -416,13 +526,13 @@
                 "Navigator.prototype.product": 5,
                 "Navigator.prototype.userAgent": 5,
                 "window.localStorage": 5,
-                "Screen.prototype.height": 4,
-                "Screen.prototype.width": 4,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 4,
-                "window.innerHeight": 1
+                "Screen.prototype.height": 5,
+                "Screen.prototype.width": 5,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
+                "window.innerHeight": 2
             },
             "sites": 6,
-            "prevalence": 0.0000411,
+            "prevalence": 0.0000412,
             "cnames": [],
             "responseHashes": [
                 "ff85f42fbfb2e33af9681f3fd51f7b93f10b4bbe58b64509abfc1b10b96649b3"
@@ -433,8 +543,8 @@
             "exampleSites": [
                 "heartandsoil.co",
                 "mmlafleur.com",
+                "smartpakequine.com",
                 "www.bareminerals.com",
-                "www.brooklinen.com",
                 "www.lauramercier.com",
                 "www.smartpakequine.com"
             ]
@@ -447,26 +557,27 @@
                 "w0a7cq3k2e.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000411,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
-                "2e6d5a504e42d179f82146cd56af517e448d89383348402d2a87fddab3e6df1c",
-                "fca8ebad88f4db369438d29d6907c4b81fcc6318355577c50d268bbcd973362c",
-                "62af7c9e6035dc6b2951ad05811afad5cabcfbd803d96589a1001775cf27d065"
+                "e6cabb6a2605b6548c02113237c6989364db81656c52b40536070a290f7d7c14",
+                "62af7c9e6035dc6b2951ad05811afad5cabcfbd803d96589a1001775cf27d065",
+                "4bd923d0fd01706115846a432921aded2ce3f3b387821d534d884c935ecbd339",
+                "9a91458e01ed073aad39998afa5573a366aed1af70b40797a65f7d7ed8a5c31d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.000013707267593277956,
-                "_li_dcdm_c": 0.000006853633796638978
+                "IR_gbd": 0.000006862287612198402,
+                "dy_fs_page": 0.000013724575224396804,
+                "_li_dcdm_c": 0.000006862287612198402
             },
             "exampleSites": [
                 "heartandsoil.co",
                 "mmlafleur.com",
+                "smartpakequine.com",
                 "www.bareminerals.com",
-                "www.brooklinen.com",
-                "www.lauramercier.com",
                 "www.smartpakequine.com"
             ]
         },
@@ -487,15 +598,15 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.000013707267593277956,
-                "_li_dcdm_c": 0.000006853633796638978,
-                "dy_fs_page": 0.000013707267593277956
+                "IR_gbd": 0.000006862287612198402,
+                "dy_fs_page": 0.000013724575224396804,
+                "_li_dcdm_c": 0.000006862287612198402
             },
             "exampleSites": [
                 "heartandsoil.co",
+                "mmlafleur.com",
+                "smartpakequine.com",
                 "www.bareminerals.com",
-                "www.brooklinen.com",
-                "www.lauramercier.com",
                 "www.smartpakequine.com"
             ]
         },
@@ -599,10 +710,8 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "42475c311b1962f6287eeb277908b1c10531761440c5b82239cda9c4d9c5073f"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -621,8 +730,10 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "9dfb5676085d31517336097c9d95e3e5ff87e38aaab9a282c0ce9a015f06e3c7"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -675,6 +786,90 @@
             ]
         },
         {
+            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd7sf8u3fj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartpakequine.com",
+                "www.smartpakequine.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd7sf8u3fj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartpakequine.com",
+                "www.smartpakequine.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd7sf8u3fj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartpakequine.com",
+                "www.smartpakequine.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd7sf8u3fj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartpakequine.com",
+                "www.smartpakequine.com"
+            ]
+        },
+        {
             "rule": "us-west-1\\.amazonaws\\.com\\/statics\\/cdn\\/EVO+Max+4T\\/EVO+Max+4T+Full+TVC\\.mp4",
             "cookies": 0,
             "fingerprinting": 0,
@@ -707,8 +902,10 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -727,10 +924,8 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -825,169 +1020,183 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2jz1acaZ6MmtMjICJIGeOWpOHpy\\/events\\/user",
+            "rule": "us-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brooklinen.com",
-                "www.brooklinen.com"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2jz1acaZ6MmtMjICJIGeOWpOHpy\\/events\\/user",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "brooklinen.com",
-                "www.brooklinen.com"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/splash\\/2025\\.09\\/02\\/awa95_splash\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "awa-fred-hutch.s3"
+                "cognito-identity"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "eb19e8ba3bb4bcbe7edc526cb8b41257d3f309f672f2b20aa841e27d0da443d7"
+                "0666c3723e3215277b6c5b01da1765519ab6b247d6822aa1e7d2333b80112684"
             ],
-            "type": "Stylesheet",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fredhutch.org",
-                "www.fredhutch.org"
+                "civilbeat.org",
+                "www.civilbeat.org"
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/splash\\/2025\\.09\\/02\\/awa95_splash\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
-            "subdomains": [
-                "awa-fred-hutch.s3"
-            ],
-            "apis": {
-                "Navigator.prototype.maxTouchPoints": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "24a57bb14ce5d9c5c53c85840aaaa3929cd2a4683bcdacd6b9439990d6c41259"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "splash-250910": {
-                    "ttl": 86404,
-                    "length": 1,
-                    "prevalence": 0.000013707267593277956,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fredhutch.org",
-                "www.fredhutch.org"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/splash\\/2025\\.09\\/02\\/logo\\.png",
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Facebook\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "awa-fred-hutch.s3"
+                "cog-prod.s3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c14737972b8719ecd6b0961105969a78a6ad42f6802aae3de4cb611017c145b4"
+                "227ecc0240b78f873f294a99c8ae8a356ac0bf61ef1599cf70429e064da45179"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fredhutch.org",
-                "www.fredhutch.org"
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/splash\\/2025\\.09\\/02\\/sky-line\\.png",
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Instagram\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "awa-fred-hutch.s3"
+                "cog-prod.s3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "9476260e3a31b851ae4d4e627aad5156120ab40200bab167af32e941e6daaa3e"
+                "95784d003984ac3e704c93a52e5e73e01e334e035c521a3abb014ee0885ec59f"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fredhutch.org",
-                "www.fredhutch.org"
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/splash\\/2025\\.09\\/02\\/CTA_White\\.png",
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Tripadvisor\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "awa-fred-hutch.s3"
+                "cog-prod.s3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "75b7527a4f43a0f266c853f05ed403d79533bc68b25fc1d5f8a929e7004ba53a"
+                "f334aaae503600e533f8b6e5ec823ff7c92cf2b90636260fc53a98a5596f69e8"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fredhutch.org",
-                "www.fredhutch.org"
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/yZwGSNYG2DuE3PJu56kMBI5GcrwrAhWY5GsAbLkh\\.png",
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Amex\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cog-prod.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4a57f7a8591f98e0b69b4efa4909437be109f8a59c6afb0e4cadff9f567f9305"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Mastercard\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cog-prod.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d7bd354dcfb19af8874f0167f87a247928393c7a918b5c24cce575c0a3e64797"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/social\\/Visa\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cog-prod.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "015c0341278beedd75ee7059c0faa614243573ba92e350f97671437d77959bb1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cloudofgoods.com",
+                "www.cloudofgoods.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/bmtemplates\\/t13\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ideafyi.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "84d1fe6aba0c46da6aff4fa9594acf2bb5dd8d947fe65ae3361ecfff74632e69"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oozelife.com",
+                "www.oozelife.com"
+            ]
+        },
+        {
+            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/eqckpT8PPRnMfM1xYuGL0yj0hVcUVhPavcgBIvmd\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -998,7 +1207,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "6262f592458f909e5d98e8ba266219b288cb108fb05551c8009843b0d240acc9"
+                "aad6428522f653eeb07552407398a77a53dbc056feca53b2731236972cd2e281"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1009,7 +1218,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/CXQj4Gui8Xih8OKote84tSgZmLioFyvFCSrN6Sm7\\.png",
+            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/pFS0ecZetH65kPsHokTOqFCPdBkpEQsFprR26HKF\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1020,7 +1229,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7dbc622f9aad910b06c18e411629670e8dc903b80505498af3dd3e40ea675e5a"
+                "c746a343ecff8fc07f259156d02208ff027bda1efbdb495e0a9935f7aa75fc96"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1031,7 +1240,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/5TZmwDHnZbcDhRzUV0WPPqWzCRpD2PTLpOzXmzkV\\.jpg",
+            "rule": "us-west-1\\.amazonaws\\.com\\/employers\\/usVyi47O7s9p9aDCmY5Vd6L0g47WZEsLjBtbSb5B\\.jpeg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1042,7 +1251,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7543f7f935fda0ad1870f38f3bfc3cfca42e5e72f825048cdd7867db28870a2e"
+                "bf3ef2cd7434b5c66d576814dfcd165587fff29c57e7f4ad7c42e6ce8a837a1f"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1050,90 +1259,6 @@
             "exampleSites": [
                 "pedestrian.tv",
                 "www.pedestrian.tv"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events\\/user",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "smartpakequine.com",
-                "www.smartpakequine.com"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events\\/user",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "smartpakequine.com",
-                "www.smartpakequine.com"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "smartpakequine.com",
-                "www.smartpakequine.com"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/brands\\/2URMfnN1UzpyW7K7zqQgEXzqYvL\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd7sf8u3fj.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "smartpakequine.com",
-                "www.smartpakequine.com"
             ]
         },
         {
@@ -1247,7 +1372,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/images\\/2025-07\\/back-to-school-vaccine-clinics-event-thumbnail\\.jpg",
+            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/images\\/2025-08\\/event_calendar_image_1\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1258,7 +1383,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c5ac0d4551f21ada5cf7a0ff30bfa6128b843c891458520c0ae36be13521b057"
+                "f6aa479e730802d1882b558ec4c0e2303dd767f2624cdd56fc3257c1136ec21e"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1269,7 +1394,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/images\\/2020-11\\/piggy-moneybox-with-dollar-cash\\.jpg",
+            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/images\\/2025-02\\/boardgroupshot2025_web\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1280,7 +1405,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "35ad1bf3eb26cace0e71899c655fe68d7643c55ab50d1306186ba5acb991115e"
+                "9eaea776a83b98980bfbc78c5855726aaefaee4115dfa42599891e444101cee9"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1291,7 +1416,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/styles\\/card_grid\\/public\\/images\\/2025-09\\/hispanicheritagemonth\\.jpeg",
+            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/styles\\/card_grid\\/public\\/images\\/2025-09\\/rabies-awareness-card-grid\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1302,7 +1427,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "4a6ab7abd2d9528784a9fb4b675e6f0b80c5658cefca62b3c5448020d38c44d9"
+                "cc27c79109328e75540ab0af1a5d658700803afebb70ad26d3d78a71152b4e67"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1313,7 +1438,7 @@
             ]
         },
         {
-            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/styles\\/card_grid\\/public\\/images\\/2020-11\\/Landing%20Pag_0\\.jpeg",
+            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/styles\\/card_grid\\/public\\/images\\/2024-12\\/oak_view_exercise_walk_2024-52\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1324,29 +1449,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "de91117669b081c55e1fdfac276ca4c5759412a27e5354d48c5bbfea2417d239"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wake.gov",
-                "www.wake.gov"
-            ]
-        },
-        {
-            "rule": "us-west-1\\.amazonaws\\.com\\/wakegov\\.com\\.if-us-west-1\\/s3fs-public\\/styles\\/card_grid\\/public\\/images\\/2025-08\\/Grant%20Funding_thumbnail\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e23a62b221b6940e5a582d1681147e7d9c313d0f17d9a91bf53db3a368a740ef"
+                "345e39ff23c0ae272f6e494ee7cf9be1dc17f7b954dfd4fec3206e0eea85865e"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1361,66 +1464,66 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9367875647668393
-        },
-        {
-            "domain": "gethumankind.com",
-            "prevalence": 0.01865284974093264
+            "prevalence": 0.9287305122494433
         },
         {
             "domain": "terpli.io",
-            "prevalence": 0.013471502590673576
+            "prevalence": 0.024498886414253896
+        },
+        {
+            "domain": "gethumankind.com",
+            "prevalence": 0.021158129175946547
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.0051813471502590676
-        },
-        {
-            "domain": "yottaa.com",
-            "prevalence": 0.004145077720207254
-        },
-        {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.004145077720207254
+            "prevalence": 0.0033407572383073497
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.0031088082901554403
+            "prevalence": 0.0033407572383073497
         },
         {
             "domain": "gameontechnology.com",
-            "prevalence": 0.002072538860103627
+            "prevalence": 0.0022271714922048997
         },
         {
             "domain": "hubspotusercontent-na1.net",
-            "prevalence": 0.002072538860103627
+            "prevalence": 0.0022271714922048997
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.0022271714922048997
         },
         {
             "domain": "iubenda.com",
-            "prevalence": 0.002072538860103627
+            "prevalence": 0.0022271714922048997
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0022271714922048997
         }
     ],
     "types": {
-        "Stylesheet": 29,
-        "Image": 43,
-        "Fetch": 13,
-        "Preflight": 21,
+        "Stylesheet": 27,
         "Script": 42,
-        "XHR": 29,
+        "Image": 49,
+        "Fetch": 16,
+        "Preflight": 23,
+        "XHR": 32,
         "Media": 2
     },
     "nameservers": [
-        "ns2.amzndns.com",
-        "ns2.amzndns.org",
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
         "ns1.amzndns.net",
         "ns1.amzndns.org",
-        "ns1.amzndns.com",
         "ns2.amzndns.co.uk",
-        "ns1.amzndns.co.uk",
-        "ns2.amzndns.net"
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }

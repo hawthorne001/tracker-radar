@@ -7,7 +7,8 @@
     "prevalence": 0.0000274,
     "sites": 4,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "event"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -34,30 +35,52 @@
             "type": "Script",
             "firstPartyCookies": {
                 "syft.anonymous_id": {
-                    "ttl": 31536005,
+                    "ttl": 31536006,
                     "length": 42,
-                    "prevalence": 0.000013707267593277956,
+                    "prevalence": 0.000013724575224396804,
                     "uniqueness": 1
                 },
                 "syft.source_touch": {
-                    "ttl": 86405,
+                    "ttl": 86406,
                     "length": 2,
-                    "prevalence": 0.000013707267593277956,
+                    "prevalence": 0.000013724575224396804,
                     "uniqueness": 0.5
                 },
                 "syft.initial_source_touch": {
-                    "ttl": 2592005,
+                    "ttl": 2592006,
                     "length": 2,
-                    "prevalence": 0.000013707267593277956,
+                    "prevalence": 0.000013724575224396804,
                     "uniqueness": 0.5
                 },
                 "syft.session": {
-                    "ttl": 31536025,
-                    "length": 164,
-                    "prevalence": 0.000013707267593277956,
+                    "ttl": 31536026,
+                    "length": 158,
+                    "prevalence": 0.000013724575224396804,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spacelift.io",
+                "www.heygen.com"
+            ]
+        },
+        {
+            "rule": "syftdata\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "spacelift.io",
@@ -71,11 +94,16 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "posthog.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "seth.ns.cloudflare.com",

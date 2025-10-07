@@ -4,20 +4,23 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00122,
-    "sites": 12,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
-        "cnous-matomo",
-        "stats.beta-gouv",
         "stats.anct",
-        "reporterre-stats",
-        "stats.ad76",
+        "stats.illeetvilaine",
+        "stats.beta-gouv",
         "stats.lyon",
-        "matomo.wp.afnor",
+        "stats.gironde",
         "stats.crous",
-        "stats.gironde"
+        "cnous-matomo",
+        "reporterre-stats"
     ],
     "cnames": [
+        {
+            "original": "matomo.ille-et-vilaine.fr",
+            "resolved": "stats.illeetvilaine.cloud-ed.fr"
+        },
         {
             "original": "matomo.incubateur.anct.gouv.fr",
             "resolved": "stats.anct.cloud-ed.fr"
@@ -34,31 +37,133 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "cloud-ed\\.fr\\/matomo\\.js",
+            "cookies": 0.00071,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats.anct",
+                "stats.illeetvilaine",
+                "stats.beta-gouv",
+                "stats.lyon",
+                "stats.gironde",
+                "stats.crous"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.name": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.mimeTypes": 3,
+                "Navigator.prototype.javaEnabled": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.platform": 3,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.doNotTrack": 1
+            },
+            "sites": 7,
+            "prevalence": 0.00071,
+            "cnames": [
+                {
+                    "original": "matomo.incubateur.anct.gouv.fr",
+                    "resolved": "stats.anct.cloud-ed.fr"
+                },
+                {
+                    "original": "matomo.ille-et-vilaine.fr",
+                    "resolved": "stats.illeetvilaine.cloud-ed.fr"
+                },
+                {
+                    "original": "stats.beta.gouv.fr",
+                    "resolved": "stats.beta-gouv.cloud-ed.fr"
+                }
+            ],
+            "responseHashes": [
+                "dbefc0fa9b6b7680a9a1c1e5a0f0cc7c8ae3c41a7b15c206a144963cb36a073d",
+                "1953717439b44b808d7e5e2d4a4f4f8a5723d453763318498b544a05cc30ed35"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.27.6b80": {
+                    "ttl": 33955204,
+                    "length": 28,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                },
+                "_pk_ses.27.6b80": {
+                    "ttl": 1804,
+                    "length": 1,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                },
+                "_pk_id.1.620b": {
+                    "ttl": 33955203,
+                    "length": 28,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                },
+                "_pk_ses.1.620b": {
+                    "ttl": 1802,
+                    "length": 1,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                },
+                "_pk_id.1.cd6a": {
+                    "ttl": 33955206,
+                    "length": 28,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                },
+                "_pk_ses.1.cd6a": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.00010147133434804668,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anct.gouv.fr",
+                "archives.ille-et-vilaine.fr",
+                "filigrane.beta.gouv.fr",
+                "lesbases.anct.gouv.fr",
+                "www.bm-lyon.fr",
+                "www.gironde.fr",
+                "www.lescrous.fr"
+            ]
+        },
+        {
             "rule": "cloud-ed\\.fr\\/matomo\\.php",
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
+                "stats.anct",
+                "stats.illeetvilaine",
                 "cnous-matomo",
                 "stats.beta-gouv",
-                "stats.anct",
                 "reporterre-stats",
-                "stats.ad76",
                 "stats.lyon",
-                "matomo.wp.afnor",
-                "stats.crous",
-                "stats.gironde"
+                "stats.gironde",
+                "stats.crous"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 9,
+            "prevalence": 0.000913,
             "cnames": [
-                {
-                    "original": "stats.beta.gouv.fr",
-                    "resolved": "stats.beta-gouv.cloud-ed.fr"
-                },
                 {
                     "original": "matomo.incubateur.anct.gouv.fr",
                     "resolved": "stats.anct.cloud-ed.fr"
+                },
+                {
+                    "original": "matomo.ille-et-vilaine.fr",
+                    "resolved": "stats.illeetvilaine.cloud-ed.fr"
+                },
+                {
+                    "original": "stats.beta.gouv.fr",
+                    "resolved": "stats.beta-gouv.cloud-ed.fr"
                 },
                 {
                     "original": "stats.reporterre.net",
@@ -72,158 +177,65 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "etudiant.gouv.fr",
+                "anct.gouv.fr",
+                "archives.ille-et-vilaine.fr",
+                "cvec.etudiant.gouv.fr",
                 "filigrane.beta.gouv.fr",
                 "lesbases.anct.gouv.fr",
                 "reporterre.net",
-                "www.archivesdepartementales76.net",
                 "www.bm-lyon.fr",
-                "www.boutique.afnor.org",
-                "www.crous-paris.fr",
                 "www.gironde.fr",
                 "www.lescrous.fr"
             ]
         },
         {
-            "rule": "cloud-ed\\.fr\\/matomo\\.js",
-            "cookies": 0.000709,
-            "fingerprinting": 2,
+            "rule": "cloud-ed\\.fr\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "stats.beta-gouv",
-                "stats.anct",
-                "stats.lyon",
-                "matomo.wp.afnor",
-                "stats.crous",
-                "stats.gironde"
+                "reporterre-stats"
             ],
-            "apis": {
-                "Document.cookie getter": 5,
-                "window.name": 5,
-                "NavigatorUAData.prototype.brands": 5,
-                "NavigatorUAData.prototype.platform": 5,
-                "NavigatorUAData.prototype.getHighEntropyValues": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Navigator.prototype.mimeTypes": 5,
-                "Navigator.prototype.javaEnabled": 5,
-                "Navigator.prototype.cookieEnabled": 5,
-                "Screen.prototype.width": 5,
-                "Screen.prototype.height": 5,
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.platform": 5,
-                "Document.cookie setter": 5,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.doNotTrack": 1
-            },
-            "sites": 7,
-            "prevalence": 0.000709,
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "stats.beta.gouv.fr",
                     "resolved": "stats.beta-gouv.cloud-ed.fr"
                 },
                 {
-                    "original": "matomo.incubateur.anct.gouv.fr",
-                    "resolved": "stats.anct.cloud-ed.fr"
+                    "original": "stats.reporterre.net",
+                    "resolved": "reporterre-stats.cloud-ed.fr"
                 }
             ],
             "responseHashes": [
-                "dbefc0fa9b6b7680a9a1c1e5a0f0cc7c8ae3c41a7b15c206a144963cb36a073d",
-                "6bc19b89bcb794b96aca1e553433abda595ca08e643fc80afbf09498506172b9"
+                "e692be287f1938a9d68e8b171a8142c801fb81e7aea0b39514ced13a7a860cb3"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "_pk_id.27.6b80": {
-                    "ttl": 33955204,
-                    "length": 28,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_ses.27.6b80": {
-                    "ttl": 1804,
-                    "length": 1,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_id.6.a75f": {
-                    "ttl": 33955203,
-                    "length": 28,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_ses.6.a75f": {
-                    "ttl": 1803,
-                    "length": 1,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_id.21.e2e5": {
-                    "ttl": 33955207,
-                    "length": 28,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_ses.21.e2e5": {
-                    "ttl": 1806,
-                    "length": 1,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_id.1.620b": {
-                    "ttl": 33955203,
-                    "length": 28,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_ses.1.620b": {
-                    "ttl": 1802,
-                    "length": 1,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_id.1.cd6a": {
-                    "ttl": 33955203,
-                    "length": 28,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                },
-                "_pk_ses.1.cd6a": {
-                    "ttl": 1803,
-                    "length": 1,
-                    "prevalence": 0.00010133765707336846,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "beta.gouv.fr",
-                "lesbases.anct.gouv.fr",
-                "www.bm-lyon.fr",
-                "www.boutique.afnor.org",
-                "www.crous-paris.fr",
-                "www.gironde.fr",
-                "www.lescrous.fr"
+                "reporterre.net"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00101,
+    "cookies": 0.000913,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 1
         }
     ],
     "types": {
-        "Ping": 10,
-        "Script": 7
+        "Script": 9,
+        "Ping": 9
     },
     "nameservers": [
-        "dns3.vtech.fr",
-        "dns0.vtech.fr"
+        "dns0.vtech.fr",
+        "dns3.vtech.fr"
     ]
 }

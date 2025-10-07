@@ -4,14 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000048,
-    "sites": 7,
+    "prevalence": 0.0000549,
+    "sites": 8,
     "subdomains": [
         "prod-fed-bff.orangehill-05b6c905.eastus",
+        "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral",
         "de-mag-gtm-sst-container--6d73sq6.mangofield-510b8134.germanywestcentral",
-        "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral"
+        "nl-pw-app-gwc-gtm-prod.graypebble-8ad87480.germanywestcentral",
+        "api.kindwave-998fb605.eastus"
     ],
     "cnames": [
+        {
+            "original": "backend2.spoken.io",
+            "resolved": "api.kindwave-998fb605.eastus.azurecontainerapps.io"
+        },
         {
             "original": "de-mag-sgtm.data.plantura.garden",
             "resolved": "de-mag-gtm-sst-container--6d73sq6.mangofield-510b8134.germanywestcentral.azurecontainerapps.io"
@@ -19,6 +25,10 @@
         {
             "original": "de-sgtm.data.plantura.garden",
             "resolved": "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral.azurecontainerapps.io"
+        },
+        {
+            "original": "metrics.pricewise.nl",
+            "resolved": "nl-pw-app-gwc-gtm-prod.graypebble-8ad87480.germanywestcentral.azurecontainerapps.io"
         }
     ],
     "fingerprinting": 1,
@@ -35,7 +45,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "72a69de2c2e8730473b6c4889745dfdefa5a5b4712eb535b93db358b3ad9931e"
+                "372a248abe66eef124cdedc6f2bf9db84efcfbddae1bc79201668173edefcc52"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -47,23 +57,28 @@
         },
         {
             "rule": "azurecontainerapps\\.io\\/g\\/collect",
-            "cookies": 0,
+            "cookies": 0.00000686,
             "fingerprinting": 0,
             "subdomains": [
+                "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral",
                 "de-mag-gtm-sst-container--6d73sq6.mangofield-510b8134.germanywestcentral",
-                "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral"
+                "nl-pw-app-gwc-gtm-prod.graypebble-8ad87480.germanywestcentral"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [
+                {
+                    "original": "de-sgtm.data.plantura.garden",
+                    "resolved": "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral.azurecontainerapps.io"
+                },
                 {
                     "original": "de-mag-sgtm.data.plantura.garden",
                     "resolved": "de-mag-gtm-sst-container--6d73sq6.mangofield-510b8134.germanywestcentral.azurecontainerapps.io"
                 },
                 {
-                    "original": "de-sgtm.data.plantura.garden",
-                    "resolved": "de-gtm-sst-container--t7blqw4.mangofield-510b8134.germanywestcentral.azurecontainerapps.io"
+                    "original": "metrics.pricewise.nl",
+                    "resolved": "nl-pw-app-gwc-gtm-prod.graypebble-8ad87480.germanywestcentral.azurecontainerapps.io"
                 }
             ],
             "responseHashes": [
@@ -71,33 +86,64 @@
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.000006862287612198402
+            },
             "exampleSites": [
                 "plantura.garden",
-                "www.plantura.garden"
+                "www.plantura.garden",
+                "www.pricewise.nl"
+            ]
+        },
+        {
+            "rule": "azurecontainerapps\\.io\\/api\\/graphql",
+            "cookies": 0.00000686,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.kindwave-998fb605.eastus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "backend2.spoken.io",
+                    "resolved": "api.kindwave-998fb605.eastus.azurecontainerapps.io"
+                }
+            ],
+            "responseHashes": [
+                "f384b706cfd35afd9f7539120a754626240f29e73c0c6bf071a4265b81e2ae58"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spoken.io",
+                "www.spoken.io"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.5
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 5,
+        "XHR": 2
     },
     "nameservers": [
+        "ns1-37.azure-dns.com",
         "ns2-37.azure-dns.net",
         "ns3-37.azure-dns.org",
-        "ns1-37.azure-dns.com",
         "ns4-37.azure-dns.info"
     ]
 }

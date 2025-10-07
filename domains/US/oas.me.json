@@ -8,7 +8,8 @@
     "sites": 2,
     "subdomains": [
         "p",
-        "mautic"
+        "mautic",
+        "matomo"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -58,7 +59,7 @@
             ]
         },
         {
-            "rule": "oas\\.me\\/tour\\/public\\/legacy\\/js\\/old-e6cb87b64869c3e95705\\.js",
+            "rule": "oas\\.me\\/tour\\/public\\/legacy\\/js\\/old-d6230e3ef338810b45ea\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -73,7 +74,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5a575f5dc22f90790620818a8dca7937c53ee9c572f2aba2faa3e1a567b3e216"
+                "4ebb27f6b6e7ee9cd84f4145c59b3568d2e6bebae48f7cb82abc8f6b544c1c0f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -420,6 +421,56 @@
             ]
         },
         {
+            "rule": "oas\\.me\\/matomo\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "matomo"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d6e4a56dc9b760f4aab10fa9df737523826bd80205b5ba03cb8fe641d488bd5e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.8.2125": {
+                    "ttl": 33955203,
+                    "length": 28,
+                    "prevalence": 0.000013724575224396804,
+                    "uniqueness": 1
+                },
+                "_pk_ses.8.2125": {
+                    "ttl": 1803,
+                    "length": 1,
+                    "prevalence": 0.000013724575224396804,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onlytease.com",
+                "www.onlytease.com"
+            ]
+        },
+        {
             "rule": "oas\\.me\\/tour\\/public\\/assets\\/img\\/footer\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
@@ -487,28 +538,6 @@
         },
         {
             "rule": "oas\\.me\\/mtc\\/event",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mautic"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "12213f05de1cd507d84f5c8959f6780bcbd47aff785a74d5c31c81508a14ce87"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "onlytease.com",
-                "www.onlytease.com"
-            ]
-        },
-        {
-            "rule": "oas\\.me\\/mtc\\/event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -520,6 +549,50 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onlytease.com",
+                "www.onlytease.com"
+            ]
+        },
+        {
+            "rule": "oas\\.me\\/mtc\\/event",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mautic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "07bc7065b53cd915537f1605306ead62b502af7a77b36540d69d77415c9497c7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onlytease.com",
+                "www.onlytease.com"
+            ]
+        },
+        {
+            "rule": "oas\\.me\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "matomo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -583,11 +656,12 @@
     ],
     "types": {
         "Stylesheet": 10,
-        "Script": 14,
+        "Script": 16,
         "Image": 12,
         "Font": 10,
+        "Preflight": 2,
         "XHR": 2,
-        "Preflight": 2
+        "Ping": 2
     },
     "nameservers": [
         "alla.ns.cloudflare.com",

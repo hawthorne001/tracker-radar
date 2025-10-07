@@ -8,11 +8,11 @@
     "sites": 2,
     "subdomains": [
         "analytics",
-        "targeting",
-        "a"
+        "a",
+        "targeting"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "vdo\\.ai\\/logger",
@@ -37,20 +37,29 @@
             ]
         },
         {
-            "rule": "vdo\\.ai\\/allowed_url\\.php",
+            "rule": "vdo\\.ai\\/core\\/dependencies_hbv4_latest\\/vdo\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "targeting"
+                "a"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "MediaSource.isTypeSupported": 2
+            },
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "63559771af1ce8c8534b0c06eb732a05e80c5491a482b0967a2a1614c813daea"
+                "11ed07b6466fae3050c66df134bf26fbd2df33ad4cfe3437e5eed6951a36bfe6"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -76,9 +85,31 @@
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "3500054a91de38a097eabb7dc16ebdef9aba082e89c329bfea2459d722eeb045"
+                "4fbe273b135c50a2020189e52a43b21e545f0ff0f27b2ab70227cf3dede4faa5"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "celebritate.com",
+                "ricksfreeautorepairadvice.com"
+            ]
+        },
+        {
+            "rule": "vdo\\.ai\\/allowed_url\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "targeting"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "20fcd1f8c2d4cbf462503a697f72ec138ec2e73c8168eddf46acb006d04bf0c5"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -93,24 +124,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6428571428571429
-        },
-        {
-            "domain": "imasdk.googleapis.com",
-            "prevalence": 0.21428571428571427
-        },
-        {
-            "domain": "doubleclick.net",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.6
         },
         {
             "domain": "publir.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.2
+        },
+        {
+            "domain": "imasdk.googleapis.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
         "XHR": 4,
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
         "art.ns.cloudflare.com",
