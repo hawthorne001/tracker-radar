@@ -10,38 +10,15 @@
     "prevalence": 0.00366,
     "sites": 36,
     "subdomains": [
-        "logs",
         "rum",
+        "logs",
+        "session-replay",
         "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "logs"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000407,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "7news.com.au",
-                "polymarket.com",
-                "www.foxnews.com",
-                "www.foxsports.com"
-            ]
-        },
-        {
             "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
             "cookies": 0,
             "fingerprinting": 0,
@@ -49,119 +26,62 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 29,
-            "prevalence": 0.00295,
+            "sites": 30,
+            "prevalence": 0.00305,
             "cnames": [],
             "responseHashes": [
-                "7ac28e972a6bd010eb8f532af5759a046f10a6eab25d75a4f977e0de58f4ac67",
-                "d1bdaec6bbecc0086f90fe2ec1b48acb7886c42a2d5c6be92841177503df6ddb",
-                "238c26a877617bb47424f750506d25dadf87ce13c8904e582266708bb08e7b70",
-                "ef1162bb8a9d3f28f64107e245320f8b0c1ab4df9779f9a8bbca6be9e9212ca5",
-                "5a4a7e1220e3d7e3bdef5ac9f9d2ec3c92221b4428100268860d4aea49aa10ba",
-                "7af0a2607025996c6648c564433090e449696acc60e8d83c51c33b36b339f834",
-                "40db3456e42c855d85db2f6bc9afb973b30969c56bb47495b657c41414ea0e19",
-                "ecbc17c5b301a29359066265861e14ff27db0b555e68ee87df151d6e4c053709",
-                "afb0717f5dad84f9a43f2df6835546db674738c5a8f4013a2fbf0a601bf28970",
-                "57631977c0c0285aa19f935c166b4a2e0996a7d23d6fbbf847e7f6d47fea8442",
-                "b10079b82e968ab919eb9a80ef279c568f9c7896ce3ac5cfea60745844d81fda",
-                "573fb5f0a32c4bba66f478df6bf8ba316ee906a1f3d2976df551b2b0339604c6",
-                "1c9e37dd65cdb0efd2398b799692e1302cb4dc20254c92ea8693869fc4450640",
-                "5424824ce2cb79e999dac9a66be87ea16e7aa6ff12455076431cd5e5f2259e60",
-                "845cf5d6536d54706c5e6bc1ee13e429ac8d9338baaf4e96895f768b725a3b51",
-                "f31dbe4e848d7446d5487da2f18f3458d1febd2427287aedc041c039a216c019",
-                "629bb4c2d134f1a4eeecd9589570246c0f21e7c97162561580f8624992ac2a34",
-                "031f53ab5b6c2c680ac2321ef2d2f68740473dc610782cd9afd71bfd453729de",
-                "355ace581c410cd9a06bb358ad2ad34971a6e9079b3bc7d0d8c1ebea880fb5ea",
-                "4d666b8422f6b57824dfac67327828600f15cf968f7f98429ca148146347a437",
-                "d532d916b5e6cd221319803ab40eb5fac0a396a9000ba9854fcd2cc00777970d",
-                "62712e0adfc136642590840bb04e702157dae7aa6cd9793fd1f2bff193f3ee7c",
-                "25cda56c665a0310d045b8102a832c5bc0e6622d074e646b2513385455829c8f",
-                "818267bfdeecc866fc2f95534e59928e48fa3029ccb224b5453dbafd1112bb51",
-                "d53f8401ed87da99420e6f11172e62c9914cc3327ddc1b4f013eef28c261f84d",
-                "1f3bf7f6aa4851fafe1eab3f26ac06a89a22ad9d2df0fa32930027d3db05379e"
+                "a0bd9ee01f878bc1d42bd98f0a27c772b8e1eed3c4853fd1e513b2d054e4fd8f",
+                "cc7f432cf44e176f2621959290aaaee62b5f445c7414837f3dfecdd2804da964",
+                "3cdcec35e1f926d7084cd42256d91868219d0981da964101790b74085741d99d",
+                "89966c0e7cbc634e2cd71572067ebbbdf5f24c809690c0ce5240c10efec89679",
+                "abcb8f2c1b24989878d7fb15fd1128c5445f99fbdd70e7af0ac7c302480e3d60",
+                "6ca8640b5d49973631882e772f475da37d318346765609cace2e36623ee68cbc",
+                "3a78d32c4348e7487fb1d825965c520c9d2a1c4af3a7faaf907add84b38092f5",
+                "eae6a7c143709b2453abd08039ae594e800e0873b8b7bd5d219c38866d619f6e",
+                "f79423ab4c49c1b5a73c460a014ef37d31e573ffec787fbab2af0e48ce81febe",
+                "f9ff25b3340033d4ee0df7fd2b26e368e0a6dce91b870abff0befc1909eb09be",
+                "e1e68476d94be1de4dcc8da3c1a81a1992f4336c89e0f6b1984362315263b655",
+                "5c69658664cbe0fb68d50108df2a3d771f6b18600115d4783c6a66e5212421da",
+                "85894abb269b3d028d33cfc77e084bb6f0095705829d3167d236ada283aff507",
+                "4d5db1d62cca71c2c49f29dc82bd3d8b1fb7ec76b64e2c0fb6278c9b26819a5a",
+                "1d459f76c6f13baa938d6808c25ec36438f099233447adb60842062b15d4242e",
+                "e95ff58e38d49037721b54f7841c31cea9ecc9114c890d5b7d3561ed986e4b23",
+                "fe003b3781ebdf52098f2fc8b1125ea5e5feb601c8e12abaab625e2580052e87",
+                "148e84539df45d871291ebaca0ee8f42efa14c078aa0086d64ff424b1805650c",
+                "1bab2eda35aae2ebb9bfa077837b2899bb429bdb5a5fbe209c6df7c0cf8813da",
+                "6f8ccc8950da0ecd0b95098353c7f7c912a0e22f2033d9e84bea050b92fda94d",
+                "5846f692c41d9b1e9b29b35de418bbad87d6c78a92ab1a81e0086d042b198a9f",
+                "2714257465f048ca816f701fd678fcbe52b3bf9e6b66b9ac54b5f2027b6add2d",
+                "04f9bad52e9114e1ab98c0dac1a11440a79f740e84d23567c7718359ae7686d2",
+                "8fee1e9a88f8737807fa636bff772f3d0287951acb679c063a55816ccf4d2214",
+                "120119ce0557385f924f669c9d76eea730e23132eb0ea142cf82499e55f99ecd",
+                "0006ee60c7873be0f99a4671b6595291f70a410209d54c225adfbcf369aaa1eb",
+                "2106fca4fe9ff74722ac39024cc4f82a946d5b8b7882e79ef9debd908a0dd759"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.nytimes.com",
-                "developer.hashicorp.com",
-                "scotts.com",
-                "clickup.com",
+                "vimeo.com",
                 "www.redfin.com",
                 "www.clutch.ca",
-                "weedmaps.com",
-                "asana.com",
+                "www.nerdwallet.com",
+                "lolesports.com",
+                "407etr.com",
+                "www.staplescopyandprint.ca",
+                "www.resmed.com",
+                "zapier.com",
+                "www.everand.com",
+                "muckrack.com",
+                "www.zdnet.com",
+                "my.waveapps.com",
                 "www.siriusxm.com",
-                "www.skimag.com",
-                "www.redfin.ca",
-                "www.cbinsights.com",
-                "rivian.com",
-                "openai.com",
-                "www.experian.com",
-                "www.firehousesubs.ca",
-                "www.harryrosen.com",
                 "picsart.com",
                 "www.twilio.com",
-                "muckrack.com"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 10,
-            "prevalence": 0.00102,
-            "cnames": [],
-            "responseHashes": [
-                "6f78f7b6a24f03895d1660d8a5be251c60231631575f06141b99bf084a926d7c",
-                "ecc85cee51ccebf4dc556f33f364149bed374d5d625f726979223a8b23f3fbcf",
-                "ae357fffa091274b78058cd69b8f9f2032ca81f1230ab2ff5ae36dc698a37a6d",
-                "ff971f9052abf80fd6318300ec279b78df2430a5a77176e8dc43fc68b1954e52",
-                "3f3454575920c39afcaf2b35a729dc5a8726dc2d8b048dfca0047e666e2f0bd1",
-                "96f6ac9b7ee11eec88e9fb03806835d9533f1cd4d8f859a4bdf4310bd844edf5",
-                "833e9516e2b2f5577dc0153c38a7be64b47e3a79ae38607309be2befbd53ce06",
-                "885908a5634e4d27aa9b6134600b8deb97954f63677605ba0ba4af0aa48c5864"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "asana.com",
-                "clickup.com",
-                "developer.hashicorp.com",
-                "openai.com",
-                "squareup.com",
-                "weedmaps.com",
-                "www.nerdwallet.com",
-                "www.nytimes.com",
-                "www.redfin.ca",
-                "www.redfin.com"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
-            "cnames": [],
-            "responseHashes": [
-                "27c751bc44be74c425f0254a52dcbe14a7c81ec2a3494adda716a4ded46159de"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "squareup.com",
-                "www.experian.com",
-                "www.resmed.com"
+                "tech.yahoo.com",
+                "www.cbinsights.com",
+                "www.clubmonaco.ca",
+                "www.ispot.tv"
             ]
         },
         {
@@ -190,16 +110,95 @@
                 "logs"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.000407,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "63acfed6948067b5f37feb075ce5235eec024eb55e4f3076a8bebe5c9c905c4a",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxnews.com",
-                "www.foxsports.com"
+                "7news.com.au",
+                "polymarket.com",
+                "www.foxnews.com",
+                "www.outsideonline.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000611,
+            "cnames": [],
+            "responseHashes": [
+                "77357b06ce4c68e08f3e0eb9a99e76a1289c06738b1a328d22304205db15b2b5",
+                "1d9dbf97500f2b23abf3f2fa8301efb646ae5958c2ecb67019f62d967134f243",
+                "738e49dfd318c4efb71202caa2d54583a0c81c7516c384e22fe5e6e56194ce56",
+                "32aae4a705281e06da5e05dce49d213f549abb08323f6513fe98a058cb3f8ab2",
+                "cdc49384ab3e015f5d12cc8688f23ff41cec2ed76b85ad10e3a2e3296c2f63a3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "openai.com",
+                "squareup.com",
+                "www.nerdwallet.com",
+                "www.redfin.ca",
+                "www.redfin.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "212fc70fe3f5fd5019e0a5cbf5d97cdc68d955273039bac0d2db13137b4bb68b",
+                "280cfc5ce8f4d12be4252e55388f7672f6f56415785f7053816e2ca7a79751a3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staplescopyandprint.ca",
+                "squareup.com",
+                "www.staplescopyandprint.ca"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "89093691a4a68db8c76be436016b0082f43103d1fc8524a3415d0f8649c26276",
+                "738d2e80734db2ce5772db053fee865691a3efe3a800ccceee8de1341081c26c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "squareup.com",
+                "www.resmed.com",
+                "www.zdnet.com"
             ]
         },
         {
@@ -232,38 +231,45 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6719817767653758
-        },
-        {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.1571753986332574
+            "prevalence": 0.44930875576036866
         },
         {
             "domain": "squarecdn.com",
-            "prevalence": 0.07061503416856492
+            "prevalence": 0.2511520737327189
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.15207373271889402
         },
         {
             "domain": "cdn-redfin.com",
-            "prevalence": 0.05922551252847381
+            "prevalence": 0.059907834101382486
         },
         {
             "domain": "zapier-deployment.com",
-            "prevalence": 0.029612756264236904
+            "prevalence": 0.03225806451612903
+        },
+        {
+            "domain": "vimeocdn.com",
+            "prevalence": 0.02534562211981567
+        },
+        {
+            "domain": "d3av5bodnsz3cl.cloudfront.net",
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "scribd.com",
-            "prevalence": 0.009111617312072893
+            "prevalence": 0.01152073732718894
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.002277904328018223
+            "domain": "gammacdn.com",
+            "prevalence": 0.002304147465437788
         }
     ],
     "types": {
-        "Fetch": 36,
-        "XHR": 10,
+        "Fetch": 37,
         "Ping": 2,
-        "Preflight": 2,
+        "XHR": 9,
         "Other": 3
     },
     "nameservers": [

@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000404,
+    "sites": 4,
     "subdomains": [
-        "js"
+        "js",
+        "app"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,12 +21,12 @@
                 "js"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Document.cookie getter": 3
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "d97decc062f1652771b006c6ed1cae0e41659d207bc80eb9da78195e32222b66"
@@ -34,8 +35,101 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "checkin.no",
-                "event.checkin.no"
+                "calendly.com",
+                "event.checkin.no",
+                "www.sonarsource.com",
+                "www.zoominfo.com"
+            ]
+        },
+        {
+            "rule": "navattic\\.com\\/api\\/visitors\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "event.checkin.no",
+                "www.sonarsource.com",
+                "www.zoominfo.com"
+            ]
+        },
+        {
+            "rule": "navattic\\.com\\/api\\/visitors\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "cc5b4fbe0bff13668a7dfd988b7d37152c17dbac9a79dc395eaece025e10936f",
+                "bbbf979a5a9d5c078c0a2d38d97227659ee0737abe46701d6c5e1f83fa12e31d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "event.checkin.no",
+                "www.sonarsource.com",
+                "www.zoominfo.com"
+            ]
+        },
+        {
+            "rule": "navattic\\.com\\/api\\/visitors\\/config\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "event.checkin.no",
+                "www.sonarsource.com"
+            ]
+        },
+        {
+            "rule": "navattic\\.com\\/api\\/visitors\\/config\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "event.checkin.no",
+                "www.sonarsource.com"
             ]
         }
     ],
@@ -45,18 +139,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.625
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         },
         {
             "domain": "cookiebot.com",
-            "prevalence": 0.5
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Preflight": 7,
+        "Fetch": 7
     },
     "nameservers": [
-        "ns1.vercel-dns.com",
-        "ns2.vercel-dns.com"
+        "ns1.vercel-dns-2.com",
+        "ns2.vercel-dns-2.com"
     ]
 }

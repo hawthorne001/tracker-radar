@@ -9,10 +9,16 @@
     "subdomains": [
         "api",
         "web",
-        "js"
+        "js",
+        "telemetry"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "login.vondy.com",
+            "resolved": "telemetry.stytch.com"
+        }
+    ],
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "stytch\\.com\\/sdk\\/v1\\/projects\\/bootstrap\\/public-token-live-848af8b7-b86f-4547-89a6-6436f313322f",
@@ -46,7 +52,7 @@
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "5b784e2ca5bfde087fd37ba7b1107823e8e9dd4665445845b94336eb23b57ed5"
+                "0e67b7407a3c27242d91a195e7eaf7838187f30b2898580bd23aed72c9e420b1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -54,28 +60,6 @@
             "exampleSites": [
                 "apartmenttherapy.com",
                 "www.thekitchn.com"
-            ]
-        },
-        {
-            "rule": "stytch\\.com\\/sdk\\/v1\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api",
-                "web"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "apartmenttherapy.com",
-                "www.thekitchn.com",
-                "www.vondy.com"
             ]
         },
         {
@@ -97,6 +81,28 @@
             "exampleSites": [
                 "apartmenttherapy.com",
                 "www.apartmenttherapy.com",
+                "www.thekitchn.com",
+                "www.vondy.com"
+            ]
+        },
+        {
+            "rule": "stytch\\.com\\/sdk\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api",
+                "web"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apartmenttherapy.com",
                 "www.thekitchn.com",
                 "www.vondy.com"
             ]
@@ -159,7 +165,7 @@
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "cb1f02bb39e7e70f40c08f04687b31b2056fab63edc00642439ab4affc3305ac"
+                "1ee64bb58b6c574b324d3548cc543073a5e1d801873ab4434614c343fec08424"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -167,6 +173,56 @@
             "exampleSites": [
                 "apartmenttherapy.com",
                 "www.thekitchn.com"
+            ]
+        },
+        {
+            "rule": "stytch\\.com\\/submit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "telemetry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "login.vondy.com",
+                    "resolved": "telemetry.stytch.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vondy.com",
+                "www.vondy.com"
+            ]
+        },
+        {
+            "rule": "stytch\\.com\\/submit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "telemetry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "login.vondy.com",
+                    "resolved": "telemetry.stytch.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vondy.com",
+                "www.vondy.com"
             ]
         }
     ],
@@ -176,19 +232,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7647058823529411
+        },
+        {
+            "domain": "stytch.com",
+            "prevalence": 0.23529411764705882
         }
     ],
     "types": {
         "Preflight": 5,
-        "Fetch": 8,
+        "Fetch": 10,
         "Document": 2,
-        "Script": 2
+        "Script": 2,
+        "Other": 2
     },
     "nameservers": [
         "ns-2013.awsdns-59.co.uk",
-        "ns-521.awsdns-01.net",
+        "ns-217.awsdns-27.com",
         "ns-1320.awsdns-37.org",
-        "ns-217.awsdns-27.com"
+        "ns-521.awsdns-01.net"
     ]
 }

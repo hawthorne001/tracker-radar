@@ -12,7 +12,8 @@
     "prevalence": 0.000607,
     "sites": 6,
     "subdomains": [
-        "isgprivacy"
+        "isgprivacy",
+        "sports-global"
     ],
     "cnames": [
         {
@@ -22,6 +23,10 @@
         {
             "original": "production-cmp.isgprivacy.cbsi.com",
             "resolved": "isgprivacy.cbsi.map.fastly.net"
+        },
+        {
+            "original": "slc.cbssports.com",
+            "resolved": "sports-global.cbsi.map.fastly.net"
         }
     ],
     "fingerprinting": 1,
@@ -141,6 +146,58 @@
                 "www.cbsnews.com",
                 "www.cbssports.com"
             ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "slc.cbssports.com",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "slc.cbssports.com",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "e6219c4ec3f533c7c821fac15321735c2f54cec7807d518c0b13a231cc2c4305"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
         }
     ],
     "categories": [
@@ -158,24 +215,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9495798319327731
+            "prevalence": 0.9274193548387096
         },
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.025210084033613446
+            "prevalence": 0.04838709677419355
         },
         {
             "domain": "southparkstudios.com",
-            "prevalence": 0.01680672268907563
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "paramount.com",
-            "prevalence": 0.008403361344537815
+            "prevalence": 0.008064516129032258
         }
     ],
     "types": {
         "Script": 9,
-        "Fetch": 3
+        "Fetch": 5,
+        "Preflight": 2
     },
     "nameservers": []
 }

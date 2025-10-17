@@ -4,14 +4,35 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000305,
-    "sites": 3,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
-        "staging-i"
+        "staging-i",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "lgrckt-in\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "staging-i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "logrocket.com",
+                "blog.logrocket.com"
+            ]
+        },
         {
             "rule": "lgrckt-in\\.com\\/i",
             "cookies": 0,
@@ -35,23 +56,30 @@
             ]
         },
         {
-            "rule": "lgrckt-in\\.com\\/i",
+            "rule": "lgrckt-in\\.com\\/logger-1\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "staging-i"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "URL.createObjectURL": 1
+            },
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "35844e5ae3099b379a504794d8274629a99177d22ea373eee7bb22d73fb730d9"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "logrocket.com",
-                "blog.logrocket.com"
+                "thepointsguy.com",
+                "www.joinchargeback.com"
             ]
         }
     ],
@@ -65,8 +93,9 @@
         }
     ],
     "types": {
+        "Preflight": 2,
         "XHR": 2,
-        "Preflight": 2
+        "Script": 2
     },
     "nameservers": [
         "dan.ns.cloudflare.com",

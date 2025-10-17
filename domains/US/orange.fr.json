@@ -10,9 +10,16 @@
     "prevalence": 0.00000686,
     "sites": 1,
     "subdomains": [
-        "api-elcos-tech"
+        "api-elcos-tech",
+        "sso",
+        "datalayer"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "sso.sosh.fr",
+            "resolved": "sso.orange.fr"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -36,6 +43,55 @@
                 "sosh.fr",
                 "www.sosh.fr"
             ]
+        },
+        {
+            "rule": "orange\\.fr\\/pushms\\/advise\\/mct\\/1\\.1\\/proposal",
+            "cookies": 0.00000686,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "sso.sosh.fr",
+                    "resolved": "sso.orange.fr"
+                }
+            ],
+            "responseHashes": [
+                "51c184255edc56d4a92a264fa5378a4ebe8ef1969368520bbb6bbf3a079f1080"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datalayer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7e999cac7a4766f1083aef4aa361c1b79aaa2455b3e6d79466ed23a9db402c0c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "www.sosh.fr"
+            ]
         }
     ],
     "categories": [],
@@ -52,10 +108,11 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Ping": 2,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns2.orange.fr",
-        "ns1.orange.fr"
+        "ns1.orange.fr",
+        "ns2.orange.fr"
     ]
 }
