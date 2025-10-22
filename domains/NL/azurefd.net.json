@@ -9,19 +9,18 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.00435,
-    "sites": 43,
+    "prevalence": 0.00445,
+    "sites": 44,
     "subdomains": [
+        "ccleanermhub-bjhybxceamebajhe.a03",
+        "avgcommhub-dmhac3ehf8cpayd8.a03",
         "vlk-prd-fd-eqf4bbh6apbrgxd5.z01",
         "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
+        "cbs-nl-cdn-prod-fcbefdgmereag0hn.a01",
         "production-cdn-g8ava2fqd8bxaebc.a03",
         "drupal-cdn-hfaeddcdbng5hfbg.a01",
-        "aviramhub-a2dfbvbedqbda7av.a03",
-        "avgcommhub-dmhac3ehf8cpayd8.a03",
-        "ccleanermhub-bjhybxceamebajhe.a03",
-        "bc-global-fd-aca3f5abefe4c4af.z01",
-        "micron-corp-prod-h4hzbwhxa8hpchbs.a02",
-        "fde-web-prd-001-gdegamg8eeebbuf9.z01",
+        "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+        "hbpulse",
         "mh-p-we-cds-app-01-azeqc6ererh2hhdq.z01",
         "vattenfallnl-fd-prd-oekduh244thlg-gyecekath5gzg4d4.a03"
     ],
@@ -31,16 +30,20 @@
             "resolved": "mh-p-we-cds-app-01-azeqc6ererh2hhdq.z01.azurefd.net"
         },
         {
-            "original": "assets.micron.com",
-            "resolved": "micron-corp-prod-h4hzbwhxa8hpchbs.a02.azurefd.net"
-        },
-        {
             "original": "cdn.basispoort.nl",
             "resolved": "production-cdn-g8ava2fqd8bxaebc.a03.azurefd.net"
         },
         {
+            "original": "cdn.cbs.nl",
+            "resolved": "cbs-nl-cdn-prod-fcbefdgmereag0hn.a01.azurefd.net"
+        },
+        {
             "original": "cdn.vattenfall.nl",
             "resolved": "vattenfallnl-fd-prd-oekduh244thlg-gyecekath5gzg4d4.a03.azurefd.net"
+        },
+        {
+            "original": "content.www.handelsblatt.com",
+            "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
         },
         {
             "original": "etm.evivanlanschot.nl",
@@ -55,24 +58,50 @@
             "resolved": "avgcommhub-dmhac3ehf8cpayd8.a03.azurefd.net"
         },
         {
-            "original": "mhubc.avira.com",
-            "resolved": "aviramhub-a2dfbvbedqbda7av.a03.azurefd.net"
-        },
-        {
             "original": "mhubc.ccleaner.com",
             "resolved": "ccleanermhub-bjhybxceamebajhe.a03.azurefd.net"
         },
         {
-            "original": "static2.bellen.com",
-            "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-        },
-        {
-            "original": "static2.poliswijzer.nl",
-            "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
+            "original": "norkon.handelsblatt.com",
+            "resolved": "hbpulse.azurefd.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "azurefd\\.net\\/script\\/mhubc\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ccleanermhub-bjhybxceamebajhe.a03",
+                "avgcommhub-dmhac3ehf8cpayd8.a03"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "mhubc.ccleaner.com",
+                    "resolved": "ccleanermhub-bjhybxceamebajhe.a03.azurefd.net"
+                },
+                {
+                    "original": "mhubc.avg.com",
+                    "resolved": "avgcommhub-dmhac3ehf8cpayd8.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "680813c7f6c34091c4e8bd66aed29138f1b6a8a384b557a6d73246e2832d7fd5",
+                "3cd6d64d61788f176d2f8dc67d11a7adac8620e5b1a7eed4acf6e25b1ca0770e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ccleaner.com",
+                "www.avg.com",
+                "www.ccleaner.com"
+            ]
+        },
         {
             "rule": "azurefd\\.net\\/gtm\\.js",
             "cookies": 0.000303,
@@ -95,8 +124,8 @@
                 }
             ],
             "responseHashes": [
-                "5507cc5744245556c908e9eb7ea9bdd13d760bcbfb6714090d19ef3d75de303f",
-                "2c49b66239a8711b07bdeb13989f442fa9fba100fd0ea6ea7cf542d6beccc994"
+                "575be8285c00a196dab836dd6bfd661d097e35454f1a39bf3679d5489f7b38c6",
+                "e8dc17a9952b1c61ef0d6f9928c17bec22edb156f8e563bb3ab2f755fc941b7d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -108,7 +137,34 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/login\\/static\\/runtime\\.7787946\\.js",
+            "rule": "azurefd\\.net\\/cdn\\/images\\/favicon\\.ico",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cbs-nl-cdn-prod-fcbefdgmereag0hn.a01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.cbs.nl",
+                    "resolved": "cbs-nl-cdn-prod-fcbefdgmereag0hn.a01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs.nl",
+                "www.cbs.nl"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/login\\/static\\/runtime\\.5ae6cfb\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -124,7 +180,7 @@
                 }
             ],
             "responseHashes": [
-                "440892557ba665c92d9a13bd4b284e4840cd21dde73c64d27f47a857d86aa918"
+                "ca17cb667f09abd35ed1a9eb7d0cd66ae7429781b4e6f9771df52c2814c9debf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -162,7 +218,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/login\\/static\\/vendors\\/app\\.0d0f958\\.js",
+            "rule": "azurefd\\.net\\/login\\/static\\/vendors\\/app\\.9249a4a\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
@@ -178,7 +234,7 @@
                 }
             ],
             "responseHashes": [
-                "4f1f7f12ca0b2a69342959a773b0747a9daf77e3969918c4ee94023e42aecc43"
+                "45b37983457b95f5ecfef9ab5285074dae2225888957658ab6762ab3a14b7fb4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -189,7 +245,7 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/login\\/static\\/app\\.9492529\\.js",
+            "rule": "azurefd\\.net\\/login\\/static\\/app\\.16b61e9\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -205,7 +261,7 @@
                 }
             ],
             "responseHashes": [
-                "6ad311f61ae63908382bee779d0c415743214f40480afa205a1c848fa1ccb62d"
+                "474e64103a7790cf49377c49802d419acc4d40faa4d93cdabdeea12aa8d95928"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -394,7 +450,7 @@
                 }
             ],
             "responseHashes": [
-                "d734880097e328669eed28f3095d1b0c8e6530b21275d93ae8a7b931e9fe44ea"
+                "d9c5eee63a7190daa35d411270e9fdbacc1031d82ddd068c5720479c2de99765"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -432,6 +488,33 @@
             ]
         },
         {
+            "rule": "azurefd\\.net\\/login\\/static\\/workbox-v5\\.1\\.4\\/workbox-sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-cdn-g8ava2fqd8bxaebc.a03"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.basispoort.nl",
+                    "resolved": "production-cdn-g8ava2fqd8bxaebc.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "0decf6a9a4ec82bb455fab9f3feab4c0108d22700e3d0d04fb1a6da4bdf34d49"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "basispoort.nl",
+                "www.basispoort.nl"
+            ]
+        },
+        {
             "rule": "azurefd\\.net\\/login\\/static\\/fonts\\/mulish-latin-800-normal\\.e9f6699\\.woff2",
             "cookies": 0,
             "fingerprinting": 0,
@@ -451,6 +534,33 @@
                 "5010326e1d87ef39d4aa1dbb76243bf1cef5f61f46854dac5c17ae7203ffa05a"
             ],
             "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "basispoort.nl",
+                "www.basispoort.nl"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/login\\/static\\/workbox-v5\\.1\\.4\\/workbox-core\\.prod\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-cdn-g8ava2fqd8bxaebc.a03"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.basispoort.nl",
+                    "resolved": "production-cdn-g8ava2fqd8bxaebc.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "f78b1ffb6d1bfb5dc62915dd7ac63592bf52f7d0ced29909f0c7b651b88ef72e"
+            ],
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -481,718 +591,57 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/script\\/mhubc\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "aviramhub-a2dfbvbedqbda7av.a03",
-                "avgcommhub-dmhac3ehf8cpayd8.a03",
-                "ccleanermhub-bjhybxceamebajhe.a03"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [
-                {
-                    "original": "mhubc.avira.com",
-                    "resolved": "aviramhub-a2dfbvbedqbda7av.a03.azurefd.net"
-                },
-                {
-                    "original": "mhubc.avg.com",
-                    "resolved": "avgcommhub-dmhac3ehf8cpayd8.a03.azurefd.net"
-                },
-                {
-                    "original": "mhubc.ccleaner.com",
-                    "resolved": "ccleanermhub-bjhybxceamebajhe.a03.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "680813c7f6c34091c4e8bd66aed29138f1b6a8a384b557a6d73246e2832d7fd5",
-                "3cd6d64d61788f176d2f8dc67d11a7adac8620e5b1a7eed4acf6e25b1ca0770e"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "avira.com",
-                "www.avg.com",
-                "www.ccleaner.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/logos\\/logo-internal\\/logo-gaslicht-bare\\.svg",
+            "rule": "azurefd\\.net\\/api\\/content\\/eager\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
+                    "original": "content.www.handelsblatt.com",
+                    "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "6631760e9a0a00c1d27f36a7e056d414ad40a83f3971317f2efe8d468cb46742"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/ben-thumbsup\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "f4b91bcf7fc688eb2cff52ecd7ab1f2823997ac90c3dcdd25e20b62eff74946d"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/ben-avatar\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "69a479545893d6e3692ee413da9fefe270ade04066713aea0ce146741c019bc4"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/confetti\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "4100ef215ba7ffe1cf1f0ab562a5f6e76d8f8f99a5b27e26b35f7f9dff2b3064"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/icons\\/check-blue\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "81ccb42768ff23dbc74d73d57da4b41c4cdbc6c95fe49c4d4a4e9575d3266038"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/account\\/house\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "5b89eecfa7a0360f0e89ee380e4971fbba2d1cbf70db1d6cb48447e1cfcde3a8"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/bencompare\\/app-graphic\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "c24ea4daf53f3f1d894ce31ff8ea74df0ec6ef8929dc63effb3f4b2a8f25cddc"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/icons\\/ios-app-store\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "0c24fb08df0bef4055e98d57e9317d3b2847444015a15323df0bd1303e1eb707"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/icons\\/google-play-store\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "ca455af1fdd3675ba76b504fb8b98c7b377d01ed443691761271a6aadea345df"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/graphics\\/bencompare\\/multiple-phones\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "cb52f2ec7c72e576cbe0de50e284cd87c7ecf8489d73e60a298eace667b58a74"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/sc\\/202594-1-1\\/img\\/icons\\/info\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bc-global-fd-aca3f5abefe4c4af.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "static2.bellen.com",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                },
-                {
-                    "original": "static2.poliswijzer.nl",
-                    "resolved": "bc-global-fd-aca3f5abefe4c4af.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "824f7574114642dd00abccf12132f0adc78c8e1bc08853cb628139923c037c76"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bellen.com",
-                "www.poliswijzer.nl"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/adobe\\/assets\\/urn:aaid:aem:d22874b5-d102-4c1c-be35-6f8f57631b45\\/renditions\\/original\\/as\\/crucial-homepage-banner-video\\.mp4",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "micron-corp-prod-h4hzbwhxa8hpchbs.a02"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "assets.micron.com",
-                    "resolved": "micron-corp-prod-h4hzbwhxa8hpchbs.a02.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "88ee7fb00c86d098db0237b23b160e75bc20217e00d38669f08f75bc701f267c"
-            ],
-            "type": "Media",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "crucial.com",
-                "www.crucial.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/home\\/01-hero-desktop\\.jpg",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "5efc4b6b1e10aa5d7a1ccafcd746ce225e1b69f7cb539d58254d8fa55c748b1b"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/home\\/icon-1000x750-lynkconew01\\.png",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "0f9dc81e2884aaa02b96b01c34e26efc27b5ea3e87a16bd09f4a6630330efa54"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/home\\/icon-1000x750-lynkco02\\.png",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "7c7ca903f06f21cfd24a16d53dcddba1f717387675399e1e22f391c43bc86c68"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/business\\/08-high-teaser-43\\.png",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "b94ca2bd1b32baa054850d711ba374d53eb6068198416d8cd089d20c997d07d5"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/videos\\/image-5\\.png",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "e7f4a90111b3cda4408e7d4ea8b18eabf4c9d4cfd7df02de4d21379634f9ab48"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/test-drive\\/testdrive\\.jpg",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "ba3ef26a3ffcd77287b522fed5a0a7326ae3b9cbb9b09b9bf3f612a1eaaa4d52"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/home\\/b2b\\.jpg",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "ace94fc233dce673525ff97ed709020b95a0fb729cb098ed834d4a9862985399"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/find-us\\/icon-1000x750-workshops\\.jpg",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "814a05c099f06d7a741e4eab1109424b0f233976a732200d5a7649d4afa3ebab"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/home\\/the-app02\\.jpg",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "2fdf1a96b2b08d8216e3c636cf82e0ec88fc08ac70925bdc879f6caaeca2bd89"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/media-library-2025\\/restructure\\/videos\\/lynkco-manifesto-final-web\\.mp4",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "fa010c2e92aec02416542da1f4365b4bf083377a1c617d7a8b8796c85ccd6666"
-            ],
-            "type": "Media",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/data\\/media\\/img\\/logo\\.svg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "1e67b7df23432de4660dc03630e8e78ed4720ac89fe959f05727875ddb04f1b3"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/app-download\\/nl-nl\\/nl-nl-google-play-badge\\.svg",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "c4f8bc033421e0b53d798bcd9ac1027da3da1ab05f9b6e6495740c3d4ebb29f6"
+                "c31a18866e8d34bcd56cf9170902d7155e7f70512a8bdfd6dc845c9501e721ed"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
+                "handelsblatt.com",
+                "www.handelsblatt.com"
             ]
         },
         {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/app-download\\/en\\/en-app-store-badge\\.svg",
-            "cookies": 0.000202,
+            "rule": "azurefd\\.net\\/api\\/v1\\/models\\/hb-front",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
+                "hbpulse"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "norkon.handelsblatt.com",
+                    "resolved": "hbpulse.azurefd.net"
+                }
+            ],
             "responseHashes": [
-                "a26fc5b38380272c92e9019a2eb8b45542a66814b3e2b203772db8904b9fb99f"
+                "32c2e75626d1279043e683596440ecaab5b525700cb93466e8d223e055cefbc6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/-\\/jssmedia\\/lynkco-global-portal\\/global-setting\\/icons\\/navigation\\/arrow_forward\\.svg",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fde-web-prd-001-gdegamg8eeebbuf9.z01"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "4d3230c2a4041859465988f272856a30cda48ac833fbacb42fd81b625fddb3c8"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lynkco.com",
-                "www.lynkco.com"
+                "handelsblatt.com",
+                "www.handelsblatt.com"
             ]
         },
         {
@@ -1212,7 +661,7 @@
                 }
             ],
             "responseHashes": [
-                "11ff03baccd6cdf261fc8246b2d84b4d487eab374484785ab80661e4c81c9536"
+                "5dc7df76da34331eaf373dc06f91a32c1c682ec4ab18f7d04ce29a29ae3d38d3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1254,40 +703,48 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.00192,
+    "cookies": 0.00162,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9689655172413794
+            "prevalence": 0.9277566539923955
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.034220532319391636
         },
         {
             "domain": "ensighten.com",
-            "prevalence": 0.010344827586206896
+            "prevalence": 0.011406844106463879
         },
         {
             "domain": "r42tag.com",
-            "prevalence": 0.010344827586206896
+            "prevalence": 0.011406844106463879
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.006896551724137931
+            "prevalence": 0.0076045627376425855
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.0038022813688212928
         },
         {
             "domain": "azure.com",
-            "prevalence": 0.0034482758620689655
+            "prevalence": 0.0038022813688212928
         }
     ],
     "types": {
         "Script": 24,
+        "Other": 6,
         "Font": 6,
-        "Fetch": 12,
-        "Media": 6,
-        "Image": 42
+        "Fetch": 10,
+        "Media": 2
     },
     "nameservers": [
-        "ns1-37.azure-dns.com",
         "ns2-37.azure-dns.net",
         "ns4-37.azure-dns.info",
+        "ns1-37.azure-dns.com",
         "ns3-37.azure-dns.org"
     ]
 }

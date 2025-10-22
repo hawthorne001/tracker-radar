@@ -4,14 +4,34 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000274,
+    "sites": 4,
     "subdomains": [
         "sdk-api"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apptracer\\.ru\\/api\\/perf\\/upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ok.ru",
+                "www.rustore.ru"
+            ]
+        },
         {
             "rule": "apptracer\\.ru\\/api\\/perf\\/upload",
             "cookies": 0,
@@ -35,7 +55,7 @@
             ]
         },
         {
-            "rule": "apptracer\\.ru\\/api\\/perf\\/upload",
+            "rule": "apptracer\\.ru\\/api\\/crash\\/trackSession",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -50,8 +70,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ok.ru",
-                "www.rustore.ru"
+                "vkvideo.ru",
+                "www.vk.com"
+            ]
+        },
+        {
+            "rule": "apptracer\\.ru\\/api\\/crash\\/trackSession",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vkvideo.ru",
+                "www.vk.com"
             ]
         }
     ],
@@ -60,17 +100,18 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "okcdn.ru",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.8
         },
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "okcdn.ru",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Preflight": 4,
         "XHR": 2,
-        "Preflight": 2
+        "Ping": 2
     },
     "nameservers": [
         "ns1.ok.ru",

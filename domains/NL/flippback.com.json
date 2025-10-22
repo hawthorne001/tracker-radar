@@ -7,41 +7,68 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "cdn-gateflipp"
+        "cdn-gateflipp",
+        "frontend-logger"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "flippback\\.com\\/tag\\/js\\/flipptag\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 2,
+            "cookies": 0,
+            "fingerprinting": 3,
             "subdomains": [
                 "cdn-gateflipp"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "window.devicePixelRatio": 1,
-                "window.innerWidth": 1
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.connection": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "77e69b524de1f6d37a1a1afec861286f7f927a6e27a309374cd7030fa191116e"
+                "7214d48bb70a3f032cf6fec16a9f94916edb78e3f84a8a05b334f66ad9baad82"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "flipp-uid": {
-                    "ttl": 31536000,
-                    "length": 36,
-                    "prevalence": 0.00010114291493880854,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtoncitypaper.com",
+                "www.laweekly.com"
+            ]
+        },
+        {
+            "rule": "flippback\\.com\\/api\\/logging",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-logger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1bd4bb9f8a82c504f6145b32aba59672185c06c622f2c6efe7a9d8467335d23a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "washingtoncitypaper.com",
@@ -51,7 +78,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
@@ -59,7 +86,8 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-145.awsdns-18.com",

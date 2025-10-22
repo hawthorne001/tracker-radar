@@ -4,34 +4,84 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000686,
-    "sites": 1,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
-        "cdn-push"
+        "cdn-analytics",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "sprkly\\.me\\/firebase-config\\.json",
+            "rule": "sprkly\\.me\\/js\\/event\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "cdn-push"
+                "cdn-analytics"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "window.sessionStorage": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "306e3347dbee5828fae721141b2d3ba744405f89aa99b9ae2d34036885b881a5"
+                "f2107905daa25ef2c8782be9fa5822bed73dfb4021b39033bc105bdd9bd0569d"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nomorigine.com",
-                "www.nomorigine.com"
+                "www.rustica.fr",
+                "www.systemed.fr"
+            ]
+        },
+        {
+            "rule": "sprkly\\.me\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nomorigine.com",
+                "www.rustica.fr",
+                "www.systemed.fr"
+            ]
+        },
+        {
+            "rule": "sprkly\\.me\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nomorigine.com",
+                "www.rustica.fr",
+                "www.systemed.fr"
             ]
         }
     ],
@@ -45,10 +95,12 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 3,
+        "Preflight": 3,
+        "Ping": 3
     },
     "nameservers": [
-        "ns07.domaincontrol.com",
-        "ns08.domaincontrol.com"
+        "ns08.domaincontrol.com",
+        "ns07.domaincontrol.com"
     ]
 }

@@ -9,16 +9,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
-    "subdomains": [],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "dualstack"
+    ],
     "cnames": [
         {
-            "original": "markets-data-api-proxy.ft.com",
-            "resolved": "financial-times-tls13-0rtt.map.fastly.net"
+            "original": "consent-notice.ft.com",
+            "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
         },
         {
-            "original": "privacy.ft.com",
+            "original": "markets-data-api-proxy.ft.com",
             "resolved": "financial-times-tls13-0rtt.map.fastly.net"
         },
         {
@@ -29,7 +31,34 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/api\\/v1\\/compliance-region\\.json",
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/cmp\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "consent-notice.ft.com",
+                    "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "70152783de4383f8c54b5323510393df57ef61d28a236be276cfdc05320f0567"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ft.com",
+                "www.ft.com"
+            ]
+        },
+        {
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/ingest",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -38,19 +67,42 @@
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "privacy.ft.com",
+                    "original": "spoor-api.ft.com",
                     "resolved": "financial-times-tls13-0rtt.map.fastly.net"
                 }
             ],
-            "responseHashes": [
-                "3b5f76bff5602b6d09c803d1a9d21f3bb8a60d4dd53474bc23613508c6cb65a3"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ft.com",
-                "www.ft.com"
+                "markets.ft.com"
+            ]
+        },
+        {
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/ingest",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "spoor-api.ft.com",
+                    "resolved": "financial-times-tls13-0rtt.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ft.com",
+                "markets.ft.com"
             ]
         },
         {
@@ -68,7 +120,7 @@
                 }
             ],
             "responseHashes": [
-                "1372452a2a5107b260e261d6028c1c25174ad19c5d08400ac19a593577a72752"
+                "c13596032043f8d8135d70ab9944131a554f8a7ff91ec95759672f54bb94b7b1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -115,9 +167,12 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "types": {
-        "Fetch": 4,
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2,
+        "Fetch": 2,
         "Ping": 2
     },
     "nameservers": []

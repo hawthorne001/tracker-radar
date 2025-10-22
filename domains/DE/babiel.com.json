@@ -4,19 +4,93 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "usage-stats.bundesbank.de.prod",
+        "statistik.landtag-bw.de.prod",
         "api.statistiken.bundesbank.de"
     ],
     "cnames": [
         {
             "original": "api.statistiken.bundesbank.de",
             "resolved": "api.statistiken.bundesbank.de.babiel.com"
+        },
+        {
+            "original": "statistik.landtag-bw.de",
+            "resolved": "statistik.landtag-bw.de.prod.babiel.com"
+        },
+        {
+            "original": "usage-stats.bundesbank.de",
+            "resolved": "usage-stats.bundesbank.de.prod.babiel.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "babiel\\.com\\/matomo\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "usage-stats.bundesbank.de.prod",
+                "statistik.landtag-bw.de.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "usage-stats.bundesbank.de",
+                    "resolved": "usage-stats.bundesbank.de.prod.babiel.com"
+                },
+                {
+                    "original": "statistik.landtag-bw.de",
+                    "resolved": "statistik.landtag-bw.de.prod.babiel.com"
+                }
+            ],
+            "responseHashes": [
+                "f2e8975ed834c578c50d3923ceb26de04d4fa44f74380f45f147585d909a874d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bundesbank.de",
+                "www.landtag-bw.de"
+            ]
+        },
+        {
+            "rule": "babiel\\.com\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "usage-stats.bundesbank.de.prod",
+                "statistik.landtag-bw.de.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "usage-stats.bundesbank.de",
+                    "resolved": "usage-stats.bundesbank.de.prod.babiel.com"
+                },
+                {
+                    "original": "statistik.landtag-bw.de",
+                    "resolved": "statistik.landtag-bw.de.prod.babiel.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bundesbank.de",
+                "www.landtag-bw.de"
+            ]
+        },
         {
             "rule": "babiel\\.com\\/graphql",
             "cookies": 0,
@@ -34,7 +108,7 @@
                 }
             ],
             "responseHashes": [
-                "a7e8ea9430807fd87f8464a6d9a7a3295f30ff49e6c00055f2be1737b0f4daa3"
+                "3ce29571777e3bb8cd5bac827c5ca37d3a106a28c7bb4621cb6aa43529265614"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -49,11 +123,13 @@
     "performance": {},
     "cookies": 0.000101,
     "types": {
+        "Script": 2,
+        "Ping": 2,
         "Fetch": 2
     },
     "nameservers": [
-        "b.babieldns.de",
         "a.babieldns.de",
+        "b.babieldns.de",
         "c.babieldns.de",
         "d.babieldns.de"
     ]

@@ -12,17 +12,42 @@
     "subdomains": [
         "us3-cdn",
         "us3-track",
-        "us4-cdn",
+        "eu-track",
         "us-cdn",
         "au6-cdn",
         "us3-live",
-        "us4-live",
+        "eu-live",
         "us-live",
-        "au6-live"
+        "au6-live",
+        "eu-cdn"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "inside-graph\\.com\\/gtm\\/IN-1001099\\/include\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us3-cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "009bc3864917f2519948f416c3475bf72f036997b2aecdb854691ac21884ea3d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashleyhomestore.ca",
+                "stores.ashleyhomestore.ca"
+            ]
+        },
         {
             "rule": "inside-graph\\.com\\/ig\\.js",
             "cookies": 0.000814,
@@ -30,7 +55,7 @@
             "subdomains": [
                 "us3-cdn",
                 "us3-track",
-                "us4-cdn",
+                "eu-track",
                 "us-cdn",
                 "au6-cdn"
             ],
@@ -49,50 +74,50 @@
                 "Navigator.prototype.appVersion": 3,
                 "Navigator.prototype.mediaDevices": 3,
                 "MediaDevices.prototype.enumerateDevices": 3,
-                "Element.prototype.getClientRects": 7
+                "Element.prototype.getClientRects": 5
             },
             "sites": 8,
             "prevalence": 0.000814,
             "cnames": [],
             "responseHashes": [
-                "5b85c40186f4b7135771cda209d62e6b6f342f84d06a190827a76ef8139dfe72",
-                "83d50ffb268a094a2e90e1d3e7aabd9902473686a9b1f2bd9736daab6160b042",
-                "188dcbefe2766a8fc3af2687ab4397e3bebede7e7e77e4eb2c2ff6c6757ed2b2",
-                "58139d79e1c2fc97b57d28a468a0b7f0b2ded356e59e7f0b76097a54ef55a8f8"
+                "66be8e563a8c051b90b1b35af7f6e57146354e95d52fc2295d9a7f2037909283",
+                "d9a12f82a8294af18919fa750f0bad01ec158d7db9d49acb5fc03291080d163c",
+                "65d70c378a3c3a74b4a16f891dcc3066931aad7a0aa3c6a66575fee687750687",
+                "6ecf16c5546c0ff65c068ec41734982312a61d8c1ea016ccc7ef4d61344b7aab"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "inside-us3": {
                     "ttl": 31536014,
                     "length": 78,
-                    "prevalence": 0.0005090094675760969,
+                    "prevalence": 0.0005088540606554041,
                     "uniqueness": 1
                 },
-                "inside-us4": {
-                    "ttl": 31536029,
+                "inside-eu": {
+                    "ttl": 31536010,
                     "length": 78,
-                    "prevalence": 0.00010180189351521938,
+                    "prevalence": 0.0001017708121310808,
                     "uniqueness": 1
                 },
                 "inside-us": {
-                    "ttl": 31536006,
+                    "ttl": 31536005,
                     "length": 78,
-                    "prevalence": 0.00010180189351521938,
+                    "prevalence": 0.0001017708121310808,
                     "uniqueness": 1
                 },
                 "inside-au6": {
-                    "ttl": 31536008,
+                    "ttl": 31536006,
                     "length": 78,
-                    "prevalence": 0.00010180189351521938,
+                    "prevalence": 0.0001017708121310808,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ashleyhomestore.ca",
-                "canada.lenovo.com",
                 "lenovo.com",
-                "www.cartier.com",
+                "stores.ashleyhomestore.ca",
+                "www.azoresairlines.pt",
                 "www.kaltire.com",
                 "www.lenovo.com",
                 "www.maisonbirks.com",
@@ -101,11 +126,11 @@
         },
         {
             "rule": "inside-graph\\.com\\/config",
-            "cookies": 0.000713,
+            "cookies": 0.000814,
             "fingerprinting": 0,
             "subdomains": [
                 "us3-live",
-                "us4-live",
+                "eu-live",
                 "us-live",
                 "au6-live"
             ],
@@ -114,22 +139,24 @@
             "prevalence": 0.000814,
             "cnames": [],
             "responseHashes": [
-                "3948741d4f18790b41a24bc0ed23e7cba3dd3b62b44f17e90cdebf5bf34e3c04",
-                "9e93cd432a02decbe1c99aff7fd59a835f0f591279807dada2e836fb7dda2b48",
-                "b2c4651d6ee17c497dc59cf2a8380dfe6d5961136e44b6d3acd77d9f306af512",
-                "041081d97d09cf886feb0bb2b172b1a4ee24a1757f5edc397006fd3a626629cc",
-                "c4b9b69ff456c413a5f6e9a8c93ddbdbbbc09df1ae5e53a6523a2c366a06d7ca",
-                "38cdf5b5918f5635a81baa858745d19e765f036f86bbc539c2aff77a0e90255f",
-                "199598517073bbc48a3d1bd04a4d3770a5e248b85475815be391a5baa836151c"
+                "f87f3965b69b045007b1e1634cbd6af96d8a57a21cb6658abab4452424fc5519",
+                "e530c455eae8b62394d465fc141a0c969e3edf325cf27d6fb66935c7bb760ae3",
+                "af12549b6dc6685b5d67dd230a5d31bba9970d6a958cd21ec6ec1b742c57a847",
+                "70257a3b984e6b9a37f15b56ae874e6c0ffe1d587d6932b2d59b2da1f2acbd3d",
+                "8c3609fa2acc56bbeb56e227905dc0a2e60122298f73b243b30cccbdeb0d8928",
+                "77ceb82e4af194f4f9b1318f6d93d98f71b83c8d0688a40c07cbadaea28e08c2",
+                "853cbeaeb6c6d4a7bcde41b411e9e3f8bb7b6998a889432c3bb9308b15f8ea48"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0001017708121310808
+            },
             "exampleSites": [
                 "ashleyhomestore.ca",
-                "canada.lenovo.com",
                 "lenovo.com",
-                "www.cartier.com",
+                "stores.ashleyhomestore.ca",
+                "www.azoresairlines.pt",
                 "www.kaltire.com",
                 "www.lenovo.com",
                 "www.maisonbirks.com",
@@ -142,31 +169,29 @@
             "fingerprinting": 0,
             "subdomains": [
                 "us3-live",
-                "us4-live",
+                "eu-live",
                 "us-live",
                 "au6-live"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000814,
+            "sites": 7,
+            "prevalence": 0.000712,
             "cnames": [],
             "responseHashes": [
-                "c1c1e566c6ddc01660d820e66e38c6c7c024d6226c5d4e79d2f6bcbb4460df8f",
-                "28849a2ef0747c53de14a4c560b851a58f42e7cd394c3a47a151b024058388df",
-                "22d3abbbb5c9a47d96df94411dce8f14963dcb619365f924eaf683ac9a9d57bc",
-                "aa11aa6e8fe46c564d298d12eaa671713a4af366002d9a260ff8bb4aa4d0d79f",
-                "75ff8f876687aa5df6830dd8feb2fffa1bda03cede0484258dc71c2ec3b9ebe8",
-                "f175482849e106567210ee922c82c09449f5b47304e30952fdfe62b52859f639",
-                "6a637ba4be921c6eb2762b61409211dce2c877f20517a43355331db67d93a7f1"
+                "d78b91c8124c901e8edcda80ecf4ca65663d97ca1474bd399d40718c30ea6800",
+                "3f35561778189390cb790abf1c0c03b723866d6d5780a58eba05e4ef1b26ead7",
+                "e7ddf150d8ef4d90fe80e7f8850930109d79187ef8283aa4957e12e7774f8213",
+                "486f92c652fec18f9a4e1e923d72fd3fffc6d48f6d089081432d6d6d82cc6213",
+                "949960b700ea9c43d7a6088b62b6b6e078da4756b62208f0ef2e4bb3c3d0ec4c",
+                "0f198c9fd78384377e52742ef4b146580a9b4a0c9a88c1a7397baa827c5ff104"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ashleyhomestore.ca",
-                "canada.lenovo.com",
                 "lenovo.com",
-                "www.cartier.com",
+                "www.azoresairlines.pt",
                 "www.kaltire.com",
                 "www.lenovo.com",
                 "www.maisonbirks.com",
@@ -179,20 +204,21 @@
             "fingerprinting": 2,
             "subdomains": [
                 "us3-cdn",
+                "eu-cdn",
                 "us-cdn",
                 "au6-cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 7,
-                "Date.prototype.getTime": 7,
-                "Navigator.prototype.platform": 7,
-                "window.innerHeight": 7,
-                "window.innerWidth": 7,
+                "Navigator.prototype.userAgent": 6,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.platform": 6,
+                "window.innerHeight": 6,
+                "window.innerWidth": 6,
                 "window.sessionStorage": 6,
-                "window.devicePixelRatio": 5
+                "window.devicePixelRatio": 4
             },
             "sites": 7,
-            "prevalence": 0.000713,
+            "prevalence": 0.000712,
             "cnames": [],
             "responseHashes": [
                 "332cb2dfb1933d675096487795504a42cd8386de52746c3241934337753bbc9a",
@@ -203,64 +229,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ashleyhomestore.ca",
-                "canada.lenovo.com",
                 "lenovo.com",
-                "www.kaltire.com",
-                "www.lenovo.com",
-                "www.maisonbirks.com",
-                "www.michaelhill.ca"
-            ]
-        },
-        {
-            "rule": "inside-graph\\.com\\/ig\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us3-cdn",
-                "us-cdn",
-                "au6-cdn"
-            ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.000713,
-            "cnames": [],
-            "responseHashes": [
-                "d70bceb92d510b11777fe6049ec7072abacdebf8820a3d9384dd9939480a64d3"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ashleyhomestore.ca",
-                "canada.lenovo.com",
-                "lenovo.com",
-                "www.kaltire.com",
-                "www.lenovo.com",
-                "www.maisonbirks.com",
-                "www.michaelhill.ca"
-            ]
-        },
-        {
-            "rule": "inside-graph\\.com\\/insideSocialHub",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us3-live",
-                "us-live",
-                "au6-live"
-            ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.000713,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "WebSocket",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ashleyhomestore.ca",
-                "canada.lenovo.com",
-                "lenovo.com",
+                "www.azoresairlines.pt",
                 "www.kaltire.com",
                 "www.lenovo.com",
                 "www.maisonbirks.com",
@@ -290,6 +260,62 @@
             "exampleSites": [
                 "lenovo.com",
                 "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/ig\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us3-cdn",
+                "eu-cdn",
+                "us-cdn",
+                "au6-cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000611,
+            "cnames": [],
+            "responseHashes": [
+                "d70bceb92d510b11777fe6049ec7072abacdebf8820a3d9384dd9939480a64d3"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.azoresairlines.pt",
+                "www.kaltire.com",
+                "www.lenovo.com",
+                "www.maisonbirks.com",
+                "www.michaelhill.ca"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/insideSocialHub",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us3-live",
+                "eu-live",
+                "us-live",
+                "au6-live"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000611,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.azoresairlines.pt",
+                "www.kaltire.com",
+                "www.lenovo.com",
+                "www.maisonbirks.com",
+                "www.michaelhill.ca"
             ]
         },
         {
@@ -414,41 +440,41 @@
     "cookies": 0.000814,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.49122807017543857
+            "domain": "go-mpulse.net",
+            "prevalence": 0.35714285714285715
         },
         {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.2807017543859649
+            "domain": "first party",
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "quantummetric.com",
-            "prevalence": 0.08771929824561403
-        },
-        {
-            "domain": "adobedtm.com",
-            "prevalence": 0.05263157894736842
-        },
-        {
-            "domain": "btttag.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.03508771929824561
+            "prevalence": 0.10714285714285714
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "Script": 24,
-        "XHR": 16,
-        "Stylesheet": 10,
-        "WebSocket": 7,
+        "Script": 26,
+        "XHR": 15,
+        "Stylesheet": 9,
+        "WebSocket": 6,
         "Image": 2
     },
     "nameservers": [
-        "ns-1314.awsdns-36.org",
-        "ns-1621.awsdns-10.co.uk",
+        "ns-753.awsdns-30.net",
         "ns-449.awsdns-56.com",
-        "ns-753.awsdns-30.net"
+        "ns-1621.awsdns-10.co.uk",
+        "ns-1314.awsdns-36.org"
     ]
 }

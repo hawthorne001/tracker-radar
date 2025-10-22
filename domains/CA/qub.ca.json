@@ -9,14 +9,15 @@
     "subdomains": [
         "anonymous",
         "connect",
-        "commentaires"
+        "commentaires",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "qub\\.ca\\/anonymous-id\\/redirect",
-            "cookies": 0.00143,
+            "cookies": 0.00142,
             "fingerprinting": 0,
             "subdomains": [
                 "anonymous"
@@ -26,9 +27,8 @@
             "prevalence": 0.00153,
             "cnames": [],
             "responseHashes": [
-                "75a9723c0e84be913d67571a8f410c9513804e2aab5efe776ee8a92ab929b285",
-                "b664a2a22fa58eab7d4225731517b5248834ba2af949cf615f0a5d7103b408c8",
-                "ca147ee8477cbcdcf90be46ec88cad1c48dcc6e9e521d9261e971e62e4f4f8b5"
+                "07b22eba1bc9b9880b26a0800a8dab4b49dce58b20a530e55f0e107a14f8abbc",
+                "d71de95dac5b48058bc9d7f2f2e2454ec812508c550dd511419cf49e343cebd5"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -40,8 +40,8 @@
                 "www.coupdepouce.com",
                 "www.espaces.ca",
                 "www.guideautoweb.com",
-                "www.journaldequebec.com",
                 "www.journaldemontreal.com",
+                "www.journaldequebec.com",
                 "www.recettes.qc.ca",
                 "www.salutbonjour.ca",
                 "www.silo57.ca",
@@ -59,7 +59,7 @@
                 "anonymous"
             ],
             "apis": {
-                "window.localStorage": 13
+                "window.localStorage": 12
             },
             "sites": 13,
             "prevalence": 0.00132,
@@ -76,8 +76,8 @@
                 "www.canadianliving.com",
                 "www.coupdepouce.com",
                 "www.guideautoweb.com",
-                "www.journaldequebec.com",
                 "www.journaldemontreal.com",
+                "www.journaldequebec.com",
                 "www.recettes.qc.ca",
                 "www.salutbonjour.ca",
                 "www.silo57.ca",
@@ -97,17 +97,13 @@
             "sites": 6,
             "prevalence": 0.000611,
             "cnames": [],
-            "responseHashes": [
-                "491dcfd2621580ac10ba70b020692cd7e9f3bc71c52fe940afb0032365505bc9",
-                "b664a2a22fa58eab7d4225731517b5248834ba2af949cf615f0a5d7103b408c8",
-                "a2f370526827de2c2693b44c307812c23bba454a807c856a98c9fa6954e7a305"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "journaldequebec.com",
-                "www.journaldemontreal.com",
+                "journaldemontreal.com",
+                "www.journaldequebec.com",
                 "www.salutbonjour.ca",
                 "www.tvaplus.ca",
                 "www.tvanouvelles.ca",
@@ -134,8 +130,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "journaldequebec.com",
-                "www.journaldemontreal.com",
+                "journaldemontreal.com",
+                "www.journaldequebec.com",
                 "www.tvanouvelles.ca"
             ]
         },
@@ -159,15 +155,57 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "journaldequebec.com",
-                "www.journaldemontreal.com",
+                "journaldemontreal.com",
+                "www.journaldequebec.com",
                 "www.tvanouvelles.ca"
+            ]
+        },
+        {
+            "rule": "qub\\.ca\\/content-delivery-service\\/v1\\/entities",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "cec214547bd7cda97712fe8777039b3b5d94dac04b63deca53c717c47b92e759"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvaplus.ca",
+                "www.tvaplus.ca"
+            ]
+        },
+        {
+            "rule": "qub\\.ca\\/content-delivery-service\\/v1\\/entities",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvaplus.ca",
+                "www.tvaplus.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00143,
+    "cookies": 0.00142,
     "topInitiators": [
         {
             "domain": "first party",
@@ -176,7 +214,9 @@
     ],
     "types": {
         "Document": 21,
-        "Script": 19
+        "Script": 19,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-204.awsdns-25.com",
