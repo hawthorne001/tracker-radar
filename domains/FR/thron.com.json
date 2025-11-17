@@ -7,15 +7,40 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
+        "ferrari-cdn",
+        "digitalassets-cdn",
         "ferrari-view",
-        "ferrari-cdn"
+        "geox-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "thron\\.com\\/shared\\/ce\\/bootstrap\\/1\\/scripts\\/embeds-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ferrari-cdn",
+                "digitalassets-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "753ed87ff16facef1722685bab3656981070d307bb79df2a3f69f09f6e6f801f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ferrari.com",
+                "www.whirlpool.fr"
+            ]
+        },
         {
             "rule": "thron\\.com\\/api\\/xcontents\\/resources\\/delivery\\/getContentDetail",
             "cookies": 0,
@@ -25,10 +50,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "b18a19d3284e51dcb7aefd29caf3af499aae47ca1c4fafc8583669fd48cbc73f"
+                "2a86f914a91d08285b8bbe76643df3d78291088d8fa7cc760e823969dd317f37"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -40,20 +65,30 @@
         },
         {
             "rule": "thron\\.com\\/shared\\/plugins\\/tracking\\/current\\/framed\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
                 "ferrari-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "cfa4678a1369f7595578b650a46b15eaa630d50b0edabcb9cd2aaf5469d1a684"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "_TA_TRACKING": {
+                    "ttl": 157680011,
+                    "length": 143,
+                    "prevalence": 0.00020238818053025704,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ferrari.com",
@@ -69,7 +104,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "eca7e99573b6548aae50afd6de3aa71b948d85ac95ecac9623813a966925d42e"
@@ -91,7 +126,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "c6739a19fe967965ace37168cd72aab935ec5913da066d055399c6022da5607a"
@@ -103,6 +138,28 @@
                 "ferrari.com",
                 "www.ferrari.com"
             ]
+        },
+        {
+            "rule": "thron\\.com\\/static\\/DNLDUC_Geox_FW25_10__ENG_16\\.9_SPUTT3\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geox-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e7830d9f9afa36a8b1d9a3513244b55372a37c3493476fefd23b6c0d9937cd98"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geox.com",
+                "www.geox.com"
+            ]
         }
     ],
     "categories": [],
@@ -110,22 +167,23 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
             "domain": "storage.googleapis.com",
-            "prevalence": 0.375
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "vtexassets.com",
-            "prevalence": 0.375
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.25
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 2,
         "Document": 2,
-        "Media": 4
+        "Media": 6
     },
     "nameservers": [
         "ns-244.awsdns-30.com",

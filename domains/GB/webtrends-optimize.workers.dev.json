@@ -4,12 +4,12 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000608,
-    "sites": 6,
+    "prevalence": 0.000709,
+    "sites": 7,
     "subdomains": [
         "geo",
-        "wto-halfords-segment-id",
-        "wto-halfords-trendingsearch"
+        "wto-halfords-lib",
+        "wto-halfords-segment-id"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -26,7 +26,7 @@
             "prevalence": 0.000405,
             "cnames": [],
             "responseHashes": [
-                "d46fcf01ef89c4db78b7ad40c29492b8bcd9f60aeb8c1bf640306f2847414dd1"
+                "611b99e81ed4ed1519ccfab3c8fa7e894dcd0ab771eeb7666b6205b1a529c2f9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -39,19 +39,81 @@
             ]
         },
         {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/api\\/get-lib",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wto-halfords-lib"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.name": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4e91d5d0367513f311ee2b06db1e771c1e691eb284a5b1bd09d5c4e47f818878"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_wt.mode-2392083": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.00020247013565499088,
+                    "uniqueness": 0.5
+                },
+                "_wt.user-2392083": {
+                    "ttl": 7776010,
+                    "length": 227,
+                    "prevalence": 0.00020247013565499088,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        },
+        {
             "rule": "webtrends-optimize\\.workers\\.dev\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "wto-halfords-segment-id",
-                "wto-halfords-trendingsearch"
+                "wto-halfords-segment-id"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        },
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wto-halfords-segment-id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "827d2cd22ef6a07143fab637319d3213e91edaa937a7e53cc346824f1f2c310c"
+                "dfe616cf7971d2ea2e4fbbf6ccbe88624e19b1296b2862d15da6c6610c362ff7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -64,19 +126,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000203,
+    "cookies": 0.000304,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.7692307692307693
         },
         {
             "domain": "webtrends-optimize.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.23076923076923078
         }
     ],
     "types": {
         "XHR": 4,
+        "Script": 2,
+        "Preflight": 2,
         "Fetch": 2
     },
     "nameservers": [

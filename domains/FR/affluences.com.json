@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000304,
-    "sites": 3,
+    "prevalence": 0.000506,
+    "sites": 5,
     "subdomains": [
         "webapi"
     ],
@@ -16,7 +16,7 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "affluences\\.com\\/js\\/webapi_latest\\.min\\.js",
+            "rule": "affluences\\.com\\/js\\/timetable_api_latest\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -33,9 +33,55 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "unistra.fr",
                 "univ-cotedazur.fr",
+                "www.bis-sorbonne.fr"
+            ]
+        },
+        {
+            "rule": "affluences\\.com\\/js\\/webapi_latest\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webapi"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000405,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "univ-cotedazur.fr",
+                "www.bis-sorbonne.fr",
                 "www.bm-lyon.fr",
-                "www.lac-annecy.com"
+                "www.univ-spn.fr"
+            ]
+        },
+        {
+            "rule": "affluences\\.com\\/api\\/fillRate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9a771af491c8f8f9f42eade981ce2781e6224b31749ebbcaaf74d44c063d91c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bis-sorbonne.fr",
+                "www.bis-sorbonne.fr"
             ]
         }
     ],
@@ -45,11 +91,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 9
     },
     "nameservers": [
         "laura.ns.cloudflare.com",

@@ -7,13 +7,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000549,
-    "sites": 8,
+    "prevalence": 0.0000411,
+    "sites": 6,
     "subdomains": [
-        "push"
+        "site-script",
+        "statics"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "esputnik\\.com\\/scripts\\/v1\\/public\\/scripts",
@@ -21,52 +22,133 @@
             "fingerprinting": 2,
             "subdomains": [],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.platform": 2,
-                "window.indexedDB": 2,
-                "Document.cookie getter": 2,
-                "window.localStorage": 2,
-                "Notification.permission": 2
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "window.indexedDB": 1,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Notification.permission": 1
             },
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
-                "fe32bfbb0ec0b5d1fd6a1fb4d4b8e77d2c9bd94286c55717aeb05baa45fd6b80",
                 "5cb1539627eb7aafa8f129c76b7a2016f616020432faeab3138fb20fb4fb3397",
-                "224f0a1e1708b7caec8e9b248e53a56de649c0e2de6108b020e0c8b8fff36334"
+                "224f0a1e1708b7caec8e9b248e53a56de649c0e2de6108b020e0c8b8fff36334",
+                "cc67dc7a58c220d663b34921a33ea4ec6764402d4d69febf1c2b62f91de9fcab"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cs.money",
-                "epicentrk.ua",
                 "findmykids.org",
                 "mackeeper.com",
-                "novaposhta.ua"
+                "novaposhta.ua",
+                "www.foxtrot.com.ua"
             ]
         },
         {
-            "rule": "esputnik\\.com\\/service-worker\\.js",
+            "rule": "esputnik\\.com\\/site-script\\/v1\\/event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "push"
+                "site-script"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "papersowl.com",
+                "www.foxtrot.com.ua"
+            ]
+        },
+        {
+            "rule": "esputnik\\.com\\/site-script\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-script"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3fcc67dbcb71e117b149c6d1747658cb0c224e9e2a88ccaeade2e754c1bd04e1"
+                "ccfb72629a545b29c01dc730046ec7bea0de7855513e71fd5a652525d7c55602"
             ],
-            "type": "Other",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cs.money",
-                "novaposhta.ua"
+                "papersowl.com",
+                "www.foxtrot.com.ua"
+            ]
+        },
+        {
+            "rule": "esputnik\\.com\\/scripts\\/shim\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "statics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a1de3b0fdf5906481fca3a04d5770adb1edd09d78f7dd864364860d245f3d4ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "papersowl.com",
+                "www.foxtrot.com.ua"
+            ]
+        },
+        {
+            "rule": "esputnik\\.com\\/site-events\\/api\\/v1\\/webevent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxtrot.com.ua",
+                "www.foxtrot.com.ua"
+            ]
+        },
+        {
+            "rule": "esputnik\\.com\\/site-events\\/api\\/v1\\/webevent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxtrot.com.ua",
+                "www.foxtrot.com.ua"
             ]
         }
     ],
@@ -76,21 +158,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 5,
-        "Other": 2
+        "Script": 6,
+        "Preflight": 4,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-185.awsdns-23.com",
-        "ns-974.awsdns-57.net",
+        "ns-1170.awsdns-18.org",
         "ns-1742.awsdns-25.co.uk",
-        "ns-1170.awsdns-18.org"
+        "ns-185.awsdns-23.com",
+        "ns-974.awsdns-57.net"
     ]
 }

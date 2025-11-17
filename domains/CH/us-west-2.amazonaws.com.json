@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000304,
-    "sites": 3,
+    "prevalence": 0.000608,
+    "sites": 6,
     "subdomains": [
-        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
+        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
+        "jhewqjrl5k.execute-api",
+        "cognito-identity"
     ],
     "cnames": [
         {
@@ -49,6 +51,66 @@
                 "de.crazygames.com",
                 "www.crazygames.com"
             ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/prod\\/appmonitors\\/00000000-0000-0000-0000-000000000000",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jhewqjrl5k.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/prod\\/appmonitors\\/00000000-0000-0000-0000-000000000000",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jhewqjrl5k.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8265e175f31391e2ccaa620984e1c037ef42d761ba066eacb2f6950241ad81bc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japan.travel",
+                "www.japan.travel"
+            ]
         }
     ],
     "categories": [
@@ -59,11 +121,25 @@
     "topInitiators": [
         {
             "domain": "ds3fp1mnrtl6k.cloudfront.net",
-            "prevalence": 1
+            "prevalence": 0.4782608695652174
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.21739130434782608
+        },
+        {
+            "domain": "awsstatic.com",
+            "prevalence": 0.21739130434782608
+        },
+        {
+            "domain": "d1wwtn5gq9xmny.cloudfront.net",
+            "prevalence": 0.08695652173913043
         }
     ],
     "types": {
-        "Ping": 3
+        "Ping": 3,
+        "Preflight": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000809,
-    "sites": 8,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "identity",
-        "jssdks"
+        "jssdkcdns",
+        "jssdks",
+        "nativesdks"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -24,19 +26,24 @@
                 "identity"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 10,
+            "prevalence": 0.00101,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "fanatec.com",
                 "moviesanywhere.com",
+                "no.gymshark.com",
                 "reverb.com",
                 "www.elgato.com",
                 "www.gymshark.com",
-                "www.marksandspencer.com"
+                "www.marksandspencer.com",
+                "www.msnbc.com",
+                "www.strawberry.se",
+                "www.westernunion.com"
             ]
         },
         {
@@ -47,44 +54,75 @@
                 "identity"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 9,
+            "prevalence": 0.00091,
             "cnames": [],
             "responseHashes": [
-                "ea8347cb168665dfeebfa975b2b387ccbde138ca0c3ef2f7569bcc45a3c4ca27",
-                "c2ec12703cbe6451c33a3cb80786a4202f70a5e62a06c818047e5be9949a078e",
-                "8130f499322a1d05206079d8854ea5f3170535ceb66102157477106840dcc5bb"
+                "36b038210cc2dbca3376bb2f6ab7bcd5fc9b612a356207ad99e1d20fd9725a7f",
+                "96246ade0842247a802c52502d0613396bea7241257d09925b9dce206819b83f",
+                "80720e1838885dfd373ddf7cf0a97710320c5a774cb2c399bb405048880aaaeb",
+                "6fd67d7310aad0afd69efe4718cbce753070803e953b55ad99f468d0ae592fef",
+                "c7b28500d17b5ef5df293d42e4786284a44297d205cf9106010c3ca7031a73bf",
+                "282f37177715d7df7f5e903d9dbad46a246bf00f17bc4d8b9120686ffe3178c3",
+                "1741b059fec1060b5a114b8e737de6666227a270b6311ff2d9bc7521c360f5fc",
+                "710263c8213030b849633c5176c7de146d45459f3e640015738d7b0dce019085"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "fanatec.com",
+                "no.gymshark.com",
                 "reverb.com",
                 "www.elgato.com",
                 "www.gymshark.com",
-                "www.marksandspencer.com"
+                "www.marksandspencer.com",
+                "www.msnbc.com",
+                "www.strawberry.se",
+                "www.westernunion.com"
             ]
         },
         {
-            "rule": "mparticle\\.com\\/v3\\/JS\\/us1-c840f22b1bb2b34ea2a758b7a1d11751\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "mparticle\\.com\\/js\\/v2\\/eu1-ebd2cad076757c498ce604d818b0d8ae\\/mparticle\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
             "subdomains": [
-                "jssdks"
+                "jssdkcdns"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "94a66940ce9a305e49dea61ed2d7829e56c1cb08928e7d83bc7af1e673e2fb8b"
+                "074d633aa033d4fca19ba90e5ffd6962b23638a0cb759635f19e296dd6f6c403"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "mprtcl-v4_98FE4316": {
+                    "ttl": 31536007,
+                    "length": 340,
+                    "prevalence": 0.00020216314565854644,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elgato.com",
-                "www.elgato.com"
+                "gymshark.com",
+                "www.gymshark.com"
             ]
         },
         {
@@ -99,7 +137,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "9a0ece140ff209c1546ce43017458517bb9b87d6be2cea97b11f5573f0740b7e"
+                "060f32002150f03b549abf46dd3f067b05837535168ed778b65b35a1f02795aa"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -107,6 +145,70 @@
             "exampleSites": [
                 "gymshark.com",
                 "www.gymshark.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v1\\/eu1-ebd2cad076757c498ce604d818b0d8ae\\/audience",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nativesdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gymshark.com",
+                "www.gymshark.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v1\\/JS\\/us1-c840f22b1bb2b34ea2a758b7a1d11751\\/Forwarding",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elgato.com",
+                "www.elgato.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v3\\/JS\\/us1-c840f22b1bb2b34ea2a758b7a1d11751\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e4956abdd23d4e5f197599f88acd902a4389eb79af39f46711e6df314a7a13ab"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elgato.com",
+                "www.elgato.com"
             ]
         },
         {
@@ -128,49 +230,90 @@
                 "marksandspencer.com",
                 "www.marksandspencer.com"
             ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v3\\/JS\\/us1-7dfd4871ebb63b46b4b08088d78d3869\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f8e0a7baeea8887c93884e01b8c603d4f49bfff1fdee010f433ce88c27c036b5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "msnbc.com",
+                "www.msnbc.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v3\\/JS\\/us1-fdd5f1abc3a1f3499fd53e18a790704f\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5d65f2f88cf2065607303bcfd654c41b897cf87f6f7e4ffb3f1c1ad66a9afd51"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westernunion.com",
+                "www.westernunion.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000404,
+    "cookies": 0.00091,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.41025641025641024
+            "prevalence": 0.5102040816326531
         },
         {
             "domain": "reverb-assets.com",
-            "prevalence": 0.2564102564102564
+            "prevalence": 0.20408163265306123
         },
         {
             "domain": "rollbar.com",
-            "prevalence": 0.1282051282051282
-        },
-        {
-            "domain": "iseaskies.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.16326530612244897
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.061224489795918366
         },
         {
             "domain": "corsair.com",
-            "prevalence": 0.02564102564102564
+            "prevalence": 0.04081632653061224
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.02564102564102564
+            "prevalence": 0.02040816326530612
         }
     ],
     "types": {
-        "Preflight": 5,
-        "Fetch": 10
+        "Preflight": 10,
+        "Fetch": 23,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1447.awsdns-52.org",
-        "ns-1796.awsdns-32.co.uk",
         "ns-206.awsdns-25.com",
-        "ns-553.awsdns-05.net"
+        "ns-553.awsdns-05.net",
+        "ns-1796.awsdns-32.co.uk",
+        "ns-1447.awsdns-52.org"
     ]
 }

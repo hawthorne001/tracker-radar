@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000809,
-    "sites": 8,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
-        "hb"
+        "hb",
+        "cdn",
+        "evt"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "undertone\\.com\\/hb",
@@ -25,24 +27,53 @@
                 "hb"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 6,
+            "prevalence": 0.000606,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "__cmpconsentx86685": 0.00040440804772014964,
-                "__cmpconsentx136571": 0.00010110201193003741
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "a-z-animals.com",
-                "mtgdecks.net",
-                "www.howtoisolve.com",
-                "www.merriam-webster.com",
-                "www.solveyourtech.com"
+                "loudwire.com",
+                "www.gameskinny.com",
+                "www.out.com",
+                "www.pride.com",
+                "www.refinery29.com",
+                "www.salon.com"
+            ]
+        },
+        {
+            "rule": "undertone\\.com\\/js\\/usersync\\.html",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 7,
+            "prevalence": 0.000708,
+            "cnames": [],
+            "responseHashes": [
+                "42281c5f08923d1ffd4e26dceded627d410b1eadc05b76fc308141b194e9ed13"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loudwire.com",
+                "www.bhg.com",
+                "www.byrdie.com",
+                "www.gameskinny.com",
+                "www.lifewire.com",
+                "www.pride.com",
+                "www.refinery29.com"
             ]
         },
         {
@@ -56,14 +87,42 @@
             "sites": 3,
             "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__cmpconsentx86685": 0.00020216314565854644,
+                "__cmpconsentx136571": 0.00010108157282927322
+            },
+            "exampleSites": [
+                "mtgdecks.net",
+                "prodigygamers.com",
+                "www.merriam-webster.com"
+            ]
+        },
+        {
+            "rule": "undertone\\.com\\/userPixel\\/syncr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "evt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ultimateclassicrock.com",
-                "www.advocate.com",
-                "www.huffpost.com"
+                "bhg.com",
+                "www.byrdie.com",
+                "www.lifewire.com"
             ]
         }
     ],
@@ -72,41 +131,51 @@
         "Advertising"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000303,
     "topInitiators": [
         {
+            "domain": "adgrid.io",
+            "prevalence": 0.2692307692307692
+        },
+        {
             "domain": "adthrive.com",
-            "prevalence": 0.47368421052631576
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "townsquareblogs.com",
-            "prevalence": 0.15789473684210525
+            "prevalence": 0.11538461538461539
         },
         {
-            "domain": "adgrid.io",
-            "prevalence": 0.15789473684210525
+            "domain": "first party",
+            "prevalence": 0.11538461538461539
         },
         {
-            "domain": "lasso.link",
-            "prevalence": 0.10526315789473684
+            "domain": "script.ac",
+            "prevalence": 0.11538461538461539
+        },
+        {
+            "domain": "htlbid.com",
+            "prevalence": 0.11538461538461539
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.05263157894736842
-        },
-        {
-            "domain": "adlightning.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "XHR": 5,
-        "Fetch": 3
+        "Fetch": 6,
+        "Document": 7,
+        "XHR": 3,
+        "Image": 3
     },
     "nameservers": [
         "dns3.p09.nsone.net",
         "dns4.p09.nsone.net",
-        "dns2.p09.nsone.net",
-        "dns1.p09.nsone.net"
+        "dns1.p09.nsone.net",
+        "dns2.p09.nsone.net"
     ]
 }
