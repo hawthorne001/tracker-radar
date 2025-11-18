@@ -4,26 +4,57 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
-        "4hpjrx2pxqcsb5jy.test.resolver",
-        "m28csh9fjnoqkgtx.test.resolver"
+        "cdn",
+        "946mp6hsow1sfg9m.test.resolver",
+        "hcjx1ldj1tc2pw3o.test.resolver",
+        "pwl82ecmq0betsgb.test.resolver",
+        "rum-cdn",
+        "devnull"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "perfops\\.net\\/rom3\\/rom3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a4fef32f2e02f7c21ef16d72389838afbbbe1678bacc1c9d83a96789259f032c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
             "rule": "perfops\\.net\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "4hpjrx2pxqcsb5jy.test.resolver",
-                "m28csh9fjnoqkgtx.test.resolver"
+                "946mp6hsow1sfg9m.test.resolver",
+                "hcjx1ldj1tc2pw3o.test.resolver",
+                "pwl82ecmq0betsgb.test.resolver"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "61a5b7957ca3d2a02a7586bbe7a935fb0a27389ece1d728f99ef384287fbf8aa"
@@ -32,8 +63,73 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "opensubtitles.org",
+                "idrlabs.com",
+                "www.idrlabs.com",
                 "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "de31b7ffdd2e4d770bcfcc337e2ab918502071a64e0e459bf1c0a855197fd2b1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/rum\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "devnull"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "67ff8d8bcf6a8b7bcfde940446aedd7dd95b6aa423621083679ff39c98905236"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idrlabs.com",
+                "www.idrlabs.com"
             ]
         }
     ],
@@ -47,7 +143,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 7,
+        "Preflight": 2
     },
     "nameservers": [
         "amber.ns.cloudflare.com",

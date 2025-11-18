@@ -7,15 +7,38 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "pango-virginia-prod-dji-official.us-east-1.log",
-        "retcode-us-west-1.arms"
+        "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log",
+        "arms-retcode"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-web\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dji.com",
+                "www.dji.com"
+            ]
+        },
         {
             "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
             "cookies": 0,
@@ -37,11 +60,79 @@
             ]
         },
         {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-de-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-de-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "www.popmart.com"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/r\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "retcode-us-west-1.arms"
+                "arms-retcode"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.00020216314565854644
+            },
+            "exampleSites": [
+                "seeedstudio.com",
+                "www.seeedstudio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/r\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arms-retcode"
             ],
             "apis": {},
             "sites": 2,
@@ -51,11 +142,11 @@
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.00020220402386007482
+                "_bl_uid": 0.00020216314565854644
             },
             "exampleSites": [
-                "dji.com",
-                "www.dji.com"
+                "seeedstudio.com",
+                "www.seeedstudio.com"
             ]
         }
     ],
@@ -64,20 +155,26 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "djicdn.com",
-            "prevalence": 0.7
+            "domain": "first party",
+            "prevalence": 0.7426900584795322
         },
         {
-            "domain": "first party",
-            "prevalence": 0.2
+            "domain": "alicdn.com",
+            "prevalence": 0.16374269005847952
+        },
+        {
+            "domain": "djicdn.com",
+            "prevalence": 0.08187134502923976
         },
         {
             "domain": "wondershare.cc",
-            "prevalence": 0.1
+            "prevalence": 0.011695906432748537
         }
     ],
     "types": {
-        "Fetch": 4
+        "Ping": 4,
+        "Fetch": 4,
+        "XHR": 4
     },
     "nameservers": [
         "ns3.aliyun.com",

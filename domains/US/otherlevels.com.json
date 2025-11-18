@@ -7,20 +7,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000343,
-    "sites": 5,
+    "prevalence": 0.0000411,
+    "sites": 6,
     "subdomains": [
         "cdn",
         "js-api",
         "js-tags",
-        "js-content"
+        "cdn-image"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "otherlevels\\.com\\/js-sdk\\/otherlevels\\.js",
-            "cookies": 0,
+            "cookies": 0.00000686,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn"
@@ -28,6 +28,8 @@
             "apis": {
                 "window.localStorage": 3,
                 "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
                 "Date.prototype.getTime": 3,
                 "Navigator.prototype.language": 3,
                 "Date.prototype.getTimezoneOffset": 3,
@@ -42,10 +44,56 @@
                 "a1b9a342f8a8d61de90d239d19aa430cd0a15951af327789b6ffb0778f1357ce"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "ol-OL_Tracking_ID": {
+                    "ttl": 1577836802,
+                    "length": 32,
+                    "prevalence": 0.000006856782386297406,
+                    "uniqueness": 1
+                },
+                "ol-OL_LIB_INSTALL_TIME": {
+                    "ttl": 1577836802,
+                    "length": 13,
+                    "prevalence": 0.000006856782386297406,
+                    "uniqueness": 1
+                },
+                "ol-OL_APP_CLEAN_INSTALL_TIME": {
+                    "ttl": 1577836802,
+                    "length": 13,
+                    "prevalence": 0.000006856782386297406,
+                    "uniqueness": 1
+                },
+                "ol-OL_Session_Id": {
+                    "ttl": 902,
+                    "length": 36,
+                    "prevalence": 0.000006856782386297406,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "firekeeperscasino.com",
+                "www.palottery.pa.gov",
+                "www.palottery.state.pa.us"
+            ]
+        },
+        {
+            "rule": "otherlevels\\.com\\/0\\.8\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pa.gov",
+                "firekeeperscasino.com",
                 "www.palottery.pa.gov",
                 "www.palottery.state.pa.us"
             ]
@@ -68,17 +116,17 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pa.gov",
+                "firekeeperscasino.com",
                 "www.palottery.pa.gov",
                 "www.palottery.state.pa.us"
             ]
         },
         {
-            "rule": "otherlevels\\.com\\/0\\.8\\/session",
+            "rule": "otherlevels\\.com\\/api\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "js-api"
+                "js-tags"
             ],
             "apis": {},
             "sites": 3,
@@ -89,51 +137,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pa.gov",
-                "www.palottery.pa.gov",
-                "www.palottery.state.pa.us"
-            ]
-        },
-        {
-            "rule": "otherlevels\\.com\\/0\\.8\\/register_app_event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "js-api"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [],
-            "responseHashes": [
-                "9e067a51888228d1fbef821e1548478a4c39a4886df22e002c0640549a650a4c"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pa.gov",
-                "www.palottery.pa.gov",
-                "www.palottery.state.pa.us"
-            ]
-        },
-        {
-            "rule": "otherlevels\\.com\\/0\\.8\\/register_app_event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "js-api"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pa.gov",
+                "firekeeperscasino.com",
                 "www.palottery.pa.gov",
                 "www.palottery.state.pa.us"
             ]
@@ -156,17 +160,40 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pa.gov",
+                "firekeeperscasino.com",
                 "www.palottery.pa.gov",
                 "www.palottery.state.pa.us"
             ]
         },
         {
-            "rule": "otherlevels\\.com\\/api\\/",
+            "rule": "otherlevels\\.com\\/0\\.8\\/register_app_event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "js-tags"
+                "js-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "9e067a51888228d1fbef821e1548478a4c39a4886df22e002c0640549a650a4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pa.gov",
+                "www.palottery.state.pa.us",
+                "www.palottery.pa.gov"
+            ]
+        },
+        {
+            "rule": "otherlevels\\.com\\/0\\.8\\/register_app_event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js-api"
             ],
             "apis": {},
             "sites": 3,
@@ -178,55 +205,60 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "pa.gov",
-                "www.palottery.pa.gov",
-                "www.palottery.state.pa.us"
+                "www.palottery.state.pa.us",
+                "www.palottery.pa.gov"
             ]
         },
         {
-            "rule": "otherlevels\\.com\\/ae7d2d3d1eee7600845cc399f9e1a637\\/@OL@52131fc4416d9560cf4da3a453d2\\/interstitial\\/v2\\/fetch",
+            "rule": "otherlevels\\.com\\/20169\\/6616cd38-5d53-449a-82cc-5e139ef8e5dc\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "js-content"
+                "cdn-image"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "cc00db278f4117a2979017dfaed6ab8bc60b7f066d52a7fb3ff22f0c40f616c8"
+                "cf314a89a32dcc74715a28d59c232b86ff1d35ff34f1ce5727a1a50b8f9fe51d"
             ],
-            "type": "XHR",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "state.pa.us",
+                "pa.gov",
                 "www.palottery.state.pa.us"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000686,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.8
+            "prevalence": 0.7142857142857143
         },
         {
             "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "pa.gov",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Script": 3,
-        "XHR": 11,
-        "Preflight": 9
+        "Preflight": 9,
+        "XHR": 9,
+        "Image": 2
     },
     "nameservers": [
-        "ns-630.awsdns-14.net",
         "ns-326.awsdns-40.com",
         "ns-1158.awsdns-16.org",
-        "ns-1975.awsdns-54.co.uk"
+        "ns-1975.awsdns-54.co.uk",
+        "ns-630.awsdns-14.net"
     ]
 }

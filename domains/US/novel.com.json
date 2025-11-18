@@ -4,13 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000549,
+    "sites": 8,
     "subdomains": [
         "app"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "novel\\.com\\/api\\/public\\/novel-data",
@@ -20,18 +20,19 @@
                 "app"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
-            "responseHashes": [
-                "dbd7f50f304c3164621dc27712a80dd70834ccce0a31d9cc156c7f7e526ff302"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "frame-store.com",
-                "liquiddeath.com"
+                "goodgoodgolf.com",
+                "liquiddeath.com",
+                "us.hotelchocolat.com",
+                "www.strathberry.com"
             ]
         },
         {
@@ -42,16 +43,49 @@
                 "app"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "235c2f7144adcba976dc4a0761a8f9dfcba38f6eecdb1d83e75025df9f38449e",
+                "a14ed18e5ddeacc71aa849829d8cc27843d3d339fcb56499e31c454b19c5619a",
+                "b7b0686b0e448dbc1373ed2db3dcd2d42cd9b1f421f92554bb61af6ce7edf1d9",
+                "4c405465ba806e1363e83ab94da821fdc46cc9500d3f29d6c16d2fc9069bc337"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "frame-store.com",
-                "liquiddeath.com"
+                "goodgoodgolf.com",
+                "liquiddeath.com",
+                "us.hotelchocolat.com",
+                "www.strathberry.com"
+            ]
+        },
+        {
+            "rule": "novel\\.com\\/vendor\\/js\\/novel-storefront\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cb7ac1e3a3f899712eeb95be88f6c06b35093b125e56ce241745114435e62a4b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goodgoodgolf.com",
+                "www.strathberry.com"
             ]
         }
     ],
@@ -60,17 +94,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "minmaxify.com",
+            "domain": "first party",
             "prevalence": 0.6666666666666666
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "domain": "minmaxify.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 5,
+        "Fetch": 5,
+        "Script": 2
     },
     "nameservers": [
         "valentin.ns.cloudflare.com",

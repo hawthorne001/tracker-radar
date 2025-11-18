@@ -7,21 +7,23 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000405,
-    "sites": 4,
+    "prevalence": 0.000506,
+    "sites": 5,
     "subdomains": [
-        "pango-virginia-prod-dji-official.us-east-1.log",
-        "retcode-us-west-1.arms"
+        "retcode-us-west-1.arms",
+        "arms-retcode",
+        "pango-virginia-prod-dji-official.us-east-1.log"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
+            "rule": "aliyuncs\\.com\\/r\\.png",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "pango-virginia-prod-dji-official.us-east-1.log"
+                "retcode-us-west-1.arms",
+                "arms-retcode"
             ],
             "apis": {},
             "sites": 3,
@@ -30,11 +32,13 @@
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.0003037974683544304
+            },
             "exampleSites": [
                 "dji.com",
-                "support.dji.com",
-                "www.dji.com"
+                "store.dji.com",
+                "www.seeedstudio.com"
             ]
         },
         {
@@ -42,7 +46,55 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "retcode-us-west-1.arms"
+                "retcode-us-west-1.arms",
+                "arms-retcode"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.0003037974683544304
+            },
+            "exampleSites": [
+                "dji.com",
+                "store.dji.com",
+                "www.seeedstudio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-web\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dji.com",
+                "www.dji.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
             ],
             "apis": {},
             "sites": 2,
@@ -51,9 +103,7 @@
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_bl_uid": 0.00020255215718047398
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dji.com",
                 "www.dji.com"
@@ -65,16 +115,26 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "alicdn.com",
+            "prevalence": 0.4107142857142857
+        },
+        {
+            "domain": "djiits.com",
+            "prevalence": 0.30357142857142855
+        },
+        {
             "domain": "djicdn.com",
-            "prevalence": 0.9166666666666666
+            "prevalence": 0.26785714285714285
         },
         {
             "domain": "fliphtml5.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.017857142857142856
         }
     ],
     "types": {
-        "Fetch": 5
+        "Fetch": 5,
+        "XHR": 3,
+        "Ping": 2
     },
     "nameservers": [
         "ns3.aliyun.com",
