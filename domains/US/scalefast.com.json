@@ -4,18 +4,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
         "cdn-prod",
-        "geoip",
-        "eu-api"
+        "geoip"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/css\\/style\\.css",
+            "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\/3\\.3\\.1\\/jquery\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -26,13 +25,36 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d21e7128fedb151f4ec20164f4baa4f04722a5cf4a6e9f4931edf28f31fa0974"
+                "160a426ff2894252cd7cebbdd6d6b7da8fcd319c65b70468f10b6690c45d02ef"
             ],
-            "type": "Stylesheet",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "f54365116cb8612c3093670ee8c92bbdc4353f95a80c534efb1a0b5f4f9cea7e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "dndstore.wizards.com",
                 "secretlair.wizards.com"
             ]
         },
@@ -53,28 +75,6 @@
                 "e22419e8154be2a34a950dbb4c4c448413751c53ef02f00c6c56af28aa2c4964"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
-            "rule": "scalefast\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "geoip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "f54365116cb8612c3093670ee8c92bbdc4353f95a80c534efb1a0b5f4f9cea7e"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -179,50 +179,6 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/lGAuQXzSinstagram_KR_24\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e4c0355c1e2d93600a7e6cc7a3719fceb0612bdeffd376ec162da0ef52f3e969"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
-            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/ZqcTO4TNtwitter_KR_24\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "92277d55ba1eeb8aed90d2ae56ef94f4b454afdbc78d1ab78dffad6c6fe4eb49"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
             "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\.cookie\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -299,7 +255,8 @@
             ],
             "apis": {
                 "window.name": 2,
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -387,11 +344,13 @@
         {
             "rule": "scalefast\\.com\\/public\\/assets\\/js\\/bootstrap-3\\.3\\.7\\/modal\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn-prod"
             ],
-            "apis": {},
+            "apis": {
+                "window.innerWidth": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -673,31 +632,6 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\.scrollbar\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn-prod"
-            ],
-            "apis": {
-                "Navigator.prototype.platform": 1,
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "b9932c7e59a1e2667677e3cd6e6fcd6ac03b84b693de968cfe3c016dea89b9ef"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
             "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery-mmenu\\/jquery\\.mmenu\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -720,7 +654,7 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\.countdown\\.min\\.js",
+            "rule": "scalefast\\.com\\/public\\/assets\\/webfonts\\/fontawesome-pro-5\\.6\\.1-web\\/webfonts\\/fa-light-300\\.woff2",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -731,7 +665,166 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
+                "651ac7f59ca11a753c2c1b38fc72dbd98d7687708723b61e924a16ec0ba23114"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\.countdown\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
                 "2249399b2268c260d0698542503d16afebc80e437c846239f12196744ebbd40f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/webfonts\\/fontawesome-pro-5\\.6\\.1-web\\/webfonts\\/fa-regular-400\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77e2659ed98f2bd48c13d2d3fa95a7c170e63934992db5f4d2f77197db61b71c"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/data\\/countries\\/prefixes\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "398072cbf769f21699a86df3ff4233a9852ce910575bd06fd84b64c3d2f8543b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/css\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d21e7128fedb151f4ec20164f4baa4f04722a5cf4a6e9f4931edf28f31fa0974"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/lGAuQXzSinstagram_KR_24\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e4c0355c1e2d93600a7e6cc7a3719fceb0612bdeffd376ec162da0ef52f3e969"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/ZqcTO4TNtwitter_KR_24\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "92277d55ba1eeb8aed90d2ae56ef94f4b454afdbc78d1ab78dffad6c6fe4eb49"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizards.com",
+                "secretlair.wizards.com"
+            ]
+        },
+        {
+            "rule": "scalefast\\.com\\/public\\/assets\\/js\\/jquery\\.scrollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b9932c7e59a1e2667677e3cd6e6fcd6ac03b84b693de968cfe3c016dea89b9ef"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -764,7 +857,7 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/IJMOh7e5sl2025_encyclopediaatoz_newsletter_banner_1920x300_1920_330_Q90\\.webp",
+            "rule": "scalefast\\.com\\/public\\/assets\\/img\\/resized\\/wizardsofthecoast-secret-lair\\/Y3oqF1hWDesktop_Lychee_Newsletter_Banner_1920_330_Q90\\.webp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -775,7 +868,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3f196f4d8dbd9501d00355714fb5e0cdaaa79fa99bad98dc15fc15c1175c32a2"
+                "96922663ec1f80ed6b19d91eca2f55a5eab2810d9c092937365e29520296af76"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -808,28 +901,6 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/webfonts\\/fontawesome-pro-5\\.6\\.1-web\\/webfonts\\/fa-light-300\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "651ac7f59ca11a753c2c1b38fc72dbd98d7687708723b61e924a16ec0ba23114"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
             "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/fonts\\/GothamNarrow-Book\\.woff2",
             "cookies": 0,
             "fingerprinting": 0,
@@ -852,7 +923,7 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/webfonts\\/fontawesome-pro-5\\.6\\.1-web\\/webfonts\\/fa-regular-400\\.woff2",
+            "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/fonts\\/Beleren2016-Bold\\.woff",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -863,7 +934,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "77e2659ed98f2bd48c13d2d3fa95a7c170e63934992db5f4d2f77197db61b71c"
+                "904d39a90fd1dc83811241e2de56f8b584e7c7a910ee9c4bf6eb3bd0a3e0a2ea"
             ],
             "type": "Font",
             "firstPartyCookies": {},
@@ -896,7 +967,7 @@
             ]
         },
         {
-            "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/fonts\\/Beleren2016-Bold\\.woff",
+            "rule": "scalefast\\.com\\/public\\/assets\\/themes\\/wizardsofthecoast-secret-lair\\/fonts\\/GothamXNarrow-Bold\\.otf",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -907,7 +978,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "904d39a90fd1dc83811241e2de56f8b584e7c7a910ee9c4bf6eb3bd0a3e0a2ea"
+                "fda03ca6db02f08848c7d2fcc8527649ec0f4c285ee5e80184d76b145cc43d67"
             ],
             "type": "Font",
             "firstPartyCookies": {},
@@ -982,50 +1053,6 @@
                 "wizards.com",
                 "secretlair.wizards.com"
             ]
-        },
-        {
-            "rule": "scalefast\\.com\\/public\\/assets\\/data\\/countries\\/prefixes\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "398072cbf769f21699a86df3ff4233a9852ce910575bd06fd84b64c3d2f8543b"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
-        },
-        {
-            "rule": "scalefast\\.com\\/time",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "eu-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "80c6d98b27da695b80f0d148b1c04bed99fd9e69b76757208e4c8d410adc2e7f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wizards.com",
-                "secretlair.wizards.com"
-            ]
         }
     ],
     "categories": [],
@@ -1038,16 +1065,16 @@
         }
     ],
     "types": {
+        "Script": 58,
+        "XHR": 5,
+        "Font": 14,
         "Stylesheet": 2,
-        "Script": 56,
-        "XHR": 6,
-        "Image": 14,
-        "Font": 12
+        "Image": 14
     },
     "nameservers": [
-        "ns-801.awsdns-36.net",
-        "ns-1713.awsdns-22.co.uk",
+        "ns-265.awsdns-33.com",
         "ns-1202.awsdns-22.org",
-        "ns-265.awsdns-33.com"
+        "ns-1713.awsdns-22.co.uk",
+        "ns-801.awsdns-36.net"
     ]
 }

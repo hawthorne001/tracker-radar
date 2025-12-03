@@ -8,7 +8,8 @@
     "sites": 20,
     "subdomains": [
         "sh",
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,8 +22,8 @@
                 "sh"
             ],
             "apis": {
-                "Navigator.prototype.product": 4,
-                "Navigator.prototype.userAgent": 4
+                "Navigator.prototype.product": 5,
+                "Navigator.prototype.userAgent": 5
             },
             "sites": 5,
             "prevalence": 0.0000343,
@@ -49,18 +50,16 @@
                 "sh"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
-            "responseHashes": [
-                "e2bfacf2636a6d2ce7c6b7cb3c817f5f9725883ed327c979469206056433d350",
-                "05fe99a3e7df07324747edff44d86f4043a1042d2968b171fa8c9e44e1ce19a0"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bootjack.com",
+                "www.anker.com",
                 "www.ankersolix.com",
                 "www.xtool.com",
                 "xtool.com"
@@ -74,15 +73,20 @@
                 "sh"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "510176a4c4c3901f5003aa90129657ca0db1c3aa19d54557580ae44e8c76e5c9",
+                "e2bfacf2636a6d2ce7c6b7cb3c817f5f9725883ed327c979469206056433d350",
+                "05fe99a3e7df07324747edff44d86f4043a1042d2968b171fa8c9e44e1ce19a0"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bootjack.com",
+                "www.anker.com",
                 "www.ankersolix.com",
                 "www.xtool.com",
                 "xtool.com"
@@ -96,7 +100,8 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 13
+                "Navigator.prototype.userAgent": 12,
+                "window.localStorage": 1
             },
             "sites": 13,
             "prevalence": 0.0000891,
@@ -112,31 +117,58 @@
                 "bowflex.com",
                 "invictastores.com",
                 "schwinnfitness.com",
+                "www.anker.com",
                 "www.ankersolix.com",
                 "www.bowflex.com",
                 "www.horizonfitness.com",
-                "www.metapcs.com",
                 "www.schwinnfitness.com",
                 "www.slumberland.com",
                 "www.thenaturalsapphirecompany.com",
                 "www.xtool.com",
                 "xtool.com"
             ]
+        },
+        {
+            "rule": "chargeafter\\.com\\/v2\\/promotional-info",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "676bf1a8216f42f3f6ced001462a83a3c72dfc1e31f093dca0c1171602d9aacb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schwinnfitness.com",
+                "www.schwinnfitness.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000686,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9666666666666667
+        },
+        {
+            "domain": "global-e.com",
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
         "Script": 18,
-        "XHR": 4,
-        "Preflight": 4
+        "Preflight": 5,
+        "XHR": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "jill.ns.cloudflare.com",

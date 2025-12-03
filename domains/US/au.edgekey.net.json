@@ -9,9 +9,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000295,
-    "sites": 43,
+    "prevalence": 0.000315,
+    "sites": 46,
     "subdomains": [
+        "static.domain.com",
         "x.nab.com",
         "static.abc-cdn.net",
         "collector.abc.net",
@@ -19,10 +20,11 @@
         "pci.news.com",
         "agl.com",
         "secnprod.edn.news.com",
-        "apm.analytics.bom.gov",
         "api.bom.gov",
+        "apm.analytics.bom.gov",
         "chatbot.woolworths.com",
         "wildcard-ipv4.foxsports.com",
+        "api.healthylife.com",
         "track.opentable.com",
         "default.events.apps.gcp.optus.com",
         "images.sbs.com",
@@ -33,6 +35,10 @@
         {
             "original": "api.bom.gov.au",
             "resolved": "api.bom.gov.au.edgekey.net"
+        },
+        {
+            "original": "api.healthylife.com.au",
+            "resolved": "api.healthylife.com.au.edgekey.net"
         },
         {
             "original": "apm.analytics.bom.gov.au",
@@ -79,12 +85,12 @@
             "resolved": "wildcardsan.news.com.au.edgekey.net"
         },
         {
-            "original": "multitools.newscdn.com.au",
+            "original": "nca.talk.news.com.au",
             "resolved": "wildcardsan.news.com.au.edgekey.net"
         },
         {
-            "original": "nca.talk.news.com.au",
-            "resolved": "wildcardsan.news.com.au.edgekey.net"
+            "original": "s.domainstatic.com.au",
+            "resolved": "static.domain.com.au.edgekey.net"
         },
         {
             "original": "secure.agl.com.au",
@@ -95,6 +101,10 @@
             "resolved": "static.abc-cdn.net.au.edgekey.net"
         },
         {
+            "original": "statsapi.foxsports.com.au",
+            "resolved": "wildcard-ipv4.foxsports.com.au.edgekey.net"
+        },
+        {
             "original": "subscriptions.adelaidenow.com.au",
             "resolved": "pci.news.com.au.edgekey.net"
         },
@@ -103,12 +113,20 @@
             "resolved": "secnprod.edn.news.com.au.edgekey.net"
         },
         {
+            "original": "subscriptions.cairnspost.com.au",
+            "resolved": "pci.news.com.au.edgekey.net"
+        },
+        {
             "original": "subscriptions.dailytelegraph.com.au",
             "resolved": "pci.news.com.au.edgekey.net"
         },
         {
             "original": "subscriptions.escape.com.au",
             "resolved": "secnprod.edn.news.com.au.edgekey.net"
+        },
+        {
+            "original": "subscriptions.goldcoastbulletin.com.au",
+            "resolved": "pci.news.com.au.edgekey.net"
         },
         {
             "original": "subscriptions.taste.com.au",
@@ -134,8 +152,62 @@
     "fingerprinting": 3,
     "resources": [
         {
+            "rule": "au\\.edgekey\\.net\\/content\\/fe-static\\/@domain-group\\/fe-brary\\/static\\/fonts\\/bolton\\/F37Bolton-Regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static.domain.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "s.domainstatic.com.au",
+                    "resolved": "static.domain.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f67d89965c495a9477d6c4a908cfb8466e967bfc48a35e9ee72841a1a8803ab6"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "domain.com.au",
+                "www.domain.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/content\\/fe-static\\/@domain-group\\/fe-brary\\/static\\/fonts\\/bolton\\/F37Bolton-Bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static.domain.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "s.domainstatic.com.au",
+                    "resolved": "static.domain.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8deeb22754487965ba19db66956a5ac91979d55974eb3e60f53317f00b06a3a1"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "domain.com.au",
+                "www.domain.com.au"
+            ]
+        },
+        {
             "rule": "au\\.edgekey\\.net\\/static-shared\\/nab\\/js\\/appd\\/adrum-23\\.10\\.1\\.4359\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "x.nab.com"
@@ -151,6 +223,34 @@
             ],
             "responseHashes": [
                 "9130b21609b6374265d7ba982746d6ff332ee107ec831b7c92760df02f4af248"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nab.com.au",
+                "ib.nab.com.au",
+                "www.nab.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/static-shared\\/nab\\/js\\/appd\\/adrum-ext\\.a57fe9a4dfa0e1d6b2dc001466e4e21d\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "x.nab.com"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "x.nab.com.au",
+                    "resolved": "x.nab.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "edde5f9519d05ce9c276faa8df865f8ab1eb0e9696bd6c1b0bbd5d174fd8dc1a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -189,35 +289,7 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/static-shared\\/nab\\/js\\/appd\\/adrum-ext\\.a57fe9a4dfa0e1d6b2dc001466e4e21d\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "x.nab.com"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [
-                {
-                    "original": "x.nab.com.au",
-                    "resolved": "x.nab.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "edde5f9519d05ce9c276faa8df865f8ab1eb0e9696bd6c1b0bbd5d174fd8dc1a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nab.com.au",
-                "ib.nab.com.au",
-                "www.nab.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/xZ1Lq2\\/5kfoxk\\/q-rN\\/nEde06\\/vtpU0\\/5SziGttN7OfmhGp97Q\\/VDFFfg\\/ECF2fGNJ\\/F1g",
+            "rule": "au\\.edgekey\\.net\\/e1Iwy-2Lzyy0q7Fdy6oTjvVttvA\\/DOYNcr0rkYbQQ43b\\/WGYpAQ\\/Mhg0IX\\/UlSA4",
             "cookies": 0.0000137,
             "fingerprinting": 3,
             "subdomains": [
@@ -241,87 +313,6 @@
             "exampleSites": [
                 "nab.com.au",
                 "ib.nab.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/nabxstats",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "x.nab.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "x.nab.com.au",
-                    "resolved": "x.nab.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "1aad36b0fb02621b951649811957ba7ad67d4838c2932d02088f7d6e8db74313"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nab.com.au",
-                "ib.nab.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/cbx\\/nab-chat-widget\\/khoros\\/nab-chat-widget\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "x.nab.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "x.nab.com.au",
-                    "resolved": "x.nab.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "df8d700ec80aec2bce926929e9d7affd6604cf10a92911a7149a605f2b692af7"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nab.com.au",
-                "www.nab.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/cbx\\/nab-chat-widget\\/khoros\\/config\\.json",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "x.nab.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "x.nab.com.au",
-                    "resolved": "x.nab.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "90ae55407a0976bbabb76e5f3898fc5a002f13f151f902d0c607bdfeb276b213"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nab.com.au",
-                "www.nab.com.au"
             ]
         },
         {
@@ -431,33 +422,6 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/editorialtools\\/build\\/static\\/js\\/loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "wildcardsan.news.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "multitools.newscdn.com.au",
-                    "resolved": "wildcardsan.news.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "cc66f2326d3e8022342904cf4b1429cfe6bd9e60d6c5a02c77d0365b40b8b014"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "news.com.au",
-                "www.news.com.au"
-            ]
-        },
-        {
             "rule": "au\\.edgekey\\.net\\/api\\/v1\\/comments-count",
             "cookies": 0,
             "fingerprinting": 0,
@@ -478,9 +442,9 @@
                 }
             ],
             "responseHashes": [
-                "c01e828251c84a3a4695ce9eca3c2a8ee1826c0915160eb3293eef57ed680745",
+                "776bc05df9515638eceb9ecfcf76f8375353395f0011b59a53a2499477612cbb",
                 "fd1e0b06503374d549ae44dc65d0211142dec3a877f05f9959231c65f0d4c888",
-                "8a7304fc7d162f319cae00ce37f87775b8b89298b56913e1ae7c130003e659fa"
+                "45e4c9eaec929baa7b88b36f720f0efaed40388f75fdb711cdf541edc2289eb1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -494,15 +458,15 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/authorize",
-            "cookies": 0.000096,
+            "cookies": 0.000103,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com",
                 "agl.com"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.000096,
+            "sites": 15,
+            "prevalence": 0.000103,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -514,24 +478,25 @@
                 }
             ],
             "responseHashes": [
-                "1cbb6306244d9a9342a0def327e0cdf0c2078e342bcda7f7eb5d0286941236cf",
-                "ab543e1b25aaed0e4bf901a7061dd0bee46bcaf96db8700f5232bad79e9b0661",
-                "4ea5d99c25edc7632022f2484beef9daf8c5c6d77af1ec55301e634441f166b7",
-                "0f7e0231977bc1af4f69e0f01b4ab2a2a0a055845f88b9e7d714a367b7c911ad",
-                "deb3210d5a017822bc25786ff287239e2a9f63886869d96c203a85e310456e67",
-                "85ada01f509145c4c3c68ca7ebee1402e8a993d3dbdfb059310cac8a717debaf",
-                "58b505595aeadc765a1cc84ce60a2b4bfec7454fdc18ef989a18c4241c9c5766",
-                "286553fea1d301939c53a3a974768ae408a1e0ef738308d93e72c7243aaad4ad",
-                "2194daaba60929c9067f8241e8e1554accb0e775213c5b6d016a5979211861cc",
-                "fa7e00e84f74a700c68571b79acaf70528b85f19640741bcb5cb5d85eafa8ab4",
-                "d3b7de5c89e16591fa76f01a16a56fc2bc8013afedc152702c13f535fcd3fd06",
-                "45f9b7dbfd3a476de2c1e87fedce31b461a20737557804371978974d52b499c4",
-                "fe14a9443f0dacacc73ae9e024314d2ee9416ee3b4a51635192c0e8e2b8d3370"
+                "07f576c0562d6bae63241fcaa21a8192f0e195214c75ec2d270d4b5ced4996b3",
+                "725b133531504e236e7f28c120116b680b13945f39052c34c2ac13e6e0335347",
+                "df9777eb96247dd1493913d14bc537e0505b75f6c7f7ec98025b317217016e98",
+                "74a5aa8534ea20fc8204ccb2a834f056c63a0e987f9b31ce508f0b99d99a37ee",
+                "3a52637bd0887fa8381c7b882372c8792992215385fe106a3b4514e75c8401ba",
+                "472490ff0921dc4ede9d07697cc364abdbe047953e8e14777606e995b5aa2301",
+                "af943703c7e2da04035df0290824ee232544ab83b700802f74f9431e96aecf9b",
+                "1413d20e0652ee2041f43eeb77098a85c75cb30ca2514c0a7f724930134fbb42",
+                "954cfa384a6b646a60f096d91ef0fb8fffd402a0992c1b23e3e18685899a2bc0",
+                "43fb3cda7303bd88b198521b7759a38403dc357ceea3fb055bf1e99d72fcbd42",
+                "5da326d8fd265c54fa372e0d59add94ec60dc92731dba926aeabd6419f94fb6f",
+                "9a1c45f06baed35a768d57fdf1a87d277a5bcfd08d7432c5209268952833631f",
+                "131ea3a66fab5ee933d08cb524d1057dd9b45d572fdc1f156e85a111a7951c5c",
+                "964efc9a726e27dfac90bf5ff96cfb7a596a1358b3dc34a534c7e2fe093d53e0"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "utag_main_vapi_domain": 0.000006856782386297406
+                "utag_main_vapi_domain": 0.0000068572995954193235
             },
             "exampleSites": [
                 "news.com.au",
@@ -539,10 +504,11 @@
                 "www.agl.com.au",
                 "www.bestrecipes.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.couriermail.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.heraldsun.com.au",
-                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
@@ -551,69 +517,15 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/editorialtools\\/build\\/static\\/css\\/6558\\.3d9650324828c159f855\\.chunk\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "wildcardsan.news.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "multitools.newscdn.com.au",
-                    "resolved": "wildcardsan.news.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "0bf861fb4d292779695265e6d904e70cea71f0081871ee846fdd7c63d1edcfb5"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "news.com.au",
-                "www.news.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/editorialtools\\/build\\/static\\/js\\/6558\\.f97c24735abffba7c965\\.chunk\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "wildcardsan.news.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "multitools.newscdn.com.au",
-                    "resolved": "wildcardsan.news.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "1fb4e64359d0203630d258a2c5084f55b088fcc17730b39435932f073144aa08"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "news.com.au",
-                "www.news.com.au"
-            ]
-        },
-        {
             "rule": "au\\.edgekey\\.net\\/csp-reports",
-            "cookies": 0.0000891,
+            "cookies": 0.000096,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000891,
+            "sites": 14,
+            "prevalence": 0.000096,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -631,10 +543,11 @@
                 "www.adelaidenow.com.au",
                 "www.bestrecipes.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.couriermail.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.heraldsun.com.au",
-                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
@@ -643,15 +556,15 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b5e4",
-            "cookies": 0.0000137,
+            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b7eb",
+            "cookies": 0.0000206,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -666,19 +579,20 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "news.com.au",
-                "www.kidspot.com.au"
+                "www.goldcoastbulletin.com.au",
+                "www.thechronicle.com.au"
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/0GY3m_3ab28iV0IUcle3oaOW\\/3XwE0h4zVhzXfp\\/fiIGKFw\\/bg\\/RgbQVYdFM",
-            "cookies": 0.0000823,
+            "rule": "au\\.edgekey\\.net\\/i2TweU9n_TdWR3xyI9TJHs4x\\/3wuEwSSQtp8zwm9f\\/Y3R7TH0B\\/eQ8LZj\\/5YABE",
+            "cookies": 0.0000686,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000891,
+            "sites": 14,
+            "prevalence": 0.000096,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -696,10 +610,11 @@
                 "www.adelaidenow.com.au",
                 "www.bestrecipes.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.couriermail.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.heraldsun.com.au",
-                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
@@ -708,15 +623,15 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/0GY3m_3ab28iV0IUcle3oaOW\\/8p\\/NT90J1w\\/ay\\/0uFRx1fjpX",
+            "rule": "au\\.edgekey\\.net\\/i2TweU9n_TdWR3xyI9TJHs4x\\/bLuE\\/WhdgTH0B\\/RxlCLy\\/ciGmNX",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000891,
+            "sites": 14,
+            "prevalence": 0.000096,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -734,10 +649,11 @@
                 "www.adelaidenow.com.au",
                 "www.bestrecipes.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.couriermail.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.heraldsun.com.au",
-                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
@@ -746,15 +662,15 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/0GY3m_3ab28iV0IUcle3oaOW\\/8p\\/NT90J1w\\/IH\\/BGIj00RzQp",
+            "rule": "au\\.edgekey\\.net\\/i2TweU9n_TdWR3xyI9TJHs4x\\/bLuE\\/WhdgTH0B\\/OxgNYG\\/QEFBkp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000891,
+            "sites": 14,
+            "prevalence": 0.000096,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -772,10 +688,11 @@
                 "www.adelaidenow.com.au",
                 "www.bestrecipes.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.couriermail.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.heraldsun.com.au",
-                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
@@ -819,15 +736,23 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -844,7 +769,9 @@
                 }
             ],
             "responseHashes": [
+                "0d50c7dd044242dfbe026a8068809a0c221fa4d1bf0e7ad11aa337a670b90506",
                 "2c9e0387686db0669559951756142646c396e7416489eff3067bbcc3ac2db623",
+                "7b2065a6245cd1ef9aa8bb3711454c42333e3a582ebc6a5fc2c49f28c7bf200a",
                 "3b89fa5c70ac68b90820b3dcd5122668aae6b6138b3850989be6277020be1e7f",
                 "9c63bfb059457da959c284718703db9b697451c517333b15c42c34c7bd84952a",
                 "0a8b919f9a94cbf699733b714dce4cbfa443fddee8e11f8133dc6be96aeb40a8"
@@ -854,7 +781,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
@@ -869,8 +798,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -881,6 +810,10 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
@@ -889,14 +822,25 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.thechronicle.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 }
             ],
             "responseHashes": [
                 "912a801891112109ef6d3622a4b7de5859edaa8a7104ca751d4ae563df48a01b",
+                "013d3779d7c618aabee0271be74d3fa596b547f635cc73da5bc1c9915eea76ac",
                 "ba80e7ccc77c534f2f979072554b5f1be8651b5dfd8d3b36da03b93fdff6b47c",
                 "a9f99ffe3a977dab00ab9b66c90d5cd52ab9e8b1278063c753652683843c3b39",
+                "f7d920fb01248afb6cf11859031b7f55606a41d8885580fd4fc497e430a74a46",
+                "16c7bf99cfbb0efa023527ac9944bef8c3812fab99966129e40ab731e5f1ced8",
                 "0abc5e224815f18de9cbcdb81f30ab6cc0800836e3f655d2703248f30dd2c056"
             ],
             "type": "Script",
@@ -905,21 +849,24 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b5e9",
-            "cookies": 0.0000274,
+            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b7ec",
+            "cookies": 0.0000206,
             "fingerprinting": 0,
             "subdomains": [
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "login.newscorpaustralia.com",
@@ -935,6 +882,7 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bestrecipes.com.au",
+                "www.bodyandsoul.com.au",
                 "www.dailytelegraph.com.au",
                 "www.news.com.au"
             ]
@@ -947,15 +895,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -964,7 +924,10 @@
                 }
             ],
             "responseHashes": [
+                "9e5a69231fea1f0bd32927251eb0244e1e9286ea4cc3bad7268dce76bc1d6589",
                 "6bfff4080ddf0310e08abeaffcfa0887b1666ef6751615fe7a760f7e47971985",
+                "c0ae44f9dca146cc67f2135f93d2bb4e5cfdb6cd6b861477d9f5d3a191ecb6e0",
+                "413c38ea0e72a173c64d4378e431bcc7ea86de758d7aff01a411399fcff135c5",
                 "fc5141712d4776472bf06f98f0aef2a66236178b2f7d3ce6c2fcca7cdb85ff9a"
             ],
             "type": "Document",
@@ -972,7 +935,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -984,15 +950,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -1001,15 +979,18 @@
                 }
             ],
             "responseHashes": [
-                "52797b3c99ecba2024decbd5183f77c5b5766a2c4907f786778e44e16a257585",
-                "610ac9fabd76860bd1ae584d2aff2068a242f24337d3f26c5056e9da83a54247"
+                "610ac9fabd76860bd1ae584d2aff2068a242f24337d3f26c5056e9da83a54247",
+                "52797b3c99ecba2024decbd5183f77c5b5766a2c4907f786778e44e16a257585"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1022,8 +1003,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1034,8 +1015,20 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1051,7 +1044,10 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1064,8 +1060,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1076,8 +1072,20 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1093,7 +1101,10 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1106,8 +1117,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1118,6 +1129,10 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
@@ -1126,14 +1141,25 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.thechronicle.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 }
             ],
             "responseHashes": [
                 "87dfdd0a7f1d7bf8ad0e7cd01cb93b1030330d3b4c9a39fe38cac0c3dafa46cd",
+                "7e50ead92ab11257b8a330e3cafda9c2c8efc1724d01d8a23aa03af29c2cb321",
                 "2a42f6db0a484b621e7a349439da0dad9fe2f94c4b1f9b9615318a641ec223fa",
                 "530a7253ce276176c9f0ee107dade417773743ec939874f542f937f743e3232a",
+                "4258d07fce516ddf72767bbd0ea0bd4bc4c60000d7bbc0d1ac654873bb30e09a",
+                "dd7cf5ecb2de9911eefdf1c17b9325131bab759fe83da74cbd76eceafc78dc8e",
                 "9f8ca5fec760741aaac065f83fa0614782c6cf6ebad773318b31b2c0778f32cb"
             ],
             "type": "Script",
@@ -1142,8 +1168,11 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1155,15 +1184,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -1172,7 +1213,10 @@
                 }
             ],
             "responseHashes": [
+                "3522fd03132ce161233080842be53585efce2ac4bf45c9b513e7c6910a226449",
                 "e891505c3e66783305c72b59aaa677beb960ffdebd8a0d8a75c387f71c1fb2dc",
+                "ff8f5474ebd1ff4b55099b3eea6ba3800b78034cb48ef92891589177177ef51b",
+                "a87e9b0781f0e65baff0af5af1ff209a1ed76e419137c7ef9eb6d64c8bdef79f",
                 "26447ece295914e95cb541d3d32a83673326b567cfce06dd6ab51616d19d957c"
             ],
             "type": "Script",
@@ -1180,7 +1224,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1193,8 +1240,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1205,12 +1252,24 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1226,8 +1285,11 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1240,8 +1302,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1252,8 +1314,20 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1269,7 +1343,10 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1282,8 +1359,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1294,12 +1371,24 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1315,8 +1404,11 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1328,15 +1420,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -1352,7 +1456,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1364,15 +1471,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -1388,7 +1507,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1401,8 +1523,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1413,12 +1535,24 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1434,8 +1568,11 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1448,8 +1585,8 @@
                 "secnprod.edn.news.com"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
@@ -1460,8 +1597,20 @@
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.escape.com.au",
                     "resolved": "secnprod.edn.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
                     "original": "subscriptions.thechronicle.com.au",
@@ -1470,7 +1619,10 @@
             ],
             "responseHashes": [
                 "b402516063b7c6e165d763e08c101d21e70f335e6693227269e4279c0f67cfaf",
+                "6b8c0ad8cd0046240ecd7d892c64dd740082f63b872b7c8df2a7bc45e6e1a731",
                 "6ccaf47761f6276b4e269be33983163750258fdd289879a949b9d598c7f76267",
+                "8f449915eb78033f784b8b23e19f90744d2e5afdd7add46bff9c8e3552a6217f",
+                "7cdc6d42fc5c3af75c78fd57f93a0bb018261afd88ed0bfad87e6f551dca045a",
                 "c8cccb4f9ad2e88a4967535bad5416e62c21e2861f646b18cfa4b13af0982dbe"
             ],
             "type": "Script",
@@ -1479,7 +1631,10 @@
             "exampleSites": [
                 "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
+                "www.cairnspost.com.au",
                 "www.escape.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
             ]
         },
@@ -1491,15 +1646,27 @@
                 "pci.news.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [
                 {
                     "original": "subscriptions.adelaidenow.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
+                    "original": "subscriptions.cairnspost.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
                     "original": "subscriptions.dailytelegraph.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.goldcoastbulletin.com.au",
+                    "resolved": "pci.news.com.au.edgekey.net"
+                },
+                {
+                    "original": "subscriptions.theaustralian.com.au",
                     "resolved": "pci.news.com.au.edgekey.net"
                 },
                 {
@@ -1508,7 +1675,10 @@
                 }
             ],
             "responseHashes": [
+                "8434d3e4f80b9d1fcc8de39d911dd4c2ba9e1f2b0f5fbb745d19d7a6f1a0905f",
                 "dd9902b081bb1baf599fd3231a8abac8e0c419ccc366fb89cb9208dc076b8577",
+                "2165f39f3805517a178f6ec9c37fe410e18c48ad947423e3f8b04ee38ce53d93",
+                "7baf0d9bcef85b6376dedbfabc69f061bed2aa97ad64fc7b8c183e19a571b244",
                 "5d693c741c656982d351140936063b0dfa5805a19017795146503906faff8e32"
             ],
             "type": "Script",
@@ -1516,144 +1686,11 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adelaidenow.com.au",
+                "www.cairnspost.com.au",
                 "www.dailytelegraph.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.theaustralian.com.au",
                 "www.thechronicle.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/xit9uh\\/Q08\\/pq8\\/YTSnkA\\/YzX3kbVGXmDGG0b95Q\\/VSVqQ0Z-JAw\\/DAJlLV\\/MTKkA",
-            "cookies": 0.0000137,
-            "fingerprinting": 3,
-            "subdomains": [
-                "agl.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "secure.agl.com.au",
-                    "resolved": "agl.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "4e90bc1e3a76a7ea710e1d1ebdb3cb38ee0b1daa9eac0dd36e9fdf177d6fbb9a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "agl.com.au",
-                "www.agl.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/xit9uh\\/Q08\\/pq8\\/YTSnkA\\/JVX31h\\/Il1GQ0Z-JAw\\/DixFO2\\/9beiBY",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "agl.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "secure.agl.com.au",
-                    "resolved": "agl.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "bbf6d6790daeda99034c6eeb5a3398d442f824911bd1e444b69abd7dcb8d7f47"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "agl.com.au",
-                "www.agl.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/xit9uh\\/Q08\\/pq8\\/YTSnkA\\/JVX31h\\/Il1GQ0Z-JAw\\/ASNzM2\\/YFWE0o",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "agl.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "secure.agl.com.au",
-                    "resolved": "agl.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "d0cb8a965c4e4d7837131eace24528d85c1d93d110516dc3892017ac23177775"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "agl.com.au",
-                "www.agl.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/xit9uh\\/Q08\\/pq8\\/YTSnkA\\/YzX3kbVGXmDGG0b95Q\\/VSVqQ0Z-JAw\\/DAJlLV\\/MTKkA",
-            "cookies": 0.0000137,
-            "fingerprinting": 3,
-            "subdomains": [
-                "agl.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "secure.agl.com.au",
-                    "resolved": "agl.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "bef9393fcdfc7a7299c058ba2a69253c32e0964dd3e97834e17a8cdb5dce7cf6"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "agl.com.au",
-                "www.agl.com.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b5ee",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "pci.news.com"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [
-                {
-                    "original": "login.newscorpaustralia.com",
-                    "resolved": "pci.news.com.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bodyandsoul.com.au",
-                "www.couriermail.com.au",
-                "www.heraldsun.com.au"
             ]
         },
         {
@@ -1781,6 +1818,33 @@
             ]
         },
         {
+            "rule": "au\\.edgekey\\.net\\/apikey\\/v1\\/warnings\\/list",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.bom.gov"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.bom.gov.au",
+                    "resolved": "api.bom.gov.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "2a93afd7b867f477e70b1ae1fce599603b3f3efb9cb5d16119edee0dfb388b76"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bom.gov.au",
+                "www.bom.gov.au"
+            ]
+        },
+        {
             "rule": "au\\.edgekey\\.net\\/intake\\/v2\\/rum\\/events",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1808,55 +1872,30 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/intake\\/v2\\/rum\\/events",
-            "cookies": 0,
+            "rule": "au\\.edgekey\\.net\\/akam\\/13\\/7d8b7ed",
+            "cookies": 0.00000686,
             "fingerprinting": 0,
             "subdomains": [
-                "apm.analytics.bom.gov"
+                "pci.news.com"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "apm.analytics.bom.gov.au",
-                    "resolved": "apm.analytics.bom.gov.au.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bom.gov.au",
-                "www.bom.gov.au"
-            ]
-        },
-        {
-            "rule": "au\\.edgekey\\.net\\/apikey\\/v1\\/warnings\\/list",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.bom.gov"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.bom.gov.au",
-                    "resolved": "api.bom.gov.au.edgekey.net"
+                    "original": "login.newscorpaustralia.com",
+                    "resolved": "pci.news.com.au.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "f6dde080954106ff528d17e0aada04e66f0ea32589da497c840eea12a5c1a0f5"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bom.gov.au",
-                "www.bom.gov.au"
+                "couriermail.com.au",
+                "www.heraldsun.com.au"
             ]
         },
         {
@@ -1880,7 +1919,7 @@
                 }
             ],
             "responseHashes": [
-                "2922c7b0e19588978cf686153ae9b210e8bd2074f0ab17b94c1aa6115b462e56"
+                "199662794f76ac932022acdec9450e50fc86d9528a60bdca04d393dec64bcc95"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1911,7 +1950,7 @@
                 }
             ],
             "responseHashes": [
-                "f7289185885ed44a5c88a9467700b4066a99ee8ab72497ad26acb706d36b6bfc"
+                "c713ea8d8823ca4ecd0de60c6dd30fea3368a42a3c44d1f834a5427fbdf0e9d8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1923,7 +1962,7 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/assets\\/video\\/6\\.9\\.2\\/video\\/video\\.fs\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000686,
             "fingerprinting": 3,
             "subdomains": [
                 "wildcard-ipv4.foxsports.com"
@@ -1950,7 +1989,7 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/assets\\/vendor\\/3\\.0\\.0\\/js\\/vendor\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000686,
             "fingerprinting": 1,
             "subdomains": [
                 "wildcard-ipv4.foxsports.com"
@@ -2004,7 +2043,7 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/assets\\/navigation\\/3\\.3\\.3\\/js\\/navigation\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000686,
             "fingerprinting": 1,
             "subdomains": [
                 "wildcard-ipv4.foxsports.com"
@@ -2031,7 +2070,7 @@
         },
         {
             "rule": "au\\.edgekey\\.net\\/assets\\/scoreboard\\/5\\.2\\.4\\/js\\/scoreboard\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000686,
             "fingerprinting": 0,
             "subdomains": [
                 "wildcard-ipv4.foxsports.com"
@@ -2057,9 +2096,9 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/assets\\/video\\/6\\.9\\.2\\/js\\/video\\.min\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
+            "rule": "au\\.edgekey\\.net\\/3\\.0\\/api\\/sports\\/football\\/matches\\/EPL2025-261202\\/scoreboard\\.json",
+            "cookies": 0.00000686,
+            "fingerprinting": 0,
             "subdomains": [
                 "wildcard-ipv4.foxsports.com"
             ],
@@ -2068,19 +2107,71 @@
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "fiso.foxsports.com.au",
+                    "original": "statsapi.foxsports.com.au",
                     "resolved": "wildcard-ipv4.foxsports.com.au.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "8eb2e08b418abedb61e9d4dc5477f3e3b5a096e1ac8b6f1b8215de12ac2782f3"
+                "b4636fd6b6bdf882aaf84f3879e9c4e34e10718e58f105792c2212ab0c9d010f"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxsports.com.au",
                 "www.foxsports.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.healthylife.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.healthylife.com.au",
+                    "resolved": "api.healthylife.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "healthylife.com.au",
+                "www.healthylife.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.healthylife.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.healthylife.com.au",
+                    "resolved": "api.healthylife.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "12af76233d3769d7565e87d5ab5b1f13574096a5cf835656c427115007cde4a2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "healthylife.com.au",
+                "www.healthylife.com.au"
             ]
         },
         {
@@ -2125,13 +2216,13 @@
                 }
             ],
             "responseHashes": [
-                "2b1512219b23385c759d888a1efc5a9e0ba5fe8e38bf37bb377e5b182700f810"
+                "d0337f4c1803712e48a06fe03f76a773ac18bcf732af30184b22a487065e69e4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ga": 0.000013713564772594813,
-                "IR_gbd": 0.000013713564772594813
+                "_ga": 0.000013714599190838647,
+                "IR_gbd": 0.000013714599190838647
             },
             "exampleSites": [
                 "optus.com.au",
@@ -2263,7 +2354,7 @@
                 }
             ],
             "responseHashes": [
-                "8c28599fecdafe50bf7a7755ace311b36e828c92877e2c92ce79a962caf9e920"
+                "fda237ddb6d3f5e644d69d76570120a55939f258c39ab0d7a0107d93080186cf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -2274,7 +2365,7 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/web\\/audio\\/current-song\\/sbs-pop-asia",
+            "rule": "au\\.edgekey\\.net\\/web\\/audio\\/current-song\\/sbs-pop-araby",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2290,7 +2381,7 @@
                 }
             ],
             "responseHashes": [
-                "bd155b27385679c1e82b7f69ade8f85344461847bbbed8e3fe9a236f1e3a61f1"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -2301,7 +2392,7 @@
             ]
         },
         {
-            "rule": "au\\.edgekey\\.net\\/images\\/1005\\/1106815997\\.jpg",
+            "rule": "au\\.edgekey\\.net\\/images\\/1005\\/1120188659\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2317,7 +2408,7 @@
                 }
             ],
             "responseHashes": [
-                "b0a2525796d3656b3ff017922ea1ccf121d89fed4202931f6cac9fc819fda872"
+                "707e4b0afb0eecdb4c09d9f93972da80754a187521657b19fdfe72d9ff6a86f4"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -2334,54 +2425,54 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.49444444444444446
+            "prevalence": 0.4732142857142857
         },
         {
             "domain": "sdiapi.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.26785714285714285
         },
         {
             "domain": "streamotion.com.au",
-            "prevalence": 0.15
+            "prevalence": 0.12053571428571429
         },
         {
             "domain": "vidora.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.044642857142857144
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.044444444444444446
+            "prevalence": 0.03125
         },
         {
             "domain": "newscdn.com.au",
-            "prevalence": 0.027777777777777776
-        },
-        {
-            "domain": "adlightning.com",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.022321428571428572
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.016666666666666666
+            "prevalence": 0.013392857142857142
         },
         {
             "domain": "woolworths.media",
-            "prevalence": 0.016666666666666666
+            "prevalence": 0.013392857142857142
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.008928571428571428
         },
         {
             "domain": "optusdigital.com",
-            "prevalence": 0.005555555555555556
+            "prevalence": 0.004464285714285714
         }
     ],
     "types": {
-        "Script": 129,
-        "XHR": 13,
-        "Fetch": 18,
-        "Font": 6,
+        "Font": 10,
+        "Script": 161,
+        "XHR": 14,
         "Preflight": 4,
-        "Document": 21,
-        "Stylesheet": 17,
-        "Other": 13,
+        "Fetch": 18,
+        "Document": 25,
+        "Other": 14,
+        "Stylesheet": 14,
         "Image": 10
     },
     "nameservers": []

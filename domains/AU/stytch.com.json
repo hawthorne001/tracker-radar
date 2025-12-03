@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
         "api",
         "web",
+        "elements",
         "telemetry"
     ],
     "cnames": [
@@ -28,8 +29,8 @@
                 "web"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -37,6 +38,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "capitalbrief.com",
+                "www.descript.com",
                 "www.vondy.com"
             ]
         },
@@ -49,8 +51,8 @@
                 "web"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -58,6 +60,54 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "capitalbrief.com",
+                "www.descript.com",
+                "www.vondy.com"
+            ]
+        },
+        {
+            "rule": "stytch\\.com\\/telemetry\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "elements"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.plugins": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.devicePixelRatio": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "9f50e9159079781c12e1d1a01bada933b92c1500dde214aa2ad6b2bb8b2d90fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "descript.com",
                 "www.vondy.com"
             ]
         },
@@ -92,26 +142,31 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "descript-website.vercel.app",
+            "prevalence": 0.3076923076923077
+        },
+        {
             "domain": "stytch.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.3076923076923077
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.23076923076923078
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.2222222222222222
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2
+        "Fetch": 5,
+        "Preflight": 3,
+        "Script": 2
     },
     "nameservers": [
         "ns-217.awsdns-27.com",
-        "ns-1320.awsdns-37.org",
         "ns-521.awsdns-01.net",
+        "ns-1320.awsdns-37.org",
         "ns-2013.awsdns-59.co.uk"
     ]
 }
