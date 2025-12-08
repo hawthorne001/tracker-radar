@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00112,
-    "sites": 11,
+    "prevalence": 0.00132,
+    "sites": 13,
     "subdomains": [
+        "cdn",
         "tracking"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "refersion\\.com\\/refersion\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2b73b20a91f827ef5bc1ca2a2d1bf8355cf2727d0ec7177a3b8a5c07f546c031"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "owalalife.com",
+                "www.mindbodygreen.com"
+            ]
+        },
         {
             "rule": "refersion\\.com\\/start",
             "cookies": 0,
@@ -23,28 +49,18 @@
                 "tracking"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.00071,
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "9cda58afabf1e390a763a704adddc94722c8b788f054b99f8b58fe111051101b",
-                "ce5c197d4ea29e452412e60d28a4990e198bd2ff86d54e4659131d503d9b0de6",
-                "16cfd8e8f30d38cb462fbe3d4201dde96a3ae3a40854c3ab84baa26e470b95db",
-                "87ffc8a85b45423f610fb3a86214734e03c39b12b2d15e988fd0d4e93edaea7c",
-                "7c38e34b1ec3d568c305840849f24622ae9e0bbf43bd104e03e4684aa2653bfb",
-                "0efd6f8a39bbb0fb1689b0373dfd7e5c2147ffa41f274e6b36bd9457adb1b523"
+                "4d01709fcd599118652e3b27bd0ca97c802f832183d01f76a034755f2bc62fa3"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cleannectarine.com.au",
-                "fosiaudio.com",
-                "secretlabchairs.com.au",
-                "teddybaldassarre.com",
-                "www.lifespanfitness.com.au",
-                "www.nourishmeorganics.com.au",
-                "www.waterscoaustralia.com.au"
+                "owalalife.com",
+                "www.mindbodygreen.com"
             ]
         },
         {
@@ -58,19 +74,54 @@
             "sites": 8,
             "prevalence": 0.000811,
             "cnames": [],
+            "responseHashes": [
+                "ca916eb402afb0ad6029f08df27ec4a9d5e294028294360e52bc932dcfeab013",
+                "0e23960e4727359e1772b1c8d08c5cd50bcfb6148ccdced7c5cf9ade0ca5297e",
+                "56d3de23605a67429d71a5ec02a7cab639cfa629d61670b78dad565320d1dcb7",
+                "11cecaa41c0998b5c8c23b600fc4a1450fa84cd2c0b86006b37e956888114294",
+                "15db2caf2fa48cd846164bb7be0293c95a05f71a9f5ced6bbee06bbea0e8357b",
+                "1746304267c44bcc3ca79b84be6fb61ec4c112377a7e9df621589c58162a58ab",
+                "866541356af53091e34327b34959bc78b9d253ecafaa01d87a307d2b991c8c91"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretlabchairs.com.au",
+                "shirtz.cool",
+                "www.armyandoutdoors.com.au",
+                "www.lifespanfitness.com.au",
+                "www.nourishmeorganics.com.au",
+                "www.orbitkey.com.au",
+                "www.waterscoaustralia.com.au",
+                "zazenalkalinewater.com.au"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000912,
+            "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cleannectarine.com.au",
-                "fosiaudio.com",
                 "secretlabchairs.com.au",
-                "teddybaldassarre.com",
+                "shirtz.cool",
+                "www.armyandoutdoors.com.au",
                 "www.lifespanfitness.com.au",
                 "www.mindbodygreen.com",
                 "www.nourishmeorganics.com.au",
-                "www.waterscoaustralia.com.au"
+                "www.orbitkey.com.au",
+                "www.waterscoaustralia.com.au",
+                "zazenalkalinewater.com.au"
             ]
         }
     ],
@@ -80,16 +131,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9333333333333333
+            "prevalence": 0.8823529411764706
         },
         {
-            "domain": "webcontentassessor.com",
-            "prevalence": 0.06666666666666667
+            "domain": "googletagmanager.com",
+            "prevalence": 0.11764705882352941
         }
     ],
     "types": {
-        "Fetch": 7,
-        "Preflight": 8
+        "Script": 2,
+        "XHR": 2,
+        "Fetch": 8,
+        "Preflight": 9
     },
     "nameservers": [
         "beau.ns.cloudflare.com",

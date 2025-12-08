@@ -12,7 +12,10 @@
     "subdomains": [
         "contentpp",
         "dd",
-        "notification"
+        "notification",
+        "api-scsd",
+        "ht",
+        "p-scsd"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -20,11 +23,14 @@
         {
             "rule": "blackhawknetwork\\.com\\/bingewidgetv2\\/2\\.0\\.0-55\\/widget\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "contentpp"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.product": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -53,11 +59,10 @@
                 "WebGLRenderingContext.prototype.getExtension": 2,
                 "WebGLRenderingContext.prototype.getParameter": 2,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.languages": 2,
                 "window.outerHeight": 2,
                 "window.outerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.hardwareConcurrency": 2,
                 "Navigator.prototype.webdriver": 2,
                 "Navigator.prototype.platform": 2,
@@ -87,7 +92,8 @@
                 "window.devicePixelRatio": 2,
                 "Screen.prototype.orientation": 2,
                 "Date.prototype.getTimezoneOffset": 2,
-                "MediaDevices.prototype.enumerateDevices": 1
+                "Document.cookie setter": 2,
+                "MediaDevices.prototype.enumerateDevices": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -98,34 +104,12 @@
             "type": "Script",
             "firstPartyCookies": {
                 "datadome": {
-                    "ttl": 31536033,
+                    "ttl": 31536000,
                     "length": 128,
-                    "prevalence": 0.000013713564772594813,
+                    "prevalence": 0.000013714599190838647,
                     "uniqueness": 1
                 }
             },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "giftcards.com",
-                "www.giftcards.com"
-            ]
-        },
-        {
-            "rule": "blackhawknetwork\\.com\\/riskService\\/v1\\/riskWidget\\/getRiskProviders",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "notification"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "a2eda5010d104018174a6faa05bc5f83a508b7fff9f43960410edf81db726b70"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "giftcards.com",
@@ -153,6 +137,28 @@
             ]
         },
         {
+            "rule": "blackhawknetwork\\.com\\/riskService\\/v1\\/riskWidget\\/getRiskProviders",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "notification"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b5edfb3d4f635cd3bddbaa9d240cdd7aa1dd1ca3855093165dcd14b4c55a0e56"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
             "rule": "blackhawknetwork\\.com\\/js\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -163,8 +169,244 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4e12b4f4d64af4e62cf1d515ddaf1afc48b02394943b4bf4ceb649fa11a8c917"
+            ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/assets\\/loader\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "api-scsd"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 2,
+                "DeviceMotionEvent.prototype.acceleration": 2,
+                "DeviceMotionEvent.prototype.rotationRate": 2,
+                "DeviceOrientationEvent.prototype.absolute": 2,
+                "DeviceOrientationEvent.prototype.alpha": 2,
+                "DeviceOrientationEvent.prototype.beta": 2,
+                "DeviceOrientationEvent.prototype.gamma": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.availLeft": 2,
+                "Screen.prototype.availTop": 2,
+                "Screen.prototype.orientation": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7d6a0c2213bd2cdcf319318add4a93b9a3977d3c9f6c877a70b1c7055ef38734"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/assets\\/collector\\.min\\.d4021d2\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-scsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6aed355906e08018f8d216239f8b9c52dd74a369007d1a09f15eda869adfb53d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/assets\\/collector\\.min\\.d4021d2\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "api-scsd"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.plugins": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getContextAttributes": 2,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.productSub": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "RTCPeerConnection.prototype.constructor": 2,
+                "Navigator.prototype.getBattery": 2,
+                "Navigator.prototype.vendor": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.vendorSub": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.webkitTemporaryStorage": 1,
+                "Navigator.prototype.webkitPersistentStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Navigator.prototype.appCodeName": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.product": 1,
+                "Navigator.prototype.onLine": 1,
+                "Navigator.prototype.keyboard": 1,
+                "Navigator.prototype.mediaDevices": 1,
+                "Navigator.prototype.storage": 1,
+                "Navigator.prototype.mediaCapabilities": 1,
+                "Navigator.prototype.permissions": 1,
+                "Navigator.prototype.presentation": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.devicePixelRatio": 1,
+                "BarProp.prototype.visible": 1,
+                "Screen.prototype.pixelDepth": 1,
+                "Screen.prototype.availLeft": 1,
+                "Screen.prototype.availTop": 1,
+                "Screen.prototype.orientation": 1,
+                "Performance.prototype.memory": 1,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 1,
+                "window.openDatabase": 1,
+                "Notification.permission": 1,
+                "MediaDevices.prototype.enumerateDevices": 1,
+                "URL.createObjectURL": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "693f6cd7e06dd96a71a84e09bc9e4e35a066f8b9ad5a98876b7d9a230d0ed4ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_immortal|deviceToken": {
+                    "ttl": 31536033,
+                    "length": 400,
+                    "prevalence": 0.0000068572995954193235,
+                    "uniqueness": 1
+                },
+                "cookietest": {
+                    "ttl": -1764641117,
+                    "length": 1,
+                    "prevalence": 0.000013714599190838647,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/assets\\/Z2lmdGNhcmRzLmNvbQ==",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ht"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "03fd31d79ae43582a8e746b4b3c65cbf7c813a83f8bab1dfd7e61e7cfeb48c9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/v1\\/events\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-scsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giftcards.com",
+                "www.giftcards.com"
+            ]
+        },
+        {
+            "rule": "blackhawknetwork\\.com\\/v1\\/b\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-scsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -179,22 +421,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8823529411764706
-        },
-        {
-            "domain": "newrelic.com",
-            "prevalence": 0.11764705882352941
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 10,
+        "Preflight": 2,
         "XHR": 4,
-        "Preflight": 2
+        "Document": 2,
+        "WebSocket": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-1447.awsdns-52.org",
-        "ns-623.awsdns-13.net",
         "ns-146.awsdns-18.com",
-        "ns-1869.awsdns-41.co.uk"
+        "ns-623.awsdns-13.net",
+        "ns-1869.awsdns-41.co.uk",
+        "ns-1447.awsdns-52.org"
     ]
 }

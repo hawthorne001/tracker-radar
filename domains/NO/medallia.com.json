@@ -9,9 +9,10 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000506,
     "sites": 5,
     "subdomains": [
+        "resources.digital-cloud-west",
         "analytics-fe.digital-cloud",
         "analytics-fe.digital-cloud-us-main"
     ],
@@ -19,25 +20,31 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "medallia\\.com\\/api\\/web\\/events",
+            "rule": "medallia\\.com\\/wdcwest\\/149898\\/onsite\\/generic1762938798126\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "analytics-fe.digital-cloud",
-                "analytics-fe.digital-cloud-us-main"
+                "resources.digital-cloud-west"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.cookieEnabled": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "5de0dff6f844a46c9399166985db5f17b2c22067800342f26adccf60381dd5ff"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "target.com",
-                "www.target.com",
-                "www.thermofisher.com"
+                "ellos.us",
+                "www.ellos.us"
             ]
         },
         {
@@ -50,7 +57,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000303,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -63,6 +70,27 @@
                 "www.target.com",
                 "www.thermofisher.com"
             ]
+        },
+        {
+            "rule": "medallia\\.com\\/api\\/web\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-fe.digital-cloud",
+                "analytics-fe.digital-cloud-us-main"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "target.com",
+                "www.thermofisher.com"
+            ]
         }
     ],
     "categories": [],
@@ -71,29 +99,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "prevalence": 0.45454545454545453
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.2727272727272727
         },
         {
             "domain": "ensighten.com",
-            "prevalence": 0.2222222222222222
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.18181818181818182
         },
         {
             "domain": "targetimg1.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Preflight": 3,
-        "XHR": 3
+        "Script": 2,
+        "XHR": 3,
+        "Preflight": 2
     },
     "nameservers": [
+        "ns-1363.awsdns-42.org",
         "ns-183.awsdns-22.com",
-        "ns-881.awsdns-46.net",
         "ns-1874.awsdns-42.co.uk",
-        "ns-1363.awsdns-42.org"
+        "ns-881.awsdns-46.net"
     ]
 }

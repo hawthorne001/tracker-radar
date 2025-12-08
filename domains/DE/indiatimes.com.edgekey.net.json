@@ -9,19 +9,115 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "etmarketsapis",
+        "offers",
+        "agi-static",
         "geoapi"
     ],
     "cnames": [
         {
+            "original": "agi-static.indiatimes.com",
+            "resolved": "agi-static.indiatimes.com.edgekey.net"
+        },
+        {
+            "original": "etmarketsapis.indiatimes.com",
+            "resolved": "etmarketsapis.indiatimes.com.edgekey.net"
+        },
+        {
             "original": "geoapi.indiatimes.com",
             "resolved": "geoapi.indiatimes.com.edgekey.net"
+        },
+        {
+            "original": "offers.indiatimes.com",
+            "resolved": "offers.indiatimes.com.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/ET_Stats\\/getMarketBand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etmarketsapis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "etmarketsapis.indiatimes.com",
+                    "resolved": "etmarketsapis.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "43b46436020e3024be2fe0e587a7abc806ee4b389e8ff49f1fb2ee9bcd1fb177"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/offer-engine\\/api\\/v1\\/fetch-master-messages\\/et\\/web\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "offers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "offers.indiatimes.com",
+                    "resolved": "offers.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "69afa9dc1bdea7bdb8134546209dd5472401bc33a56b32403bf477dc35493ada"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/cms-common\\/ibeat\\.min\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "agi-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "agi-static.indiatimes.com",
+                    "resolved": "agi-static.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f8c6a6d8460044b34630088e2e73a6b6106afcb38bf84e69ad8e89a60bcb95d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
+            ]
+        },
         {
             "rule": "indiatimes\\.com\\.edgekey\\.net\\/",
             "cookies": 0,
@@ -60,7 +156,8 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Fetch": 4,
+        "Script": 4
     },
     "nameservers": []
 }

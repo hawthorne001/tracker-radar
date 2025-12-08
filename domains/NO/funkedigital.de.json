@@ -4,14 +4,67 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000405,
+    "sites": 4,
     "subdomains": [
-        "scout.data"
+        "spark.cloud",
+        "scout.data",
+        "anonym.data"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "funkedigital\\.de\\/spark\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "spark.cloud"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "8acf93510dd4456dd81d15570aa9c4f480b68112bda343e1e33b2a573c044db4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "4p.de",
+                "www.morgenpost.de",
+                "www.praktischarzt.de"
+            ]
+        },
+        {
+            "rule": "funkedigital\\.de\\/orders\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scout.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7e95ad451e86af0ec535174c030f40418b19ef5c72efc8822462bdbdc61fdbb5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "4p.de",
+                "www.praktischarzt.de"
+            ]
+        },
         {
             "rule": "funkedigital\\.de\\/liteblower\\.js",
             "cookies": 0.000101,
@@ -22,10 +75,6 @@
             "apis": {
                 "Navigator.prototype.doNotTrack": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "Document.cookie setter": 1,
-                "Document.cookie getter": 1,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2,
                 "Screen.prototype.width": 2,
@@ -38,6 +87,10 @@
                 "Navigator.prototype.webdriver": 2,
                 "Navigator.prototype.deviceMemory": 2,
                 "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
                 "window.sessionStorage": 1
             },
             "sites": 2,
@@ -51,20 +104,40 @@
                 "spses.ff7c": {
                     "ttl": 1802,
                     "length": 1,
-                    "prevalence": 0.00010108157282927322,
+                    "prevalence": 0.00010122482032594392,
                     "uniqueness": 1
                 },
                 "spid.ff7c": {
                     "ttl": 63072002,
                     "length": 152,
-                    "prevalence": 0.00010108157282927322,
+                    "prevalence": 0.00010122482032594392,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dagens.no",
-                "www.hoerzu.de"
+                "4p.de",
+                "www.dagens.no"
+            ]
+        },
+        {
+            "rule": "funkedigital\\.de\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "anonym.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "4p.de",
+                "www.morgenpost.de"
             ]
         }
     ],
@@ -74,11 +147,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "unpkg.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "b.ns14.net",
