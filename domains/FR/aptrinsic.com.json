@@ -7,13 +7,59 @@
     "prevalence": 0.000203,
     "sites": 2,
     "subdomains": [
+        "web-sdk",
         "esp"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "aptrinsic\\.com\\/rte\\/v1\\/command",
+            "rule": "aptrinsic\\.com\\/api\\/aptrinsic\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "941e170e7300886c96ee4c03cff44906e7b3f608098f715158f4c501c4ca855f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "apt.uid": {
+                    "ttl": 31536005,
+                    "length": 44,
+                    "prevalence": 0.00010143016533116949,
+                    "uniqueness": 1
+                },
+                "apt.sid": {
+                    "ttl": 1806,
+                    "length": 40,
+                    "prevalence": 0.00010143016533116949,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v3\\/configuration",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -24,15 +70,109 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "2d8abcd980425113188729ec71f316d44c8d422200bb95c5b3642f1a09a6b4e3"
+                "98ca660fb86440f587a0aa815861399a744f261e768eaa1b7bfc3dc3740a6ae9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "60ec4783f17368f6f08562b73fe100097a1735289a9de3f154ff98062b6ad7b5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/command",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "126c60e7a9fc766b9a8cb3cceccefd607bdb980808d0566b8a54e459d9164ee9",
+                "5c32efa383b42f272e77cfe6e1e330075426077e0f91a33fc6b9d399f0aae9d8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "apt.sid": 0.00020271639975674033
+                "apt.sid": 0.00030429049599350845
             },
             "exampleSites": [
-                "trimble.com",
+                "sketchup.com",
+                "help.sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/api\\/v1\\/feature\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "6cc59a7b772db1cf7c91af1eb6aead29179cf6da2801bcb947f0215c4db39900"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00020286033066233897
+            },
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/inapp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00020286033066233897
+            },
+            "exampleSites": [
+                "sketchup.com",
                 "sketchup.trimble.com"
             ]
         }
@@ -42,15 +182,21 @@
     "cookies": 0.000203,
     "topInitiators": [
         {
+            "domain": "trimble.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 9,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "ns33.domaincontrol.com",
-        "ns34.domaincontrol.com"
+        "ns34.domaincontrol.com",
+        "ns33.domaincontrol.com"
     ]
 }

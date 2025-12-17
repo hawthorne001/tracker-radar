@@ -4,14 +4,47 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000405,
+    "sites": 4,
     "subdomains": [
-        "plausible"
+        "sdk",
+        "plausible",
+        "back"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "k-words\\.io\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.innerWidth": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000405,
+            "cnames": [],
+            "responseHashes": [
+                "f50bddf10a6110b6e702f649641e6193056d4034e09041f38e4e54447aa91664"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buzzfeed.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffpost.com",
+                "www.systemrequirementslab.com"
+            ]
+        },
         {
             "rule": "k-words\\.io\\/api\\/event",
             "cookies": 0,
@@ -20,8 +53,8 @@
                 "plausible"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 4,
+            "prevalence": 0.000405,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -30,8 +63,94 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "systemrequirementslab.com",
+                "buzzfeed.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffpost.com",
                 "www.systemrequirementslab.com"
+            ]
+        },
+        {
+            "rule": "k-words\\.io\\/api\\/v1\\/sites\\/c301a00b-0ab1-4461-a393-f735d93845eb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "back"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "584611939d1226ad48b7d61ecc2d49b4b886f46a170e50325a51472d664e9ced"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "k-words\\.io\\/api\\/v1\\/sites\\/c301a00b-0ab1-4461-a393-f735d93845eb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "back"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "k-words\\.io\\/api\\/v1\\/sites\\/c301a00b-0ab1-4461-a393-f735d93845eb\\/pages",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "back"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5c62bc5196358a70e2ff8cd9fb4c3b2170d79d8e5eb5c73881b4f2d64ba1e6ab"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "k-words\\.io\\/api\\/v1\\/sites\\/c301a00b-0ab1-4461-a393-f735d93845eb\\/pages",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "back"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffpost.com"
             ]
         }
     ],
@@ -40,16 +159,27 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "kleekr.com",
-            "prevalence": 0.6666666666666666
+            "domain": "first party",
+            "prevalence": 0.375
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "domain": "adlightning.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "kleekr.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 4,
+        "XHR": 4,
+        "Fetch": 4,
+        "Preflight": 4
     },
     "nameservers": [
         "wanda.ns.cloudflare.com",

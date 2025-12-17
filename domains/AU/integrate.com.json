@@ -4,14 +4,39 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
+        "home",
         "analytics-api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "integrate\\.com\\/analytics\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "home"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b5a29bf06aaa07768148d3ba31feba0d4c2ff8957040a53dd134a2cb55d66417"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "www.redhat.com"
+            ]
+        },
         {
             "rule": "integrate\\.com\\/v1\\/analytics",
             "cookies": 0,
@@ -23,14 +48,12 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [
-                "c4efad7de00309053ca3072ffa4c532acce522bae085ce74e50a2e9fce31dc60"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "redhat.com",
+                "splunk.com",
                 "www.redhat.com"
             ]
         },
@@ -50,7 +73,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "redhat.com",
+                "splunk.com",
                 "www.redhat.com"
             ]
         }
@@ -60,20 +83,33 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "listenloop.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "mutinycdn.com",
+            "prevalence": 0.2
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 2,
         "Preflight": 2
     },
     "nameservers": [
-        "a26-65.akam.net",
-        "a1-214.akam.net",
-        "a28-64.akam.net",
         "a22-67.akam.net",
+        "a28-64.akam.net",
+        "a9-66.akam.net",
         "a13-65.akam.net",
-        "a9-66.akam.net"
+        "a26-65.akam.net",
+        "a1-214.akam.net"
     ]
 }

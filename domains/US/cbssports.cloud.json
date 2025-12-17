@@ -8,9 +8,15 @@
     "sites": 3,
     "subdomains": [
         "neuron",
-        "sonic-prod"
+        "sonic-prod",
+        "video-api-ipv4.prod.video"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "video-api-ipv4.cbssports.com",
+            "resolved": "video-api-ipv4.prod.video.cbssports.cloud"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -61,6 +67,53 @@
                 "cbssports.com",
                 "www.cbssports.com"
             ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/analytics\\/betting-engagement",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sonic-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api-ipv4.prod.video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "video-api-ipv4.cbssports.com",
+                    "resolved": "video-api-ipv4.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [
+                "1e64689d8e4b56506e8d42dc03310a750ea23ed6d7916fa1bab0b64736c14d20"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsline.com",
+                "www.sportsline.com"
+            ]
         }
     ],
     "categories": [],
@@ -78,12 +131,14 @@
     ],
     "types": {
         "Script": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-113.awsdns-14.com",
+        "ns-1856.awsdns-40.co.uk",
         "ns-953.awsdns-55.net",
-        "ns-1343.awsdns-39.org",
-        "ns-1856.awsdns-40.co.uk"
+        "ns-1343.awsdns-39.org"
     ]
 }

@@ -4,54 +4,39 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "staging-i"
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "lgrckt-in\\.com\\/i",
+            "rule": "lgrckt-in\\.com\\/logger-1\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "staging-i"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "URL.createObjectURL": 2
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "2fa0f0ce0285d2c0a8b1237ca6a4ca55b277d9d2e9249a787858a429b9136481"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "logrocket.com",
-                "blog.logrocket.com"
-            ]
-        },
-        {
-            "rule": "lgrckt-in\\.com\\/i",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "staging-i"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "logrocket.com",
-                "blog.logrocket.com"
+                "thepointsguy.com",
+                "www.surfline.com"
             ]
         }
     ],
@@ -61,15 +46,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "cdn-surfline.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 2
     },
     "nameservers": [
-        "dan.ns.cloudflare.com",
-        "rita.ns.cloudflare.com"
+        "rita.ns.cloudflare.com",
+        "dan.ns.cloudflare.com"
     ]
 }

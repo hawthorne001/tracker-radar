@@ -7,28 +7,34 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000304,
-    "sites": 3,
+    "prevalence": 0.000405,
+    "sites": 4,
     "subdomains": [
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-web-notifications\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.platform": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Notification.permission": 1,
+                "Date.prototype.getTime": 1
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
                 "a02d3e5917f0e3cf859d51af590c47a0bbe1ad73788a66c97445bbfb2ce6cf0c"
@@ -38,7 +44,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gbnews.com",
+                "www.indiatoday.in",
                 "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-service-worker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a939d4c19bc3af1367765e885f6c201ceb5cde376772257c523b79da2a69e11c"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gbnews.com",
+                "www.indiatoday.in"
             ]
         }
     ],
@@ -52,7 +81,8 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Other": 2
     },
     "nameservers": [
         "ns-01.pushwoosh.com",

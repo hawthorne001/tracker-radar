@@ -12,9 +12,19 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "vs_gdsapi",
+        "vs_geo",
         "vs_quote"
     ],
     "cnames": [
+        {
+            "original": "gdsapi.cnbc.com",
+            "resolved": "vs_gdsapi.cnbc.com.edgekey.net"
+        },
+        {
+            "original": "geo.cnbc.com",
+            "resolved": "vs_geo.cnbc.com.edgekey.net"
+        },
         {
             "original": "quote.cnbc.com",
             "resolved": "vs_quote.cnbc.com.edgekey.net"
@@ -22,6 +32,87 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "cnbc\\.com\\.edgekey\\.net\\/market-mover\\/groupMover\\/SP500\\/CHANGE_PCT\\/BOTH\\/5\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs_gdsapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "gdsapi.cnbc.com",
+                    "resolved": "vs_gdsapi.cnbc.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a7c083d202a9e16641faee2e73f13d63c95a48b14a0cc6d778eea400998f012c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "cnbc\\.com\\.edgekey\\.net\\/info\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs_geo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "geo.cnbc.com",
+                    "resolved": "vs_geo.cnbc.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "b58e82fafc93d4697515fac76cb4b9314b43d6b1c3dfc434e7204627bced12d7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "cnbc\\.com\\.edgekey\\.net\\/market-mover\\/groupMover\\/MAJOR\\/CHANGE_PCT\\/BOTH\\/5\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs_gdsapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "gdsapi.cnbc.com",
+                    "resolved": "vs_gdsapi.cnbc.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "9a6a99137c68fdaaf4ac54fc61cac58804a29e2605d54f53d7c1153cf3af55b2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.cnbc.com"
+            ]
+        },
         {
             "rule": "cnbc\\.com\\.edgekey\\.net\\/quote-html-webservice\\/restQuote\\/symbolType\\/symbol",
             "cookies": 0,
@@ -38,7 +129,9 @@
                     "resolved": "vs_quote.cnbc.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "cd7d254bc15661225c0c13adeb259ff28fa94b1ecc52fd514731a3f9fb06981b"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -50,7 +143,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "cnbcfm.com",
@@ -58,7 +151,8 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "XHR": 4,
+        "Fetch": 4
     },
     "nameservers": []
 }

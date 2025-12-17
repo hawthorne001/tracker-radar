@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000608,
-    "sites": 6,
+    "prevalence": 0.00081,
+    "sites": 8,
     "subdomains": [
         "accor-group-prod-prod",
+        "cisco-dsc-prod",
         "flybuys-api-platform-prod",
         "mns-00.dn"
     ],
@@ -28,6 +29,10 @@
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "dsc.cisco.com",
+            "resolved": "cisco-dsc-prod.apigee.net"
         }
     ],
     "fingerprinting": 0,
@@ -58,19 +63,19 @@
             ]
         },
         {
-            "rule": "apigee\\.net\\/digital\\/flybuysmicrositebff\\/v1\\/categories",
+            "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "flybuys-api-platform-prod"
+                "cisco-dsc-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [
                 {
-                    "original": "ahsapi.flybuys.com.au",
-                    "resolved": "flybuys-api-platform-prod.apigee.net"
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
             "responseHashes": [],
@@ -78,7 +83,62 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "7a341ee2172dfdf8731286b8213879b85c8b39a648069ea28f82d01c623dd3b6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/digital\\/flybuysmicrositebff\\/v1\\/categories",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flybuys-api-platform-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [
+                {
+                    "original": "ahsapi.flybuys.com.au",
+                    "resolved": "flybuys-api-platform-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "148173149ab437171aa02a571832878ca65a1bfa237f6783fa3fe92ad3ad9349"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "flybuys.com.au",
+                "register.flybuys.com.au",
                 "www.flybuys.com.au"
             ]
         },
@@ -98,10 +158,8 @@
                     "resolved": "flybuys-api-platform-prod.apigee.net"
                 }
             ],
-            "responseHashes": [
-                "d9e1099513b6fa39101602a6689f56c476792440a6978b72d21daf268af6c794"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -170,30 +228,35 @@
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.5
+            "prevalence": 0.45454545454545453
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.2
+            "prevalence": 0.18181818181818182
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.2
+            "prevalence": 0.18181818181818182
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.09090909090909091
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.1
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
         "Document": 2,
-        "Preflight": 4,
-        "XHR": 4
+        "Preflight": 6,
+        "Fetch": 2,
+        "XHR": 5
     },
     "nameservers": [
+        "ns-670.awsdns-19.net",
         "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
-        "ns-1907.awsdns-46.co.uk",
-        "ns-670.awsdns-19.net"
+        "ns-1907.awsdns-46.co.uk"
     ]
 }

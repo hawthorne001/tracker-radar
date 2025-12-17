@@ -9,18 +9,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00172,
-    "sites": 17,
+    "prevalence": 0.00192,
+    "sites": 19,
     "subdomains": [
-        "accounts.bahn",
+        "gtm.idealo",
         "img.ui-portal",
         "server.sgtm-legacy.kleinanzeigen",
+        "sso.sportschau",
+        "sso.tagesschau",
         "img.tvspielfilm"
     ],
     "cnames": [
         {
-            "original": "accounts.bahn.de",
-            "resolved": "accounts.bahn.de.edgekey.net"
+            "original": "gtm.idealo.de",
+            "resolved": "gtm.idealo.de.edgekey.net"
         },
         {
             "original": "img.tvspielfilm.de",
@@ -33,35 +35,41 @@
         {
             "original": "server.sgtm-legacy.kleinanzeigen.de",
             "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
+        },
+        {
+            "original": "sso.sportschau.de",
+            "resolved": "sso.sportschau.de.edgekey.net"
+        },
+        {
+            "original": "sso.tagesschau.de",
+            "resolved": "sso.tagesschau.de.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "rule": "de\\.edgekey\\.net\\/cmp-log",
             "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "accounts.bahn"
+                "gtm.idealo"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "accounts.bahn.de",
-                    "resolved": "accounts.bahn.de.edgekey.net"
+                    "original": "gtm.idealo.de",
+                    "resolved": "gtm.idealo.de.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Document",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bahn.de",
-                "www.bahn.de"
+                "idealo.de",
+                "www.idealo.de"
             ]
         },
         {
@@ -87,13 +95,13 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "web.de",
+                "gmx.net",
                 "www.mail.com"
             ]
         },
         {
             "rule": "de\\.edgekey\\.net\\/g\\/collect",
-            "cookies": 0.000202,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "server.sgtm-legacy.kleinanzeigen"
@@ -119,7 +127,37 @@
             ]
         },
         {
-            "rule": "de\\.edgekey\\.net\\/1c\\/33\\/d0\\/6911c58c5e01fc08fbd0331c\\.jpeg",
+            "rule": "de\\.edgekey\\.net\\/sso\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso.sportschau",
+                "sso.tagesschau"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sso.sportschau.de",
+                    "resolved": "sso.sportschau.de.edgekey.net"
+                },
+                {
+                    "original": "sso.tagesschau.de",
+                    "resolved": "sso.tagesschau.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/80\\/bd\\/fa\\/691ed91f7135cb2a99fabd80\\.jpeg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -135,7 +173,7 @@
                 }
             ],
             "responseHashes": [
-                "113fd26a2381011747f5c8eb186302576f904909725ba4705fb906a12080e869"
+                "ed27f90ca32bb807f3e38753653f2bc2fb9a204ea19d04fa63f58938495b1cbd"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -146,7 +184,7 @@
             ]
         },
         {
-            "rule": "de\\.edgekey\\.net\\/f8\\/7f\\/ef\\/692d675d02da3e3a89ef7ff8\\.jpeg",
+            "rule": "de\\.edgekey\\.net\\/93\\/c8\\/fa\\/691ed9517135cb2a99fac893\\.jpeg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -162,61 +200,7 @@
                 }
             ],
             "responseHashes": [
-                "237c225e704ee8b55a63314fd4154867a4fc1abfc59b066352e4b8340c05e298"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tvspielfilm.de",
-                "www.tvspielfilm.de"
-            ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/df\\/af\\/17\\/58da2c71f033af03f717afdf\\.jpeg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "img.tvspielfilm"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "img.tvspielfilm.de",
-                    "resolved": "img.tvspielfilm.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "3ce21852c8f9bb898d1fd58d1fe91036c51885cc354584d1b3e36a3a2f54a2b2"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tvspielfilm.de",
-                "www.tvspielfilm.de"
-            ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/10\\/31\\/d0\\/6911c5805e01fc08fbd03110\\.jpeg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "img.tvspielfilm"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "img.tvspielfilm.de",
-                    "resolved": "img.tvspielfilm.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "2cce4c9295349842f6eeb140243f96147681e82872512c578ddd1c175c0326ae"
+                "dfae51f63393957b9f29212a19edb48112bd5d2d53bf5be1e48c5618afcf97d2"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -229,30 +213,25 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000506,
+    "cookies": 0.000505,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.68
-        },
-        {
-            "domain": "uicdn.com",
-            "prevalence": 0.16
-        },
-        {
-            "domain": "ui-portal.de",
-            "prevalence": 0.12
+            "prevalence": 0.8620689655172413
         },
         {
             "domain": "idealo.com",
-            "prevalence": 0.04
+            "prevalence": 0.06896551724137931
+        },
+        {
+            "domain": "uicdn.com",
+            "prevalence": 0.06896551724137931
         }
     ],
     "types": {
-        "Document": 2,
+        "Fetch": 6,
         "Script": 2,
-        "Fetch": 2,
-        "Image": 8
+        "Image": 4
     },
     "nameservers": []
 }

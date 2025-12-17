@@ -4,14 +4,57 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
-        "www"
+        "statsig",
+        "s-cdn",
+        "www",
+        "a-api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "anthropic\\.com\\/v1\\/rgstr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statsig"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "claude.ai",
+                "claude.com"
+            ]
+        },
+        {
+            "rule": "anthropic\\.com\\/s\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "claude.ai",
+                "claude.com"
+            ]
+        },
         {
             "rule": "anthropic\\.com\\/api\\/country",
             "cookies": 0.000203,
@@ -31,6 +74,28 @@
                 "claude.com",
                 "code.claude.com"
             ]
+        },
+        {
+            "rule": "anthropic\\.com\\/v1\\/p",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "12f71cb993958eefc4bdb41d7dbbda490779a9c7aba448f7be52bb63912e0254"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "claude.com",
+                "code.claude.com"
+            ]
         }
     ],
     "categories": [],
@@ -39,11 +104,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "claude.ai",
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 6,
+        "Script": 2
     },
     "nameservers": [
         "isla.ns.cloudflare.com",

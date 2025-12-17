@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000549,
+    "sites": 8,
     "subdomains": [
-        "delivery"
+        "delivery",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pbgrd\\.com\\/network\\/adjs\\.php",
@@ -20,18 +21,103 @@
                 "delivery"
             ],
             "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000481,
+            "cnames": [],
+            "responseHashes": [
+                "c51018532061539939f4c56e036efc42ff57312508905c28370149e783afda39",
+                "538166065c60b2746036d0b71ff06cd4a8ebdb93f9002938ba11761b62fe99c0",
+                "ae8afc729eea60efcd2f7c7cf5158402eaa87ce5dd423eaee4d30c89aba2cdf0",
+                "65571cf095d19328a6ca33d6463f227774ae2570bc569fd6bf9be2f5cdab04e9",
+                "60d87bb11936c2921975c2aee38de68eca4bbe0dd2d604e3c58b0216217cdd0c",
+                "32e30eda5e0571f4f840c0ede5cb3ab8b887398d54afa09371979b94c016f76a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "RefTrackGroup": 0.00000686850925875048
+            },
+            "exampleSites": [
+                "aacrjournals.org",
+                "bmjopen.bmj.com",
+                "link.springer.com",
+                "pubs.rsc.org",
+                "www.annualreviews.org",
+                "www.bmj.com",
+                "www.mdpi.com"
+            ]
+        },
+        {
+            "rule": "pbgrd\\.com\\/network\\/logger\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aacrjournals.org",
+                "link.springer.com",
+                "www.annualreviews.org"
+            ]
+        },
+        {
+            "rule": "pbgrd\\.com\\/core-bmjjournals\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "cb070e62ac6e914e42c740dc17ebbe3958fc90ffe31b2f88c11726f5b306d401"
+                "2e054b2460f9e329e1f0479890e0d57031837608e21672b7ca67b09219befa92"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rsc.org",
-                "www.mdpi.com"
+                "bmj.com",
+                "bmjopen.bmj.com"
+            ]
+        },
+        {
+            "rule": "pbgrd\\.com\\/core-bmj\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f514b4fc5f79e75af94a36b3d56ff5d271bbf753a3fc0ec94a3f817016461960"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bmj.com",
+                "www.bmj.com"
             ]
         }
     ],
@@ -41,15 +127,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 7,
+        "Fetch": 3,
+        "Script": 4
     },
     "nameservers": [
+        "ns.udag.org",
         "ns.udag.de",
-        "ns.udag.net",
-        "ns.udag.org"
+        "ns.udag.net"
     ]
 }

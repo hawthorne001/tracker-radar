@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00314,
-    "sites": 31,
+    "prevalence": 0.00405,
+    "sites": 40,
     "subdomains": [
         "rum",
         "session-replay",
-        "logs"
+        "logs",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -25,59 +26,102 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 26,
-            "prevalence": 0.00264,
+            "sites": 36,
+            "prevalence": 0.00365,
             "cnames": [],
             "responseHashes": [
-                "c08310d9a851ce82cbe9b5ed5384bf597fbe60b7f3abf17cad516a18b7e8be2e",
-                "f437267ea45be92ffc88b1ad3a7d637d95d07ad3ebca771fbd7c068eb9c906de",
-                "2c760a3fba3235682365ee328672f76d7a4cb73d60ecc95aab1613150fbf5535",
-                "453345ace22a67bb69ebc885ba8be62403d72b3b66ca49e795302a60b0ed700b",
-                "e25df0242f2ae409fdc74b102de7ccc3cbab67cc5cd845f12e3103009204201a",
-                "e90e3db8e7e3d533adebc87732eb7f094f673a095e976cd0058f8d62a2ca4bbc",
-                "6c0487f31d2ffd9f8fc5295f5ff0a4201384613757bf491920b2d0efe06c00ac",
-                "b3761f61ea7357663e5c9d4ba7d3af3a586113982bf1bf68afb1304f93d70b25",
-                "48b3d2b1ccedcab2f751e2aa49b38947cc1f0013ed853cc345bde0b9f4849baa",
-                "48908f88604fa3e64f1b731f834a8138761e1efd8bc6962b54b6997e3c22e589",
-                "ff0e233b3ab5f3e8a5286f4030ef50d98d07c5ba075e3f8f128a094b71a46ff8",
-                "082db663467efdfd975e2fda4e57f9c27b0f1f47b5852b86546587a3f2da3bf2",
-                "62a43dbf694291e149d6046014be0e36b2c0f8662db29919fdc2beb169c999ad",
-                "a568b634e6ebbabd8dd2e7bce6e0964012b8322ee753c7f29e5e4b551773b2b4",
-                "6e0b242c6f8b06f42fa140a990c6dc44a8bf53ce65f072accb964a5c0cb28971",
-                "efbd42dce273f1c25af0ba11ae4e62e9ca578a7cce8f08ce38ba82f3e60bfe58",
-                "4229c56e9dd20030652f1b990e71cfcaae11e6c5988637a88a429552c38892e9",
-                "76556a3301c091a43eb8744babff402e310afb7e09037382e0500594a7e2fc74",
-                "ec8f447090e6953c80701c88a2bfd6c8558da6d0ba728449d39bb854b27908a7",
-                "a6cdc67659306cb50db4b5c814ad344cce25da0da37d7c324739f2d3feebe978",
-                "a6f36e84446fab2281191c8389211db6674769ae0e532c4d1b259cfe0205d43d",
-                "46dfb681c593dcd58441e3105a8da8e8e27e141dc19d3fee4699f37c6a73e1a9",
-                "5694becfae85f0f56297a675106c128282482b56b8fa3118e1b575f498e59503",
-                "1bcba9278aa222b73d81888fc1d582b6c2d7942e2e2bd2d5f2a85094bf52df7f"
+                "69c3cbd53e7ab02cf962c444d6e5502cb70951187906332e7beab1329178e647",
+                "424cdc901b7674a5ba3ae941d70bda3fa0cba13980e25dc0bbb006fb71319caa",
+                "88827130aad508af43e9706ee88a7bd42f27967f73187a0e197512c2c0b82d25",
+                "b7a4aef83b68b0d5d456e8136489d49c54ef11a6f3a9243659e721024c7d47bc",
+                "5d3ad24fc0121b33eec971788e98152c146756e78ada256e0d50eac201b5d217",
+                "596bb699cc713f0c27a63e62e3454cb17cd8fd808ac9d14bd4c51eb84bf812dc",
+                "66f0398f99f5f53028b113a563ba64a7d210e899f0760a419e546b1c400c5452",
+                "81860e4b64b6456789e2e03b206632ba02c00f3321a0ed940db9d4fd5e86c103",
+                "e3268d8ad996f1e306cbf84067826d33a2f36644c7490a8a2ce4ac9c4c165e10",
+                "9281a6352b135ea62226b94f5a6efd157c235eaef97cd0c20b084f5a11b72e3b",
+                "46ac40368dcb993f82b4ca65c67fc23b46f56b64ba6bc040fbb80b913b8dcef0",
+                "675340ba855755ad1e2f44ab7420b01440a479818e618c27453b5894fef943be",
+                "0a8e68c633074fd06a2211f539e17783807912c2df0665ea587e5cf2af2949ab",
+                "7c63c3959ce301dabc1993c3ae5b7e44db3678b89af397db57fbc6231f40602f",
+                "7d1feeff1f0a0a7f10cad6322935790664b341a38d635fc7af79e4edf76f2db9",
+                "f0e5ce496df824029c353986fd7bab104bc3dd3939f81c3992439222bea554e7",
+                "d39bc923372b1278a04fa549197afb5017ba8d9b7181d8c797f1ea2f57031a9f",
+                "c8247209a8c79f2dc4afd7ca42495ce82c2bab908bc17314fc8d2d24450628da",
+                "40fda4c806e7cdebfcd5330614e78e15193904bcb3397b6da378e2531d7168b5",
+                "19bbdb9c925fb2de4f7e0141f1fbedf068dbf117f1eba7d2c4cd46ea57effe8a",
+                "b9dd484fd73af93f292119154b3a651de1913ee04bff0d7948540b8173e6adf1",
+                "c1dd0ccb04a1e2ce1a7028ad0669909d9d9f7122db10290bfc34b8e2e5dc6542",
+                "d46ea203d2dcb3adc92712ba3fe458eb708995cb61c32def1df6cc4979fb711b",
+                "b39a2eec87251c3e1343e6e095203370579bc4fabf63fc694f57f1c9a70a79fe",
+                "7e0244ac8e2f37685f812dd98c1b029b779128092cfe1385af110c10684e0aa9",
+                "267d52dd081474fa8be36ab19775b6c6e39ba81ac500680aa8312469ca8544ec",
+                "191c9d50bb78e67e6b22b6a52272691aa6b3fd7749cc4e99bf31834aa2f514cb",
+                "d059b77335eeb76ac11ecf0e338a362a4615a023335c67d980a2d2d42ed9ddbb",
+                "3a977f48da3cf107df20827318bb51febca4fe719a42f7dbf1353facb5ea3b76",
+                "69acef02af08b3c6ab9737b5548f45a34d2d47f40413d8a3127efe35184ac158",
+                "3786000ab7727853e3cb9f4f35febd3327765ed62327ab9a135a03cc23b57f11",
+                "698bb639391e3771a20ccafcd16ad6adc8e681410fec2e0478ccf5ebf70b20b4",
+                "4c03ecc51ddcf462992fedeef68c52267a81041796f8ee05663de6b2703bf4ae",
+                "bf0d0e6f839e869e63d526d11a87a3a6c322b484979299cca144039896d9ac6a",
+                "e32ad645eb3024dff1d215967033dc398dbdfbd64106daeb475be04a82f2a377"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "vimeo.com",
-                "squareup.com",
-                "www.seniors.com.au",
-                "developer.hashicorp.com",
+                "www.plenti.com.au",
+                "linktr.ee",
                 "www.history.com",
-                "talent.seek.com.au",
-                "zapier.com",
-                "www.netgear.com",
-                "www.sharesight.com",
-                "www.resmed.com.au",
-                "www.aussie.com.au",
+                "www.underarmour.com.au",
+                "asana.com",
                 "www.open.edu.au",
-                "www.latitudefinancial.com.au",
                 "portal.my.uq.edu.au",
-                "picsart.com",
-                "silklaser.com.au",
-                "www.flybuys.com.au",
-                "www.crust.com.au",
-                "experience.flybuys.com.au",
-                "onepass.com.au"
+                "www.racenet.com.au",
+                "tech.yahoo.com",
+                "www.resmed.com.au",
+                "talent.seek.com.au",
+                "simplywall.st",
+                "square.site",
+                "www.ovoenergy.com.au",
+                "www.twilio.com",
+                "zapier.com",
+                "www.loom.com",
+                "openai.com",
+                "servicecentre.latitudefinancial.com.au"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000709,
+            "cnames": [],
+            "responseHashes": [
+                "4dee4e883643fc318ac2aec0b13bfe92dbc6fb93589bc4df58c6634dcdad1a72",
+                "39b11231606fb6f75f6fb8ee98edb75805dcfb479d49baa628f5a303ec89f87c",
+                "b31cbab8467d19d7c780dd12a35431b0fa72ece565083c61ca5eb57c49871f2c",
+                "969b210de9f5c1a3a5cfe04e1420a34c9a5bc844ea4a267fc4cf65c4fea5dc35",
+                "7af2a771ca63434e73deb08d009da7950e4a5dbab94b82b92893595aebcebb21",
+                "c16d7322732c471dec39f286135bb40abe1daed6d7694c608ddb919fe6c2f8fd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "squareup.com",
+                "app.squareup.com",
+                "asana.com",
+                "openai.com",
+                "square.site",
+                "sydneytools.com.au",
+                "www.history.com"
             ]
         },
         {
@@ -89,49 +133,23 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000507,
+            "prevalence": 0.000506,
             "cnames": [],
             "responseHashes": [
-                "f8d597fdbddb5686f4190393aa6a788cb0b6fe89ad292465c4507567f687e30e",
-                "45933d607576d05793988fba28d890bb9c594b5ce3b4cd049cd09e78e432639d",
-                "60e5bdbe708617fe4fb3381c3dbe18fb025af80f600e1cc620bb570bdedcd2aa",
-                "793e46e40afe72ad5d9f6974e2faa59b8706b88c0f4a2d3bd4ab968685f3d50a"
+                "f16a77c7e565d0c126f9fb29a186f84dd1fd0d4c8b21308a17d70372d4064f75",
+                "164e290774ce62c6d1db927cf0339d9f23b1d2b9d0084217bb4e0327515a5e58",
+                "cc4ae1c4d17291803fc6f3168a64cfeca5505473905be5116cde0ec4d0d84952",
+                "381bdfed82e4972cc3f2864d6204b5216477c0325ea64f3033d230682ca33d20"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "squareup.com",
-                "experience.flybuys.com.au",
-                "onepass.com.au",
-                "silklaser.com.au",
+                "portal.my.uq.edu.au",
+                "register.flybuys.com.au",
+                "square.site",
                 "www.flybuys.com.au"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000405,
-            "cnames": [],
-            "responseHashes": [
-                "f5f29af3de062de9ac0ba2812ce800a116d1f24bc4acbfbd3c05571b76984dd5",
-                "c6c5a03c79a38574df7eb65ec5e5683fc7040c86933f3ec0cc3adf689a3c9bc2",
-                "1c720aced634fd5a89c1ad80ac6b275219b09fa3049724408dba9879d9bb17d4"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "squareup.com",
-                "app.squareup.com",
-                "sydneytools.com.au",
-                "www.history.com"
             ]
         },
         {
@@ -140,15 +158,14 @@
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000608,
+            "sites": 8,
+            "prevalence": 0.00081,
             "cnames": [],
             "responseHashes": [
-                "6d6a070b97c145e2e5c34daef1d778e91d689c6f012c75b3fe0aaea8fe90e4d7",
-                "e914ee6c297fd8826ecc24b141be158bf6262b116884328a5d585fc8d942cac5",
-                "5121d57a0f9eafe59f2feb7a355be312b228bcb6a832c3841ffd6171d986a46c",
-                "a74ee30adda5d3e79b88c9fe687d55893faa6c54ca0c88c327ab738445bd227b",
-                "baf68686bffdb6c6e7e5e1830bc072e6ee3a49ff2761d249142c0259920c01b2"
+                "d9c84d649cd7ecf9eccdcdac81972f2452d0d6f3e714e50b3b6d4a66f1c20031",
+                "cbe386e24b75e303c236c2a3420fa4d4154b47c0c2ec7de4c09227d858dc7830",
+                "c6958f18266e945fc74d0ce271a2239951fb6b1ddd4b3847b1e575316b3e8068",
+                "b4ced3351f6f8fd527f77efcd8e6249c973c67b05595a9a3aec48ef63316ce3c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -156,33 +173,12 @@
             "exampleSites": [
                 "squareup.com",
                 "app.squareup.com",
+                "portal.my.uq.edu.au",
                 "servicecentre.latitudefinancial.com.au",
-                "silklaser.com.au",
-                "www.crust.com.au",
-                "www.resmed.com.au"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "logs"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000304,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "polymarket.com",
-                "www.foxnews.com",
-                "www.tmz.com"
+                "square.site",
+                "www.coralexpeditions.com",
+                "www.resmed.com.au",
+                "www.twilio.com"
             ]
         },
         {
@@ -204,6 +200,50 @@
                 "foxnews.com",
                 "www.tmz.com"
             ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "girlsway.com",
+                "www.girlsway.com"
+            ]
         }
     ],
     "categories": [],
@@ -212,42 +252,51 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3310657596371882
+            "prevalence": 0.4536082474226804
         },
         {
             "domain": "squarecdn.com",
-            "prevalence": 0.2698412698412698
+            "prevalence": 0.27245949926362295
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.23809523809523808
+            "prevalence": 0.13991163475699558
         },
         {
-            "domain": "ensighten.com",
-            "prevalence": 0.07029478458049887
+            "domain": "lululemon.com",
+            "prevalence": 0.07658321060382917
         },
         {
             "domain": "vimeocdn.com",
-            "prevalence": 0.05215419501133787
+            "prevalence": 0.022091310751104567
         },
         {
             "domain": "zapier-deployment.com",
-            "prevalence": 0.036281179138321996
+            "prevalence": 0.022091310751104567
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.010309278350515464
+        },
+        {
+            "domain": "gammacdn.com",
+            "prevalence": 0.0014727540500736377
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.0022675736961451248
+            "prevalence": 0.0014727540500736377
         }
     ],
     "types": {
-        "Fetch": 35,
-        "XHR": 9,
-        "Preflight": 2
+        "Fetch": 46,
+        "XHR": 12,
+        "Preflight": 2,
+        "Other": 2
     },
     "nameservers": [
-        "ns-1264.awsdns-30.org",
+        "ns-560.awsdns-06.net",
         "ns-128.awsdns-16.com",
         "ns-1907.awsdns-46.co.uk",
-        "ns-560.awsdns-06.net"
+        "ns-1264.awsdns-30.org"
     ]
 }
