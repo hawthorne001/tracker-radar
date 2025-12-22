@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
-        "udc-ca-web.prod.udc-ca-prod.eng"
+        "udc-ca-web.prod.udc-ca-prod.eng",
+        "csp-report-handler.prod.udc-com-prod.eng",
+        "autocomplete-middleware.prod.udc-shared-prod.eng"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -21,7 +23,49 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "remax.ca",
+                "www.remax.ca"
+            ]
+        },
+        {
+            "rule": "remax\\.tech\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report-handler.prod.udc-com-prod.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "remax.com",
+                "www.remax.com"
+            ]
+        },
+        {
+            "rule": "remax\\.tech\\/feature-flags\\/proxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "udc-ca-web.prod.udc-ca-prod.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -33,23 +77,45 @@
             ]
         },
         {
-            "rule": "remax\\.tech\\/feature-flags\\/proxy\\/client\\/metrics",
+            "rule": "remax\\.tech\\/v1\\/autocomplete\\/country\\/usa",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "udc-ca-web.prod.udc-ca-prod.eng"
+                "autocomplete-middleware.prod.udc-shared-prod.eng"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "remax.com",
+                "www.remax.com"
+            ]
+        },
+        {
+            "rule": "remax\\.tech\\/v1\\/autocomplete\\/country\\/usa",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "autocomplete-middleware.prod.udc-shared-prod.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "30c58a5aba385dbfce111b03ab8eeebf139d008979b9165cd1de0c9687b5c301"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remax.ca",
-                "www.remax.ca"
+                "remax.com",
+                "www.remax.com"
             ]
         }
     ],
@@ -59,16 +125,54 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6911764705882353
+        },
+        {
+            "domain": "bounceexchange.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "trustarc.com",
+            "prevalence": 0.04411764705882353
+        },
+        {
+            "domain": "basis.net",
+            "prevalence": 0.04411764705882353
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "adfenix.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "pub.network",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "rfihub.net",
+            "prevalence": 0.014705882352941176
+        },
+        {
+            "domain": "tiktok.com",
+            "prevalence": 0.014705882352941176
         }
     ],
     "types": {
+        "Preflight": 4,
+        "Other": 2,
         "Fetch": 4
     },
     "nameservers": [
-        "ns-1659.awsdns-15.co.uk",
         "ns-1157.awsdns-16.org",
         "ns-997.awsdns-60.net",
+        "ns-1659.awsdns-15.co.uk",
         "ns-92.awsdns-11.com"
     ]
 }

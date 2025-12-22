@@ -4,24 +4,66 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000305,
+    "sites": 3,
     "subdomains": [
+        "statsig",
+        "s-cdn",
         "www"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "anthropic\\.com\\/v1\\/rgstr",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statsig"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "claude.ai",
+                "claude.com"
+            ]
+        },
+        {
+            "rule": "anthropic\\.com\\/s\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "claude.ai",
+                "claude.com"
+            ]
+        },
+        {
             "rule": "anthropic\\.com\\/api\\/country",
-            "cookies": 0.000204,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -35,18 +77,23 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0.000203,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "claude.ai",
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 4,
+        "Script": 2
     },
     "nameservers": [
-        "randy.ns.cloudflare.com",
-        "isla.ns.cloudflare.com"
+        "isla.ns.cloudflare.com",
+        "randy.ns.cloudflare.com"
     ]
 }

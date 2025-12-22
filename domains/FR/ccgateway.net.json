@@ -7,52 +7,86 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000405,
-    "sites": 4,
+    "prevalence": 0.00071,
+    "sites": 7,
     "subdomains": [
-        "privacy-location-edge"
+        "carbon-cdn",
+        "pb-rtd-quebecor"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "ccgateway\\.net\\/privacy\\/location",
+            "rule": "ccgateway\\.net\\/script",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "privacy-location-edge"
+                "carbon-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "9170a8b2fb3234baa721bf8b3de5935d8d160f6f987215b83b07a49a403e5e74"
+                "c71d9b47b29e365f204812a031b93fe2a35218b6a3ed7830d566c9ba30e3d950"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "businessinsider.com",
+                "indiatimes.com",
                 "www.emu-france.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\.0\\/realtime\\/3859485cbf",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pb-rtd-quebecor"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "477ada3a01ffb5f344e4cc2fbf38514024c2dac6317a7d680c5af7971c7062b4",
+                "c739564d7ac86178b2c81ea6c8f761f8db8b75d703993319722729ec26193e7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "ccuid": 0.00010143016533116949
+            },
+            "exampleSites": [
+                "guideautoweb.com",
+                "www.journaldemontreal.com",
+                "www.tvanouvelles.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000304,
+    "cookies": 0.000609,
     "topInitiators": [
         {
             "domain": "rubiconproject.com",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.8
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Fetch": 3
     },
     "nameservers": [
         "ns1-05.azure-dns.com",

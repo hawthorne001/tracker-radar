@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000305,
-    "sites": 3,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
         "accor-group-prod-prod",
+        "cisco-dsc-prod",
         "mns-00.dn"
     ],
     "cnames": [
@@ -23,20 +24,24 @@
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "dsc.cisco.com",
+            "resolved": "cisco-dsc-prod.apigee.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
             "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
-            "cookies": 0.000204,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "accor-group-prod-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.accor.com",
@@ -53,6 +58,58 @@
             ]
         },
         {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "bcbcf7051ec49b3b0f2248f73208a56eb25267130baed4dbe19f6fbf7f61c02c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
             "cookies": 0,
             "fingerprinting": 0,
@@ -61,7 +118,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -79,14 +136,14 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000204,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -109,32 +166,33 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000204,
+    "cookies": 0.000203,
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "dynatrace.com",
-            "prevalence": 0.2
+            "prevalence": 0.45454545454545453
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.1
+            "prevalence": 0.18181818181818182
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.18181818181818182
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.1
+            "prevalence": 0.09090909090909091
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.1
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
         "Document": 2,
-        "Preflight": 2,
+        "Fetch": 2,
+        "Preflight": 4,
         "XHR": 2
     },
     "nameservers": [

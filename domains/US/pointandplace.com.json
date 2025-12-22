@@ -4,14 +4,54 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000686,
-    "sites": 1,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
-        "events-endpoint"
+        "media",
+        "events-endpoint",
+        "data",
+        "platform-api-nexus"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "pointandplace\\.com\\/js\\/pointandplace\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.platform": 3,
+                "window.devicePixelRatio": 3,
+                "WebGL2RenderingContext.prototype.getShaderPrecisionFormat": 3,
+                "WebGL2RenderingContext.prototype.getParameter": 3,
+                "WebGL2RenderingContext.prototype.getExtension": 3,
+                "WebGL2RenderingContext.prototype.getContextAttributes": 3,
+                "URL.createObjectURL": 3,
+                "window.innerWidth": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "c69ee66b4096953703b1348ba7bbc64ccdfbb9e19cab1892b788faac5e0d2a73"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharafdg.com",
+                "www.canadacomputers.com",
+                "www.elgiganten.se"
+            ]
+        },
         {
             "rule": "pointandplace\\.com\\/syndication\\/events",
             "cookies": 0,
@@ -20,8 +60,8 @@
                 "events-endpoint"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000275,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,7 +71,55 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sharafdg.com",
-                "uae.sharafdg.com"
+                "uae.sharafdg.com",
+                "www.canadacomputers.com",
+                "www.elgiganten.se"
+            ]
+        },
+        {
+            "rule": "pointandplace\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "64c76db6fa1790b4485d93c46915692e1baab93c82ade83cf911d2714939a44d",
+                "1fcef0281d36225548bbcd8c2430a9f1a24f75521db8189c607a03543b6d53db"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharafdg.com",
+                "www.canadacomputers.com",
+                "www.elgiganten.se"
+            ]
+        },
+        {
+            "rule": "pointandplace\\.com\\/page\\/single\\/1142fb6d-2091-4a92-9d3c-a38e2a0815ad\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-api-nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1414d572b91d1fd382cb7b45e954d750b229806b9d33395297a647faf28d42ca"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elgiganten.se",
+                "www.elgiganten.se"
             ]
         }
     ],
@@ -45,12 +133,14 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 3,
+        "Ping": 7,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-646.awsdns-16.net",
         "ns-425.awsdns-53.com",
-        "ns-1639.awsdns-12.co.uk",
-        "ns-1123.awsdns-12.org"
+        "ns-1123.awsdns-12.org",
+        "ns-1639.awsdns-12.co.uk"
     ]
 }

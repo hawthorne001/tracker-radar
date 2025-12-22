@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00071,
-    "sites": 7,
+    "prevalence": 0.000608,
+    "sites": 6,
     "subdomains": [
-        "webservices",
         "utils",
+        "webservices",
+        "web-harrods",
         "globale-analytics-sdk",
         "s3",
         "gepi"
@@ -16,28 +17,6 @@
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "global-e\\.com\\/merchant\\/freeShippingBanner",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "webservices"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dissh.com.au",
-                "www.citybeach.com"
-            ]
-        },
         {
             "rule": "global-e\\.com\\/set",
             "cookies": 0,
@@ -47,7 +26,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000507,
+            "prevalence": 0.000506,
             "cnames": [],
             "responseHashes": [
                 "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
@@ -55,12 +34,13 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.00010135819987837016
+                "IR_gbd": 0.0001012555690562981,
+                "https://www.googletagmanager.com/static/service_worker/5c20/sw_iframe.html?origin": 0.0001012555690562981
             },
             "exampleSites": [
                 "dissh.com.au",
-                "www.citybeach.com",
                 "www.disneystore.com.au",
+                "www.harrods.com",
                 "www.prusa3d.com",
                 "www.t2tea.com"
             ]
@@ -90,73 +70,6 @@
             ]
         },
         {
-            "rule": "global-e\\.com\\/merchant\\/GAData",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "webservices"
-            ],
-            "apis": {
-                "window.sessionStorage": 2
-            },
-            "sites": 4,
-            "prevalence": 0.000405,
-            "cnames": [],
-            "responseHashes": [
-                "084b4caed422db79f157291450797e41162d09c46a31e184d6482f0749d2c67d",
-                "832a9736a37199c4ac94b5e5290dff0f8a0c18a6019c84e144025c9c4cdf7a63",
-                "ceaf6681cdcfacf5b9ed57069f2fb7cbbfeff33808ef161652ba558eb8e5894e"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "citybeach.com",
-                "www.disneystore.com.au",
-                "www.prusa3d.com",
-                "www.t2tea.com"
-            ]
-        },
-        {
-            "rule": "global-e\\.com\\/PROD\\/bundle\\.js",
-            "cookies": 0.000203,
-            "fingerprinting": 1,
-            "subdomains": [
-                "globale-analytics-sdk"
-            ],
-            "apis": {
-                "Document.cookie getter": 3,
-                "window.localStorage": 3,
-                "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 4,
-            "prevalence": 0.000405,
-            "cnames": [],
-            "responseHashes": [
-                "2c68f6f1be2c3cd9581b48feb0493b86ae0ef50bf970fd0762eaf2b8781c6596"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "GlobalE_Analytics": {
-                    "ttl": 63072026,
-                    "length": 717,
-                    "prevalence": 0.00020271639975674033,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "citybeach.com",
-                "www.disneystore.com.au",
-                "www.prusa3d.com",
-                "www.t2tea.com"
-            ]
-        },
-        {
             "rule": "global-e\\.com\\/merchant\\/script\\/welcome",
             "cookies": 0,
             "fingerprinting": 0,
@@ -175,6 +88,72 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "disneystore.com.au",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/GAData",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webservices",
+                "web-harrods"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000405,
+            "cnames": [],
+            "responseHashes": [
+                "d530842b43ce5c7a325110a44b2e920ba372b9204197192f6c6f032c595f6f65"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "disneystore.com.au",
+                "www.harrods.com",
+                "www.prusa3d.com",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/PROD\\/bundle\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "globale-analytics-sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000405,
+            "cnames": [],
+            "responseHashes": [
+                "2c68f6f1be2c3cd9581b48feb0493b86ae0ef50bf970fd0762eaf2b8781c6596"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GlobalE_Analytics": {
+                    "ttl": 63072027,
+                    "length": 717,
+                    "prevalence": 0.0002025111381125962,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "disneystore.com.au",
+                "www.harrods.com",
+                "www.prusa3d.com",
                 "www.t2tea.com"
             ]
         },
@@ -215,7 +194,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "5530ea7cbceb048e90738e31ebd69a057e5e18ed02dc863c7086069025ff9343"
+                "f43187347d67bb76a74ab6e3b1596a9dcf6425d875da953291fa345e233ce549"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -246,30 +225,6 @@
             ]
         },
         {
-            "rule": "global-e\\.com\\/client",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "utils"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "IR_gbd": 0.00010135819987837016
-            },
-            "exampleSites": [
-                "disneystore.com.au",
-                "www.prusa3d.com"
-            ]
-        },
-        {
             "rule": "global-e\\.com\\/mappedBundles\\/checkoutv2_top\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -281,29 +236,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "61133260123e0c9156274b496db8f4b581b11b9362a7200f4a7df6ba172f00f7"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "disneystore.com.au",
-                "www.prusa3d.com"
-            ]
-        },
-        {
-            "rule": "global-e\\.com\\/mappedbundles\\/checkoutv2_bottom\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "webservices"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "a2d5db983feec799dd19a52c7fb429263c275bf4b91e6fec67f9c27fd91bdc20"
+                "8fc788e4ff1a66b19a187d3ee2c01fc2d30325b7604b9b5842f714c9a86c6a74"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -325,7 +258,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "3473cfd996167239b9d9414f6ae9b93f78fe227df5895efc017508e1da0b3dec"
+                "bd0a76f64d57dc6f840daad83b90bdda619f837be967714e7b6b95dfc91fe7d4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -347,7 +280,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "b24fc9c918eff02bf55cc7568346fb7d658ff6d4366ae60920e52cf0f40650e3"
+                "ba7a77552184d29d7cd676bdc093aa5b9a6675c2862f9b0b203179f09e8f7d0b"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -490,7 +423,7 @@
             ]
         },
         {
-            "rule": "global-e\\.com\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/scripts\\/jsd\\/13c98df4ef2d\\/main\\.js",
+            "rule": "global-e\\.com\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/scripts\\/jsd\\/8328113056b1\\/main\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -501,13 +434,59 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "cb8ec19ef2762a7bd0d7ad4b970cb971c853b4d9e074b6a068053f8dbdb98e27"
+                "acc4ee2f6478223edf7092ac0fbc4aa90518192adddaca5b8cdcbf1fe7e4e8a2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "disneystore.com.au",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.0001012555690562981
+            },
+            "exampleSites": [
+                "disneystore.com.au",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Utils\\/IsThirdPartCookiesAllowed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "52c63272ba9756dcc243d33b5bf09b333494864fa57a13dc922e43f9a0e02dc2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harrods.com",
                 "www.prusa3d.com"
             ]
         },
@@ -536,36 +515,32 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000507,
+    "cookies": 0.000608,
     "topInitiators": [
         {
+            "domain": "techlab-cdn.com",
+            "prevalence": 0.3870967741935484
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.41379310344827586
+            "prevalence": 0.3548387096774194
         },
         {
             "domain": "newrelic.com",
-            "prevalence": 0.27586206896551724
-        },
-        {
-            "domain": "noibu.com",
-            "prevalence": 0.1724137931034483
-        },
-        {
-            "domain": "techlab-cdn.com",
-            "prevalence": 0.13793103448275862
+            "prevalence": 0.25806451612903225
         }
     ],
     "types": {
-        "Script": 17,
         "Image": 17,
+        "Script": 17,
         "Document": 4,
-        "XHR": 8,
+        "XHR": 6,
         "Stylesheet": 6
     },
     "nameservers": [
-        "ns-80.awsdns-10.com",
-        "ns-734.awsdns-27.net",
+        "ns-1386.awsdns-45.org",
         "ns-1982.awsdns-55.co.uk",
-        "ns-1386.awsdns-45.org"
+        "ns-734.awsdns-27.net",
+        "ns-80.awsdns-10.com"
     ]
 }

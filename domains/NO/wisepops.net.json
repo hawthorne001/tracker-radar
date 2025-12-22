@@ -4,11 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000506,
+    "prevalence": 0.000505,
     "sites": 5,
     "subdomains": [],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "wisepops\\.net\\/loader\\.js",
@@ -23,29 +23,48 @@
                 "window.innerHeight": 2,
                 "window.innerWidth": 2,
                 "Navigator.prototype.cookieEnabled": 2,
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
             },
             "sites": 5,
-            "prevalence": 0.000506,
+            "prevalence": 0.000505,
             "cnames": [],
             "responseHashes": [
-                "fbdf33468b1dc321f4d8f61a9ea3bb47278c4f297d0fb96166d95eade666681c",
-                "8ed4e04b50977f1757d6163c6f805392f85c5f631024266a678931d2dda9a08a",
-                "12b005964e44ea5f80743edacc7ddbbd4bd1deb00fdb26a9ed1d8f813291da77",
+                "daeaa22daa08240ef0746128cb20bae6bd44ec966ce9be0eea720dc277c080cb",
+                "4e0015b56fcaea49f13c2fc19d01a91adf9a17d076ba85843a1b4dfd3102a362",
+                "1ca124b453605624f0d898f19f47d895130142f00497dbbb003e6802405d94aa",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "wisepops_tld": {
-                    "ttl": 4,
+                    "ttl": 20,
                     "length": 1,
-                    "prevalence": 0.00020244964065188785,
+                    "prevalence": 0.0002021018593371059,
                     "uniqueness": 0.5
                 },
                 "wisepops": {
                     "ttl": 63072000,
-                    "length": 101,
-                    "prevalence": 0.00020244964065188785,
+                    "length": 131,
+                    "prevalence": 0.0002021018593371059,
+                    "uniqueness": 1
+                },
+                "wisepops_visitor": {
+                    "ttl": 63072000,
+                    "length": 67,
+                    "prevalence": 0.0002021018593371059,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072000,
+                    "length": 40,
+                    "prevalence": 0.0002021018593371059,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 297,
+                    "prevalence": 0.0002021018593371059,
                     "uniqueness": 1
                 }
             },
@@ -53,8 +72,8 @@
             "exampleSites": [
                 "dbjourney.com",
                 "rab.equipment",
-                "www.filippa-k.com",
-                "www.purevpn.com",
+                "www.bfi.org.uk",
+                "www.pmi.org",
                 "www.vl.no"
             ]
         },
@@ -65,16 +84,41 @@
             "subdomains": [],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000304,
+            "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4979a713105fcabd705ecc56d81ffc78a75496a965e68be292257f1fe0bdca91",
+                "fcc6b6d7eb919ca5509172b51281092ca0e34546fccf545222691de7a18bd370"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rab.equipment",
-                "www.filippa-k.com",
-                "www.purevpn.com"
+                "www.bfi.org.uk",
+                "www.pmi.org"
+            ]
+        },
+        {
+            "rule": "wisepops\\.net\\/my-wisepop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d26b0781a915d5037f15e78f5aa042454c264f79e11a619bb38f9aa0e95cd2c4",
+                "23ca59652925a61bd6bb35c6c3e7039d7dbaa838dfabb846798c42eebe4ede62"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rab.equipment",
+                "www.bfi.org.uk",
+                "www.pmi.org"
             ]
         }
     ],
@@ -84,15 +128,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "wisepops.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
         "Script": 5,
-        "Fetch": 3
+        "Fetch": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "wally.ns.cloudflare.com",
-        "marek.ns.cloudflare.com"
+        "marek.ns.cloudflare.com",
+        "wally.ns.cloudflare.com"
     ]
 }

@@ -9,14 +9,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00304,
+    "prevalence": 0.00303,
     "sites": 30,
     "subdomains": [
         "stexperimentsprod.blob.core",
-        "stexperimentsurveyprod.blob.core"
+        "stexperimentsurveyprod.blob.core",
+        "mgwebanalytics.servicebus"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "windows\\.net\\/public\\/experiments\\.js",
@@ -30,7 +31,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "827832c6661f5ed62a9ee427ebfd9e8341c29ba08cce92ade95096a66d8d692a"
+                "0c372fb5885f49f209a752d71fffd88e8af23821f5c814be39cad79f64f02eb1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -52,7 +53,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "d7f8420bfe5bf2effe54cf80e9ae4eab2072846759b9fb143bf20ec0b9533ed2"
+                "18584aa6423466a53b3b52dbdea4dd5d048c116305588aa1ce28fd1a0556e77f"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -105,6 +106,26 @@
                 "komplett.no",
                 "www.komplett.no"
             ]
+        },
+        {
+            "rule": "windows\\.net\\/$servicebus\\/websocket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mgwebanalytics.servicebus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mestergronn.no",
+                "www.mestergronn.no"
+            ]
         }
     ],
     "categories": [
@@ -115,37 +136,34 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9067164179104478
+            "prevalence": 0.9606299212598425
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.048507462686567165
+            "prevalence": 0.01889763779527559
         },
         {
-            "domain": "d3rse9xjbp8270.cloudfront.net",
-            "prevalence": 0.033582089552238806
+            "domain": "cloudflare.com",
+            "prevalence": 0.01732283464566929
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.0037313432835820895
-        },
-        {
-            "domain": "chatbot-ui-virid-sigma.vercel.app",
-            "prevalence": 0.0037313432835820895
+            "prevalence": 0.0015748031496062992
         },
         {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.0037313432835820895
+            "prevalence": 0.0015748031496062992
         }
     ],
     "types": {
         "Script": 4,
-        "Stylesheet": 4
+        "Stylesheet": 4,
+        "WebSocket": 2
     },
     "nameservers": [
-        "ns4-39.azure-dns.info",
         "ns3-39.azure-dns.org",
         "ns1-39.azure-dns.com",
-        "ns2-39.azure-dns.net"
+        "ns2-39.azure-dns.net",
+        "ns4-39.azure-dns.info"
     ]
 }
