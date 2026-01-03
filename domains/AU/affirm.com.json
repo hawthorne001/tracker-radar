@@ -7,24 +7,97 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000406,
+    "sites": 4,
     "subdomains": [
-        "www"
+        "cdn1",
+        "www",
+        "cdn-assets"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "affirm\\.com\\/api\\/v2\\/cookie_sent",
-            "cookies": 0.000203,
+            "rule": "affirm\\.com\\/js\\/v2\\/affirm\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn1"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 4,
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie setter": 4,
+                "window.devicePixelRatio": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "87afcfca0d9faddf4216fc4adeaf4fb3f257645475bbcc0cc9171e90f202c163"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1767416276,
+                    "length": 1,
+                    "prevalence": 0.00040584415584415587,
+                    "uniqueness": 0.25
+                },
+                "checkout_continuity_service": {
+                    "ttl": 157680010,
+                    "length": 36,
+                    "prevalence": 0.00040584415584415587,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouraring.com",
+                "secretlabchairs.com.au",
+                "www.eufymake.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/api\\/v2\\/session\\/touch_track",
+            "cookies": 0.000406,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "ae97831ab48bb9eb031ce52e988c942d40c0de14bca137efe605f308817045f8",
+                "83c17ea111ef9c7df4f5d91d2a20ccd6df2eee161f2086770d1451443f8512e0",
+                "34a8c540f24388b72f8f8dbd058a0d8a176d61574b53201e50b3f1969b7e4301"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouraring.com",
+                "secretlabchairs.com.au",
+                "www.eufymake.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/api\\/v2\\/cookie_sent",
+            "cookies": 0.000406,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
             "cnames": [],
             "responseHashes": [
                 "924aebf24af414b12986f4af470b2ac7b61d765897f9e222c0af15805de9ae40"
@@ -33,27 +106,62 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "razer.com",
+                "ouraring.com",
+                "secretlabchairs.com.au",
+                "www.eufymake.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/upfunnel\\/experiments\\/axpV2ExperimentList\\.json",
+            "cookies": 0.000406,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "4a8840a349cdf88a77671a213280bb394702a62489e4a467a6e47c0d246853ba"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouraring.com",
+                "secretlabchairs.com.au",
+                "www.eufymake.com",
                 "www.razer.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000406,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 4,
+        "Fetch": 12
     },
     "nameservers": [
-        "ns-614.awsdns-12.net",
-        "ns-1890.awsdns-44.co.uk",
         "ns-217.awsdns-27.com",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-614.awsdns-12.net",
         "ns-1463.awsdns-54.org"
     ]
 }

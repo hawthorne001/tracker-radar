@@ -7,9 +7,14 @@
     "prevalence": 0.0000206,
     "sites": 3,
     "subdomains": [
+        "login.production-v.p5x",
         "web.fm-prod-public-dmz.ng"
     ],
     "cnames": [
+        {
+            "original": "accounts.login.idm.telekom.com",
+            "resolved": "login.production-v.p5x.telekom.net"
+        },
         {
             "original": "omega-dsa.telekom.de",
             "resolved": "web.fm-prod-public-dmz.ng.telekom.net"
@@ -17,6 +22,31 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "telekom\\.net\\/oauth2\\/auth",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login.production-v.p5x"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "accounts.login.idm.telekom.com",
+                    "resolved": "login.production-v.p5x.telekom.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.telekom.de"
+            ]
+        },
         {
             "rule": "telekom\\.net\\/logger\\/v2\\/logSession",
             "cookies": 0.0000137,
@@ -59,7 +89,7 @@
                 }
             ],
             "responseHashes": [
-                "89e4fd91831e7a47ab6273fa724e8b1d156b5c78a3abefbd268514f896eb9d27"
+                "1dcacb9de75f1e47d5d6f1be3c9b0c5572bde527700c6fd796bb532aa21f3f47"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -132,13 +162,14 @@
         }
     ],
     "types": {
+        "Document": 2,
         "Preflight": 4,
         "Fetch": 4
     },
     "nameservers": [
-        "ns1.telekom.net",
-        "dns2.telekom.de",
         "pns.dtag.de",
-        "dns1.telekom.de"
+        "dns1.telekom.de",
+        "dns2.telekom.de",
+        "ns1.telekom.net"
     ]
 }

@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
-        "cp-common"
+        "cp-common",
+        "kong-proxy-intranet"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,10 +24,10 @@
                 "cp-common"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 3
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
                 "016fe701c4709f26f4dd131fab01d2fb0d4e78d6ea48269d6bea56310fe03550"
@@ -36,7 +37,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "toyota.ch",
-                "fr.toyota.ch"
+                "fr.toyota.ch",
+                "garage.toyota.ch"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/dxp\\/toyota\\/ch\\/de\\/bin\\/api\\/dxp\\/i18n\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kong-proxy-intranet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2d664bdba663a1d38da2975f82b6333384cb25d66c44f083bf8a2fec6d4b83a7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "garage.toyota.ch"
             ]
         }
     ],
@@ -46,15 +70,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
+        "ns2.netnames.net",
         "ns1.netnames.net",
-        "ns1.toyota-europe.com",
-        "ns2.netnames.net"
+        "ns1.toyota-europe.com"
     ]
 }

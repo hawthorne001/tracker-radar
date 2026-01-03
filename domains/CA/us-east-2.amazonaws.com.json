@@ -9,14 +9,20 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000611,
+    "sites": 6,
     "subdomains": [
         "kinesis",
         "firehose",
+        "d-ah4chwfwr9.execute-api",
         "9kvu81ddh3.execute-api"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "ingestion.events.asurion.com",
+            "resolved": "d-ah4chwfwr9.execute-api.us-east-2.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -54,8 +60,8 @@
             "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [
-                "66dadc948ebfe672930e8a541963cf6f91c89e07437b1448f66aba32691b14d0",
-                "92f0564fa506e41e566fbcd7f727d0732f2fafe0d26895ef383d1a868cbba045"
+                "e18959f4c748b5bf55c287b4c24d2498ec68d20c36d88e1229be21c4ea7cbb94",
+                "f2177424613af85dcb90b8d47683b47364e95f56fd8c1f13fb69870064c7612d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -67,6 +73,33 @@
             ]
         },
         {
+            "rule": "us-east-2\\.amazonaws\\.com\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-ah4chwfwr9.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "ingestion.events.asurion.com",
+                    "resolved": "d-ah4chwfwr9.execute-api.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "0ec14c19bec9cdd6d6863682b6a23b4e9d816546eef9a0b2d48949bbd36bac16"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asurion.com",
+                "www.asurion.com"
+            ]
+        },
+        {
             "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/collect",
             "cookies": 0,
             "fingerprinting": 0,
@@ -75,7 +108,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -95,7 +128,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
                 "912d0c07da7bdb22cdae025b96da26d01523aaab7362edb28544e3949deb369d"
@@ -117,20 +150,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.46153846153846156
         },
         {
             "domain": "membrana.media",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.3076923076923077
         },
         {
             "domain": "mailchimp.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Preflight": 5,
-        "Fetch": 5
+        "Fetch": 7
     },
     "nameservers": [
         "ns-1522.awsdns-62.org",

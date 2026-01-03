@@ -8,7 +8,8 @@
     "sites": 2,
     "subdomains": [
         "app",
-        "backend"
+        "scripts",
+        "tracking"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -16,18 +17,16 @@
         {
             "rule": "pertento\\.ai\\/pertentoRuntime\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "app"
             ],
-            "apis": {
-                "window.localStorage": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "df56837efd48684e874ce31b9f3904ef7453fa9014ea902ae1ea98939ad16e7e"
+                "7ef4623706b54cf52b2a3abcb541befd1e1c0042a580a03104fab3738bbc3d62"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -38,18 +37,23 @@
             ]
         },
         {
-            "rule": "pertento\\.ai\\/api\\/experiments\\/experiment-data",
+            "rule": "pertento\\.ai\\/pertentoRuntime5Tracking\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "backend"
+                "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e1739d1562dcf4c18e2dfbc67d3c83e1f1b72b0fca53665ba2fba6b324e0f757"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -58,20 +62,40 @@
             ]
         },
         {
-            "rule": "pertento\\.ai\\/api\\/experiments\\/experiment-data",
+            "rule": "pertento\\.ai\\/sessions",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "backend"
+                "tracking"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "6ca4d18b3e64680a6406fb9538a18f690d06df45569bfc9a92ab88742f09304a"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "careofcarl.no",
+                "www.hektapatur.no"
+            ]
+        },
+        {
+            "rule": "pertento\\.ai\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -94,12 +118,12 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 4,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns68.domaincontrol.com",
-        "ns67.domaincontrol.com"
+        "ns67.domaincontrol.com",
+        "ns68.domaincontrol.com"
     ]
 }

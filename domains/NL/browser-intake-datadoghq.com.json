@@ -11,7 +11,8 @@
     "sites": 12,
     "subdomains": [
         "rum",
-        "logs"
+        "logs",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,20 +25,18 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 9,
+            "prevalence": 0.000909,
             "cnames": [],
             "responseHashes": [
-                "b1284b8b3fc98c4071621ad3b1ba8ac829c3cd2bce0bc0b1b10c045063c61a0a",
-                "9e91a35212711043c15adac1a11cfa70e51c6973b4e038c8bba636560687263b",
-                "a148f3945f40803f28f2c3399457e9b4ad7ebd7ed87c46b8a9eb224ba8ac7599",
-                "f529f60f9be9e48157cfe9d285072aced3ece994c43f7b229c05e5c824b4aec2",
-                "11f970e6b589ce435380c8eb606374abcf246d1d04ec09d9aa1b2e634f3cbd60",
-                "f707916dced718fb44aae29d824b137b15377ceff8bf43bd0c7bc903345288d1",
-                "6d71640b9323f1d0ba6619575f38f18cb009dc57da0047eed49f22ac516a49c4",
-                "874b74ecd2112e5797ceb4a3852506ba4db88b71fe30a2e6e8e99643ed0b5395",
-                "fd2bc18c55ac4eb8be849e3edcb67575cb4af7fc47047e596576ee11bd4cc650",
-                "e694584c3bc57c47d33ca9e7a75fa04acd48a4e408cbe8aaf40ce9b10bafaa5b"
+                "d1464b9a15611623659c5239ef68913a4ce3a9e1c95290d4c7fa1d7bacb53a9c",
+                "93419f3ed4ebdb25a94de48df3388559c14871d2b27caa61c086fb3b19cc0750",
+                "3fdb3e0f732ff9b5a8dd9c1354fb6209ace6e93a5670d6f338abd97b337a6cbd",
+                "5c0fa90a1bae94ec82d300fa7187dc4e30a22003ee55bf7cb306774e19cc090d",
+                "11f8237cc74a859c00e7fbe4a586c3b3d0829d2d2b4191c7acaf2ed1accd6e2b",
+                "0a9588699b2811aca982025d94aba18b223aea0468d9c2f185845c4558bea137",
+                "01d451936105e55037e48760ebb299ab9ebf32e98707a3ed3f55f9cd3d86ff00",
+                "a0ba6d46378c3f22d42266c4a3d8c9da9ced2a993a3ae20b125095e2a08a0c41"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -46,14 +45,32 @@
                 "hashicorp.com",
                 "developer.hashicorp.com",
                 "picsart.com",
-                "support.hpe.com",
-                "www.capterra.nl",
+                "www.cnbc.com",
                 "www.diy.com",
                 "www.kobo.com",
                 "www.netgear.com",
                 "www.skyshowtime.com",
-                "www.zwift.com",
                 "zapier.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d10fbb8a6e8047629e01af034e29a6df8203ae2f18533fdf6fb86dc0ae6645d8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.cnbc.com"
             ]
         },
         {
@@ -97,6 +114,29 @@
                 "foxnews.com",
                 "www.tmz.com"
             ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "girlsway.com",
+                "www.girlsway.com",
+                "www.playboyplus.com"
+            ]
         }
     ],
     "categories": [],
@@ -105,32 +145,34 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6547619047619048
+            "prevalence": 0.5903614457831325
         },
         {
             "domain": "zapier-deployment.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1566265060240964
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.13253012048192772
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.0963855421686747
         },
         {
-            "domain": "prismic.io",
-            "prevalence": 0.05952380952380952
-        },
-        {
-            "domain": "gartner.com",
-            "prevalence": 0.03571428571428571
+            "domain": "gammacdn.com",
+            "prevalence": 0.012048192771084338
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.011904761904761904
+            "prevalence": 0.012048192771084338
         }
     ],
     "types": {
-        "Fetch": 13,
-        "Preflight": 2
+        "Fetch": 11,
+        "XHR": 2,
+        "Preflight": 2,
+        "Other": 3
     },
     "nameservers": [
         "ns-1264.awsdns-30.org",

@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000412,
-    "sites": 6,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
-        "hb"
+        "hb",
+        "tag"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "ampbid\\.org\\/openrtb2\\/auction",
@@ -20,19 +21,63 @@
                 "hb"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000275,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "0188a0dec561f57ea884f16b7870b1b295170d87a274f832be49f935300ab3e9"
+                "56eaada48b147e1118307306b87b2d7ce07da19d1a6d6d28757f085a0e0ad3ac",
+                "e98a2288c88f93abe7f3a6411ca35b9d729e76994a780f83c858d7c3a05028c7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "road.cc",
-                "singletrackworld.com",
                 "www.planetrugby.com",
+                "www.ruck.co.uk"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/bid\\/static\\/load-cookie\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7cad743780adc36d20809098d9123ec2bd01fa7f487b70f0ab0fc90d77868c02"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetrugby.com",
+                "www.ruck.co.uk"
+            ]
+        },
+        {
+            "rule": "ampbid\\.org\\/cookie_sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetrugby.com",
                 "www.ruck.co.uk"
             ]
         }
@@ -43,14 +88,20 @@
     "topInitiators": [
         {
             "domain": "pubtm.com",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 3,
+        "Document": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "major.ns.cloudflare.com",
-        "lara.ns.cloudflare.com"
+        "lara.ns.cloudflare.com",
+        "major.ns.cloudflare.com"
     ]
 }
