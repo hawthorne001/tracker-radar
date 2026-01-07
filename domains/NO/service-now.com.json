@@ -7,51 +7,68 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "signon"
+        "sas"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "service.sas.com",
+            "resolved": "sas.service-now.com"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "service-now\\.com\\/api\\/x_snc_sso\\/seamless\\/introspect",
+            "rule": "service-now\\.com\\/angular\\.do",
             "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "signon"
+                "sas"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "servicenow.com",
-                "support.servicenow.com"
-            ]
-        },
-        {
-            "rule": "service-now\\.com\\/api\\/x_snc_sso\\/seamless\\/introspect",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "signon"
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
             "responseHashes": [
-                "23c88396a34e3d5b7b717b2b145a0217bb2ed0746a06cba5cd8deddc84fded87"
+                "099e473d06e4dda8ec48b77f5576611a5ef895fac1114ceffcd483e59ca95949"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
-                "support.servicenow.com"
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/api\\/now\\/v1\\/batch",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "f566ff4a47b0d4335f797ff41ab59bb0fda0bd5ae3e3aa8830d92f3d6b5bbd1a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
             ]
         }
     ],
@@ -60,13 +77,21 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "cwf_em_header.js",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "usw1.akam.net",

@@ -10,13 +10,14 @@
     "prevalence": 0.00142,
     "sites": 14,
     "subdomains": [
+        "cdn",
         "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au",
         "finder-au-prod-cd-kd8ji6nrq9zenl6x.edge.tenants.au",
         "flightcentre-prod-au-cd-zxozply1jissuotm.edge.tenants.au",
         "statista.eu",
+        "yhaaus-prod-cd-vw7tge8wm5bpg5co.edge.tenants.au",
         "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
-        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
-        "cdn"
+        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
     ],
     "cnames": [
         {
@@ -30,6 +31,10 @@
         {
             "original": "auth.soundguys.com",
             "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "auth.yha.com.au",
+            "resolved": "yhaaus-prod-cd-vw7tge8wm5bpg5co.edge.tenants.au.auth0.com"
         },
         {
             "original": "bcauth.tradelink.com.au",
@@ -47,18 +52,41 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "auth0\\.com\\/styleguide\\/components\\/1\\.0\\.8\\/media\\/logos\\/img\\/badge\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8ce9f639d0609bbca3d5362034f3d85efc0d75830259b3b1f56e6387fe9153a9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tradelink.com.au",
+                "www.yha.com.au"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000304,
+            "cookies": 0.000507,
             "fingerprinting": 0,
             "subdomains": [
                 "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au",
                 "finder-au-prod-cd-kd8ji6nrq9zenl6x.edge.tenants.au",
                 "flightcentre-prod-au-cd-zxozply1jissuotm.edge.tenants.au",
-                "statista.eu"
+                "statista.eu",
+                "yhaaus-prod-cd-vw7tge8wm5bpg5co.edge.tenants.au"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000405,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [
                 {
                     "original": "bcauth.tradelink.com.au",
@@ -75,10 +103,16 @@
                 {
                     "original": "login.statista.com",
                     "resolved": "statista.eu.auth0.com"
+                },
+                {
+                    "original": "auth.yha.com.au",
+                    "resolved": "yhaaus-prod-cd-vw7tge8wm5bpg5co.edge.tenants.au.auth0.com"
                 }
             ],
             "responseHashes": [
-                "82dd43f9b1c6080ee07d09401c5e9e1cbd439709297a5bdb8cab5bcc5db24dde"
+                "b35c205622223ca65ccf3388937b7f887b8df05f0fd297348a631d68877ee6d5",
+                "807aaec429aecf8a02eebee8d565778540713206f973df6796070ed104727844",
+                "13f0690b01b8c7cbe94ff8f83a285d54238a650ececd46a765a2adef6daa5015"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -87,7 +121,8 @@
                 "tradelink.com.au",
                 "www.finder.com.au",
                 "www.flightcentre.com.au",
-                "www.statista.com"
+                "www.statista.com",
+                "www.yha.com.au"
             ]
         },
         {
@@ -203,7 +238,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000506,
+    "cookies": 0.00071,
     "topInitiators": [
         {
             "domain": "first party",
@@ -211,15 +246,20 @@
         },
         {
             "domain": "bigcommerce.com",
-            "prevalence": 0.2777777777777778
+            "prevalence": 0.23809523809523808
         },
         {
             "domain": "flightcentre.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "auth0.com",
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Document": 4,
+        "Image": 2,
+        "Document": 5,
         "Preflight": 2,
         "Script": 4,
         "XHR": 2

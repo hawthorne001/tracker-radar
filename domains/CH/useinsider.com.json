@@ -7,18 +7,20 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000609,
+    "sites": 6,
     "subdomains": [
         "chargemap.api",
         "euronewsfr.api",
+        "omanairmena.api",
         "locationv2.api",
         "hit.api",
-        "sentinel.api",
-        "falcon",
+        "assets.api",
+        "eitri.api",
+        "unification",
         "log.api",
-        "aryuder.api",
-        "unification"
+        "falcon",
+        "aryuder.api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,24 +31,34 @@
             "fingerprinting": 2,
             "subdomains": [
                 "chargemap.api",
-                "euronewsfr.api"
+                "euronewsfr.api",
+                "omanairmena.api"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Navigator.prototype.vendor": 4,
-                "window.localStorage": 4,
-                "Navigator.prototype.maxTouchPoints": 1,
-                "Date.prototype.getTime": 4,
-                "Navigator.prototype.permissions": 1,
-                "Notification.permission": 1,
-                "window.sessionStorage": 1,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.vendor": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 2,
+                "window.sessionStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.platform": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "window.indexedDB": 1
             },
-            "sites": 4,
-            "prevalence": 0.000405,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [
-                "acdb949c7937e08538df4ec4dffbe06d282e4c0917641908f72f441ab1d3af93"
+                "26e10e8ec44ecdaa7b9358b31f2cc96b4224ba6c953d6064cecc9ba16931bc27",
+                "d67a0e25891e50106ea7f605945917a63b492a520fc95eb439f54d83455a598d",
+                "76d987d5a77d5268fff0e9abfac356ccd37866b495128ce796cc00e89f950db2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -55,7 +67,37 @@
                 "chargemap.com",
                 "de.euronews.com",
                 "fr.euronews.com",
-                "www.euronews.com"
+                "www.euronews.com",
+                "www.omanair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chargemap.api",
+                "omanairmena.api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.name": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "www.omanair.com"
             ]
         },
         {
@@ -66,10 +108,11 @@
                 "locationv2.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
+                "fbd44cba127d4765d3ac56b9ad0aed73db9b443159b740fc7378916ed89ff36d",
                 "5d44743a24e2931f7266a361749bb52b1d5dd5b2736d597b8f38ed04f5b88b65"
             ],
             "type": "XHR",
@@ -77,6 +120,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chargemap.com",
+                "www.omanair.com",
                 "www.singaporeair.com"
             ]
         },
@@ -88,8 +132,8 @@
                 "hit.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
                 "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
@@ -99,48 +143,118 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chargemap.com",
+                "www.omanair.com",
                 "www.singaporeair.com"
             ]
         },
         {
-            "rule": "useinsider\\.com\\/log\\.png",
+            "rule": "useinsider\\.com\\/css\\/info\\.min\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sentinel.api"
+                "assets.api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "931870ec1ad42a2613c8cfdb7d4b4056f0056a682e0ebfe5956d594d5589caea"
+                "2fb352a621303a65423f1f0d3330ec49b1553e206a82d9750d863e73e49e3906"
             ],
-            "type": "Image",
+            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chargemap.com",
+                "omanair.com",
                 "www.singaporeair.com"
             ]
         },
         {
-            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "rule": "useinsider\\.com\\/static\\/info\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "falcon"
+                "eitri.api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8a4cff6846be0e694fcba5b9fcca0a87207de18e22ed748ae614e35879cc5e5b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/event\\/v1\\/insert",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unification"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "singaporeair.com",
+                "omanair.com",
+                "www.omanair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/event\\/v1\\/insert",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unification"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.omanair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v2\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.omanair.com",
                 "www.singaporeair.com"
             ]
         },
@@ -153,7 +267,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
                 "7fb9d166d1a15bce0b9f085f3818946fd9297e4513a4a034a0ceb749292b4c0d"
@@ -167,37 +281,15 @@
             ]
         },
         {
-            "rule": "useinsider\\.com\\/v2\\/collect",
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "log.api"
+                "falcon"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "singaporeair.com",
-                "www.singaporeair.com"
-            ]
-        },
-        {
-            "rule": "useinsider\\.com\\/v3\\/status",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "aryuder.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -209,20 +301,20 @@
             ]
         },
         {
-            "rule": "useinsider\\.com\\/v3\\/status",
+            "rule": "useinsider\\.com\\/css\\/responsive-layout\\.min\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "aryuder.api"
+                "assets.api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "8694259e1f725040d369f69f4ee4c8f7e7055364c8916c3be6908ecf14694968"
+                "465e49ed19ef70431f7802d7aee6226cd2cf5775b3061c20917e3861d22ff22f"
             ],
-            "type": "XHR",
+            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -231,18 +323,18 @@
             ]
         },
         {
-            "rule": "useinsider\\.com\\/api\\/event\\/v1\\/insert",
+            "rule": "useinsider\\.com\\/v3\\/status",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "unification"
+                "aryuder.api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "8694259e1f725040d369f69f4ee4c8f7e7055364c8916c3be6908ecf14694968"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -263,10 +355,12 @@
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 10,
-        "Image": 4,
-        "Preflight": 4
+        "Script": 7,
+        "Document": 2,
+        "XHR": 13,
+        "Stylesheet": 4,
+        "Preflight": 5,
+        "Image": 3
     },
     "nameservers": [
         "eric.ns.cloudflare.com",

@@ -9,11 +9,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000709,
-    "sites": 7,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
+        "payments-de",
+        "d2c.aws",
         "unagi",
-        "unagi-eu"
+        "unagi-eu",
+        "www"
     ],
     "cnames": [
         {
@@ -24,6 +27,49 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payments-de"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "620d66d0187b43ac619ee722d90d772e2ea0b192a34fdc29a9464f8c57a3c08f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hutshopping.ch",
+                "www.allesrahmen.ch"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/1\\/events\\/com\\.amazon\\.csm\\.csa\\.prod",
             "cookies": 0,
             "fingerprinting": 0,
@@ -33,7 +79,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000506,
+            "prevalence": 0.000507,
             "cnames": [
                 {
                     "original": "unagi.amazon.com.be",
@@ -53,6 +99,28 @@
                 "www.amazon.com.be",
                 "www.zvab.com"
             ]
+        },
+        {
+            "rule": "amazon\\.com\\/favicon\\.ico",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a74af1811fffb049de7e02acb5cb55e20ae3b1353f3b7f80cddafeba91e3110e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "techpowerup.com",
+                "www.techpowerup.com"
+            ]
         }
     ],
     "categories": [
@@ -64,32 +132,46 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000304,
     "topInitiators": [
         {
-            "domain": "abebookscdn.com",
+            "domain": "awsstatic.com",
             "prevalence": 0.5
         },
         {
-            "domain": "media-amazon.com",
-            "prevalence": 0.25
+            "domain": "first party",
+            "prevalence": 0.23684210526315788
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "abebookscdn.com",
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "payments-amazon.com",
+            "prevalence": 0.07894736842105263
+        },
+        {
+            "domain": "media-amazon.com",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "ssl-images-amazon.com",
+            "prevalence": 0.02631578947368421
         }
     ],
     "types": {
+        "XHR": 2,
+        "Fetch": 4,
         "Ping": 5
     },
     "nameservers": [
+        "ns2.amzndns.org",
         "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
-        "ns1.amzndns.net",
-        "ns1.amzndns.org",
-        "ns2.amzndns.co.uk",
         "ns2.amzndns.com",
+        "ns1.amzndns.org",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns1.amzndns.net",
+        "ns2.amzndns.co.uk"
     ]
 }

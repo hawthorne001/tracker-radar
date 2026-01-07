@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000275,
+    "sites": 4,
     "subdomains": [
         "dsrv",
-        "dsrv-as"
+        "dsrv-srv",
+        "tmplts"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,20 +22,23 @@
                 "dsrv"
             ],
             "apis": {
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 4,
+                "window.innerHeight": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000275,
             "cnames": [],
             "responseHashes": [
-                "787723a7c391a7bbdabd2f2eacc46a960386304fa3ddfb253564a5550225f52c"
+                "e631db7dd3c00856cc79a9d12644bb8d27fa12ec47c4871d3062e7237502e551"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "popmama.com",
-                "www.popbela.com"
+                "andhrajyothy.com",
+                "www.onmanorama.com",
+                "www.popbela.com",
+                "www.popmama.com"
             ]
         },
         {
@@ -42,18 +46,69 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dsrv-as"
+                "dsrv-srv"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000275,
+            "cnames": [],
+            "responseHashes": [
+                "fcce6168e4cad30ab7904887200a51ef8db5e2700bc9e076ff2d4175a325db4c",
+                "8f9b794f7c6e5e7f6b6cef8fe99ec25f9a68792bda739dc75378462d67e74a7f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "andhrajyothy.com",
+                "www.onmanorama.com",
+                "www.popbela.com",
+                "www.popmama.com"
+            ]
+        },
+        {
+            "rule": "tmadsrv\\.com\\/templates_v2\\/HIS_HB\\/intrstl-modular\\/intrstl_all_DSK_all_all\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tmplts"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "887e7bb6998a90054557df3f6c9bb7adf3887515fa8968d422758ad48322875f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "andhrajyothy.com",
+                "www.popbela.com",
+                "www.popmama.com"
+            ]
+        },
+        {
+            "rule": "tmadsrv\\.com\\/ads\\/imp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsrv-srv"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "XHR",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "popmama.com",
+                "onmanorama.com",
                 "www.popbela.com"
             ]
         }
@@ -63,17 +118,18 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "doubleclick.net",
-            "prevalence": 0.6666666666666666
+            "domain": "first party",
+            "prevalence": 0.6470588235294118
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "domain": "doubleclick.net",
+            "prevalence": 0.35294117647058826
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2
+        "Script": 7,
+        "XHR": 4,
+        "Ping": 2
     },
     "nameservers": [
         "ns-497.awsdns-62.com",

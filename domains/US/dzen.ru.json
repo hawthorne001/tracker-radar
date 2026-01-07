@@ -11,7 +11,8 @@
     "sites": 2,
     "subdomains": [
         "sso",
-        "suggest.sso"
+        "suggest.sso",
+        "rum"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -22,21 +23,22 @@
             "fingerprinting": 2,
             "subdomains": [],
             "apis": {
-                "Document.cookie getter": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.colorDepth": 1,
-                "Date.prototype.getTime": 1,
-                "window.sessionStorage": 1,
-                "Navigator.prototype.deviceMemory": 1,
-                "Navigator.prototype.hardwareConcurrency": 1,
-                "Navigator.prototype.connection": 1,
-                "PerformanceTiming.prototype.navigationStart": 1,
-                "Navigator.prototype.vendor": 1,
-                "window.devicePixelRatio": 1
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.onLine": 1
             },
             "sites": 3,
             "prevalence": 0.0000206,
@@ -53,14 +55,32 @@
         },
         {
             "rule": "dzen\\.ru\\/install",
-            "cookies": 0.00000687,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
                 "sso"
             ],
             "apis": {
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 2
             },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/api\\/auth\\/web\\/autologin-vk-log-only",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -79,8 +99,8 @@
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -90,7 +110,37 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yandex.ru",
-                "www.zen.yandex.ru"
+                "www.zen.yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/portal\\/dzensearch\\/desktop",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "suggest.sso"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.connection": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "751387c19a176d9e974556f7c8cdf3de0d46fa989d73a7bcd1846847f4fe5e7a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
             ]
         },
         {
@@ -110,7 +160,65 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yandex.ru",
-                "www.zen.yandex.ru"
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/api\\/web\\/v1\\/recommend-topic-channels-heads",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c1702d6a377bbd3dbfe541e5ba8ca2ac37489d95b841dc5b5f8ea10c651723d2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/api\\/geo\\/set",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/news\\/api\\/v2\\/get_form_key",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "041b9b4a868a977e065c01cf70355f8f64273332735d0213e61382b302325d2d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
             ]
         },
         {
@@ -119,8 +227,8 @@
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "39f94024cbcf740958d8bb6e25095e33ee260776744698ff4e0d43a4454bf72f"
@@ -130,7 +238,52 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yandex.ru",
-                "www.zen.yandex.ru"
+                "www.zen.yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/portal\\/proxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "suggest.sso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/suggest\\/suggest-ya\\.cgi",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "suggest.sso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "230e827dd85c9732f1879d3c3cc72d75aa08122ef3fff8d55f6d6d156e14047d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
             ]
         },
         {
@@ -141,8 +294,8 @@
                 "suggest.sso"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "1bd2aa0bb9f0a0fd919c42a18c81645bd6d9601f60086928b05db8a5be978689"
@@ -152,7 +305,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yandex.ru",
-                "www.zen.yandex.ru"
+                "www.zen.yandex.ru",
+                "xmlsearch.yandex.ru"
             ]
         },
         {
@@ -163,8 +317,8 @@
                 "suggest.sso"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "1bd2aa0bb9f0a0fd919c42a18c81645bd6d9601f60086928b05db8a5be978689"
@@ -174,7 +328,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yandex.ru",
-                "www.zen.yandex.ru"
+                "www.zen.yandex.ru",
+                "xmlsearch.yandex.ru"
+            ]
+        },
+        {
+            "rule": "dzen\\.ru\\/api\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "xmlsearch.yandex.ru"
             ]
         }
     ],
@@ -184,22 +361,23 @@
     "topInitiators": [
         {
             "domain": "dzeninfra.ru",
-            "prevalence": 0.8571428571428571
-        },
-        {
-            "domain": "mail.ru",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.8888888888888888
         },
         {
             "domain": "dzen.ru",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "mail.ru",
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Document": 5,
-        "Image": 4,
-        "Fetch": 2,
-        "Ping": 4
+        "Document": 9,
+        "Image": 5,
+        "Fetch": 9,
+        "XHR": 4,
+        "Ping": 8
     },
     "nameservers": [
         "ns1.mail.ru",

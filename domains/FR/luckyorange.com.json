@@ -7,14 +7,44 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000406,
+    "sites": 4,
     "subdomains": [
-        "tools"
+        "tools",
+        "settings"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "luckyorange\\.com\\/core\\/lo\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tools"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
+                "5323e7cdacdbb586cd6f5b23af5607cf8e4b836a5b72a0e3d762ee8a649458a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "muji.eu",
+                "leonardo.ai",
+                "www.gibson.com"
+            ]
+        },
         {
             "rule": "luckyorange\\.com\\/core\\/frame\\.js",
             "cookies": 0,
@@ -39,6 +69,28 @@
                 "muji.eu",
                 "france.muji.eu"
             ]
+        },
+        {
+            "rule": "luckyorange\\.com\\/9869a245",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "settings"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e2dead6c422cb1b3f599a64116f089901b6dd3a4b596a4a470af79a32bba1922"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gibson.com",
+                "www.gibson.com"
+            ]
         }
     ],
     "categories": [],
@@ -47,15 +99,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.9
         },
         {
             "domain": "bigcommerce.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "olga.ns.cloudflare.com",
