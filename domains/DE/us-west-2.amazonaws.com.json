@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000506,
+    "sites": 5,
     "subdomains": [
+        "public-ingress-a84df8d06aede39e.elb",
         "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb"
+        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb",
+        "cognito-identity"
     ],
     "cnames": [
         {
@@ -23,10 +25,39 @@
         {
             "original": "cza2.crazygames.com",
             "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
+        },
+        {
+            "original": "login.databricks.com",
+            "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/telemetry-unauth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-ingress-a84df8d06aede39e.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "login.databricks.com",
+                    "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "databricks.com",
+                "www.databricks.com"
+            ]
+        },
         {
             "rule": "us-west-2\\.amazonaws\\.com\\/event",
             "cookies": 0,
@@ -58,6 +89,28 @@
                 "crazygames.com",
                 "www.crazygames.com"
             ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7071fe2afe54e16b5c26dfb6230ef69aebac193ae3a68cabc4001c18eae6b86f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japan.travel",
+                "www.japan.travel"
+            ]
         }
     ],
     "categories": [
@@ -67,11 +120,16 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "ds3fp1mnrtl6k.cloudfront.net",
-            "prevalence": 1
+            "domain": "first party",
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "d1wwtn5gq9xmny.cloudfront.net",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
+        "Fetch": 4,
         "Ping": 2
     },
     "nameservers": [

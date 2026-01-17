@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
         "via"
     ],
@@ -16,25 +16,85 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "batch\\.com\\/v4\\/worker\\.min\\.js",
+            "rule": "batch\\.com\\/v4\\/bootstrap\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "via"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "d2cad9ff147d4d0b16230c28b11b2c9fc4f76997f5129722d800eb4356746cf6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "20minutes.fr",
+                "www.bnr.nl"
+            ]
+        },
+        {
+            "rule": "batch\\.com\\/manifest\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "via"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
-                "9f118d18ec36880e2de2682123f8bab97911b99be3f47381572913b1a2f47f7e"
+                "21ce8bb9f4882cc6cb91a89d1823587d47c368023696f22c5a7ad9b539a5dc0e"
             ],
-            "type": "Other",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "20minutes.fr",
-                "www.europcar.com"
+                "www.beinsports.com",
+                "www.bnr.nl"
+            ]
+        },
+        {
+            "rule": "batch\\.com\\/4\\.2\\.0\\/sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "via"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8f5dfea8c7c14e7327658e01fc2d617566877fd5ad54ee7d22131d3a4348b173"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "20minutes.fr",
+                "www.bnr.nl"
             ]
         }
     ],
@@ -44,20 +104,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.75
         },
         {
             "domain": "20mn.fr",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Other": 2
+        "Script": 4,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-1215.awsdns-23.org",
-        "ns-1823.awsdns-35.co.uk",
         "ns-11.awsdns-01.com",
-        "ns-964.awsdns-56.net"
+        "ns-964.awsdns-56.net",
+        "ns-1823.awsdns-35.co.uk",
+        "ns-1215.awsdns-23.org"
     ]
 }

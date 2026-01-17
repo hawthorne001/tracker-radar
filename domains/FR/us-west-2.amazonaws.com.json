@@ -9,54 +9,65 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000304,
-    "sites": 3,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
-        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb"
+        "public-ingress-a84df8d06aede39e.elb",
+        "cognito-identity"
     ],
     "cnames": [
         {
-            "original": "cza.crazygames.com",
-            "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
-        },
-        {
-            "original": "cza2.crazygames.com",
-            "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
+            "original": "login.databricks.com",
+            "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "us-west-2\\.amazonaws\\.com\\/event",
+            "rule": "us-west-2\\.amazonaws\\.com\\/telemetry-unauth",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-                "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb"
+                "public-ingress-a84df8d06aede39e.elb"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000204,
             "cnames": [
                 {
-                    "original": "cza.crazygames.com",
-                    "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
-                },
-                {
-                    "original": "cza2.crazygames.com",
-                    "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
+                    "original": "login.databricks.com",
+                    "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
                 }
             ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "crazygames.com",
-                "www.crazygames.com"
+                "databricks.com",
+                "www.databricks.com"
+            ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "f5d30b06f153f6dc9cf2fa0f77fc031f3b88128ee62a179d40d781068b59a2ea"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japan.travel",
+                "www.japan.travel"
             ]
         }
     ],
@@ -67,12 +78,16 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "ds3fp1mnrtl6k.cloudfront.net",
-            "prevalence": 1
+            "domain": "first party",
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "d1wwtn5gq9xmny.cloudfront.net",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
-        "Ping": 2
+        "Fetch": 4
     },
     "nameservers": [
         "ns-1522.awsdns-62.org",

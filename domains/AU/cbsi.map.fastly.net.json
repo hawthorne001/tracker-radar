@@ -9,11 +9,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00071,
-    "sites": 7,
+    "prevalence": 0.000608,
+    "sites": 6,
     "subdomains": [
         "isgprivacy",
-        "at-ipv4"
+        "news-ipv4",
+        "sports-global"
     ],
     "cnames": [
         {
@@ -21,12 +22,16 @@
             "resolved": "isgprivacy.cbsi.map.fastly.net"
         },
         {
-            "original": "pbs.at.cbsi.com",
-            "resolved": "at-ipv4.cbsi.map.fastly.net"
+            "original": "feeds-cbsn.cbsnews.com",
+            "resolved": "news-ipv4.cbsi.map.fastly.net"
         },
         {
             "original": "production-cmp.isgprivacy.cbsi.com",
             "resolved": "isgprivacy.cbsi.map.fastly.net"
+        },
+        {
+            "original": "slc.cbssports.com",
+            "resolved": "sports-global.cbsi.map.fastly.net"
         }
     ],
     "fingerprinting": 1,
@@ -72,8 +77,8 @@
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000507,
+            "sites": 4,
+            "prevalence": 0.000406,
             "cnames": [
                 {
                     "original": "production-cmp.isgprivacy.cbsi.com",
@@ -90,8 +95,7 @@
                 "paramountplus.com",
                 "pluto.tv",
                 "www.last.fm",
-                "www.paramountplus.com",
-                "www.simonandschuster.com"
+                "www.paramountplus.com"
             ]
         },
         {
@@ -151,23 +155,50 @@
             ]
         },
         {
-            "rule": "cbsi\\.map\\.fastly\\.net\\/setuid",
-            "cookies": 0.000101,
+            "rule": "cbsi\\.map\\.fastly\\.net\\/2\\.1\\/rundown\\/",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "at-ipv4"
+                "news-ipv4"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [
                 {
-                    "original": "pbs.at.cbsi.com",
-                    "resolved": "at-ipv4.cbsi.map.fastly.net"
+                    "original": "feeds-cbsn.cbsnews.com",
+                    "resolved": "news-ipv4.cbsi.map.fastly.net"
                 }
             ],
             "responseHashes": [],
-            "type": "Image",
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbsnews.com",
+                "www.cbsnews.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "slc.cbssports.com",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "f245b15d6b036456023b13382f380b5e850f95e466d011a8302632b38f407073"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -191,25 +222,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9421965317919075
+            "prevalence": 0.9559748427672956
         },
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.028901734104046242
+            "prevalence": 0.031446540880503145
         },
         {
             "domain": "paramount.com",
-            "prevalence": 0.023121387283236993
-        },
-        {
-            "domain": "d28hgpri8am2if.cloudfront.net",
-            "prevalence": 0.005780346820809248
+            "prevalence": 0.012578616352201259
         }
     ],
     "types": {
-        "Script": 12,
-        "Fetch": 3,
-        "Image": 2
+        "Script": 11,
+        "Fetch": 7
     },
     "nameservers": []
 }

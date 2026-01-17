@@ -9,25 +9,23 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00485,
-    "sites": 48,
+    "prevalence": 0.00516,
+    "sites": 51,
     "subdomains": [
         "sr-client-cfg",
         "sr-client-cfg.eu",
-        "api-sr",
-        "api-sr.eu",
+        "cdn",
         "api2",
         "api.eu",
         "api",
-        "cdn",
         "gs",
-        "flag.lab.eu",
-        "flag.lab",
+        "api.lab",
         "api.lab.eu",
-        "api.lab"
+        "flag.lab.eu",
+        "flag.lab"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "amplitude\\.com\\/config",
@@ -38,19 +36,18 @@
                 "sr-client-cfg.eu"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00131,
+            "sites": 14,
+            "prevalence": 0.00142,
             "cnames": [],
             "responseHashes": [
-                "56908d2cc058e015a7c074c138c6667b100b82dfd74e503d8a7ac3f53792ad48",
+                "fe3febdce83fa51cfcf43ea9bcf3b7624a120227747950c2000d2c710788deb1",
                 "ba258ab50a9cdf5cf76d293c9e87d11f4594431cd99e48f33f61f1f425c68943",
-                "7222e01fe38432c1b9612338c77c3b67fd64a7dbae45327048cb0ed63cad7b4a",
+                "8366e089cb8f205d500d01b09ac829cd2f478e69d8daa15462f487dbb21d1134",
                 "93f353bba6fb21256a2816d3a0ae7f033984af9356a53c23727689c7da064ef5",
                 "5e82265d046058ee7b5a936a202ead0cbf99b0c9aa96dd93c262f8434f2850ef",
                 "33c8b2afb1a1b1825ace6975574e1e18bb6728e2bc78a8bc76f8d26c8c4c2c33",
                 "9470ead04ca00d5798f879f42a8d93848ac0f62829a1b9eb78dfef1d9153cdcd",
                 "878fec5ea73ecc0ef7e9e71f568dd2d528806f2ca6ed1bcfd893bdf83805ec6a",
-                "91f20e9ddd9af54c195287134db8889514234a71ff30675c4ce2a2e48e5b1a04",
                 "6c7e8417e1046a27c9b21b5c4b7a3fe57a585d2fb291b476424e5f1d661dbb75",
                 "758a58e926695cc42414d268d48f890432a848bce9d204258ee779afec046475"
             ],
@@ -64,57 +61,69 @@
                 "gptzero.me",
                 "liquipedia.net",
                 "meet.jit.si",
+                "scispace.com",
+                "tonies.com",
                 "tryhackme.com",
+                "www.express.co.uk",
                 "www.fetisch.de",
                 "www.gay.de",
-                "www.japan-experience.com",
                 "www.poppen.de",
-                "www.rebuy.de",
                 "www.zwift.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "amplitude\\.com\\/libs\\/amplitude-8\\.21\\.9-min\\.gz\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
-                "api-sr",
-                "api-sr.eu"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27"
+                "d5fb67b0e221d0323b90c61463506a6416ac73aab476e805c8503f6813b4e4a7"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "amp_cookie_test": {
+                    "ttl": -86393,
+                    "length": 4,
+                    "prevalence": 0.0002022653721682848,
+                    "uniqueness": 0.5
+                },
+                "amplitude_testkahoot.it": {
+                    "ttl": -86393,
+                    "length": 4,
+                    "prevalence": 0.0002022653721682848,
+                    "uniqueness": 0.5
+                },
+                "_tldtest_OU9Nm5daAyOqwApld7wMDa": {
+                    "ttl": -86395,
+                    "length": 4,
+                    "prevalence": 0.0002022653721682848,
+                    "uniqueness": 0.5
+                },
+                "_tldtest_dc6NGzL1INil8R9dstx9oD": {
+                    "ttl": -86393,
+                    "length": 4,
+                    "prevalence": 0.0002022653721682848,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "clickup.com",
-                "www.icelandair.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-sr",
-                "api-sr.eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clickup.com",
-                "www.icelandair.com"
+                "kahoot.it",
+                "create.kahoot.it"
             ]
         },
         {
@@ -126,34 +135,56 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 20,
-            "prevalence": 0.00202,
+            "sites": 23,
+            "prevalence": 0.00233,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "57d7b12619a0c915073f22e293364dfa4a4d06090aa144659285af4d3942dab1",
+                "374139b08b510768593e4c144c8865d576828f67f046ab020aef303778d47a80",
+                "30ceb8603c54125cedcb0abe494758d90e252e879108bb7056f564f40556d43e",
+                "dfd29e5acbde048581e6608da3d82fe8863b1bd6e21b5033a9b4b0e26ace4283",
+                "3f7cbd9e332a2d02156d3a46267e0534cb79902c50ba84aa7ab6a03847c50f00",
+                "ff897ec7de6ce99bc4d9ed319eaeb9fecf86b7d149b4c5c91065b1e5abb50180",
+                "cfc2a6678ab87701a226fd5f7c8951c0566c676c9bd4d5c6485a39aed62f8639",
+                "91ee0a8db8777b7d1af9e5740024b291c8e3cae9124111b6f32376cef280d3be",
+                "ed46e111a8e5449f34fe14c5280aabbc8b4bfd85f591bf7ecdc16085adc5377c",
+                "4a2a3d0ad57b9ec59294a7af40ebb788d2f98ba48c47ddb22a84cbfe5c78a860",
+                "a3219163d7f2ca6e3788a02c163040b7b4e66bd60019bec0d3b06778c1e37faa",
+                "92e13c316860d9107c20302a061fc7b1fc8e4392cce795760ffc011ca48cb679",
+                "ea543ca0fda7af4c45761782945226f263e5dcd9844456a6fed6d8b896a8a43a",
+                "c7d49bd6b473f3c16473e287f6aa15162fc5f9e9a687e99c63fa9d92410ae5de",
+                "4afb315e8d6159813e5a3d490e24b7ae71b86223baee28327043de7bf28068d4",
+                "fc9d59a2eb6e217b90751d58ce9c663b3e407d755b6744d9726c0abf83714101",
+                "28f1c4ad6365c41f2c8f89fe31f7a53825303c4fe76fa36badf74255b951e0f6",
+                "ab8572883713f14b250269d57a0d7695b1790a1e843c81d868b14c3592015221",
+                "5ee15abe97d0852e843e57965b2463ad62328a5e01d8f478e12d5ff37417fc09",
+                "fd50a4e08080a18fff98876cb22c92d43860c3717f5ae9a3d73f0c7ab486d6cf",
+                "1e60cc8b0c4b4f7dd3ca4136b8cfd71cdfeb7753239f9cc1547edb2a6c9ab9d4"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "deepwiki.com",
-                "ersties.com",
-                "gptzero.me",
-                "liquipedia.net",
-                "meet.jit.si",
-                "openart.ai",
-                "tonies.com",
-                "udemy.com",
-                "www.aljazeera.com",
-                "www.carwow.de",
                 "www.express.co.uk",
-                "www.image-line.com",
-                "www.japan-experience.com",
-                "www.kaufmich.com",
-                "www.kapwing.com",
                 "www.mirror.co.uk",
+                "www.aljazeera.com",
+                "deepwiki.com",
                 "www.studysmarter.de",
-                "www.udemy.com",
+                "ersties.com",
+                "kahoot.com",
+                "openart.ai",
+                "liquipedia.net",
+                "www.litcharts.com",
+                "www.zwift.com",
+                "www.image-line.com",
+                "www.kaufmich.com",
+                "talents.studysmarter.de",
+                "www.kapwing.com",
+                "tonies.com",
+                "scispace.com",
                 "zed.dev",
-                "www.zwift.com"
+                "www.carwow.de",
+                "www.udemy.com"
             ]
         },
         {
@@ -165,54 +196,56 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 20,
-            "prevalence": 0.00202,
+            "sites": 23,
+            "prevalence": 0.00233,
             "cnames": [],
-            "responseHashes": [
-                "ae03b3a977397b9e2463b668c98f517b62317e7622becb7c96ff0b816a8d705a",
-                "a59459abec2520b9e5a8a3f9aeb10d27c231f3ca1775e675751bdd11ceb3c298",
-                "36cf502f51ef450dfa2dee31885b6661b29b264d75b8e1d447f0b6e15e41e990",
-                "cef2294defe05016148932552fbe601da45570d39593ea4eb8d55026cb5a2ac6",
-                "dd97c4cd393da54c8ea525052d85a21c9a678af2be96f8937daa3a6dc7952ff7",
-                "b0079dd80e1918e864daa7ca1e06d3b52853152e92761e52b4e3a22dfba2133d",
-                "e43dd3d94cdd25a2645a6b5536ce4e88c9308cbfa4093433078e343638260e3b",
-                "e91c7cd2c2d919c74c57aba642b7b47bba29f6de245dda390296dd5b3cd0a115",
-                "88020d82889c3e8b1e20bff8d7fcbe89535d13e5aecdb047405e5a043aa679bc",
-                "bc94353b3d23f6dcdde17418eebd0164aec384d62004b70f1f9189abf886f351",
-                "115fab86a2f9f2a77789bd902bb9b8577c3b27541268eafd13bde2c921a3dc58",
-                "ee875d796bbae5ac86d0b593a37446cc99ab911b9a4cbca926f2632e8e123d9f",
-                "6297d53a8a910b8f79fcffb62f24cd08c8a65fcdf343d71d13a3665948f2a6bd",
-                "3b7fd485613195519e64705457fbc6abc6a7d73a7de1b478d23a3b15f37dd151",
-                "6a0355238f55c87fb8512755f36cb0503caaf9ad34822e83a4a6a1d265fab03e",
-                "da8ac08ac37b4f640c19ca6cf567c2a39da98047da3adaf6e27a4c1cfc119df9",
-                "a69ddc91925970807fba474085552e4b76817b15fb30ee5d30537630e9067039",
-                "2edf2c148fdb8b8304c41191bed8607af5663979de36125f48fc465e1d0d8de9",
-                "12dbd877e29e3c82bd8eb9fb6ef9e2bb259d9a2e698a01ef33e4a4552aaa1531"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "deepwiki.com",
-                "ersties.com",
-                "gptzero.me",
-                "liquipedia.net",
-                "meet.jit.si",
-                "openart.ai",
-                "tonies.com",
-                "udemy.com",
-                "www.aljazeera.com",
-                "www.carwow.de",
                 "www.express.co.uk",
-                "www.image-line.com",
-                "www.japan-experience.com",
-                "www.kaufmich.com",
-                "www.kapwing.com",
                 "www.mirror.co.uk",
-                "www.studysmarter.de",
+                "www.kaufmich.com",
+                "www.aljazeera.com",
+                "www.image-line.com",
+                "tonies.com",
                 "www.udemy.com",
+                "speechify.com",
                 "zed.dev",
-                "www.zwift.com"
+                "ersties.com",
+                "www.kapwing.com",
+                "www.carwow.de",
+                "meet.jit.si",
+                "liquipedia.net",
+                "openart.ai",
+                "talents.studysmarter.de",
+                "scispace.com",
+                "www.litcharts.com",
+                "www.zwift.com",
+                "kahoot.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/2\\/httpapi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "qt.io",
+                "www.alltrails.com"
             ]
         },
         {
@@ -227,36 +260,14 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27"
+                "48fb01775da6ff1ebc1766873be1d34d28af56ef87a0d7251cdae1c277c2c05f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "fansly.com",
-                "iconscout.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/config\\/5a3d2e29ec033cbf81792799577f2433",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sr-client-cfg"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "34c699b44f9c04b133d47fe1dfc9fb18013dce6b2d7d42dfaae5574721261473"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
+                "www.pscp.tv"
             ]
         },
         {
@@ -268,28 +279,26 @@
             ],
             "apis": {
                 "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.languages": 2,
-                "Document.cookie getter": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.languages": 1,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "5952e4b1f0007258d2e7b65147a4781182615cee20821923aac20ef64ec9b205"
+                "122d231e504af9bc27636833cf2cebd2b86aa0a6c2e996d90da04f612e7b2fd0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-5ZVIOD2Z\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-5Y5TLJID\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -300,18 +309,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7945299d8a9629834e75b69284322b638bc212ed6c8bb02d32459dd27bbf4739"
+                "ae1e2bc2bbcb411143bec85fc281ddc04b68e75cd16a87e13a00f672bbadea4b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-VOIIT4XG\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-G7H3RLSD\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -322,18 +331,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "6b30b96e9de5a033027d435bf2dc675190966374057d9d896e9a900172d1fc19"
+                "35b4730f837217aca2217e83bfbdae58630587658733055e01c58be6fa125f9a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-ROPU7OSE\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-7R7HFMLN\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -344,18 +353,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "8ec2a7a8c0052044fa3b0b359d2b747041d510f20f9cd5fefdc896d8ec941033"
+                "466e8dbb8e8e30fb7860ccfc7e8c5487a5894777be1be62104e35dcfe3f37882"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-7MLDQIQZ\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-3VVKWA37\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -366,18 +375,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "2df0a60e670c4a25ba1f588c21d780d9dbab996f3f6519b857f7eef53e1c885b"
+                "a9ef424b867b75e9187c82a445f2a21b648ffbccce1b7da9387e52cf881a5d8c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-4GPAGINV\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-HXEHWDSU\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -388,18 +397,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "cde16b9e87702dc9876aad3ad7810be9ea88333ff4654f77e7b29a47c07c7954"
+                "5e2b80a3ce8576bd8f77a7933e40a03b5e29229511f958ed5465169613d39078"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-UFN3LUOB\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-RB2BPDA6\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -410,18 +419,40 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "a5f62b8414cd55b2512b02efd721627a56e9d88be369854dfacce5b1ff1004ec"
+                "ae546a39100b95fcb47386140dbad57731b3fc489d2bd0b3b0c06c36ed3e3b4e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-OEGTZUXA\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-2WPD3VJY\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9772336d4556e3b33f1b76e1ecead05e94f7eab605d57f2035f67c6599e2d9c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redis.io",
+                "www.udemy.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-TX6UK3UO\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -434,18 +465,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "fb6b23a8d61d549b3e6c27ee192f457832861c6fa73ff371842e62e1d414b892"
+                "534c57bd251a00f3bc047efe2edfd619e116e600245f12e2ba1ef197a430850f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-K6TFXDI4\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-GQTAQYUY\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -459,18 +490,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "4454f8160759eb80fd0b1d006562532d4536e3b5cce05ceda2ee3b15e36a9c94"
+                "d48a8f83aa6b032fa64473ce42dac47b8126fbae1f4f275d139d8d890dfc65cf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-NWYZISLY\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-3CZQGMSR\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -481,18 +512,18 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "5fb44fc614d5da4ecc0096012dc90d362fa5de2fdb9b1baed839f5a18dd7e50e"
+                "6bc334e1123ce1d52bc5a76ddee2d8c3a1662806040666dadb5f72ed68f62ebf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-ZXYH4XFX\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/793a53f3ba25c23dd83120fb462c8204245e5363-chunk-PL26IJV2\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -506,13 +537,13 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7588a854caf45fb2eb19b65044182eea13effc495d22e99a3244ac325b413c91"
+                "ffa2d2041134c564f4156b871bfb4f17b5aa174be361c76318e2a61e838ad62f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
@@ -532,7 +563,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
@@ -552,7 +583,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
@@ -574,7 +605,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
@@ -596,180 +627,83 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
+                "redis.io",
                 "www.udemy.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/decide",
+            "rule": "amplitude\\.com\\/config\\/f2ed568fb14bd50662ac7e64e9b1614b",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs"
+                "sr-client-cfg"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f0a695a39bad88985d85409c5fc531725e361f63c2698b24a7225f24d6876481"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "studysmarter.de",
+                "talents.studysmarter.de",
+                "www.studysmarter.de"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.lab",
+                "api.lab.eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000506,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
+                "studysmarter.de",
+                "talents.studysmarter.de",
+                "www.kaufmich.com",
+                "www.midjourney.com",
+                "www.studysmarter.de"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/decide",
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs"
+                "api.lab",
+                "api.lab.eu"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 5,
+            "prevalence": 0.000506,
             "cnames": [],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "e3f9601301bb715cf41040a1c7956201d55dc5cf15af6a2b6095ca9445eac8c7",
+                "768bdd7009ccc3eef3961c41549e2f30c7ca4f88b30cd764bf8f2f3a6fd65925"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-ResourceCenterRoot-YSPDIY5E\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "cdf11fd844e400db381fa723bf413bc7941e15be93d11194ee89ae921e2f8cbd"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-LNYGYHIQ\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "5b42f2d0dcfea90cbbfb76cfe9af0597038d846ed7e2b0b24221fe99263bb5ce"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-ZA265FAW\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "28b1d1286c55c34926bc76a88669b994338fff24ecca8f7c4c009eb61cac5d2f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/25eea835a166b1a82b8d6fc1e0c39ea81a9e9b8b-chunk-NZJCZMCE\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "9d8917e561aa58c926026777c23498e19f55a13f8fa9fb5251bb136152bb0ceb"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/state",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "861cc4539e59efffe07d1354555b583a451487b0bb835e6621ec5d67c44f27eb"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/state",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "udemy.com",
-                "www.udemy.com"
+                "studysmarter.de",
+                "talents.studysmarter.de",
+                "www.kaufmich.com",
+                "www.midjourney.com",
+                "www.studysmarter.de"
             ]
         },
         {
@@ -806,7 +740,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "4f4763637f1250c177bd32cc4887f40aebfb0b8ea9b9aeecaf8f3d1baadcd318"
+                "73377608c29e9277f4002b6d0863b7a35ad3515fb9b7a36ab6095e867dc50ad1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -844,6 +778,28 @@
             ]
         },
         {
+            "rule": "amplitude\\.com\\/config\\/68994201baab827e71598ae0dee00019",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr-client-cfg.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "34c699b44f9c04b133d47fe1dfc9fb18013dce6b2d7d42dfaae5574721261473"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.mirror.co.uk"
+            ]
+        },
+        {
             "rule": "amplitude\\.com\\/config\\/82eb9b6dc70a29221070ce868d61e7d4",
             "cookies": 0,
             "fingerprinting": 0,
@@ -855,7 +811,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "0c5bf3d5a55876cc0b5497971d3811894183e0f25d2af6b4a6b58359d2d43204"
+                "7e751d23004909a22c9ab6633f85de1c2688952b832baa85fe88113db6817c11"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -899,7 +855,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "0d49f3f74e43afda7924bb8d1de89c23ec1a8d952586dcfa735f7b33b4d21a70"
+                "0e91f9244a540e12f1679b9178e2029edc4b40a11a926bd744d81a684b5d9e33"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -910,58 +866,11 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
+            "rule": "amplitude\\.com\\/config\\/f3fb91c46121e725741fe684649386d5",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api.lab.eu",
-                "api.lab"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kaufmich.com",
-                "www.midjourney.com",
-                "www.studysmarter.de"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.lab.eu",
-                "api.lab"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "8148c876bf0ca38c507ca294c509679e0d4a61ed83e7316267a3f26abfc5842b",
-                "220aa2bcf81f0b0fce3a29782481806a556e155d8555340cce990739c0063128"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kaufmich.com",
-                "www.midjourney.com",
-                "www.studysmarter.de"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/config\\/68994201baab827e71598ae0dee00019",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sr-client-cfg.eu"
+                "sr-client-cfg"
             ],
             "apis": {},
             "sites": 2,
@@ -974,12 +883,12 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mirror.co.uk",
-                "www.mirror.co.uk"
+                "sexlikereal.com",
+                "www.sexlikereal.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/config\\/f2ed568fb14bd50662ac7e64e9b1614b",
+            "rule": "amplitude\\.com\\/config\\/5a3d2e29ec033cbf81792799577f2433",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -990,14 +899,14 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "f0a695a39bad88985d85409c5fc531725e361f63c2698b24a7225f24d6876481"
+                "34c699b44f9c04b133d47fe1dfc9fb18013dce6b2d7d42dfaae5574721261473"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "studysmarter.de",
-                "www.studysmarter.de"
+                "udemy.com",
+                "www.udemy.com"
             ]
         }
     ],
@@ -1005,54 +914,55 @@
         "Analytics"
     ],
     "performance": {},
-    "cookies": 0.00111,
+    "cookies": 0.00101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7647058823529411
+            "prevalence": 0.7637795275590551
         },
         {
             "domain": "udemycdn.com",
-            "prevalence": 0.12605042016806722
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.025210084033613446
+            "prevalence": 0.06299212598425197
         },
         {
             "domain": "prismic.io",
-            "prevalence": 0.025210084033613446
+            "prevalence": 0.05511811023622047
         },
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.01680672268907563
-        },
-        {
-            "domain": "anthropic.com",
-            "prevalence": 0.008403361344537815
+            "domain": "googletagmanager.com",
+            "prevalence": 0.023622047244094488
         },
         {
             "domain": "smassets.net",
-            "prevalence": 0.008403361344537815
+            "prevalence": 0.015748031496062992
+        },
+        {
+            "domain": "mutinycdn.com",
+            "prevalence": 0.015748031496062992
+        },
+        {
+            "domain": "d5a9y5rnan99s.cloudfront.net",
+            "prevalence": 0.015748031496062992
+        },
+        {
+            "domain": "anthropic.com",
+            "prevalence": 0.007874015748031496
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.008403361344537815
+            "prevalence": 0.007874015748031496
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.008403361344537815
-        },
-        {
-            "domain": "mrskincdn.com",
-            "prevalence": 0.008403361344537815
+            "prevalence": 0.007874015748031496
         }
     ],
     "types": {
-        "Fetch": 60,
-        "Preflight": 35,
-        "XHR": 2,
-        "Script": 32
+        "Fetch": 63,
+        "Script": 28,
+        "Preflight": 34,
+        "Ping": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-1262.awsdns-29.org",
