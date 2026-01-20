@@ -9,13 +9,19 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
+        "count",
         "cinfo-v4",
-        "cinfo-v6"
+        "cinfo-v6",
+        "api-cmc"
     ],
     "cnames": [
+        {
+            "original": "api-cmc.shein.com",
+            "resolved": "api-cmc.shein.com.edgekey.net"
+        },
         {
             "original": "cinfo-v4.shein.com",
             "resolved": "cinfo-v4.shein.com.edgekey.net"
@@ -23,10 +29,41 @@
         {
             "original": "cinfo-v6.shein.com",
             "resolved": "cinfo-v6.shein.com.edgekey.net"
+        },
+        {
+            "original": "count.shein.com",
+            "resolved": "count.shein.com.edgekey.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "shein\\.com\\.edgekey\\.net\\/none\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "count"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "count.shein.com",
+                    "resolved": "count.shein.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shein.com",
+                "us.shein.com"
+            ]
+        },
         {
             "rule": "shein\\.com\\.edgekey\\.net\\/",
             "cookies": 0,
@@ -36,8 +73,8 @@
                 "cinfo-v6"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [
                 {
                     "original": "cinfo-v4.shein.com",
@@ -56,7 +93,62 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "shein.com",
-                "eur.shein.com"
+                "eur.shein.com",
+                "us.shein.com"
+            ]
+        },
+        {
+            "rule": "shein\\.com\\.edgekey\\.net\\/cmc\\/queryNameSpaceConfigForWeb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cmc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [
+                {
+                    "original": "api-cmc.shein.com",
+                    "resolved": "api-cmc.shein.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shein.com",
+                "eur.shein.com",
+                "us.shein.com"
+            ]
+        },
+        {
+            "rule": "shein\\.com\\.edgekey\\.net\\/cmc\\/queryNameSpaceConfigForWeb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cmc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [
+                {
+                    "original": "api-cmc.shein.com",
+                    "resolved": "api-cmc.shein.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "78b573e1000cad90c1475f211987202e37ab1e3ebb833352f05aedd345582ef3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shein.com",
+                "eur.shein.com",
+                "us.shein.com"
             ]
         }
     ],
@@ -70,7 +162,9 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 6,
+        "Preflight": 3
     },
     "nameservers": []
 }

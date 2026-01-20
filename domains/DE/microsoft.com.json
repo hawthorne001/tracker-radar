@@ -9,18 +9,24 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00192,
-    "sites": 19,
+    "prevalence": 0.00152,
+    "sites": 15,
     "subdomains": [
         "msadsscale",
+        "opensource",
+        "fpt.dfp",
         "wcpstatic",
-        "browser.events.data",
-        "minecraftprivacy",
         "browser.pipe.aria",
         "eu-mobile.events.data",
-        "adsdk"
+        "browser.events.data",
+        "mobile.events.data"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "fpt.commerce.adobe.com",
+            "resolved": "fpt.dfp.microsoft.com"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -31,8 +37,8 @@
                 "msadsscale"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000708,
+            "sites": 4,
+            "prevalence": 0.000405,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -41,13 +47,41 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "aktivbruecke.de",
-                "de.kleinanzeigen.com",
-                "de.wukihow.com",
+                "hellorecipes.net",
                 "die-gesunde-wahrheit.de",
-                "usbstelle.de",
-                "www.schlafzimmer.de",
-                "www.shotcut.org"
+                "fuehrerscheinumtausch.com",
+                "www.mein-augenarzt.org"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "opensource",
+                "fpt.dfp"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "fpt.commerce.adobe.com",
+                    "resolved": "fpt.dfp.microsoft.com"
+                }
+            ],
+            "responseHashes": [
+                "e7e45b8ed427666a45f376c305c3655f6386ddfd497d396d4b90643a400aee11"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.github.io",
+                "stock.adobe.com"
             ]
         },
         {
@@ -58,10 +92,10 @@
                 "wcpstatic"
             ],
             "apis": {
-                "Document.cookie getter": 3
+                "Document.cookie getter": 2
             },
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
@@ -70,79 +104,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "clipchamp.com",
-                "help.minecraft.net",
-                "www.minecraft.net"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0.000303,
-            "fingerprinting": 0,
-            "subdomains": [
-                "browser.events.data"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
-            "cnames": [],
-            "responseHashes": [
-                "9e1df9b475da9b2fc90c0353a95860a84432b81d579982c8bbbc7a5082bf04c3",
-                "987a94889cf587cc894319099f2ca8708f82d4c310c72bfc8c46dfb9799cdbdd",
-                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clipchamp.com",
-                "help.minecraft.net",
-                "www.minecraft.net",
-                "www.trekbikes.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "browser.events.data"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clipchamp.com",
-                "help.minecraft.net",
-                "www.minecraft.net"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/iframe\\.html",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "minecraftprivacy"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "32cf023cb16f4c26ccc3f4c918cd65eeefb664d75a823cbe2905551b79ba991a"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "minecraft.net",
+                "microsoft.github.io",
                 "www.minecraft.net"
             ]
         },
@@ -173,34 +135,51 @@
             ]
         },
         {
-            "rule": "microsoft\\.com\\/ast\\/ast\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
             "subdomains": [
-                "adsdk"
+                "browser.events.data",
+                "mobile.events.data"
             ],
-            "apis": {
-                "window.devicePixelRatio": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.connection": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "Date.prototype.getTime": 2,
-                "window.innerHeight": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000405,
             "cnames": [],
             "responseHashes": [
-                "9345ce1db3d1db0765b232f92e7927d188d0c51aa94b2f17ce6c866369e7cb43"
+                "c87f58d0498cdb56bb29fbf6945f7c23001cbffe7d7337e1651ddf24b69be5f4",
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cineman.ch",
-                "www.willhaben.at"
+                "minecraft.net",
+                "www.minecraft.net",
+                "www.obo.de",
+                "www.trekbikes.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data",
+                "mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "www.minecraft.net",
+                "www.obo.de"
             ]
         }
     ],
@@ -211,52 +190,48 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000404,
+    "cookies": 0.000202,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.2916666666666667
-        },
-        {
             "domain": "azureedge.net",
-            "prevalence": 0.25
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "googlesyndication.com",
-            "prevalence": 0.1875
+            "prevalence": 0.25
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1111111111111111
         },
         {
-            "domain": "media.net",
-            "prevalence": 0.041666666666666664
-        },
-        {
-            "domain": "gb-next.ch",
-            "prevalence": 0.020833333333333332
+            "domain": "doubleclick.net",
+            "prevalence": 0.027777777777777776
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.027777777777777776
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.027777777777777776
         }
     ],
     "types": {
-        "Other": 7,
-        "Script": 5,
+        "Other": 4,
+        "Document": 2,
+        "Script": 2,
         "XHR": 9,
-        "Preflight": 3,
-        "Document": 2
+        "Preflight": 3
     },
     "nameservers": [
+        "ns1-39.azure-dns.com",
         "ns2-39.azure-dns.net",
         "ns3-39.azure-dns.org",
-        "ns4-39.azure-dns.info",
-        "ns1-39.azure-dns.com"
+        "ns4-39.azure-dns.info"
     ]
 }

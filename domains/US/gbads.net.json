@@ -7,6 +7,7 @@
     "prevalence": 0.0000412,
     "sites": 6,
     "subdomains": [
+        "logtunnel.prod",
         "grapeshot-goldbach.prod",
         "goldlayer-api.prod"
     ],
@@ -14,10 +15,41 @@
         {
             "original": "gs-goldbach.da-services.ch",
             "resolved": "grapeshot-goldbach.prod.gbads.net"
+        },
+        {
+            "original": "l.da-services.ch",
+            "resolved": "logtunnel.prod.gbads.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "gbads\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logtunnel.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "l.da-services.ch",
+                    "resolved": "logtunnel.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24heures.ch",
+                "www.24heures.ch"
+            ]
+        },
         {
             "rule": "gbads\\.net\\/grapeshot\\/",
             "cookies": 0,
@@ -27,7 +59,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000343,
+            "prevalence": 0.0000344,
             "cnames": [
                 {
                     "original": "gs-goldbach.da-services.ch",
@@ -35,8 +67,8 @@
                 }
             ],
             "responseHashes": [
-                "c646cc3f57016800ae397489524eae72b4c92930c54395e3bda831423a13c04d",
                 "3262e0a02b77d8871a554e4b7daab20e7597af541ecc791eaea04ac105366cd4",
+                "642b6bb97ff524aa2dd8aa7a24447ac4c3d3fb2249433b76c526d6f741df3c55",
                 "a6112f93baf363a90e436452381865d0a613de9c668a48df513750337f74d594"
             ],
             "type": "XHR",
@@ -59,14 +91,16 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000343,
+            "prevalence": 0.0000344,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "2a959dceea71e73d049d9fec1159993fd7a7a31798070b15b50fc2219fd1d75b"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "24heures.ch",
+                "bazonline.ch",
                 "www.bernerzeitung.ch",
                 "www.derbund.ch",
                 "www.tagesanzeiger.ch",
@@ -81,24 +115,37 @@
                 "goldlayer-api.prod"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
-            "responseHashes": [
-                "5de0711518d4878f25a6ce8fc36d417a5de83585385f82dcdd5d47d38285dbd6",
-                "4985b6a0f8626eaa7148d64d93c92dfc7f9f1fcadd8e3aaa44344cecca7877ea",
-                "8940593d880b85be6a2009bbbfe614ab98bd1913e7e7ccd30a9a1dbb1cc84044"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "24heures.ch",
-                "www.bazonline.ch",
-                "www.bernerzeitung.ch",
+                "bazonline.ch",
                 "www.derbund.ch",
-                "www.tagesanzeiger.ch",
                 "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bernerzeitung.ch",
+                "www.tagesanzeiger.ch"
             ]
         }
     ],
@@ -108,13 +155,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 5,
-        "Preflight": 5,
-        "Fetch": 6
+        "XHR": 7,
+        "Fetch": 5,
+        "Other": 3,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-178.awsdns-22.com",

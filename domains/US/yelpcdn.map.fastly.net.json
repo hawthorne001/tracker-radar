@@ -9,38 +9,44 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [],
     "cnames": [
+        {
+            "original": "biz.yelp.com",
+            "resolved": "yelpcdn.map.fastly.net"
+        },
         {
             "original": "tracing.yelp.com",
             "resolved": "yelpcdn.map.fastly.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "yelpcdn\\.map\\.fastly\\.net\\/v1\\/traces",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "yelpcdn\\.map\\.fastly\\.net\\/claim\\/business-name-minimal",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
             "subdomains": [],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "tracing.yelp.com",
+                    "original": "biz.yelp.com",
                     "resolved": "yelpcdn.map.fastly.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "d500dec16bca7a017883e87b439c0da2853ddae03e85604ac6990cb3d8e4acf8"
+            ],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "yelp.ca",
-                "www.yelp.com"
+                "yelp.com",
+                "business.yelp.com"
             ]
         },
         {
@@ -65,7 +71,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yelp.ca",
-                "www.yelp.com"
+                "yelp.com"
+            ]
+        },
+        {
+            "rule": "yelpcdn\\.map\\.fastly\\.net\\/v1\\/traces",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracing.yelp.com",
+                    "resolved": "yelpcdn.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yelp.ca",
+                "yelp.com"
             ]
         }
     ],
@@ -80,16 +109,21 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000687,
     "topInitiators": [
         {
             "domain": "yelpcdn.com",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Document": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": []
 }

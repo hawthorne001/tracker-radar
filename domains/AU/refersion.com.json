@@ -10,7 +10,8 @@
     "prevalence": 0.00071,
     "sites": 7,
     "subdomains": [
-        "tracking"
+        "tracking",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,20 +24,18 @@
                 "tracking"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000406,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
-                "ca14bd5faef0ca59204f80c45833b34c851a7641d141823608aca43f587ef5e5",
-                "ebf33521222673f44c5970e1dd87e35588af0b94e602d256ea4bb75634416147",
-                "ff6a4a283d9acc872aef97d559556ce3369f8e4c13af9fd6963a6e8e92cf4b5c"
+                "f1079d39f7e80def503db67c7cd41126ce93a39a6690984a1db1439117881b54",
+                "9aebb07e1d6725dcc5098ecc0d14af80e1cba76ce47cc33007fbeba204735bb5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "secretlabchairs.com.au",
-                "www.armyandoutdoors.com.au",
+                "armyandoutdoors.com.au",
                 "www.lifespanfitness.com.au",
                 "www.nourishmeorganics.com.au"
             ]
@@ -57,11 +56,58 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "secretlabchairs.com.au",
-                "www.armyandoutdoors.com.au",
+                "armyandoutdoors.com.au",
                 "www.lifespanfitness.com.au",
                 "www.mindbodygreen.com",
-                "www.nourishmeorganics.com.au"
+                "www.nourishmeorganics.com.au",
+                "www.obsbot.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/refersion\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2b73b20a91f827ef5bc1ca2a2d1bf8355cf2727d0ec7177a3b8a5c07f546c031"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mindbodygreen.com",
+                "www.obsbot.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "eaac9513f2e2604c8778d50648c55094650d84e08e3ce1604a7744ab512112de"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mindbodygreen.com",
+                "www.obsbot.com"
             ]
         }
     ],
@@ -75,8 +121,10 @@
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 5
+        "Fetch": 3,
+        "Preflight": 5,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
         "beau.ns.cloudflare.com",

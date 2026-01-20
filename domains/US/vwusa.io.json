@@ -4,16 +4,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000343,
-    "sites": 5,
+    "prevalence": 0.0000275,
+    "sites": 4,
     "subdomains": [
-        "prod.vwstorystreamfeatureapp.svc",
         "prod.vwmodelscarouselfeatureapp.svc",
-        "prod.vwspecialoffersfa.svc"
+        "prod.vwstorystreamfeatureapp.svc",
+        "prod.vwservicesfa.svc",
+        "prod.vwfiledataimport.svc"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "vwusa\\.io\\/assets\\/models-carousel\\/models-carousel-umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "prod.vwmodelscarouselfeatureapp.svc"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8de072bf43df7a4663df0ee8bc46b143af2ca151b29ad417bb16330b9baea146"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.vw.com"
+            ]
+        },
         {
             "rule": "vwusa\\.io\\/assets\\/storystream\\/storystream-umd\\.js",
             "cookies": 0,
@@ -22,8 +48,8 @@
                 "prod.vwstorystreamfeatureapp.svc"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "98404abb8f4f0302bdca6fe88bf3216dcef93ab118a7f5908c2875e62d0796db"
@@ -32,51 +58,48 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vw.com",
                 "www.vw.com"
             ]
         },
         {
-            "rule": "vwusa\\.io\\/assets\\/models-carousel\\/models-carousel-umd\\.js",
+            "rule": "vwusa\\.io\\/modelsConfig",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.vwmodelscarouselfeatureapp.svc"
+                "prod.vwservicesfa.svc"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "8c9e7842b3bd8dee755c22ab690569040f31553c83477c77dded2e910228da96"
+                "240aec5c86a1172259696cddc3679acf25b155b9c8f9e054bf10659c5d259afd"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vw.com",
                 "www.vw.com"
             ]
         },
         {
-            "rule": "vwusa\\.io\\/assets\\/feature-app\\/special-offers-umd\\.js",
+            "rule": "vwusa\\.io\\/api\\/config\\/json\\/offers-shared-configurations",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.vwspecialoffersfa.svc"
+                "prod.vwfiledataimport.svc"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "a21ea37678053b5cd978d423d2d4bea91858d4d26b8244b7eee568408c3a483e"
+                "03a5c7170e7bb3bee3271105783cc76ac84ce33bdb4e5bd44b9aa022ad3c83e4"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vw.com",
                 "www.vw.com"
             ]
         }
@@ -86,25 +109,26 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "www.vw.com",
-            "prevalence": 0.46153846153846156
+            "domain": "lighthouselabs.eu",
+            "prevalence": 0.6
         },
         {
             "domain": "first party",
-            "prevalence": 0.46153846153846156
+            "prevalence": 0.26666666666666666
         },
         {
-            "domain": "lighthouselabs.eu",
-            "prevalence": 0.07692307692307693
+            "domain": "www.vw.com",
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
-        "Script": 9
+        "Script": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-114.awsdns-14.com",
         "ns-1211.awsdns-23.org",
-        "ns-902.awsdns-48.net",
-        "ns-1672.awsdns-17.co.uk"
+        "ns-1672.awsdns-17.co.uk",
+        "ns-902.awsdns-48.net"
     ]
 }
