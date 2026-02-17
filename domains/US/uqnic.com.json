@@ -8,7 +8,7 @@
     "sites": 2,
     "subdomains": [
         "analytics",
-        "umami"
+        "openpanel"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -16,11 +16,12 @@
         {
             "rule": "uqnic\\.com\\/js\\/plausible\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "analytics"
             ],
             "apis": {
+                "window.innerHeight": 2,
                 "Navigator.prototype.webdriver": 2,
                 "window.localStorage": 2
             },
@@ -28,7 +29,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
+                "a34d5ce3e989b828c42fe4994c8c1e21693c311db3b076fcbf5202cdc505e5ac"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -39,26 +40,62 @@
             ]
         },
         {
-            "rule": "uqnic\\.com\\/script\\.js",
+            "rule": "uqnic\\.com\\/op1\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "umami"
+                "openpanel"
             ],
             "apis": {
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.doNotTrack": 2,
-                "window.localStorage": 2
+                "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "ba1ab582afb69528444361fa373eb10573f021207b9683f0173989a5e7174788"
+                "d79474635d2a5fddfea4f74fbcd168be27fa6a40545ef2d801cf146121cd41c1"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maketecheasier.com",
+                "www.maketecheasier.com"
+            ]
+        },
+        {
+            "rule": "uqnic\\.com\\/api\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openpanel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maketecheasier.com",
+                "www.maketecheasier.com"
+            ]
+        },
+        {
+            "rule": "uqnic\\.com\\/api\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openpanel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -80,7 +117,7 @@
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -100,7 +137,8 @@
     ],
     "types": {
         "Script": 4,
-        "XHR": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
         "bob.ns.cloudflare.com",

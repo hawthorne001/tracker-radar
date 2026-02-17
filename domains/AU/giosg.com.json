@@ -11,11 +11,58 @@
     "sites": 1,
     "subdomains": [
         "service",
+        "messagerouter",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "giosg\\.com\\/credentials\\/2568\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "04f9345a921279c213cc77926b7a2e2cd7b2be8f21e9e900b492f04eb5554268"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "giosg_sgid_2568": 0.00010128633647320976
+            },
+            "exampleSites": [
+                "savills.com",
+                "search.savills.com"
+            ]
+        },
+        {
+            "rule": "giosg\\.com\\/websocket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "messagerouter"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savills.com",
+                "search.savills.com"
+            ]
+        },
         {
             "rule": "giosg\\.com\\/api\\/v5\\/public\\/trace\\/",
             "cookies": 0,
@@ -28,31 +75,9 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "a1a34cb6f8e4bd807eb652f7819aa48120dc12e6c390223a622e5f39f59970f6"
+                "7204d3a47833ea671c0f4d91c0393239c7bcd14eefdd0858743cb153913b54d4"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "savills.com",
-                "search.savills.com"
-            ]
-        },
-        {
-            "rule": "giosg\\.com\\/api\\/v5\\/public\\/visitors\\/d9cdd5d5d8fa14cf5efc28e3b7a7e1c6\\/chats\\/69939b58-f356-11f0-9f8d-0242ac120009\\/messages",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "4ed219d9141284f7e1b6da3177091361dad299d821c44720836001871ad61c04"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -103,7 +128,7 @@
             ]
         },
         {
-            "rule": "giosg\\.com\\/api\\/v5\\/public\\/visitors\\/d9cdd5d5d8fa14cf5efc28e3b7a7e1c6\\/chat_memberships\\/69939b58-f356-11f0-9f8d-0242ac120009",
+            "rule": "giosg\\.com\\/api\\/v5\\/public\\/orgs\\/c515f480-d229-11e4-915b-00163e0c01f2\\/rooms\\/fbe18162-d38e-11e4-ab39-00163e0c01f2\\/visitors\\/1cd23b61778dbeed28fe66eda872bf0b\\/autosuggest_permission",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -114,7 +139,51 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "9caf9aa934cdfebb0f53e9613908366e6c85f8c6ad02c64615cad4aef2c7ee31"
+                "98dd19a79c13811381502d4a5b03b5b05c066d0c2b1db196e115610857bc0adf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savills.com",
+                "search.savills.com"
+            ]
+        },
+        {
+            "rule": "giosg\\.com\\/api\\/v5\\/public\\/visitors\\/1cd23b61778dbeed28fe66eda872bf0b\\/chats\\/8244b4fc-0ba2-11f1-a052-0242ac120007\\/messages",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8a8bf7dce248f3cefecbfc383c87b7243b63643e7260598b0b6d741520681fac"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savills.com",
+                "search.savills.com"
+            ]
+        },
+        {
+            "rule": "giosg\\.com\\/api\\/v5\\/public\\/visitors\\/1cd23b61778dbeed28fe66eda872bf0b\\/chat_memberships\\/8244b4fc-0ba2-11f1-a052-0242ac120007",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8cfaa1a59adb6be6156f2693b9347af7c89a4040ff49a2f165f626e39d7af75b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -131,18 +200,20 @@
     "topInitiators": [
         {
             "domain": "savills.co.uk",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.9166666666666666
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
+        "Document": 2,
+        "WebSocket": 2,
         "Fetch": 2,
-        "XHR": 4,
         "Preflight": 2,
-        "Ping": 2
+        "Ping": 2,
+        "XHR": 6
     },
     "nameservers": [
         "ns-495.awsdns-61.com",

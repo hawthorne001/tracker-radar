@@ -7,15 +7,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000609,
+    "prevalence": 0.000608,
     "sites": 6,
     "subdomains": [
         "abdn-search.funnelback",
-        "derbyu-search.funnelback",
         "heriot-watt-search.funnelback",
+        "uog-search.funnelback",
         "yorksj-search.funnelback"
     ],
     "cnames": [
+        {
+            "original": "find.gre.ac.uk",
+            "resolved": "uog-search.funnelback.squiz.cloud"
+        },
         {
             "original": "search.hw.ac.uk",
             "resolved": "heriot-watt-search.funnelback.squiz.cloud"
@@ -24,59 +28,56 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "squiz\\.cloud\\/s\\/resources-global\\/js\\/typeahead\\.bundle-0\\.11\\.1\\.min\\.js",
-            "cookies": 0.000203,
-            "fingerprinting": 1,
-            "subdomains": [
-                "abdn-search.funnelback",
-                "derbyu-search.funnelback"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "075c11a06a2a62c26afcdeda6d40a3fb015225bf341ba5ea505f23c5cc5658ba"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "abdn.ac.uk",
-                "www.derby.ac.uk"
-            ]
-        },
-        {
             "rule": "squiz\\.cloud\\/s\\/resources-global\\/js\\/funnelback\\.autocompletion-2\\.6\\.0\\.js",
-            "cookies": 0.000304,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "abdn-search.funnelback",
-                "derbyu-search.funnelback",
                 "heriot-watt-search.funnelback"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000304,
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "search.hw.ac.uk",
                     "resolved": "heriot-watt-search.funnelback.squiz.cloud"
                 }
             ],
-            "responseHashes": [
-                "8db0e58b3cb2214c506443b30b691b55fcb7030c90c5d4fbffa74b95a027a375"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abdn.ac.uk",
-                "www.derby.ac.uk",
                 "www.hw.ac.uk"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/search\\.json",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uog-search.funnelback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "find.gre.ac.uk",
+                    "resolved": "uog-search.funnelback.squiz.cloud"
+                }
+            ],
+            "responseHashes": [
+                "fa5c9742a294c72a1476dfa0cc8d38f32182547b543474996587012d1d694271"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gre.ac.uk",
+                "www.gre.ac.uk"
             ]
         },
         {
@@ -170,19 +171,28 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000609,
+    "cookies": 0.000608,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7333333333333333
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "amazonaws.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Script": 13
+        "Script": 10,
+        "XHR": 2
     },
     "nameservers": [
-        "ns1.squiz.net",
         "ns2.squiz.net",
+        "ns1.squiz.net",
         "ns3.squiz.net"
     ]
 }

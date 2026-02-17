@@ -4,33 +4,36 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000055,
-    "sites": 8,
+    "prevalence": 0.0000618,
+    "sites": 9,
     "subdomains": [
         "engine5",
         "engineus",
-        "cdn"
+        "cdn",
+        "recorderus",
+        "recorder"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "behamics\\.com\\/api\\/getmessage",
-            "cookies": 0.0000344,
+            "cookies": 0.0000412,
             "fingerprinting": 0,
             "subdomains": [
                 "engine5",
                 "engineus"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000344,
+            "sites": 6,
+            "prevalence": 0.0000412,
             "cnames": [],
             "responseHashes": [
-                "fa0805fb7c8005c60b12220e504479616e44df688f1d24efe6557e192ea5d24f",
-                "9735f117c661eb2e17c30f339f3e262cec8b1fa269b7a546708fc9d369bd43aa",
-                "f835d77c09892a3976f65f16db6fe823961904cd24aedf46fcf295d2653efa9c",
-                "c6def4fd98d0f469815434106b6210d4759ce8a0fb649a222844b8ae7be43b7f"
+                "d0d5ccef4a5aa48900dd929900d57c21882201efabde10318013bdf097ce18a8",
+                "38720829ef4dd6f086dc4eab03f0369f7237526c054ac62c8ea3e18c343a3f13",
+                "4f494fc3bcad28026005e9f481d915e490884ed027531d8a3227bce0699b4235",
+                "1f19c23f85f2845e070e8e1db736db2d3369e36b726016f5fe7508d51e5bf574",
+                "445a113f1fa29579186c27f2a5d3cec86cb12ff8ec7764249cf9a53eba4ad496"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -38,8 +41,105 @@
             "exampleSites": [
                 "giesswein.com",
                 "www.arbico-organics.com",
+                "www.edmundsroses.com",
                 "www.jungseed.com",
                 "www.micasa.ch",
+                "www.totallytomato.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/eye\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.innerWidth": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "95ae98a5d03cfe905fef07ace59e65148face9ea57be3663ceb2e0206a48f47b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arbico-organics.com",
+                "www.micasa.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/rrw\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d03cd3526c49590bcd59f2285c08ab1b679afb4ef5836cdd512c699ea9365d6c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arbico-organics.com",
+                "www.micasa.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recorderus",
+                "recorder"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arbico-organics.com",
+                "www.micasa.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/api\\/analytics",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engineus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arbico-organics.com",
                 "www.totallytomato.com"
             ]
         },
@@ -102,24 +202,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000412,
+    "cookies": 0.000048,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9090909090909091
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "klaviyo.com",
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "XHR": 5,
-        "Script": 4
+        "XHR": 6,
+        "Script": 8,
+        "WebSocket": 2,
+        "Ping": 2
     },
     "nameservers": [
+        "ns.udag.org",
         "ns.udag.de",
-        "ns.udag.net",
-        "ns.udag.org"
+        "ns.udag.net"
     ]
 }

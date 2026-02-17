@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
         "shopwindow-api-prod",
-        "feliz.data"
+        "feliz.data",
+        "feliz-web-netro.data"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -49,10 +50,8 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -71,8 +70,10 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -81,7 +82,37 @@
             ]
         },
         {
-            "rule": "tm-awx\\.com\\/netro-web\\/batch",
+            "rule": "tm-awx\\.com\\/netro-web\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "feliz-web-netro.data"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.sessionStorage": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "9eb4b23e128c254371281a732260e030ba74bdd3b6743c34da09d3e4304615e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "tm-awx\\.com\\/netro-web\\/rootEvent",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -92,6 +123,69 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
+                "01456f5383bcc1481a4987c390254943a2eea517fb5ffcd213c183709a6f63cb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "tm-awx\\.com\\/netro-web\\/rootEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feliz.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "tm-awx\\.com\\/netro-web\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feliz.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.express.co.uk",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "tm-awx\\.com\\/netro-web\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "feliz.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
@@ -99,7 +193,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "express.co.uk",
-                "www.express.co.uk"
+                "www.express.co.uk",
+                "www.the-express.com"
             ]
         }
     ],
@@ -109,22 +204,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "webcontentassessor.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Fetch": 2,
-        "XHR": 4,
-        "Preflight": 2
+        "Preflight": 7,
+        "XHR": 7,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1497.awsdns-59.org",
+        "ns-751.awsdns-29.net",
         "ns-1654.awsdns-14.co.uk",
-        "ns-288.awsdns-36.com",
-        "ns-751.awsdns-29.net"
+        "ns-1497.awsdns-59.org",
+        "ns-288.awsdns-36.com"
     ]
 }

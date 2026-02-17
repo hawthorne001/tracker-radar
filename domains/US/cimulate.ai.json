@@ -4,13 +4,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000756,
-    "sites": 11,
+    "prevalence": 0.0000686,
+    "sites": 10,
     "subdomains": [
-        "prod.search"
+        "prod.search",
+        "cdn.search",
+        "prod.copilot.search"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "cimulate\\.ai\\/api\\/v1\\/version",
@@ -55,6 +57,31 @@
             ]
         },
         {
+            "rule": "cimulate\\.ai\\/copilot-widget\\/0\\.31\\.0\\/cimulate-copilot-widget\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.search"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3d7bae5ad8b659a84476ec731a9ee3283d9e1d9dcfb4d15697cac9bd03b1902d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rallyhouse.com",
+                "www.rallyhouse.com"
+            ]
+        },
+        {
             "rule": "cimulate\\.ai\\/api\\/v1\\/sessions",
             "cookies": 0,
             "fingerprinting": 0,
@@ -66,7 +93,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "15a2fd7909a6845106718a25f3f0aa3fbd8b530c9257d8192ffe0d52c8fcba93"
+                "43e822bbc7664961804d9d6242f9e14ea011bef0ad059a94ded53250a3fa1b40"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -105,7 +132,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000344,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -128,13 +155,13 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000344,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
-                "f17be155d5c237f36d7112b41279f1c714000178ff22377b32b203a589ae79cf",
-                "22197695a5313c0e5aedeb823cd10d5559bd498fff1c69a6fa6fdfaaa27bbcd2",
-                "474918c0e1b668a14be49967cc58e4e6450fd833ca0de453be6b462f90321f27",
-                "8bccecb495403849b22ac03405dd20cf942adb3848c702c126b6437702178a41"
+                "4f37f85851ed03621ed0b4702f4ee7224758d9591d8ad279ebabf7a987ecc227",
+                "8c57cf5827a0c14d226853b52aa22c692b6db8d1fb796a251d85a9a5031481ae",
+                "a96ee69a15d44c99287b58ed02734fdbc6640bb763d65d2fa8d9895309f1273c",
+                "5eb1410edfbff14cf96be06e4c56f4cead3f66cdbe694643290526091d7180ac"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -148,11 +175,11 @@
             ]
         },
         {
-            "rule": "cimulate\\.ai\\/api\\/v1\\/recommendations",
+            "rule": "cimulate\\.ai\\/api\\/v1\\/socket\\.io\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.search"
+                "prod.copilot.search"
             ],
             "apis": {},
             "sites": 2,
@@ -168,20 +195,20 @@
             ]
         },
         {
-            "rule": "cimulate\\.ai\\/api\\/v1\\/recommendations",
-            "cookies": 0,
+            "rule": "cimulate\\.ai\\/api\\/v1\\/socket\\.io\\/",
+            "cookies": 0.00000686,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.search"
+                "prod.copilot.search"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c04c6755870ce76783a3f63a4d43c3b3c32bb5fe3d86b6027f946d1543723012"
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -192,7 +219,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000686,
     "topInitiators": [
         {
             "domain": "first party",
@@ -201,10 +228,12 @@
     ],
     "types": {
         "Preflight": 11,
-        "Fetch": 11
+        "Fetch": 9,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns75.domaincontrol.com",
-        "ns76.domaincontrol.com"
+        "ns76.domaincontrol.com",
+        "ns75.domaincontrol.com"
     ]
 }
