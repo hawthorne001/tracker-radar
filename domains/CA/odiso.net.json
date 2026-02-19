@@ -4,12 +4,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000508,
+    "sites": 5,
     "subdomains": [
         "psproxy12",
         "ckproxy34",
-        "czproxy34"
+        "czproxy34",
+        "febproxy34",
+        "czimgproxy"
     ],
     "cnames": [
         {
@@ -21,8 +23,20 @@
             "resolved": "psproxy12.odiso.net"
         },
         {
+            "original": "img.cuisineactuelle.fr",
+            "resolved": "czimgproxy.odiso.net"
+        },
+        {
+            "original": "img.cuisineaz.com",
+            "resolved": "czimgproxy.odiso.net"
+        },
+        {
             "original": "matomo.croq-kilos.com",
             "resolved": "ckproxy34.odiso.net"
+        },
+        {
+            "original": "matomo.cuisineactuelle.fr",
+            "resolved": "febproxy34.odiso.net"
         },
         {
             "original": "matomo.cuisineaz.com",
@@ -80,7 +94,7 @@
                 }
             ],
             "responseHashes": [
-                "fae664910e52ab3e2103f8eaeb2b38cf1f0d42dd305d16674a08f1658826244d"
+                "d9fe739f725fb88bac0d8955bbd38f33de09075ad86a4f7b3a38c80f99b84a9a"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -107,7 +121,7 @@
                 }
             ],
             "responseHashes": [
-                "a9343c99c1a8b0d2134b7a7c4c44bafd886d92b1338e3d25cf8fb55557e00406"
+                "fa20aea70133eab34196c58e60a339517bd4d9bf30c936e4330dcc98ff2f7601"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -146,15 +160,16 @@
         },
         {
             "rule": "odiso\\.net\\/matomo\\.js",
-            "cookies": 0.000203,
+            "cookies": 0.000305,
             "fingerprinting": 2,
             "subdomains": [
                 "ckproxy34",
-                "czproxy34"
+                "czproxy34",
+                "febproxy34"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [
                 {
                     "original": "matomo.croq-kilos.com",
@@ -163,6 +178,10 @@
                 {
                     "original": "matomo.cuisineaz.com",
                     "resolved": "czproxy34.odiso.net"
+                },
+                {
+                    "original": "matomo.cuisineactuelle.fr",
+                    "resolved": "febproxy34.odiso.net"
                 }
             ],
             "responseHashes": [
@@ -173,7 +192,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "croq-kilos.com",
-                "www.cuisineaz.com"
+                "www.cuisineaz.com",
+                "www.cuisineactuelle.fr"
             ]
         },
         {
@@ -193,7 +213,7 @@
                 }
             ],
             "responseHashes": [
-                "038673a39a4bf1c4a68badd156db9f4109cb672b8b908d3bbed93d46b8aaf0ff"
+                "fa4696d4b7714b5a3b1a204a87bda7eb7367296c3b5599fb78092cb10c26b6a3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -210,11 +230,12 @@
             "subdomains": [
                 "ckproxy34",
                 "czproxy34",
+                "febproxy34",
                 "psproxy12"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "sites": 4,
+            "prevalence": 0.000406,
             "cnames": [
                 {
                     "original": "matomo.croq-kilos.com",
@@ -223,6 +244,10 @@
                 {
                     "original": "matomo.cuisineaz.com",
                     "resolved": "czproxy34.odiso.net"
+                },
+                {
+                    "original": "matomo.cuisineactuelle.fr",
+                    "resolved": "febproxy34.odiso.net"
                 },
                 {
                     "original": "matomo.passeportsante.net",
@@ -238,24 +263,56 @@
             "exampleSites": [
                 "croq-kilos.com",
                 "www.cuisineaz.com",
+                "www.cuisineactuelle.fr",
                 "www.passeportsante.net"
+            ]
+        },
+        {
+            "rule": "odiso\\.net\\/common\\/fonts\\/icones\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "czimgproxy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "img.cuisineaz.com",
+                    "resolved": "czimgproxy.odiso.net"
+                },
+                {
+                    "original": "img.cuisineactuelle.fr",
+                    "resolved": "czimgproxy.odiso.net"
+                }
+            ],
+            "responseHashes": [
+                "f7099c834e2089ce1d9ec42ea2e2255ff4871e81040eeba15275d7a29a5e5a8e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cuisineaz.com",
+                "www.cuisineactuelle.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000407,
+    "cookies": 0.000508,
     "types": {
-        "Font": 3,
+        "Font": 5,
         "Stylesheet": 2,
-        "Script": 4,
+        "Script": 5,
         "Image": 2,
         "Fetch": 2,
-        "Ping": 3
+        "Ping": 4
     },
     "nameservers": [
-        "ns1.cetsi.fr",
         "ns3.cetsi.info",
-        "ns2.cetsi.eu"
+        "ns2.cetsi.eu",
+        "ns1.cetsi.fr"
     ]
 }

@@ -4,14 +4,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
         "uc",
-        "log"
+        "log",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "tagdeliver\\.com\\/",
@@ -21,11 +22,10 @@
                 "uc"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "51bbd9bd4c3f750ff2b48fc7cf6d7fd83963b782b40c1d96c7bf4fd1853a5f34",
                 "3cb889857fd305b4f24406383e65561a33e18227774a32cc9b5ce558f7b60155"
             ],
             "type": "Fetch",
@@ -33,10 +33,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "amateurphotographer.com",
-                "www.stuff.tv",
-                "www.thepinknews.com",
-                "www.timeshighereducation.com",
-                "www.trustedreviews.com"
+                "www.honestjohn.co.uk",
+                "www.the-race.com"
             ]
         },
         {
@@ -47,8 +45,8 @@
                 "log"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -56,10 +54,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "amateurphotographer.com",
-                "www.stuff.tv",
-                "www.thepinknews.com",
-                "www.timeshighereducation.com",
-                "www.trustedreviews.com"
+                "www.honestjohn.co.uk",
+                "www.the-race.com"
+            ]
+        },
+        {
+            "rule": "tagdeliver\\.com\\/cipt\\/17016\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bd37f5c149c43f29b33b2792ab2b60ccb543a23ae572736b742274023e7fe3b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-race.com",
+                "www.the-race.com"
             ]
         }
     ],
@@ -69,16 +92,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.14285714285714285
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 5
+        "Fetch": 3,
+        "Preflight": 3,
+        "Script": 2
     },
     "nameservers": [
         "ns1.digitalocean.com",

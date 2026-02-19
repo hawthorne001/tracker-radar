@@ -7,13 +7,20 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "compare-static.flightconnections.com",
+        "static",
         "www",
-        "compare.flightconnections.com"
+        "compare.flightconnections.com",
+        "api"
     ],
     "cnames": [
+        {
+            "original": "compare-static.flightconnections.com",
+            "resolved": "compare-static.flightconnections.com.clicktripz.com"
+        },
         {
             "original": "compare.flightconnections.com",
             "resolved": "compare.flightconnections.com.clicktripz.com"
@@ -22,23 +29,65 @@
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "clicktripz\\.com\\/api\\/integrations\\/v1\\/constrain",
+            "rule": "clicktripz\\.com\\/tag\\.js",
             "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "compare-static.flightconnections.com",
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "compare-static.flightconnections.com",
+                    "resolved": "compare-static.flightconnections.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "a945218c0c56db7ae0b2c6bd729eec6c278dcaaa758dc60f81d2cbd747842cea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ctpuid": {
+                    "ttl": 7772405,
+                    "length": 36,
+                    "prevalence": 0.00010107135637760258,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightconnections.com",
+                "www.mapquest.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/api\\/integrations\\/v1\\/constrain",
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "49c6cb308327e1d01a5feddf46b49e6e6786ea21a25dec13e3b7f109929a076d"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "flightconnections.com",
-                "www.flightconnections.com"
+                "www.flightconnections.com",
+                "www.mapquest.com"
             ]
         },
         {
@@ -46,11 +95,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "compare.flightconnections.com"
+                "compare.flightconnections.com",
+                "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "compare.flightconnections.com",
@@ -65,11 +115,75 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "flightconnections.com",
-                "www.flightconnections.com"
+                "www.flightconnections.com",
+                "www.mapquest.com"
             ]
         },
         {
             "rule": "clicktripz\\.com\\/x\\/pas",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "cb319b16f4805c180248f82a8e6fbd221a17bb3db7af4aaa47331f845b86f43f",
+                "f9937d5ebd2853936a708bfd505a80120edc31d3aaaedf43d19fcb6fb44cf1e0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00010107135637760258
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/p7c\\/v1\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00010107135637760258
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/api\\/ddu\\/v1\\/opt-out",
             "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
@@ -85,36 +199,9 @@
                 }
             ],
             "responseHashes": [
-                "8d3134b38735a60e03378309aa81d1e32477ee90bc68eb55cb23d0504139280c"
+                "3e249de638cdd5443e6a352a16e39ae4e765ccfaceae954ffa43116db476061c"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flightconnections.com",
-                "www.flightconnections.com"
-            ]
-        },
-        {
-            "rule": "clicktripz\\.com\\/p7c\\/v1\\/pixel",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "compare.flightconnections.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "compare.flightconnections.com",
-                    "resolved": "compare.flightconnections.com.clicktripz.com"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -125,22 +212,31 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Ping": 2,
-        "Image": 2
+        "Script": 2,
+        "Fetch": 8,
+        "Ping": 3,
+        "Image": 3
     },
     "nameservers": [
-        "ns-300.awsdns-37.com",
-        "ns-940.awsdns-53.net",
         "ns-1486.awsdns-57.org",
-        "ns-1631.awsdns-11.co.uk"
+        "ns-1631.awsdns-11.co.uk",
+        "ns-300.awsdns-37.com",
+        "ns-940.awsdns-53.net"
     ]
 }

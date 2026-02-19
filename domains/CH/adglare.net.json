@@ -4,14 +4,25 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000507,
+    "prevalence": 0.000506,
     "sites": 5,
     "subdomains": [
         "candy.engine",
+        "laweekly.engine",
+        "traceparts.engine",
         "candy.cdn"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "engine.laweekly.com",
+            "resolved": "laweekly.engine.adglare.net"
+        },
+        {
+            "original": "engine.traceparts.com",
+            "resolved": "traceparts.engine.adglare.net"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "adglare\\.net\\/",
@@ -21,23 +32,21 @@
                 "candy.engine"
             ],
             "apis": {
-                "Date.prototype.getTime": 4,
-                "Navigator.prototype.userAgent": 4,
-                "window.localStorage": 4
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 3
             },
-            "sites": 4,
-            "prevalence": 0.000406,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
-                "23f23efa3c591955ca73089d38b85eb657750d075bbddf870b9998d659b2eaf6",
-                "ca2bb14bd6a68609188e0b7b497da61ad871ab44e67b0676cbb46bd92e63bce9",
-                "01ea13e000d49e89200094ba07fdaa627998b2405ba357780b56c22248eeb614"
+                "9252c82370b81dd70b79671e5caf89ece8e61c369e38a4b885027dfe3cb1c9ff",
+                "bab44b4f55b16b4dbd0287f009dee3a927bca53b74320d9e4de5fe74fc755f07"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "adultgamesworld.com",
                 "f95zone.to",
                 "www.xxbrits.com",
                 "www.xxbrits.to"
@@ -51,8 +60,8 @@
                 "candy.engine"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000406,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -61,14 +70,45 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "adultgamesworld.com",
                 "f95zone.to",
                 "www.xxbrits.com",
                 "www.xxbrits.to"
             ]
         },
         {
-            "rule": "adglare\\.net\\/dyZuQ_ky-ZzmA0XabIZrqw\\/1769644800\\/cwgnv_wfmmapas\\.avif",
+            "rule": "adglare\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "laweekly.engine",
+                "traceparts.engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "engine.laweekly.com",
+                    "resolved": "laweekly.engine.adglare.net"
+                },
+                {
+                    "original": "engine.traceparts.com",
+                    "resolved": "traceparts.engine.adglare.net"
+                }
+            ],
+            "responseHashes": [
+                "2e04ac2e73212ea64cf4dedca8f99891493be6129d9ab0c6f4f703e37376b46a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laweekly.com",
+                "www.traceparts.com"
+            ]
+        },
+        {
+            "rule": "adglare\\.net\\/T7FBa0s0Hujb6vsn9zvUcQ\\/1772064000\\/cwgnv_6pv8zkcr\\.avif",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -79,29 +119,9 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "96eb973beee2b9c30ddaced45442720750ba4855d21f3b8a43b2a56a35aa459b"
+                "2044dd354c13ad5aa54c5d63db152c0a2f9e7053fe33aed57eb43f4bdac48967"
             ],
             "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "xxbrits.com",
-                "www.xxbrits.to"
-            ]
-        },
-        {
-            "rule": "adglare\\.net\\/dyZuQ_ky-ZzmA0XabIZrqw\\/1769644800\\/cwgnv_5vbgm5x2\\.mp4",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "candy.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -116,19 +136,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Document": 4,
-        "Ping": 4,
-        "Image": 2,
-        "Media": 2
+        "Document": 3,
+        "Ping": 3,
+        "Script": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns7.adglare.nl",
+        "ns10.adglare.eu",
         "ns8.adglare.org",
         "ns9.adglare.info",
-        "ns10.adglare.eu"
+        "ns7.adglare.nl"
     ]
 }
