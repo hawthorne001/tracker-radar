@@ -13,7 +13,7 @@
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-service-worker\\.js",
@@ -33,10 +33,42 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lenta.ru",
-                "www.ewmagazine.nl",
+                "ewmagazine.nl",
                 "www.formule1.nl",
-                "www.gbnews.com"
+                "www.gbnews.com",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "pushwoosh\\.com\\/webpush\\/v3\\/pushwoosh-web-notifications\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1,
+                "Notification.permission": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d6e7d4f1ab0b1465c007d942e58deb7aafff8468ae5b832c7a98a1d98a40804c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gbnews.com",
+                "www.timesofisrael.com"
             ]
         }
     ],
@@ -46,11 +78,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Other": 4
+        "Other": 4,
+        "Script": 2
     },
     "nameservers": [
         "ns-01.pushwoosh.com",

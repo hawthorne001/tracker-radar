@@ -14,12 +14,17 @@
     "subdomains": [
         "accounts.bahn",
         "img.ui-portal",
-        "server.sgtm-legacy.kleinanzeigen"
+        "server.sgtm-legacy.kleinanzeigen",
+        "ssl.zdf"
     ],
     "cnames": [
         {
             "original": "accounts.bahn.de",
             "resolved": "accounts.bahn.de.edgekey.net"
+        },
+        {
+            "original": "api.zdf.de",
+            "resolved": "ssl.zdf.de.edgekey.net"
         },
         {
             "original": "img.ui-portal.de",
@@ -30,7 +35,7 @@
             "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
@@ -110,25 +115,78 @@
                 "kleinanzeigen.de",
                 "www.kleinanzeigen.de"
             ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl.zdf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.zdf.de",
+                    "resolved": "ssl.zdf.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8bd42812ea6f4943db4ab683fceb508ca208cf0b988f8cf84f8a8ef379a4c5ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdf.de",
+                "www.zdf.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl.zdf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.zdf.de",
+                    "resolved": "ssl.zdf.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdf.de",
+                "www.zdf.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000508,
+    "cookies": 0.000509,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.7272727272727273
         },
         {
             "domain": "uicdn.com",
-            "prevalence": 0.2
+            "prevalence": 0.2727272727272727
         }
     ],
     "types": {
         "Document": 2,
         "Script": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": []
 }

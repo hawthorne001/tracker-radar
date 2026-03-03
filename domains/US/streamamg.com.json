@@ -10,40 +10,55 @@
     "prevalence": 0.0000686,
     "sites": 10,
     "subdomains": [
-        "sdk.playback",
+        "astonvillafcpayments",
+        "fulhampayments",
+        "assets.streamplay",
         "open.http.mp"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "streamamg\\.com\\/v1\\/playback\\.js",
+            "rule": "streamamg\\.com\\/_resx\\/js\\/stream-payments\\.js",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
-                "sdk.playback"
+                "astonvillafcpayments",
+                "fulhampayments"
             ],
-            "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2,
-                "PerformanceTiming.prototype.navigationStart": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "window.devicePixelRatio": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "530ecb590252fae037cfc0d79c82f1c03428497de6a1223129479d797347986b"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "brentfordfc.com",
-                "www.southamptonfc.com"
+                "avfc.co.uk",
+                "www.fulhamfc.com"
+            ]
+        },
+        {
+            "rule": "streamamg\\.com\\/football\\/3001503\\/fixture\\/40495\\/0-entry\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets.streamplay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "255693089d501f64fef80946f4186f10164f9461d52ad12a50f31ee1e5a8c4b6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canaries.co.uk",
+                "www.canaries.co.uk"
             ]
         },
         {
@@ -56,7 +71,7 @@
             "apis": {
                 "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
-                "Navigator.prototype.platform": 1
+                "Navigator.prototype.platform": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -66,8 +81,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fcbarcelona.com",
-                "www.fcbarcelona.es"
+                "fcbarcelona.es",
+                "www.fcbarcelona.com"
             ]
         },
         {
@@ -79,35 +94,12 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.platform": 1
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fcbarcelona.com",
-                "www.fcbarcelona.es"
-            ]
-        },
-        {
-            "rule": "streamamg\\.com\\/html5\\/html5lib\\/v2\\.55\\/mwEmbedLoader\\.php\\/p\\/3000707\\/uiconf_id\\/30025311",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "open.http.mp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "6c042aeaac38f5125bd1e7d49cf611cec4e91585c8e260a09a01d29e151917d9"
-            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -134,8 +126,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fcbarcelona.es",
-                "www.fcbarcelona.com"
+                "fcbarcelona.com",
+                "www.fcbarcelona.es"
+            ]
+        },
+        {
+            "rule": "streamamg\\.com\\/html5\\/html5lib\\/v2\\.55\\/mwEmbedLoader\\.php\\/p\\/3000707\\/uiconf_id\\/30025311",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open.http.mp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6c042aeaac38f5125bd1e7d49cf611cec4e91585c8e260a09a01d29e151917d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fcbarcelona.com",
+                "www.fcbarcelona.es"
             ]
         }
     ],
@@ -149,7 +163,8 @@
         }
     ],
     "types": {
-        "Script": 10
+        "Script": 10,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-213.awsdns-26.com",

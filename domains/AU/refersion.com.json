@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000708,
+    "sites": 7,
     "subdomains": [
+        "cdn",
         "tracking"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "refersion\\.com\\/refersion\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2b73b20a91f827ef5bc1ca2a2d1bf8355cf2727d0ec7177a3b8a5c07f546c031"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "owalalife.com",
+                "www.mindbodygreen.com"
+            ]
+        },
         {
             "rule": "refersion\\.com\\/start",
             "cookies": 0,
@@ -24,16 +50,39 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "aac6a07fc42d4434614181664fb972496d7cb17d45008e1daa2d64df377b18f2"
+                "4d01709fcd599118652e3b27bd0ca97c802f832183d01f76a034755f2bc62fa3"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "owalalife.com",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000506,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "owalalife.com",
                 "teddybaldassarre.com",
+                "www.lifespanfitness.com.au",
+                "www.mindbodygreen.com",
                 "www.nourishmeorganics.com.au"
             ]
         },
@@ -46,15 +95,18 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000304,
+            "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c946e48216b514fce717719eac4b0a83caa6e790eff715cb4bec9542b93116f1",
+                "311102d56bc39cfb60dcc48665d594abbaade55d54ca90c6ea85cec288886d68"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "teddybaldassarre.com",
-                "www.mindbodygreen.com",
+                "www.lifespanfitness.com.au",
                 "www.nourishmeorganics.com.au"
             ]
         }
@@ -65,15 +117,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 3
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 5,
+        "Fetch": 3
     },
     "nameservers": [
-        "beau.ns.cloudflare.com",
-        "sharon.ns.cloudflare.com"
+        "sharon.ns.cloudflare.com",
+        "beau.ns.cloudflare.com"
     ]
 }
