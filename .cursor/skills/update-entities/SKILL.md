@@ -1,8 +1,9 @@
+---
+name: update-entities
+description: How to add or remove domains from an entity (company/organization) in Tracker Radar. Use when modifying domain-to-entity mappings.
+---
+
 # How to Update Entities
-
-## When to use
-
-When adding or removing domains from an entity (company/organization) in Tracker Radar.
 
 ## Prerequisites
 
