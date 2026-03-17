@@ -4,7 +4,7 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
         "kedra-shield-logger-production"
@@ -23,8 +23,28 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caskcartel.com",
+                "www.batterytender.com"
+            ]
+        },
+        {
+            "rule": "kedra-chat\\.workers\\.dev\\/check-vpn-bot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kedra-shield-logger-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
             "responseHashes": [
-                "f56aeca1f2d37325afc76cabc4bfd0d19ca53d2e72d01deb51c8606069672452"
+                "5c81a8ce1ade5615627f30f837902b379348840d12a165c3272d6773ecf4143c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -35,7 +55,29 @@
             ]
         },
         {
-            "rule": "kedra-chat\\.workers\\.dev\\/check-vpn-bot",
+            "rule": "kedra-chat\\.workers\\.dev\\/get-client-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kedra-shield-logger-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d04dbf73360be5f42025c3336889537fe6bdf8cff67ba5e83296d7dde1ce0c65"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caskcartel.com",
+                "www.batterytender.com"
+            ]
+        },
+        {
+            "rule": "kedra-chat\\.workers\\.dev\\/get-client-info",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -61,12 +103,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6
+        },
+        {
+            "domain": "getgobot.com",
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "desiree.ns.cloudflare.com",

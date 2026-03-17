@@ -7,44 +7,16 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
+        "ad",
         "vpaid",
-        "ad"
+        "d"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "vidoomy\\.com\\/player\\/latest\\/preprod\\/vidoomy-player\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "vpaid"
-            ],
-            "apis": {
-                "Navigator.prototype.cookieEnabled": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "window.innerWidth": 2,
-                "window.localStorage": 2,
-                "HTMLMediaElement.prototype.canPlayType": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "4dfda77e33350595ae10bbd3c1da0c84df9835b1272dd978ec3409f6f1e89871"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tchatche.com",
-                "www.voltairenet.org"
-            ]
-        },
         {
             "rule": "vidoomy\\.com\\/api\\/adserver\\/tracking\\/e",
             "cookies": 0,
@@ -54,7 +26,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -74,7 +46,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "30760ba5ec1169343ff3a2a1433973ab93870e317dc6535ec867f82a76abe42d"
@@ -89,8 +61,8 @@
         },
         {
             "rule": "vidoomy\\.com\\/prebid\\/prebid-vidoomy_pbjs\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "cookies": 0.000101,
+            "fingerprinting": 2,
             "subdomains": [
                 "vpaid"
             ],
@@ -98,16 +70,43 @@
                 "NavigatorUAData.prototype.brands": 2,
                 "NavigatorUAData.prototype.platform": 2,
                 "window.sessionStorage": 2,
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.connection": 1
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "82a37deb74cfb166dd64aaf948984b0b0731b8b973d13e08605b8a31ee831706"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "_ym_uid": {
+                    "ttl": 31536016,
+                    "length": 19,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                },
+                "_ym_uid_cst": {
+                    "ttl": 31536016,
+                    "length": 12,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "tchatche.com",
@@ -123,10 +122,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "454de66e4812c026e788074806bd7cb99de4a9ce2e9d920264f5cc6b6cbb2bca"
+                "9aa6c1bdc05d1a4095ac9e3dba11e0f22a3033b393a02e30a7031e90f76df9c0"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -145,7 +144,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -155,11 +154,53 @@
                 "tchatche.com",
                 "www.voltairenet.org"
             ]
+        },
+        {
+            "rule": "vidoomy\\.com\\/api\\/adserver\\/tracking\\/tag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchatche.com",
+                "www.tchatche.com"
+            ]
+        },
+        {
+            "rule": "vidoomy\\.com\\/api\\/rtbserver\\/prebid\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchatche.com",
+                "www.tchatche.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
@@ -167,9 +208,10 @@
         }
     ],
     "types": {
-        "Script": 4,
         "Preflight": 4,
-        "XHR": 4
+        "XHR": 6,
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns2.dondominio.com",

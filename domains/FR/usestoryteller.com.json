@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000406,
+    "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "api"
+        "api",
+        "stories"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,24 +21,22 @@
                 "api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000508,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "a7adbf7a999cd8bfe37b415a8f7681b5c52d32d6cc93eadc878033bcfa98e5ae",
                 "37366bb3acb8e98d18c5b89230de499dbf17985794100e330658a6517ad74756",
-                "1cd4b52f3335670d1e3649d9e12a2d6d9167294300ad2153f41a60175bddae06",
-                "90a9c547fb67a3ee3fe6632a3dbc1f3116a2ebbbc1dae3b014463e29302f6346"
+                "511da327d0382567252b8445c07a551578d73ade999ddc5990deaaaf47b65883",
+                "28facf23ba60b69409e49fa5b4dae3217ca78f975eb848b54ba774581d632c3d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurosport.fr",
-                "www.eurosport.fr",
+                "uefa.com",
                 "www.fcbarcelona.fr",
-                "www.fis-ski.com",
-                "www.nba.com"
+                "www.nba.com",
+                "www.uefa.com"
             ]
         },
         {
@@ -49,43 +48,67 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000406,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "a5d6838376dcdded5948b611af4ad832f601baa253bb294041a3e8ac7686e9f8",
-                "8a00145f75013c8587e71419d30d10d7c6a0104b2841b20e140b15cbbb12f906",
-                "b38df5c499b2c29b40f3c7ceed882003265e16ea295eebd40a968696b9025626"
+                "a1a606639cc31670a2a4f268ea9e552cb504db4c1f2708af1d5fd30a244470ad",
+                "7a079e4c1c1c5ddb0c17b9cb078e68ea4eea78fbcabc9020bc894830c9f28ff0",
+                "a2ac8ec9d44a45a9e8492c596d46d60af14559107497b69aaa6a1f5292dd3c88"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurosport.fr",
+                "uefa.com",
                 "www.fcbarcelona.fr",
-                "www.fis-ski.com",
-                "www.nba.com"
+                "www.nba.com",
+                "www.uefa.com"
             ]
         },
         {
-            "rule": "usestoryteller\\.com\\/api\\/app\\/clips\\/all-clips\\/clips",
+            "rule": "usestoryteller\\.com\\/amp\\/20251008\\.5\\/amp-story-player-v0\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "stories"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "1fca24cd926febdf6b6b19c002927caee14a8fcc6d92e53c5691900838575b20"
+                "6c5fb1f34ae1958a43a5a450db4cb4be870ac1926859f3951cffa902f1c71d89"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fis-ski.com",
-                "www.fis-ski.com"
+                "uefa.com",
+                "www.uefa.com"
+            ]
+        },
+        {
+            "rule": "usestoryteller\\.com\\/amp\\/20251008\\.5\\/amp-story-player-v0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stories"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e5e2ca77a43ecfab315c2404e0c40c56453692fe70fc9205cb46fc06556ef834"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uefa.com",
+                "www.uefa.com"
             ]
         }
     ],
@@ -99,7 +122,9 @@
         }
     ],
     "types": {
-        "Fetch": 11
+        "Fetch": 8,
+        "Script": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
         "piper.ns.cloudflare.com",

@@ -4,18 +4,28 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000274,
-    "sites": 40,
+    "prevalence": 0.000253,
+    "sites": 37,
     "subdomains": [
         "assets",
         "euw2.production.ai",
         "v4-news-au-bestrecipes.cdn",
-        "v4-news-au-delicious.cdn",
-        "v4-news-au-kidspot.cdn",
         "v4-news-au-skynews.cdn",
-        "v4-news-au-themercury.cdn"
+        "v4-news-au-themercury.cdn",
+        "thesun-the-irish-live.cdn",
+        "customer-api-cname-target.cdn",
+        "newsuk-the-times.cdn"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "zephrapi.thesun.co.uk",
+            "resolved": "customer-api-cname-target.cdn.zephr.com"
+        },
+        {
+            "original": "zephrapi.thesun.ie",
+            "resolved": "thesun-the-irish-live.cdn.zephr.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -27,10 +37,10 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 12,
-                "window.localStorage": 3
+                "window.localStorage": 7
             },
             "sites": 13,
-            "prevalence": 0.0000892,
+            "prevalence": 0.000089,
             "cnames": [],
             "responseHashes": [
                 "45f491c7c6006913bb2156a02b3416c4661989b03209611e30b765dc841d78d1"
@@ -67,11 +77,11 @@
                 "window.localStorage": 3
             },
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "beb63577fa8fc2050bf55a2bce6ea56f7c4b920811ad8b7cb550987ffb5862a0",
-                "4809685783bf2264864e51ff1ca5a0c12102f2695a8eb805e2e76dc05bb8c2a3"
+                "895e138eb62776c4baf31c4377f8d39fb87ac6b4d31f09a549576236928dd1eb",
+                "212918824eeb6fe8556c2a1c26d286feab14e7aa880bb7a55523616b4e68c66b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -91,10 +101,12 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "dc57168d6763cb42474b1a9a0e677c0810cab65aa6f7cbf8de552dcc96bd07b6"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -112,12 +124,10 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [
-                "4909a8d3ec665d6ab2868a40125a0cbf08eb79a2edd34245c7c63c024c365b0b"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -132,14 +142,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "v4-news-au-bestrecipes.cdn",
-                "v4-news-au-delicious.cdn",
-                "v4-news-au-kidspot.cdn",
                 "v4-news-au-skynews.cdn",
                 "v4-news-au-themercury.cdn"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -147,8 +155,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bestrecipes.com.au",
-                "www.delicious.com.au",
-                "www.kidspot.com.au",
                 "www.skynews.com.au",
                 "www.themercury.com.au"
             ]
@@ -159,14 +165,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "v4-news-au-bestrecipes.cdn",
-                "v4-news-au-delicious.cdn",
-                "v4-news-au-kidspot.cdn",
                 "v4-news-au-skynews.cdn",
                 "v4-news-au-themercury.cdn"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "2ae0d06516a2788f607d6c87ffb80a4db8b66d1960540a9953afebdd114668cd"
@@ -176,8 +180,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bestrecipes.com.au",
-                "www.delicious.com.au",
-                "www.kidspot.com.au",
                 "www.skynews.com.au",
                 "www.themercury.com.au"
             ]
@@ -214,7 +216,6 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2
             },
             "sites": 2,
@@ -230,39 +231,141 @@
                 "tampabay.com",
                 "www.tampabay.com"
             ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "thesun-the-irish-live.cdn",
+                "customer-api-cname-target.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "zephrapi.thesun.ie",
+                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "290b52667e1a5874bb9f605cd394bef709db48368276d2b14f39a6c37a9d5646",
+                "1f0f277459ce2f844a2b6e945e4ffc90b52e29f11a98197142ea25848168444d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thesun.ie",
+                "www.thesun.co.uk",
+                "www.thetimes.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "thesun-the-irish-live.cdn",
+                "customer-api-cname-target.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "zephrapi.thesun.ie",
+                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "51944e9b5b43ec47e5a6f7f0545124497f9b46c3644c3977db279d2defbe77dc",
+                "915f27202ee81be3468338ea364e81a9e40df3337bfc2ba5c50a8569fec64d89"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thesun.ie",
+                "www.thesun.co.uk",
+                "www.thetimes.com"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "thesun-the-irish-live.cdn",
+                "customer-api-cname-target.cdn",
+                "newsuk-the-times.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "zephrapi.thesun.ie",
+                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thesun.ie",
+                "www.thesun.co.uk",
+                "www.thetimes.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000411,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7727272727272727
+            "prevalence": 0.8048780487804879
         },
         {
             "domain": "newscdn.com.au",
-            "prevalence": 0.13636363636363635
+            "prevalence": 0.12195121951219512
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.04878048780487805
         },
         {
-            "domain": "script.ac",
-            "prevalence": 0.045454545454545456
+            "domain": "googletagmanager.com",
+            "prevalence": 0.024390243902439025
         }
     ],
     "types": {
         "Script": 20,
-        "Preflight": 8,
         "XHR": 3,
-        "Fetch": 5
+        "Preflight": 9,
+        "Fetch": 9
     },
     "nameservers": [
+        "ns-877.awsdns-45.net",
         "ns-1991.awsdns-56.co.uk",
         "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net",
         "ns-1113.awsdns-11.org"
     ]
 }

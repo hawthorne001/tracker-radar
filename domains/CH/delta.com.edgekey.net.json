@@ -12,12 +12,17 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "cn-content"
+        "cn-content",
+        "signin"
     ],
     "cnames": [
         {
             "original": "content.delta.com",
             "resolved": "cn-content.delta.com.edgekey.net"
+        },
+        {
+            "original": "signin.delta.com",
+            "resolved": "signin.delta.com.edgekey.net"
         }
     ],
     "fingerprinting": 0,
@@ -31,7 +36,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "content.delta.com",
@@ -46,6 +51,58 @@
                 "delta.com",
                 "www.delta.com"
             ]
+        },
+        {
+            "rule": "delta\\.com\\.edgekey\\.net\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "signin.delta.com",
+                    "resolved": "signin.delta.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delta.com",
+                "www.delta.com"
+            ]
+        },
+        {
+            "rule": "delta\\.com\\.edgekey\\.net\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "signin.delta.com",
+                    "resolved": "signin.delta.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a72b510e1a15cb380bf250749a9b93f607db205417fd54c09b07df3c794d9589"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delta.com",
+                "www.delta.com"
+            ]
         }
     ],
     "categories": [],
@@ -54,11 +111,17 @@
     "topInitiators": [
         {
             "domain": "quantummetric.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "onelink-translations.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Image": 2
+        "Image": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": []
 }

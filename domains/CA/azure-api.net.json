@@ -9,13 +9,17 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "vtex-apim",
-        "spo-partner-api"
+        "fiba-apim-service-prod",
+        "vtex-apim"
     ],
     "cnames": [
+        {
+            "original": "digital-api.fiba.basketball",
+            "resolved": "fiba-apim-service-prod.azure-api.net"
+        },
         {
             "original": "ecomm-apim.jwpepper.com",
             "resolved": "vtex-apim.azure-api.net"
@@ -23,6 +27,58 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getcfgraphqlresult\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getcfgraphqlresult\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "e7b38840181ef932492976d9741d46f64dd3dcb1f3de7f1a4b96d5b1793f595a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
+            ]
+        },
         {
             "rule": "azure-api\\.net\\/customer-auth\\/org-info",
             "cookies": 0,
@@ -32,7 +88,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "ecomm-apim.jwpepper.com",
@@ -49,28 +105,6 @@
                 "jwpepper.com",
                 "www.jwpepper.com"
             ]
-        },
-        {
-            "rule": "azure-api\\.net\\/search",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "spo-partner-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "f903f61eb75397fbbfda38d1afe4bd8d21a91df0fba8a7cdee2cc9a9e187ebe3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "premiumoutlets.com",
-                "www.premiumoutlets.com"
-            ]
         }
     ],
     "categories": [],
@@ -79,14 +113,11 @@
     "topInitiators": [
         {
             "domain": "fullstory.com",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "nosto.com",
-            "prevalence": 0.5
+            "prevalence": 1
         }
     ],
     "types": {
+        "Preflight": 2,
         "Fetch": 4
     },
     "nameservers": [

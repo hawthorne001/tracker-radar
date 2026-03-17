@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000607,
-    "sites": 6,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
-        "view"
+        "view",
+        "predict",
+        "static"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,8 +22,8 @@
                 "view"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000607,
+            "sites": 10,
+            "prevalence": 0.00101,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -29,8 +31,12 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "husbanken.no",
+                "sia.no",
+                "visitsweden.com",
+                "www.adhdnorge.no",
                 "www.bergeneholm.no",
-                "www.ralingen.kommune.no",
+                "www.eliteserien.no",
+                "www.kvinnherad.kommune.no",
                 "www.tonsberg.kommune.no",
                 "www.uia.no",
                 "www.uu.se"
@@ -44,8 +50,8 @@
                 "view"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000607,
+            "sites": 10,
+            "prevalence": 0.00101,
             "cnames": [],
             "responseHashes": [
                 "6e30d8dc2e842cdaa47ef57a17612aaf751960a04a894b9e869abfe8bde3f2ec"
@@ -55,11 +61,61 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "husbanken.no",
+                "sia.no",
+                "visitsweden.com",
+                "www.adhdnorge.no",
                 "www.bergeneholm.no",
-                "www.ralingen.kommune.no",
+                "www.eliteserien.no",
+                "www.kvinnherad.kommune.no",
                 "www.tonsberg.kommune.no",
                 "www.uia.no",
                 "www.uu.se"
+            ]
+        },
+        {
+            "rule": "rekai\\.se\\/predict",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "predict"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fd154078b0ccb31613ea75d595c56fdc32c60e1fa5d2181cda4174f62d01e439"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visitsweden.com",
+                "www.kvinnherad.kommune.no"
+            ]
+        },
+        {
+            "rule": "rekai\\.se\\/addon\\/v3\\/rekai_autocomplete\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1a23541f363be7929383946234acd888d75f42c5457342f5078ee7d3da474450"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visitsweden.com",
+                "www.eliteserien.no"
             ]
         }
     ],
@@ -68,17 +124,23 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "rek.ai",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.5625
         },
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "rek.ai",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Preflight": 6,
-        "Fetch": 6
+        "Preflight": 10,
+        "Fetch": 10,
+        "XHR": 2,
+        "Script": 2
     },
     "nameservers": [
         "tim.ns.cloudflare.com",

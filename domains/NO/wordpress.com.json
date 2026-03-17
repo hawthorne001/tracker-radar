@@ -9,14 +9,37 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
+        "public-api",
         "r-login"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "wordpress\\.com\\/geo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "65bc435a0fb8b19fba3a882305f7e69959ae437d66586a46d5b90c3c56fe081a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "toppnorsk.com"
+            ]
+        },
         {
             "rule": "wordpress\\.com\\/remote-login\\.php",
             "cookies": 0,
@@ -26,7 +49,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "448ef9c4c195ddd33d642f52c1e7acb7fabe5dfb537de209cf0ee5236f68850d"
@@ -35,8 +58,32 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mygamingtutorials.com",
+                "henriettesmatblogg.com",
                 "toppnorsk.com"
+            ]
+        },
+        {
+            "rule": "wordpress\\.com\\/wp-admin\\/rest-proxy\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "86e4a3b2820adfe1bda375266c506d6bdab8c7796410725666eb4464f3772fa4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "henriettesmatblogg.com",
+                "www.riksavisen.no"
             ]
         }
     ],
@@ -45,15 +92,20 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7
+        },
+        {
+            "domain": "wp.com",
+            "prevalence": 0.3
         }
     ],
     "types": {
-        "Document": 2
+        "XHR": 2,
+        "Document": 4
     },
     "nameservers": [
         "ns1.wordpress.com",

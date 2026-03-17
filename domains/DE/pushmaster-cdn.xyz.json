@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000503,
     "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "ingest"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -21,7 +22,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000404,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "076a63af8d52d5e9ad89700e4d66d048c00883ccc66758a1ce253539d2046206",
@@ -32,9 +33,31 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gebraucht-kaufen.de",
+                "www.iplocation.net",
                 "www.ligainsider.de",
-                "www.quotenmeter.de",
-                "www.was-war-wann.de"
+                "www.quotenmeter.de"
+            ]
+        },
+        {
+            "rule": "pushmaster-cdn\\.xyz\\/prompt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "912d0c07da7bdb22cdae025b96da26d01523aaab7362edb28544e3949deb369d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "quotenmeter.de",
+                "www.quotenmeter.de"
             ]
         }
     ],
@@ -44,11 +67,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "jeff.ns.cloudflare.com",

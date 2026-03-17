@@ -4,12 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
-        "neuron"
+        "neuron",
+        "static.prod.martech",
+        "video-api-ipv4.prod.video"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "video-api-ipv4.cbssports.com",
+            "resolved": "video-api-ipv4.prod.video.cbssports.cloud"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -20,7 +27,6 @@
                 "neuron"
             ],
             "apis": {
-                "window.localStorage": 1,
                 "Navigator.prototype.userAgent": 1,
                 "Document.cookie getter": 1,
                 "window.innerHeight": 1
@@ -38,6 +44,53 @@
                 "cbssports.com",
                 "www.cbssports.com"
             ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/creatives\\/games\\/unitag_mm\\/prod\\/bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static.prod.martech"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api-ipv4.prod.video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "video-api-ipv4.cbssports.com",
+                    "resolved": "video-api-ipv4.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [
+                "c2230084b6f3d8baba2ee196b3a5244837920c4a3d6e15a510374270325c73be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsline.com",
+                "www.sportsline.com"
+            ]
         }
     ],
     "categories": [],
@@ -46,20 +99,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "confiant-integrations.net",
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.25
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-953.awsdns-55.net",
+        "ns-113.awsdns-14.com",
         "ns-1343.awsdns-39.org",
-        "ns-1856.awsdns-40.co.uk",
-        "ns-113.awsdns-14.com"
+        "ns-953.awsdns-55.net",
+        "ns-1856.awsdns-40.co.uk"
     ]
 }

@@ -9,12 +9,23 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "tyreme-apim"
+        "tyreme-apim",
+        "fiba-apim-service-prod",
+        "vtex-apim"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "digital-api.fiba.basketball",
+            "resolved": "fiba-apim-service-prod.azure-api.net"
+        },
+        {
+            "original": "ecomm-apim.jwpepper.com",
+            "resolved": "vtex-apim.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -26,7 +37,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "3c7f5398579434974aafcda8bca544ef63ac3e259ee68311bd41f4bcc4956dcd"
@@ -48,7 +59,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -57,6 +68,85 @@
             "exampleSites": [
                 "bobjane.com.au",
                 "www.bobjane.com.au"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getcfgraphqlresult\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getcfgraphqlresult\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "01549cc5a4e7a3843408e9a1472a5c1bbfcf232c6527ce5164a29cc0790e45ad"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/customer-auth\\/org-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vtex-apim"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ecomm-apim.jwpepper.com",
+                    "resolved": "vtex-apim.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jwpepper.com",
+                "www.jwpepper.com"
             ]
         }
     ],
@@ -82,13 +172,13 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Fetch": 6,
+        "Preflight": 4
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
-        "ns2-05.azure-dns.net",
         "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info"
+        "ns1-05.azure-dns.com",
+        "ns4-05.azure-dns.info",
+        "ns2-05.azure-dns.net"
     ]
 }

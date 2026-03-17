@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "digitalfeedback"
     ],
@@ -13,27 +13,77 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "confirmit\\.com\\.au\\/api\\/digitalfeedback\\/static\\/v33\\/intercept-survey\\.js",
+            "rule": "confirmit\\.com\\.au\\/api\\/digitalfeedback\\/loader\\/prod\\/scenario",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "digitalfeedback"
             ],
             "apis": {
-                "Navigator.prototype.product": 2,
-                "Navigator.prototype.userAgent": 2
+                "window.sessionStorage": 1,
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "9a5fbd58b25337834b01cadf961fe6ff6b7de4fcb3c98382a31cdcf10f392318"
+                "9d2ea289f9ac4cc06c43203ea0a3909afa4f4c4db26bde410e531b33cde74416",
+                "a81a5c1df789e77d116727e82d4131ad5f19cdcbc539eaa279c67b2c1969b50c",
+                "4a83d0edfb2e2950ce70d4690e324c0e1d565db3587c402d9065e29421572050"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "greatsouthernbank.com.au",
+                "www.greatsouthernbank.com.au",
+                "www.papercut.com",
+                "www.unitywater.com"
+            ]
+        },
+        {
+            "rule": "confirmit\\.com\\.au\\/api\\/digitalfeedback\\/loader",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "digitalfeedback"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "828c84ed41d2523f693e482451a871a82a99745dc0dadd1ef466111fe3ae6ed7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "papercut.com",
+                "www.unitywater.com"
+            ]
+        },
+        {
+            "rule": "confirmit\\.com\\.au\\/api\\/digitalfeedback\\/static\\/v34\\/intercept-survey\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "digitalfeedback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e693f9ebac98479fda092caa8dababa342ecf6455a22dadf9ecd647040859ab3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "papercut.com",
                 "www.unitywater.com"
             ]
         },
@@ -46,43 +96,16 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f277f7d18c61922939a9a6c2acc6e329f3fa88b2ca9246f80037f1aaa7a8e389"
+                "4516c65713231972d39daf0ba1f3dc4fc7e4a62a48838ed9a9b6295907652097"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "greatsouthernbank.com.au",
-                "www.unitywater.com"
-            ]
-        },
-        {
-            "rule": "confirmit\\.com\\.au\\/api\\/digitalfeedback\\/loader\\/prod\\/scenario",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "digitalfeedback"
-            ],
-            "apis": {
-                "window.sessionStorage": 1,
-                "window.localStorage": 1
-            },
-            "sites": 3,
-            "prevalence": 0.000304,
-            "cnames": [],
-            "responseHashes": [
-                "9d2ea289f9ac4cc06c43203ea0a3909afa4f4c4db26bde410e531b33cde74416",
-                "f928ae3c0217c6748ee81eeeebfd59cc34e9c66f083a456a50833e9b1a83d2fc"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "greatsouthernbank.com.au",
-                "www.greatsouthernbank.com.au",
+                "papercut.com",
                 "www.unitywater.com"
             ]
         }
@@ -93,21 +116,25 @@
     "topInitiators": [
         {
             "domain": "hxplatform.com",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.75
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.125
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 5,
-        "XHR": 2
+        "Script": 8,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns4-03.azure-dns.info",
         "ns3-03.azure-dns.org",
+        "ns1-03.azure-dns.com",
         "ns2-03.azure-dns.net",
-        "ns1-03.azure-dns.com"
+        "ns4-03.azure-dns.info"
     ]
 }

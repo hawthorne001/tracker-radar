@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000342,
+    "sites": 5,
     "subdomains": [
         "data-layer",
-        "static.analytics"
+        "static.analytics",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,7 +27,7 @@
                 "window.sessionStorage": 3
             },
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "61433214dc4e15f6607c64187568f8b9b681a9f1885ceccb17be1e6afc9f0066"
@@ -48,17 +49,19 @@
                 "static.analytics"
             ],
             "apis": {
-                "Navigator.prototype.language": 3,
-                "Navigator.prototype.doNotTrack": 3,
-                "Date.prototype.getTime": 3,
-                "window.localStorage": 3,
-                "Navigator.prototype.cookieEnabled": 3,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3,
-                "Screen.prototype.colorDepth": 3
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.doNotTrack": 5,
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.colorDepth": 5,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3
             },
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
                 "b919a392a57da02d8ceeff0516bf6075be380070c047ab0873327121e298a475"
@@ -68,6 +71,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.ca",
+                "www.marshall.co.uk",
+                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -80,8 +85,8 @@
                 "static.analytics"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
                 "ebf30e4a52ee2a17ca6165c80bc12fc4e475acecb56495a5db6c95ce43629641"
@@ -91,6 +96,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.ca",
+                "www.marshall.co.uk",
+                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -103,8 +110,8 @@
                 "static.analytics"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
                 "20944d3cdf3b990844e629d332ae9f596ed4e7f04d5a13db383a089dde62528a"
@@ -114,6 +121,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.ca",
+                "www.marshall.co.uk",
+                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -126,8 +135,8 @@
                 "static.analytics"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [
                 "78227c4d77fdc432eba8557eb422fb0d22e3c9d57d8b5336615befb6e1a269fb"
@@ -137,8 +146,55 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.ca",
+                "www.marshall.co.uk",
+                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
+            ]
+        },
+        {
+            "rule": "netdirector\\.auto\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marshall.co.uk",
+                "www.parks.uk.com",
+                "www.subaru.ca"
+            ]
+        },
+        {
+            "rule": "netdirector\\.auto\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marshall.co.uk",
+                "www.marshall.co.uk",
+                "www.parks.uk.com",
+                "www.subaru.ca"
             ]
         }
     ],
@@ -147,17 +203,31 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "osano.com",
+            "prevalence": 0.625
+        },
+        {
             "domain": "digital-interview.com",
-            "prevalence": 1
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "d2638j3z8ek976.cloudfront.net",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Script": 15
+        "Script": 23,
+        "Preflight": 3,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-1127.awsdns-12.org",
-        "ns-1783.awsdns-30.co.uk",
+        "ns-79.awsdns-09.com",
         "ns-624.awsdns-14.net",
-        "ns-79.awsdns-09.com"
+        "ns-1127.awsdns-12.org",
+        "ns-1783.awsdns-30.co.uk"
     ]
 }
