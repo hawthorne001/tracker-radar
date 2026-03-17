@@ -4,12 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000474,
-    "sites": 69,
+    "prevalence": 0.000438,
+    "sites": 64,
     "subdomains": [
         "dmp",
         "content",
         "health",
+        "ads",
+        "cdn",
         "rtb-east"
     ],
     "cnames": [],
@@ -23,311 +25,594 @@
                 "dmp"
             ],
             "apis": {
-                "Document.cookie getter": 34,
-                "window.localStorage": 34,
+                "Document.cookie getter": 33,
+                "window.localStorage": 33,
                 "Document.cookie setter": 33
             },
             "sites": 34,
             "prevalence": 0.000233,
             "cnames": [],
             "responseHashes": [
-                "8163225be92e8798c1d43fb12ef6f53ae21aae7cf0c7c731d11afe5c1192923f",
-                "810ab22507a6e8809be81f77cd5459d9d1cac3b82baa37b02c724f2643935d67",
-                "9bdce03a230c0138ef77685fdfe45826adac6827a23d85335289b7aa7aad012c",
-                "ba303063ad1f84aabe625d7a5512fbf57b1347355d0ffc0ad9196c5561683e06",
-                "da33e146ccae67367d812ad88074cc971dca3b706285573ee2976bf17e49ab06",
-                "e65a797b12632f17d36647d9a964ed946d9d1c06f36a12d9c364c005e4dd709f",
-                "1e2cef0a8b1c039144d2e4377972931a65c2dd095cfcbb06d50540eac8ecf3ff",
-                "1188ef24f3115b2e6425a53f044c2a7504005fd2bfd984acaebb9553d0c17265",
-                "103592b3858aa2bdecda1d068afad7d67ff298be7f24e629c7c1bf166344f828",
-                "dd913ba30a82b4385002aad9fa1dad8896d73dac30467b014f51cc2ab95c10d4",
-                "825825a24076b81389b57d97767c9df5f217003118445caadb3a3c53aa739144",
-                "e975ba4cdddf19161e5f30b249f41f073d30376e2349d5c018727ce62a3dfeaa",
-                "2b5870d8c7ad47595ef7681778e125f0c24a1991b24caa883de21c50848adca2",
-                "a07212864049ebc0cdba953663e0af9712798e5b1af9bf0e6d05c58b076f5b80",
-                "0160d3d9ec107aefd2f13ed785de5d386fa6d9270aaa605a4ffd64eb69f5658c",
-                "ff5762258e247619df8df7804a13e57f1cb94bd0a84fdc79af9d999bf7f4ca16",
-                "eb1d1886a3d9d4c2d0c04c08265119492b3e0c5678dd12dff34c7302eeac2c94",
-                "0f8f5d6e89df19bc1f6b8c14065c523703578a56dd7bd78866d267f7cc28ee3d",
-                "a8ab2efd1896f3eac16c23619ddc861fa4f83f43c35b35ddc56982ad9f48da1e",
-                "3df0a90c7e93e8bd1d7fb9b03394eae6770ecee022e21a5e2bc8d320e0699e6c",
-                "0c47bc53f804258351e4cb6504860975f1b461d713012c98357f0e22aa828a5c",
-                "c59ba20c8447b92473bae32c4d062b8e12f0bec185c8f9538f2ce6302ac95d32",
-                "22f516f4d071a8573463ade6091d01f655608537d311430f85a92c2f2bce9c80",
-                "4c85375b7709f73d32627d2418d5fc111c1bbeeabeecb8ef00821f81ae2bb0ad",
-                "ae6d69c493ef972ec45796a3cf6cc7e0095192230bbaf86103ac3a1250fcbc9e",
-                "2a281d479bf9da766a58d65ec970648ff982d04a11172067fb1bee3f29847b34",
-                "c70f8b3fa19fed12137991b75618562195648389812c10f40021e378fe26f3ad",
-                "5764e6c2e47a54a9ef8bef2fad5e3ab57bf8c393e949ea77a8aecd37c4d14ed9",
-                "5ff7cfae7ed694bc95038dd2bcc76749fd0fbf24fe0068a2f99b861e1eac58bb",
-                "1a73e1a3b97f596189656bf32bb63a70bf505779c936477a3abbafcaee9ddbbf",
-                "ef771d11404ddec6ef9dfc88658abc79a40b45ae4ec72ec5e326cde2026ea79b",
-                "ae90893292e5a79c31741d39b5f5d1aba08ebbdad8a96ef2c8f673f500d8249f",
-                "4f1d466a067bd27a4377be5dc3f8d6210bb59c60434bc775b01e1582e1677250"
+                "21b31460d222319e6c0fa5672a998acefc16584ffa3d367357732cf6224c6b98",
+                "6d21681161586355e371eadf9e9cb9db4a9e7fb8f232e852879c84103c89fe08",
+                "6b4955f2f88435c269731ad3c1c52407d3616baef7a666a480e99150ccf454d2",
+                "0905ef82c1d428603372ac3f3f1068c89e5f5b725f05ea9cdeb671900807558a",
+                "8d5d545641f02b7d9e1c8e94319624e2ea99cb862a10103967efd82efc3c3d0b",
+                "17c1e2a7538a6992e429efe79b06d4f6cafdebe2c10fbf7089db36e0bdc59bce",
+                "20a7b4afe73b167dcd019af4092c8e2fe176495a1fec1bd7b07df431ec62cc50",
+                "972ff3a509c6427f5cdcafea58f8ed5d28e3d1c317a5d99c84e5d93cab20fc33",
+                "5f770266481526fff9e1a58921445d6cdb020264f48b113e2b57630aa652d82d",
+                "8e3e28a14ddf69d59822d295f7893f5c2a34b242d127d1ac4a67346942fa1868",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "65f2340850b2a9df791b21df7fce66fba4fc2c78fb72c5492a30f3477feaecd6",
+                "fb99d07a1ac381ee1657e9dbce0cf4ccb09e9ff108ea1c271e7c3d98b0850966",
+                "a842e360487e86f3d1f05f459871453ef810b8fcf141105d95515dfec0593d13",
+                "e3f8d869a8414224401db528cab5d8cf9156462ac959c2e0ec3a5c26e2ca4812",
+                "6a942a2c083265670e379f09a78ef8a03f199c9379995718132e0bfc4d05bf7c",
+                "ee2f2d39770c9d495d2b8f005388bf6f3160dbc538ae300a4786aedf4716136a",
+                "9e72768e2e024ccd50a72095a8a01f3d31856c4ff443c100de80f8d0504543e2",
+                "f079503e3b8fa78c86dca265502192e1e655b4f956bd6d499fcc1f851d28c321",
+                "d2ce8af58308ae8d9a84989faab62475352c793bb877e824927ecd93b4d20c65",
+                "924c094e63f514ca506e2121ccbb85ee4139d5cbaaaef93fdf9054bf4e9e9d1d",
+                "db1f3c96f840da7a69776de4f530c7761aefa6a685ca2dd9e0b797591cb199dd",
+                "47540f3ea7d49a0df67660dc4ea68cad29da567a7b48b3945dc9e720bb51f430",
+                "666eb5726bb71c9acede96e970ff97f13a887030e9e387aef0bacd088e8ba746",
+                "fe16059e9755b3ec8d5c6068a4c1603d47d062d73762e24f15cccacb26634a5a",
+                "94bff9a186c618ddb1553ef2eace4c8e4aa8391850b9a0cecf9f1d005a9fb8c8",
+                "cbef9d004075505a2ba6d968a6c7938812e4bbca34b41d38741e4e872021e0db",
+                "c38c7289acc82f6bd6e7750a240ef2322fffcd5334d316aa2bf75692947489a6",
+                "b6e4bbfa9a410a43fac5d10bc18c5fa941173d1069feae18d598af5794f905d3",
+                "46e056dbb6ecb2a6d545fdcb072ad6e489f9965276f3b9e1d0e5ec2ce7b53ada",
+                "c5cd6ec40052a7c6509943c14300785fec0e86a71836814f56a587746fe919ce",
+                "df2858e157dfa1efa1071a024932b6ed27a52b31caaa8696354fbac1076f1e7f",
+                "888cea38b72de5902756b6c1480adc0ca941bdef8a0495a6869e37ea52e69704"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "adx_profile_guid": {
-                    "ttl": 342519210,
+                    "ttl": 340108353,
                     "length": 39,
-                    "prevalence": 0.00022646015330666136,
+                    "prevalence": 0.0002258155018920602,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.gm-volt.com",
-                "www.avsforum.com",
-                "www.gmtruckclub.com",
-                "www.gixxer.com",
+                "www.drugs.com",
+                "www.gtoforum.com",
                 "www.gunboards.com",
-                "diabetes.org",
-                "www.guitarscanada.com",
-                "www.acadiaforum.net",
-                "www.greentractortalk.com",
-                "www.allfordmustangs.com",
+                "www.gvforums.com",
                 "www.askandyaboutclothes.com",
-                "www.arcticchat.com",
-                "www.gmfullsize.com",
-                "www.allpar.com",
+                "www.gmtruckclub.com",
                 "www.glocktalk.com",
-                "www.alfaowner.com",
-                "4allfamily.com",
+                "www.giuliaforums.com",
+                "www.gardentractortalk.com",
+                "www.acadiaforum.net",
+                "www.go2gbo.com",
                 "www.alfabb.com",
-                "www.archerytalk.com",
-                "www.pdr.net"
+                "www.allfordmustangs.com",
+                "www.gl1800riders.com",
+                "www.allpar.com",
+                "www.gm-volt.com",
+                "www.aad.org",
+                "www.greentractortalk.com",
+                "www.guitarscanada.com",
+                "www.avsforum.com"
             ]
         },
         {
             "rule": "tapnative\\.com\\/adx-tag-manager\\/container-2trip",
-            "cookies": 0.00000686,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "dmp"
             ],
             "apis": {},
-            "sites": 35,
-            "prevalence": 0.00024,
+            "sites": 43,
+            "prevalence": 0.000294,
             "cnames": [],
             "responseHashes": [
-                "77ae0c3bedbd1e2abd918a1c141396dd8f8cb8ac87a39b7d9b394ed17ec73496",
-                "22e68a9ba2a0536d30a371fb3d2fe2835ed26d1aa7066d5aeaf50579f90b98f2",
+                "5f3a91853bdf988e3f0934eb42fcf684bb089e73b7edce8bc42a7696a76eade1",
+                "3032e411b4711c601c8e45fbc883fbd53c27a53792bf0bee35353f8ac4404375",
+                "23925f76de5ed5310e011f3f6612f4cba4fa5185f380ccef01f758296b91a93e",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "6f93d2ebd903f3766baddc8dad915226a95b34a970fdac0a755ff445b3c84523",
-                "4ab4e27bf7aea5d29eee6e3e8ab91c702a8634c3bc37002b5e9e3f1462c209ae",
-                "b90af5a49c67367a8a77c40f154372d2806cd04d9a9ebe7a17985338cf036b2a",
-                "131ef3b204457b1027000c7bc0b2a250382d85f6f35e5fe0db8ecfa4d446fdc5",
-                "6ed65122302c3384a476079c6af83781afc88fc8f2ad46760955f86d38716e70",
-                "f8f1177878e1a8e1c779530097499c46c879a3a6f739972ed14c5c8ca27156e6",
-                "2577f544ccc600d80122ea74c4a9d3fe554acfe0f5183220eebe845f6803da68",
-                "855eaba3afb63b00cc91ac8b1d2d03528c89fa39fee161bc5e6059d52b45ad98",
-                "283b29bcae2e991514c4caff683098daa6f770074d70bf5f06fae6d3ca58f133",
-                "cc056594189e6c3cebd389df780ab1d4826d66577b7e301a526145c421745936",
-                "e0cc7bc9dfa6e914585d98cb176c50ebadbf795ea060ed270a85ee43d6fac2c8",
-                "ab93b3e175aa5a6e0bf46cb6a634b3c8d4144e02b6da91b9177bf716e7382482",
-                "d700a5c51b7e39e82ece1ccc0e8536ea61d522ec7695f1a0d963f08529e2d59b",
-                "eefbac41ef869d2fa94870d177c87705cb61a3e3cf9b59ce1a17abeaa917dfc8",
-                "f6d89b6703469a051380ce88fe20e349b442e18a3532b9b2ef5318d980552034",
-                "2f156175cbecbf9054200242ceb438e81619342dd90f839ce2aff76cdc07a728",
-                "21fba8a60c2b4eed81c50761acf35f37149ab6c211344c43f56f776768f97b08",
-                "836c5644a83183f1ad56b0b62b0043e6c73c0659ef37b61f385d6b712cde5f00",
-                "34da354fcac5c6cf8833c4f947ca703b83a2b7bd417360b7d10935ecb9f01616",
-                "ce694607f24b4b1b5c5d393cd74912dadbf516ae9ee19f42e580e765646e43aa",
-                "dd3a72aef65f8ef77eda806d7f346279de72626873b685578a2be59d9a4bcc53",
-                "a4265977b9134e35a40b1ec1858161d9794dfde03110cf984b210f3030c05545",
-                "663d98a236582c1266ce9e6104b5258d93576e3b9f6f6fcbc3c5be0f46240d1e",
-                "f6df8a6ab91dfc30ace4322c0b3ad1435e52c55e55831674b42ae89a0fb34160",
-                "684dda6b18d7598588e9823d0dbc5c3a0658b38af072375a109a415d40c3b166",
-                "f35cf411a0166bb895388577657ffea210afb3a2500b485a1a77f0fed222ba4d",
-                "1d177967015503d0b073bc7341aceac8217324d8737586ae688266f69aca8732",
-                "664bfc2da1ffa8e1c496dfb052a5c7ecdd51a800473f5beba1f1f281a1b362d6",
-                "3fe23fecbe22b2aed3ca6d746fe48c13c0e5f19579cdadb366722072212d0fda",
-                "291ba36e8c06bc0193e0361bdb3a74e05c2ddf8cbc3bc16115f5945839d618b0",
-                "e1aff8091db5c9bcd67e75e657e1e6c0a7dc7082b58844479820d3c3a42e03dc"
+                "1fbf08bd42fc579a9c3f79c8fc58d5cdde88317fba6527469f3d41662ed38140",
+                "d7ef4ace264e51caefe71d5f56a5695b750cc82aea67bd5ef5c76be917b4858f",
+                "a493484b67167c85a2eb947a6fc1e1c06076086f9e4b35a42db629ff31b2d8fa",
+                "22d9bc88fcffc6987cfe6fd42089127448700082803d3f40ca4fd1866b19eaa5",
+                "5bd25dcf38af91b7f06dfb235284befc1d8eaf131bead7bedcf174df209f0927",
+                "566a53b189d5ee41036cf684de74d36881735f9b39d2ed89c510329925510a62",
+                "eec9d1a7691ce9e7cb67511664574da39b9e7efeac6e7f29f09b168a35316ba1",
+                "d983fa2eb070c866118e9f14dee76d683898b2a6837177ca92e00f52ab2f81b3",
+                "59ec2f1d4f6d3989bb4dae3d52bafa0af7b1cd963fd5d62f9f371c474b212307",
+                "c2a604c6e251213b989e76d176d3d53b27e1768fdbf0e5cd42fe05ba9e562ad0",
+                "dbb9a4bc86f671bfcd239a2723ce5b447cfab03d68c428484fc93e00d41af7db",
+                "ed1b73adf03d38db849466616d05f0b540a761d86a7ab09e4c1abe0e4ea0592a",
+                "b0244adf4704233381fa7c8c9ff1e700c62411867439dcbd6d3aed89964952ca",
+                "caf3934bebeacfe5fa0b51e6cdd9c68c5deedf1b7cefbf4de56347becd0bf143",
+                "4904c64e0022fb17b8db8bf06f13a8cced6e6fe2cf00b3ce38b991107a440191",
+                "48838adaef7866460515fbf0cfc553a2d3056b7c33f2f876814f7d7854856351",
+                "b76207c578ebd38a1b62db8c30867b588f8b88ed5b2eea686ee00558c8879edc",
+                "59011caa25cb8647b453380e6f93d18b854e9b2540c6804625c50cd870ef57c4",
+                "1fe5af9a21842f2a04c368557fb08f049356cf6902ba869b7c7ff76ca7f5ff35",
+                "381551c4edbead6abfa389069dfda460393b4ec91d726aeb4cb020870dbdfc58",
+                "911afa0c6c9c3b9a1145b112195de123c56afc90c34a891b486a2577aa2ed103",
+                "68d001857b5602c75e061f42895b180163a319fb65453fdbf6eb1a7fe6e80a30",
+                "1c29693f5e2dfbdb6cfab72d2b35dd42cb3d303a2dbe14acdb83a8d4674c7170",
+                "1923cc86998e4c8e5e1aee135e2bedec25da775ee388ab83fd6a20bf2bfcf3c5",
+                "4a9dbfbe72382f4e8b18da9567fe3523d513bf020f362514f3a2386c21775cd7",
+                "44ca22a27e80a32fe3d5cafe2a625a73fcdf14ec74de4e72b9e29e8e7afd6b0b",
+                "295027cb39dc31dc52afdef70e59e1ed7848b7c589d35fd4c787d4e6898ce676",
+                "7fade4940dcca3699890fc398bbabf7a18508d787abfccedd338c7be8b3f4478",
+                "eb53e2e13a5c7e61906e190a799d256adf280caed4f30b7d7f00126986ffcaad",
+                "331f95afe8d03c4525fc00b44b1062e7ab96128a4a6d27a9780ae61b8f801c2c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "adx_profile_guid": 0.00024018501108282267,
-                "sa-r-source": 0.000013724857776161294,
-                "_li_dcdm_c": 0.00002744971555232259,
-                "lotame_domain_check": 0.000006862428888080647
+                "adx_profile_guid": 0.0002942444418593512,
+                "sa-r-source": 0.000006842893996729096,
+                "_li_dcdm_c": 0.000027371575986916385,
+                "lotame_domain_check": 0.000006842893996729096
             },
             "exampleSites": [
+                "www.drugs.com",
                 "www.gmtruckclub.com",
-                "www.gtoforum.com",
-                "www.greentractortalk.com",
-                "www.gl1800riders.com",
-                "www.gunandgame.com",
-                "www.allfordmustangs.com",
-                "www.acadiaforum.net",
+                "www.gatorforums.net",
                 "www.giuliaforums.com",
-                "www.arcticchat.com",
-                "www.alfaowner.com",
+                "www.acadiaforum.net",
+                "www.ratemds.com",
+                "www.gunandgame.com",
+                "www.gtoforum.com",
+                "www.gunboards.com",
+                "diabetesfoodhub.org",
+                "www.askandyaboutclothes.com",
+                "www.alfabb.com",
+                "www.pollen.com",
+                "www.intechopen.com",
+                "www.go2gbo.com",
+                "www.healio.com",
                 "www.glocktalk.com",
-                "globalrph.com",
-                "4allfamily.com",
-                "www.gr86.org",
-                "www.gixxer.com",
+                "www.alfaowner.com",
                 "www.allpar.com",
-                "www.guitarscanada.com",
-                "www.gardentractortalk.com",
-                "www.avsforum.com",
-                "www.intechopen.com"
+                "www.archerytalk.com"
             ]
         },
         {
             "rule": "tapnative\\.com\\/tn\\/",
-            "cookies": 0.000199,
+            "cookies": 0.000185,
             "fingerprinting": 1,
             "subdomains": [
                 "content"
             ],
             "apis": {
-                "Date.prototype.getTime": 29,
-                "Document.cookie setter": 29,
-                "window.localStorage": 29,
-                "Document.cookie getter": 29
+                "Date.prototype.getTime": 27,
+                "Document.cookie setter": 27,
+                "window.localStorage": 27,
+                "Document.cookie getter": 27
             },
-            "sites": 30,
-            "prevalence": 0.000206,
+            "sites": 28,
+            "prevalence": 0.000192,
             "cnames": [],
             "responseHashes": [
-                "217dec3743ffcee74b63e73e0b6b4fdcb86f24ae17b050e845065148ac8830e4",
-                "32ee11dea722ced02b5718ec2f071bede14f708c378d1cac629f8057633e71eb",
-                "9a5b1299c4665239527dffde2bb0fc4665e9d6166a55c88cb354749241170e5f",
-                "c176f64b005f1a9d876ca9af9b791e817d741aaabd018d65bf736128c7790da9",
-                "6cc4d2eae5f90ecafe1624f4fb8e04ade558426766b2db2a865caebebf82e97f",
-                "7d3b77fe25e8ee3017c8c7e05673e6669856dad8b6025fd60b92cf22c7bdb04c",
-                "150afea51e418e13ab108c4a34dc21ec01f8e29df2d3ce38b98723dea6180a87",
-                "f7699bdd930cfa4bc7cd08334e26c21d3a2f34034b2dc429662d001096eb5862",
-                "11f348453096527e11614ea51e65a03b3fd95ffda495594ba62d655d220e14ca",
-                "4cf01c015d728f359da4cee57cd5e4db3958f0fc1691e54194efc959e2456ee6",
-                "4d150c46f44840e6d5784f37313ec84e5780145e1c78e5160fb1dc2130203358",
-                "f97f6fe71e399022735545ee05a1c7eb0650244e4e26512748db944be2bbcee9",
-                "653d8b5f4d53546404b3c50c348168586859d67dc353d96c8e71d1b1a02f4d15",
-                "417ed1cb934be1a89fd3ab313453c1bb1bae893c6fb75afeb3e0dea1071b1cdf",
-                "ac2cf725a61dc31a4cc641fd318f0163200bd37242a9965f899edddc4818a830",
-                "2df577db6ce581c268b96d96dd55446d6c399c7505f429de0490721907a12226",
-                "08003cb99367b6736e0e3db9c4f55b2d26022aab9f4aa6a6055425d84126fb74",
-                "9e87c5b65013fcbd7a0b958865d656acbae655195ae326a11d68519d4be081ba",
-                "752206b30c00c2b99e5ed115c83b3ba59ea7ea84858531c35cd5963d661e2942",
-                "c389576b5d0f2c956906e76e4c9b37814cdd134ab69c9df350dcb2e1aab782f3",
-                "2b40ba1ca37f41957ac8da0ff451c9a4da0434cdd74a1f77d646e67d35cc4cd3",
-                "6535972a06d9622ab0aca22830b046f7d461090e8c02e146fff4560c37d168dd",
-                "72ecbc2ae9a5fc822f4b7a67820170d6971b19b9eb04b671d1ce89ee14b2d5aa",
-                "922d69054464b824e639d5992dcaf3e9423d5a5212950aff80b3a43a1db7e1ff",
+                "717c76e5f80ebbf953154d9940bbf53d81e10b44e6916f4951b61e311ddb31ae",
+                "5e1c776c599b5132405259917e6ea641a08d84a41da44021430611734fbe5a3a",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "bfb5c2eb25f22bcc309f388e67fbc0c1b5a2ca0a2c634006832de9538cc3560a",
-                "e4d27a882745343a4917f109be8c0cefaa79bf07c153a836bf5bf67c1489ce33",
-                "d92a27f152009bac92f34d83c318d431c5175a34201a260009847c1faa08601c",
-                "afeb9b81da457856b3b8f94854d82e7525057a76ca5ef6dfa39bddb07029fe7c"
+                "3c8798bdd476517cc79494eac04830edd7d63b2c11c2a49b525b7cddf23a45be",
+                "cef94290d4d53028574797abc8a6f467a0a8a049a7eb77a78c368d3d4bec5054",
+                "e3099c4d46c9c7e9e46e8931a5fc19e963ffad532a0e9859c1a94e33b9536cca",
+                "6133034e793bf91f77d42ab45eb39b3e4394f2933a447e6808673cb1bce2c326",
+                "b60eeb6159cdbbcfe860a0a25c14befa511e570e2134781e6d12ed7129241516",
+                "fa8bd79497dd11cc89130d0da0519dd615a64f9581b69a24c8a90258b4d05796",
+                "969ba5ec23822c25053881c40f1a01416a7004c651e5d6725ce0926f0b806821",
+                "7f03b35ae546730b406ea97da1de9b26508d35f7471bfbaee3125a1a62ef605c",
+                "9241c9d6addcbbe02a3df77f88bd372c213dd7d374640bf78400f11cdeebabef",
+                "3363f6d505a00dea3352557d5bcbd645f24fe056531ae198159bfc503326ed62",
+                "54659788752099a2c304ba01b543dd4235f0548d355d3151850aef291b242794",
+                "e58b0c75209af99a18c624e9544c3f29203d475bf98e36801147d44f10c36e0c",
+                "206f71a366c88d3d0e872bc0f2b911de0886e65183017c135ed3efced2350a97",
+                "1ce9e876c9f3ce9cfed763d89c9489bdc3a78a010b2eccdcb1d8c9d4aa3627e7",
+                "bc7239507c6fc882f586b236d4173d480e31f42f627805cbc6b073c1c569e288",
+                "42c0be1e4792375396940df7d129a23fcb3d31d2224aa1c397c74d6d64b9e8d0",
+                "c4c4d33a4dc8c674ba4a35c244e58c080012fd251203feb1225aba68ec3c47d1",
+                "cc9f349a8eb4813fc3b5804e93cf1865576df41ac8ba21868ab4b23bd7775d5d",
+                "7b93aef76ae5f3f7104e30bde702f9efb9be9af2892aa5cac8a6d919766e71ec",
+                "160d0adcc39e8903773b218434a38d403e6c9fe2d0543ed950647a0e159c38af",
+                "1e0fb6c20c9878773864d242fc3ef65badfef5680235ed7d185aa319d1159124",
+                "c17ac9124fd722581c3746d9feb9f01c1036ffd949499bc3e73663fe35e573e8",
+                "30d78cf6e04c1f5a0773f1c16b38fe5324b53b664d88338282e5a0883f1bf3f9",
+                "7e5c49e6d75c0d62a87fb60832fe6c3bf338f6b95204a8b4e5cf1da5215b11d2"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "adx_retargeting_ide": {
-                    "ttl": 86407,
+                    "ttl": 86406,
                     "length": 1,
-                    "prevalence": 0.00019901043775433878,
-                    "uniqueness": 0.034482758620689655
+                    "prevalence": 0.0001847581379116856,
+                    "uniqueness": 0.037037037037037035
                 },
                 "adx_profile_guid": {
-                    "ttl": 342577162,
+                    "ttl": 340164570,
                     "length": 39,
-                    "prevalence": 0.00009607400443312906,
+                    "prevalence": 0.00010264340995093645,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.000020587286664241943,
-                "lotame_domain_check": 0.000020587286664241943
+                "_li_dcdm_c": 0.000027371575986916385,
+                "lotame_domain_check": 0.000027371575986916385
             },
             "exampleSites": [
-                "www.avsforum.com",
-                "www.gl1800riders.com",
-                "www.arcticchat.com",
-                "www.archerytalk.com",
-                "www.greentractortalk.com",
-                "www.gmtruckclub.com",
-                "protrumpnews.com",
-                "ndclist.com",
-                "www.alfaowner.com",
-                "www.healio.com",
-                "www.gmfullsize.com",
-                "www.intechopen.com",
-                "www.news-medical.net",
-                "www.gunboards.com",
                 "www.allfordmustangs.com",
-                "newatlas.com",
+                "protrumpnews.com",
+                "www.sharecare.com",
+                "www.news-medical.net",
+                "www.glocktalk.com",
+                "www.intechopen.com",
+                "www.gmtruckclub.com",
+                "www.ratemds.com",
+                "www.gm-volt.com",
+                "www.acadiaforum.net",
+                "www.gr86.org",
                 "www.upstyledaily.com",
+                "www.avsforum.com",
+                "www.greentractortalk.com",
+                "www.archerytalk.com",
+                "www.go2gbo.com",
                 "www.guitarscanada.com",
-                "www.theepochtimes.com",
-                "www.go2gbo.com"
+                "www.pollen.com",
+                "www.alfaowner.com",
+                "www.gunboards.com"
             ]
         },
         {
             "rule": "tapnative\\.com\\/adx-dir-d\\/ads-1p\\/",
-            "cookies": 0.000199,
+            "cookies": 0.000185,
             "fingerprinting": 0,
             "subdomains": [
                 "health"
             ],
             "apis": {},
-            "sites": 29,
-            "prevalence": 0.000199,
+            "sites": 27,
+            "prevalence": 0.000185,
             "cnames": [],
             "responseHashes": [
+                "91763e35addecc153880869406e85558b589ce83362786916fdc446ff8c10a95",
+                "c7465622ff4cabc8cb5ec1e7d4a98329e8c8bca0be5773dfc96f2f5478417f01",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "4d0baf2afb49617709ac09e04f0f14e12eaf815c4d1790e70410eee26878c0a2"
+                "44686fc93a306a0e7208904e96bf902c35b9c9f9478647e3290b1c2aa50be762",
+                "7503a4f59bd417aec4d9c317ebf671c7c6da738b888045b98b5b4cb0ab566a7b",
+                "02e94a442635e4f2cac6e069067f90c139663004fce3a1ebef01e99a9f68ff77",
+                "6ac507f676e165eafaf0097830f4cbbc003969eb5521d5d1de166d520ae88c54",
+                "22be017abbe398647dedbbede59b1d5e546b58fdb6aed98eb3d8afcbb10c6f63",
+                "3b318ba83178ccf759b16b7efaaee9816fe25b176122aaa95c272432b34de521",
+                "cd780273b993ee79d65ae2541a2fc38ab72cfcfe478513167b41b37966e0d6fb",
+                "318f4f575cc49361e03b52a99b8c0830e3cd4747ed2ea874a625c60de9ade1a6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "adx_profile_guid": 0.00019901043775433878,
-                "_li_dcdm_c": 0.000020587286664241943,
-                "lotame_domain_check": 0.000020587286664241943
+                "adx_profile_guid": 0.0001847581379116856,
+                "_li_dcdm_c": 0.000027371575986916385,
+                "lotame_domain_check": 0.000027371575986916385
             },
             "exampleSites": [
-                "www.glocktalk.com",
-                "www.go2gbo.com",
-                "www.allfordmustangs.com",
-                "www.gmfullsize.com",
-                "icdlist.com",
-                "www.theepochtimes.com",
-                "ndclist.com",
+                "www.greentractortalk.com",
                 "themighty.com",
-                "www.healio.com",
-                "www.droracle.ai",
-                "www.gl1800riders.com",
-                "www.intechopen.com",
-                "www.gr86.org",
-                "www.gmtruckclub.com",
                 "www.arcticchat.com",
+                "www.pollen.com",
+                "www.klkntv.com",
+                "www.allfordmustangs.com",
+                "www.glocktalk.com",
                 "www.avsforum.com",
-                "protrumpnews.com",
+                "www.news-medical.net",
+                "www.ratemds.com",
+                "www.healio.com",
+                "newatlas.com",
+                "www.go2gbo.com",
                 "www.upstyledaily.com",
-                "www.acadiaforum.net",
-                "www.klkntv.com"
+                "www.intechopen.com",
+                "www.sharecare.com",
+                "www.gr86.org",
+                "www.giuliaforums.com",
+                "www.gl1800riders.com",
+                "www.gunboards.com"
             ]
         },
         {
-            "rule": "tapnative\\.com\\/hb",
+            "rule": "tapnative\\.com\\/bb\\.html",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rtb-east"
+                "ads"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "d13fb2ecd849319a54cd5f1f4538500803ba908b34b329d15d6ef2c6ee804ccd"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.healio.com",
+                "www.intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com",
+                "www.ratemds.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com",
+                "www.upstyledaily.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/adx-tag-manager\\/container-2trip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dmp"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "16736dd76b0e4e9a75afd13cd1b53e38ab78f00190d1febd3cdb43ea318a3c49",
+                "ac016d28e6ec232d208f0efee4d53d44e4faa25cfcaa5ad202d3603ed368685d",
+                "0ebe3af5e4ee30b27831e3af9125232885fc10f74b292e539a83fd8526bdd143",
+                "82f42f16ad20f27616e93615a840d9cb5e19caa030e3de84dad31e0a050f8128",
+                "64bba34f0eddda5e085dbef889eb3b4ae404b85c37b2daa5871c036675ce4f04",
+                "7fdf125846210b36dc51ec253a948adc77017b03e768ccd49d4bc642379c69ac",
+                "d73c4bd9751708afc8a98fa3f9d438dda678fd037e7e3b27640014aa1c955a28",
+                "ee658bb952c5e1796af1ac75787cf6eeb031fdc8a1cc2e50ca733146c781986b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "adx_profile_guid": 0.00006842893996729096
+            },
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.healio.com",
+                "www.intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com",
+                "www.ratemds.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com",
+                "www.upstyledaily.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/tapads-logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "4b18666b4e43bf9a3d937b19e2ece1c3f12d71022f0c27b500efeefef037ef0c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.healio.com",
+                "www.intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com",
+                "www.ratemds.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com",
+                "www.upstyledaily.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378216_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "fb8aa2d2a32aef46418f68ae3c11efa1531c33e09f20cd6bcc01ca223d7d623a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com",
+                "www.upstyledaily.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_389181_0\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "80adee43e1c9adf6b755e14b94da5a3d5962e8cdbc5cc27804f0c0c19cef50b4"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "drugs.com",
-                "www.drugs.com"
+                "protrumpnews.com",
+                "www.intechopen.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_348304_0\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5f27affbda5546346e740b4031be09cb550b902c98b96295c764656cf5a7bd2d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "www.klkntv.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_338389_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7f0c052bd34500cbfd8438b6b6a94660f2cfeb53a8d378dc48aa13bb524f2bf9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "www.klkntv.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/tapnative\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "52a77ffe61cb7a1e1b84bdc7805d241d6f9a028ce9860565be2ef2bcf9f9cb41"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.healio.com",
+                "www.intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com",
+                "www.ratemds.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/adx-tag-manager\\/usersync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dmp"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "adx_profile_guid": 0.00006158604597056187
+            },
+            "exampleSites": [
+                "protrumpnews.com",
+                "themighty.com",
+                "www.healio.com",
+                "www.intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com",
+                "www.ratemds.com",
+                "www.sharecare.com",
+                "www.theepochtimes.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378337_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "4adf3eb40539e8593dc444d798d866420ca5c30e057a38862b16bf46ba766ed6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "themighty.com",
+                "www.ratemds.com",
+                "www.theepochtimes.com",
+                "www.upstyledaily.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378343_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "920f237467353fd1cc2afd4cada4fd87afce78a85be8b6ccc23e3cf0dcd13656"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "themighty.com",
+                "www.ratemds.com"
             ]
         },
         {
@@ -351,44 +636,183 @@
                 "drugs.com",
                 "www.drugs.com"
             ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378079_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "93d34b495d391428ef65c3a9c146f110e3c038358a2aea49010489e22fa4045e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intechopen.com",
+                "www.klkntv.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_375828_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "84aebc23ff41dc70964f6e3774b6ff2e1abf9f845955b2c0b8139e38ed1db13e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intechopen.com",
+                "www.klkntv.com",
+                "www.sharecare.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_375942_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "68654d04722c14b4204be9394038a023d5d8beab1a466cedcc0ac5aee5d2393e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intechopen.com",
+                "www.klkntv.com",
+                "www.pollen.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_338465_0\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77d1edc661b23bc51d1587d7b070997497b9fbaefac685581f5885e3270560ba"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intechopen.com",
+                "www.theepochtimes.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378072_0\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "235860c041f470ed953e30fb9423f4a6b1fa11b5cf1c232cc2c9e75b156a2918"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pollen.com",
+                "www.theepochtimes.com"
+            ]
+        },
+        {
+            "rule": "tapnative\\.com\\/1_378785_0\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "180c30bcfe09410805f1247980236527d148d8b55b2b09efb78df165e6d84806"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharecare.com",
+                "www.theepochtimes.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00046,
+    "cookies": 0.000431,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.8160919540229885
         },
         {
             "domain": "ehealthcaresolutions.com",
-            "prevalence": 0.08888888888888889
+            "prevalence": 0.08045977011494253
         },
         {
             "domain": "rubiconproject.com",
-            "prevalence": 0.03333333333333333
+            "prevalence": 0.04597701149425287
         },
         {
             "domain": "ocelot.studio",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.011494252873563218
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.011494252873563218
         },
         {
             "domain": "cdnintech.com",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.011494252873563218
+        },
+        {
+            "domain": "hcn.health",
+            "prevalence": 0.011494252873563218
         },
         {
             "domain": "geoedge.be",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.011494252873563218
         }
     ],
     "types": {
-        "Script": 128,
-        "Preflight": 2,
+        "Script": 132,
+        "Document": 29,
+        "Image": 50,
         "Fetch": 2
     },
     "nameservers": [

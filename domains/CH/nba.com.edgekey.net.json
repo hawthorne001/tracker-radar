@@ -12,6 +12,7 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "stats",
         "cdn",
         "core-api"
     ],
@@ -23,20 +24,49 @@
         {
             "original": "core-api.nba.com",
             "resolved": "core-api.nba.com.edgekey.net"
+        },
+        {
+            "original": "stats.nba.com",
+            "resolved": "stats.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
-            "cookies": 0.000203,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "cdn.nba.com",
@@ -54,14 +84,14 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/scoreboard\\/todaysScoreboard_00\\.json",
-            "cookies": 0.000203,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "cdn.nba.com",
@@ -86,7 +116,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "core-api.nba.com",
@@ -104,21 +134,23 @@
         },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/pm\\/api\\/v1\\/getplays",
-            "cookies": 0.000203,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "core-api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "core-api.nba.com",
                     "resolved": "core-api.nba.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "d27bd61adf57fb7dccc9274839eb3c17afb7fdac0ae7046002b61998c436c69b"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -132,7 +164,7 @@
     "performance": {},
     "cookies": 0.000101,
     "types": {
-        "Fetch": 4,
+        "Fetch": 6,
         "Preflight": 2,
         "XHR": 2
     },

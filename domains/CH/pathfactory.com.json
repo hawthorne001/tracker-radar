@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000304,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "jukebox",
+        "cdn-app",
         "spcollector"
     ],
     "cnames": [],
@@ -15,27 +16,29 @@
     "resources": [
         {
             "rule": "pathfactory\\.com\\/api\\/public\\/v1\\/init",
-            "cookies": 0.000203,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "jukebox"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "7cc328efde88bb40d7e745c31c981bf67de02b7539f54fa722ee2f022da60789"
+                "6f96860f9d16dfcf6f7ce66b0ad949504f4becf375d27fdf746f2fcc287b9206",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "gpv_pn": 0.00010127607859023699,
-                "sa-r-source": 0.00010127607859023699
+                "gpv_pn": 0.00010066438494060802,
+                "sa-r-source": 0.00010066438494060802
             },
             "exampleSites": [
                 "gitlab.com",
-                "www.fortinet.com"
+                "www.fortinet.com",
+                "www.hpe.com"
             ]
         },
         {
@@ -46,24 +49,90 @@
                 "jukebox"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "gpv_pn": 0.00010127607859023699,
-                "sa-r-source": 0.00010127607859023699
+                "gpv_pn": 0.00010066438494060802,
+                "sa-r-source": 0.00010066438494060802
             },
             "exampleSites": [
                 "gitlab.com",
-                "www.fortinet.com"
+                "www.fortinet.com",
+                "www.hpe.com"
+            ]
+        },
+        {
+            "rule": "pathfactory\\.com\\/production\\/jukebox-lite\\/current\\/jukebox\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-app"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8aa5fea1ddfa5560f1487669c18691234655b0832ee7d1cc41a0ba708dd0dff3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vid": {
+                    "ttl": 1809,
+                    "length": 36,
+                    "prevalence": 0.00010066438494060802,
+                    "uniqueness": 1
+                },
+                "_pf_id.fb35": {
+                    "ttl": 31536010,
+                    "length": 103,
+                    "prevalence": 0.00010066438494060802,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortinet.com",
+                "www.hpe.com"
+            ]
+        },
+        {
+            "rule": "pathfactory\\.com\\/production\\/jukebox-lite\\/current\\/307\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "17c1c7ac7e3f42623df50e175cfc84f9278d3bd2d05eae8e876f45c33e6971f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortinet.com",
+                "www.hpe.com"
             ]
         },
         {
             "rule": "pathfactory\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000203,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "spcollector",
@@ -71,7 +140,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -94,7 +163,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -108,16 +177,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000304,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 4,
+        "XHR": 3,
+        "Preflight": 5,
+        "Script": 4,
         "Ping": 2
     },
     "nameservers": [

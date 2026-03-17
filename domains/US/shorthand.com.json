@@ -4,13 +4,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000274,
+    "sites": 4,
     "subdomains": [
-        "embed"
+        "embed",
+        "analytics",
+        "gateway"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "shorthand\\.com\\/embed_9\\.js",
@@ -33,6 +35,55 @@
                 "canaries.co.uk",
                 "www.pulzo.com"
             ]
+        },
+        {
+            "rule": "shorthand\\.com\\/analytics_4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.languages": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "faca4ed4bd5c0f353e34c00b77ca1bb34481bde159f1a6398d688f197e805db9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefa.com",
+                "www.worldbank.org"
+            ]
+        },
+        {
+            "rule": "shorthand\\.com\\/analytics\\/story",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "86dc6b79ba038943b42eca05635a0e928f485f5b761d7de2fa9f6292259b5400"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefa.com",
+                "www.worldbank.org"
+            ]
         }
     ],
     "categories": [],
@@ -40,12 +91,17 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "worldbankgroup.org",
+            "prevalence": 0.5454545454545454
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.45454545454545453
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-420.awsdns-52.com",

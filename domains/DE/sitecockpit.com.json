@@ -4,31 +4,33 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000503,
     "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "image"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "sitecockpit\\.com\\/cdn\\/app\\.js",
-            "cookies": 0.000505,
+            "cookies": 0.000503,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
+                "window.matchMedia(\"prefers-color-scheme\")": 5,
                 "window.sessionStorage": 5,
-                "window.localStorage": 4,
+                "window.localStorage": 5,
                 "Navigator.prototype.language": 1
             },
             "sites": 5,
-            "prevalence": 0.000505,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "d8eb313844ada4750eeaf34b289061cdaee50cc11321250ea916f7feb231b0e5"
+                "0ad72f2a7bf7f939eaff93be1d1890d9dc57c919b83bdcabcfa9e719f231291c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -40,11 +42,53 @@
                 "www.expert-technomarkt.de",
                 "www.reimo.com"
             ]
+        },
+        {
+            "rule": "sitecockpit\\.com\\/api\\/images",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expert-technomarkt.de",
+                "www.expert-technomarkt.de"
+            ]
+        },
+        {
+            "rule": "sitecockpit\\.com\\/api\\/images",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ce290dc3657de7a75e23d54e34d4359d0c1d07cd29d11fa008d1d1f698ea833b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expert-technomarkt.de",
+                "www.expert-technomarkt.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000505,
+    "cookies": 0.000503,
     "topInitiators": [
         {
             "domain": "first party",
@@ -52,7 +96,9 @@
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 5,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns.udag.de",

@@ -4,14 +4,62 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "cdn",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "mentionlink\\.com\\/script\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "29831c5f9070e47dff3cb6b2a72a08bee2e9e22628517f9664cfd223b27420e4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fictionhorizon.com",
+                "www.comicbasics.com"
+            ]
+        },
+        {
+            "rule": "mentionlink\\.com\\/theme\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5e8e6f0f7d279a8202c141f7c92c85a9caba0fcf31027feb26af256727df29c3"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fictionhorizon.com",
+                "www.comicbasics.com"
+            ]
+        },
         {
             "rule": "mentionlink\\.com\\/v2\\/pageview",
             "cookies": 0,
@@ -21,18 +69,36 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "a9ca0712be7390c1def3378e8b620a222587f30fd00b21abaa22493bad7de603"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.0001016053647632595
+                "_li_dcdm_c": 0.00010083694665725522
             },
             "exampleSites": [
-                "comicbasics.com",
+                "fictionhorizon.com",
+                "www.comicbasics.com"
+            ]
+        },
+        {
+            "rule": "mentionlink\\.com\\/v2\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fictionhorizon.com",
                 "www.comicbasics.com"
             ]
         }
@@ -47,7 +113,10 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Stylesheet": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "mitch.ns.cloudflare.com",

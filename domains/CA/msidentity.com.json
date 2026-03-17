@@ -4,12 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00203,
+    "prevalence": 0.00202,
     "sites": 20,
     "subdomains": [
         "login.msa",
-        "login.mso",
-        "a.privatelink"
+        "login.mso"
     ],
     "cnames": [
         {
@@ -19,24 +18,45 @@
         {
             "original": "login.microsoftonline.com",
             "resolved": "login.mso.msidentity.com"
-        },
-        {
-            "original": "login.windows.net",
-            "resolved": "a.privatelink.msidentity.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "msidentity\\.com\\/Me\\.htm",
-            "cookies": 0.00061,
+            "rule": "msidentity\\.com\\/login\\.srf",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "login.msa"
             ],
             "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "login.live.com",
+                    "resolved": "login.msa.msidentity.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.com",
+                "signup.live.com"
+            ]
+        },
+        {
+            "rule": "msidentity\\.com\\/Me\\.htm",
+            "cookies": 0.000605,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login.msa"
+            ],
+            "apis": {},
             "sites": 6,
-            "prevalence": 0.00061,
+            "prevalence": 0.000605,
             "cnames": [
                 {
                     "original": "login.live.com",
@@ -60,27 +80,23 @@
         },
         {
             "rule": "msidentity\\.com\\/consumers\\/oauth2\\/v2\\.0\\/authorize",
-            "cookies": 0.00102,
+            "cookies": 0.000908,
             "fingerprinting": 0,
             "subdomains": [
-                "login.mso",
-                "a.privatelink"
+                "login.mso"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00102,
+            "sites": 9,
+            "prevalence": 0.000908,
             "cnames": [
                 {
                     "original": "login.microsoftonline.com",
                     "resolved": "login.mso.msidentity.com"
-                },
-                {
-                    "original": "login.windows.net",
-                    "resolved": "a.privatelink.msidentity.com"
                 }
             ],
             "responseHashes": [
-                "c000b4211e891d6c261673c43e9d1cc762f8bade086264ce9ef5f04e6b62393a"
+                "5a742856822a0ce16e9ad1df8adc89cae8ba421cb79545ef4c9e595fb677631c",
+                "323b62257e1fa4796ea1466bc6a16effa77c85a1aa0d073a10cd5ac9beef56ba"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -90,7 +106,6 @@
                 "forms.office.com",
                 "onedrive.live.com",
                 "outlook.live.com",
-                "rewards.bing.com",
                 "www.bing.com",
                 "www.hotmail.com",
                 "www.microsoft.com",
@@ -100,14 +115,14 @@
         },
         {
             "rule": "msidentity\\.com\\/oauth20_authorize\\.srf",
-            "cookies": 0.000914,
+            "cookies": 0.000908,
             "fingerprinting": 0,
             "subdomains": [
                 "login.msa"
             ],
             "apis": {},
             "sites": 9,
-            "prevalence": 0.000914,
+            "prevalence": 0.000908,
             "cnames": [
                 {
                     "original": "login.live.com",
@@ -115,9 +130,9 @@
                 }
             ],
             "responseHashes": [
-                "bc640633a57040674e5b553d89bf260297b4b73a2d5f85a20ae0a9cdac7e1eb2",
-                "984a5b0bae86acdbcc0fc6e002ed9eda4df66a47380bd2bf030807e695981514",
-                "c000b4211e891d6c261673c43e9d1cc762f8bade086264ce9ef5f04e6b62393a"
+                "5a742856822a0ce16e9ad1df8adc89cae8ba421cb79545ef4c9e595fb677631c",
+                "d7a879b9a81e0955abe7d5e456f69605affcabd615ee02dd7f3d9e69715cead7",
+                "323b62257e1fa4796ea1466bc6a16effa77c85a1aa0d073a10cd5ac9beef56ba"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -136,14 +151,14 @@
         },
         {
             "rule": "msidentity\\.com\\/organizations\\/oauth2\\/v2\\.0\\/authorize",
-            "cookies": 0.000305,
+            "cookies": 0.000605,
             "fingerprinting": 0,
             "subdomains": [
                 "login.mso"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "sites": 6,
+            "prevalence": 0.000605,
             "cnames": [
                 {
                     "original": "login.microsoftonline.com",
@@ -151,7 +166,10 @@
                 }
             ],
             "responseHashes": [
-                "eab0d7bbede2e890748a52fe5b3f31df35ac7e1e1e7aeaeb2415338b4686a770"
+                "94216f92782ed1f14b2a357c8d615019f6ca8f43f874e893995ade742fbed4eb",
+                "017eeaefbbd4cde5a55d3e25adf4fc5e08d94fb067122626a7b96e765882e737",
+                "7bd9a5dab52c748d60fd54f22cf26361a5ef6400149e9588189efbd2bee59b81",
+                "e6345ce3a250d6e6f527c19c3408c6b2bed2ad2b5fa057c0586d2ff667e71c0d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -159,19 +177,22 @@
             "exampleSites": [
                 "office.com",
                 "forms.office.com",
-                "onedrive.live.com"
+                "onedrive.live.com",
+                "outlook.live.com",
+                "www.hotmail.com",
+                "www.outlook.com"
             ]
         },
         {
             "rule": "msidentity\\.com\\/common\\/oauth2\\/v2\\.0\\/authorize",
-            "cookies": 0.000305,
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [
                 "login.mso"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "login.microsoftonline.com",
@@ -179,8 +200,8 @@
                 }
             ],
             "responseHashes": [
-                "4c81db6dce43db1fad7ffbf4e78d37205d3e6a8d3b98a1b9e0925d86753344de",
-                "2ad2ff29212a6e977f87ce00a443440fb250059873119e336d39b3fdbc18be5f"
+                "9920f3335fb25b97a7cb2536c4dd333eeb2ab4b2978037f781fb2472623f9878",
+                "02bc542f67ffec41665429ee5c6221277f798b2f3e3881b0acfb1da9055c0087"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -193,14 +214,14 @@
         },
         {
             "rule": "msidentity\\.com\\/Me\\.htm",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
                 "login.msa"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000508,
+            "prevalence": 0.000504,
             "cnames": [
                 {
                     "original": "login.live.com",
@@ -223,14 +244,14 @@
         },
         {
             "rule": "msidentity\\.com\\/savedusers",
-            "cookies": 0.000305,
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [
                 "login.mso"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "login.microsoftonline.com",
@@ -238,8 +259,8 @@
                 }
             ],
             "responseHashes": [
-                "1a744a0ee2e5887e809667e88596cf0a865560bf6b711f5ae32fefbf8b083a0b",
-                "8132af44ad6834cb1cd80531cb96f86322ac1a44b2b9de7bcfd9733dab542373"
+                "b15966ef8d131637af16333447151df1c7c37c46dfd269381d3cfa3e289a3d1c",
+                "73c86f8369b11fe9c59bd8a82910663f243a1a3d40482dadf57fa0b426d9149f"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -252,14 +273,14 @@
         },
         {
             "rule": "msidentity\\.com\\/Me\\.srf",
-            "cookies": 0.000305,
+            "cookies": 0.000303,
             "fingerprinting": 1,
             "subdomains": [
                 "login.msa"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "login.live.com",
@@ -267,8 +288,8 @@
                 }
             ],
             "responseHashes": [
-                "5bb0c44db8f67b11566bee0127332a078b6769bf2a427510a6d0f99c01bec52a",
-                "579ed5a453b518ef48feacc4283a30663e9cbf59c12743f506d32c80949a8df9"
+                "43048c08a88a5fc366ccdf7391c53656a308011d7e9a67e10c5fb0db4d54f09c",
+                "ced1e66a5e0d4744b8a0ad5c963449cd33e75265399668e2097850f317829a22"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -280,15 +301,42 @@
             ]
         },
         {
+            "rule": "msidentity\\.com\\/common\\/instrumentation\\/reportbssotelemetry",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login.mso"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "login.microsoftonline.com",
+                    "resolved": "login.mso.msidentity.com"
+                }
+            ],
+            "responseHashes": [
+                "eff1ab8a71d0e26377db423b21a2597c31f3c544a95c911c8c7acad9362bac0e"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "live.com",
+                "outlook.live.com"
+            ]
+        },
+        {
             "rule": "msidentity\\.com\\/me\\.srf",
-            "cookies": 0.000305,
+            "cookies": 0.000303,
             "fingerprinting": 1,
             "subdomains": [
                 "login.msa"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "login.live.com",
@@ -296,8 +344,8 @@
                 }
             ],
             "responseHashes": [
-                "5de8835b11f85aac80881e9bb0e86a3a73a736d95b79d2d7a7edf86d63f41928",
-                "4607b7dc52aa71129a911acd5adbf4ad504c60f5a02239140a68efab754c6b64"
+                "9be80d2b36cf0d3a7d8c9cff3f294868b7fa191ce3eb7c0c29157df6eb5263b9",
+                "fb212fbc02ab4b57ebfb1f329b3badfab585f5a80bb4c48be5d0a5d294cded92"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -311,44 +359,41 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00203,
+    "cookies": 0.00202,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.19607843137254902
-        },
-        {
-            "domain": "microsoftonline.com",
-            "prevalence": 0.17647058823529413
+            "prevalence": 0.2545454545454545
         },
         {
             "domain": "msftauth.net",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.2
         },
         {
-            "domain": "msauth.net",
-            "prevalence": 0.11764705882352941
+            "domain": "microsoftonline.com",
+            "prevalence": 0.16363636363636364
         },
         {
             "domain": "gfx.ms",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.10909090909090909
         },
         {
             "domain": "static.microsoft",
-            "prevalence": 0.11764705882352941
-        },
-        {
-            "domain": "office.net",
-            "prevalence": 0.0784313725490196
+            "prevalence": 0.10909090909090909
         },
         {
             "domain": "microsoft.com",
-            "prevalence": 0.0784313725490196
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "msauth.net",
+            "prevalence": 0.07272727272727272
         }
     ],
     "types": {
+        "Document": 43,
         "Other": 6,
-        "Document": 39
+        "Ping": 2
     },
     "nameservers": [
         "usw1.akam.net",
