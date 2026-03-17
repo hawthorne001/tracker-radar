@@ -12,33 +12,102 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "sp.auth",
-        "api.auth"
+        "entitlement.auth",
+        "sp.auth"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "adobe\\.com\\/o\\/client\\/register",
-            "cookies": 0.000101,
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "entitlement.auth"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e69092da13a80a47c63779b414680735d87fe5f19987f15097245b3c17e6c41b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "client_type": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020214271275520516,
+                    "uniqueness": 0.5
+                },
+                "client_version": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00020214271275520516,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.html",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "sp.auth",
-                "api.auth"
+                "sp.auth"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "6e3a4c749fb36175f8ae83adee04ad0dbc8007e216305bc7c71aa231b854063a"
+                "1c7bfb5ab78ddcc649d39e28e0cd1ddf0bac2884517d99d84b49f87069758d12"
             ],
-            "type": "XHR",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnbc.com",
-                "www.ms.now"
+                "go.com",
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "51731367fa6c750624eaa80fc488b9d17b99f625556b437872d30e57ad2d9856"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "www.cnbc.com"
             ]
         },
         {
@@ -46,8 +115,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sp.auth",
-                "api.auth"
+                "sp.auth"
             ],
             "apis": {},
             "sites": 2,
@@ -58,31 +126,52 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnbc.com",
-                "www.ms.now"
+                "go.com",
+                "www.cnbc.com"
             ]
         },
         {
-            "rule": "adobe\\.com\\/o\\/client\\/token",
-            "cookies": 0.000101,
+            "rule": "adobe\\.com\\/o\\/client\\/register",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "sp.auth",
-                "api.auth"
+                "sp.auth"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "370b698203ca666c4193ee9f57da3e81a70d29787942f78e1c9677d14b9d75fa"
+                "7f6ee52c28ce0188627deb12f01226b981ca6e2e30159cf009f6bcb3a65d70a7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnbc.com",
-                "www.ms.now"
+                "go.com",
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bfc3de704dc05c809d3648b73983332a402ad1c9d7f9d6da0b91500dd0c7369e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "www.cnbc.com"
             ]
         },
         {
@@ -90,8 +179,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sp.auth",
-                "api.auth"
+                "sp.auth"
             ],
             "apis": {},
             "sites": 2,
@@ -102,34 +190,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cnbc.com",
-                "www.ms.now"
+                "go.com",
+                "www.cnbc.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
-            "domain": "cnbcfm.com",
-            "prevalence": 0.5555555555555556
+            "domain": "espncdn.com",
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4444444444444444
+            "domain": "cnbcfm.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 4
+        "Script": 4,
+        "Document": 2,
+        "Preflight": 4,
+        "XHR": 4
     },
     "nameservers": [
         "a10-64.akam.net",
-        "a1-217.akam.net",
-        "a7-64.akam.net",
+        "a28-67.akam.net",
         "a26-66.akam.net",
-        "a13-65.akam.net",
-        "a28-67.akam.net"
+        "a7-64.akam.net",
+        "a1-217.akam.net",
+        "a13-65.akam.net"
     ]
 }

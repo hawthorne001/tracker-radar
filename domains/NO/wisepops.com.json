@@ -10,35 +10,117 @@
     "prevalence": 0.000303,
     "sites": 3,
     "subdomains": [
+        "activity",
         "loader"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "wisepops\\.com\\/get-loader\\.js",
+            "rule": "wisepops\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "loader"
+                "activity"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tradovate.com",
+                "rab.equipment",
+                "www.bfi.org.uk"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "activity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rab.equipment",
+                "www.bfi.org.uk"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/get-loader\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "loader"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Date.prototype.getTime": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "wisepops_tld": {
+                    "ttl": 5,
+                    "length": 1,
+                    "prevalence": 0.00010114291493880854,
+                    "uniqueness": 1
+                },
+                "wisepops": {
+                    "ttl": 63072000,
+                    "length": 101,
+                    "prevalence": 0.00010114291493880854,
+                    "uniqueness": 1
+                },
+                "wisepops_visitor": {
+                    "ttl": 63072000,
+                    "length": 67,
+                    "prevalence": 0.00010114291493880854,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072000,
+                    "length": 40,
+                    "prevalence": 0.00010114291493880854,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 289,
+                    "prevalence": 0.00010114291493880854,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bfi.org.uk",
                 "www.vl.no"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
@@ -54,6 +136,8 @@
         }
     ],
     "types": {
+        "Fetch": 2,
+        "Preflight": 2,
         "Script": 2
     },
     "nameservers": [
