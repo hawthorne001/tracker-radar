@@ -9,10 +9,13 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.000709,
+    "sites": 7,
     "subdomains": [
         "unagi",
+        "payments-eu",
+        "payments",
+        "d2c.aws",
         "apay-us",
         "www"
     ],
@@ -43,10 +46,55 @@
             ]
         },
         {
+            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payments-eu",
+                "payments"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "d1b18903c94a710b6bc5ac9d5f6189e05fa8d52336b7273464ebfcaa7a95691c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestheating.com",
+                "www.mathway.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/cs\\/uedata",
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
+                "payments",
                 "apay-us"
             ],
             "apis": {},
@@ -96,30 +144,38 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000304,
     "topInitiators": [
         {
+            "domain": "awsstatic.com",
+            "prevalence": 0.46153846153846156
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "payments-amazon.com",
+            "prevalence": 0.1282051282051282
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.4
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
         "Ping": 3,
-        "XHR": 2,
-        "Fetch": 2
+        "XHR": 4,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns1.amzndns.net",
-        "ns1.amzndns.com",
-        "ns2.amzndns.org",
-        "ns2.amzndns.net",
         "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
         "ns1.amzndns.org",
         "ns2.amzndns.co.uk",
-        "ns2.amzndns.com"
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }
