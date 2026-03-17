@@ -9,9 +9,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00334,
-    "sites": 33,
+    "prevalence": 0.00404,
+    "sites": 40,
     "subdomains": [
+        "byggeboligblobstorage.blob.core",
+        "dnpulse.blob.core",
         "stexperimentsprod.blob.core",
         "stexperimentsurveyprod.blob.core",
         "mgwebanalytics.servicebus",
@@ -21,6 +23,50 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "windows\\.net\\/imageoriginals\\/avatars\\/1%20Diverse\\/PersonImage\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "byggeboligblobstorage.blob.core"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "db98d6bced04459b1007d469ff3e820a518f182e1e020347847e982f4921f7a8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "byggebolig.no",
+                "www.byggebolig.no"
+            ]
+        },
+        {
+            "rule": "windows\\.net\\/quant-meta\\/financial-calendar\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dnpulse.blob.core"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4dc60e03ab5570a79b70c80a52ec0f0b0dd15a0cd9eacd15428ce5a1c181aaf3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dn.no",
+                "investor.dn.no"
+            ]
+        },
+        {
             "rule": "windows\\.net\\/public\\/experiments\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -28,13 +74,13 @@
                 "stexperimentsprod.blob.core"
             ],
             "apis": {
-                "window.sessionStorage": 1
+                "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "ed999526987c6280faad319b1b8f5bd356e2f80be60c392b06e01a70121b59b9"
+                "f97ab3afebecb65fd3ead31c45471f19b1769dc8719b439175c8745a24d36b71"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -138,8 +184,8 @@
                 "pskjeriimagelibrary2c119.blob.core"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "ff8e2e413ce8605af021081863d05b17737f6830bf834629db7c437456f3dce1"
@@ -148,8 +194,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "skjerikirken.no",
-                "www.kirken.no",
+                "kirken.no",
                 "www.kyrkja.no"
             ]
         },
@@ -161,34 +206,11 @@
                 "pskjeriimagelibrary2c119.blob.core"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "726f94fa963a3b42f1420ce508d53e3892048785e781a1bf4eef24e9f5b50fb6"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "skjerikirken.no",
-                "www.kirken.no",
-                "www.kyrkja.no"
-            ]
-        },
-        {
-            "rule": "windows\\.net\\/imagecontainer\\/c6c6017d-20db-4fdb-b122-5d2c3b120811",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "pskjeriimagelibrary2c119.blob.core"
-            ],
-            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "10e388a546a7c1fa6ae9c74d56b1eb26e90e27ceacc02e4478a77799c9256ddd"
+                "726f94fa963a3b42f1420ce508d53e3892048785e781a1bf4eef24e9f5b50fb6"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -207,35 +229,36 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9710982658959537
+            "prevalence": 0.9769959404600812
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.02119460500963391
+            "prevalence": 0.014884979702300407
         },
         {
             "domain": "chatbot-ui-virid-sigma.vercel.app",
-            "prevalence": 0.0038535645472061657
+            "prevalence": 0.005412719891745603
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.0019267822736030828
+            "prevalence": 0.0013531799729364006
         },
         {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.0019267822736030828
+            "prevalence": 0.0013531799729364006
         }
     ],
     "types": {
+        "Image": 6,
+        "Fetch": 2,
         "Script": 4,
         "Stylesheet": 4,
-        "WebSocket": 2,
-        "Image": 8
+        "WebSocket": 2
     },
     "nameservers": [
-        "ns1-39.azure-dns.com",
-        "ns2-39.azure-dns.net",
         "ns3-39.azure-dns.org",
-        "ns4-39.azure-dns.info"
+        "ns4-39.azure-dns.info",
+        "ns2-39.azure-dns.net",
+        "ns1-39.azure-dns.com"
     ]
 }

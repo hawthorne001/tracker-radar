@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000406,
-    "sites": 4,
+    "prevalence": 0.000812,
+    "sites": 8,
     "subdomains": [
         "region-ca",
         "api3-ca",
@@ -14,6 +14,10 @@
     "cnames": [
         {
             "original": "calendar.library.torontomu.ca",
+            "resolved": "region-ca.libcal.com"
+        },
+        {
+            "original": "libcal.uwaterloo.ca",
             "resolved": "region-ca.libcal.com"
         }
     ],
@@ -29,25 +33,53 @@
                 "ualberta"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "sites": 4,
+            "prevalence": 0.000406,
             "cnames": [
+                {
+                    "original": "libcal.uwaterloo.ca",
+                    "resolved": "region-ca.libcal.com"
+                },
                 {
                     "original": "calendar.library.torontomu.ca",
                     "resolved": "region-ca.libcal.com"
                 }
             ],
             "responseHashes": [
-                "6b30c7d45f1daeb323f7f23d67cb86bde0749cd6ad0c99d0df6a178fe28577be",
-                "bb2990f64fd7cea7ec88a07e95c77b1b38402e0fd8857e450539af09d0268d21"
+                "0452f876b5e62694bc1be95b87943035a538b80867d791a8f75c73a5f5e8ed94",
+                "c28f36ff0f3761befc8284a0dd78f4642cff5f00331fc1c12e15f1d7c68955a1",
+                "d20a99ac135eb9f99c82586d107db3b26e624cd6065d98fe087cf6089e3ad6a8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "torontomu.ca",
+                "uwaterloo.ca",
+                "library.torontomu.ca",
                 "library.ubc.ca",
                 "www.library.ualberta.ca"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api3-ca"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "228c8638c176bffb3b69b09e230c9219983ca4eb7af6a1a9910d2f428ac41473"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uoguelph.ca",
+                "www.lib.uoguelph.ca"
             ]
         }
     ],
@@ -57,16 +89,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-220.awsdns-27.com",
         "ns-834.awsdns-40.net",
-        "ns-1606.awsdns-08.co.uk",
-        "ns-1465.awsdns-55.org"
+        "ns-1465.awsdns-55.org",
+        "ns-220.awsdns-27.com",
+        "ns-1606.awsdns-08.co.uk"
     ]
 }

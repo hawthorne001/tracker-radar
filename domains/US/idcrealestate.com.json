@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000274,
+    "sites": 4,
     "subdomains": [
         "plugins",
-        "ip-service",
-        "event-service"
+        "config-service",
+        "event-service",
+        "ip-service"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -22,20 +23,90 @@
                 "plugins"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.webdriver": 1,
-                "Navigator.prototype.languages": 1,
-                "WebGLRenderingContext.prototype.getExtension": 1,
-                "WebGLRenderingContext.prototype.getParameter": 1
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Navigator.prototype.languages": 3,
+                "WebGLRenderingContext.prototype.getExtension": 3,
+                "WebGLRenderingContext.prototype.getParameter": 3
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "bbad138e6e93842ae2509708c7292a6ceca9a913b903679366e97d635016cf6f"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.premiersothebysrealty.com",
+                "www.theagencyre.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/config\\/avmsearch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config-service"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "ed2503ff1ddd28e2c50b8de5ca3bd73dccb4043ff0186b6ee76b6de831bfb4ef",
+                "309e5cc9e514c6f50218ac5d975009d13d6fd95bc4100920aa503ceece6dd972"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.bhhsneproperties.com",
+                "www.premiersothebysrealty.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/avmsearch\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "plugins"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2a9f181f53e5a1cc5c4ce635d819010537a5cd869d153eed3e9a5300e9a632d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhhsneproperties.com",
+                "www.premiersothebysrealty.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/ws\\/track-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -84,26 +155,6 @@
                 "theagencyre.com",
                 "www.theagencyre.com"
             ]
-        },
-        {
-            "rule": "idcrealestate\\.com\\/ws\\/track-event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "event-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "WebSocket",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "theagencyre.com",
-                "www.theagencyre.com"
-            ]
         }
     ],
     "categories": [],
@@ -116,18 +167,18 @@
         },
         {
             "domain": "first party",
-            "prevalence": 0.375
+            "prevalence": 0.4
         },
         {
             "domain": "datafloat.com",
-            "prevalence": 0.125
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2,
+        "Script": 8,
+        "WebSocket": 2,
         "Preflight": 2,
-        "Fetch": 2,
-        "WebSocket": 2
+        "Fetch": 2
     },
     "nameservers": [
         "ns27.worldnic.com",

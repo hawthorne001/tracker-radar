@@ -12,18 +12,13 @@
     "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb",
-        "public-ingress-a84df8d06aede39e.elb"
+        "public-ingress-a84df8d06aede39e.elb",
+        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
     ],
     "cnames": [
         {
             "original": "cza.crazygames.com",
             "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
-        },
-        {
-            "original": "cza2.crazygames.com",
-            "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
         },
         {
             "original": "login.databricks.com",
@@ -32,38 +27,6 @@
     ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "us-west-2\\.amazonaws\\.com\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-                "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "cza.crazygames.com",
-                    "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
-                },
-                {
-                    "original": "cza2.crazygames.com",
-                    "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
-                }
-            ],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "crazygames.com",
-                "www.crazygames.com"
-            ]
-        },
         {
             "rule": "us-west-2\\.amazonaws\\.com\\/telemetry-unauth",
             "cookies": 0,
@@ -113,6 +76,33 @@
                 "databricks.com",
                 "www.databricks.com"
             ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cza.crazygames.com",
+                    "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crazygames.com",
+                "www.crazygames.com"
+            ]
         }
     ],
     "categories": [
@@ -127,9 +117,9 @@
         }
     ],
     "types": {
-        "Ping": 2,
         "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns-1522.awsdns-62.org",
