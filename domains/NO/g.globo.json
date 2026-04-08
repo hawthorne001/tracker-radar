@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "mab"
+        "mab",
+        "ab",
+        "sdk-metrics"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,15 +22,85 @@
                 "mab"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "cb20afd0ce3a9ca536efcff624a4bfe2cff85d130e543a24cb54e371a6573d0b",
+                "de9ad8dfe4ee4377de32c80786d54a951ddb4b882fc329cd023fb8ea9f5f09ef"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "globo.com",
+                "g1.globo.com",
+                "www.globo.com"
+            ]
+        },
+        {
+            "rule": "g\\.globo\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ab",
+                "mab"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globo.com",
+                "g1.globo.com",
+                "www.globo.com"
+            ]
+        },
+        {
+            "rule": "g\\.globo\\/api\\/v1\\/performance",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-metrics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globo.com",
+                "g1.globo.com",
+                "www.globo.com"
+            ]
+        },
+        {
+            "rule": "g\\.globo\\/api\\/v1\\/performance",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-metrics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globo.com",
+                "g1.globo.com",
                 "www.globo.com"
             ]
         }
@@ -39,16 +111,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8809523809523809
+        },
+        {
+            "domain": "ravenjs.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "glbimg.com",
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 3,
+        "Preflight": 6,
+        "Ping": 3
     },
     "nameservers": [
-        "ns04.oghost.com.br",
-        "ns02.oghost.com.br",
         "ns01.oghost.com.br",
-        "ns03.oghost.com.br"
+        "ns03.oghost.com.br",
+        "ns02.oghost.com.br",
+        "ns04.oghost.com.br"
     ]
 }

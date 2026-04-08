@@ -7,40 +7,13 @@
     "prevalence": 0.0000342,
     "sites": 5,
     "subdomains": [
-        "data-layer",
         "static.analytics",
-        "analytics"
+        "analytics",
+        "data-layer"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "netdirector\\.auto\\/js\\/dl\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "data-layer"
-            ],
-            "apis": {
-                "Document.cookie getter": 3,
-                "window.localStorage": 3,
-                "window.sessionStorage": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "61433214dc4e15f6607c64187568f8b9b681a9f1885ceccb17be1e6afc9f0066"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lexus.ca",
-                "www.subaru.ca",
-                "www.toyota.ca"
-            ]
-        },
         {
             "rule": "netdirector\\.auto\\/3\\.3\\.1\\/sp\\.lite\\.js",
             "cookies": 0,
@@ -70,9 +43,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ca",
+                "john-clark.co.uk",
+                "www.lexus.ca",
                 "www.marshall.co.uk",
-                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -95,9 +68,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ca",
+                "john-clark.co.uk",
+                "www.lexus.ca",
                 "www.marshall.co.uk",
-                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -120,9 +93,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ca",
+                "john-clark.co.uk",
+                "www.lexus.ca",
                 "www.marshall.co.uk",
-                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
             ]
@@ -145,11 +118,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ca",
+                "john-clark.co.uk",
+                "www.lexus.ca",
                 "www.marshall.co.uk",
-                "www.parks.uk.com",
                 "www.subaru.ca",
                 "www.toyota.ca"
+            ]
+        },
+        {
+            "rule": "netdirector\\.auto\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "john-clark.co.uk",
+                "www.john-clark.co.uk",
+                "www.marshall.co.uk",
+                "www.subaru.ca"
             ]
         },
         {
@@ -168,33 +165,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "marshall.co.uk",
-                "www.parks.uk.com",
+                "john-clark.co.uk",
+                "www.marshall.co.uk",
                 "www.subaru.ca"
             ]
         },
         {
-            "rule": "netdirector\\.auto\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "rule": "netdirector\\.auto\\/js\\/dl\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "analytics"
+                "data-layer"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+                "246422d1633161b4b2f5d5e064e414151dde5a5c8c13d1497be79e5880818a10"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "marshall.co.uk",
-                "www.marshall.co.uk",
-                "www.parks.uk.com",
-                "www.subaru.ca"
+                "lexus.ca",
+                "www.subaru.ca",
+                "www.toyota.ca"
             ]
         }
     ],
@@ -204,15 +204,11 @@
     "topInitiators": [
         {
             "domain": "osano.com",
-            "prevalence": 0.625
+            "prevalence": 0.75
         },
         {
             "domain": "digital-interview.com",
             "prevalence": 0.1875
-        },
-        {
-            "domain": "d2638j3z8ek976.cloudfront.net",
-            "prevalence": 0.125
         },
         {
             "domain": "msecnd.net",
@@ -221,13 +217,13 @@
     ],
     "types": {
         "Script": 23,
-        "Preflight": 3,
-        "XHR": 4
+        "XHR": 4,
+        "Preflight": 3
     },
     "nameservers": [
-        "ns-79.awsdns-09.com",
         "ns-624.awsdns-14.net",
+        "ns-1783.awsdns-30.co.uk",
         "ns-1127.awsdns-12.org",
-        "ns-1783.awsdns-30.co.uk"
+        "ns-79.awsdns-09.com"
     ]
 }

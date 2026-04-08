@@ -12,9 +12,14 @@
     "prevalence": 0.00000684,
     "sites": 1,
     "subdomains": [
+        "geoblocking-prod.ibx",
         "geoblocking-prod.uap"
     ],
     "cnames": [
+        {
+            "original": "ibx.key.com",
+            "resolved": "geoblocking-prod.ibx.key.com.akadns.net"
+        },
         {
             "original": "onlinea.key.com",
             "resolved": "geoblocking-prod.uap.key.com.akadns.net"
@@ -22,6 +27,33 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "key\\.com\\.akadns\\.net\\/ibxolb\\/login\\/client\\/styles-R7DIJY77\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoblocking-prod.ibx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ibx.key.com",
+                    "resolved": "geoblocking-prod.ibx.key.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "aaf46d78ecb163295f87771935605acab51988b9e2f3e91e8ed92dcdb59b0cc5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "key.com",
+                "www.key.com"
+            ]
+        },
         {
             "rule": "key\\.com\\.akadns\\.net\\/uap\\/SvltKdd",
             "cookies": 0.00000684,
@@ -39,7 +71,7 @@
                 }
             ],
             "responseHashes": [
-                "b8be14250adb869a5394548f5ecc3e74c722e5def454ef45b2296e4aba299f62"
+                "515b54da74085ca7c4dd5bbdeb6ad25c4590d484f70b8c56f29a6bc75bdd0863"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -58,10 +90,15 @@
     "topInitiators": [
         {
             "domain": "dynatrace.com",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
         }
     ],
     "types": {
+        "Stylesheet": 2,
         "Script": 2
     },
     "nameservers": []

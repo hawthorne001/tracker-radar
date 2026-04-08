@@ -7,9 +7,14 @@
     "prevalence": 0.00000684,
     "sites": 1,
     "subdomains": [
-        "tr.cdp.pingodoce.audience"
+        "tr.cdp.pingodoce.audience",
+        "match.cdp.pingodoce.audience"
     ],
     "cnames": [
+        {
+            "original": "match.cdp.pingodoce.pt",
+            "resolved": "match.cdp.pingodoce.audience.kevel.com"
+        },
         {
             "original": "tr.cdp.pingodoce.pt",
             "resolved": "tr.cdp.pingodoce.audience.kevel.com"
@@ -17,6 +22,31 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "kevel\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr.cdp.pingodoce.audience"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tr.cdp.pingodoce.pt",
+                    "resolved": "tr.cdp.pingodoce.audience.kevel.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pingodoce.pt",
+                "www.pingodoce.pt"
+            ]
+        },
         {
             "rule": "kevel\\.com\\/events",
             "cookies": 0.0000137,
@@ -45,23 +75,25 @@
             ]
         },
         {
-            "rule": "kevel\\.com\\/events",
+            "rule": "kevel\\.com\\/activation",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "tr.cdp.pingodoce.audience"
+                "match.cdp.pingodoce.audience"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "tr.cdp.pingodoce.pt",
-                    "resolved": "tr.cdp.pingodoce.audience.kevel.com"
+                    "original": "match.cdp.pingodoce.pt",
+                    "resolved": "match.cdp.pingodoce.audience.kevel.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "a7fe83ec64bb23eb28090598db3d166ed98e52e39d1afbbfd74c579553f93e4e"
+            ],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -80,8 +112,9 @@
         }
     ],
     "types": {
+        "Preflight": 2,
         "XHR": 2,
-        "Preflight": 2
+        "Document": 2
     },
     "nameservers": [
         "ns-142.awsdns-17.com",

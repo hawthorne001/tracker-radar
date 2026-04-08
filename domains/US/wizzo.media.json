@@ -7,11 +7,37 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
+        "radar",
         "redalert"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "wizzo\\.media\\/wizzoRadarClient\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "177340a8551d73d3a93801893d6871c7b9539612765c76ed9cfb0c0deec22fd7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.org",
+                "www.kore.co.il"
+            ]
+        },
         {
             "rule": "wizzo\\.media\\/redAlert\\.json",
             "cookies": 0,
@@ -24,7 +50,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d5ae4db2bae29e849d09dba5260aab978a1d18c2a30b3668b6db7b4bdb81c5e4"
+                "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -32,6 +58,48 @@
             "exampleSites": [
                 "hidabroot.org",
                 "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0f2678b6047b7cdde32b2bd9937aa376a1c82ed9550c28fb5b6856ae6ab1eee5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.org",
+                "www.kore.co.il"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.org",
+                "www.kore.co.il"
             ]
         }
     ],
@@ -45,10 +113,13 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "XHR": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns1.crossart2.com",
-        "ns2.crossart2.com"
+        "ns2.crossart2.com",
+        "ns1.crossart2.com"
     ]
 }

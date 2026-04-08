@@ -7,14 +7,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000411,
+    "prevalence": 0.000041,
     "sites": 6,
     "subdomains": [
         "client-sdk-configs",
-        "espn.api.edge"
+        "espn.api.edge",
+        "disney-entertainment.api.edge",
+        "pcs",
+        "disney-entertainment.connections.edge"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "bamgrid\\.com\\/bam-sdk\\/v7\\.0\\/espn-a9b93989\\/browser\\/v34\\.1\\/macosx\\/chrome\\/prod\\.json",
@@ -25,10 +28,10 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000274,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "31562594d5964392597c8ffc8fb8b928ec704a594448df8687e0a98660080cc2"
+                "6d15f477150810da20603af81664e022d2becf865b557df098e6d9dfa083ba42"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -45,35 +48,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "espn.api.edge"
+                "espn.api.edge",
+                "disney-entertainment.api.edge"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
-            "cnames": [],
-            "responseHashes": [
-                "f90880d001db19a6d0aee0d4e21f8e839d4f3f7e5d6ce54d213547bcfbd27da3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "espn.com.ar",
-                "www.espn.com.sg",
-                "www.espn.nl",
-                "www.espn.ph"
-            ]
-        },
-        {
-            "rule": "bamgrid\\.com\\/graph\\/v1\\/device\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "espn.api.edge"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 5,
+            "prevalence": 0.0000342,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -83,7 +63,77 @@
                 "espn.com.ar",
                 "www.espn.com.sg",
                 "www.espn.nl",
-                "www.espn.ph"
+                "www.espn.ph",
+                "www.natgeotv.com"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/graph\\/v1\\/device\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "espn.api.edge",
+                "disney-entertainment.api.edge"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "f90880d001db19a6d0aee0d4e21f8e839d4f3f7e5d6ce54d213547bcfbd27da3",
+                "82a3786589d9a4c8bd0cb987031c6058de35c3ef1b652962235eebfc6d35aa5f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com.ar",
+                "www.espn.com.sg",
+                "www.espn.nl",
+                "www.espn.ph",
+                "www.natgeotv.com"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/v1\\/abc_news",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2e67bd4b8e795c8ab5eae8c68d4f2b4d9f7359192ac0ded734fe7f121b6f87f1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natgeotv.com",
+                "www.natgeotv.com"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/5d3054\\/connection",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "disney-entertainment.connections.edge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natgeotv.com",
+                "www.natgeotv.com"
             ]
         }
     ],
@@ -93,12 +143,22 @@
     "topInitiators": [
         {
             "domain": "espncdn.com",
-            "prevalence": 1
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "nationalgeographic.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "watchdisneyfe.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 8,
-        "Preflight": 4
+        "Fetch": 9,
+        "Preflight": 5,
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
         "ns-1037.awsdns-01.org",

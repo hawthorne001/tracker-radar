@@ -10,10 +10,12 @@
         "lh",
         "usync",
         "pipeline",
-        "lightsail"
+        "lightsail",
+        "ship",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "bigcrunch\\.com\\/main\\.js",
@@ -37,14 +39,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fb0cd19de100180fc459bf7b797d39e99f4e03db5910f6f68a2466db164c6712"
+                "cb4628b601c3c8d27b131625187de3107092d988d09a5395e6f97630a709a073"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "__bc_lh_session_id": {
                     "ttl": 1800,
                     "length": 36,
-                    "prevalence": 0.00020110608345902463,
+                    "prevalence": 0.00020106564793405046,
                     "uniqueness": 1
                 }
             },
@@ -65,10 +67,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "991ff89649c54cf6914ec20eb707fc52bee06969f43ec2697d65cd9aa37fda79"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -87,8 +87,10 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "60067e831fefc7c6be1d6dfeef3714c3644c70c8ec96e54d180f42658007125f"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -170,13 +172,103 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c4032ffe630dfec27c7ea4ab9efe4f9683e73533f7245f4cbfc9760ceef70946"
+                "ac750aee7dbf9874e522da9d821ab5e682e0031117667620b976b83e58a7b121"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "tvtropes.org",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/config\\/7baaa297-8659-496c-ab3a-63eff8584214\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ship",
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "363a3f551e1d85c992d0a94540f212c4bb5e337d750e2b455ced76fd28c1efd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/prebid\\/7baaa297-8659-496c-ab3a-63eff8584214\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ship",
+                "cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.connection": 1,
+                "window.devicePixelRatio": 1,
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df4b03496b92f6d6565281eb3eaf3fbc2ceedee0fdcae8af1c76f63f8a10d309"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_sharedid": {
+                    "ttl": 31536005,
+                    "length": 36,
+                    "prevalence": 0.00010053282396702523,
+                    "uniqueness": 1
+                },
+                "_sharedid_cst": {
+                    "ttl": 31536005,
+                    "length": 12,
+                    "prevalence": 0.00010053282396702523,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 2592006,
+                    "length": 93,
+                    "prevalence": 0.00010053282396702523,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 2592006,
+                    "length": 12,
+                    "prevalence": 0.00010053282396702523,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
                 "www.snopes.com"
             ]
         }
@@ -191,12 +283,12 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 6,
-        "Preflight": 6
+        "Script": 4,
+        "Preflight": 6,
+        "Fetch": 8
     },
     "nameservers": [
-        "rosalyn.ns.cloudflare.com",
-        "sid.ns.cloudflare.com"
+        "sid.ns.cloudflare.com",
+        "rosalyn.ns.cloudflare.com"
     ]
 }
