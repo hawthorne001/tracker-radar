@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "swymstore-v3pro-01",
         "swymstore-v3free-01",
-        "procdn"
+        "swymstore-v3enterprise-01",
+        "procdn",
+        "freecdn"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "swymrelay\\.com\\/api\\/v3\\/provider\\/checkAndGet",
@@ -23,23 +25,50 @@
             "fingerprinting": 0,
             "subdomains": [
                 "swymstore-v3pro-01",
-                "swymstore-v3free-01"
+                "swymstore-v3free-01",
+                "swymstore-v3enterprise-01"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "a62f22d9eef161a9116139f39aa30b184cef4d8a731a246200eb5ad9a2af5d65",
+                "43ef3b43cd19f2aa7b39ebc292bedcfe5d5f85d6ba4c7d15d5c804cda7e4f218",
+                "657476a61a22a8db615afb78c941cf4f72621c086094216d91957da36051b45c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dokidokicos.com",
+                "leofotousa.com",
+                "villoid.no",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/swym_fonts\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "procdn",
+                "freecdn"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "bd5226d6c17b4ac2ec4009bfde673d8dee8df4257eff01588c53bd68aa779e69",
-                "7e1128215cae40a41af4422cee61fe8f2098cb2a95063c59242af4380590a234"
+                "eec39015505be5c8f43e0bea54219f165ce607be9c07ce433f9c79a6ac3c2c01"
             ],
-            "type": "XHR",
+            "type": "Font",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fritz.com",
-                "villoid.no",
-                "www.uaudio.com"
+                "dokidokicos.com",
+                "leofotousa.com",
+                "villoid.no"
             ]
         },
         {
@@ -47,24 +76,25 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "swymstore-v3free-01",
                 "swymstore-v3pro-01",
-                "swymstore-v3free-01"
+                "swymstore-v3enterprise-01"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "0e1ee6c097805394bd38a07e13d4d0b7ca1a2cf6fa7b640965d4b0bb3175cc21",
-                "763f8e4f66d68ce4ebba74fad777b2c68cf38181619e94a3eef2aababb1df61a"
+                "9c0209a60d0b7d4bf50fdc1b180c0d6a8a1e6c09cf238cf852ee6eaf4cc6bee3",
+                "a30504082cd70bbc95be8ba6eddcd604282f9386ff380e389b858b09ec90b885"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fritz.com",
+                "leofotousa.com",
                 "villoid.no",
-                "www.uaudio.com"
+                "www.worldofbooks.com"
             ]
         },
         {
@@ -72,6 +102,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "swymstore-v3free-01",
                 "swymstore-v3pro-01"
             ],
             "apis": {},
@@ -85,29 +116,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fritz.com",
-                "villoid.no"
-            ]
-        },
-        {
-            "rule": "swymrelay\\.com\\/code\\/v3\\/swym_fonts\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "procdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "eec39015505be5c8f43e0bea54219f165ce607be9c07ce433f9c79a6ac3c2c01"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fritz.com",
+                "leofotousa.com",
                 "villoid.no"
             ]
         }
@@ -118,12 +127,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5862068965517241
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.3448275862068966
+        },
+        {
+            "domain": "visually.io",
+            "prevalence": 0.06896551724137931
         }
     ],
     "types": {
-        "XHR": 8,
-        "Font": 2
+        "XHR": 9,
+        "Font": 3
     },
     "nameservers": [
         "ns66.domaincontrol.com",

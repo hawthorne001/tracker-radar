@@ -7,13 +7,20 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
+        "cname1",
         "logs",
+        "cdn-4",
         "10007574.metrics"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "metrics.reporterre.net",
+            "resolved": "cname1.convertexperiments.com"
+        }
+    ],
     "fingerprinting": 2,
     "resources": [
         {
@@ -21,21 +28,54 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "cname1",
                 "logs"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "metrics.reporterre.net",
+                    "resolved": "cname1.convertexperiments.com"
+                }
+            ],
             "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "reporterre.net",
                 "roll20.net",
                 "www.image-line.com"
+            ]
+        },
+        {
+            "rule": "convertexperiments\\.com\\/v1\\/js\\/10019015-10019412\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-4"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6b79a4e8445c859f28457daa70ee42a5450889544a6956111202460271b6f204"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fairphone.com",
+                "www.fairphone.com"
             ]
         },
         {
@@ -63,32 +103,33 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000808,
+    "cookies": 0.000605,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.5294117647058824
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.23529411764705882
         },
         {
             "domain": "convertexperiments.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.17647058823529413
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Ping": 4
+        "Ping": 5,
+        "Script": 2
     },
     "nameservers": [
         "ns-1039.awsdns-01.org",
+        "ns-1950.awsdns-51.co.uk",
         "ns-300.awsdns-37.com",
-        "ns-740.awsdns-28.net",
-        "ns-1950.awsdns-51.co.uk"
+        "ns-740.awsdns-28.net"
     ]
 }

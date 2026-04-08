@@ -7,14 +7,58 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "traffic-drivers",
-        "popcard",
         "gateway",
-        "api"
+        "api",
+        "traffic-drivers",
+        "popcard"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "unibuddy\\.co\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway",
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stclaircollege.ca",
+                "www.uwinnipeg.ca"
+            ]
+        },
+        {
+            "rule": "unibuddy\\.co\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway",
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c721726a0935ab619cbbb32525dc0b9b96ad0b7ac354d2da53895849269a5f6a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stclaircollege.ca",
+                "www.uwinnipeg.ca"
+            ]
+        },
         {
             "rule": "unibuddy\\.co\\/cdn-cgi\\/rum",
             "cookies": 0,
@@ -37,50 +81,6 @@
                 "stclaircollege.ca",
                 "www.uwinnipeg.ca"
             ]
-        },
-        {
-            "rule": "unibuddy\\.co\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gateway",
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "50641dafe8f6c197ab3cdcee7e120f874920cfa5b08a67c482e0581c4c58b3ff"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "stclaircollege.ca",
-                "www.uwinnipeg.ca"
-            ]
-        },
-        {
-            "rule": "unibuddy\\.co\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gateway",
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "stclaircollege.ca",
-                "www.uwinnipeg.ca"
-            ]
         }
     ],
     "categories": [],
@@ -97,9 +97,9 @@
         }
     ],
     "types": {
-        "XHR": 2,
+        "Preflight": 2,
         "Fetch": 2,
-        "Preflight": 2
+        "XHR": 2
     },
     "nameservers": [
         "noel.ns.cloudflare.com",

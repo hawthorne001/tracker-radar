@@ -4,14 +4,42 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "api"
+        "scripts",
+        "api",
+        "chatbot"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "dialogintelligens\\.dk\\/universal-chatbot\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.localStorage": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7e17fd989c629254cf9e59ebca23538353c4d78f6af4b358439d3207113f3a61"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skoringen.no",
+                "www.skoringen.no"
+            ]
+        },
         {
             "rule": "dialogintelligens\\.dk\\/api\\/integration-config\\/skoringen-no",
             "cookies": 0,
@@ -24,7 +52,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "5aada82de24e163a26c5a7da5eb14b1a0e28ce7473d4920a7f1def5c5dd85885"
+                "7d0315125ae2a4340946c4d031e2ce11959d2971603d2ff1f766549a2910c7ef"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -47,6 +75,107 @@
             "cnames": [],
             "responseHashes": [
                 "e67208f9e2f53cff0afd0d83868472518ea2f6ba7a51dd7f07c547c852375a86"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skoringen.no",
+                "www.skoringen.no"
+            ]
+        },
+        {
+            "rule": "dialogintelligens\\.dk\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chatbot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2246f516f3e9666b06d29a1550baeaaab99a60119d4d00492feb65a551e251e7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skoringen.no",
+                "www.skoringen.no"
+            ]
+        },
+        {
+            "rule": "dialogintelligens\\.dk\\/static\\/js\\/main\\.9cec0455\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chatbot"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Performance.prototype.memory": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0a2b863d93d32efee4c0db5fe06daa9a571c438836b7afe1689a642a71b7e185"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skoringen.no",
+                "www.skoringen.no"
+            ]
+        },
+        {
+            "rule": "dialogintelligens\\.dk\\/static\\/css\\/main\\.4adcd536\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chatbot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3dbec4c412f56ae3e5df3ee23b57deec865190ed81187698d3ae66cdf249f26b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skoringen.no",
+                "www.skoringen.no"
+            ]
+        },
+        {
+            "rule": "dialogintelligens\\.dk\\/api\\/popup-message",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2b41b752f7d3f5bcfd1baf95352d06fd458bbbba0604f96954d42c6e56cc4a18"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -87,7 +216,10 @@
         }
     ],
     "types": {
-        "Fetch": 4,
+        "Script": 4,
+        "Fetch": 6,
+        "Document": 2,
+        "Stylesheet": 2,
         "Preflight": 2
     },
     "nameservers": [

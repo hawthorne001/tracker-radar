@@ -7,6 +7,7 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "cdn.prod.kca.shield",
         "keycloak.prod.kca.shield"
     ],
     "cnames": [
@@ -15,8 +16,40 @@
             "resolved": "keycloak.prod.kca.shield.k-net.io"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/i\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "97f660ffa5a4607bf746caa76e3394c56b3b8e2d60356418d2447eb71fca40ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
+        },
         {
             "rule": "k-net\\.io\\/auth\\/realms\\/ekv\\/protocol\\/openid-connect\\/3p-cookies\\/step1\\.html",
             "cookies": 0.000201,
@@ -37,6 +70,33 @@
                 "4080ffc9ca89666f1492cd9742da52ad6e56bd36191233f9d17f64f1610c22f8"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
+        },
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/s\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "653671d2f71de228eefc22509d937b8984dac8eff646c43032e96a2c59cb0b29"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -127,14 +187,21 @@
     "categories": [],
     "performance": {},
     "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
+        "Script": 4,
         "Document": 6,
         "Fetch": 2
     },
     "nameservers": [
-        "n01.public.auth.dns.services.k-net.io",
         "n02.public.auth.dns.services.k-net.io",
         "n03.public.auth.dns.services.k-net.io",
-        "n04.public.auth.dns.services.k-net.io"
+        "n04.public.auth.dns.services.k-net.io",
+        "n01.public.auth.dns.services.k-net.io"
     ]
 }

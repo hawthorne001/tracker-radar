@@ -9,19 +9,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00024,
-    "sites": 35,
+    "prevalence": 0.00026,
+    "sites": 38,
     "subdomains": [
+        "akamai-prod.cancer",
         "mmaapi.cri.studentaid",
         "mmaapi.nelnet.studentaid",
         "auth.cri.studentaid",
         "auth.nelnet.studentaid",
+        "dg.michigan",
         "www.nyc",
         "cdn.benefeds",
-        "iservnonprod2.medicare",
-        "iservprod.cms",
         "nh",
         "nonproduction3.healthcare",
+        "www.prd.marylandhealthconnection",
+        "iservnonprod2.medicare",
         "iservnonprod.medicare",
         "iservprod.medicare",
         "cdn.polkcountyiowa"
@@ -30,6 +32,10 @@
         {
             "original": "api.medicare.gov",
             "resolved": "iservprod.medicare.gov.edgekey.net"
+        },
+        {
+            "original": "app.marylandhealthconnection.gov",
+            "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
         },
         {
             "original": "auth.cri.studentaid.gov",
@@ -48,8 +54,8 @@
             "resolved": "cdn.polkcountyiowa.gov.edgekey.net"
         },
         {
-            "original": "design.cms.gov",
-            "resolved": "iservprod.cms.gov.edgekey.net"
+            "original": "digitalguidelines.michigan.gov",
+            "resolved": "dg.michigan.gov.edgekey.net"
         },
         {
             "original": "frontend.medicare.gov",
@@ -68,12 +74,12 @@
             "resolved": "mmaapi.nelnet.studentaid.gov.edgekey.net"
         },
         {
-            "original": "tealium-collect.medicare.gov",
-            "resolved": "iservnonprod.medicare.gov.edgekey.net"
+            "original": "static.cancer.gov",
+            "resolved": "akamai-prod.cancer.gov.edgekey.net"
         },
         {
-            "original": "tealium-tags.cms.gov",
-            "resolved": "iservnonprod2.medicare.gov.edgekey.net"
+            "original": "tealium-collect.medicare.gov",
+            "resolved": "iservnonprod.medicare.gov.edgekey.net"
         },
         {
             "original": "tealium-tags.healthcare.gov",
@@ -99,6 +105,33 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "gov\\.edgekey\\.net\\/webanalytics\\/s_code\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "akamai-prod.cancer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "static.cancer.gov",
+                    "resolved": "akamai-prod.cancer.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "988d907efd7eed2a80457666d3edfe795fbf373ba671614e1b56c0caa3ede813"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cancer.gov",
+                "seer.cancer.gov"
+            ]
+        },
+        {
             "rule": "gov\\.edgekey\\.net\\/api\\/1\\/content\\/version\\/16\\/1",
             "cookies": 0.0000137,
             "fingerprinting": 0,
@@ -115,7 +148,7 @@
                 }
             ],
             "responseHashes": [
-                "8512b62b25e9bc4337be1f0a81560dd7feb61903022ac72eb30639607491e814"
+                "e4289dc9e9141119c7211dbd5163b8b46f54462db0b819bdcdd1146205a18b87"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -147,8 +180,8 @@
                 }
             ],
             "responseHashes": [
-                "1724308aa2d86b730f45f5014490466207f50d97f3e9d62e319c50e8f251d4c4",
-                "06771e8ddbef174d1cc8bea07c08cca710fa72e1df0b1650e1d22729916048bd"
+                "91c3e026f2e8433a4f3effd119176498cda8a931491a3fcc19501b616e0860ac",
+                "fd55b3e877db9a44f6194ad655c8f67a0f4b3a6376be8c3886cfd3d9a1eb7b74"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -297,7 +330,7 @@
                 }
             ],
             "responseHashes": [
-                "5ddb3b57e50e11f5f6d4c3ed1076c358645433f9047ad4716eae0faac9f944c9"
+                "fc1c1f7e3d7663a370fc8b4d0f0844d436c8753576516013584acce25d885a26"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -349,7 +382,7 @@
                 }
             ],
             "responseHashes": [
-                "3d0f3c513711db7cb25be6b013e26966d401e4eb1e543d58fc06632b2ce8378a"
+                "3685134b298753859cdc3073d2ac5ad1ec2459401352c6da3acf6e6bc946bf47"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -357,6 +390,276 @@
             "exampleSites": [
                 "studentaid.gov",
                 "cri.studentaid.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f6170f047b09e7b80ebf4cd8d2d405cd026970a4b4c46f91c6b428ab9eeb40f3"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "adfc8ceb71027484c86705e55ce40b919775be99a2ee889a562d34f2e89cb500"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/som-components\\.1t5yaqgu\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "598d74c0317df104d96e34e4361b1fc5159f52df9684fd516b8da7993bfb968a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/btyndgn1\\.entry\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "01bec8251711a37bc25ab612dc7160c71d1a76a14a2f3b86de111858ed508606"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/chunk-7043c58d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "dc964cb0904229448a517004e3b531419607311c5867e8c4996ac743b1c2c666"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/chunk-5becfb33\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a67d2de5aff580a899e7dd7020457d3b52ce413bfb70ab13217b05c83c97d376"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/54ctl2tn\\.entry\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "08a52d5cf13133904bc9abf1e7af6b80a45942ad34e2b65720b91aa99a58d9ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/svg\\/icon-state-outline\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a49d78e8251098981abd1d8e30db9cca4287fb07cb5419acbf7ed3ea6a7434bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/svg\\/icon-menu\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c2e19fee59fd01111858d16d63327eb40ccffd6b160fee0c98b2e8944852117c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/cdn\\/3\\.2\\.0\\/som-components\\/svg\\/icon-cancel\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dg.michigan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "digitalguidelines.michigan.gov",
+                    "resolved": "dg.michigan.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "dd21f475bfcb9b0c6c2346887bcd4ae419ebbd186b0ccb97d08dcf247f9fc9a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "state.mi.us",
+                "mvic.sos.state.mi.us"
             ]
         },
         {
@@ -376,7 +679,7 @@
                 }
             ],
             "responseHashes": [
-                "71ec1db0328dc0179a43d13ea292709af2c37906186ab4d953ad1b440349d42b"
+                "194841c48a7d621272676fdbc2a33c73137f1af9b8d0a69d1b518b47f11b3a55"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -428,7 +731,7 @@
                 }
             ],
             "responseHashes": [
-                "11318751392bed5b1514bcc41f6601774b9c2fc7002032ab98ee157b188c04c2"
+                "d47490564654269145e6edb31238f2cb65aebf5f024c59a332dcf9be3d22de84"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -480,7 +783,7 @@
                 }
             ],
             "responseHashes": [
-                "b19a7c47fb63e34baf8e992a13c802ff5e3b118f3180d0555819541af79342eb"
+                "33ceaec8cefad0bd2f19bf2ba915ab10d428a35ff35eeefab08d23996f317d01"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -537,33 +840,6 @@
                 "ad91b8313c4c9cb3aa4f9051ad0bd030eb073a3f967f2e92a0915ad734644620"
             ],
             "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nyc.gov",
-                "portal.311.nyc.gov"
-            ]
-        },
-        {
-            "rule": "gov\\.edgekey\\.net\\/assets\\/home\\/js\\/webtrends\\/webtrends\\.311-load\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www.nyc"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "www1.nyc.gov",
-                    "resolved": "www.nyc.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "d1204ab50e89040b372dd11014e023afc79c85f09e57929df6c55acbaffbe287"
-            ],
-            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -722,7 +998,9 @@
                     "resolved": "www.nyc.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "f7ae1a6d071de8fc8d1733ee7c8f57d3760b31bd3fa0f132e0fea0fd5ad5c77d"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -747,7 +1025,9 @@
                     "resolved": "www.nyc.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "715d6cad743d88184deb71f4ddf51061226974bcebe034a08a5cc6118bde81c4"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -772,7 +1052,9 @@
                     "resolved": "www.nyc.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "3cdbe4fb47f26d249831cc30736b558a495b56c25d174fe7483ea027fc839a64"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -797,7 +1079,9 @@
                     "resolved": "www.nyc.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "d1079eb5179d2250a4b7f697bf134b180a0a4246c10fb77e42ebe5f6d26e5f96"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -942,114 +1226,6 @@
             ]
         },
         {
-            "rule": "gov\\.edgekey\\.net\\/cms-www\\/prod\\/utag\\.sync\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "iservnonprod2.medicare"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "tealium-tags.cms.gov",
-                    "resolved": "iservnonprod2.medicare.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5d6e9a762f7352470b0de9a0e5e91caf45fa3194545d9696920e8bca812f0483"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cms.gov",
-                "www.cms.gov"
-            ]
-        },
-        {
-            "rule": "gov\\.edgekey\\.net\\/cdn\\/ds-cms-gov\\/12\\.4\\.3\\/web-components\\/bundle\\/base\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "iservprod.cms"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "design.cms.gov",
-                    "resolved": "iservprod.cms.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "5c921b1834382e8b6a1be754f1d1bbf1514af6d161c29274c612573a36bdf760"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cms.gov",
-                "www.cms.gov"
-            ]
-        },
-        {
-            "rule": "gov\\.edgekey\\.net\\/cdn\\/ds-cms-gov\\/12\\.4\\.3\\/web-components\\/bundle\\/ds-usa-banner\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "iservprod.cms"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "design.cms.gov",
-                    "resolved": "iservprod.cms.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "426057ed51e9931e730c53ba8e134a7d2691af336bff660d2711bc3afa804e5b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cms.gov",
-                "www.cms.gov"
-            ]
-        },
-        {
-            "rule": "gov\\.edgekey\\.net\\/cms-www\\/prod\\/utag\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 2,
-            "subdomains": [
-                "iservnonprod2.medicare"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "tealium-tags.cms.gov",
-                    "resolved": "iservnonprod2.medicare.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "e1c263d647b4c7ff87c9435da5e43bd24bfbe7d04378c0b2ccd5e666999effea"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cms.gov",
-                "www.cms.gov"
-            ]
-        },
-        {
             "rule": "gov\\.edgekey\\.net\\/media\\/safety\\/dmv-appointment-announcement\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1128,6 +1304,193 @@
             "exampleSites": [
                 "healthcare.gov",
                 "www.healthcare.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/hixmobile\\/jsp\\/common\\/wordpress_header\\.jsp",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/chatbot-ui\\/index\\.html",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "aefc4bcf47bfaa9cd5b72413009bf462545619664989b147cf05a1f5352b1918"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/chatbot-ui\\/runtime\\.3f3ee704d4a70f87\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0d9ca850368060da4f49864566dd29f1fb643c4a6703ad50b482d0b948c36ade"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/chatbot-ui\\/polyfills\\.3345b2575c6e0891\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e6966a0dc95c27b6067f096206586c27d7eb2ec8c8883f598e9cab92d2f47d6b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/chatbot-ui\\/main\\.b7200b6936a22ae6\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6785614857290393fb755c589f37fc115f6c3b164c417d4b803cbbdf0b23a7f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/chatbot-ui\\/styles\\.e4e04f56ad8f956c\\.css",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "eaf2389efbc56d3faaca83f920ae4f5aa95b3ab0f4614aeaeafc32aedf0051dd"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
+            ]
+        },
+        {
+            "rule": "gov\\.edgekey\\.net\\/bot-api\\/public\\/misc\\/ping",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.prd.marylandhealthconnection"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.marylandhealthconnection.gov",
+                    "resolved": "www.prd.marylandhealthconnection.gov.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marylandhealthconnection.gov",
+                "www.marylandhealthconnection.gov"
             ]
         },
         {
@@ -1509,23 +1872,25 @@
             ]
         },
         {
-            "rule": "gov\\.edgekey\\.net\\/siteActivity",
-            "cookies": 0,
+            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/2\\/i\\.gif",
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "iservprod.medicare"
+                "iservnonprod.medicare"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "api.medicare.gov",
-                    "resolved": "iservprod.medicare.gov.edgekey.net"
+                    "original": "tealium-collect.medicare.gov",
+                    "resolved": "iservnonprod.medicare.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1561,25 +1926,23 @@
             ]
         },
         {
-            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/2\\/i\\.gif",
-            "cookies": 0.0000137,
+            "rule": "gov\\.edgekey\\.net\\/siteActivity",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "iservnonprod.medicare"
+                "iservprod.medicare"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "tealium-collect.medicare.gov",
-                    "resolved": "iservnonprod.medicare.gov.edgekey.net"
+                    "original": "api.medicare.gov",
+                    "resolved": "iservprod.medicare.gov.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1588,7 +1951,7 @@
             ]
         },
         {
-            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/019cf051d87d0017183e4c5b2adb01078004d07000590",
+            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/019d62373cb1004716b8f1dc628001078004d07000590",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
@@ -1615,7 +1978,7 @@
             ]
         },
         {
-            "rule": "gov\\.edgekey\\.net\\/vdata\\/i\\.gif",
+            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/019d6553779e0012e87a33996b3301078001907000590",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
@@ -1626,14 +1989,14 @@
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "tealium-collect.medicare.gov",
+                    "original": "tealium-visitor-service.medicare.gov",
                     "resolved": "iservnonprod.medicare.gov.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
-            "type": "Image",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1661,33 +2024,6 @@
                 "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
             ],
             "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "medicare.gov",
-                "www.medicare.gov"
-            ]
-        },
-        {
-            "rule": "gov\\.edgekey\\.net\\/cmsgov\\/medicare-www\\/019cf360724b0019c159e4cc0b8f01078001907000590",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "iservnonprod.medicare"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "tealium-visitor-service.medicare.gov",
-                    "resolved": "iservnonprod.medicare.gov.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1806,32 +2142,29 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000151,
+    "cookies": 0.000157,
     "topInitiators": [
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.5882352941176471
+            "prevalence": 0.5294117647058824
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.23529411764705882
         },
         {
             "domain": "digitalgov.gov",
             "prevalence": 0.23529411764705882
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.11764705882352941
-        },
-        {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
+        "Script": 66,
         "Fetch": 10,
         "Preflight": 13,
-        "XHR": 15,
-        "Stylesheet": 10,
-        "Image": 28,
-        "Script": 48,
+        "XHR": 17,
+        "Stylesheet": 14,
+        "Image": 26,
+        "Document": 2,
         "Font": 2,
         "Ping": 4
     },
