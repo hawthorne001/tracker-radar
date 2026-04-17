@@ -7,42 +7,90 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "tracker"
+        "tracker",
+        "dual-pixelconnector",
+        "ipv4-pixelconnector"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "pixeltracker\\.co\\/pixel\\.js",
-            "cookies": 0.000101,
+            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "tracker"
             ],
             "apis": {
-                "Date.prototype.getTime": 1,
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "6dc201458d9413bd4eaa13822cb35c6cab9506174ff7065df702568da349b461"
+            ],
             "type": "Script",
             "firstPartyCookies": {
                 "ga_dl": {
                     "ttl": null,
-                    "length": 98,
-                    "prevalence": 0.00010086746015735324,
+                    "length": 99,
+                    "prevalence": 0.00020177562550443906,
                     "uniqueness": 1
                 },
                 "ga_gtm": {
                     "ttl": null,
-                    "length": 98,
-                    "prevalence": 0.00010086746015735324,
+                    "length": 99,
+                    "prevalence": 0.00020177562550443906,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realtruck.com",
+                "www.revzilla.com"
+            ]
+        },
+        {
+            "rule": "pixeltracker\\.co\\/validate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dual-pixelconnector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "10079cb83157b390cec8780b009d77acde937bb3f9b4dad0d30f7e118c9a819e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realtruck.com",
+                "www.revzilla.com"
+            ]
+        },
+        {
+            "rule": "pixeltracker\\.co\\/update",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ipv4-pixelconnector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "40c16b80ff375bbe4fe0eea3612862fb787771cfd113b2618e3e58a44e67a418"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "realtruck.com",
@@ -52,15 +100,20 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.75
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 4
     },
     "nameservers": [
         "seth.ns.cloudflare.com",

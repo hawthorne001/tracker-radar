@@ -7,13 +7,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
@@ -23,11 +24,11 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 2,
-                "Date.prototype.getTime": 2
+                "console.memory": 3,
+                "Date.prototype.getTime": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
@@ -36,8 +37,57 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gamefound.com",
                 "homeservice24.ch",
                 "www.litcharts.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "3180a4b55acc5e673704b196e33c233a0e7c821c13ffffd1349f604a902880be",
+                "ec462b050e186f1b9bf833a11633c99e712757caae5db59cae32b65ff7ff14a6",
+                "171c9949a898d8d708ecab14f6602c23095645e335bdb9c75c5d52b91a824f33"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "local.ch",
+                "www.local.ch",
+                "www.sigsauer.com",
+                "www.spglobal.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "local.ch",
+                "www.local.ch",
+                "www.sigsauer.com",
+                "www.spglobal.com"
             ]
         },
         {
@@ -48,17 +98,17 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 4,
-                "Date.prototype.getTime": 4,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Navigator.prototype.plugins": 1
+                "console.memory": 5,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.plugins": 2
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "229a28cc86ef31dd3ce33153dc2782b219d0a5556f76bf971d9f08d964fb8d7a"
@@ -68,9 +118,41 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "raider.io",
+                "www.onbuy.com",
                 "www.sigsauer.com",
                 "www.spglobal.com",
                 "www.withings.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.0\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.plugins": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e06acb8a209f942bc7a320e57d4f9da1870dcc0715c1a3645dfffe05d00e8cf0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "corsair.com",
+                "www.elgato.com"
             ]
         }
     ],
@@ -80,18 +162,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.6470588235294118
         },
         {
             "domain": "ceros.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.23529411764705882
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.11764705882352941
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 10,
+        "XHR": 4,
+        "Preflight": 4
     },
     "nameservers": [
-        "tori.ns.cloudflare.com",
-        "simon.ns.cloudflare.com"
+        "simon.ns.cloudflare.com",
+        "tori.ns.cloudflare.com"
     ]
 }

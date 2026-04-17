@@ -4,13 +4,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.00171,
-    "sites": 17,
+    "prevalence": 0.00192,
+    "sites": 19,
     "subdomains": [
-        "vtrk"
+        "vtrk",
+        "pub",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "dv\\.tech\\/",
@@ -20,8 +22,8 @@
                 "vtrk"
             ],
             "apis": {},
-            "sites": 17,
-            "prevalence": 0.00171,
+            "sites": 19,
+            "prevalence": 0.00192,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -29,7 +31,7 @@
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00020167389331451045
+                "_li_dcdm_c": 0.0004044489383215369
             },
             "exampleSites": [
                 "rottentomatoes.com",
@@ -47,8 +49,72 @@
                 "www.nbcnews.com",
                 "www.newsweek.com",
                 "www.rottentomatoes.com",
+                "www.target.com",
+                "www.thedailybeast.com",
                 "www.timesofisrael.com",
                 "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "dv\\.tech\\/display-omnitag\\/21728514\\/DV503696\\/pub\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "37b72133efedd1853d4c5cc8e14a7a4661e6a2f12977bb509d4858bd0b74c182"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "target.com",
+                "www.target.com"
+            ]
+        },
+        {
+            "rule": "dv\\.tech\\/dvbm\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.webdriver": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "window.outerHeight": 2,
+                "window.outerWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.availWidth": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "Screen.prototype.orientation": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8bd537cf0728223bd0ce3a090dc8289dd61aa999e84d0b4b6e7ca52d4b028564"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "target.com",
+                "www.target.com"
             ]
         }
     ],
@@ -58,11 +124,16 @@
     "topInitiators": [
         {
             "domain": "doubleverify.com",
-            "prevalence": 1
+            "prevalence": 0.8636363636363636
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.13636363636363635
         }
     ],
     "types": {
-        "Ping": 17
+        "Ping": 19,
+        "Script": 4
     },
     "nameservers": [
         "ns-cloud-e1.googledomains.com",

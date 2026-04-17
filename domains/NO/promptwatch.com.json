@@ -4,14 +4,40 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "ingest"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "promptwatch\\.com\\/js\\/client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Navigator.prototype.languages": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "045b9f1fdb5ac91cc57dadb89b616ae10398f13882540b96085d3a14f0bfefeb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skadedyrbutikken.no",
+                "www.collinsdictionary.com",
+                "www.framer.com"
+            ]
+        },
         {
             "rule": "promptwatch\\.com\\/event",
             "cookies": 0,
@@ -20,17 +46,17 @@
                 "ingest"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
-            "responseHashes": [
-                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "collinsdictionary.com",
+                "skadedyrbutikken.no",
+                "www.collinsdictionary.com",
+                "www.framer.com",
                 "www.unihosted.com"
             ]
         },
@@ -42,15 +68,19 @@
                 "ingest"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "collinsdictionary.com",
+                "skadedyrbutikken.no",
+                "www.collinsdictionary.com",
+                "www.framer.com",
                 "www.unihosted.com"
             ]
         }
@@ -61,12 +91,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 3,
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "jack.ns.cloudflare.com",

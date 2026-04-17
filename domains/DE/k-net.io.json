@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "cdn.prod.kca.shield",
         "keycloak.prod.kca.shield"
@@ -85,9 +85,9 @@
                 "cdn.prod.kca.shield"
             ],
             "apis": {
-                "Document.cookie getter": 2,
-                "window.localStorage": 1,
                 "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 1
             },
             "sites": 2,
@@ -134,7 +134,7 @@
         {
             "rule": "k-net\\.io\\/auth\\/realms\\/ekv\\/protocol\\/openid-connect\\/login-status-iframe\\.html",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "keycloak.prod.kca.shield"
             ],
@@ -182,6 +182,48 @@
                 "klett.de",
                 "www.klett.de"
             ]
+        },
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c44082739fab730d0a25a2c8a4715ed4fad32fb452830016c78138c7d1cfe75"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
+        },
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
         }
     ],
     "categories": [],
@@ -196,12 +238,13 @@
     "types": {
         "Script": 4,
         "Document": 6,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "n04.public.auth.dns.services.k-net.io",
-        "n02.public.auth.dns.services.k-net.io",
         "n01.public.auth.dns.services.k-net.io",
-        "n03.public.auth.dns.services.k-net.io"
+        "n02.public.auth.dns.services.k-net.io",
+        "n03.public.auth.dns.services.k-net.io",
+        "n04.public.auth.dns.services.k-net.io"
     ]
 }
