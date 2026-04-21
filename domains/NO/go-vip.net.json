@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
         "nasa-tv",
-        "malwarebytes-api"
+        "malwarebytes-api",
+        "technologyreview-com"
     ],
     "cnames": [
         {
@@ -18,9 +19,13 @@
         {
             "original": "web-service.malwarebytes.com",
             "resolved": "malwarebytes-api.go-vip.net"
+        },
+        {
+            "original": "wp.technologyreview.com",
+            "resolved": "technologyreview-com.go-vip.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "go-vip\\.net\\/wp-json\\/nasaplus\\/v1\\/live",
@@ -30,8 +35,8 @@
                 "nasa-tv"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "plus.nasa.gov",
@@ -46,7 +51,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nasa.gov",
-                "science.nasa.gov",
                 "www.nasa.gov"
             ]
         },
@@ -74,6 +78,33 @@
                 "malwarebytes.com",
                 "www.malwarebytes.com"
             ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-json\\/irving\\/v1\\/data\\/feed_section",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "technologyreview-com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "wp.technologyreview.com",
+                    "resolved": "technologyreview-com.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "415156e16fc91881f5867ad538a665ce33aa22a985e77680c33b95dafa881852"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "technologyreview.com",
+                "www.technologyreview.com"
+            ]
         }
     ],
     "categories": [],
@@ -81,13 +112,14 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "ampproject.org",
+            "domain": "first party",
             "prevalence": 1
         }
     ],
     "types": {
-        "XHR": 3,
-        "Preflight": 2
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns1.go-vip.net",

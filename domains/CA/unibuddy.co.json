@@ -7,14 +7,37 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "gateway",
-        "api",
         "traffic-drivers",
-        "popcard"
+        "popcard",
+        "gateway",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "unibuddy\\.co\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "traffic-drivers",
+                "popcard"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stclaircollege.ca",
+                "www.uwinnipeg.ca"
+            ]
+        },
         {
             "rule": "unibuddy\\.co\\/graphql",
             "cookies": 0,
@@ -49,32 +72,9 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "c721726a0935ab619cbbb32525dc0b9b96ad0b7ac354d2da53895849269a5f6a"
+                "e290b9ecdcaa30ca42caee34dd3d8685fae51ce9c6d62c0fc2619d71cfae802c"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "stclaircollege.ca",
-                "www.uwinnipeg.ca"
-            ]
-        },
-        {
-            "rule": "unibuddy\\.co\\/cdn-cgi\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "traffic-drivers",
-                "popcard"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -97,9 +97,9 @@
         }
     ],
     "types": {
+        "XHR": 2,
         "Preflight": 2,
-        "Fetch": 2,
-        "XHR": 2
+        "Fetch": 2
     },
     "nameservers": [
         "noel.ns.cloudflare.com",

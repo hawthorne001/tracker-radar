@@ -8,7 +8,8 @@
     "sites": 9,
     "subdomains": [
         "hb",
-        "sdk"
+        "sdk",
+        "cs"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -27,8 +28,7 @@
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "57810c2fcd12795c648516e0c218765c4e855e72c4ee40d0f03d1ab9707ca8eb",
-                "ddb010f59d13db3643cdcf7875858a496f009dd7e581125d1c039fc13964d4dc",
-                "49f900cd80ab1370e4c83559908f4f0fc97efb935b71d2e96fe13838f76b9f72",
+                "9bd454720eeb15a367be9005ee02967aa6b471bf1e6254239eb499546e2b9eba",
                 "e6df1ced845c9831a1116b486e5b81bfee8f807f90fd91948bdc5608c5136c03"
             ],
             "type": "Fetch",
@@ -37,27 +37,29 @@
             "exampleSites": [
                 "hollowknight.wiki",
                 "soaps.sheknows.com",
+                "stylecaster.com",
                 "www.astrology.com",
                 "www.dictionary.com",
                 "www.frenchdictionary.com",
                 "www.horoscope.com",
-                "www.snbforums.com",
                 "www.spanishdict.com",
                 "www.thesaurus.com"
             ]
         },
         {
             "rule": "shemediax\\.com\\/cs-config\\/cs\\.html",
-            "cookies": 0,
+            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "sdk"
             ],
             "apis": {
-                "Navigator.prototype.cookieEnabled": 1
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "f48a6d82840fe8d6952bd2570b2f0a960b42bba1b10d4786b0564f04be87fa19"
@@ -65,45 +67,89 @@
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0003026023804720597
+                "lotame_domain_check": 0.00010088781275221953
             },
             "exampleSites": [
-                "astrology.com",
-                "www.horoscope.com",
-                "www.snbforums.com",
-                "www.thesaurus.com"
+                "hollowknight.wiki",
+                "www.astrology.com",
+                "www.frenchdictionary.com"
+            ]
+        },
+        {
+            "rule": "shemediax\\.com\\/list",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "268eab9ebed60b8e292899d6772aa169ba1d19e2d84a86539b054fd0a4289f0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010088781275221953
+            },
+            "exampleSites": [
+                "hollowknight.wiki",
+                "www.astrology.com",
+                "www.frenchdictionary.com"
+            ]
+        },
+        {
+            "rule": "shemediax\\.com\\/cs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollowknight.wiki",
+                "www.frenchdictionary.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000303,
     "topInitiators": [
         {
             "domain": "blogherads.com",
-            "prevalence": 0.38461538461538464
-        },
-        {
-            "domain": "relevant-digital.com",
-            "prevalence": 0.23076923076923078
+            "prevalence": 0.4
         },
         {
             "domain": "sdcdns.com",
-            "prevalence": 0.23076923076923078
+            "prevalence": 0.3333333333333333
         },
         {
-            "domain": "script.ac",
-            "prevalence": 0.15384615384615385
+            "domain": "relevant-digital.com",
+            "prevalence": 0.26666666666666666
         }
     ],
     "types": {
         "Fetch": 9,
-        "Document": 4
+        "Document": 3,
+        "Script": 3,
+        "Image": 2
     },
     "nameservers": [
         "ns-650.awsdns-17.net",
-        "ns-1192.awsdns-21.org",
+        "ns-436.awsdns-54.com",
         "ns-1723.awsdns-23.co.uk",
-        "ns-436.awsdns-54.com"
+        "ns-1192.awsdns-21.org"
     ]
 }

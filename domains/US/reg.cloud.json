@@ -6,39 +6,48 @@
     ],
     "prevalence": 0.00000684,
     "sites": 1,
-    "subdomains": [],
+    "subdomains": [
+        "cloudvps-graphql-server.svc"
+    ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "reg\\.cloud\\/apps\\/wireguard",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
-            "subdomains": [],
-            "apis": {
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.userAgent": 2
-            },
+            "rule": "reg\\.cloud\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cloudvps-graphql-server.svc"
+            ],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {
-                "__jhash_": {
-                    "ttl": 1800,
-                    "length": 3,
-                    "prevalence": 0.000013672409078479628,
-                    "uniqueness": 0.5
-                },
-                "__jua_": {
-                    "ttl": 1800,
-                    "length": 164,
-                    "prevalence": 0.000013672409078479628,
-                    "uniqueness": 0.5
-                }
-            },
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reg.ru",
+                "www.reg.ru"
+            ]
+        },
+        {
+            "rule": "reg\\.cloud\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cloudvps-graphql-server.svc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "00a4e15ec56c87233e6bf337e34fb0bd1ea4a86f951fe1b39a4ee54d424f36af"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "reg.ru",
@@ -49,8 +58,19 @@
     "categories": [],
     "performance": {},
     "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.95
+        },
+        {
+            "domain": "reg.cloud",
+            "prevalence": 0.05
+        }
+    ],
     "types": {
-        "Document": 2
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns2.reg.ru",

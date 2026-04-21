@@ -7,14 +7,14 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
         "embed",
-        "api"
+        "tracking"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "typeform\\.com\\/next\\/embed\\.js",
@@ -24,11 +24,12 @@
                 "embed"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 1,
                 "window.localStorage": 1,
                 "Date.prototype.getTime": 1
             },
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "ac139271e7e266cfbb1ab4bdb26da10109ac99271d099783beebbf9191da6bf9"
@@ -38,55 +39,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nationalgrid.co.uk",
-                "powercuts.nationalgrid.co.uk",
+                "www.bangor.ac.uk",
                 "www.designmynight.com",
                 "www.eastriding.gov.uk",
-                "www.inghams.co.uk",
                 "www.victronenergy.com"
             ]
         },
         {
-            "rule": "typeform\\.com\\/single-embed\\/01KG4RHBY0T3G92P299RSNN6F3",
+            "rule": "typeform\\.com\\/v1\\/track",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "tracking"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8778e8bdf2101091894838c061912703ac2d38cd5469776a71d53513225d0731"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nationalgrid.co.uk",
-                "powercuts.nationalgrid.co.uk"
-            ]
-        },
-        {
-            "rule": "typeform\\.com\\/next\\/css\\/sidetab\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "embed"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ff1dde396f617ab96902243b02f0d03aaaad4b9202d56b00db5c6102bb583acb"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nationalgrid.co.uk",
-                "powercuts.nationalgrid.co.uk"
+                "bangor.ac.uk",
+                "www.bangor.ac.uk"
             ]
         }
     ],
@@ -96,17 +74,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8181818181818182
+            "prevalence": 0.4666666666666667
+        },
+        {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.4
         },
         {
             "domain": "korfo.org",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
-        "Script": 6,
-        "Fetch": 2,
-        "Stylesheet": 2
+        "Script": 5,
+        "XHR": 2
     },
     "nameservers": [
         "ns-14.awsdns-01.com",

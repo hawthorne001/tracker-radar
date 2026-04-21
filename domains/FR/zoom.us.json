@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000404,
+    "sites": 4,
     "subdomains": [
         "us01ccistatic",
         "us01campaign",
         "us01apizva",
-        "us01cciapi"
+        "us01cciapi",
+        "www",
+        "st1"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -54,14 +56,14 @@
         },
         {
             "rule": "zoom\\.us\\/v1\\/live-sdk-version\\/fast",
-            "cookies": 0.000303,
+            "cookies": 0.000404,
             "fingerprinting": 0,
             "subdomains": [
                 "us01campaign"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "d460d33df766c9444934be4e513d9b5d02858068e721cc2ba1ede46d18fb057a"
@@ -72,7 +74,8 @@
             "exampleSites": [
                 "broadcom.com",
                 "support.zoom.com",
-                "www.narbonneaccessoires.fr"
+                "www.narbonneaccessoires.fr",
+                "www.zoom.com"
             ]
         },
         {
@@ -83,23 +86,23 @@
                 "us01ccistatic"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.platform": 3,
-                "Navigator.prototype.product": 3,
-                "Navigator.prototype.maxTouchPoints": 3,
-                "Navigator.prototype.language": 3,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
-                "NavigatorUAData.prototype.brands": 3,
-                "window.localStorage": 3,
-                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.product": 4,
+                "Navigator.prototype.maxTouchPoints": 4,
+                "Navigator.prototype.language": 4,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 4,
+                "NavigatorUAData.prototype.brands": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
                 "Date.prototype.getTime": 2,
                 "Date.prototype.getTimezoneOffset": 1,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "URL.createObjectURL": 1
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "URL.createObjectURL": 2
             },
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "f7f953866dafb9086e3af27c6a4b58122e121f86ce265d1a9e1db4de344dbdae"
@@ -110,6 +113,27 @@
             "exampleSites": [
                 "broadcom.com",
                 "support.zoom.com",
+                "www.narbonneaccessoires.fr",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us01apizva"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadcom.com",
                 "www.narbonneaccessoires.fr"
             ]
         },
@@ -180,26 +204,6 @@
             ]
         },
         {
-            "rule": "zoom\\.us\\/v1\\/websdk\\/version",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us01apizva"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "broadcom.com",
-                "www.narbonneaccessoires.fr"
-            ]
-        },
-        {
             "rule": "zoom\\.us\\/v1\\/livesdk\\/info",
             "cookies": 0.000202,
             "fingerprinting": 0,
@@ -222,13 +226,79 @@
             ]
         },
         {
-            "rule": "zoom\\.us\\/user\\/anonymous\\/telemetry",
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/chat-client\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "399f6c99759f365840f8f5f23d466696dff1183c271d49a9fb65396ef8dc3249"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/third_party_cookie_check\\.html",
             "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f9bd103a2d3f0deb933a020cea0168f532f960c7ce8090d131de1bb428ad2433"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty_test": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020222446916076846,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/user\\/anonymous\\/telemetry",
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "26114b8971748f9c7d47fa45f30496e6be1575c041b8da05ae1203759c5d9367"
@@ -238,7 +308,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.narbonneaccessoires.fr"
+                "www.narbonneaccessoires.fr",
+                "www.zoom.com"
             ]
         },
         {
@@ -249,10 +320,10 @@
                 "us01ccistatic"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 3
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "f61539ca7102458810e354506150fcbabe974037de765e3cd0249d99951f24bc"
@@ -262,37 +333,82 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "zoom.com",
-                "www.narbonneaccessoires.fr"
+                "www.narbonneaccessoires.fr",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/homepage\\/20260413-1449\\/primary\\/dist\\/assets\\/zoommedia\\/aic-video\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "st1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "040a4878b30f3ac8b616fe2ba9dcb120520354e2aaefe9ff23d34bfe176a7ca9"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000303,
+    "cookies": 0.000404,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
-        },
-        {
-            "domain": "zoom_support_header_v2.js",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.9365079365079365
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "zoom_support_header_v2.js",
+            "prevalence": 0.015873015873015872
         }
     ],
     "types": {
-        "Script": 5,
-        "Fetch": 13,
+        "Script": 8,
+        "Fetch": 15,
         "Preflight": 2,
-        "Document": 2
+        "Document": 5,
+        "XHR": 2,
+        "Media": 2
     },
     "nameservers": [
         "ns-1137.awsdns-14.org",
-        "ns-888.awsdns-47.net",
+        "ns-1772.awsdns-29.co.uk",
         "ns-387.awsdns-48.com",
-        "ns-1772.awsdns-29.co.uk"
+        "ns-888.awsdns-47.net"
     ]
 }

@@ -8,7 +8,8 @@
     "sites": 3,
     "subdomains": [
         "assets",
-        "events"
+        "events",
+        "iaw-events"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -38,7 +39,7 @@
                 "Navigator.prototype.webdriver": 2,
                 "Navigator.prototype.deviceMemory": 2,
                 "Navigator.prototype.hardwareConcurrency": 2,
-                "window.localStorage": 2
+                "window.localStorage": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -49,27 +50,27 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_sp_ses.103f": {
-                    "ttl": 1810,
+                    "ttl": 1815,
                     "length": 1,
-                    "prevalence": 0.00010067451927917044,
+                    "prevalence": 0.00010059350165979277,
                     "uniqueness": 1
                 },
                 "_sp_id.103f": {
-                    "ttl": 63072010,
+                    "ttl": 63072015,
                     "length": 103,
-                    "prevalence": 0.00010067451927917044,
+                    "prevalence": 0.00010059350165979277,
                     "uniqueness": 1
                 },
                 "_sp_ses.8005": {
-                    "ttl": 1810,
+                    "ttl": 1814,
                     "length": 1,
-                    "prevalence": 0.00010067451927917044,
+                    "prevalence": 0.00010059350165979277,
                     "uniqueness": 1
                 },
                 "_sp_id.8005": {
-                    "ttl": 63072010,
+                    "ttl": 63072014,
                     "length": 152,
-                    "prevalence": 0.00010067451927917044,
+                    "prevalence": 0.00010059350165979277,
                     "uniqueness": 1
                 }
             },
@@ -105,6 +106,26 @@
         },
         {
             "rule": "polarbyte\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cambridge.org",
+                "www.collinsdictionary.com"
+            ]
+        },
+        {
+            "rule": "polarbyte\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
@@ -126,22 +147,24 @@
             ]
         },
         {
-            "rule": "polarbyte\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "rule": "polarbyte\\.com\\/hcd\\/save_event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "events"
+                "iaw-events"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cambridge.org",
+                "collinsdictionary.com",
                 "www.collinsdictionary.com"
             ]
         }
@@ -157,8 +180,8 @@
     ],
     "types": {
         "Script": 4,
-        "XHR": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "XHR": 4
     },
     "nameservers": [
         "tim.ns.cloudflare.com",

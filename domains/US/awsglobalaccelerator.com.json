@@ -4,10 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000957,
-    "sites": 14,
+    "prevalence": 0.000116,
+    "sites": 17,
     "subdomains": [
         "a150b6687c4294b2a",
+        "abfdbf7d07a061749",
+        "ae0bb45fd80a86dcb",
+        "a1c2491b599f8b798",
         "a4a0fc20005d06613",
         "ab50c11a81c4fa41b"
     ],
@@ -23,9 +26,21 @@
         {
             "original": "apis-vid.spectrum.net",
             "resolved": "a4a0fc20005d06613.awsglobalaccelerator.com"
+        },
+        {
+            "original": "nvccmultisvc.nvidia.com",
+            "resolved": "abfdbf7d07a061749.awsglobalaccelerator.com"
+        },
+        {
+            "original": "wss.toychats.com",
+            "resolved": "a1c2491b599f8b798.awsglobalaccelerator.com"
+        },
+        {
+            "original": "wsv3.fansly.com",
+            "resolved": "ae0bb45fd80a86dcb.awsglobalaccelerator.com"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "awsglobalaccelerator\\.com\\/integral\\/web\\/pointsCashRule\\/getRule",
@@ -80,6 +95,63 @@
             ]
         },
         {
+            "rule": "awsglobalaccelerator\\.com\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "abfdbf7d07a061749"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "nvccmultisvc.nvidia.com",
+                    "resolved": "abfdbf7d07a061749.awsglobalaccelerator.com"
+                }
+            ],
+            "responseHashes": [
+                "2427982a3f1dffe92e5687a9c1995a0027a9578674ac1f8c4c00d86ac93a7991"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nvidia.com",
+                "docs.nvidia.com"
+            ]
+        },
+        {
+            "rule": "awsglobalaccelerator\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ae0bb45fd80a86dcb",
+                "a1c2491b599f8b798"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "wsv3.fansly.com",
+                    "resolved": "ae0bb45fd80a86dcb.awsglobalaccelerator.com"
+                },
+                {
+                    "original": "wss.toychats.com",
+                    "resolved": "a1c2491b599f8b798.awsglobalaccelerator.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fansly.com",
+                "www.toychats.com"
+            ]
+        },
+        {
             "rule": "awsglobalaccelerator\\.com\\/tdcs\\/public\\/inform",
             "cookies": 0,
             "fingerprinting": 0,
@@ -121,7 +193,7 @@
                 }
             ],
             "responseHashes": [
-                "0e26968c9b0df0c8231e70d2f471af8868142c0938f1c5e9d59c45d6a5f6f9ae"
+                "8010bde9632e59ba83e1a36c7e54293766b63c6acfb91b19084f6ec4b4758a23"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -164,11 +236,11 @@
     "cookies": 0.0000342,
     "topInitiators": [
         {
-            "domain": "d4j85rjepgcta.cloudfront.net",
+            "domain": "reo.dev",
             "prevalence": 0.3333333333333333
         },
         {
-            "domain": "djwmpmz818tx4.cloudfront.net",
+            "domain": "d4j85rjepgcta.cloudfront.net",
             "prevalence": 0.3333333333333333
         },
         {
@@ -178,7 +250,8 @@
     ],
     "types": {
         "Preflight": 4,
-        "Fetch": 2,
+        "Fetch": 4,
+        "WebSocket": 2,
         "XHR": 2,
         "Script": 2
     },

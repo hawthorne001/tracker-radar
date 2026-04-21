@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
         "rs",
+        "rs.eu1",
+        "edge.eu1",
         "edge"
     ],
     "cnames": [],
@@ -23,60 +25,125 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rs"
+                "rs",
+                "rs.eu1"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "b5c76ed969785e2b4c203398ade439e80d7017439b707e8fafc77e5ed38aad2a",
-                "c54da7aca1d533d307dcd97b09ae2a0b14cbdfbcd7598f0cf2fddd0755a0bc10"
+                "9bdfb726ab41ccd6bf83e556528635e02c6e7c6cd03d1b3da544353d82d2f7dc",
+                "8516be47d59ffffdb1143d0a56dda13d0d3ab81508e991ceb7d90bc649e904bb",
+                "aa245a65e39810f59a6619e33a8ca3618cae216f01500fa5aec4cd0323ad8855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "reolink.com",
+                "sports.tipico.de",
                 "www.findagrave.com",
-                "www.target.com"
+                "www.m-net.de"
             ]
         },
         {
             "rule": "fullstory\\.com\\/s\\/fs\\.js",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 2,
             "subdomains": [
+                "edge.eu1",
                 "edge"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.vendor": 2,
-                "window.localStorage": 2,
-                "PerformanceTiming.prototype.navigationStart": 2,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "window.sessionStorage": 1,
-                "Performance.prototype.memory": 1,
-                "window.matchMedia(\"prefers-color-scheme\")": 1,
-                "Navigator.prototype.languages": 1,
-                "window.innerWidth": 1,
-                "window.innerHeight": 1,
-                "Document.cookie getter": 1
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.vendor": 4,
+                "Document.cookie getter": 3,
+                "window.localStorage": 4,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "window.sessionStorage": 3,
+                "Document.cookie setter": 2,
+                "Performance.prototype.memory": 3,
+                "window.matchMedia(\"prefers-color-scheme\")": 3,
+                "Navigator.prototype.languages": 3,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "e4804c88c9c8ca75686296928d7c1e814b73d324afd707232d4dd2e41703baa2"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "fs_lua": {
+                    "ttl": 1826,
+                    "length": 15,
+                    "prevalence": 0.00020134903855834087,
+                    "uniqueness": 1
+                },
+                "fs_uid": {
+                    "ttl": 31536022,
+                    "length": 116,
+                    "prevalence": 0.00020134903855834087,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tipico.de",
+                "www.findagrave.com",
+                "www.klarna.com",
+                "www.m-net.de",
+                "www.netgear.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/integrations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df91bfb03e92bcb57146f937510908acc14abb68da6f648b45fe0c1f7a52803f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tipico.de",
+                "www.m-net.de"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/bundle\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5db7f0f122fb26d29d10646e6a67304ff6f61e8260695b6331255c52fa37d29b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "findagrave.com",
-                "www.klarna.com",
-                "www.netgear.com"
+                "www.m-net.de"
             ]
         }
     ],
@@ -85,29 +152,37 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
-        {
-            "domain": "first party",
-            "prevalence": 0.5
-        },
         {
             "domain": "googletagmanager.com",
             "prevalence": 0.3333333333333333
         },
         {
+            "domain": "instana.io",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
             "domain": "optimizely.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "XHR": 3,
-        "Script": 3
+        "XHR": 6,
+        "Script": 7
     },
     "nameservers": [
         "ns-cloud-d1.googledomains.com",
         "ns-cloud-d2.googledomains.com",
-        "ns-cloud-d4.googledomains.com",
-        "ns-cloud-d3.googledomains.com"
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
     ]
 }

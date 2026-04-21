@@ -7,10 +7,13 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "api"
+        "api",
+        "cdn.notino",
+        "collector-gb-2.notino",
+        "collector-gb.notino"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -58,6 +61,112 @@
                 "naturaldispensary.co.uk",
                 "www.lsengineers.co.uk"
             ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/gb\\/v1\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.notino"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "66459328fa5dd1d81bf933a0b351e36a74d2a0f024b9c6a735f4f9cd7d62527e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notino.co.uk",
+                "www.notino.co.uk"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/api\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-gb-2.notino"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notino.co.uk",
+                "www.notino.co.uk"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/api\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-gb-2.notino"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notino.co.uk",
+                "www.notino.co.uk"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-gb.notino"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notino.co.uk",
+                "www.notino.co.uk"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-gb.notino"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notino.co.uk",
+                "www.notino.co.uk"
+            ]
         }
     ],
     "categories": [],
@@ -66,16 +175,18 @@
     "topInitiators": [
         {
             "domain": "luigisbox.tech",
-            "prevalence": 0.75
+            "prevalence": 0.6
         },
         {
             "domain": "first party",
-            "prevalence": 0.25
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Preflight": 3,
-        "XHR": 3
+        "Preflight": 7,
+        "XHR": 3,
+        "Script": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-72.awsdns-09.com",
