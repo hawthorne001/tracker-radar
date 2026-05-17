@@ -11,6 +11,7 @@
     "sites": 2,
     "subdomains": [
         "www",
+        "gx-target-experiments-frontend-api.gx",
         "sdk"
     ],
     "cnames": [],
@@ -18,7 +19,7 @@
     "resources": [
         {
             "rule": "nvidia\\.com\\/auth\\/hints\\/",
-            "cookies": 0.000101,
+            "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -53,7 +54,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1c9fadeef3c73d6a4bdc6ec02f81d57e1a3c4c8447c8bed2ad0c5d3c6bcfdaa5"
+                "7ebfc4e8455ce70cec0b3d52ee5603d50e4090b94b75f0ff150453d13986e9e6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -81,6 +82,48 @@
                 "757d12d538134f94ab72d5a10ecf6afa6f6b4f55fac445d0dd28301e7ab9727f"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geforcenow.com",
+                "play.geforcenow.com"
+            ]
+        },
+        {
+            "rule": "nvidia\\.com\\/cloudvariables\\/v3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gx-target-experiments-frontend-api.gx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geforcenow.com",
+                "play.geforcenow.com"
+            ]
+        },
+        {
+            "rule": "nvidia\\.com\\/cloudvariables\\/v3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gx-target-experiments-frontend-api.gx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "127571c73f03378f43cef32a2b5d95db9b9e0012bac26a20800d0b299adb99d5"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -152,13 +195,11 @@
         {
             "rule": "nvidia\\.com\\/gfn\\/client-sdk\\/1\\.1\\.29\\/overrides-reader\\/overrides-reader\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "sdk"
             ],
-            "apis": {
-                "window.localStorage": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -176,20 +217,22 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.5555555555555556
         },
         {
             "domain": "directsamenstellen.nl",
-            "prevalence": 0.5
+            "prevalence": 0.4444444444444444
         }
     ],
     "types": {
         "Document": 4,
-        "Script": 8
+        "Script": 8,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns5.dnsmadeeasy.com",

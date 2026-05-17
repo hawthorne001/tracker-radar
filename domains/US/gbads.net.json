@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
+    "prevalence": 0.0000411,
     "sites": 6,
     "subdomains": [
         "grapeshot-goldbach.prod",
-        "goldlayer-api.prod"
+        "goldlayer-api.prod",
+        "logtunnel.prod"
     ],
     "cnames": [
         {
             "original": "gs-goldbach.da-services.ch",
             "resolved": "grapeshot-goldbach.prod.gbads.net"
+        },
+        {
+            "original": "l.da-services.ch",
+            "resolved": "logtunnel.prod.gbads.net"
         }
     ],
     "fingerprinting": 0,
@@ -27,7 +32,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000342,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "gs-goldbach.da-services.ch",
@@ -35,9 +40,7 @@
                 }
             ],
             "responseHashes": [
-                "3262e0a02b77d8871a554e4b7daab20e7597af541ecc791eaea04ac105366cd4",
-                "b83ae28f640e4c20e2d8fd2b2e4a1d0736c2efc320e800c1d6c111fcfa1ae9ba",
-                "bdd8228db4f64926fca55503dea486e775b3287ff9b423301bb7f32092fcaf71"
+                "3262e0a02b77d8871a554e4b7daab20e7597af541ecc791eaea04ac105366cd4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -58,18 +61,20 @@
                 "goldlayer-api.prod"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bazonline.ch",
+                "24heures.ch",
+                "www.bazonline.ch",
                 "www.bernerzeitung.ch",
                 "www.derbund.ch",
-                "www.tagesanzeiger.ch"
+                "www.tagesanzeiger.ch",
+                "www.tdg.ch"
             ]
         },
         {
@@ -80,22 +85,52 @@
                 "goldlayer-api.prod"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [],
             "responseHashes": [
-                "3a968ffc60b1dd1040be894f1b10cc7bd175de44e350517e8213543ac45714f2",
-                "3767981f44edfe75de469be72e9c8edc8c553304a88de7f4dba46a7413c904dc",
-                "26fe064ff95d7e9c501d717e58fbe34486cf3de6ff685a32a9d5d03e0b53cf5a"
+                "45ecf1ffe94c5d85e985466fe508d90b730a17a645c1bae2f3560039a2757eda",
+                "6d8bbc64a145cb8266a57b174f7064d7129d5548951a59a43b41af1abe607fd8",
+                "a2d7988acd102f84b4785291a674d41f93131af46692d22dcffb46eaa7b261c4",
+                "47e8f3c23965e0f119548bab8d659cdcd93f811c36ae920e4db840f4554e918b",
+                "2da242fde1e500f1a3cfd6520988ae11cb9c16510b6cdddc06001a184a76c4a6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bazonline.ch",
+                "24heures.ch",
+                "www.bazonline.ch",
                 "www.bernerzeitung.ch",
                 "www.derbund.ch",
                 "www.tagesanzeiger.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logtunnel.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "l.da-services.ch",
+                    "resolved": "logtunnel.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tdg.ch",
                 "www.tdg.ch"
             ]
         }
@@ -106,18 +141,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 5,
-        "Preflight": 4,
-        "Fetch": 5
+        "XHR": 7,
+        "Preflight": 6,
+        "Fetch": 6
     },
     "nameservers": [
+        "ns-178.awsdns-22.com",
         "ns-1548.awsdns-01.co.uk",
-        "ns-1184.awsdns-20.org",
         "ns-741.awsdns-28.net",
-        "ns-178.awsdns-22.com"
+        "ns-1184.awsdns-20.org"
     ]
 }

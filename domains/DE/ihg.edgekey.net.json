@@ -12,15 +12,20 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "prod-external"
+        "prod-external",
+        "gigya"
     ],
     "cnames": [
         {
             "original": "apis.ihg.com",
             "resolved": "prod-external.ihg.edgekey.net"
+        },
+        {
+            "original": "identity.ihg.com",
+            "resolved": "gigya.ihg.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ihg\\.edgekey\\.net\\/members\\/v2\\/status",
@@ -75,23 +80,23 @@
             ]
         },
         {
-            "rule": "ihg\\.edgekey\\.net\\/rates\\/v2\\/categories",
-            "cookies": 0.000201,
+            "rule": "ihg\\.edgekey\\.net\\/sdk\\.config\\.get",
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "prod-external"
+                "gigya"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "apis.ihg.com",
-                    "resolved": "prod-external.ihg.edgekey.net"
+                    "original": "identity.ihg.com",
+                    "resolved": "gigya.ihg.edgekey.net"
                 }
             ],
             "responseHashes": [],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -104,8 +109,9 @@
     "performance": {},
     "cookies": 0.000101,
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

@@ -9,47 +9,77 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "etapi",
+        "etusapi",
         "etmarketsapis",
+        "offers",
         "geoapi"
     ],
     "cnames": [
-        {
-            "original": "etapi.indiatimes.com",
-            "resolved": "etapi.indiatimes.com.edgekey.net"
-        },
         {
             "original": "etmarketsapis.indiatimes.com",
             "resolved": "etmarketsapis.indiatimes.com.edgekey.net"
         },
         {
+            "original": "etusapi.indiatimes.com",
+            "resolved": "etusapi.indiatimes.com.edgekey.net"
+        },
+        {
             "original": "geoapi.indiatimes.com",
             "resolved": "geoapi.indiatimes.com.edgekey.net"
+        },
+        {
+            "original": "offers.indiatimes.com",
+            "resolved": "offers.indiatimes.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "indiatimes\\.com\\.edgekey\\.net\\/precos\\/entry-point-recommendations",
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "etapi"
+                "etusapi"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "etapi.indiatimes.com",
-                    "resolved": "etapi.indiatimes.com.edgekey.net"
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etusapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "92f9ba848f65fd2f1a0f16fc86a463fc660debe864016a3c29e5cf72d30887fd"
+                "790dadd225386043af55f3ddd14ff56b9b3d07525de87570e2cda4cfd9df7871"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -60,7 +90,7 @@
             ]
         },
         {
-            "rule": "indiatimes\\.com\\.edgekey\\.net\\/ET_Stats\\/gainers",
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/ET_Stats\\/getMarketBand",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -76,9 +106,34 @@
                 }
             ],
             "responseHashes": [
-                "6f140e407551ee0d230ded17fb88602a690a955d0f9a286de1139f98fa8198c0"
+                "2998e261b18b9273b2ca33d780dc1b37f8c116f90769b948ef189c47fb191416"
             ],
-            "type": "XHR",
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/offer-engine\\/api\\/v1\\/fetch-master-messages\\/et\\/web\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "offers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "offers.indiatimes.com",
+                    "resolved": "offers.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -88,7 +143,7 @@
         },
         {
             "rule": "indiatimes\\.com\\.edgekey\\.net\\/",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "geoapi"
@@ -116,7 +171,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "etimg.com",
@@ -124,8 +179,8 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 6,
         "Script": 2
     },
     "nameservers": []

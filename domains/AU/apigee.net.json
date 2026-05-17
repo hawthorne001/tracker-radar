@@ -12,13 +12,18 @@
     "prevalence": 0.000503,
     "sites": 5,
     "subdomains": [
+        "accor-group-prod-prod",
         "cisco-dsc-prod",
-        "mns-00.dn"
+        "flybuys-api-platform-prod"
     ],
     "cnames": [
         {
-            "original": "api.marksandspencer.com",
-            "resolved": "mns-00.dn.apigee.net"
+            "original": "ahsapi.flybuys.com.au",
+            "resolved": "flybuys-api-platform-prod.apigee.net"
+        },
+        {
+            "original": "api.accor.com",
+            "resolved": "accor-group-prod-prod.apigee.net"
         },
         {
             "original": "dsc.cisco.com",
@@ -28,28 +33,28 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "apigee\\.net\\/v1\\/netid",
-            "cookies": 0,
+            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "cisco-dsc-prod"
+                "accor-group-prod-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
+                "accor.com",
+                "all.accor.com"
             ]
         },
         {
@@ -69,7 +74,7 @@
                 }
             ],
             "responseHashes": [
-                "c5f58fcabcafed6a754d7bd41358dec6bc6bb3dd517476ab2d64927753e620f8"
+                "94184c1adad1578b3f5e7097913d4ca596229bbd4f41ae43fa978177c4597c7b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -80,19 +85,19 @@
             ]
         },
         {
-            "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
+            "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "mns-00.dn"
+                "cisco-dsc-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "api.marksandspencer.com",
-                    "resolved": "mns-00.dn.apigee.net"
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
                 }
             ],
             "responseHashes": [],
@@ -100,35 +105,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "marksandspencer.com",
-                "www.marksandspencer.com"
+                "cisco.com",
+                "www.cisco.com"
             ]
         },
         {
-            "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000201,
+            "rule": "apigee\\.net\\/digital\\/flybuysmicrositebff\\/v1\\/categories",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "mns-00.dn"
+                "flybuys-api-platform-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "api.marksandspencer.com",
-                    "resolved": "mns-00.dn.apigee.net"
+                    "original": "ahsapi.flybuys.com.au",
+                    "resolved": "flybuys-api-platform-prod.apigee.net"
                 }
             ],
             "responseHashes": [
-                "71b0dd3971fb186dcd10419e5eefdb8e68b6eca399cca46bbcbcbf6fbb3e7b10"
+                "94f1509fda277f28423d33286642ab91206a26b9325d6c222dfac0aba13957d2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "marksandspencer.com",
-                "www.marksandspencer.com"
+                "flybuys.com.au",
+                "experience.flybuys.com.au"
             ]
         }
     ],
@@ -136,36 +141,33 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.36363636363636365
-        },
-        {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.18181818181818182
-        },
-        {
-            "domain": "dynatrace.com",
-            "prevalence": 0.18181818181818182
-        },
-        {
-            "domain": "static-p46175-e229011.adobeaemcloud.com",
-            "prevalence": 0.09090909090909091
-        },
-        {
-            "domain": "cookielaw.org",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.25
+        },
+        {
+            "domain": "static-p46175-e229011.adobeaemcloud.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Preflight": 4,
+        "Document": 2,
         "Fetch": 2,
+        "Preflight": 2,
         "XHR": 2
     },
     "nameservers": [

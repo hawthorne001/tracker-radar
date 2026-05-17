@@ -10,26 +10,51 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "ad"
+        "ad",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "broadstreetads\\.com\\/zdisplay\\/65449\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "ad"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5c17d71f6297b9dc60a2727520ecdad9b8c8097d36cad7c3ec84cccd8deb04a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.stereonet.com"
+            ]
+        },
+        {
+            "rule": "broadstreetads\\.com\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "60cd4c6ed778762ba6df02463539c665bc138b4bab1e3203a6af106488835c7c"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -51,7 +76,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1210058e6c147a0f36b9945689fc4fc6f84067be7bec763644a66eea8539d422"
+                "c8bf4e09a0c2f9d2e6462bd6e3ff329a5ca67ea217b3463805ec19f02b5ff051"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -64,16 +89,18 @@
         {
             "rule": "broadstreetads\\.com\\/zdisplay\\/65450\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "ad"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1964a69e786ff8beb66091626fef8812bc9dd7509db141af4959d020b486fa17"
+                "ba18d11c1b933269fed5e2e866b5f3236f188da499109619c43ef331c0d64e7a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -90,23 +117,24 @@
     "topInitiators": [
         {
             "domain": "g594253006.co",
-            "prevalence": 0.6842105263157895
+            "prevalence": 0.5909090909090909
         },
         {
             "domain": "createjs.com",
-            "prevalence": 0.21052631578947367
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.22727272727272727
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 6,
+        "XHR": 2
     },
     "nameservers": [
         "jay.ns.cloudflare.com",
