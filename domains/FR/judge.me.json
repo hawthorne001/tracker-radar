@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000607,
-    "sites": 6,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "tracking.aws"
+        "tracking.aws",
+        "cdn",
+        "cdnwidget"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "judge\\.me\\/widgets\\/track_bulk_events",
@@ -23,22 +25,46 @@
                 "tracking.aws"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "20d770d3c25aba3f0ec73458c74ae991ff7b721d8dde660b75fe295ecdd76b19"
+                "a7ef577042315b0f4985a83514220932b5eed6b5821f0371a09e7f77b27f4a45",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dashboardsexcel.com",
                 "sonoff.tech",
                 "www.cobra.fr",
-                "www.duralex.com",
-                "www.fitnessboutique.fr"
+                "www.naturellement-bio.com",
+                "www.willemsefrance.fr"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/widget_preloader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn",
+                "cdnwidget"
+            ],
+            "apis": {
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e1abd3dc21f95572e4f5479ce5de9d4e6d0ec47f38042eb7a2fc292c074bfd8f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.anker.com"
             ]
         }
     ],
@@ -52,12 +78,13 @@
         }
     ],
     "types": {
-        "XHR": 5
+        "XHR": 4,
+        "Script": 2
     },
     "nameservers": [
         "ns1.dnsimple.com",
-        "ns4.dnsimple.com",
+        "ns2.dnsimple.com",
         "ns3.dnsimple.com",
-        "ns2.dnsimple.com"
+        "ns4.dnsimple.com"
     ]
 }

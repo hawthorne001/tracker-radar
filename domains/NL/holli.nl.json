@@ -4,46 +4,168 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "chatserver"
+        "chat",
+        "app",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "holli\\.nl\\/socket\\.io\\/",
+            "rule": "holli\\.nl\\/widget-loader\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "chatserver"
+                "chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b527a55cf52ee5300676cba2372d88ce30b478033b189da8ba74958cace015a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bungalowparkoverzicht.nl",
+                "www.opdeheuvelrug.nl"
+            ]
+        },
+        {
+            "rule": "holli\\.nl\\/holli-widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ff7b04ed8c8cc85a4471d5d6ed888540e944eed81e9dcfb172f76b92a2d5f440"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bungalowparkoverzicht.nl",
+                "www.opdeheuvelrug.nl"
+            ]
+        },
+        {
+            "rule": "holli\\.nl\\/api\\/chat\\/ai-channels\\/get-by-code",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "WebSocket",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bungalowparkoverzicht.nl",
-                "www.bungalowparkoverzicht.nl"
+                "www.opdeheuvelrug.nl"
+            ]
+        },
+        {
+            "rule": "holli\\.nl\\/api\\/chat\\/ai-channels\\/get-by-code",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6e4ae7776aa697289ef0d2fe82bff3eb7b731910e01aea556da863c33a3312bc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bungalowparkoverzicht.nl",
+                "www.opdeheuvelrug.nl"
+            ]
+        },
+        {
+            "rule": "holli\\.nl\\/translations\\/nl",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7924737b69a37bc1badbf5fcb8f79b81d99292d6c0a917cad4be33f40681a1c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bungalowparkoverzicht.nl",
+                "www.opdeheuvelrug.nl"
+            ]
+        },
+        {
+            "rule": "holli\\.nl\\/assets\\/notification\\.mp3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4d9bea904696abf786df25411c90afbced7a262dbe492b1354d1a1a296576617"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bungalowparkoverzicht.nl",
+                "www.opdeheuvelrug.nl"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "WebSocket": 2
+        "Script": 4,
+        "Preflight": 2,
+        "XHR": 4,
+        "Media": 2
     },
     "nameservers": [
         "ns1.thednscompany.com",

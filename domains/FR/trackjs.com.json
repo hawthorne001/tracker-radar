@@ -7,12 +7,19 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000706,
+    "sites": 7,
     "subdomains": [
-        "usage"
+        "usage",
+        "forwarder",
+        "cdn"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "trck.coomeet.com",
+            "resolved": "forwarder.trackjs.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -20,12 +27,18 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "usage"
+                "usage",
+                "forwarder"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
-            "cnames": [],
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [
+                {
+                    "original": "trck.coomeet.com",
+                    "resolved": "forwarder.trackjs.com"
+                }
+            ],
             "responseHashes": [
                 "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
             ],
@@ -35,8 +48,35 @@
             "exampleSites": [
                 "smallpdf.com",
                 "spicychat.ai",
+                "www.bigship.com",
+                "www.coomeet.com",
                 "www.filae.com",
                 "www.privatesportshop.fr",
+                "www.tradeinn.com"
+            ]
+        },
+        {
+            "rule": "trackjs\\.com\\/agent\\/v3\\/latest\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3169a71c8da47b07411a0edd846dde35975f54102b8b75c3b4563194e84ff506"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigship.com",
                 "www.tradeinn.com"
             ]
         }
@@ -47,11 +87,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "gstatic.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Image": 5
+        "Image": 7,
+        "Script": 2
     },
     "nameservers": [
         "dns1.registrar-servers.com",

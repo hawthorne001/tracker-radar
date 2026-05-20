@@ -4,24 +4,65 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "pgaa-assets"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "mvp\\.fan\\/web-sdk\\/js\\/hls\\.js@1\\.5\\.20\\.js",
+            "rule": "mvp\\.fan\\/web-sdk\\/0\\.14\\.3\\/index\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "sdk"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.localStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.storage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.connection": 2,
+                "Date.prototype.getTime": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "77dc61a4a9882c5fda91ca272eb9120045907106bb7a2afcff94e3f23837da33"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motogp.com",
+                "www.motogp.com"
+            ]
+        },
+        {
+            "rule": "mvp\\.fan\\/web-sdk\\/js\\/hls\\.js@1\\.5\\.20\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 1,
+                "URL.createObjectURL": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "df5455504c2131036b309b6f9a21a05540a965b619ffbe757c6afe44146ddc2f"
@@ -30,7 +71,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pgatour.com",
+                "motogp.com",
+                "www.pgachampionship.com",
+                "www.pgatour.com",
                 "www.premierleague.com"
             ]
         },
@@ -42,8 +85,8 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "d53b62adbf1a11141eda213c64b2922016a544808f511e2a5f031720f4bbcf29"
@@ -52,8 +95,32 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pgatour.com",
+                "motogp.com",
+                "www.pgachampionship.com",
+                "www.pgatour.com",
                 "www.premierleague.com"
+            ]
+        },
+        {
+            "rule": "mvp\\.fan\\/games\\/82261c4d50a370d548ed49b8d4c8cc95\\/57064579\\/150215843\\/game0\\.ts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pgaa-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "388cc73449b470d8687e23ac70757fdb27ca5cac77b1c3cd187849d263008bc1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pgachampionship.com",
+                "www.pgachampionship.com"
             ]
         },
         {
@@ -99,17 +166,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5263157894736842
+        },
+        {
+            "domain": "brightspotcdn.com",
+            "prevalence": 0.47368421052631576
         }
     ],
     "types": {
-        "Script": 4,
-        "Stylesheet": 2
+        "Script": 8,
+        "Stylesheet": 4,
+        "XHR": 2
     },
     "nameservers": [
         "ns4-03.azure-dns.info",
-        "ns3-03.azure-dns.org",
         "ns1-03.azure-dns.com",
-        "ns2-03.azure-dns.net"
+        "ns2-03.azure-dns.net",
+        "ns3-03.azure-dns.org"
     ]
 }

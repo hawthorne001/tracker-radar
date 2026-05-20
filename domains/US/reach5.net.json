@@ -7,16 +7,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000274,
-    "sites": 4,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
         "celine",
-        "fiba-production"
+        "fiba-production",
+        "sisley-paris-production"
     ],
     "cnames": [
         {
             "original": "auth.fiba.basketball",
             "resolved": "fiba-production.reach5.net"
+        },
+        {
+            "original": "auth.sisley-paris.com",
+            "resolved": "sisley-paris-production.reach5.net"
         },
         {
             "original": "login.celine.com",
@@ -31,11 +36,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "celine",
-                "fiba-production"
+                "fiba-production",
+                "sisley-paris-production"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
                 {
                     "original": "login.celine.com",
@@ -44,11 +50,16 @@
                 {
                     "original": "auth.fiba.basketball",
                     "resolved": "fiba-production.reach5.net"
+                },
+                {
+                    "original": "auth.sisley-paris.com",
+                    "resolved": "sisley-paris-production.reach5.net"
                 }
             ],
             "responseHashes": [
                 "23ab25c16638002bb137f45bfcb23ca00cac82dac664716903f7389dc4c795cb",
-                "58ac688495d5f1eca06e8328c06a90969d313cca0404cce9da0b2c9e97ba83b2"
+                "0f64c4d6d92760ea98bae26fc88420da24faead1c23f32902d630fac690f110f",
+                "305a2fb061db9852f3cd401d4a5fd24f70d23cad8a56a0436e3d65bf5d0eb9d7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -56,11 +67,46 @@
             "exampleSites": [
                 "celine.com",
                 "www.celine.com",
-                "www.fiba.basketball"
+                "www.fiba.basketball",
+                "www.sisley-paris.com"
             ]
         },
         {
             "rule": "reach5\\.net\\/identity\\/v1\\/config\\/consents",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "celine",
+                "sisley-paris-production"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "login.celine.com",
+                    "resolved": "celine.reach5.net"
+                },
+                {
+                    "original": "auth.sisley-paris.com",
+                    "resolved": "sisley-paris-production.reach5.net"
+                }
+            ],
+            "responseHashes": [
+                "621bce77420a42980e5825d8dcd1af5b9e6ed08de5e88f1a656cc94807f5d625",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "celine.com",
+                "www.celine.com",
+                "www.sisley-paris.com"
+            ]
+        },
+        {
+            "rule": "reach5\\.net\\/identity\\/v1\\/sso\\/data",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -75,10 +121,8 @@
                     "resolved": "celine.reach5.net"
                 }
             ],
-            "responseHashes": [
-                "621bce77420a42980e5825d8dcd1af5b9e6ed08de5e88f1a656cc94807f5d625"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -112,78 +156,29 @@
                 "celine.com",
                 "www.celine.com"
             ]
-        },
-        {
-            "rule": "reach5\\.net\\/identity\\/v1\\/sso\\/data",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "celine"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "login.celine.com",
-                    "resolved": "celine.reach5.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "celine.com",
-                "www.celine.com"
-            ]
-        },
-        {
-            "rule": "reach5\\.net\\/oauth\\/authorize",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fiba-production"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "auth.fiba.basketball",
-                    "resolved": "fiba-production.reach5.net"
-                }
-            ],
-            "responseHashes": [
-                "ec96deada710c45660bb9fa0de85afa60852676eab1d6153b4e103a90eb48ad7"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fiba.basketball",
-                "www.fiba.basketball"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "jsdelivr.net",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 7,
-        "Preflight": 2,
-        "Document": 2
+        "Fetch": 9,
+        "Preflight": 2
     },
     "nameservers": [
+        "ns-938.awsdns-53.net",
         "ns-1821.awsdns-35.co.uk",
         "ns-1418.awsdns-49.org",
-        "ns-938.awsdns-53.net",
         "ns-18.awsdns-02.com"
     ]
 }

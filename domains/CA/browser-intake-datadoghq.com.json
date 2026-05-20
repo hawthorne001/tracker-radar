@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00333,
-    "sites": 33,
+    "prevalence": 0.00374,
+    "sites": 37,
     "subdomains": [
         "rum",
-        "logs"
+        "session-replay",
+        "logs",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,88 +26,115 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 29,
-            "prevalence": 0.00293,
+            "sites": 32,
+            "prevalence": 0.00323,
             "cnames": [],
             "responseHashes": [
-                "2c53382f46c92ce893f79cbea556a461ccdebefc522227fa39916d077c369417",
-                "8883226e353ec8eee2daa935691c1c8073781f13971d8344418ec33470781f10",
-                "f5e76867432af1940eb70402bf964f087c65a53099774183d3fe8271969cc6c9",
-                "96aa11eccef922857b9d7c845cf82575e6bd3168ff7d56946d9d062e2f9645d5",
-                "173e08b5049ebc3d469f033460646cc2e0667d7f7e9f010a072a78ade2b7de83",
-                "9d497c5d0336b11dd803ff2cb62fb0a29839d5146413c77df9154d22753892b1",
-                "13af01e197b8abbd17e148006230b67bde976bc8194f9243ea02d2bae2955a2d",
-                "ecbce6b25ac40c6019468cbebc3ea079845b919361769aa98727b8a6b20ab593",
-                "07ca54ae901ce622599914aa31331dc333b249ea0a66dd949fa9b458d97479d7",
-                "fc3d50bf2bc9d8c7a010b446ad52c4edd05383c7753168e4ce45788c1ad58955",
-                "29bffc0fd1ceb4618b444381ac2f3b5d75ba74ce04c463cb2b87a92e379da5e8",
-                "0e79045a31aff50951b0f27361f7c8245bd8832473e47cabaa0354e3c87e78cc",
-                "dfe61b3ca47ed2fad846c5ea954434336e92700cbd39186c24f3c3653823fdc2",
-                "22a715516ea225c1be280f78bd5d6204f721b1601fa880a1de72c3a1ed4d296f",
-                "1ca534b737ef7acc37013e21dc27201515d7cf2f76f0a276d738380b843d2252",
-                "025288bf597ee119dce89b010df009b5667cec05f7c014cff16ea696e4d0475a",
-                "e046e92d534cfffa842f2ef7e9f2684d24c9f5f45681a22219fffff6fa5c03a2",
-                "52248e68021e667cec05b5d01de50e7df0af2f2bb4005e2aac61bf16a8f64815",
-                "00afb5146bfd084ba1696020652ddda2e73ee79fbc9deda357a2d77633f14f36",
-                "40612e847be4864c429488c24ada972327320ccb71c504a562faf6c21b8fab70",
-                "a785e67000796c70f4ca0f89a48cdd5a510d284457c40b6546477d9c3da0485e",
-                "af1dab52761654ddb60d9cd2e80cbb0627209a6fbfbfdca407f3e2fbf589fdb9",
-                "e5f0f30a6280b7e2092f9e7a4f335219628fec5381dbad2add76dba07d33c9a9",
-                "4c7f211bb972aebc9579d61045eacf6ad1e5a896aa4a84d7c6bbe788ffcae730",
-                "1000ea091a2163eef4631046b6a9532c101dbad84133fb60567742c5fdf99b0c",
-                "59dd7d2f332668561574393f498b23256e5a984e700a6aafe2b67f6a23272d0b",
-                "d7d39f9eccc3c86cc9cf0735b5d6242bfab86ccc9ed476015cc6bed3e2858e22"
+                "aa57904e91f67e1e829b656f03654ab649dde874ce1f5b7f235472aa2f4af28d",
+                "632a488d10b8d4a6e6d32f3b3d4396dc3958a04067b9445da13e4bca41c98a8f",
+                "2f84a78748a28b74995fa8ae19016d7359b0f72236f6ea61899e7a466b0c8e36",
+                "501d15c2d343f1fca1dc72edc9acb49338fcfa27fad7274d6ed10ac43be7ed85",
+                "2b24daf6e744f1723625f25b8eed29a68c7da02aae4341e97abf0f7200adeedb",
+                "cef30194a237399381b7fa4c1b76c90971495287d054c38e9c1ab8a1900e2e02",
+                "b56e64fdb6332a58202cd1eafd7d863cbc9d5ef242279e2f0cfa05098732aa58",
+                "9f61fb31ced3065b8a39874c5d6cf95e6f59e441e6b72fded6ffe39dde02eacb",
+                "ac45b9eaa3c64b657c3ea2ff6249bb29831c34d07944a0e3bf8378d4ff5b9471",
+                "73cd29c48b27f782bd4a6cecb38f7473659c77f1b8687947c309cb70c05dcfb1",
+                "1ddc72e47eee509266daf5ab63213f76c89516fc5dfe4c03149e24ec25e3a7a7",
+                "f48d45a1cc01d1cfa275f096875fbcbb115b3c61375194935151fc40306f538a",
+                "147890fc21e4b7c888aa80de377adaf2ddb9c1d70254fe0ccb9cc318991fc887",
+                "e5d7533f6fe9295603620a3c51b19ff9f96ea98a8c9726f2c223bf55c85f0bc6",
+                "efa1faef046a6216e889f04157045b28613935f9a4315498cf2b77cb113ad148",
+                "d0c57959b562c4b89cc5b81712461808c8fb985c0bf7b3695203231bc7103725",
+                "94701dcabeb4f1444762617fbca24606fbeb84caed7f031ec9652110ca8551f1",
+                "eba335ef2b7015e08d241ff7380573016c4fcd254c7019a40b2a6cce6fad7bdd",
+                "2be34ee314ec06aa173ae572266ec47a315adfa10e18bd55340a37ef3558bf79",
+                "44bf27a7128275207561711e666ab5ea6e2c9028242678d3651217be8e38b23b",
+                "6db62271d0980139e5ce4c307c6971dbf0524df8a718a58e4e732fdd375a4134",
+                "f2f0e205b0fe23b5d9e84536ee02ead0d623276edc5ffae6cfd2b5f23be2b94d",
+                "eb3f891fcfefd8582c1e2479e52266e2e4beab77ea62cf33f97dc0b575f1fd58",
+                "19d2b32e293bff6c3c1dd5413bb69743bfdc2a0d3dbb934757909dc1add7a11b",
+                "c8bf52f3b40c9cd3bf67ff058ca3104f256e69f99ac162a86ae147c4fe7d7e35",
+                "b82e7b7a34900e1b383792807bb0256aea8035dcf8c267be79382445b029dbbd",
+                "53d5347c304b158378e082fefc54446e37a1d9267e75484962dfa3ca8f418535",
+                "b1d301fe9fed4fcca6b22701fb65cb9393209b034518265e0bb5eb8dc496e56e",
+                "dcac29d18c8ef9df4a01d6a2f171c119257f1348aec87bf89eabb7516d9d5a1e",
+                "8bda0ce9cb2d974d0e33d8c9dd4863a942bbb609f3e15d366990256f861577c1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "vimeo.com",
-                "tech.yahoo.com",
-                "www.experian.com",
-                "www.sharkninja.com",
-                "www.hingehealth.com",
-                "www.sharkninja.ca",
-                "my.equifax.ca",
+                "picsart.com",
+                "shop.lululemon.com",
+                "hashicorp.com",
                 "health.yahoo.com",
-                "www.hulu.com",
-                "www.netgear.com",
-                "www.theskimm.com",
-                "scottsmiraclegro.com",
-                "asana.com",
-                "www.thescore.com",
+                "www.hingehealth.com",
+                "lululemon.com",
+                "www.crunchyroll.com",
+                "developer.hashicorp.com",
+                "www.marvel.com",
                 "www.spotrac.com",
                 "rivian.com",
-                "picsart.com",
-                "zapier.com",
-                "shop.lululemon.com",
-                "developer.hashicorp.com"
+                "www.clutch.ca",
+                "www.myheritage.com",
+                "www.cbinsights.com",
+                "www.nerdwallet.com",
+                "www.leagueoflegends.com",
+                "www.getmaple.ca",
+                "www.viki.com",
+                "www.heygen.com"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "session-replay"
+            ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "33bdec4021c1f76a6f452b123b0af63fdeeddda165d1a26074e56b62516481d9",
-                "a6c0b1b202aada401f67464a0508f1090dcae929867edc05ed36a8d5ab14da69",
-                "06a75b255af634b41a3d111f2c6c131ae2fafba95de95e4dcbc68563cecf0eae",
-                "dfb0bdef549d49ae0b888a915fcb84e6a6d07b0d58991223f31a6a9db53fb774"
+                "166de50677e8c2932396a03c5b41c159004b6445d985de9f220d4bc72265161c",
+                "50dbfefa1f150cf787673f2da0275dc1a14ff357e0c84ad285b1ac4fffa18e3e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staplescopyandprint.ca",
+                "www.deere.com",
+                "www.hingehealth.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e03177a41d32a2e2b8ef9fe563003d3f9651cb932bf6bb77b664a3461950d396",
+                "8f6a204f4e07000db9afda88ba6cb84ffdc761693ef9bdb8fde80480f53fc892",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "picsart.com",
-                "www.experian.com",
-                "www.hingehealth.com",
-                "www.nerdwallet.com",
-                "www.sharkninja.ca"
+                "outsideonline.com",
+                "www.bureauengros.com",
+                "www.burgerking.ca",
+                "www.tmz.com"
             ]
         },
         {
@@ -127,27 +156,71 @@
             ]
         },
         {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "5bf376f0eebe4ce84278c873ae1f3ee7a509bfa02a195499269c74440843bde8",
+                "272ac86f0efdb806771dd55cc16443ac584f2d281bed55a89ff2967e8560af10"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbinsights.com",
+                "www.deere.com",
+                "www.hingehealth.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1cc29419b9f37afeff15ba49e39a18f2ff8e33e9247bf9a79398dbc65dea7047",
+                "f78c64f741ed9e8ccb2ed9c7b172e9c7f603253bccee068ed4748ee770e56568"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "deere.com",
+                "www.getmaple.ca",
+                "www.hingehealth.com",
+                "www.silkandsnow.com"
+            ]
+        },
+        {
             "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "logs"
+                "csp-report"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "d7d16d1102b8be81e46ac58487ad3145e4e72539896e27eca6521e85a948581e",
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bureauengros.com",
-                "www.burgerking.ca",
-                "www.tmz.com"
+                "girlsway.com",
+                "www.playboyplus.com",
+                "www.rei.com"
             ]
         }
     ],
@@ -156,42 +229,52 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.4413145539906103
-        },
-        {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.4061032863849765
+            "prevalence": 0.4578005115089514
         },
         {
-            "domain": "yimg.com",
-            "prevalence": 0.09389671361502347
+            "domain": "first party",
+            "prevalence": 0.4219948849104859
+        },
+        {
+            "domain": "viki.io",
+            "prevalence": 0.03324808184143223
         },
         {
             "domain": "vimeocdn.com",
-            "prevalence": 0.03051643192488263
+            "prevalence": 0.030690537084398978
         },
         {
-            "domain": "disneyplus.com",
-            "prevalence": 0.014084507042253521
+            "domain": "mhcache.com",
+            "prevalence": 0.028132992327365727
         },
         {
             "domain": "sdiapi.com",
-            "prevalence": 0.011737089201877934
+            "prevalence": 0.017902813299232736
+        },
+        {
+            "domain": "go.com",
+            "prevalence": 0.005115089514066497
+        },
+        {
+            "domain": "gammacdn.com",
+            "prevalence": 0.0025575447570332483
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.002347417840375587
+            "prevalence": 0.0025575447570332483
         }
     ],
     "types": {
-        "Fetch": 37,
-        "Ping": 2
+        "Fetch": 40,
+        "XHR": 6,
+        "Ping": 2,
+        "Other": 3
     },
     "nameservers": [
-        "ns-1264.awsdns-30.org",
-        "ns-128.awsdns-16.com",
         "ns-1907.awsdns-46.co.uk",
+        "ns-128.awsdns-16.com",
+        "ns-1264.awsdns-30.org",
         "ns-560.awsdns-06.net"
     ]
 }

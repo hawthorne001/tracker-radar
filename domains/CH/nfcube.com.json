@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000504,
-    "sites": 5,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
-        "instafeed"
+        "instafeed",
+        "api",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "nfcube\\.com\\/assets\\/img\\/placeholder\\.png",
@@ -23,8 +25,8 @@
                 "instafeed"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
@@ -34,8 +36,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ecofort.ch",
-                "www.farfalla.ch",
-                "www.petiteknit.com"
+                "swiss.solis.com",
+                "www.beurer.com",
+                "www.decathlon.com",
+                "www.farfalla.ch"
             ]
         },
         {
@@ -43,21 +47,52 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "instafeed"
+                "instafeed",
+                "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "d9969bcf926180f3c2847255cb7fb54bef81a97754c42882eecaf65d2b0bae00"
+                "46a2c3ac58b61fc0043aa52fa4ac56beee9a8ef5d9322ead5e96636ceedf9445",
+                "d97cf6daf35ff2b5c018d6e26e6569e91e274d4eaa9ec09bc812dd587fb25d77",
+                "439de0e893d16308013fa62e39f54cd3b914c65b336121d9c7dacadb8500c5d6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "farfalla.ch",
-                "www.petiteknit.com"
+                "solis.com",
+                "www.beurer.com",
+                "www.decathlon.com",
+                "www.farfalla.ch"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/instafeed-8cf98a5a67967db58e071fdb98e726b4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "044f37f296da768276ce96963c3de07b6e4952e4da0f1b12e6fbd94e8b19cf28"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.com",
+                "www.decathlon.com"
             ]
         }
     ],
@@ -67,12 +102,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "shop-beurer.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Image": 3,
-        "Fetch": 2
+        "Image": 5,
+        "Fetch": 4,
+        "Script": 2
     },
     "nameservers": [
         "ivan.ns.cloudflare.com",

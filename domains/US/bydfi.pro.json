@@ -4,27 +4,50 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000684,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "fquote-v2"
+        "fquote",
+        "quote"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "bydfi\\.pro\\/mini_history",
+            "rule": "bydfi\\.pro\\/market\\/stream",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fquote-v2"
+                "fquote",
+                "quote"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bydfi.com",
+                "www.bydfi.com"
+            ]
+        },
+        {
+            "rule": "bydfi\\.pro\\/v3\\/mini_klines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fquote",
+                "quote"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3c5b174305077316962fa9941c2c8b0295fa9005449f0d0028348f15fefe4e2b"
+                "61d123046e3d5456cf428077d058a46f1724c076f56cc4a278559ce0cc3cb2c2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -35,18 +58,19 @@
             ]
         },
         {
-            "rule": "bydfi\\.pro\\/tickers",
+            "rule": "bydfi\\.pro\\/v3\\/ticker\\/24hr",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fquote-v2"
+                "quote",
+                "fquote"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "84bc0e7d870a44fa6f6cad56eb9fdff741409cd8ad0a9e31f846e2710289379c"
+                "705fb262815ee6bc66f70ea43355d3217f9d67d1f8b1eca2cc757d52e30a7eb4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -63,10 +87,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5384615384615384
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.46153846153846156
         }
     ],
     "types": {
+        "WebSocket": 2,
         "Fetch": 4
     },
     "nameservers": [

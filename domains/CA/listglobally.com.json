@@ -7,7 +7,8 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "search-api"
+        "search-api",
+        "gis-api"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -28,8 +29,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "properstar.ca",
-                "www.properstar.ca"
+                "properstar.com",
+                "www.properstar.com"
+            ]
+        },
+        {
+            "rule": "listglobally\\.com\\/api\\/v3\\/places\\/ids",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gis-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "properstar.com",
+                "www.properstar.com"
             ]
         },
         {
@@ -48,28 +69,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "properstar.ca",
-                "www.properstar.ca"
+                "properstar.com",
+                "www.properstar.com"
             ]
         },
         {
-            "rule": "listglobally\\.com\\/api\\/v2\\/searches",
-            "cookies": 0,
+            "rule": "listglobally\\.com\\/api\\/v3\\/places\\/ids",
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
-                "search-api"
+                "gis-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Other",
+            "responseHashes": [
+                "356113ba40975ed6bddc3e9ccbcd322e9353656578fbacaed821832498000200"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "properstar.ca",
-                "www.properstar.ca"
+                "properstar.com",
+                "www.properstar.com"
             ]
         }
     ],
@@ -83,14 +106,13 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2,
-        "Other": 2
+        "Preflight": 4,
+        "XHR": 4
     },
     "nameservers": [
-        "ns3-32.azure-dns.org",
-        "ns4-32.azure-dns.info",
         "ns1-32.azure-dns.com",
-        "ns2-32.azure-dns.net"
+        "ns2-32.azure-dns.net",
+        "ns3-32.azure-dns.org",
+        "ns4-32.azure-dns.info"
     ]
 }

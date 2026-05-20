@@ -9,29 +9,34 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000404,
-    "sites": 4,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "site.api"
     ],
     "cnames": [
         {
             "original": "cdn.espn.com",
             "resolved": "cdn.espn.com.edgesuite.net"
+        },
+        {
+            "original": "site.api.espn.com",
+            "resolved": "site.api.espn.com.edgesuite.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "espn\\.com\\.edgesuite\\.net\\/onetrust\\/otCCPAiab\\.js",
-            "cookies": 0.000303,
+            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "cdn.espn.com",
@@ -44,17 +49,45 @@
             "type": "Script",
             "firstPartyCookies": {
                 "usprivacy": {
-                    "ttl": 31536005,
+                    "ttl": 31536007,
                     "length": 4,
-                    "prevalence": 0.0003026634382566586,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "abc.com",
                 "moviesanywhere.com",
                 "www.starwars.com"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\.edgesuite\\.net\\/apis\\/personalized\\/v2\\/scoreboard\\/header",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "site.api.espn.com",
+                    "resolved": "site.api.espn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "2c822970cbd33872cb00e8e324913d1913588b34aadd5dfae70173b369da446a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "userZip": 0.00020206102242877348
+            },
+            "exampleSites": [
+                "espn.com",
+                "www.espn.com"
             ]
         }
     ],
@@ -70,7 +103,8 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": []
 }

@@ -4,34 +4,44 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "static",
         "app"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "runconverge\\.com\\/api\\/tr\\/log",
+            "rule": "runconverge\\.com\\/js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "app"
+                "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.name": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+                "7a547e207903552445ac44fdee46b172997bb40a2881c208ef6090d949b3d5b2"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "loopearplugs.com",
-                "au.loopearplugs.com"
+                "dbrand.com"
             ]
         },
         {
@@ -55,7 +65,29 @@
             ]
         },
         {
-            "rule": "runconverge\\.com\\/api\\/tr\\/sgtm",
+            "rule": "runconverge\\.com\\/api\\/tr\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loopearplugs.com",
+                "au.loopearplugs.com"
+            ]
+        },
+        {
+            "rule": "runconverge\\.com\\/api\\/tr\\/track",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -66,10 +98,54 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loopearplugs.com",
+                "dbrand.com"
+            ]
+        },
+        {
+            "rule": "runconverge\\.com\\/api\\/tr\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loopearplugs.com",
+                "dbrand.com"
+            ]
+        },
+        {
+            "rule": "runconverge\\.com\\/api\\/tr\\/sgtm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "__cvg_uid": 0.00020118700331958554
+                "__cvg_uid": 0.00020120724346076458
             },
             "exampleSites": [
                 "loopearplugs.com",
@@ -83,12 +159,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "db.io",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 4,
+        "Fetch": 6
     },
     "nameservers": [
         "ns-204.awsdns-25.com",
