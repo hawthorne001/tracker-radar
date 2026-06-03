@@ -10,10 +10,11 @@
     "prevalence": 0.0000206,
     "sites": 3,
     "subdomains": [
-        "s"
+        "s",
+        "a"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ironpla\\.net\\/s\\/resources\\/fonts\\/fonts-2016\\.min\\.css",
@@ -50,28 +51,6 @@
             "cnames": [],
             "responseHashes": [
                 "c7eee1aa998026064be3cc2e3bf769342a44099529e0cc4db49d791fa1192724"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ironplanet.com",
-                "www.ironplanet.com"
-            ]
-        },
-        {
-            "rule": "ironpla\\.net\\/s\\/resources\\/css\\/m\\/style_101_202605051332\\.css",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "6987eea5b6ddbb573fcaacfda5dd99d7b6085f9328a6dff6847c0e709ae26c4a"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -240,6 +219,64 @@
                 "ironplanet.com",
                 "www.ironplanet.com"
             ]
+        },
+        {
+            "rule": "ironpla\\.net\\/js\\/IPbeacon\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e9710cb0287eda44a2d891d2b02138aa1505af8a07d36a419987e4ad9df0bcf5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ipcid": {
+                    "ttl": 432000009,
+                    "length": 29,
+                    "prevalence": 0.000013706985765295283,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ironplanet.com",
+                "www.ironplanet.com"
+            ]
+        },
+        {
+            "rule": "ironpla\\.net\\/dw\\/hit",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8f5f39e221a3174b2c88ccc8a127e582db508cc4a96fe0630c466f61aff7a2a4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "calltrk_landing": 0.000013706985765295283
+            },
+            "exampleSites": [
+                "ironplanet.com",
+                "www.ironplanet.com"
+            ]
         }
     ],
     "categories": [],
@@ -248,17 +285,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8909090909090909
+        },
+        {
+            "domain": "servedbyadbutler.com",
+            "prevalence": 0.05454545454545454
+        },
+        {
+            "domain": "trustarc.com",
+            "prevalence": 0.05454545454545454
         }
     ],
     "types": {
-        "Stylesheet": 8,
-        "Script": 6,
-        "Font": 6
+        "Stylesheet": 6,
+        "Script": 8,
+        "Font": 6,
+        "XHR": 2
     },
     "nameservers": [
-        "mns5.ironplanet.com",
         "nm21.ironplanet.com",
+        "mns5.ironplanet.com",
+        "nm23.ironplanet.com",
         "nm22.ironplanet.com"
     ]
 }

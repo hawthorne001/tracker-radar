@@ -7,15 +7,117 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "hl",
+        "files",
         "hit-pool"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "upscore\\.com\\/config\\/24sata\\.hr\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "hl",
+                "files"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a65aa0849fea89a54fc49b2049b67a090d7d0183783f64b8a5cd9aea38b8b7d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sata.hr",
+                "www.24sata.hr"
+            ]
+        },
+        {
+            "rule": "upscore\\.com\\/async\\/upScore\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "window.innerHeight": 3,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "50db8fff29506817b3b6a811395d70af543d83800ece4f7edb658436dbeda336"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sata.hr",
+                "www.jutarnji.hr",
+                "www.stern.de"
+            ]
+        },
+        {
+            "rule": "upscore\\.com\\/configuration\\/24sata\\.hr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f00e5dfaf2538f6bcb3cfb3a19ac75c4ecf62662b26675fad9e95c2de7700bd8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sata.hr",
+                "www.24sata.hr"
+            ]
+        },
+        {
+            "rule": "upscore\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hit-pool"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "a12b7cb43c9d9134b5bb1b35e9096b66775d9e92e7611d1cc92b02edd6782a87"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sata.hr",
+                "www.24sata.hr",
+                "www.jutarnji.hr",
+                "www.stern.de"
+            ]
+        },
         {
             "rule": "upscore\\.com\\/configuration\\/stern\\.de",
             "cookies": 0,
@@ -28,31 +130,9 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "272a1d88fcc3e77e90b6632c84627f3f39dda9dd05f580704c59b3601e6fbe63"
+                "9146978773ae9a33ee180da4a23645bb4072215328adb6382262543f4a1f912f"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "stern.de",
-                "www.stern.de"
-            ]
-        },
-        {
-            "rule": "upscore\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "hit-pool"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "a12b7cb43c9d9134b5bb1b35e9096b66775d9e92e7611d1cc92b02edd6782a87"
-            ],
-            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -67,12 +147,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Ping": 2
+        "Script": 5,
+        "Fetch": 4,
+        "Ping": 4
     },
     "nameservers": [
         "duke.ns.cloudflare.com",
