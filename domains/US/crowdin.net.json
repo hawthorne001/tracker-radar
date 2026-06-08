@@ -4,14 +4,46 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000549,
-    "sites": 8,
+    "prevalence": 0.0000685,
+    "sites": 10,
     "subdomains": [
+        "website-translator.app",
+        "proxy-translator.app",
         "distributions"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "crowdin\\.net\\/assets\\/proxy-translator\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "website-translator.app",
+                "proxy-translator.app"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 2,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "776adbaabe3d6ac63e268ccceb9001c8ef6ec450361780cf7fa0d0dd3b97a817"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lizardbyte.dev",
+                "wayground.com"
+            ]
+        },
         {
             "rule": "crowdin\\.net\\/e-7955682fcb9efb17a1473b3ger\\/content\\/en\\/schema-translations\\.json",
             "cookies": 0,
@@ -41,14 +73,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.38461538461538464
+            "prevalence": 0.2777777777777778
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 2
     },
     "nameservers": [

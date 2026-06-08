@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "cdn",
         "atf-cdn",
         "consumer-v2",
-        "consumer",
-        "ske-cdn"
+        "myr-cdn",
+        "dma-cdn",
+        "consumer"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -35,21 +36,21 @@
             "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "3a33a5104722ec24036b0e27c6ec927b143da7b67b516cda06129408baefc4f0"
+                "3622b2c483db44f6759d2498edc9eb2d556be1e010fd7d83a7964edde023ff3e"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "tfExperimentId": {
                     "ttl": 34560000,
                     "length": 34,
-                    "prevalence": 0.0005030181086519115,
+                    "prevalence": 0.0005033219247030401,
                     "uniqueness": 1
                 },
                 "tf-version": {
                     "ttl": 604800,
                     "length": 2,
-                    "prevalence": 0.0005030181086519115,
-                    "uniqueness": 0.2
+                    "prevalence": 0.0004026575397624321,
+                    "uniqueness": 0.25
                 }
             },
             "firstPartyCookiesSent": {},
@@ -63,14 +64,14 @@
         },
         {
             "rule": "truefitcorp\\.com\\/api\\/experiments",
-            "cookies": 0.00101,
+            "cookies": 0.00111,
             "fingerprinting": 0,
             "subdomains": [
                 "consumer-v2"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 11,
+            "prevalence": 0.00111,
             "cnames": [],
             "responseHashes": [
                 "8326756728dacd3022a84276d023dcbfe4e2afa3dbc89f9e9e4954c794bf128c"
@@ -82,6 +83,7 @@
                 "ajeworld.com.au",
                 "baredfootwear.com",
                 "footgear.com.au",
+                "myer.com.au",
                 "www.drmartens.com.au",
                 "www.myer.com.au",
                 "www.petersheppard.com.au",
@@ -92,20 +94,82 @@
             ]
         },
         {
+            "rule": "truefitcorp\\.com\\/fitrec\\/myr\\/js\\/tf-integration\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "myr-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "11eb97d2936ee7d0af4de908c9dc0bdf5995c061042efe1e1b968324a99e0bd0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "tfExperimentId": {
+                    "ttl": 34560000,
+                    "length": 34,
+                    "prevalence": 0.00020132876988121604,
+                    "uniqueness": 1
+                },
+                "tf-version": {
+                    "ttl": 604800,
+                    "length": 2,
+                    "prevalence": 0.00020132876988121604,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "myer.com.au",
+                "www.myer.com.au"
+            ]
+        },
+        {
+            "rule": "truefitcorp\\.com\\/fitrec\\/dma\\/js\\/fitrec\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dma-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e51add27abfeaef8c0228ad4c6063f547c4ff6cc1b33c2741764bad2df095f29"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drmartens.com.au",
+                "www.drmartens.com.au"
+            ]
+        },
+        {
             "rule": "truefitcorp\\.com\\/fitconfig",
-            "cookies": 0.000402,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "consumer"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000402,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "ac3ede122dfdf5d7665ed2a542cc4e0e8e8930c9090c5850528c8c6921cf5e02",
-                "ce7c5c345b4b6ea7cd932639ee6acaaa0df7918d55fec72ce68dc805ef8b42ac",
-                "227edfe741f9188d557a19d6f6306848855700532e34bc26b949c0499a8b2396"
+                "921a50b7ff2bba5c95dbf7e2f6ed2845ceaa51738250d70e7593782ec3e0de9c",
+                "facd9df66153c9aa1161b8d4d730618205061a542510f94ad45ab42ecd0d190a",
+                "52eaf0fa13b0a73715416b883d722eb6681b7bad9bbe581309ffa4ad594d7b2f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -116,30 +180,6 @@
                 "www.skechers.com.au",
                 "www.vans.com.au"
             ]
-        },
-        {
-            "rule": "truefitcorp\\.com\\/fitrec\\/ske\\/js\\/fitrec\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "ske-cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "39760d42f55e5a01473dc5609f3d48a7ad038c491c5135fc717613e3e6847615"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "skechers.com.au",
-                "www.skechers.com.au"
-            ]
         }
     ],
     "categories": [
@@ -148,24 +188,24 @@
         "Third-Party Analytics Marketing"
     ],
     "performance": {},
-    "cookies": 0.00101,
+    "cookies": 0.00111,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.84
+            "prevalence": 0.8461538461538461
         },
         {
             "domain": "shopify.com",
-            "prevalence": 0.08
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.08
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 11,
-        "Fetch": 10
+        "Script": 13,
+        "Fetch": 11
     },
     "nameservers": [
         "ns-60.awsdns-07.com",

@@ -20,7 +20,7 @@
         "www"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "atlassian\\.com\\/flags\\/api\\/v2\\/frontend\\/clientSdkKey\\/loom_web",
@@ -101,10 +101,10 @@
             "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
-                "02fb0f0fa4146a2463c039c58e44598355c9d8c3a3ddad76defabdc19685e3ff",
-                "a7c035b088cef0235ccbc6fe04572cd7faa32c3a1291bc26a7e4ea041bfb3597",
-                "d3fc3816bf60cfc2c26debb130a4446fa58951a5dd2ab0c36aa2222ebc023622",
-                "d0f31e4588d634a2bdc09a9c99abd6c2b98fa567a6a9226afab1726c579bbc10"
+                "88b11d1225f2c0753a8f0d2b77ce60b695b463106b760561b77d360f57ac9c78",
+                "714cb4c8ad15bc7df53bbed969e875d035f0f57eec5528fc54e0e44718b36dff",
+                "c75e840704127b5d558603a201ed394b2f919c2e58cb37843c1786cf670293dd",
+                "792b45437197a79b01f34defa5c63b24659f0954e718de087115f22051f7c969"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -139,6 +139,28 @@
                 "doctolibpatient.zendesk.com",
                 "statusgator.com",
                 "www.loom.com",
+                "www.scoir.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/v1\\/rgstr",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xp"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zendesk.com",
+                "doctolibpatient.zendesk.com",
+                "statusgator.com",
                 "www.scoir.com"
             ]
         },
@@ -230,7 +252,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5e1b69164139eb593f547849a66aae3b441578ab3bbc9f9e6fc2eb7be161c916"
+                "53e71d386f8189b96ccc946604aa4527b13558827dd12c462e1c64facf18e30b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -278,32 +300,32 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "4e2a6178d551a5671730ecbbbebb72bfb2fd9b5e04264ae32a69addf1d49a019"
+                "f92dbe36d3ab188194c225b39067f57bbbedd6d321f7f416ce81a0d981aa3d3d"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "atlCohort": {
                     "ttl": 315360008,
                     "length": 96,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 1
                 },
                 "sn_id": {
-                    "ttl": 86409,
+                    "ttl": 86412,
                     "length": 42,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 1
                 },
                 "atl_session": {
-                    "ttl": 1809,
+                    "ttl": 1812,
                     "length": 36,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 1
                 },
                 "atlUserHash": {
-                    "ttl": 315360010,
+                    "ttl": 315360012,
                     "length": 10,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 0.5
                 }
             },
@@ -314,9 +336,9 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/xid\\/atl-xid\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/xid\\/atl-xid\\.js",
             "cookies": 0.0000137,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "atl-global"
             ],
@@ -324,7 +346,24 @@
                 "Document.cookie getter": 2,
                 "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "Navigator.prototype.vendor": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.plugins": 1,
+                "Navigator.prototype.productSub": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.indexedDB": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.webdriver": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -335,15 +374,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "atl_xid.ts": {
-                    "ttl": 31536009,
+                    "ttl": 31536012,
                     "length": 13,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 1
                 },
                 "atl_xid.current": {
-                    "ttl": 31536009,
-                    "length": 147,
-                    "prevalence": 0.000013714881331989274,
+                    "ttl": 31536012,
+                    "length": 146,
+                    "prevalence": 0.000013706985765295283,
+                    "uniqueness": 1
+                },
+                "cookietest": {
+                    "ttl": -1780357356,
+                    "length": 1,
+                    "prevalence": 0.000006853492882647641,
                     "uniqueness": 1
                 }
             },
@@ -354,7 +399,7 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/web-config\\/webConfigClient\\.min\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/web-config\\/webConfigClient\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -376,7 +421,7 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/feature-gate\\/featureGateClient\\.min\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/feature-gate\\/featureGateClient\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -401,12 +446,15 @@
         },
         {
             "rule": "atlassian\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
             "subdomains": [
                 "xxid"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -464,7 +512,7 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/atl-global-2\\.320\\.0\\.min\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/atl-global-2\\.328\\.0\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -491,7 +539,7 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/atl-global-2\\.320\\.0\\.min\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/atl-global-2\\.328\\.0\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -507,7 +555,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "0cfac0e1ca19f74d7aca4d6047d808bfdd0c4fe0877be6eb72180beae69c4c24"
+                "c51917603b8b8cf9fe5f2d66a0f62233eeeefcbea50a664b65ca863545c5dc32"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -528,7 +576,9 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "b61291561b043781975b67de390ef9078b9efeed9929b7bb34528a428e6cec7e"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -558,7 +608,7 @@
             ]
         },
         {
-            "rule": "atlassian\\.com\\/js\\/2\\.320\\.0\\/gasv3\\/analytics-web-client\\.with-deps\\.amd\\.min\\.js",
+            "rule": "atlassian\\.com\\/js\\/2\\.328\\.0\\/gasv3\\/analytics-web-client\\.with-deps\\.amd\\.min\\.js",
             "cookies": 0.0000137,
             "fingerprinting": 2,
             "subdomains": [
@@ -581,14 +631,14 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7b02b423350c0db569798c77038934bf6a3a487766d730ec89241bd7cb920b20"
+                "5604f1242928bc7d83f3c53ea3fbfc1f572bba7de5931259b9c6eef8dbd315e9"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "ajs_anonymous_id": {
-                    "ttl": 31536010,
+                    "ttl": 31536012,
                     "length": 42,
-                    "prevalence": 0.000013714881331989274,
+                    "prevalence": 0.000013706985765295283,
                     "uniqueness": 1
                 }
             },
@@ -613,16 +663,16 @@
         }
     ],
     "types": {
-        "Preflight": 13,
+        "Preflight": 17,
         "Fetch": 28,
         "Script": 14,
         "Document": 2,
         "XHR": 4
     },
     "nameservers": [
-        "ns-112.awsdns-14.com",
-        "ns-595.awsdns-10.net",
         "ns-1388.awsdns-45.org",
+        "ns-595.awsdns-10.net",
+        "ns-112.awsdns-14.com",
         "ns-2018.awsdns-60.co.uk"
     ]
 }

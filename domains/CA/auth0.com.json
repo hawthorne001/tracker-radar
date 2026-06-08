@@ -7,18 +7,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000808,
-    "sites": 8,
+    "prevalence": 0.000909,
+    "sites": 9,
     "subdomains": [
         "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
         "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca"
+        "cdn"
     ],
     "cnames": [
-        {
-            "original": "auth.flightcentre.ca",
-            "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
-        },
         {
             "original": "login.finder.com",
             "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
@@ -32,16 +28,15 @@
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000303,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
-                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca"
+                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "oauth.airmiles.ca",
@@ -50,23 +45,41 @@
                 {
                     "original": "login.finder.com",
                     "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
-                },
-                {
-                    "original": "auth.flightcentre.ca",
-                    "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
                 }
             ],
             "responseHashes": [
-                "28f6bb85237a16f26b4ce1b6f11b3b92c5715b895ac7317b4c10d4d2ef982361",
-                "451ed03c44e1a84ae4d6de7ac04b81f4013ae8fe7150aa46fae478dc6034ce1c"
+                "a532dcc71fddc424e7d4e4e79dc3a7496aa38c7a2605f06d8c8232d73a2b373a"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "airmiles.ca",
-                "www.finder.com",
-                "www.flightcentre.ca"
+                "www.finder.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/1\\.13\\/auth0-spa-js\\.production\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "01d6389de5581a2a3eb0cd4d6a05cb136bf07d221306f89173a080c73a38e392"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mercurynews.com",
+                "www.nydailynews.com"
             ]
         }
     ],
@@ -76,15 +89,12 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
-        },
-        {
-            "domain": "flightcentre.com",
-            "prevalence": 0.125
+            "prevalence": 1
         }
     ],
     "types": {
-        "Document": 3
+        "Document": 2,
+        "Script": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

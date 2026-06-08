@@ -7,7 +7,8 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "static"
+        "static",
+        "r1"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -34,23 +35,48 @@
             "type": "Script",
             "firstPartyCookies": {
                 "recordID": {
-                    "ttl": 31536004,
+                    "ttl": 31536003,
                     "length": 36,
-                    "prevalence": 0.00010056315366049879,
+                    "prevalence": 0.00010063399416322834,
                     "uniqueness": 1
                 },
                 "dmSessionID": {
                     "ttl": 1204,
                     "length": 36,
-                    "prevalence": 0.00010056315366049879,
+                    "prevalence": 0.00010063399416322834,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "yamaha.com",
-                "www.dometic.com",
-                "www.pluginboutique.com"
+                "www.directferries.de",
+                "www.dometic.com"
+            ]
+        },
+        {
+            "rule": "trackedweb\\.net\\/pagevisit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b6d018729b6cc00b3732df6a76d2d350e205062eac8b2e6ac254db938eeab31b"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "recordID": 0.00020126798832645668,
+                "dmSessionID": 0.00020126798832645668
+            },
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.de"
             ]
         }
     ],
@@ -60,11 +86,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Ping": 2
     },
     "nameservers": [
         "ns01.dot-dns.co.uk",

@@ -4,15 +4,16 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "assets",
-        "cdn",
-        "in-automate"
+        "plugin",
+        "in-automate",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "brevo\\.com\\/font\\/Roboto\\/Latin\\/normal\\/normal\\/7529907e9eaf8ebb5220c5f9850e3811\\.woff2",
@@ -37,29 +38,58 @@
             ]
         },
         {
-            "rule": "brevo\\.com\\/js\\/sdk-loader\\.js",
+            "rule": "brevo\\.com\\/integrations\\/api\\/automation\\/script",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "plugin"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "048b59933a09b4227302eff8235b995ed1f74f3c2cefba57ad70816f975cf6df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cbuid_meta": {
+                    "ttl": 540014,
+                    "length": 50,
+                    "prevalence": 0.00020120724346076458,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flipper.net",
+                "www.solumbokvennen.no"
+            ]
+        },
+        {
+            "rule": "brevo\\.com\\/integrations\\/api\\/sy\\/cart_tracking\\/script",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "plugin"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fe8447fd1ec4dca652b71db2c749fcc24a5bec3875f3654042169fb2418aed09"
+                "9753bf03a78368032d7ad0fe0f1fe08c8a5050e0236278df381aed43e002e898"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nettbank.info",
-                "paastell.no",
-                "samnytt.se",
-                "solhatt.no",
-                "www.sikkerheten-selv.no",
-                "www.wedio.com"
+                "flipper.net",
+                "www.solumbokvennen.no"
             ]
         },
         {
@@ -70,8 +100,8 @@
                 "in-automate"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000704,
+            "sites": 9,
+            "prevalence": 0.000905,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -79,44 +109,73 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "sib_cuid": 0.0007038005228232455
+                "sib_cuid": 0.0009054325955734407
             },
             "exampleSites": [
+                "flipper.net",
+                "loggeinn.com",
                 "nettbank.info",
                 "paastell.no",
                 "samnytt.se",
                 "solhatt.no",
                 "www.grontfokus.no",
-                "www.sikkerheten-selv.no",
+                "www.solumbokvennen.no",
+                "www.wedio.com"
+            ]
+        },
+        {
+            "rule": "brevo\\.com\\/js\\/sdk-loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000704,
+            "cnames": [],
+            "responseHashes": [
+                "fe8447fd1ec4dca652b71db2c749fcc24a5bec3875f3654042169fb2418aed09"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loggeinn.com",
+                "magasin.no",
+                "nettbank.info",
+                "paastell.no",
+                "samnytt.se",
+                "solhatt.no",
                 "www.wedio.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.5833333333333334
         },
         {
             "domain": "sibautomation.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.3333333333333333
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.05555555555555555
+            "domain": "intelligems.io",
+            "prevalence": 0.041666666666666664
         },
         {
             "domain": "sibforms.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
         "Font": 2,
-        "Script": 6,
-        "XHR": 7
+        "Script": 11,
+        "XHR": 9
     },
     "nameservers": [
         "josh.ns.cloudflare.com",

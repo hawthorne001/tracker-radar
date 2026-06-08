@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000226,
-    "sites": 33,
+    "prevalence": 0.000199,
+    "sites": 29,
     "subdomains": [
         "kgdata-cdn.s3",
+        "firehose",
         "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb",
         "k8s-arkmiddl-apisixse-b7849cdf26-2fd43480e8f4990f.elb",
+        "calilio-website.s3",
         "s3",
         "vj-prod-website-cms.s3"
     ],
@@ -37,25 +39,73 @@
         {
             "rule": "ap-southeast-1\\.amazonaws\\.com\\/tracker\\/p\\/kompasreco\\/oval_web_analytics_latest\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "kgdata-cdn.s3"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 6,
             "prevalence": 0.0000411,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "f7a1dae4f037bf37cb5280f27e9ad2c6d442ca89c750783bf114f656ff15fd64"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "kompas.com",
-                "denpasar.kompas.com",
                 "money.kompas.com",
-                "nasional.kompas.com",
+                "regional.kompas.com",
                 "surabaya.kompas.com",
-                "tekno.kompas.com"
+                "tekno.kompas.com",
+                "www.kompas.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thanhnien.vn",
+                "www.storm.mg"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2f7d489bfad0cd26c9f6e9892d119729e6861117cba5d52f06a0834ba2a2922b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thanhnien.vn",
+                "www.storm.mg"
             ]
         },
         {
@@ -99,8 +149,10 @@
                     "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8cb7bd9d32c6164c9da766eb7582990a44292f50368c535b5b72d7bc2dacb860"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -125,7 +177,7 @@
                 }
             ],
             "responseHashes": [],
-            "type": "XHR",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -338,6 +390,28 @@
             ]
         },
         {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/calilio-ai-suite-background\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "calilio-website.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a78a8064ad9b3f315eee92f65b9f4d666d9912bc4da9ff50e1a60e6e4c712c6d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calilio.com",
+                "www.calilio.com"
+            ]
+        },
+        {
             "rule": "ap-southeast-1\\.amazonaws\\.com\\/zeenews\\.india\\.com\\/static\\/public\\/images\\/Twitter_Header\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
@@ -379,6 +453,28 @@
             "exampleSites": [
                 "glbgpt.com",
                 "www.glbgpt.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/biz\\.thestar\\.com\\.my\\/json\\/stocklookup\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "17a35361ea00cfd61f80a3ca81f607104ead7649feb261ca0c5058ea5216cda4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thestar.com.my",
+                "www.thestar.com.my"
             ]
         },
         {
@@ -598,72 +694,47 @@
                 "vietjetair.com",
                 "www.vietjetair.com"
             ]
-        },
-        {
-            "rule": "ap-southeast-1\\.amazonaws\\.com\\/vidgyor\\.com\\/player\\/account\\/zee\\/conf\\/zee_wion\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "5e81bd4cbb03b7caa31f87049d29807d0b332bfd372231b046dc0353a13ccb77"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wionews.com",
-                "www.wionews.com"
-            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.88
-        },
-        {
-            "domain": "vidgyor.com",
-            "prevalence": 0.04
-        },
-        {
-            "domain": "cloudflare.com",
-            "prevalence": 0.02666666666666667
-        },
-        {
-            "domain": "googlesyndication.com",
-            "prevalence": 0.02666666666666667
+            "prevalence": 0.9014084507042254
         },
         {
             "domain": "likr.tw",
-            "prevalence": 0.013333333333333334
+            "prevalence": 0.028169014084507043
         },
         {
-            "domain": "shopify.com",
-            "prevalence": 0.013333333333333334
+            "domain": "googlesyndication.com",
+            "prevalence": 0.028169014084507043
+        },
+        {
+            "domain": "vidgyor.com",
+            "prevalence": 0.028169014084507043
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.014084507042253521
         }
     ],
     "types": {
-        "Script": 6,
+        "Script": 8,
+        "Preflight": 10,
+        "Fetch": 2,
         "Ping": 2,
-        "Preflight": 8,
-        "XHR": 14,
-        "Image": 24
+        "XHR": 12,
+        "Image": 26
     },
     "nameservers": [
+        "ns-427.awsdns-53.com",
         "ns-1096.awsdns-09.org",
         "ns-1953.awsdns-52.co.uk",
-        "ns-427.awsdns-53.com",
         "ns-983.awsdns-58.net"
     ]
 }

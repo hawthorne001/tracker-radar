@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000909,
-    "sites": 9,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "o.alicdn.com.w",
-        "media.insta360.com.w"
+        "d.alicdn.com.w",
+        "fonts.bytedance.com.w"
     ],
     "cnames": [
         {
-            "original": "media.insta360.com",
-            "resolved": "media.insta360.com.w.cdngslb.com"
+            "original": "d.alicdn.com",
+            "resolved": "d.alicdn.com.w.cdngslb.com"
+        },
+        {
+            "original": "fonts.bytedance.com",
+            "resolved": "fonts.bytedance.com.w.cdngslb.com"
         },
         {
             "original": "o.alicdn.com",
@@ -22,6 +27,31 @@
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "cdngslb\\.com\\/secdev\\/storage-br\\/secaptcha\\/0e473074f301b974\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "o.alicdn.com.w"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "o.alicdn.com",
+                    "resolved": "o.alicdn.com.w.cdngslb.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aliexpress.com",
+                "www.alibaba.com"
+            ]
+        },
         {
             "rule": "cdngslb\\.com\\/baxia\\/baxia-entry-gray\\/index\\.js",
             "cookies": 0,
@@ -39,7 +69,7 @@
                 }
             ],
             "responseHashes": [
-                "e6fcb82edfebd70165a3f464821277238d17469f7613b0955f890b0d2d3b1203"
+                "352948532246d0e5af232f750662fb60e7a902b7b12197c9882053ec23fd29d8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -51,53 +81,57 @@
             ]
         },
         {
-            "rule": "cdngslb\\.com\\/static\\/13d12ad0abb409f01d9c13008ef67a8f\\/TC4_Banner_PC\\.mp4",
-            "cookies": 0.000101,
+            "rule": "cdngslb\\.com\\/alilog\\/",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "media.insta360.com.w"
+                "d.alicdn.com.w"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "media.insta360.com",
-                    "resolved": "media.insta360.com.w.cdngslb.com"
+                    "original": "d.alicdn.com",
+                    "resolved": "d.alicdn.com.w.cdngslb.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "4672032cbe6c85c0cb8bf28b1452268598f53448823f25f3a1b8bc37356bf544"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "insta360.com",
-                "www.insta360.com"
+                "qwen.ai",
+                "www.taobao.com"
             ]
         },
         {
-            "rule": "cdngslb\\.com\\/static\\/4a93aaaf50c76f80fdfe8e3f424a4db0\\/PCBannerV7\\.crf23\\.mp4",
-            "cookies": 0.000101,
+            "rule": "cdngslb\\.com\\/dfd\\/api\\/v1\\/css",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "media.insta360.com.w"
+                "fonts.bytedance.com.w"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "media.insta360.com",
-                    "resolved": "media.insta360.com.w.cdngslb.com"
+                    "original": "fonts.bytedance.com",
+                    "resolved": "fonts.bytedance.com.w.cdngslb.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "bf266629dc4f6a670640a4543539f5fda0cb23559ad114d18fb7a4ffc957f726"
+            ],
+            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "insta360.com",
-                "www.insta360.com"
+                "douyin.com",
+                "www.douyin.com"
             ]
         }
     ],
@@ -107,12 +141,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8666666666666667
+        },
+        {
+            "domain": "douyinstatic.com",
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
+        "XHR": 2,
         "Script": 3,
-        "Media": 4
+        "Fetch": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
         "ns1.cdngslb.com",

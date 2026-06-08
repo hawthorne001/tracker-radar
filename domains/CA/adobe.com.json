@@ -9,14 +9,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000707,
-    "sites": 7,
+    "prevalence": 0.000808,
+    "sites": 8,
     "subdomains": [
         "entitlement.auth",
         "sp.auth"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
@@ -97,7 +97,7 @@
                 "sp.auth"
             ],
             "apis": {
-                "console.memory": 4,
+                "console.memory": 2,
                 "window.localStorage": 3,
                 "Document.cookie getter": 3
             },
@@ -119,52 +119,30 @@
         },
         {
             "rule": "adobe\\.com\\/o\\/client\\/register",
-            "cookies": 0,
+            "cookies": 0.000303,
             "fingerprinting": 0,
             "subdomains": [
                 "sp.auth"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "08bf5c2bab2927deeb9c7404cd7b741a7ca6b35ff13f80944dd582121d46f737",
+                "e73a07846a79c8cc11cd1e0a7873555af85ed82a7043e814d3ce451a1c709b67"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abc.com",
                 "www.cbssports.com",
-                "www.espn.com",
-                "www.nbc.com"
+                "www.espn.com"
             ]
         },
         {
             "rule": "adobe\\.com\\/o\\/client\\/register",
-            "cookies": 0.000303,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp.auth"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "88a12f967913bda0159090af17e232cfc0640ef9b87f9efb06f4511fc1561402",
-                "2b19aa0cc761520d1b80d942027efb98d20306fb2cc610dafb7b844808a6c811"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "abc.com",
-                "www.cbssports.com",
-                "www.espn.com"
-            ]
-        },
-        {
-            "rule": "adobe\\.com\\/o\\/client\\/token",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -197,8 +175,8 @@
             "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "dae3fa1fa0280a4e494a3c99149acafcb090b5cad80b295fc8baff32f68f4fad",
-                "001e999cd7de15553862ec0dedec459594eee26d12affa36bcb404cb0b94f859"
+                "790db6c45b402938ed977318147cd8907eb63ab5980c53e8b4aa43c0ee7deb81",
+                "bea7594685ba24a384ed029f3569cc63614e570c3d61e5b15e47e4dc0d1e741b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -207,6 +185,28 @@
                 "abc.com",
                 "www.cbssports.com",
                 "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abc.com",
+                "www.cbssports.com",
+                "www.espn.com",
+                "www.nbc.com"
             ]
         }
     ],
@@ -216,22 +216,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6818181818181818
+            "prevalence": 0.6521739130434783
         },
         {
             "domain": "espncdn.com",
-            "prevalence": 0.22727272727272727
+            "prevalence": 0.21739130434782608
         },
         {
             "domain": "cnbcfm.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "jpg4.quest",
+            "prevalence": 0.043478260869565216
         }
     ],
     "types": {
         "Script": 9,
         "Document": 4,
-        "Preflight": 8,
-        "XHR": 6
+        "XHR": 6,
+        "Preflight": 8
     },
     "nameservers": [
         "a10-64.akam.net",

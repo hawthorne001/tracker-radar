@@ -12,8 +12,8 @@
     "subdomains": [
         "widgets.media",
         "license.sir",
-        "uswidgets.fn",
-        "tm.ads"
+        "tm.ads",
+        "tracker.ads"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -44,7 +44,7 @@
             ]
         },
         {
-            "rule": "sportradar\\.com\\/assets\\/js\\/chunk\\.87468\\.1f289268\\.js",
+            "rule": "sportradar\\.com\\/assets\\/js\\/chunk\\.87468\\.0ce92c1c\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -57,7 +57,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "1175d4150c0ee211749d4e8ec85876fca0871ae3bd6577c82dba335d33f49526"
+                "53bbfa81d4bce0ae6563d640cb583bf431019d0af1554cf89693e4f266d0df68"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -676,7 +676,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "3b06e1767dcf158ef301ea00e6ccd927f0f405a1d164108805c0850771baad8d"
+                "207af3d50712136e27d029cc1cef5044f0c75622380560c098ef92f0584667ff"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -700,32 +700,12 @@
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010103051121438674
+            },
             "exampleSites": [
                 "nbcsports.com",
                 "www.si.com"
-            ]
-        },
-        {
-            "rule": "sportradar\\.com\\/sportradarmlb\\/en_us\\/Etc:UTC\\/gismo\\/livescore_season_fixtures\\/134469",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "uswidgets.fn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "ca7e4d33e1894afb6a5f068309f5100ca577de6ba4bcf991139a382d097cf629"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nbcsports.com",
-                "www.nbcsports.com"
             ]
         },
         {
@@ -739,7 +719,9 @@
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "666e3e4536a3d5c47aa7a622060fb101fbcd38df650a42a79f22618dfec4034c"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -749,23 +731,76 @@
             ]
         },
         {
-            "rule": "sportradar\\.com\\/sportradarmlb\\/en_us\\/Etc:UTC\\/gismo\\/stats_season_teams2\\/132076",
+            "rule": "sportradar\\.com\\/dist\\/tracker\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "uswidgets.fn"
+                "tracker.ads"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.maxTouchPoints": 1
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
+            "responseHashes": [
+                "2522e3f24f318e5c2d998482e9dbb933566aa4eb8b55bccbfff48c91505d27ba"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "si.com",
-                "www.si.com"
+                "playojo.com",
+                "www.sportsnetplus.ca"
+            ]
+        },
+        {
+            "rule": "sportradar\\.com\\/dist\\/\\/sp-3\\.8\\.0\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tracker.ads"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bdcfff76b1a267221f3557b2eeb6b4b28f87eceefae0e25f328ef63c0cb1778f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_sp_srt_ses.7134": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                },
+                "_sp_srt_id.7134": {
+                    "ttl": 47304005,
+                    "length": 103,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playojo.com",
+                "www.sportsnetplus.ca"
             ]
         }
     ],
@@ -791,9 +826,9 @@
         }
     ],
     "types": {
-        "Script": 56,
+        "Script": 60,
         "Stylesheet": 4,
-        "XHR": 6,
+        "XHR": 2,
         "Fetch": 2
     },
     "nameservers": [

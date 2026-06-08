@@ -10,53 +10,77 @@
         "tck"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "alphalyr\\.com\\/tag",
             "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tck"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "8cfb8c4a4203343a28bcbdc4e00b8fb361e283d581a80deba42ac50181a28ccf"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "auto.leclerc",
-                "www.photo.leclerc"
-            ]
-        },
-        {
-            "rule": "alphalyr\\.com\\/tag\\/store",
-            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "tck"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
-                "Document.cookie setter": 2
+                "Document.cookie getter": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "e505fe52a0e40e1de1df31d600d65168c512312e6b6bb2d95d7cd03b9a34b541"
+                "b338156285ac769df3958394154eaadff62264e6bfa925fc5a67406bd644145a",
+                "983335c5978df00eadd27c0a8ac482ed910b2070c87090ed6d9259746282110b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "auto.leclerc",
-                "www.photo.leclerc"
+                "1001pneus.fr",
+                "www.1001pneus.fr",
+                "www.auto.leclerc"
+            ]
+        },
+        {
+            "rule": "alphalyr\\.com\\/tag\\/store",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tck"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "335a4bf8f1f0fe0c1f32957f0ba304ae9948a520ddc2da8dfecbd0b007f92c06",
+                "e505fe52a0e40e1de1df31d600d65168c512312e6b6bb2d95d7cd03b9a34b541"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "etuuid": {
+                    "ttl": 7776027,
+                    "length": 64,
+                    "prevalence": 0.00020175527085645111,
+                    "uniqueness": 0.5
+                },
+                "etPartnerIds": {
+                    "ttl": 7776027,
+                    "length": 11,
+                    "prevalence": 0.00020175527085645111,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {
+                "etuuid": 0.00020175527085645111
+            },
+            "exampleSites": [
+                "1001pneus.fr",
+                "www.1001pneus.fr",
+                "www.auto.leclerc"
             ]
         }
     ],
@@ -65,12 +89,16 @@
     "cookies": 0.000202,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.8571428571428571
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 6
     },
     "nameservers": [
         "ns.ui-global-dns.org",
